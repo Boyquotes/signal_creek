@@ -40,7 +40,7 @@ scene_naming=1
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "res://addons/paulloz.ink/plugin.cfg" )
 
 [global]
 
