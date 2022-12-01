@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/chadbrodykristy.ink-0c4469dd5f22cd5b81a15c730f8bfcf4.res"
+
+[deps]
+
+source_file="res://assets/ink/hallway/chadbrodykristy.ink"
+dest_files=[ "res://.import/chadbrodykristy.ink-0c4469dd5f22cd5b81a15c730f8bfcf4.res" ]
+
+[params]
+
+is_master_file=true
+compress=false

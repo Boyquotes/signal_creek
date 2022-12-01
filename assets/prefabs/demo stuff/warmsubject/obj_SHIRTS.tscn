@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/objects/sheet_warmSubject_real.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/objects/sheet_warmSubject_dream.png" type="Texture" id=4]
+[ext_resource path="res://assets/ink/warmsubject/obj_shirts_dream.ink" type="Resource" id=5]
+[ext_resource path="res://assets/ink/warmsubject/obj_shirts_real.ink" type="Resource" id=6]
+[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=7]
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 15, 3 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 19, 10.5 )
+
+[node name="SHIRTS" type="RigidBody2D" groups=["shiftable"]]
+mode = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+dreamsheet = ExtResource( 4 )
+realsheet = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+light_mask = 4
+material = ExtResource( 7 )
+position = Vector2( 0, -13 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 111, 20, 34, 29 )
+
+[node name="Hint" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.313726 )
+light_mask = 4
+texture = ExtResource( 3 )
+offset = Vector2( 0, -14.5 )
+region_enabled = true
+region_rect = Rect2( 111, 20, 34, 29 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -3 )
+shape = SubResource( 25 )
+
+[node name="ActiveArea" type="Area2D" parent="."]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "NOTES: change this to JUST be the activearea and add as a child to static objects
+"
+}
+inkFileDream = ExtResource( 5 )
+inkFileReal = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
+shape = SubResource( 24 )
+
+[connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
+[connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]

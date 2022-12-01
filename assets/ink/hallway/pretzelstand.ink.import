@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/pretzelstand.ink-fcc9c94a433e82113cb845e6ea5da2ec.res"
+
+[deps]
+
+source_file="res://assets/ink/hallway/pretzelstand.ink"
+dest_files=[ "res://.import/pretzelstand.ink-fcc9c94a433e82113cb845e6ea5da2ec.res" ]
+
+[params]
+
+is_master_file=true
+compress=false

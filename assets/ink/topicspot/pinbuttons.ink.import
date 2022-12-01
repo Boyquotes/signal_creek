@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/pinbuttons.ink-ce9b1d389176723538a60f33837de31a.res"
+
+[deps]
+
+source_file="res://assets/ink/topicspot/pinbuttons.ink"
+dest_files=[ "res://.import/pinbuttons.ink-ce9b1d389176723538a60f33837de31a.res" ]
+
+[params]
+
+is_master_file=true
+compress=false

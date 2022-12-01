@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/polaroid.ink-20a5c4d288fa37ccc38e7460b4fe3adb.res"
+
+[deps]
+
+source_file="res://assets/ink/bandn/polaroid.ink"
+dest_files=[ "res://.import/polaroid.ink-20a5c4d288fa37ccc38e7460b4fe3adb.res" ]
+
+[params]
+
+is_master_file=true
+compress=false

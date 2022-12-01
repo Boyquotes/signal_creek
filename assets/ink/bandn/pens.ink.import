@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/pens.ink-7ca0c73c0f39577a52ba35f325e5db31.res"
+
+[deps]
+
+source_file="res://assets/ink/bandn/pens.ink"
+dest_files=[ "res://.import/pens.ink-7ca0c73c0f39577a52ba35f325e5db31.res" ]
+
+[params]
+
+is_master_file=true
+compress=false

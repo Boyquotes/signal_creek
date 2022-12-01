@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/priceofsalt.ink-b9a06ad0b6f904ed0f9929b84e1f1369.res"
+
+[deps]
+
+source_file="res://assets/ink/bandn/priceofsalt.ink"
+dest_files=[ "res://.import/priceofsalt.ink-b9a06ad0b6f904ed0f9929b84e1f1369.res" ]
+
+[params]
+
+is_master_file=true
+compress=false

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/coolshirt.ink-007309b986d4f4f4cc3e5358c44cb055.res"
+
+[deps]
+
+source_file="res://assets/ink/topicspot/coolshirt.ink"
+dest_files=[ "res://.import/coolshirt.ink-007309b986d4f4f4cc3e5358c44cb055.res" ]
+
+[params]
+
+is_master_file=true
+compress=false

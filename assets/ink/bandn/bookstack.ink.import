@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/bookstack.ink-74be480e8caeeca3f5b6fdd7c1b1a4ce.res"
+
+[deps]
+
+source_file="res://assets/ink/bandn/bookstack.ink"
+dest_files=[ "res://.import/bookstack.ink-74be480e8caeeca3f5b6fdd7c1b1a4ce.res" ]
+
+[params]
+
+is_master_file=true
+compress=false

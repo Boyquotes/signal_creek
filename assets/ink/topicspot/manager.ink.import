@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/manager.ink-aea4c1b506902d83109251de38234bbf.res"
+
+[deps]
+
+source_file="res://assets/ink/topicspot/manager.ink"
+dest_files=[ "res://.import/manager.ink-aea4c1b506902d83109251de38234bbf.res" ]
+
+[params]
+
+is_master_file=true
+compress=false

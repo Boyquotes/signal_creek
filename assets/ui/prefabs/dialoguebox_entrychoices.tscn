@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices_choice.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/scripts/ui/dialoguebox_entrychoices.gd" type="Script" id=2]
+[ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=3]
+
+[node name="ChoiceEntry" type="MarginContainer"]
+margin_right = 276.0
+margin_bottom = 56.0
+theme = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 276.0
+margin_bottom = 124.0
+
+[node name="Name" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 276.0
+margin_bottom = 16.0
+custom_colors/default_color = Color( 1, 0.87451, 0.556863, 1 )
+bbcode_enabled = true
+bbcode_text = "[b]Sugma Deek[/b]"
+text = "Sugma Deek"
+fit_content_height = true
+
+[node name="DialogueTextContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 276.0
+margin_bottom = 124.0
+custom_constants/margin_left = 16
+
+[node name="Background" type="PanelContainer" parent="VBoxContainer/DialogueTextContainer"]
+margin_left = 16.0
+margin_right = 276.0
+margin_bottom = 88.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/DialogueTextContainer/Background"]
+margin_left = 12.0
+margin_right = 260.0
+margin_bottom = 88.0
+
+[node name="Choice" parent="VBoxContainer/DialogueTextContainer/Background/VBoxContainer" instance=ExtResource( 1 )]
+margin_bottom = 16.0
+
+[node name="Choice2" parent="VBoxContainer/DialogueTextContainer/Background/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 36.0
+margin_bottom = 52.0
+
+[node name="Choice3" parent="VBoxContainer/DialogueTextContainer/Background/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 72.0
+margin_bottom = 88.0

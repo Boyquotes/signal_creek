@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/sailormoonposters.ink-8078ca53fa7760641311ce5f04bef888.res"
+
+[deps]
+
+source_file="res://assets/ink/topicspot/sailormoonposters.ink"
+dest_files=[ "res://.import/sailormoonposters.ink-8078ca53fa7760641311ce5f04bef888.res" ]
+
+[params]
+
+is_master_file=true
+compress=false

@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Dialogue" type="RichTextLabel"]
+margin_right = 254.0
+margin_bottom = 16.0
+text = "He sneezes very loudly."
+fit_content_height = true

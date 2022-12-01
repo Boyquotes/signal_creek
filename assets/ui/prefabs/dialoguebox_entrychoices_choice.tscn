@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/scripts/ui/dialoguebox_entrychoices_choice.gd" type="Script" id=1]
+
+[node name="Choice" type="RichTextLabel"]
+margin_right = 248.0
+margin_bottom = 15.0
+bbcode_enabled = true
+bbcode_text = "[b]Ligma:[/b] [Scowl.]"
+text = "Ligma: [Scowl.]"
+fit_content_height = true
+script = ExtResource( 1 )
+normalColor = Color( 0.670588, 0.670588, 0.670588, 1 )
+selectedColor = Color( 1, 1, 1, 1 )
