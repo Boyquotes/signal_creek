@@ -127,12 +127,14 @@ func _proceed():
 func displayChoices():
 	
 	currentChoiceStrings = player.get_CurrentChoices()
-	
-	create_entry_choices(currentChoiceStrings)
-	isDisplayingChoices = true
-	
-	currentlyHighlightedChoice = 0
-	currentChoiceEntryChoices[currentlyHighlightedChoice].set_highlighted(true)
+	if currentChoiceStrings.size() > 0:
+		create_entry_choices(currentChoiceStrings)
+		isDisplayingChoices = true
+
+		currentlyHighlightedChoice = 0
+		currentChoiceEntryChoices[currentlyHighlightedChoice].set_highlighted(true)
+	else:
+		clear_and_reset_ui()
 
 #make a prefab for a normal entry with just text
 func create_entry(text):
