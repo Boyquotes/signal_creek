@@ -51,7 +51,8 @@ func _ready():
 	rooms = [Globals.bandn, Globals.hallway, Globals.topicspot]
 	
 	camera.rescale_camera(floor(OS.window_size.x/camera_pixel_width))
-	set_current_room(rooms[currentRoomIndex])
+	#set_current_room(rooms[currentRoomIndex])
+	emit_signal("doorway_entered", rooms[currentRoomIndex], rooms[currentRoomIndex].get_party_starting_position())
 	
 
 	
