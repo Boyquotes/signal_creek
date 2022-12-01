@@ -8,9 +8,6 @@ extends KinematicBody2D
 export(Texture) var dream_portrait
 export(Texture) var real_portrait
 
-const maxMorale = 3
-var morale = maxMorale setget change_morale, get_morale
-
 export var inkName = "ERR NO NAME ASSIGNED"
 
 var velocity : Vector2 = Vector2()
@@ -84,26 +81,3 @@ func pathfind_to(target : Node2D):
 			angleTowards = Vector2.ZERO
 
 	move(angleTowards)
-
-
-#morale functions
-func get_morale() -> int:
-	return morale
-
-func change_morale(_newValue):
-	print("ERR: MORALE WAS ATTEMPTED TO CHANGE DIRECTLY, DO NOT DO THIS, USE gain_morale AND lose_morale INSTEAD SO ASSOCIATED LOGIC ALSO HAPPENS")
-
-func gain_morale():
-	morale = max(morale + 1, maxMorale)
-	#TODO any related sounds, sprites, ui changes, ect 
-
-func lose_morale():
-	morale = morale - 1
-	#TODO any related sounds, ui changes, ect 
-	if morale <= 0:
-		morale_depleted()
-
-func morale_depleted():
-	morale = 0
-	#TODO any related sounds, ui changes, ect
-	#TODO related game logic 

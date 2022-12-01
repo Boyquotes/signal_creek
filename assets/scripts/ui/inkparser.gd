@@ -244,15 +244,6 @@ func set_current_name(source):
 	Globals.colorManager.set_current_color(source)
 
 
-#references to GODOT functions called by external ink functions.
-#(C# functions can be linked in InkLinker.cs.)
-#saving these here saves time on bind external functions
-
-#var f_world_inkname = funcref(Globals, "world_inkname")
-#var f_shift_planes = funcref(Globals, "planemanager.shift_planes")
-#var f_get_leader_inkname = funcref(Globals, "party.get_leader_inkname")
-
-
 func bind_external_functions():
 	
 	#player.BindExternalFunction("getWorld", f_world_inkname, false)
@@ -260,56 +251,3 @@ func bind_external_functions():
 	#player.BindExternalFunction("getName", self, f_get_leader_inkname)
 	
 	pass
-
-#var f_leader_nick = funcref(Globals, "party.leader_nick")
-#var f_leader_nour = funcref(Globals, "party.leader_nour")
-#var f_leader_suwan = funcref(Globals, "party.leader_suwan")
-#var f_get_morale_nick = funcref(Globals, "nick.get_morale")
-#var f_get_morale_nour = funcref(Globals, "nour.get_morale")
-#var f_get_morale_suwan = funcref(Globals, "suwan.get_morale")
-#var f_gain_morale_nick = funcref(Globals, "nick.gain_morale")
-#var f_gain_morale_nour = funcref(Globals, "nour.gain_morale")
-#var f_gain_morale_suwan = funcref(Globals, "suwan.gain_morale")
-#var f_lose_morale_nick = funcref(Globals, "nick.lose_morale")
-#var f_lose_morale_nour = funcref(Globals, "nour.lose_morale")
-#var f_lose_morale_suwan = funcref(Globals, "suwan.lose_morale")
-##TODO: make sure Globals.nick ect actually calls functions on those objects-
-##	nick, nour, suwan get assigned at runtime, so hopefully these functions
-##	point to those objects and not to null their initial value. 
-## also, make sure "party.leader_nick" ect where the "party" is in the string works
-#func bind_external_functions():
-#
-#	#TODO: if can't bind funcs not in the file, check if they exist first with contains 
-#	#TODO: godot--C# is slow, ideally call these in InkLinker? check back later. 
-#	#	basically, where is the marshalling? in the player.Bind or the passing in a godot func 
-#
-#
-#	#godot functions 
-#	#the boolean at the end is if it's lookahead safe- 
-#	#	if the func can be called before it actually reaches that line
-#
-#
-#	player.BindExternalFunction("getWorld", f_world_inkname, false)
-#	player.BindExternalFunction("shiftWorld", f_shift_planes, false)
-#
-#	player.BindExternalFunction("getPartyLeader", f_get_leader_inkname, true)
-#	player.BindExternalFunction("leaderIsNick", f_leader_nick, true)
-#	player.BindExternalFunction("leaderIsNour", f_leader_nour, true)
-#	player.BindExternalFunction("leaderIsSuwan", f_leader_suwan, true)
-#
-#	player.BindExternalFunction("getMoraleNick", f_get_morale_nick, false)
-#	player.BindExternalFunction("getMoraleNour", f_get_morale_nour, false)
-#	player.BindExternalFunction("getMoraleSuwan", f_get_morale_suwan, false)
-#
-#	player.BindExternalFunction("gainMoraleNick", f_gain_morale_nick, false)
-#	player.BindExternalFunction("gainMoraleNour", f_gain_morale_nour, false)
-#	player.BindExternalFunction("gainMoraleSuwan", f_gain_morale_suwan, false)
-#
-#	player.BindExternalFunction("loseMoraleNick", f_lose_morale_nick, false)
-#	player.BindExternalFunction("loseMoraleNour", f_lose_morale_nour, false)
-#	player.BindExternalFunction("loseMoraleSuwan", f_lose_morale_suwan, false)
-#
-#	#C# functions happen in the C# file 
-#	#inkLinker.BindExternalFunctions()
-#	#TODO: InkLinker.cs seems to no longer be recognised in the project. 
-#	#	fix that and this will work again 

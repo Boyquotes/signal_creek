@@ -73,19 +73,8 @@ func update_leader_to(newIndex):
 	
 	Globals.camera.camera_following = characterObjects[leaderIndex]
 
-	#TODO: play a sound?
-
-	#TODO: send a signal that we've switched to a specific character, maybe 
-
 func get_leader():
 	return characterObjects[leaderIndex]
 
 func get_leader_inkname():
 	return get_leader().inkName
-
-func leader_nick():
-	return leaderIndex == 0
-func leader_nour():
-	return leaderIndex == 1
-func leader_suwan():
-	return leaderIndex == 2
