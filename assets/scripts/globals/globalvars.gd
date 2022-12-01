@@ -33,6 +33,10 @@ onready var suwan = null
 
 onready var inkvars = ""
 
+onready var bandn = null
+onready var hallway = null
+onready var topicspot = null
+
 #variable getters and setters 
 #this should really say get_world_inkname, will do later
 func get_world_inkname() -> String:
@@ -42,8 +46,6 @@ func get_world_inkname() -> String:
 		return "real"
 	print("ERR: tried to get world ink name, but wasn't DREAM or REAL!")
 	return "ERR"
-
-
 
 
 #global static functions

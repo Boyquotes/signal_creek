@@ -78,3 +78,6 @@ func get_leader():
 
 func get_leader_inkname():
 	return get_leader().inkName
+	
+func get_character_objects():
+	return self.characterObjects

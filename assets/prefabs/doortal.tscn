@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12, 40 )
+extents = Vector2( 8, 8 )
 
 [node name="Doortal" type="Area2D"]
 position = Vector2( 40, 143 )
@@ -13,5 +13,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 4, 25 )
+position = Vector2( -32, -135 )
 shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_Doortal_body_entered"]

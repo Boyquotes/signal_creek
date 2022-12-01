@@ -94,3 +94,5 @@ stream = ExtResource( 5 )
 stream = ExtResource( 8 )
 volume_db = -2.788
 autoplay = true
+
+[connection signal="doorway_entered" from="." to="." method="_on_Game_doorway_entered"]
