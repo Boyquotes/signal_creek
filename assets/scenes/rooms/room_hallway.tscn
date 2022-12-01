@@ -33,7 +33,7 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [  ]
 }
-party_starting_position = Vector2( 80, 144 )
+party_starting_position = Vector2( 576, 152 )
 room_bounds_max = Vector2( 992, 320 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]

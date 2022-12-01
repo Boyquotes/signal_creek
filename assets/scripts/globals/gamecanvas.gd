@@ -14,7 +14,7 @@ var room_hallway = preload("res://assets/scenes/rooms/room_hallway.tscn")
 var room_topicSpot = preload("res://assets/scenes/rooms/room_topicspot.tscn")
 
 var rooms = null
-var currentRoomIndex = 0
+var currentRoomIndex = 1
 
 export var camera_pixel_width : int = 320
 export var camera_pixel_height : int = 180
@@ -51,7 +51,7 @@ func _ready():
 	rooms = [Globals.bandn, Globals.hallway, Globals.topicspot]
 	
 	camera.rescale_camera(floor(OS.window_size.x/camera_pixel_width))
-	set_current_room(Globals.bandn)
+	set_current_room(rooms[currentRoomIndex])
 	
 
 	
