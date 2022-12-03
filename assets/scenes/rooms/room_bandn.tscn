@@ -15,7 +15,7 @@
 [ext_resource path="res://assets/prefabs/bandn/obj_priceofsalt.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/shaders/shader_outline.gdshader" type="Shader" id=14]
 [ext_resource path="res://assets/sprites/tilesets/set_BN_dream.tres" type="TileSet" id=15]
-[ext_resource path="res://assets/sprites/sheet_BN_real.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/objects/sheet_BN_real.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 32, 4 )
