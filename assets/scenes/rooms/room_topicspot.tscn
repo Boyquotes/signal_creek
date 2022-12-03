@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/set_topicSpot_real.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/environment/planemanager.gd" type="Script" id=3]
+[ext_resource path="res://assets/prefabs/topicspot/obj_manager.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=5]
 [ext_resource path="res://assets/prefabs/topicspot/obj_phonecases.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/prefabs/topicspot/obj_pinbuttons.tscn" type="PackedScene" id=7]
@@ -122,6 +123,9 @@ position = Vector2( 94, 96 )
 
 [node name="Chair" parent="PlaneManager/Overworld" instance=ExtResource( 15 )]
 position = Vector2( 66, 203 )
+
+[node name="StoreManager" parent="PlaneManager/Overworld" instance=ExtResource( 4 )]
+position = Vector2( 176, 200 )
 
 [node name="ShelfSide" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
 position = Vector2( 56, 128 )
