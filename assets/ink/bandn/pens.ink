@@ -2,16 +2,12 @@
 
 == pens_dream ==
 
-//the dream pen file
-//Nick allows himself to want the pens, likely taking some of his favorites with him. Nick’s favorite animal, the frog, smiles and winks at him. (Maybe it talks to him?)
-
-
 //REAL NOT VISITED
 //Here we check if real has been visited, if so go to realvisited
 
 NICK: Oh my god! Look at these cute pens! I really, really want one... look at how cute they are! Look at the frog one, it's so cute... 
 
-[The frog perched on top of the pen seems to give him a little wink, which makes Nick very happy. He reaches over and takes the pen.]
+The frog perched on top of the pen seems to give him a little wink, which makes Nick very happy. He reaches over and takes the pen.
 
 NICK: I bet if I did my homework with this I'd never get anything wrong!
 
@@ -21,7 +17,11 @@ NICK: I bet if I did my homework with this I'd never get anything wrong!
 == pens_realvisited ==
 
 
-NICK: You know what, these are so cute that it doesn't matter if they're just for babies! As long as they make me happy, right? And they do make me happy! Just look at that cute little frog!
+NICK: Is it just me or did these pens get even cuter?
+
+The frog topper on the pen he had been eying earlier seems to give him a little wink. Instantly, Nick is endeared, reaching over to pick it up. Any earlier reservations he had seem to fade away.
+
+NICK: You know what, Ms. Suwan - you were right. Definitely. These are so cute that it doesn't matter if they're just for babies! As long as they make me happy, right? And they do make me happy! Just look at that cute little frog!
 
 
 -> END
@@ -33,23 +33,27 @@ NICK: You know what, these are so cute that it doesn't matter if they're just fo
 
 == pens_real ==
 
-//the real pen file
-//Nick wants these pens but feels held back, as they are childish, and he shouldn’t want them because he’s not allowed to be childish
+NICK: These pens... Haha, I like how bendy they are. Oh my god. Look at how cute the frog on that one is!
 
-
-
-//DREAM NOT VISITED 
-//here, we check if dream has been visited, and go to dreamvisited if should
-
-NICK: These pens are a little cute...
-
-[He seems to look at them wistfully before tearing his gaze away.]
+He seems to look at them wistfully before tearing his gaze away.
 
 NICK: I - I don't WANT them, though. That stuff's for kindergarteners.
+
+SUWAN: You've been looking at it awfully long for someone who doesn't want it.
+
+NICK: Huh? But -- I really don't actually want it, though... I mean, it's way too expensive for a pen. I could get a regular one for free if I looked on the floor of my school for like five minutes... 
+
+SUWAN: You're still looking at the frog pen, Nick.
+
+NICK: No, I'm not, I'm just... I dunno... I mean, a pen for babies is definitely not worth four whole dollars...
+
+SUWAN: Anything can be worth any amount if it makes you happy enough, Nick.
+
+NICK: ... I guess so. But... still, I'm not gonna get it.
+
 -> END
 
 == pens_dreamvisited ==
-
 
 NICK: Ah, they're not as cute anymore, but... they're still a little cute. Guess it doesn't change the fact these are for babies, though.
 

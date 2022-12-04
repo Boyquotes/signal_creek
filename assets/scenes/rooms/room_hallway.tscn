@@ -159,7 +159,7 @@ z_index = 1
 z_as_relative = false
 
 [node name="PretzelStand" parent="PlaneManager/Overworld" instance=ExtResource( 15 )]
-position = Vector2( 439, 212 )
+position = Vector2( 428, 212 )
 
 [node name="Victorias" parent="PlaneManager/Overworld" instance=ExtResource( 9 )]
 position = Vector2( 776, 66 )
@@ -233,7 +233,7 @@ position = Vector2( 261, 203 )
 
 [node name="ChadBrodyKristy" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
 material = SubResource( 3 )
-position = Vector2( 248, 144 )
+position = Vector2( 540, 120 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal_BandN" to="PlaneManager/Doortal_BandN" method="_on_Doortal_body_entered"]
 [connection signal="body_entered" from="PlaneManager/Doortal_TopicSpot" to="PlaneManager/Doortal_TopicSpot" method="_on_Doortal_body_entered"]
