@@ -4,13 +4,13 @@
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
 [ext_resource path="res://assets/sprites/objects/sheet_BN_dream.png" type="Texture" id=3]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=4]
-[ext_resource path="res://assets/sprites/objects/sheet_BN_real.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/objects/sheet_chadbrodykristy.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 5, 3.5 )
+extents = Vector2( 22.5, 7.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 14, 8.5 )
+extents = Vector2( 33.5, 15.5 )
 
 [node name="ChadBrodyKristy" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 4 )
@@ -26,22 +26,22 @@ is_in_real = false
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 4 )
-position = Vector2( 0, -17 )
+position = Vector2( 0, -19 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 50, 23, 24, 34 )
+region_rect = Rect2( 3, 4, 58, 39 )
 
 [node name="Hint" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
 texture = ExtResource( 5 )
-offset = Vector2( 0, -17 )
+offset = Vector2( 0, -19.5 )
 region_enabled = true
-region_rect = Rect2( 50, 23, 24, 34 )
+region_rect = Rect2( 3, 4, 58, 39 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -3.5 )
+position = Vector2( 1.5, -7.5 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -52,7 +52,7 @@ __meta__ = {
 interactiveBySuwan = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, 3.5 )
+position = Vector2( 1.5, -6.5 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
