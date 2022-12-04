@@ -56,7 +56,7 @@ func set_objects_sprites():
 
 func move_objects():
 	
-	if Globals.world == Globals.Worlds.REAL:
+	if Globals.world == Globals.Worlds.DREAM:
 		for object in objects:
 			object.set_position(object.dream_world_position)
 			
