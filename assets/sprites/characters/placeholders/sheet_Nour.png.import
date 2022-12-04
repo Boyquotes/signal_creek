@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sheet_proposalGuy_dream.png-3dad88ee8dd9d1ea13f69a67c0c935db.stex"
+path="res://.import/sheet_Nour.png-3e6bc84cbbc72ef42836133f184c97a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/sheet_proposalGuy_dream.png"
-dest_files=[ "res://.import/sheet_proposalGuy_dream.png-3dad88ee8dd9d1ea13f69a67c0c935db.stex" ]
+source_file="res://assets/sprites/characters/placeholders/sheet_Nour.png"
+dest_files=[ "res://.import/sheet_Nour.png-3e6bc84cbbc72ef42836133f184c97a0.stex" ]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/scripts/character/partymanager.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/characters/portraits/nick_real.png" type="Texture" id=2]
@@ -10,9 +10,13 @@
 [ext_resource path="res://assets/prefabs/party/party_NOUR.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/sprites/characters/portraits/nour_dream.png" type="Texture" id=9]
 [ext_resource path="res://assets/sprites/characters/portraits/suwan_dream.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/characters/placeholders/sheet_party_dream.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/characters/placeholders/sheet_party_real.png" type="Texture" id=12]
 
 [node name="PARTY" type="YSort"]
 script = ExtResource( 1 )
+dream_character_sheet = ExtResource( 11 )
+real_character_sheet = ExtResource( 12 )
 dream_portraits = [ ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ) ]
 real_portraits = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 6 ) ]
 
