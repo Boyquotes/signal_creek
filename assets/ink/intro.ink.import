@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/intro.ink-434784aa57654041c9d762ab3cf8ea60.res"
+
+[deps]
+
+source_file="res://assets/ink/intro.ink"
+dest_files=[ "res://.import/intro.ink-434784aa57654041c9d762ab3cf8ea60.res" ]
+
+[params]
+
+is_master_file=true
+compress=false
