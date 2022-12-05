@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/scripts/character/character.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/sheet_Nour.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/characters/placeholders/sheet_party_dream.png" type="Texture" id=2]
 [ext_resource path="res://assets/prefabs/party/PartyCharacterAnimator.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/sprites/characters/portraits/nour_real.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 4, 2 )
@@ -13,8 +12,6 @@ extents = Vector2( 10, 8 )
 
 [node name="NOUR" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
-dream_portrait = ExtResource( 4 )
-real_portrait = ExtResource( 4 )
 inkName = "NOUR"
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -22,7 +19,7 @@ light_mask = 2
 position = Vector2( 0, -16 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 1, 2, 18, 32 )
+region_rect = Rect2( 15, 64, 18, 32 )
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PQpzb3VyY2V8PQpsYXllcnw9Cm9wX2V4cHw9RmFsc2UKb19mb2xkZXJ8PQpvX25hbWV8PQpvbmx5X3Zpc2libGV8PUZhbHNlCm9fZXhfcHw9Cg=="
 }
