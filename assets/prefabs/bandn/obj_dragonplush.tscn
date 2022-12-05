@@ -1,5 +1,4 @@
-[gd_scene load_steps=10 format=2]
-
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=3]
@@ -11,7 +10,7 @@
 extents = Vector2( 7.5, 8 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 13, 14 )
+extents = Vector2( 14, 15 )
 
 [node name="DragonPlush" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 4 )
