@@ -67,13 +67,10 @@ func change_leader():
 func update_leader_to(newIndex):
 	leaderIndex = newIndex
 	
-	
 	if Globals.world == Globals.Worlds.DREAM:
 		change_portrait(dream_portraits[leaderIndex])
 	else:
 		change_portrait(real_portraits[leaderIndex])
-
-	#camera centers on this character
 	
 	Globals.camera.camera_following = characterObjects[leaderIndex]
 

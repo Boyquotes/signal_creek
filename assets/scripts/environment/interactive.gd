@@ -6,6 +6,7 @@ extends Area2D
 #export var inkFileReal : Resource
 
 var canInteract = false
+var party_is_inside = false
 
 #NOTES ABOUT THIS APPROACH: IT WON'T BE KEPT IN SAVE FILES; DON'T WORRY ABOUT IT FOR DEMO
 #IT'S NOT A LONG-TERM SOLUTION, BUT IT'S NOT SOMETHING TO CARE ABOUT IMMEDIATELY.
@@ -23,6 +24,10 @@ signal cannot_interact
 
 func _process(_delta):
 	
+	if Input.is_action_just_pressed("party_leader_switch"):
+		if get_overlapping_bodies().size() > 0:
+			call_deferred("check_leader_on_switch") #has to be done on idle frame bc the global leader var has to be updated first (bad structure rip)
+	
 	if canInteract:
 		
 		if Input.is_action_just_pressed("interact"):
@@ -39,9 +44,19 @@ func _process(_delta):
 
 
 func _on_InteractArea_body_entered(body):
+	party_is_inside = true
+	check_correct_leader(body)
+
+#check if party leader is inside
+func check_leader_on_switch():
+	for body in self.get_overlapping_bodies():
+		if check_correct_leader(body) == true:
+			break
+
+func check_correct_leader(body):
 	
-	if body.is_in_group("Player") && body == Globals.party.get_leader():
-		
+	if body == Globals.party.get_leader():
+		print(body.get_name())
 		var currentLeader = Globals.party.leaderIndex
 		
 		if currentLeader == 0 && interactiveByNick:
@@ -56,14 +71,20 @@ func _on_InteractArea_body_entered(body):
 			canInteract = true
 			emit_signal("can_interact")
 			
+		else:
+			canInteract = false
+			emit_signal("cannot_interact")
+			
+		return true
 
 
 func _on_InteractArea_body_exited(body):
 	
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") && body == Globals.party.get_leader():
 		
 		canInteract = false
 		emit_signal("cannot_interact")
+		party_is_inside = false
 
 #recieves signals on character switch 
 #ex. when we switch to nour, show a nour can interact outline 
