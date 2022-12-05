@@ -1,3 +1,9 @@
+INCLUDE bandn/bookstack.ink
+INCLUDE topicspot/makeup.ink
+INCLUDE topicspot/manager.ink
+INCLUDE hallway/pretzelstand.ink
+INCLUDE hallway/partyposter.ink
+INCLUDE hallway/cafetables.ink
 //---------------- DREAM WORLD ----------------
 
 == rina_dream ==

@@ -1,3 +1,5 @@
+INCLUDE bandn/rina.ink
+
 //---------------- DREAM WORLD ----------------
 
 == cafetables_dream ==

@@ -1,3 +1,5 @@
+INCLUDE bandn/pens.ink
+
 //---------------- DREAM WORLD ----------------
 
 == bobatea_dream ==
