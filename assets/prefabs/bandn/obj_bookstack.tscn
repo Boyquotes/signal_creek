@@ -10,7 +10,7 @@
 extents = Vector2( 8, 7.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 16.5, 14.5 )
+extents = Vector2( 18, 20 )
 
 [node name="BookStack" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 4 )
@@ -51,7 +51,7 @@ __meta__ = {
 interactiveBySuwan = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -7.5 )
+position = Vector2( 0, -7 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
