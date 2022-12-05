@@ -3,12 +3,8 @@ extends KinematicBody2D
 #Individual character. 
 #Can move.
 #Updates sprites/animations accordingly.
-#Has morale.
 
-export(Texture) var dream_portrait
-export(Texture) var real_portrait
-
-export var inkName = "ERR NO NAME ASSIGNED"
+export var inkName = "Name"
 
 var velocity : Vector2 = Vector2()
 var directionFacing : Vector2 = Vector2()	#used for flashlight.
@@ -81,3 +77,6 @@ func pathfind_to(target : Node2D):
 			angleTowards = Vector2.ZERO
 
 	move(angleTowards)
+	
+func set_sprite(sprite):
+	$Sprite.set_texture(sprite)

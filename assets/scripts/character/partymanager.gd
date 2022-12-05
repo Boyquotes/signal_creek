@@ -1,7 +1,15 @@
 extends YSort
 
+#Original script by Jaden @cep450
+
 var partyMembers = [Globals.Characters.NICK, Globals.Characters.NOUR, Globals.Characters.SUWAN]
 onready var characterObjects = [self.get_child(0), self.get_child(1), self.get_child(2)]
+
+#export(Array, Texture) var dream_character_sheet = []
+#export(Array, Texture) var real_character_sheet = []
+
+export var dream_character_sheet : Texture
+export var real_character_sheet : Texture
 
 export(Array, Texture) var dream_portraits = []
 export(Array, Texture) var real_portraits = []
@@ -43,19 +51,14 @@ func check_input_physics():
 	characterObjects[wrapi(leaderIndex - 1, 0,3)].pathfind_to(get_leader())
 
 func check_input():
-	if Input.is_action_just_pressed("char_switch_left"):
-		rotate_leader_left()
-	if Input.is_action_just_pressed("char_switch_right"):
-		rotate_leader_right()
+#	if Input.is_action_just_pressed("char_switch_left"):
+#		rotate_leader_left()
+	if Input.is_action_just_pressed("party_leader_switch"):
+		change_leader()
 
-
-#called by key input- TODO
-func rotate_leader_left():
-	leaderIndex = wrapi(leaderIndex - 1, 0,3)
-	update_leader_to(leaderIndex)
 
 #called by key input- TODO 
-func rotate_leader_right():
+func change_leader():
 	leaderIndex = wrapi(leaderIndex + 1, 0,3)
 	update_leader_to(leaderIndex)
 
@@ -65,13 +68,12 @@ func update_leader_to(newIndex):
 	leaderIndex = newIndex
 	
 	if Globals.world == Globals.Worlds.DREAM:
-		Globals.portrait.set_character(dream_portraits[leaderIndex], get_leader_inkname())
+		change_portrait(dream_portraits[leaderIndex])
 	else:
-		Globals.portrait.set_character(real_portraits[leaderIndex], get_leader_inkname())
-
-	#camera centers on this character
+		change_portrait(real_portraits[leaderIndex])
 	
 	Globals.camera.camera_following = characterObjects[leaderIndex]
+
 
 func get_leader():
 	return characterObjects[leaderIndex]
@@ -81,3 +83,26 @@ func get_leader_inkname():
 	
 func get_character_objects():
 	return self.characterObjects
+	
+func change_party_sprites(sheet):
+	
+	for character in characterObjects:
+		#will be an array index when they are animated
+		character.set_sprite(sheet)
+		
+	
+#change portrait in the ui
+func change_portrait(sprite):
+	
+	Globals.portrait.set_character(sprite, get_leader_inkname())
+	
+
+func change_assets_world(world):
+	
+	if world == Globals.Worlds.DREAM:
+		change_party_sprites(dream_character_sheet)
+		
+	else:
+		change_party_sprites(real_character_sheet)
+		
+	update_leader_to(leaderIndex)
