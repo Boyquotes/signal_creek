@@ -1,5 +1,7 @@
 extends YSort
 
+#Original script by Jaden @cep450
+
 var partyMembers = [Globals.Characters.NICK, Globals.Characters.NOUR, Globals.Characters.SUWAN]
 onready var characterObjects = [self.get_child(0), self.get_child(1), self.get_child(2)]
 
