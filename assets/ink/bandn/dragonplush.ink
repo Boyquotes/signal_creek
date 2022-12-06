@@ -6,13 +6,19 @@
 //there's a massive Puff the Magic Dragon plush, twice as tall as the party. 
 //Nour's father used to read her the story in a sing-song voice; it was something she requested almost every night until she was in middle school.
 
+NARRATOR: The faintest sound of music 
+
 NOUR: *Singing* Puff the magic dragon, lived by the sea...
 
 NOUR: Baba used to sing that to me almost every night. I'd never stop asking for it...
 
 NICK: I've never heard that song before! What's it about?
 
-NOUR: *Explains puff the magic dragon lore* 
+NOUR: Can't you hear the music coming out of the plushy?
+
+NICK: ...No..?
+
+NOUR: Hm... Well, whatever.
 
 NOUR: Almost makes me wish I could ask my dad to sing it to me again. I used to feel so safe whenever he did...
 

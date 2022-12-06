@@ -11,5 +11,5 @@ dest_files=[ "res://.import/priceofsalt.ink-b9a06ad0b6f904ed0f9929b84e1f1369.res
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/consoles.ink-56ec4369e9b1cb5655bc96acedd6cdbc.res" ]
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false

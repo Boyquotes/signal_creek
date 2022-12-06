@@ -11,5 +11,5 @@ dest_files=[ "res://.import/makeup.ink-2c478a910ebbb4f28af379314cede035.res" ]
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false

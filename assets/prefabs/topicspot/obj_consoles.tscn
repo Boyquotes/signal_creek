@@ -7,10 +7,10 @@
 [ext_resource path="res://assets/sprites/objects/sheet_topicSpot_real.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 24, 24 )
+extents = Vector2( 26.5, 24 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 18, 26.5 )
+extents = Vector2( 22.5, 29 )
 
 [node name="Consoles" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -39,7 +39,7 @@ region_enabled = true
 region_rect = Rect2( 21, 13, 50, 52 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -25 )
+position = Vector2( 2.5, -25 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -50,7 +50,7 @@ __meta__ = {
 interactiveByNick = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( -6, -9.5 )
+position = Vector2( -6.5, -7 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

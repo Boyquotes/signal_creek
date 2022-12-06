@@ -11,5 +11,5 @@ dest_files=[ "res://.import/partyposter.ink-24c998d31d699d36eee1f0a4bd591da4.res
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false
