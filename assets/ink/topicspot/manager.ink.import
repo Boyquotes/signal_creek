@@ -11,5 +11,5 @@ dest_files=[ "res://.import/manager.ink-aea4c1b506902d83109251de38234bbf.res" ]
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false

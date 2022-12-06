@@ -1,16 +1,30 @@
 //---------------- DREAM WORLD ----------------
 
 == rina_dream ==
-// rina will be divided up differently than most other objects, into 'interactions' instead of dreamvisited/realvisited (irst interaction, second, third, etc.)
+// rina will be divided up differently than most other objects, into 'interactions' instead of dreamvisited/realvisited (first interaction, second, third, etc.)
 
 // and then we add as many ===interaction=== parts as we need for the future based on other objects that the player interacts with! 
 
++   { pretzelstand_real } -> pretzelconvo
 
--> END
++   -> rinanormal
+
+=pretzelconvo
+
+    NOUR: piss
+
+    -> END
+
+=rinanormal
+
+    DREAM WORLD, TEXT HERE
+
+    -> END
+
 
 == rina_realvisited ==
 
-DREAM WORLD AFTER VISITING REAL, TEXT HERE
++   -> rina_dream
 
 -> END
 
@@ -21,14 +35,10 @@ DREAM WORLD AFTER VISITING REAL, TEXT HERE
 
 == rina_real ==
 
-REAL WORLD, TEXT HERE
-
--> END
++   -> rina_dream
 
 == rina_dreamvisited ==
 
-REAL WORLD AFTER VISITING DREAM, TEXT HERE
++   -> rina_dream
 
--> END
-
-//SUBSEQUENT REAL KNOTS HERE
+//She's not in the real world, if these redirects are needed, there's an error

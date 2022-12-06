@@ -11,5 +11,5 @@ dest_files=[ "res://.import/cafetables.ink-194112b5f7a3f66f44192359e278a066.res"
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false
