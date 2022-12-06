@@ -29,8 +29,12 @@ var currentChoiceEntryChoices
 #Story state save file location 
 var saveFilePath = "res://saves"
 
+var inkstory
+
 
 func _ready():
+	
+	inkstory = player.story
 	
 	#Hide dialoguebox and delete placeholders
 	Globals.delete_children(vertical_layout_node)
@@ -42,6 +46,7 @@ func _ready():
 	#for testing purposes; it starts opened if this is set to true
 	if _startTalking:
 		Globals.mode = Globals.GameModes.TALK
+		#HERE TODO PLS INSERT VISITED COUNT AND UMMMMM START AT THE BEGINNING OF THE KNOT AGAIN IDK WHY ITS NOT WOKRING
 		
 
 #this is where we'll listen to the player's button presses and tell the UI & ink player to do stuff. 
@@ -93,6 +98,8 @@ func _process(_delta):
 func _proceed():
 	
 	if !player.get_CanContinue() && !player.get_HasChoices():
+#		print(player.SwitchToDefaultFlow())
+		player.SwitchToDefaultFlow()
 		clear_and_reset_ui()
 		
 	elif !player.get_HasChoices(): #create normal text entry
@@ -107,7 +114,7 @@ func _proceed():
 		if currentLine.substr(0, 1) == ":": #this is a name for the choice entry nametag; not an entry to put in
 			print("checked")
 			set_current_name(currentLine.substr(1).strip_escapes())
-			displayChoices()
+			_proceed()
 		
 		elif ":" in currentLine: #if line contains a name, parse name and dialogue after
 			set_current_name(currentLine.split(":", false)[0] + ":")
@@ -128,11 +135,15 @@ func displayChoices():
 	
 	currentChoiceStrings = player.get_CurrentChoices()
 	
+	if currentChoiceStrings.size() <= 0: #TO AVOID CRASHING
+		return
+	
 	create_entry_choices(currentChoiceStrings)
 	isDisplayingChoices = true
-	
+
 	currentlyHighlightedChoice = 0
 	currentChoiceEntryChoices[currentlyHighlightedChoice].set_highlighted(true)
+
 
 #make a prefab for a normal entry with just text
 func create_entry(text):

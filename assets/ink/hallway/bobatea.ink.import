@@ -11,5 +11,5 @@ dest_files=[ "res://.import/bobatea.ink-3304096608aef3be16e3be18831cdaf9.res" ]
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false

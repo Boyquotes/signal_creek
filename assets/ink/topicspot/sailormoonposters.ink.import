@@ -11,5 +11,5 @@ dest_files=[ "res://.import/sailormoonposters.ink-8078ca53fa7760641311ce5f04bef8
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false

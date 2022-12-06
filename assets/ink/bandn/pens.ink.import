@@ -11,5 +11,5 @@ dest_files=[ "res://.import/pens.ink-7ca0c73c0f39577a52ba35f325e5db31.res" ]
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false

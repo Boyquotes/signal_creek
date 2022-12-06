@@ -32,7 +32,7 @@ func shift_planes():
 		Globals.world = Globals.Worlds.DREAM
 		set_tilesets(dreamset)
 		
-	Globals.party.update_leader_to(Globals.party.leaderIndex)
+	Globals.party.change_assets_world(Globals.world)
 
 
 func set_tilesets(setId):
@@ -56,7 +56,7 @@ func set_objects_sprites():
 
 func move_objects():
 	
-	if Globals.world == Globals.Worlds.REAL:
+	if Globals.world == Globals.Worlds.DREAM:
 		for object in objects:
 			object.set_position(object.dream_world_position)
 			
