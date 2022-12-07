@@ -11,5 +11,5 @@ dest_files=[ "res://.import/oldnovel.ink-384de129785575a59c6b92d391ae2276.res" ]
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false

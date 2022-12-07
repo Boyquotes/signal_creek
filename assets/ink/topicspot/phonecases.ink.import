@@ -11,5 +11,5 @@ dest_files=[ "res://.import/phonecases.ink-b17c87fe0c2063d2c3af5094d3368fd0.res"
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false
