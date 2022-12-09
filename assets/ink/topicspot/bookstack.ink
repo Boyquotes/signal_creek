@@ -1,5 +1,4 @@
 //---------------- DREAM WORLD ----------------
-+   { sailormoonposters_dream } -> sailormooncomic
 
 == bookstack_dream ==
 
@@ -97,22 +96,6 @@ NOUR: Right? And some of those mysteries... phew. I wanna get into Sir Arthur Co
 NICK: ...
 
 NICK: Couldn't it have left just ONE volume of Blood Titan Online for me? Why does this mall hate me so bad?
-
--> END
-
-== sailormooncomic ==
-
-NICK: Hey Nour, I think there's a Sailor Moon comic in here somewhere... oh, there's one with Sailor Jupiter on the cover. Is she your favorite?
-
-NOUR: I'm more of a Sailor Uranus fan.
-
-NICK: Haha-
-
-NOUR: Nick, don't say it.
-
-NICK: Uran -- Uranus --
-
-NOUR: Nick, shut up!
 
 -> END
 

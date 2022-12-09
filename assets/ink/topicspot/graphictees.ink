@@ -1,5 +1,7 @@
 //---------------- DREAM WORLD ----------------
 
++   { hotwheels_dream } -> hotwheelsconvo
+
 == graphictees_dream ==
 
 The rack of tees are covered with graphic iconography and strong slogans, like pride flags in eye-catching patterns. One of them proudly calls to "legalize weed". Some of them are purposefully holey. Even so, they are all designed appealingly. 
@@ -67,7 +69,7 @@ SUWAN: ...let's agree to disagree.
 
 //---------------- HOT WHEELS CONNECTION ----------------
 
-== hotwheelsvisited_dreamvisited ==
+== hotwheelsconvo ==
 //Not sure how to format objects talking to each other yet?
 //After hot wheels conversation/connection, and dream plan visited, they are in real plan discussing the shirts again.
 

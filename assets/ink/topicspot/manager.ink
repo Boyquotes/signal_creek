@@ -1,4 +1,5 @@
 //---------------- DREAM WORLD ----------------
+INCLUDE coolshirt.ink
 
 == manager_dream ==
 
