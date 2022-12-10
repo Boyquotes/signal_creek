@@ -2,18 +2,13 @@
 
 == bobatea_dream ==
 
-//REAL NOT VISITED
-// here, we check if real world vending machine has been visited, and skip to realvisited if so.
-
 The vending machine is full of cool Japanese drinks, like Ramune and Boba Tea and other things that Nick can't understand.
-
 
 The cool, colorful bold letters and cute mascots make him smile, and he runs over.
 
 NICK: "Look! These look so tasty! Maybe we can take a break to have some?"
 
 He inserts a coin and gets a nice drink out of it.
-
 
 -> END
 
@@ -38,14 +33,9 @@ He puts in a coin and gets a nice drink out of it.
 
 == bobatea_real ==
 
-//DREAM NOT VISITED
-// here, we check if the dream boba machine has been visited, and skip to dreamvisited if so.
-
 The vending machine is full of coffee, sparkling water, and diet sodas. Nick's nose scrunches up.
 
 "I swear they used to have better stuff in here before. I'm not buying any of this crap, it's not worth it."
-
-//DREAM VISITED
 
 -> END
 

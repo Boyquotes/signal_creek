@@ -6,7 +6,7 @@
     
     MS SUWAN: God, why are they selling these things?
     
-    -> politicalconvo
+    -> politicalConvo
 
 == pinbuttons_realvisited ==
 
@@ -14,9 +14,9 @@
     
     MS SUWAN: This is, uh, a lot more extreme than the friendly political messages I saw before.
     
-    -> politicalconvo
+    -> politicalConvo
     
-== politicalconvo ==
+== politicalConvo ==
 
     Nour and Ms Suwan discuss extreme political ideologies.
     
