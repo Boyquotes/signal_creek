@@ -6,7 +6,7 @@
 //there's a massive Puff the Magic Dragon plush, twice as tall as the party. 
 //Nour's father used to read her the story in a sing-song voice; it was something she requested almost every night until she was in middle school.
 
-NARRATOR: The faintest sound of music emanates from the bright green dragon plush. Something about the tune is familiar to Nour, but she doesn't recognize it, even as she hums along without realizing that she's doing.
+The faintest sound of music emanates from the bright green dragon plush. Something about the tune is familiar to Nour, but she doesn't recognize it, even as she hums along without realizing that she's doing.
 
 NOUR: ...Huh, that's weird. That sounds so familiar.
 
@@ -26,7 +26,7 @@ NOUR: Yeah, I'm sure. Whatever, let's keep moving.
 //there's a massive Puff the Magic Dragon plush, twice as tall as the party. 
 //Nour's father used to read her the story in a sing-song voice; it was something she requested almost every night until she was in middle school.
 
-NARRATOR: The sound of music emanates from the bright green dragon plush is a clear, lullaby-like tune. Nour runs her hand over the back of the dragon as she listens to it.
+The sound of music emanates from the bright green dragon plush is a clear, lullaby-like tune. Nour runs her hand over the back of the dragon as she listens to it.
 
 NOUR: Oh, the plushy is here, too! He almost looks alive, and that music... It's the song..!!
 

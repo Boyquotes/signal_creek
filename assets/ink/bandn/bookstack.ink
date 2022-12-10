@@ -1,13 +1,8 @@
 //---------------- DREAM WORLD ----------------
-+   { sailormoonposters_dream } -> sailormooncomic
 
 == bookstack_dream ==
 
-//the dream book stack file
-// Stack of Epic Manga Comics, Nick likes these because theyre more interesting
-
-//REAL NOT VISITED
-//Here, we check to see if the player has visited the real version first. If they have, skip to realvisited
++   { sailormoonposters_dream } -> sailormooncomic
 
 NICK: Whoa! It's the first twenty volumes of Blood Titan Online! Oh, man,  that's awesome...! Whoa, look at this cool art!
 

@@ -4,7 +4,7 @@
 
 +   { victorias_dream } -> cbk_appears
 
-+   ->womensclothing_normal
++   -> womensclothing_normal
 
 = cbk_appears
     //here, pass a variable to godot to call a function that makes cbk appear in the hallway
