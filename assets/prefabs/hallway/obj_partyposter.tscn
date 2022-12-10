@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 18, 12.5 )
+extents = Vector2( 22, 14.25 )
 
 [node name="PartyPoster" type="Node2D" groups=["shiftable"]]
 script = ExtResource( 2 )
@@ -42,7 +42,7 @@ __meta__ = {
 interactiveByNick = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, 23 )
+position = Vector2( 0, 24.75 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
