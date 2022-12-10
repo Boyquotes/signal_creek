@@ -11,5 +11,5 @@ dest_files=[ "res://.import/graphictees.ink-60f0dc869cf30db7b8387537fd2c747b.res
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false

@@ -10,7 +10,7 @@
 extents = Vector2( 8.5, 1.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 16, 10.5 )
+extents = Vector2( 20, 16 )
 
 [node name="PinButtons" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -50,7 +50,7 @@ __meta__ = {
 interactiveBySuwan = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, 1.5 )
+position = Vector2( 0, 7 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

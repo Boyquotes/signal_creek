@@ -11,5 +11,5 @@ dest_files=[ "res://.import/polaroid.ink-20a5c4d288fa37ccc38e7460b4fe3adb.res" ]
 
 [params]
 
-is_master_file=true
+is_master_file=false
 compress=false

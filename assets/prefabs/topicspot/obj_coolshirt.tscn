@@ -10,7 +10,7 @@
 extents = Vector2( 6, 4 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 19, 13.25 )
+extents = Vector2( 22, 17.75 )
 
 [node name="CoolShirt" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -50,7 +50,7 @@ __meta__ = {
 interactiveByNick = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, 1.75 )
+position = Vector2( 0, 6.25 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
