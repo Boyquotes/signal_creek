@@ -2,7 +2,11 @@
 
 == bookstack_dream ==
 
-+   { sailormoonposters_dream } -> sailormooncomic
+//the dream book stack file
+// Stack of Epic Manga Comics, Nick likes these because theyre more interesting
+
+//REAL NOT VISITED
+//Here, we check to see if the player has visited the real version first. If they have, skip to realvisited
 
 NICK: Whoa! It's the first twenty volumes of Blood Titan Online! Oh, man,  that's awesome...! Whoa, look at this cool art!
 
@@ -92,22 +96,6 @@ NOUR: Right? And some of those mysteries... phew. I wanna get into Sir Arthur Co
 NICK: ...
 
 NICK: Couldn't it have left just ONE volume of Blood Titan Online for me? Why does this mall hate me so bad?
-
--> END
-
-== sailormooncomic ==
-
-NICK: Hey Nour, I think there's a Sailor Moon comic in here somewhere... oh, there's one with Sailor Jupiter on the cover. Is she your favorite?
-
-NOUR: I'm more of a Sailor Uranus fan.
-
-NICK: Haha-
-
-NOUR: Nick, don't say it.
-
-NICK: Uran -- Uranus --
-
-NOUR: Nick, shut up!
 
 -> END
 
