@@ -15,7 +15,7 @@ Nick: Really? I didn't take you as the type to play with toy cars.
 Nour: Nick stop.
 
 She places the toy back down on the table. Ready to leave it behind for good.
-    Walk Away ->PutDownCar
+    [Walk Away] ->PutDownCar
 
 ==PutDownCar==
 She walks away feeling content, knowing that she can't continue being reminded of her past.

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/pens.ink-917615e957705ee475c7cc6f0cdb35f7.res"
+
+[deps]
+
+source_file="res://assets/ink/topicspot/pens.ink"
+dest_files=[ "res://.import/pens.ink-917615e957705ee475c7cc6f0cdb35f7.res" ]
+
+[params]
+
+is_master_file=true
+compress=false
