@@ -1,7 +1,5 @@
 //---------------- DREAM WORLD ----------------
 
-->hotwheels_dream
-
 == hotwheels_dream ==
 
     A shiny toy race car. Glimmering in the light as if it was freshly made.
