@@ -1,3 +1,10 @@
+INCLUDE bandn/pens.ink
+INCLUDE topicspot/coolshirt.ink
+INCLUDE topicspot/manager.ink
+INCLUDE topicspot/phonecases.ink
+INCLUDE hallway/litter.ink
+INCLUDE bandn/bookstack.ink
+INCLUDE bandn/priceofsalt.ink
 //---------------- DREAM WORLD ----------------
 
 VAR playCount = 1

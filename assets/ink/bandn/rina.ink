@@ -1,3 +1,9 @@
+INCLUDE bandn/bookstack.ink
+INCLUDE topicspot/makeup.ink
+INCLUDE topicspot/manager.ink
+INCLUDE hallway/pretzelstand.ink
+INCLUDE hallway/partyposter.ink
+INCLUDE hallway/cafetables.ink
 //---------------- DREAM WORLD ----------------
 
 // rina will be divided up differently than most other objects, into 'interactions' instead of dreamvisited/realvisited (first interaction, second, third, etc.)

@@ -32,7 +32,15 @@
 
 == manager_convo ==
 
-    NICK: Gotta talk to the manager and see if I can buy this, now...
+    NICK: Oh, right. I guess I have to talk to the manager about buying this, now... 
+    
+    NOUR: You sound pretty reluctant about that.
+    
+    NICK: Haha... it's not like I hate him or anything. It's... um, well, my mom would say buying anything here is a waste of money. 'Cause I don't really need any of this stuff, right?
+    
+    Nick takes a deep breath, looking down at the shirt clutched in his hands. He feels guilty about it, but suddenly feels a rush of irritation at his own guilt. How long had it been since he had last bought himself something?
+    
+    NICK: ...but Ms. Suwan is right. It would make me really happy... I'll talk to him anyway!
     
     -> END
 
@@ -46,6 +54,8 @@
     NOUR: Pfft. Doesn't seem like this type of thing suits you at all.
     
     NICK: It doesn't?! I mean... it should... 
+    
+    Nick doesn't sound convincing, even to himself. 
     
     -> END
 

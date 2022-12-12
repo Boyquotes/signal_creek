@@ -1,3 +1,5 @@
+INCLUDE topicspot/consoles.ink
+
 //---------------- DREAM WORLD ----------------
 
 == phonecases_dream ==
