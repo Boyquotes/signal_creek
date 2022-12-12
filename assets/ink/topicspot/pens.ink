@@ -39,15 +39,15 @@ He seems to look at them wistfully before tearing his gaze away.
 
 NICK: I - I don't WANT them, though. That stuff's for kindergarteners.
 
-MS SUWAN: You've been looking at it awfully long for someone who doesn't want it.
+SUWAN: You've been looking at it awfully long for someone who doesn't want it.
 
 NICK: Huh? But -- I really don't actually want it, though... I mean, it's way too expensive for a pen. I could get a regular one for free if I looked on the floor of my school for like five minutes... 
 
-MS SUWAN: You're still looking at the frog pen, Nick.
+SUWAN: You're still looking at the frog pen, Nick.
 
 NICK: No, I'm not, I'm just... I dunno... I mean, a pen for babies is definitely not worth four whole dollars...
 
-MS SUWAN: Anything can be worth any amount if it makes you happy enough, Nick.
+SUWAN: Anything can be worth any amount if it makes you happy enough, Nick.
 
 NICK: ... I guess so. But... still, I'm not gonna get it.
 

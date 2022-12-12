@@ -2,7 +2,11 @@
 
 == bookstack_dream ==
 
-+   { sailormoonposters_dream } -> sailormooncomic
+//the dream book stack file
+// Stack of Epic Manga Comics, Nick likes these because theyre more interesting
+
+//REAL NOT VISITED
+//Here, we check to see if the player has visited the real version first. If they have, skip to realvisited
 
 NICK: Whoa! It's the first twenty volumes of Blood Titan Online! Oh, man,  that's awesome...! Whoa, look at this cool art!
 
@@ -12,7 +16,7 @@ NICK: Yeah! I've been looking for this series ever since I watched the anime! Th
 
 NOUR: Really? Ha. I bet Ms. Suwan could read that whole stack in less than a day. I bet one of those lawyer textbooks has more words in it than that entire series.
 
-MS SUWAN: Ha ha. I suppose I certainly could, if I put my mind to it. What's this Blood... Blood Titan Online about?
+SUWAN: Ha ha. I suppose I certainly could, if I put my mind to it. What's this Blood... Blood Titan Online about?
 
 NICK: Oh, it's about how - like - there's a video game people get trapped in. And when they die in the game, they die in real life. They fight these monsters all the time, and in order to escape the game they have to defeat the Blood Titan. But first they have to find who the Blood Titan is...
 
@@ -24,7 +28,7 @@ NICK: Sort of, yeah! Except add in battles, dragons, swords, and magic!
 
 NOUR: Y'know, I do like some mystery, myself. Not a huge comics fan, though. 
 
-MS SUWAN: It's an... interesting premise. Perhaps I'll look into it. I suppose some light reading between work obligations helps to clear my head sometimes.
+SUWAN: It's an... interesting premise. Perhaps I'll look into it. I suppose some light reading between work obligations helps to clear my head sometimes.
 
 NICK: Really?! Guys, you should totally give it a chance! We could read it together! It's super awesome, I promise!
 
@@ -66,7 +70,7 @@ NICK: Oh, that book... Didn't I have to read that for class once?
 == readBook ==
 NICK: Huh? I don't remember this part... oh, it's probably because I only read the SparkNotes. Ugh... it's just so BORING, though. I kept falling asleep when I tried to really read it...
 
-MS SUWAN: I found that book quite gripping, myself. It's a classic for a reason.
+SUWAN: I found that book quite gripping, myself. It's a classic for a reason.
 
 NICK: Ugh... I guess I don't really get it, then.
 
@@ -77,7 +81,7 @@ NICK: Ugh... I guess I don't really get it, then.
 
 NICK: Hey! Hold on a second - where'd the manga go?
 
-MS SUWAN: The entire stack changed...? How interesting.
+SUWAN: The entire stack changed...? How interesting.
 
 NICK: No way...! It's all this boring basic stuff now. What the heck?
 
@@ -85,29 +89,13 @@ NOUR: Whoa, hey, I wouldn't call Sherlock Holmes boring or basic. The short stor
 
 NICK: I mean... there's a lot you can get out of Blood Titan Online, too. I guess it just doesn't seem as - as professional as those other books, or something. Man, why'd it all change before I got a chance to even read them?
 
-MS SUWAN: I quite enjoyed the Sherlock Holmes collection, too. It's a fascinating look into the culture and commonalities of Victorian London.
+SUWAN: I quite enjoyed the Sherlock Holmes collection, too. It's a fascinating look into the culture and commonalities of Victorian London.
 
 NOUR: Right? And some of those mysteries... phew. I wanna get into Sir Arthur Conan Doyle's head. He definitely always had some interesting things cooking up in there.
 
 NICK: ...
 
 NICK: Couldn't it have left just ONE volume of Blood Titan Online for me? Why does this mall hate me so bad?
-
--> END
-
-== sailormooncomic ==
-
-NICK: Hey Nour, I think there's a Sailor Moon comic in here somewhere... oh, there's one with Sailor Jupiter on the cover. Is she your favorite?
-
-NOUR: I'm more of a Sailor Uranus fan.
-
-NICK: Haha-
-
-NOUR: Nick, don't say it.
-
-NICK: Uran -- Uranus --
-
-NOUR: Nick, shut up!
 
 -> END
 
