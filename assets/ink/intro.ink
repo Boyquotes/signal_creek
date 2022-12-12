@@ -84,8 +84,6 @@ MS SUWAN: "Do you… Can’t you see what just happened? Is everything… normal
 
 CLERK: "Uh, yeah, everything looks fine. But if you have any complaints, Miss, you can take them up with the mall’s administration."
 
-Ms. Suwan asks if he thinks anything is wrong with the store. He says everything looks fine, but if she has any complaints she can take it up with the mall’s administration. 
-
 He walks away, leaving them both with even less answers than before.
 
 As Nick turns to Ms. Suwan, about to say something, his mouth drops and he stares at her. As she asks him what he thinks he’s staring at, she realizes that his outfit and demeanor have completely changed. 
