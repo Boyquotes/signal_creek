@@ -19,7 +19,7 @@
     
     NICK: Whoa! This one's got little birds on it now instead! "So Eggs-citing" -- pfft. That's really cute.
     
-    SUWAN: You should get it. I'm sure it would make you very happy.
+    MS SUWAN: You should get it. I'm sure it would make you very happy.
     
     :NICK:
     
@@ -65,19 +65,19 @@
 
     NICK: Wait, what happened to the design? It got all... edgy again.
     
-    SUWAN: It's a shame. You seemed to like the other one better.
+    MS SUWAN: It's a shame. You seemed to like the other one better.
     
     NICK: Huh? No... of course not. I mean, this one is cool, too. The wolf design is like... so sick, or something.
     
-    SUWAN: That was the most forced compliment I have ever heard, and I've heard a lot of forced compliments in my time. 
+    MS SUWAN: That was the most forced compliment I have ever heard, and I've heard a lot of forced compliments in my time. 
     
     NICK: Ugh... fine. I guess I liked the other one better. It's just that it's -- I dunno... it's so...
     
-    SUWAN: Look, Nick. I would be a hypocrite if I judged you for liking the things that you like. It may seem like a big deal right now, but I promise that if you let yourself enjoy things without caring about what other people think, you'll feel much more content.
+    MS SUWAN: Look, Nick. I would be a hypocrite if I judged you for liking the things that you like. It may seem like a big deal right now, but I promise that if you let yourself enjoy things without caring about what other people think, you'll feel much more content.
     
     NICK: ...I know it's such a little thing. But sometimes my friends blow stuff like this up into a big thing, and they can go for weeks talking about it...
     
-    SUWAN: Trust me. I've been in your place before. I've had a lot of years to realize that living life becomes much easier after you let yourself be yourself.
+    MS SUWAN: Trust me. I've been in your place before. I've had a lot of years to realize that living life becomes much easier after you let yourself be yourself.
     
     -> END
 

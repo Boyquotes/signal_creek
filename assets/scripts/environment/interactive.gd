@@ -80,7 +80,7 @@ func check_correct_leader(body):
 
 func _on_InteractArea_body_exited(body):
 	
-	if body.is_in_group("Player") && body == Globals.party.get_leader():
+	if body.is_in_group("Player"):
 		
 		canInteract = false
 		emit_signal("cannot_interact")

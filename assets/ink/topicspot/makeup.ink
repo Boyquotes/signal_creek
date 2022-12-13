@@ -8,7 +8,7 @@
     
     NOUR: Funny, all of the ones here are the exact same one I used. It was discontinued years ago.
     
-    MS. SUWAN: I doubt this is truly safe for someone's skin.
+    MS SUWAN: I doubt this is truly safe for someone's skin.
     
     NOUR: I mean, I used one of these palettes of eyeshadow for four years and my skin seems to have turned out fine.
     
@@ -31,7 +31,7 @@
     
     NOUR: Less generic brands here. Funny, all of these are the exact same one I use to use. It was discontinued years ago.
     
-    MS. SUWAN: I doubt this is truly safe for someone's skin.
+    MS SUWAN: I doubt this is truly safe for someone's skin.
     
     NOUR: I mean, I used one of these palettes of eyeshadow for four years and my skin seems to have turned out fine.
     

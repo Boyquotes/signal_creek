@@ -38,16 +38,23 @@
 
     Ms Suwan notices a copy of Jane Eyre sitting vacantly on the bookshelf.
 
-        * Pick it up -> pickUpJaneEyre
-        * Walk away -> walkAway
+        * Pick it up
+            -> pickUpJaneEyre
+        * Walk away
+            -> walkAway
 
 
 ==pickUpJaneEyre==
 
-She picks up the novel. Her fingertips graze the thick dust coating the cover. The cover is faded and the edges are bent.
-
-    * Open it -> openJane //shift plane
-    * Put it back -> putItBack
+    Ms. Suwan picks up the novel. Her fingertips graze the thick dust coating the cover. The cover is faded and the edges are bent.
+    
+    :MS SUWAN:
+    
+    * Open it
+        -> openJane //shift plane
+        
+    * Put it back
+        -> putItBack
     
     =openJane
     
@@ -58,20 +65,23 @@ She picks up the novel. Her fingertips graze the thick dust coating the cover. T
 == putItBack ==
 
     She places the novel back on the shelf, unable to allow herself to remember.
-        
-        * Walk away -> walkAway
+    
+    :MS SUWAN:
+    
+        * Walk away
+            -> walkAway
 
 
 == walkAway==
 
-    She slowly walks away from the bookshelf, her mind still stuck on the novel.
+    Ms. Suwan slowly walks away from the bookshelf, her mind still stuck on the novel.
     
     -> END
 
 
 == oldnovel_dreamvisited ==
 
-    the Jane Eyre book sitting alone on the bookshelf
+    The Jane Eyre book, sitting alone on the bookshelf.
 
     -> END
 

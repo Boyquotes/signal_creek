@@ -77,5 +77,6 @@ characterColors = {
 "ms suwan": Color( 0.38, 0.67, 1, 1 ),
 "nick": Color( 0.88, 0.78, 0.38, 1 ),
 "nour": Color( 0.78, 0.38, 0.38, 1 ),
+"rina": Color( 1, 0.439216, 0.67451, 1 ),
 "the party": Color( 1, 1, 1, 1 )
 }

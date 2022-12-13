@@ -29,10 +29,10 @@ VAR drinkCount = 0
     
     :THE PARTY:
     
-    * NOUR: Oh... I think I'll pass.
+    *NOUR: Oh... I think I'll pass.
         -> nour_doesnt_like_boba
         
-    * MS SUWAN: Oh! I didn't realize they sold Boba in vending machines. Perhaps I'll try one, later.
+    *MS SUWAN: Oh! I didn't realize they sold Boba in vending machines. Perhaps I'll try one, later.
         -> nick_ill_hold_you_to_it
 
 

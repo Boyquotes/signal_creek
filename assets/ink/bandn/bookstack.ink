@@ -33,17 +33,17 @@
 
 == bookstack_realvisited ==
 
-NICK: YES! Blood Titan Online is back! Oh, man... I really hope Hirama Joe and the Blood Titan team up. Wouldn't that be so epic? Especially after what happened with Yuno in the Chimera Planet arc... I think the anime left off around volume fifteen--
-
-NICK: Oh! Sorry! No spoilers! I forgot you guys haven't watched the anime...
-
-NOUR: Pfft. It's alright, I don't really mind.
-
-NICK: Okay! Well - I'm gonna take volume fifteen with me. I don't want it to all change into those normie books again. Who knows when I'm gonna find this again, right? 
-
-Nick picks up volume fifteen, spending a moment gazing at the colorful splash art on the cover, and slides it in his backpack with care. (Booleon for cool comic collected?)
-
--> END
+    NICK: YES! Blood Titan Online is back! Oh, man... I really hope Hirama Joe and the Blood Titan team up. Wouldn't that be so epic? Especially after what happened with Yuno in the Chimera Planet arc... I think the anime left off around volume fifteen--
+    
+    NICK: Oh! Sorry! No spoilers! I forgot you guys haven't watched the anime...
+    
+    NOUR: Pfft. It's alright, I don't really mind.
+    
+    NICK: Okay! Well - I'm gonna take volume fifteen with me. I don't want it to all change into those normie books again. Who knows when I'm gonna find this again, right? 
+    
+    Nick picks up volume fifteen, spending a moment gazing at the colorful splash art on the cover, and slides it in his backpack with care. (Booleon for cool comic collected?)
+    
+    -> END
 
 
 //SUBSEQUENT DREAM KNOTS HERE

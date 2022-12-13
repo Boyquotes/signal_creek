@@ -5,7 +5,7 @@
     //there's an overflowing shelf of books, all with the same title and author: The Price of Salt by Patricia Highsmith.
     //Nour used to read bits and pieces of the book whenever she'd come to the mall with her family; they never let her buy it, so she'd read as many chapters as she could whenever they'd leave her be in the store.
     
-    NARRATOR: Nour finds a massive stack of books. They're all copies of the same novel, titled The Price of Salt.
+    Nour finds a massive stack of books. They're all copies of the same novel, titled The Price of Salt.
     
     NOUR: Whoa, never seen so many copies of these! There's always only one or two left in the store at any given time.
     
