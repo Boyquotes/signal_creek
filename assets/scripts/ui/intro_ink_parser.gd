@@ -16,6 +16,8 @@ func _ready():
 	
 	Globals.delete_children(vertical_layout_node)
 	Globals.colorManager = $ColorManager
+	player.Continue()
+	create_entry(player.get_CurrentText())
 
 	
 func _process(_delta):
