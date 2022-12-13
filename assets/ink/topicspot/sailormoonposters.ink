@@ -17,11 +17,13 @@
     
         -> sailormoonposters_nickanime
 
+
 == sailormoonposters_realvisited ==
     
     NOUR: Yeah, that's more like it! Uranus and Neptune together.
     
     -> sailormoonposters_dream.sailormoonposters_gender
+    
     
 //Prompts nick to look for sailor moon manga in b&n bookstack
 == sailormoonposters_nickanime ==
@@ -39,6 +41,7 @@
     NOUR: This Sailor Moon poster is great and all, but... I'd love to see more Sailor Uranus merchandise.
     
     -> END
+
 
 == sailormoonposters_dreamvisited ==
     

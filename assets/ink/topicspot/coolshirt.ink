@@ -10,6 +10,7 @@
     
     -> END
 
+
 == coolshirt_realvisited ==
 
     NICK: Whoa, these shirts completely changed. Didn't they used to be kind of ugly-- I mean... like all dark and edgy before?
@@ -58,6 +59,7 @@
     Nick doesn't sound convincing, even to himself. 
     
     -> END
+
 
 == coolshirt_dreamvisited ==
 

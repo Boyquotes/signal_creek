@@ -102,6 +102,8 @@ func set_current_room(roomScene):
 	#call_deferred("move_party", previousRoom, roomScene)
 	
 	Globals.planeManager = roomScene.get_plane_manager()
+	
+	Globals.planeManager.set_correct_plane()
 
 	
 

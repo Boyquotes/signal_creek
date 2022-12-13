@@ -92,7 +92,11 @@ stream = ExtResource( 5 )
 
 [node name="Ambience" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 8 )
-volume_db = -2.788
+autoplay = true
+
+[node name="Music" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource( 8 )
+volume_db = -0.144
 autoplay = true
 
 [connection signal="doorway_entered" from="." to="." method="_on_Game_doorway_entered"]

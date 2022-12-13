@@ -1,6 +1,7 @@
 //---------------- DREAM WORLD ----------------
 
 == victorias_dream ==
+
 //Nour filled the classic young-closeted-gay child who got very flustered whenever she went near or in a victoria's secret
 
     NOUR: Ah. Yes. The store that caused me endless embarrassment as a child.
@@ -32,6 +33,7 @@
     -> END
 
 == victorias_realvisited ==
+
 //Nour filled the classic young-closeted-gay child who got very flustered whenever she went near or in a victoria's secret
 
     NOUR: Shit, seems like it's up-and-running here. Aaaand all the lingerie and posters are back, lovely.
@@ -54,6 +56,7 @@
 //---------------- REAL WORLD ----------------
 
 == victorias_real ==
+
 //Nour filled the classic young-closeted-gay child who got very flustered whenever she went near or in a victoria's secret
 
     NOUR: Don't look don't look don't look don't look don--

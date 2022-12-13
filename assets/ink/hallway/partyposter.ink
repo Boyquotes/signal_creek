@@ -18,11 +18,13 @@
     
     + -> END
 
+
 == partyposter_realvisited ==
 
     NICK: Back to the party again... you still think we can go?
     
     -> END
+
 
 == phoneconvo ==
 
@@ -49,6 +51,7 @@
     NOUR: Ha. The date says sometime three years ago.
 
     -> END
+
 
 == partyposter_dreamvisited ==
 

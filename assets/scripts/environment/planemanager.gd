@@ -26,14 +26,31 @@ func _physics_process(_delta):
 func shift_planes():
 	
 	if Globals.world == Globals.Worlds.DREAM:
-		Globals.world = Globals.Worlds.REAL
-		set_tilesets(realset)
+		set_real_world()
 	else:
-		Globals.world = Globals.Worlds.DREAM
-		set_tilesets(dreamset)
-		
+		set_dream_world()
+	
+
+#to be used when walking into a different room
+func set_correct_plane():
+	
+	if Globals.world == Globals.Worlds.DREAM:
+		set_dream_world()
+	else:
+		set_real_world()
+
+
+func set_dream_world():
+	Globals.world = Globals.Worlds.DREAM
+	set_tilesets(dreamset)
 	Globals.party.change_assets_world(Globals.world)
 
+
+func set_real_world():
+	Globals.world = Globals.Worlds.REAL
+	set_tilesets(realset)
+	Globals.party.change_assets_world(Globals.world)
+	
 
 func set_tilesets(setId):
 	

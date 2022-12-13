@@ -46,11 +46,13 @@
         
         -> END
 
+
 ==WalkAway==
     
     She breaks the eye contact between herself and the doll and brings herself to walk away
     
     ->END
+
 
 == olddoll_dreamvisited ==
 
