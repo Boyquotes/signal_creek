@@ -1,7 +1,6 @@
 extends Control
 
 onready var portrait = $MarginContainer/HBoxContainer/Portrait
-
 onready var nametag = $MarginContainer/HBoxContainer/TextContainer/Panel/Name
 
 

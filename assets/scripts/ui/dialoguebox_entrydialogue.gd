@@ -8,6 +8,7 @@ func remove_placeholders():
 
 
 func set_nametag(newname, color):
+	
 	$VBoxContainer/Name.bbcode_text = '[b]' + newname + '[/b]'
 	$VBoxContainer/Name.set("custom_colors/default_color", color)
 
@@ -17,4 +18,5 @@ func set_nametag(newname, color):
 
 
 func set_dialogue(dialoguetext):
+	
 	$VBoxContainer/DialogueTextContainer/Background/VBoxContainer.add_child(dialoguetext)

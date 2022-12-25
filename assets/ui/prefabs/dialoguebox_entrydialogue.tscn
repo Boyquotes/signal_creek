@@ -4,7 +4,6 @@
 [ext_resource path="res://assets/scripts/ui/dialoguebox_entrydialogue.gd" type="Script" id=2]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=3]
 
-
 [node name="DialogueEntry" type="MarginContainer"]
 margin_right = 282.0
 margin_bottom = 56.0
@@ -40,9 +39,9 @@ margin_left = 12.0
 margin_right = 266.0
 margin_bottom = 84.0
 
-[node name="Dialogue" parent="VBoxContainer/DialogueTextContainer/Background/VBoxContainer" instance=ExtResource( 1 )]
+[node name="Dialogue" parent="VBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
 
-[node name="Dialogue2" parent="VBoxContainer/DialogueTextContainer/Background/VBoxContainer" instance=ExtResource( 1 )]
+[node name="Dialogue2" parent="VBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
 margin_top = 36.0
 margin_bottom = 84.0
 text = "“So how about that airplane food? Huh? Hahahahaha! Why aren’t you laughing? Didn’t you think that was funny?”"

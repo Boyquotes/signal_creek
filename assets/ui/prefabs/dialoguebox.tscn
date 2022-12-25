@@ -45,7 +45,7 @@ margin_right = 276.0
 margin_bottom = 528.0
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
+[node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance_placeholder="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn"]
 margin_right = 276.0
 margin_bottom = 112.0
 

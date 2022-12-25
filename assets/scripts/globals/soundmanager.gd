@@ -18,7 +18,7 @@ func play_sound(audioName):
 	
 	soundPlayer.stream = audioName
 	soundPlayer.play()
-	
+
 func play_ambience(audioName):
 	
 	ambientPlayer.stream = audioName

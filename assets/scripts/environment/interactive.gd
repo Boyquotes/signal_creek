@@ -2,15 +2,10 @@ extends Area2D
 
 #for the INTERACT area collider of an interactive object
 
-#export var inkFileDream : Resource
-#export var inkFileReal : Resource
-
 var canInteract = false
 var party_is_inside = false
 
-#NOTES ABOUT THIS APPROACH: IT WON'T BE KEPT IN SAVE FILES; DON'T WORRY ABOUT IT FOR DEMO
-#IT'S NOT A LONG-TERM SOLUTION, BUT IT'S NOT SOMETHING TO CARE ABOUT IMMEDIATELY.
-#Idea: check for signals of all interactive objects, when they're emitted, add to a variable list. swag?
+#this will be inkside
 var dreamvisited = false
 var realvisited = false
 
@@ -44,14 +39,16 @@ func _process(_delta):
 					
 				Globals.dialogueBox.background_panel_node.set_visible(true)
 
-
 func _on_InteractArea_body_entered(body):
+	
 	party_is_inside = true
 	check_correct_leader(body)
 
 #check if party leader is inside
 func check_leader_on_switch():
+	
 	for body in self.get_overlapping_bodies():
+		
 		if check_correct_leader(body) == true:
 			break
 
@@ -79,7 +76,6 @@ func check_correct_leader(body):
 			
 		return true
 
-
 func _on_InteractArea_body_exited(body):
 	
 	if body.is_in_group("Player"):
@@ -93,13 +89,10 @@ func _on_InteractArea_body_exited(body):
 
 #return name of this object as it is stated in the prefab file name, excluding obj_ prefix
 func get_object_name():
+	
 	var rawfilename = self.get_parent().filename
 	
-	#print(rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_"))
-	
 	return rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_")
-	
-
 
 #gets the world we're currently in, then gets whether we've visited this object in the other world
 func get_visitedinworld_status():
@@ -118,4 +111,3 @@ func get_visitedinworld_status():
 		else:
 			realvisited = true
 			return "_real"
-			

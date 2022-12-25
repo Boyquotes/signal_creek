@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/scenes/rooms/room_starter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scripts/globals/gamecanvas.gd" type="Script" id=2]
-[ext_resource path="res://assets/prefabs/UserInterface.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/scenes/UserInterface.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/scripts/globals/soundmanager.gd" type="Script" id=4]
 [ext_resource path="res://assets/sounds/uisounds/choiceselect.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/sounds/uisounds/newentry.wav" type="AudioStream" id=6]

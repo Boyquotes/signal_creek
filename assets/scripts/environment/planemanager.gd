@@ -9,19 +9,16 @@ onready var objects = []
 export (TileSet) var dreamset 
 export (TileSet) var realset
 
-#add enum
 
 func _ready():
 	for node in get_tree().get_nodes_in_group("shiftable"):
 		objects.push_back(node)
 	pass
 
-
 func _physics_process(_delta):
 	
 	if Input.is_action_just_pressed("planeshift"):
 		shift_planes()
-
 
 func shift_planes():
 	
@@ -29,7 +26,6 @@ func shift_planes():
 		set_real_world()
 	else:
 		set_dream_world()
-	
 
 #to be used when walking into a different room
 func set_correct_plane():
@@ -39,18 +35,15 @@ func set_correct_plane():
 	else:
 		set_real_world()
 
-
 func set_dream_world():
 	Globals.world = Globals.Worlds.DREAM
 	set_tilesets(dreamset)
 	Globals.party.change_assets_world(Globals.world)
 
-
 func set_real_world():
 	Globals.world = Globals.Worlds.REAL
 	set_tilesets(realset)
 	Globals.party.change_assets_world(Globals.world)
-	
 
 func set_tilesets(setId):
 	
@@ -58,7 +51,6 @@ func set_tilesets(setId):
 	walls_node.set_tileset(setId)
 	set_objects_sprites()
 	move_objects()
-
 
 func set_objects_sprites():
 	
@@ -69,7 +61,6 @@ func set_objects_sprites():
 	else:
 		for object in objects:
 			object.set_sheet(object.realsheet)
-
 
 func move_objects():
 	

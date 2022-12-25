@@ -6,7 +6,7 @@ onready var gameCanvas = null
 
 enum Characters { NICK, NOUR, SUWAN }
 enum GameModes { WALK, TALK }
-enum Worlds { REAL, DREAM }          #can't be named 'plane' b/c Plane is an existing type 
+enum Worlds { REAL, DREAM }          #can't be named 'plane' b/c Plane is an existing type
 enum WalkDir { LEFT, RIGHT, UP, DOWN }
 enum Animation { WALK, IDLE }   #todo. do we want each combo ex walk_left idle_right or use with WalkDir
 
@@ -37,8 +37,7 @@ onready var bandn = null
 onready var hallway = null
 onready var topicspot = null
 
-#variable getters and setters 
-#this should really say get_world_inkname, will do later
+
 func get_world_inkname() -> String:
 	if(world == Worlds.DREAM):
 		return "dream"
@@ -47,10 +46,8 @@ func get_world_inkname() -> String:
 	print("ERR: tried to get world ink name, but wasn't DREAM or REAL!")
 	return "ERR"
 
-
 #global static functions
 static func delete_children(node):
 	for n in node.get_children():
 		node.remove_child(n)
 		n.queue_free()
-

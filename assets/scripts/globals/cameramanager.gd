@@ -1,7 +1,6 @@
 extends Camera2D
 
 #camera manager
-#cameramanager.gd
 
 #object to follow
 export (NodePath) onready var camera_following = get_node(camera_following)
@@ -35,7 +34,6 @@ func _ready():
 		fadingIn = true
 		overlay.color.a = 1
 
-
 func _process(_delta):
 	
 	if fadingIn: #ok i know there's a way to make this more efficient but idk coroutines in godot
@@ -44,7 +42,6 @@ func _process(_delta):
 		
 		if overlay.color.a > 0: #decrease overlay alpha to fade-in
 			overlay.color.a -=.1
-
 
 func pixel_perfect(delta):
 	
@@ -56,14 +53,12 @@ func pixel_perfect(delta):
 	
 	return cam_subpixel_pos
 
-
 func rescale_camera(windowscale):
 	
 	window_scale = windowscale
 	game_size = Vector2((OS.window_size / window_scale).x, (OS.window_size / window_scale).y)
 	camera_bounds_min = Vector2(room_bounds_min.x + game_size.x /2 + 1, room_bounds_min.y + game_size.y /2 + 1)
 	camera_bounds_max = Vector2(room_bounds_max.x - game_size.x /2 -1, room_bounds_max.y - game_size.y /2 - 1)
-
 
 func set_camera_bounds(roomBoundsMin, roomBoundsMax):
 	
@@ -72,3 +67,7 @@ func set_camera_bounds(roomBoundsMin, roomBoundsMax):
 	camera_bounds_min = Vector2(room_bounds_min.x + game_size.x /2 + 1, room_bounds_min.y + game_size.y /2 + 1)
 	camera_bounds_max = Vector2(room_bounds_max.x - game_size.x /2 -1, room_bounds_max.y - game_size.y /2 - 1)
 
+func set_camera_actual_position(position):
+	
+	global_position = position
+	camera_actual_position = position

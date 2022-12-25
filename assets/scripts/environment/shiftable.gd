@@ -30,22 +30,18 @@ func _ready():
 		if (get_node_or_null("ActiveArea") != null):
 			$Sprite.material.set_shader_param("color", Color.transparent)
 
-
 func _process(_delta):
 	
 	if Engine.editor_hint:
 		set_hint_attributes()
 
-
 func set_sheet(sheetId):
 	
 	$Sprite.set_texture(sheetId)
 
-
 func set_pos(posId):
 	self.set_global_position(posId)
 	pass
-
 
 func set_hint_attributes():
 	
@@ -54,11 +50,9 @@ func set_hint_attributes():
 	$Hint.set_texture(realsheet)
 	$Hint.offset.y = $Sprite.region_rect.size.y / -2
 
-
 func _on_ActiveArea_can_interact():
 	
 	$Sprite.material.set_shader_param("color", Color.white)
-
 
 func _on_ActiveArea_cannot_interact():
 	
