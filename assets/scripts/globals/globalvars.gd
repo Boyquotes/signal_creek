@@ -54,21 +54,3 @@ static func delete_children(node):
 		node.remove_child(n)
 		n.queue_free()
 
-
-
-
-
-#save data loading and saving 
-#var SaveDataManager = preload("res://assets/scripts/Data/SaveDataManager.cs")
-#var saveDataManager = SaveDataManager.new()
-var narrativeData = null
-
-func _init():
-	#saveDataManager = SaveDataManager.new()
-	#saveDataManager.Load()
-	pass
-
-#in the future, will save data to disc, called when closing the game.
-func save():
-	#saveDataManager.Save()
-	pass
