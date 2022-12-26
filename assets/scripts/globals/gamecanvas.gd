@@ -23,6 +23,7 @@ signal doorway_entered(newroom, partyposition)
 
 func _ready():
 
+	Globals.overlay = $CameraOverlay
 	Globals.planeManager = $ViewportContainer/Viewport/Room/PlaneManager
 	Globals.party = $ViewportContainer/Viewport/Room/PlaneManager/Overworld/PARTY
 	Globals.soundManager = $SoundManager

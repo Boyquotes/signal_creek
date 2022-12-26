@@ -148,6 +148,8 @@ func print_state():
 	var addVariables = false
 	var variables = ""
 	
+	print("----------\nINK STATE:")
+	
 	for item in splitstate:
 		if "cPath" in item:
 			print("cPath: " + splitstate[i + 2] + '"')
@@ -169,6 +171,8 @@ func print_state():
 					
 				
 		i += 1
+		
+	print("----------")
 
 #Clear and reset the UI panel prefab
 func clear_and_reset_ui():

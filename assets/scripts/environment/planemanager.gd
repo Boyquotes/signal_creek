@@ -22,6 +22,8 @@ func _physics_process(_delta):
 
 func shift_planes():
 	
+	Globals.overlay.plane_shift()
+	
 	if Globals.world == Globals.Worlds.DREAM:
 		set_real_world()
 	else:

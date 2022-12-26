@@ -5,7 +5,7 @@ onready var gameCanvas = null
 #global enums, to be used anywhere
 
 enum Characters { NICK, NOUR, SUWAN }
-enum GameModes { WALK, TALK }
+enum GameModes { WALK, TALK, SHIFT }
 enum Worlds { REAL, DREAM }          #can't be named 'plane' b/c Plane is an existing type
 enum WalkDir { LEFT, RIGHT, UP, DOWN }
 enum Animation { WALK, IDLE }   #todo. do we want each combo ex walk_left idle_right or use with WalkDir
@@ -13,6 +13,7 @@ enum Animation { WALK, IDLE }   #todo. do we want each combo ex walk_left idle_r
 #declare global game variables
 
 onready var camera = null
+onready var overlay = null
 onready var soundManager = null
 onready var currentRoom = null
 
