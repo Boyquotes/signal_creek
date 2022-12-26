@@ -9,6 +9,9 @@ onready var objects = []
 export (TileSet) var dreamset 
 export (TileSet) var realset
 
+onready var dream_gradient = preload("res://assets/shaders/gradient_dream.tres")
+onready var real_gradient = preload("res://assets/shaders/gradient_real.tres")
+
 
 func _ready():
 	for node in get_tree().get_nodes_in_group("shiftable"):
@@ -26,8 +29,11 @@ func shift_planes():
 	
 	if Globals.world == Globals.Worlds.DREAM:
 		set_real_world()
+		Globals.worldEnvironment.get_environment().set_adjustment_color_correction(real_gradient)
+		
 	else:
 		set_dream_world()
+		Globals.worldEnvironment.get_environment().set_adjustment_color_correction(dream_gradient)
 
 #to be used when walking into a different room
 func set_correct_plane():

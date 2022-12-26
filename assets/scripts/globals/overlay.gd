@@ -6,8 +6,8 @@ export var shift_timer_interval : float = 1.0
 
 var overlay_material
 
-var normal_shader = preload("res://assets/shaders/staticoverlay.tres")
-var shift_shader = preload("res://assets/shaders/planeshift.tres")
+var normal_shader = preload("res://assets/shaders/shader_staticaberration.tres")
+var shift_shader = preload("res://assets/shaders/shader_planeshift.tres")
 
 var transitioning = false
 
@@ -50,8 +50,6 @@ func plane_shift():
 	var viewportimg = get_viewport().get_texture().get_data()
 	old_world_texture = ImageTexture.new()
 	old_world_texture.create_from_image(viewportimg)
-	
-
 	
 	set_shader(shift_shader)
 	overlay_material.set_shader_param("oldworld", old_world_texture)

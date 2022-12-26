@@ -12,6 +12,7 @@ enum Animation { WALK, IDLE }   #todo. do we want each combo ex walk_left idle_r
 
 #declare global game variables
 
+onready var worldEnvironment = null
 onready var camera = null
 onready var overlay = null
 onready var soundManager = null
