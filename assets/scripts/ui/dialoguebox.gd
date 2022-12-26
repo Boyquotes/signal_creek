@@ -11,8 +11,6 @@ var pre_entrydialogue = preload("res://assets/ui/prefabs/dialoguebox_entrydialog
 var pre_entrychoices = preload("res://assets/ui/prefabs/dialoguebox_entrychoices.tscn")
 var pre_choice = preload("res://assets/ui/prefabs/dialoguebox_entrychoices_choice.tscn")
 
-export var _startTalking : bool #for isolated testing purposes; default to false for full game
-
 #DIALOGUE ENTRY VARS
 #var currentSpeaker = "THE PARTY" #stores the current name to put into entry nametags
 
@@ -36,42 +34,28 @@ func _ready():
 	Globals.delete_children(vertical_layout_node)
 	background_panel_node.set_visible(false)
 
-#this is where we'll listen to the player's button presses and tell the UI & ink player to do stuff. 
-func _process(_delta):
+
+#change which choice is currently highlighted
+#changevalue: 1 if we're going down, -1 if we're going up
+func toggle_choice_selections(changeValue):
+	currentChoiceEntryChoices[choiceIndex].set_highlighted(false)
+	#move to new choice
+	choiceIndex = wrapi(choiceIndex + changeValue, 0, currentChoiceStrings.size())
+	currentChoiceEntryChoices[choiceIndex].set_highlighted(true)
 	
-	if Globals.mode == Globals.GameModes.TALK:
-		
-		if isDisplayingChoices:
-			
-			if Input.is_action_just_released("ui_down") || Input.is_action_just_released("ui_up"):
-				var changeValue = 1
-				
-				if Input.is_action_just_released("ui_up"):
-					changeValue = -1
-				
-				currentChoiceEntryChoices[choiceIndex].set_highlighted(false)
-				#move to new choice
-				choiceIndex = wrapi(choiceIndex + changeValue, 0, currentChoiceStrings.size())
-				currentChoiceEntryChoices[choiceIndex].set_highlighted(true)
-				
-				Globals.soundManager.play_sound(Globals.soundManager.choice_select_sound)
-				
-			
-			if Input.is_action_just_pressed("interact"):
-				
-				player.ChooseChoiceIndex(choiceIndex)
-				currentChoiceEntry.queue_free() #remove the choicebox
-				isDisplayingChoices = false
-				_proceed()
-		
-		elif Input.is_action_just_pressed("interact"):
-			_proceed()
+	Globals.soundManager.play_sound(Globals.soundManager.choice_select_sound)
+
+#select the currently highlighted choice
+func select_current_choice():
+	player.ChooseChoiceIndex(choiceIndex)
+	currentChoiceEntry.queue_free() #remove the choicebox
+	isDisplayingChoices = false
+	proceed()
 
 #proceeding to the next string that ink should return
-func _proceed():
+func proceed():
 	
 	if !player.get_CanContinue() && !player.get_HasChoices():
-		player.SwitchToDefaultFlow()
 		clear_and_reset_ui()
 		
 	elif !player.get_HasChoices(): #create normal text entry
@@ -84,20 +68,20 @@ func _proceed():
 			Globals.planeManager.shift_planes()
 			currentLine = currentLine.trim_prefix('&')
 			
-		checkEntryType(currentLine)
+		check_entry_type(currentLine)
 		
 	#scroll_node to bottom when new message appears (make this tween later)
 	yield(get_tree(), "idle_frame")
 	scroll_node.set_v_scroll(scroll_node.get_v_scrollbar().max_value)
 
-func checkEntryType(entryText):
+func check_entry_type(entryText):
 	
 		if entryText.substr(0, 1) == ":": #this is a name for the choice entry nametag; not an entry to put in
 			
 			var chooserName = entryText.substr(1).strip_escapes()
 			player.Continue()
 			isDisplayingChoices = true
-			displayChoices(chooserName)
+			display_choices(chooserName)
 		
 		elif ":" in entryText: #if line contains a name, parse name and dialogue after
 
@@ -109,7 +93,7 @@ func checkEntryType(entryText):
 			vertical_layout_node.add_child(newText)
 
 #initialize the choice-selection of a new choice entry prefab
-func displayChoices(chooserName):
+func display_choices(chooserName):
 	
 	currentChoiceStrings = player.get_CurrentChoices()
 	
@@ -140,6 +124,7 @@ func open(pathstring):
 	
 	player.ChoosePathString(pathstring)
 
+#parse json story state from ink player; print the stuff we care about
 func print_state():
 	
 	var splitstate = player.GetState().json_escape().split("\\")

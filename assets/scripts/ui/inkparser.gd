@@ -46,8 +46,6 @@ func _ready():
 	#for testing purposes; it starts opened if this is set to true
 	if _startTalking:
 		Globals.mode = Globals.GameModes.TALK
-		#HERE TODO PLS INSERT VISITED COUNT AND UMMMMM START AT THE BEGINNING OF THE KNOT AGAIN IDK WHY ITS NOT WOKRING
-		
 
 #this is where we'll listen to the player's button presses and tell the UI & ink player to do stuff. 
 func _process(_delta):
@@ -98,8 +96,6 @@ func _process(_delta):
 func _proceed():
 	
 	if !player.get_CanContinue() && !player.get_HasChoices():
-#		print(player.SwitchToDefaultFlow())
-		player.SwitchToDefaultFlow()
 		clear_and_reset_ui()
 		
 	elif !player.get_HasChoices(): #create normal text entry

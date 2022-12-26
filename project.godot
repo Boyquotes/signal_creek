@@ -25,6 +25,7 @@ default_bus_layout=""
 
 Globals="*res://assets/scripts/globals/globalvars.gd"
 DialogueEngine="*res://assets/scripts/ui/dialogueengine.gd"
+RoomChanger="*res://assets/scripts/globals/roomchanger.gd"
 
 [display]
 

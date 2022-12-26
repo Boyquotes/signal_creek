@@ -12,20 +12,19 @@ enum Animation { WALK, IDLE }   #todo. do we want each combo ex walk_left idle_r
 
 #declare global game variables
 
+onready var updateController = null
 onready var worldEnvironment = null
 onready var camera = null
 onready var overlay = null
 onready var soundManager = null
-onready var currentRoom = null
+
 
 onready var dialogueBox = null
 onready var portrait = null
 onready var colorManager = null
 
-onready var planeManager = null
 onready var mode = GameModes.WALK
 onready var world = Worlds.DREAM
-onready var rooms = null
 
 onready var player = null
 onready var party = null
@@ -35,9 +34,7 @@ onready var suwan = null
 
 onready var inkvars = ""
 
-onready var bandn = null
-onready var hallway = null
-onready var topicspot = null
+
 
 
 func get_world_inkname() -> String:
