@@ -11,12 +11,11 @@
 [ext_resource path="res://assets/shaders/camera_overlay.tres" type="Material" id=9]
 [ext_resource path="res://assets/scripts/globals/overlay.gd" type="Script" id=10]
 [ext_resource path="res://assets/sounds/music/barnes.mp3" type="AudioStream" id=11]
-[ext_resource path="res://assets/shaders/gradient_real.tres" type="Texture" id=12]
+[ext_resource path="res://assets/shaders/gradient_dream.tres" type="Texture" id=12]
 
 [sub_resource type="Environment" id=3]
 background_mode = 4
 tonemap_mode = 2
-glow_enabled = true
 glow_levels/2 = true
 glow_bloom = 0.06
 glow_blend_mode = 0

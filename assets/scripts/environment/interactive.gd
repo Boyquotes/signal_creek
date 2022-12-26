@@ -55,7 +55,7 @@ func check_leader_on_switch():
 func check_correct_leader(body):
 	
 	if body == Globals.party.get_leader():
-		print(body.get_name())
+		print("Leader In Interact Area: " + body.get_name())
 		var currentLeader = Globals.party.leaderIndex
 		
 		if currentLeader == 0 && interactiveByNick:
