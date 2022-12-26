@@ -90,12 +90,14 @@
     NICK: Hey Ms Suwan, can you pass me the toy car?
     
     MS SUWAN: Um, ok
+    
+    :MS SUWAN:
 
-    +pick it up
+    + pick it up
     
         -> hotwheelsshift
         
-    +walk away
+    + walk away
     
         -> DONE
     
