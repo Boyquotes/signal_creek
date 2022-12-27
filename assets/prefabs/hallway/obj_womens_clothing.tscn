@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
-[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_hallway_real.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
+[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=2]
+[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=3]
+[ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/objects/sheet_hallway_real.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 90.5, 33 )
@@ -14,18 +14,18 @@ extents = Vector2( 88, 34.75 )
 
 [node name="WomensClothing" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
-dreamsheet = ExtResource( 5 )
-realsheet = ExtResource( 4 )
+dreamsheet = ExtResource( 4 )
+realsheet = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
-material = ExtResource( 3 )
+material = ExtResource( 2 )
 position = Vector2( 0, -33 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 240, 95, 176, 66 )
 
@@ -33,7 +33,7 @@ region_rect = Rect2( 240, 95, 176, 66 )
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 offset = Vector2( 0, -33 )
 region_enabled = true
 region_rect = Rect2( 240, 95, 176, 66 )
@@ -43,11 +43,11 @@ position = Vector2( -0.5, -33 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
-script = ExtResource( 1 )
+script = ExtResource( 3 )
 __meta__ = {
 "_editor_description_": ""
 }
-interactiveBySuwan = true
+_interactive_by_suwan = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 position = Vector2( 0.5, -26.75 )

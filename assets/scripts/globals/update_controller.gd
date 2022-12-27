@@ -20,6 +20,7 @@ func _process(_delta):
 				Globals.DialogueBox.select_current_choice()
 				
 		elif Input.is_action_just_pressed("interact"):
+			print("interacting")
 			Globals.DialogueBox.proceed()
 			
 	elif Globals.GameMode == Globals.GameModes.WALK:

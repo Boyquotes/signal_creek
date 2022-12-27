@@ -29,6 +29,7 @@ func _process(_delta):
 			call_deferred("_check_leader_on_switch")
 			
 	if _can_interact:
+		print("can interact")
 		if Input.is_action_just_pressed("interact"):
 			if Globals.GameMode == Globals.GameModes.WALK:
 				Globals.GameMode = Globals.GameModes.TALK
