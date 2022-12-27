@@ -1,10 +1,5 @@
 extends Node
-
-#DOCSTRING HERE!!!
-
-
-
-#global enums, to be used anywhere
+#Global variables & enums - Autoload along with RoomEngine and DialogueEngine
 
 enum Characters { NICK, NOUR, SUWAN }
 enum GameModes { WALK, TALK, SHIFT }

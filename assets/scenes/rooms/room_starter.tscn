@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/scripts/globals/cameramanager.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/globals/camera_manager.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/tilesets/set_proposal_dream.tres" type="TileSet" id=2]
-[ext_resource path="res://assets/scripts/environment/planemanager.gd" type="Script" id=3]
+[ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/tilesets/set_proposal_real.tres" type="TileSet" id=4]
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=5]
-[ext_resource path="res://assets/scripts/environment/roomvars.gd" type="Script" id=6]
+[ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=6]
 [ext_resource path="res://assets/prefabs/party/party.tscn" type="PackedScene" id=7]
 
 [node name="Room" type="Node2D"]

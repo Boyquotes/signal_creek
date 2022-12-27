@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "RoomVars",
 "language": "GDScript",
-"path": "res://assets/scripts/environment/roomvars.gd"
+"path": "res://assets/scripts/environment/room_vars.gd"
 }, {
 "base": "Node2D",
 "class": "Shiftable",
@@ -51,9 +51,9 @@ default_bus_layout=""
 
 [autoload]
 
-Globals="*res://assets/scripts/globals/globalvars.gd"
+Globals="*res://assets/scripts/globals/global_vars.gd"
 DialogueEngine="*res://assets/scripts/ui/dialogueengine.gd"
-RoomEngine="*res://assets/scripts/globals/roomchanger.gd"
+RoomEngine="*res://assets/scripts/globals/room_engine.gd"
 
 [display]
 
