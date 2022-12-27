@@ -1,12 +1,7 @@
 extends Node
 
-signal doorway_entered(newroom, partyposition)
-
-var rooms = null
-var currentRoomIndex = 1
-
 func _start():
-	emit_signal("doorway_entered", Globals.rooms[currentRoomIndex], Globals.rooms[currentRoomIndex].get_party_starting_position())
+	pass
 
 
 func _process(_delta):
@@ -33,6 +28,6 @@ func _process(_delta):
 			reset_game()
 
 func reset_game():
-
-	Globals.rooms[currentRoomIndex].get_tree().change_scene(Globals.rooms[currentRoomIndex].get_tree().current_scene.filename)
+	pass
+	#Globals.Rooms[currentRoomIndex].get_tree().change_scene(Globals.Rooms[currentRoomIndex].get_tree().current_scene.filename)
 

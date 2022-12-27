@@ -1,6 +1,8 @@
 extends Node
 
-onready var gameCanvas = null
+#DOCSTRING HERE!!!
+
+
 
 #global enums, to be used anywhere
 
@@ -12,25 +14,28 @@ enum AnimationMode { WALK, IDLE }   #todo. do we want each combo ex walk_left id
 
 #declare global game variables
 
-onready var UpdateController = null
-onready var GameWorldEnvironment = null
-onready var PartyCamera = null
-onready var GameOverlay = null
-onready var SoundManager = null
+var GameCanvas = null
 
-onready var DialogueBox = null
-onready var CornerPortrait = null
-onready var ColorManager = null
+var GameMode = GameModes.WALK
+var CurrentWorld = Worlds.DREAM
 
-onready var GameMode = GameModes.WALK
-onready var CurrentWorld = Worlds.DREAM
+var UpdateController = null
+var GameWorldEnvironment = null
+var GameOverlay = null
 
-onready var PartyObject = null
-onready var Nick = null
-onready var Nour = null
-onready var Suwan = null
+var SoundManager = null
 
-onready var InkStoryState = ""
+var DialogueBox = null
+var CornerPortrait = null
+var ColorManager = null
+
+var PartyCamera = null
+var PartyObject = null
+var Nick = null
+var Nour = null
+var Suwan = null
+
+var InkStoryState = ""
 
 
 func get_world_inkname() -> String:

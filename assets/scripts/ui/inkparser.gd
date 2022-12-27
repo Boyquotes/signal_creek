@@ -106,7 +106,7 @@ func _proceed():
 		var currentLine = player.get_CurrentText() #get current text from ink player
 		
 		if currentLine.substr(0, 1) == "&":
-			Globals.planeManager.shift_planes()
+			Globals.PlaneManager.shift_planes()
 			currentLine = currentLine.trim_prefix('&')
 			
 		if currentLine.substr(0, 1) == ":": #this is a name for the choice entry nametag; not an entry to put in

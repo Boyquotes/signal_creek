@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/sounds/uisounds/newchoiceentry.wav" type="AudioStream" id=7]
 [ext_resource path="res://assets/sounds/ambient/SFXW001_indoor_roomtone_entrance hall.wav" type="AudioStream" id=8]
 [ext_resource path="res://assets/shaders/camera_overlay.tres" type="Material" id=9]
-[ext_resource path="res://assets/scripts/globals/overlay.gd" type="Script" id=10]
+[ext_resource path="res://assets/scripts/globals/gameoverlay.gd" type="Script" id=10]
 [ext_resource path="res://assets/sounds/music/barnes.mp3" type="AudioStream" id=11]
 [ext_resource path="res://assets/shaders/gradient_dream.tres" type="Texture" id=12]
 [ext_resource path="res://assets/scripts/globals/updatecontroller.gd" type="Script" id=13]

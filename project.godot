@@ -8,6 +8,34 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Doortal",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/doortal.gd"
+}, {
+"base": "Area2D",
+"class": "Interactive",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/interactive.gd"
+}, {
+"base": "Node2D",
+"class": "RoomVars",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/roomvars.gd"
+}, {
+"base": "Node2D",
+"class": "Shiftable",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/shiftable.gd"
+} ]
+_global_script_class_icons={
+"Doortal": "",
+"Interactive": "",
+"RoomVars": "",
+"Shiftable": ""
+}
+
 [application]
 
 config/name="Signal Creek"
