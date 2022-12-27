@@ -1,6 +1,6 @@
 extends Node2D
 
-#manages viewport, ui, plane stuff
+#manages viewport, ui, world stuff
 
 onready var viewport_container = $ViewportContainer
 onready var viewport = $ViewportContainer/Viewport
@@ -17,53 +17,52 @@ export var camera_pixel_height : float = 180
 
 signal doorway_entered(newroom, partyposition)
 
-
 func _ready():
 
-	Globals.worldEnvironment = $WorldEnvironment
-	Globals.camera = $ViewportContainer/Viewport/Room/Camera2D
-	Globals.overlay = $CameraOverlay
-	RoomChanger.planeManager = $ViewportContainer/Viewport/Room/PlaneManager
-	Globals.party = $ViewportContainer/Viewport/Room/PlaneManager/Overworld/PARTY
-	Globals.soundManager = $SoundManager
+	Globals.GameWorldEnvironment = $WorldEnvironment
+	Globals.PartyCamera = $ViewportContainer/Viewport/Room/Camera2D
+	Globals.GameOverlay = $GameOverlay
+	
+	Globals.PartyObject = $ViewportContainer/Viewport/Room/PlaneManager/Overworld/PARTY
+	Globals.SoundManager = $SoundManager
 	Globals.gameCanvas = self
 
-	Globals.dialogueBox = $UserInterface/ReferenceRect/DialogueBox
-	Globals.portrait = $UserInterface/ReferenceRect/Portraits
-	Globals.colorManager = $UserInterface/ReferenceRect/DialogueBox/ColorManager
+	Globals.DialogueBox = $UserInterface/ReferenceRect/DialogueBox
+	Globals.CornerPortrait = $UserInterface/ReferenceRect/Portraits
+	Globals.ColorManager = $UserInterface/ReferenceRect/DialogueBox/ColorManager
 	
-	RoomChanger.currentRoom = $ViewportContainer/Viewport/Room
+	RoomEngine.planeManager = $ViewportContainer/Viewport/Room/PlaneManager
 	
-	RoomChanger.bandn = room_BandN.instance()
-	RoomChanger.hallway = room_hallway.instance()
-	RoomChanger.topicspot = room_topicSpot.instance()
+	RoomEngine.currentRoom = $ViewportContainer/Viewport/Room
+	RoomEngine.bandn = room_BandN.instance()
+	RoomEngine.hallway = room_hallway.instance()
+	RoomEngine.topicspot = room_topicSpot.instance()
 
-	RoomChanger.rooms = [RoomChanger.bandn, RoomChanger.hallway, RoomChanger.topicspot]
+	RoomEngine.rooms = [RoomEngine.bandn, RoomEngine.hallway, RoomEngine.topicspot]
 	
-	
-	Globals.camera.rescale_camera(floor(OS.window_size.x/camera_pixel_width))
+	Globals.PartyCamera.rescale_camera(floor(OS.window_size.x/camera_pixel_width))
 
-	emit_signal("doorway_entered", RoomChanger.rooms[currentRoomIndex], RoomChanger.rooms[currentRoomIndex].get_party_starting_position())
+	emit_signal("doorway_entered", RoomEngine.rooms[currentRoomIndex], RoomEngine.rooms[currentRoomIndex].get_party_starting_position())
 
 func _process(delta):
 
-	if Globals.camera.is_inside_tree():
-		viewport_container.material.set_shader_param("cam_offset", Globals.camera.pixel_perfect(delta))
+	if Globals.PartyCamera.is_inside_tree():
+		viewport_container.material.set_shader_param("cam_offset", Globals.PartyCamera.pixel_perfect(delta))
 		
 		
-func set_camera_pos(newCameraPos):
+func set_camera_pos(newCameraPos, camera):
 
-	var room_bounds_min = RoomChanger.currentRoom.room_bounds_min
-	var room_bounds_max = RoomChanger.currentRoom.room_bounds_max
+	var room_bounds_min = RoomEngine.currentRoom.room_bounds_min
+	var room_bounds_max = RoomEngine.currentRoom.room_bounds_max
 
 	newCameraPos.x = clamp(newCameraPos.x, room_bounds_min.x + camera_pixel_width/2, room_bounds_max.x - camera_pixel_width/2)
 	newCameraPos.y = clamp(newCameraPos.y, room_bounds_min.y + camera_pixel_height/2, room_bounds_max.y - camera_pixel_height/2)
 
-	Globals.camera.set_camera_actual_position(newCameraPos)
+	camera.set_camera_actual_position(newCameraPos)
 
 func _on_Game_doorway_entered(newRoom, partyPosition):
 
 	newRoom.call_deferred("set_party_starting_position", partyPosition)
-	RoomChanger.call_deferred("set_current_room", RoomChanger.currentRoom, newRoom, viewport)
+	RoomEngine.call_deferred("set_current_room", RoomEngine.currentRoom, newRoom, viewport)
 
 

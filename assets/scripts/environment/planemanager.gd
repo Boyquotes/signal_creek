@@ -1,6 +1,6 @@
 extends Node
 
-#change current plane you are on (dream world or real world)
+#change current world you are in (dream world or real world)
 
 onready var ground_node = $Ground
 onready var walls_node = $Overworld/Walls
@@ -25,33 +25,33 @@ func _physics_process(_delta):
 
 func shift_planes():
 	
-	Globals.overlay.plane_shift()
+	Globals.GameOverlay.plane_shift()
 	
-	if Globals.world == Globals.Worlds.DREAM:
+	if Globals.CurrentWorld == Globals.Worlds.DREAM:
 		set_real_world()
-		Globals.worldEnvironment.get_environment().set_adjustment_color_correction(real_gradient)
+		Globals.GameWorldEnvironment.get_environment().set_adjustment_color_correction(real_gradient)
 		
 	else:
 		set_dream_world()
-		Globals.worldEnvironment.get_environment().set_adjustment_color_correction(dream_gradient)
+		Globals.GameWorldEnvironment.get_environment().set_adjustment_color_correction(dream_gradient)
 
 #to be used when walking into a different room
 func set_correct_plane():
 	
-	if Globals.world == Globals.Worlds.DREAM:
+	if Globals.CurrentWorld == Globals.Worlds.DREAM:
 		set_dream_world()
 	else:
 		set_real_world()
 
 func set_dream_world():
-	Globals.world = Globals.Worlds.DREAM
+	Globals.CurrentWorld = Globals.Worlds.DREAM
 	set_tilesets(dreamset)
-	Globals.party.change_assets_world(Globals.world)
+	Globals.PartyObject.change_assets_world(Globals.CurrentWorld)
 
 func set_real_world():
-	Globals.world = Globals.Worlds.REAL
+	Globals.CurrentWorld = Globals.Worlds.REAL
 	set_tilesets(realset)
-	Globals.party.change_assets_world(Globals.world)
+	Globals.PartyObject.change_assets_world(Globals.CurrentWorld)
 
 func set_tilesets(setId):
 	
@@ -62,7 +62,7 @@ func set_tilesets(setId):
 
 func set_objects_sprites():
 	
-	if Globals.world == Globals.Worlds.DREAM:
+	if Globals.CurrentWorld == Globals.Worlds.DREAM:
 		for object in objects:
 			object.set_sheet(object.dreamsheet)
 			
@@ -72,7 +72,7 @@ func set_objects_sprites():
 
 func move_objects():
 	
-	if Globals.world == Globals.Worlds.DREAM:
+	if Globals.CurrentWorld == Globals.Worlds.DREAM:
 		for object in objects:
 			object.set_position(object.dream_world_position)
 			

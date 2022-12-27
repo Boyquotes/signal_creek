@@ -15,7 +15,7 @@ func set_current_room(previousRoom, newRoom, viewport):
 	viewport.remove_child(previousRoom)
 	currentRoom = newRoom
 	
-	move_party_to_new_room(Globals.party, previousRoom, newRoom)
+	move_party_to_new_room(Globals.PartyObject, previousRoom, newRoom)
 
 	planeManager = newRoom.get_plane_manager()
 	planeManager.set_correct_plane()
@@ -25,7 +25,7 @@ func move_party_to_new_room(partyObject, previousRoom, newRoom):
 
 	previousRoom.remove_party(partyObject)
 	newRoom.place_party(partyObject)
-	Globals.gameCanvas.set_camera_pos(partyObject.get_leader().get_global_position())
+	Globals.gameCanvas.set_camera_pos(partyObject.get_leader().get_global_position(), Globals.PartyCamera)
 
 func reset_game():
 

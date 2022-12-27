@@ -43,7 +43,7 @@ func toggle_choice_selections(changeValue):
 	choiceIndex = wrapi(choiceIndex + changeValue, 0, currentChoiceStrings.size())
 	currentChoiceEntryChoices[choiceIndex].set_highlighted(true)
 	
-	Globals.soundManager.play_sound(Globals.soundManager.choice_select_sound)
+	Globals.SoundManager.play_sound(Globals.SoundManager.choice_select_sound)
 
 #select the currently highlighted choice
 func select_current_choice():
@@ -111,15 +111,15 @@ func display_choices(chooserName):
 
 #Opening the story for the first time
 func load_story(inkFile):	
-	#player.LoadStoryAndSetState(inkFile, Globals.inkvars)
+	#player.LoadStoryAndSetState(inkFile, Globals.InkStoryState)
 
 	player.LoadStory(inkFile)
-	player.SetVariable("currentPartyChar", Globals.party.get_leader_inkname())
+	player.SetVariable("currentPartyChar", Globals.PartyObject.get_leader_inkname())
 
 #Opening the player as-is
 #string pathstring: name of the knot we're opening
 func open(pathstring):
-	player.SetVariable("currentPartyChar", Globals.party.get_leader_inkname())
+	player.SetVariable("currentPartyChar", Globals.PartyObject.get_leader_inkname())
 	player.SetVariable("currentWorld", Globals.get_world_inkname())
 	
 	player.ChoosePathString(pathstring)
@@ -164,4 +164,4 @@ func clear_and_reset_ui():
 	
 	background_panel_node.set_visible(false)
 	Globals.delete_children(vertical_layout_node)
-	Globals.mode = Globals.GameModes.WALK
+	Globals.GameMode = Globals.GameModes.WALK

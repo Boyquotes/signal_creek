@@ -65,7 +65,7 @@ gui_disable_input = true
 
 [node name="Room" parent="ViewportContainer/Viewport" instance=ExtResource( 1 )]
 
-[node name="CameraOverlay" type="Panel" parent="."]
+[node name="GameOverlay" type="Panel" parent="."]
 material = ExtResource( 9 )
 margin_right = 960.0
 margin_bottom = 540.0

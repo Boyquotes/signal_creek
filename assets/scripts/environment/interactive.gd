@@ -27,17 +27,17 @@ func _process(_delta):
 		
 		if Input.is_action_just_pressed("interact"):
 			
-			if Globals.mode == Globals.GameModes.WALK:
+			if Globals.GameMode == Globals.GameModes.WALK:
 				
-				Globals.mode = Globals.GameModes.TALK
+				Globals.GameMode = Globals.GameModes.TALK
 				
 				#tell inkparser to go to a knot based on this object's name
 				#also tell the parser if this object has already been visited in the other world
 				
 				#TODO: Ink can check if the knot has been visited; make this variable check inkside instead
-				Globals.dialogueBox.open(get_object_name() + get_visitedinworld_status())
+				Globals.DialogueBox.open(get_object_name() + get_visitedinworld_status())
 					
-				Globals.dialogueBox.background_panel_node.set_visible(true)
+				Globals.DialogueBox.background_panel_node.set_visible(true)
 
 func _on_InteractArea_body_entered(body):
 	
@@ -54,9 +54,9 @@ func check_leader_on_switch():
 
 func check_correct_leader(body):
 	
-	if body == Globals.party.get_leader():
+	if body == Globals.PartyObject.get_leader():
 		print("Leader In Interact Area: " + body.get_name())
-		var currentLeader = Globals.party.leaderIndex
+		var currentLeader = Globals.PartyObject.leaderIndex
 		
 		if currentLeader == 0 && interactiveByNick:
 			canInteract = true
@@ -85,7 +85,7 @@ func _on_InteractArea_body_exited(body):
 		party_is_inside = false
 
 #recieves signals on character switch 
-#ex. when we switch to nour, show a nour can interact outline 
+#ex. when we switch to Nour, show a Nour can interact outline 
 
 #return name of this object as it is stated in the prefab file name, excluding obj_ prefix
 func get_object_name():
@@ -97,7 +97,7 @@ func get_object_name():
 #gets the world we're currently in, then gets whether we've visited this object in the other world
 func get_visitedinworld_status():
 	
-	if Globals.world == Globals.Worlds.DREAM:
+	if Globals.CurrentWorld == Globals.Worlds.DREAM:
 		if realvisited:
 			dreamvisited = true
 			return "_realvisited"

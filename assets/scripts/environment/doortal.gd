@@ -7,6 +7,6 @@ export var exit_position : Vector2 #where to place the party in the new room
 
 func _on_Doortal_body_entered(body):
 	
-	if body.is_in_group("Player") && body == Globals.party.get_leader():
+	if body.is_in_group("Player") && body == Globals.PartyObject.get_leader():
 		
-		Globals.gameCanvas.emit_signal("doorway_entered", RoomChanger.rooms[room_index], exit_position)
+		Globals.gameCanvas.emit_signal("doorway_entered", RoomEngine.rooms[room_index], exit_position)

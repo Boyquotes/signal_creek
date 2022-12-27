@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Signal Creek"
-run/main_scene="res://assets/scenes/Intro.tscn"
+run/main_scene="res://assets/scenes/Game.tscn"
 boot_splash/image="res://assets/sprites/splash_3x.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
@@ -25,7 +25,7 @@ default_bus_layout=""
 
 Globals="*res://assets/scripts/globals/globalvars.gd"
 DialogueEngine="*res://assets/scripts/ui/dialogueengine.gd"
-RoomChanger="*res://assets/scripts/globals/roomchanger.gd"
+RoomEngine="*res://assets/scripts/globals/roomchanger.gd"
 
 [display]
 

@@ -17,17 +17,17 @@ export(Array, Texture) var real_portraits = []
 var leaderIndex = 0 setget update_leader_to #Keeps track of the current leader.
 
 func _ready():
-	Globals.nick = characterObjects[0]
-	Globals.nour = characterObjects[1]
-	Globals.suwan = characterObjects[2]
+	Globals.Nick = characterObjects[0]
+	Globals.Nour = characterObjects[1]
+	Globals.Suwan = characterObjects[2]
 	pass
 
 func _process(_delta):
-	if Globals.mode == Globals.GameModes.WALK:
+	if Globals.GameMode == Globals.GameModes.WALK:
 		check_input()
 
 func _physics_process(_delta):
-	if Globals.mode == Globals.GameModes.WALK:
+	if Globals.GameMode == Globals.GameModes.WALK:
 		check_input_physics()
 
 func check_input_physics():
@@ -67,12 +67,12 @@ func change_leader():
 func update_leader_to(newIndex):
 	leaderIndex = newIndex
 	
-	if Globals.world == Globals.Worlds.DREAM:
+	if Globals.CurrentWorld == Globals.Worlds.DREAM:
 		change_portrait(dream_portraits[leaderIndex])
 	else:
 		change_portrait(real_portraits[leaderIndex])
 	
-	Globals.camera.camera_following = characterObjects[leaderIndex]
+	Globals.PartyCamera.camera_following = characterObjects[leaderIndex]
 
 
 func get_leader():
@@ -91,15 +91,15 @@ func change_party_sprites(sheet):
 		character.set_sprite(sheet)
 		
 	
-#change portrait in the ui
+#change CornerPortrait in the ui
 func change_portrait(sprite):
 	
-	Globals.portrait.set_character(sprite, get_leader_inkname())
+	Globals.CornerPortrait.set_character(sprite, get_leader_inkname())
 	
 
-func change_assets_world(world):
+func change_assets_world(currentPlane):
 	
-	if world == Globals.Worlds.DREAM:
+	if currentPlane == Globals.Worlds.DREAM:
 		change_party_sprites(dream_character_sheet)
 		
 	else:

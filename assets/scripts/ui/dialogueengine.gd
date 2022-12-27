@@ -18,11 +18,11 @@ static func create_entry_dialogue(newText, entryAsset, entryParagraph):
 	
 	var dialogueLine = newText.split(":", false)
 	
-	Globals.colorManager.set_current_color(dialogueLine[0])
+	Globals.ColorManager.set_current_color(dialogueLine[0])
 	
 	var newDialogue = dialogueLine[1].strip_escapes().trim_prefix(' ')
 	
-	newEntry.set_nametag(dialogueLine[0] + ":", Globals.colorManager.get_current_color())
+	newEntry.set_nametag(dialogueLine[0] + ":", Globals.ColorManager.get_current_color())
 	
 	newEntry.remove_placeholders()
 	
@@ -39,9 +39,9 @@ static func create_entry_choices(newChoices, currentSpeaker, entryAsset, choiceA
 	var newEntry = entryAsset.instance()
 	newEntry.remove_placeholders()
 	
-	Globals.colorManager.set_current_color(currentSpeaker)
+	Globals.ColorManager.set_current_color(currentSpeaker)
 	
-	newEntry.set_nametag(currentSpeaker, Globals.colorManager.get_current_color())
+	newEntry.set_nametag(currentSpeaker, Globals.ColorManager.get_current_color())
 	
 	for option in newChoices: #iterate through choices, add nodes as children
 		var newDivert = choiceAsset.instance()
@@ -51,8 +51,8 @@ static func create_entry_choices(newChoices, currentSpeaker, entryAsset, choiceA
 		if ":" in option: #this option contains a character name
 			
 			var nameSubstring = option.split(":", false)[0].strip_escapes()
-			Globals.colorManager.set_current_color(nameSubstring)
-			var colorCode = Globals.colorManager.get_current_color()
+			Globals.ColorManager.set_current_color(nameSubstring)
+			var colorCode = Globals.ColorManager.get_current_color()
 			
 			var textSubstring = option.split(":", false)[1].strip_escapes()
 			

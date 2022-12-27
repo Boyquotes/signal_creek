@@ -28,7 +28,7 @@ var fadingIn = false
 
 func _ready():
 	
-	Globals.camera = self
+	Globals.PartyCamera = self
 	
 	if !noFade:
 		fadingIn = true

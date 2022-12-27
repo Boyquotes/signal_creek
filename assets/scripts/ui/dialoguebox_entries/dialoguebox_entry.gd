@@ -20,3 +20,11 @@ func set_nametag(newname, color):
 func set_dialogue(dialoguetext):
 	
 	$VBoxContainer/DialogueTextContainer/Background/VBoxContainer.add_child(dialoguetext)
+
+#functions specifically for choice prefab
+
+func add_choice_child(newNode):
+	$VBoxContainer/DialogueTextContainer/Background/VBoxContainer.add_child(newNode)
+
+func get_choices():
+	return $VBoxContainer/DialogueTextContainer/Background/VBoxContainer.get_children()

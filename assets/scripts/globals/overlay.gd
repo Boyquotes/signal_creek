@@ -38,7 +38,7 @@ func _on_timer_timeout():
 		
 	else:
 		set_shader(normal_shader)
-		Globals.mode = prior_world_mode
+		Globals.GameMode = prior_world_mode
 		print("end")
 
 func set_shader(newShader):
@@ -54,7 +54,7 @@ func plane_shift():
 	set_shader(shift_shader)
 	overlay_material.set_shader_param("oldworld", old_world_texture)
 	
-	prior_world_mode = Globals.mode
-	Globals.mode = Globals.GameModes.SHIFT
+	prior_world_mode = Globals.GameMode
+	Globals.GameMode = Globals.GameModes.SHIFT
 	
 	shiftTimer.start()

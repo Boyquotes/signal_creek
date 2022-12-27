@@ -21,13 +21,13 @@ func place_party(partyNode):
 		offset += 0.5
 		character.set_global_position(party_starting_position + Vector2(offset, offset))
 	
-	self.add_child(Globals.camera)
-	Globals.camera.set_camera_bounds(room_bounds_min, room_bounds_max)
+	self.add_child(Globals.PartyCamera)
+	Globals.PartyCamera.set_camera_bounds(room_bounds_min, room_bounds_max)
 
 func remove_party(partyNode):
 	
 	$PlaneManager/Overworld.remove_child(partyNode)
-	self.remove_child(Globals.camera)
+	self.remove_child(Globals.PartyCamera)
 
 func set_party_starting_position(position):
 	

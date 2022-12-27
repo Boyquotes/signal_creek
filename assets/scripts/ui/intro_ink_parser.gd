@@ -15,7 +15,7 @@ var currentSpeaker = "THE PARTY" #stores the current name to put into entry name
 func _ready():
 	
 	Globals.delete_children(vertical_layout_node)
-	Globals.colorManager = $ColorManager
+	Globals.ColorManager = $ColorManager
 	player.Continue()
 	create_entry(player.get_CurrentText())
 
@@ -60,7 +60,7 @@ func create_entry_dialogue(newtext):
 	vertical_layout_node.add_child(newpre_entrydialogue)
 	
 
-	newpre_entrydialogue.set_nametag(currentSpeaker, Globals.colorManager.get_current_color())
+	newpre_entrydialogue.set_nametag(currentSpeaker, Globals.ColorManager.get_current_color())
 	newpre_entrydialogue.remove_placeholders()
 	
 	var newParagraph = pre_entrynormal.instance()
@@ -71,4 +71,4 @@ func create_entry_dialogue(newtext):
 func set_current_name(source):
 	
 	currentSpeaker = source
-	Globals.colorManager.set_current_color(source)
+	Globals.ColorManager.set_current_color(source)
