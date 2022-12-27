@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=9]
-[ext_resource path="res://assets/scripts/ui/charcolors.gd" type="Script" id=10]
+[ext_resource path="res://assets/scripts/ui/color_manager.gd" type="Script" id=10]
 [ext_resource path="res://assets/scripts/ui/inkparser.gd" type="Script" id=11]
 
 [node name="DialogueBox" type="Control"]

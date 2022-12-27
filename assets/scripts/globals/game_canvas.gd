@@ -14,6 +14,7 @@ onready var viewport = $ViewportContainer/Viewport
 
 
 func _ready():
+	Globals.UpdateController = $ViewportContainer
 	Globals.GameCanvas = self
 	Globals.GameWorldEnvironment = $WorldEnvironment
 	Globals.PartyCamera = $ViewportContainer/Viewport/Room/Camera2D
@@ -29,7 +30,7 @@ func _ready():
 	
 	RoomEngine.CurrentRoom = $ViewportContainer/Viewport/Room
 	RoomEngine.PlaneManager = $ViewportContainer/Viewport/Room/PlaneManager
-
+	
 
 func _process(delta):
 	if Globals.PartyCamera.is_inside_tree():
@@ -50,3 +51,8 @@ func set_camera_pos(newCameraPos, camera):
 	newCameraPos.y = clamp(newCameraPos.y, room_bounds_min.y + camera_pixel_height/2, room_bounds_max.y - camera_pixel_height/2)
 
 	camera.set_camera_actual_position(newCameraPos)
+
+
+# The sole purpose of this function is to make the editor shut up
+func _doorway_entered():
+	emit_signal("doorway_entered")

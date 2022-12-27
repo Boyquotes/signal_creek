@@ -52,6 +52,8 @@ func set_correct_world():
 func _set_to_dream_world():
 	Globals.CurrentWorld = Globals.Worlds.DREAM
 	_set_tilesets(dreamset)
+	_set_room_objects_sprites()
+	_move_room_objects()
 	Globals.PartyObject.change_assets_world(Globals.CurrentWorld)
 	Globals.GameWorldEnvironment.get_environment().set_adjustment_color_correction(dream_gradient)
 

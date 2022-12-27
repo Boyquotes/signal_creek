@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn" type="PackedScene" id=9]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=11]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=12]
-[ext_resource path="res://assets/scripts/ui/charcolors.gd" type="Script" id=14]
+[ext_resource path="res://assets/scripts/ui/color_manager.gd" type="Script" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0745098, 0.0784314, 0.121569, 1 )
