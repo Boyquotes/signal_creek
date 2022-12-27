@@ -1,37 +1,51 @@
 extends YSort
+# Derived from original script by Jaden @cep450 !!!
 
-#Original script by Jaden @cep450
+# Party Manager Script
+# Stores all 3 character objects
+# Determines which character is the "leader" (being controlled)
+# The other 2 follow
 
-var partyMembers = [Globals.Characters.NICK, Globals.Characters.NOUR, Globals.Characters.SUWAN]
-onready var characterObjects = [self.get_child(0), self.get_child(1), self.get_child(2)]
-
-#export(Array, Texture) var dream_character_sheet = []
-#export(Array, Texture) var real_character_sheet = []
 
 export var dream_character_sheet : Texture
 export var real_character_sheet : Texture
-
 export(Array, Texture) var dream_portraits = []
 export(Array, Texture) var real_portraits = []
+#export(Array, Texture) var dream_character_sheet = []
+#export(Array, Texture) var real_character_sheet = []
 
-var leaderIndex = 0 setget update_leader_to #Keeps track of the current leader.
+var partyMembers = [
+	Globals.Characters.NICK,
+	Globals.Characters.NOUR,
+	Globals.Characters.SUWAN
+]
+
+# Keeps track of current leader
+var leaderIndex = 0 setget update_leader_to
+
+onready var characterObjects = [
+	self.get_child(0),
+	self.get_child(1),
+	self.get_child(2)
+]
 
 func _ready():
 	Globals.Nick = characterObjects[0]
 	Globals.Nour = characterObjects[1]
 	Globals.Suwan = characterObjects[2]
-	pass
+
 
 func _process(_delta):
 	if Globals.GameMode == Globals.GameModes.WALK:
 		check_input()
 
+
 func _physics_process(_delta):
 	if Globals.GameMode == Globals.GameModes.WALK:
 		check_input_physics()
 
+
 func check_input_physics():
-	
 	var directionVector = Vector2(0,0)
 
 	if Input.is_action_pressed("ui_up"):
@@ -39,66 +53,67 @@ func check_input_physics():
 		
 	if Input.is_action_pressed("ui_down"):
 		directionVector += Vector2.DOWN
-	
+		
 	if Input.is_action_pressed("ui_left"):
 		directionVector += Vector2.LEFT
 		
 	if Input.is_action_pressed("ui_right"):
 		directionVector += Vector2.RIGHT
 	
+	# TODO: pathfind_to the closest object if there is one (and face the object)
 	characterObjects[leaderIndex].move(directionVector)
 	characterObjects[wrapi(leaderIndex + 1, 0,3)].pathfind_to(get_leader())
 	characterObjects[wrapi(leaderIndex - 1, 0,3)].pathfind_to(get_leader())
 
+
 func check_input():
-#	if Input.is_action_just_pressed("char_switch_left"):
-#		rotate_leader_left()
 	if Input.is_action_just_pressed("party_leader_switch"):
 		change_leader()
 
 
-#called by key input- TODO 
+# Update leader based on index
 func change_leader():
 	leaderIndex = wrapi(leaderIndex + 1, 0,3)
 	update_leader_to(leaderIndex)
 
-#called automatically whenever leaderIndex is changed, thanks to setget.
-#changes the index variable, updates UI, any other logic anywhere else using signals.
+
+# called automatically whenever leaderIndex is changed, thanks to setget.
+# changes the index variable, updates UI, any other logic anywhere else using signals.
 func update_leader_to(newIndex):
 	leaderIndex = newIndex
+	Globals.PartyCamera.camera_following = characterObjects[leaderIndex]
 	
 	if Globals.CurrentWorld == Globals.Worlds.DREAM:
 		change_portrait(dream_portraits[leaderIndex])
+		
 	else:
 		change_portrait(real_portraits[leaderIndex])
-	
-	Globals.PartyCamera.camera_following = characterObjects[leaderIndex]
 
 
 func get_leader():
 	return characterObjects[leaderIndex]
 
+
 func get_leader_inkname():
 	return get_leader().inkName
-	
+
+
 func get_character_objects():
 	return self.characterObjects
-	
+
+
 func change_party_sprites(sheet):
-	
 	for character in characterObjects:
-		#will be an array index when they are animated
+		# will be an array index when they are animated
 		character.set_sprite(sheet)
-		
-	
-#change CornerPortrait in the ui
+
+
+# Change CornerPortrait in the ui
 func change_portrait(sprite):
-	
 	Globals.CornerPortrait.set_character(sprite, get_leader_inkname())
-	
+
 
 func change_assets_world(currentPlane):
-	
 	if currentPlane == Globals.Worlds.DREAM:
 		change_party_sprites(dream_character_sheet)
 		

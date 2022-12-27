@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Character",
+"language": "GDScript",
+"path": "res://assets/scripts/character/character.gd"
+}, {
 "base": "Area2D",
 "class": "Doortal",
 "language": "GDScript",
@@ -30,6 +35,7 @@ _global_script_classes=[ {
 "path": "res://assets/scripts/environment/shiftable.gd"
 } ]
 _global_script_class_icons={
+"Character": "",
 "Doortal": "",
 "Interactive": "",
 "RoomVars": "",
