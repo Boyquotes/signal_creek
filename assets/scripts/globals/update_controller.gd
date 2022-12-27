@@ -1,7 +1,7 @@
 extends Node
 
-var _closest_object
-var _can_interact
+var _closest_object = null
+var _can_interact = false
 
 
 func _start():
@@ -24,7 +24,7 @@ func _process(_delta):
 			Globals.DialogueBox.proceed()
 			
 	elif Globals.GameMode == Globals.GameModes.WALK:
-		if Input.is_action_just_pressed("party_leader_switch"):
+		if Input.is_action_just_pressed("party_leader_switch") and _closest_object:
 			if _closest_object.get_overlapping_bodies().size() > 0:
 				_closest_object.call_deferred("_check_if_can_interact")
 			
