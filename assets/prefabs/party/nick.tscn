@@ -36,3 +36,5 @@ position = Vector2( 0, -16 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerVisible"]
 position = Vector2( 0, 16 )
 shape = SubResource( 20 )
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

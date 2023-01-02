@@ -34,3 +34,5 @@ shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerVisible"]
 shape = SubResource( 20 )
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

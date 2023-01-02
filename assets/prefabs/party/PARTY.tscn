@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/prefabs/party/suwan.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/prefabs/party/nour.tscn" type="PackedScene" id=2]
@@ -12,7 +12,7 @@
 [ext_resource path="res://assets/sprites/characters/placeholders/sheet_party_real.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/characters/placeholders/sheet_party_dream.png" type="Texture" id=11]
 [ext_resource path="res://assets/sprites/characters/portraits/suwan_real.png" type="Texture" id=12]
-
+[ext_resource path="res://assets/scripts/character/character_navigator.gd" type="Script" id=13]
 
 [node name="PARTY" type="YSort"]
 script = ExtResource( 4 )
@@ -23,8 +23,26 @@ real_portraits = [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 12 ) ]
 
 [node name="NICK" parent="." instance=ExtResource( 3 )]
 position = Vector2( -20, 0 )
+script = ExtResource( 13 )
+nav_agent_radius = 0.2
+nav_optimize_path = false
+nav_avoidance_enabled = true
+character_speed_multiplier = 50.0
+inkName = "Name"
 
 [node name="NOUR" parent="." instance=ExtResource( 2 )]
+script = ExtResource( 13 )
+nav_agent_radius = 0.2
+nav_optimize_path = false
+nav_avoidance_enabled = true
+character_speed_multiplier = 50.0
+inkName = "Name"
 
 [node name="SUWAN" parent="." instance=ExtResource( 1 )]
 position = Vector2( 20, 0 )
+script = ExtResource( 13 )
+nav_agent_radius = 0.2
+nav_optimize_path = false
+nav_avoidance_enabled = true
+character_speed_multiplier = 50.0
+inkName = "Name"

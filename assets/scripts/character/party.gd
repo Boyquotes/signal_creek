@@ -37,9 +37,15 @@ func _ready():
 
 func move_party_by_vector(directionVector):
 	# TODO: pathfind_to the closest object if there is one (and face the object)
+	var leaderPos = characterObjects[leaderIndex].get_global_position()
 	characterObjects[leaderIndex].move_character_by_vector(directionVector)
-	characterObjects[wrapi(leaderIndex + 1, 0,3)].pathfind_to(get_leader())
-	characterObjects[wrapi(leaderIndex - 1, 0,3)].pathfind_to(get_leader())
+#	characterObjects[wrapi(leaderIndex + 1, 0,3)].pathfind_to(get_leader())
+#	characterObjects[wrapi(leaderIndex - 1, 0,3)].pathfind_to(get_leader())
+	characterObjects[wrapi(leaderIndex + 1, 0,3)].set_navigation_position(leaderPos)
+	characterObjects[wrapi(leaderIndex - 1, 0,3)].set_navigation_position(leaderPos)
+	
+	characterObjects[wrapi(leaderIndex + 1, 0,3)].npc_process()
+	characterObjects[wrapi(leaderIndex - 1, 0,3)].npc_process()
 
 
 # Update leader based on index
