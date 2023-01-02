@@ -43,8 +43,15 @@ func _process(_delta):
 
 # Returns a "subpixel position"
 # Used by pixel-perfect shader in GameCanvas
-func pixel_perfect(delta):
-	var camera_room_position = Vector2(clamp(camera_following.global_position.x, camera_bounds_min.x, camera_bounds_max.x), clamp(camera_following.global_position.y, camera_bounds_min.y, camera_bounds_max.y))
+func pixel_perfect(delta, following):
+	var camera_room_position = Vector2(0, 0)
+	#take room bounds into account only when walking
+	if Globals.GameMode == Globals.GameModes.WALK:
+		camera_room_position = Vector2(clamp(following.x, camera_bounds_min.x, camera_bounds_max.x), clamp(following.y, camera_bounds_min.y, camera_bounds_max.y))
+	
+	else:
+		camera_room_position = Vector2(following.x, clamp(following.y, camera_bounds_min.y, camera_bounds_max.y))
+	
 	camera_actual_position = lerp(camera_actual_position, camera_room_position, lerpSpeed * delta)
 	
 	var cam_subpixel_pos = camera_actual_position.round() - camera_actual_position

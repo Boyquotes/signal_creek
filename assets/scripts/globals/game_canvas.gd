@@ -6,8 +6,9 @@ extends Node2D
 
 signal doorway_entered(newroom, partyposition)
 
-export var camera_pixel_width : float = 320
-export var camera_pixel_height : float = 180
+export var camera_pixel_size : Vector2 = Vector2(320, 180)
+
+var _following_vector = Vector2(0, 0)
 
 onready var viewport_container = $ViewportContainer
 onready var viewport = $ViewportContainer/Viewport
@@ -22,7 +23,7 @@ func _ready():
 	
 	Globals.PartyObject = $ViewportContainer/Viewport/Room/PlaneManager/Overworld/PARTY
 	Globals.SoundManager = $SoundManager
-	Globals.PartyCamera.rescale_camera(floor(OS.window_size.x/camera_pixel_width))
+	Globals.PartyCamera.rescale_camera(floor(OS.window_size.x/camera_pixel_size.x))
 	
 	Globals.DialogueBox = $UserInterface/ReferenceRect/DialogueBox
 	Globals.CornerPortrait = $UserInterface/ReferenceRect/Portraits
@@ -34,7 +35,7 @@ func _ready():
 
 func _process(delta):
 	if Globals.PartyCamera.is_inside_tree():
-		viewport_container.material.set_shader_param("cam_offset", Globals.PartyCamera.pixel_perfect(delta))
+		viewport_container.material.set_shader_param("cam_offset", Globals.PartyCamera.pixel_perfect(delta, _following_vector))
 
 
 func _on_Game_doorway_entered(newRoom, partyPosition):
@@ -47,10 +48,14 @@ func set_camera_pos(newCameraPos, camera):
 	var room_bounds_min = RoomEngine.CurrentRoom.room_bounds_min
 	var room_bounds_max = RoomEngine.CurrentRoom.room_bounds_max
 
-	newCameraPos.x = clamp(newCameraPos.x, room_bounds_min.x + camera_pixel_width/2, room_bounds_max.x - camera_pixel_width/2)
-	newCameraPos.y = clamp(newCameraPos.y, room_bounds_min.y + camera_pixel_height/2, room_bounds_max.y - camera_pixel_height/2)
+	newCameraPos.x = clamp(newCameraPos.x, room_bounds_min.x + camera_pixel_size.x/2, room_bounds_max.x - camera_pixel_size.x/2)
+	newCameraPos.y = clamp(newCameraPos.y, room_bounds_min.y + camera_pixel_size.y/2, room_bounds_max.y - camera_pixel_size.y/2)
 
 	camera.set_camera_actual_position(newCameraPos)
+
+
+func set_following_vector(newCameraPos):
+	_following_vector = newCameraPos
 
 
 # The sole purpose of this function is to make the editor shut up

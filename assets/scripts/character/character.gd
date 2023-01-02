@@ -44,7 +44,7 @@ func animate_idle():
 	_animation_player.play(_current_idle_sprite);
 
 
-func move(directionVector : Vector2):
+func move_character_by_vector(directionVector : Vector2):
 	if directionVector.length() == 0: #not moving, _current_idle_sprite and return early
 		animate_idle()
 		return
@@ -83,7 +83,7 @@ func pathfind_to(target : Node2D):
 		else:
 			angleTowards = Vector2.ZERO
 			
-	move(angleTowards)
+	move_character_by_vector(angleTowards)
 
 
 # set sprite animation of this character

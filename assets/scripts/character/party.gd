@@ -35,40 +35,11 @@ func _ready():
 	Globals.Suwan = characterObjects[2]
 
 
-func _process(_delta):
-	if Globals.GameMode == Globals.GameModes.WALK:
-		check_input()
-
-
-func _physics_process(_delta):
-	if Globals.GameMode == Globals.GameModes.WALK:
-		check_input_physics()
-
-
-func check_input_physics():
-	var directionVector = Vector2(0,0)
-
-	if Input.is_action_pressed("ui_up"):
-		directionVector += Vector2.UP
-		
-	if Input.is_action_pressed("ui_down"):
-		directionVector += Vector2.DOWN
-		
-	if Input.is_action_pressed("ui_left"):
-		directionVector += Vector2.LEFT
-		
-	if Input.is_action_pressed("ui_right"):
-		directionVector += Vector2.RIGHT
-	
+func move_party_by_vector(directionVector):
 	# TODO: pathfind_to the closest object if there is one (and face the object)
-	characterObjects[leaderIndex].move(directionVector)
+	characterObjects[leaderIndex].move_character_by_vector(directionVector)
 	characterObjects[wrapi(leaderIndex + 1, 0,3)].pathfind_to(get_leader())
 	characterObjects[wrapi(leaderIndex - 1, 0,3)].pathfind_to(get_leader())
-
-
-func check_input():
-	if Input.is_action_just_pressed("party_leader_switch"):
-		change_leader()
 
 
 # Update leader based on index
