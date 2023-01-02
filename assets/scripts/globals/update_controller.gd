@@ -11,7 +11,7 @@ func _start():
 	pass
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Globals.GameMode == Globals.GameModes.TALK:
 		
 		if Globals.DialogueBox.is_displaying_choices: 
@@ -38,13 +38,13 @@ func _physics_process(delta):
 					_closest_object.call_deferred("_check_if_can_interact")
 					
 		_camera_normal_position = Globals.PartyObject.get_leader().get_global_position()
-		Globals.GameCanvas.set_following_vector(_camera_normal_position)
+		Globals.GameCanvas.set_camera_following_vector(_camera_normal_position)
 			
 		if _can_interact:
 			if Input.is_action_just_pressed("interact"):
 				if Globals.GameMode == Globals.GameModes.WALK:
 					Globals.GameMode = Globals.GameModes.TALK
-					Globals.GameCanvas.set_following_vector(Vector2(_camera_normal_position.x + camera_offset_dialogue, _camera_normal_position.y))
+					Globals.GameCanvas.set_camera_following_vector(Vector2(_camera_normal_position.x + camera_offset_dialogue, _camera_normal_position.y))
 					
 					# tell inkparser to go to a knot based on this object's name
 					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name() + _closest_object._get_visitedinworld_status())

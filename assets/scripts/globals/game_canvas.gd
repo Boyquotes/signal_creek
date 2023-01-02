@@ -54,7 +54,7 @@ func set_camera_pos(newCameraPos, camera):
 	camera.set_camera_actual_position(newCameraPos)
 
 
-func set_following_vector(newCameraPos):
+func set_camera_following_vector(newCameraPos):
 	_following_vector = newCameraPos
 
 
