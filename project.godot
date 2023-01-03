@@ -67,6 +67,11 @@ Globals="*res://assets/scripts/globals/global_vars.gd"
 DialogueEngine="*res://assets/scripts/ui/dialogue_engine.gd"
 RoomEngine="*res://assets/scripts/globals/room_engine.gd"
 
+[debug]
+
+gdscript/completion/autocomplete_setters_and_getters=true
+gdscript/warnings/unused_signal=false
+
 [display]
 
 window/size/width=960

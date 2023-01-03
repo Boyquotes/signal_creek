@@ -13,10 +13,10 @@ export var _choice_prefab = preload("res://assets/ui/prefabs/dialoguebox_entrych
 
 # Choice Entry Vars
 var _current_choice_strings
-var is_displaying_choices
 var _current_choice_index = 0
 var _current_choice_entry
 var _current_choice_entry_choices
+var is_displaying_choices
 
 # Story state save file location 
 var _save_file_path = "res://saves"

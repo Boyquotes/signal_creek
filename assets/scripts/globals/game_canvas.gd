@@ -32,6 +32,8 @@ func _ready():
 	RoomEngine.CurrentRoom = $ViewportContainer/Viewport/Room
 	RoomEngine.PlaneManager = $ViewportContainer/Viewport/Room/PlaneManager
 	
+	#emit_signal("doorway_entered", RoomEngine.Rooms[RoomEngine.CurrentRoomIndex], RoomEngine.Rooms[RoomEngine.CurrentRoomIndex].get_party_starting_position())
+	call_deferred("_doorway_entered", RoomEngine.Rooms[RoomEngine.CurrentRoomIndex], RoomEngine.Rooms[RoomEngine.CurrentRoomIndex].get_party_starting_position())
 
 func _process(delta):
 	if Globals.PartyCamera.is_inside_tree():
@@ -41,6 +43,7 @@ func _process(delta):
 func _on_Game_doorway_entered(newRoom, partyPosition):
 	newRoom.call_deferred("set_party_starting_position", partyPosition)
 	RoomEngine.call_deferred("change_current_room", RoomEngine.CurrentRoom, newRoom, viewport)
+	
 
 
 # Update position of specified camera to newCameraPos
@@ -58,6 +61,6 @@ func set_camera_following_vector(newCameraPos):
 	_following_vector = newCameraPos
 
 
-# The sole purpose of this function is to make the editor shut up
-func _doorway_entered():
-	emit_signal("doorway_entered")
+# Called on ready only
+func _doorway_entered(newRoom, partyPosition):
+	emit_signal("doorway_entered", newRoom, partyPosition)

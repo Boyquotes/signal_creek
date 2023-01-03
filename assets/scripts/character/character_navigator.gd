@@ -8,6 +8,7 @@ export var nav_optimize_path : bool = false
 export var nav_avoidance_enabled : bool = true
 export var character_speed_multiplier : float = 20.0
 export var inkName = "Name"
+export var active : bool
 
 var nav_agent : NavigationAgent2D
 var velocity : Vector2
@@ -33,13 +34,17 @@ onready var _animation_player = $AnimationPlayer
 # Author : Shaun Harbison
 # MIT License : 2022
 
-func _ready() -> void:
+func _ready():
 	velocity = Vector2.ZERO 
 	nav_agent = $NavigationAgent2D
 	
+# warning-ignore:return_value_discarded
 	nav_agent.connect("path_changed", self, "character_path_changed")
+# warning-ignore:return_value_discarded
 	nav_agent.connect("target_reached", self, "character_target_reached_reached")
+# warning-ignore:return_value_discarded
 	nav_agent.connect("navigation_finished", self, "character_navigation_finished")
+# warning-ignore:return_value_discarded
 	nav_agent.connect("velocity_computed", self, "character_velocity_computed")
 	
 	nav_agent.max_speed = character_speed_multiplier
@@ -163,3 +168,11 @@ func move_character_by_vector(directionVector : Vector2):
 	_velocity = directionVector * walk_speed * get_physics_process_delta_time()
 	_velocity = move_and_slide(_velocity)
 
+
+# so the editor shuts up again
+# don't use this
+func _signal_shit():
+	emit_signal("path_changed")
+	emit_signal("target_reached")
+	emit_signal("navigation_finished")
+	emit_signal("velocity_computed")

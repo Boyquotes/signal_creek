@@ -46,21 +46,16 @@ func plane_shift():
 	_prior_world_mode = Globals.GameMode
 	Globals.GameMode = Globals.GameModes.SHIFT
 	
+	_is_shifting = true
 	_shift_timer.start()
+	
 
 
 # When shifting timer ends, start or end the shifting shader
 func _on_timer_timeout():
-	if !_is_shifting:
-		print("start transition")
-		
-		_is_shifting = true
-		_shift_timer.start()
-		
-	else:
-		_set_shader(normal_shader)
-		Globals.GameMode = _prior_world_mode
-		print("end")
+	_set_shader(normal_shader)
+	Globals.GameMode = _prior_world_mode
+	print("end")
 
 
 # Set shader of self's material

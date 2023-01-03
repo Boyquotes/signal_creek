@@ -41,8 +41,8 @@ func remove_party(partyNode):
 
 
 # Set the Vector2 position the party starts in
-func set_party_starting_position(position):
-	party_starting_position = position
+func set_party_starting_position(partyPos):
+	party_starting_position = partyPos
 
 
 # Return the Vector2 position the party starts in

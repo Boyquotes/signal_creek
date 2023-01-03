@@ -52,6 +52,7 @@ func move_party_by_vector(directionVector):
 func change_leader():
 	leaderIndex = wrapi(leaderIndex + 1, 0,3)
 	update_leader_to(leaderIndex)
+	Globals.ColorManager.set_current_color(characterObjects[leaderIndex].inkName)
 
 
 # called automatically whenever leaderIndex is changed, thanks to setget.

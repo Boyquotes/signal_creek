@@ -20,11 +20,6 @@ func _ready():
 	hallway = room_hallway.instance()
 	topicspot = room_topicSpot.instance()
 	Rooms = [bandn, hallway, topicspot]
-	call_deferred("change_to_first_room")
-
-
-func change_to_first_room():
-	Globals.GameCanvas.emit_signal("doorway_entered", Rooms[CurrentRoomIndex], Rooms[CurrentRoomIndex].get_party_starting_position())
 
 
 # Remove previousRoom from viewport, add newRoom to viewport
