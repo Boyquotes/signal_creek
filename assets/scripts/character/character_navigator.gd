@@ -3,14 +3,17 @@ extends KinematicBody2D
 # For controlling individual characters in the party
 # includes pathfinding using NavigationAgent2D
 
-export var nav_agent_radius : float = 0.2
+export var nav_agent_radius : float = 8
 export var nav_optimize_path : bool = false
 export var nav_avoidance_enabled : bool = true
+export var nav_desired_distance : float = 8
+export var nav_target_distance : float = 24
+export var nav_max_distance : int = 10
 export var walk_speed : float = 4500.0
-export var character_speed_multiplier :float = walk_speed * 0.75
+export var character_speed_multiplier : float = 32
 export var inkName = "Name"
-export var active : bool
 export var nav_timer_interval : float = 4.0
+export var stop_following_radius : float = 28.0
 
 var nav_agent : NavigationAgent2D
 var velocity : Vector2
@@ -51,6 +54,9 @@ func _ready():
 	nav_agent.max_speed = character_speed_multiplier
 	nav_agent.radius = nav_agent_radius
 	nav_agent.avoidance_enabled = nav_avoidance_enabled
+	nav_agent.path_desired_distance = nav_desired_distance
+	nav_agent.target_desired_distance = nav_target_distance
+	nav_agent.path_max_distance = nav_max_distance
 	
 	nav_destination = global_position
 	next_nav_position = global_position
@@ -70,7 +76,12 @@ func _on_timer_timeout():
 	pass
 
 
-func npc_process():
+func npc_process(following):
+	var dist_from_leader = get_global_position().distance_to(following)
+	#print(get_global_position().distance_to(Globals.PartyObject.get_leader().get_global_position()))
+	if dist_from_leader < stop_following_radius:
+		return
+	
 	next_nav_position = nav_agent.get_next_location()
 	character_real_nav_path.push_back(next_nav_position) # for draw function
 	
@@ -117,11 +128,13 @@ func character_path_changed() -> void:
 func character_target_reached_reached() -> void:
 	# TODO, implement this function to add behavior for character
 	# currently using is_target_reached() in character_velocity_computed()
+	#print("reached")
 	pass
 
 
 func character_navigation_finished() -> void:
 	# TODO, implement this function to add behavior for character
+	#print("finished")
 	pass
 
 # END OF SHARED CODE

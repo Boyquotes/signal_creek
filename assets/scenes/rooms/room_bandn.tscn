@@ -304,7 +304,6 @@ format = 1
 tile_data = PoolIntArray( 524301, -1610612734, 0, 524302, -1610612734, 0, 589837, -1610612734, 0, 589838, -1610612734, 0, 786448, -1610612734, 0, 786451, -1610612734, 0 )
 
 [node name="Ground" type="TileMap" parent="PlaneManager"]
-visible = false
 tile_set = ExtResource( 15 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
