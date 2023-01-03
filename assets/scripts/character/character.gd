@@ -4,6 +4,8 @@ extends KinematicBody2D
 # Can move.
 # Updates sprites/animations accordingly.
 
+# TODO: add timer for updating pathfinding position
+
 const walk_speed : float = 3500.0
 
 export var inkName = "Name"

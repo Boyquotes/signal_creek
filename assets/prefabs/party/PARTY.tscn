@@ -27,7 +27,7 @@ script = ExtResource( 13 )
 nav_agent_radius = 0.2
 nav_optimize_path = false
 nav_avoidance_enabled = true
-character_speed_multiplier = 50.0
+character_speed_multiplier = 20.0
 inkName = "Name"
 
 [node name="NOUR" parent="." instance=ExtResource( 2 )]
@@ -35,7 +35,7 @@ script = ExtResource( 13 )
 nav_agent_radius = 0.2
 nav_optimize_path = false
 nav_avoidance_enabled = true
-character_speed_multiplier = 50.0
+character_speed_multiplier = 20.0
 inkName = "Name"
 
 [node name="SUWAN" parent="." instance=ExtResource( 1 )]
@@ -44,5 +44,5 @@ script = ExtResource( 13 )
 nav_agent_radius = 0.2
 nav_optimize_path = false
 nav_avoidance_enabled = true
-character_speed_multiplier = 50.0
+character_speed_multiplier = 20.0
 inkName = "Name"
