@@ -6,9 +6,11 @@ extends KinematicBody2D
 export var nav_agent_radius : float = 0.2
 export var nav_optimize_path : bool = false
 export var nav_avoidance_enabled : bool = true
-export var character_speed_multiplier : float = 20.0
+export var walk_speed : float = 4500.0
+export var character_speed_multiplier :float = walk_speed * 0.75
 export var inkName = "Name"
 export var active : bool
+export var nav_timer_interval : float = 4.0
 
 var nav_agent : NavigationAgent2D
 var velocity : Vector2
@@ -21,11 +23,10 @@ var next_nav_position : Vector2
 var character_nav_path : Array = []
 var character_real_nav_path : Array = [] # The actual path being calcuated during travel, used in the draw function
 
-const walk_speed : float = 3500.0
-
 var _velocity : Vector2 = Vector2()
 var _direction_facing : Vector2 = Vector2()
 var _current_idle_sprite : String = "DownIdle"
+var _nav_timer
 
 onready var _animation_player = $AnimationPlayer
 
@@ -55,6 +56,18 @@ func _ready():
 	next_nav_position = global_position
 	
 	nav_agent.set_target_location(nav_destination)
+	
+	_nav_timer = Timer.new()
+	add_child(_nav_timer)
+	_nav_timer.wait_time = nav_timer_interval
+	_nav_timer.connect("timeout", self, "_on_timer_timeout")
+	_nav_timer.set_one_shot(true)
+	_nav_timer.start()
+
+
+func _on_timer_timeout():
+	_nav_timer.start()
+	pass
 
 
 func npc_process():
@@ -68,7 +81,8 @@ func npc_process():
 
 
 func set_navigation_position(nav_position_to_set : Vector2) -> void:
-	nav_destination = nav_position_to_set
+	if _nav_timer.get_time_left() < nav_timer_interval / 4:
+		nav_destination = nav_position_to_set
 	
 	# set the new character target location
 	nav_agent.set_target_location(nav_destination)

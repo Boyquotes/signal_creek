@@ -1,7 +1,5 @@
 extends Node
 
-export var camera_offset_dialogue = 50.0
-
 var _closest_object = null
 var _can_interact = false
 var _camera_normal_position = null
@@ -14,7 +12,7 @@ func _start():
 func _physics_process(_delta):
 	if Globals.GameMode == Globals.GameModes.TALK:
 		
-		if Globals.DialogueBox.is_displaying_choices: 
+		if Globals.DialogueBox.is_displaying_choices:
 			if Input.is_action_just_released("ui_down"):
 				Globals.DialogueBox.toggle_choice_selections(1)
 				
@@ -23,9 +21,12 @@ func _physics_process(_delta):
 				
 			if Input.is_action_just_pressed("interact"):
 				Globals.DialogueBox.select_current_choice()
+				Globals.DialogueBox.proceed()
 				
 		elif Input.is_action_just_pressed("interact"):
 			Globals.DialogueBox.proceed()
+			#var followingVector = find_current_speaker_position()
+			#Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 			
 	elif Globals.GameMode == Globals.GameModes.WALK:
 		check_input_character_movement()
@@ -44,7 +45,7 @@ func _physics_process(_delta):
 			if Input.is_action_just_pressed("interact"):
 				if Globals.GameMode == Globals.GameModes.WALK:
 					Globals.GameMode = Globals.GameModes.TALK
-					Globals.GameCanvas.set_camera_following_vector(Vector2(_camera_normal_position.x + camera_offset_dialogue, _camera_normal_position.y))
+					#Globals.GameCanvas.set_camera_following_vector(Vector2(_camera_normal_position.x + camera_offset_dialogue, _camera_normal_position.y))
 					
 					# tell inkparser to go to a knot based on this object's name
 					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name() + _closest_object._get_visitedinworld_status())
@@ -81,3 +82,4 @@ func set_closest_object(objectName):
 
 func set_can_interact(condition):
 	_can_interact = condition
+

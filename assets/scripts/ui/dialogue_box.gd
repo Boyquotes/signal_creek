@@ -6,6 +6,7 @@ extends Control
 # Adds newly produced prefabs to DialogueBox UI
 
 # Entry Prefab Types
+export var camera_offset_dialogue = 50.0
 export var _entry_prefab_normal = preload("res://assets/ui/prefabs/dialoguebox_entrynormal.tscn")
 export var _entry_prefab_dialogue = preload("res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn")
 export var _entry_prefab_choices = preload("res://assets/ui/prefabs/dialoguebox_entrychoices.tscn")
@@ -17,6 +18,7 @@ var _current_choice_index = 0
 var _current_choice_entry
 var _current_choice_entry_choices
 var is_displaying_choices
+var current_speaker = "NICK"
 
 # Story state save file location 
 var _save_file_path = "res://saves"
@@ -43,7 +45,11 @@ func open_at_knot(pathstring):
 	_ink_player.SetVariable("currentWorld", Globals.get_world_inkname())
 	
 	_ink_player.ChoosePathString(pathstring)
+	
+	current_speaker = Globals.PartyObject.get_leader_inkname()
+	
 	proceed()
+	set_camera_position_to_speaker()
 
 
 # change which choice is currently highlighted
@@ -62,7 +68,6 @@ func select_current_choice():
 	_ink_player.ChooseChoiceIndex(_current_choice_index)
 	_current_choice_entry.queue_free() #remove the choicebox
 	is_displaying_choices = false
-	proceed()
 
 
 # proceeding to the next string that ink should return
@@ -91,19 +96,24 @@ func proceed():
 # Entries are normal, dialogue, or choice
 # Call corresponding functionality for type of entry
 func check_entry_type(entryText):
-		if entryText.substr(0, 1) == ":": #this is a name for the choice entry nametag; not an entry to put in
-			var chooserName = entryText.substr(1).strip_escapes()
-			_ink_player.Continue()
-			is_displaying_choices = true
-			display_choices(chooserName)
-		
-		elif ":" in entryText: #if line contains a name, parse name and dialogue after
-			var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_normal)
-			_vertical_layout_node.add_child(newDialogue)
-		
-		else: #it's a normal text entry
-			var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal)
-			_vertical_layout_node.add_child(newText)
+	if entryText.substr(0, 1) == ":": #this is a name for the choice entry nametag; not an entry to put in
+		var chooserName = entryText.substr(1).strip_escapes()
+		_ink_player.Continue()
+		is_displaying_choices = true
+		current_speaker = chooserName
+		display_choices(chooserName)
+		set_camera_position_to_speaker()
+	
+	elif ":" in entryText: #if line contains a name, parse name and dialogue after
+		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_normal)
+		current_speaker = entryText.split(":")[0]
+		#print(entryText.split(":")[0])
+		_vertical_layout_node.add_child(newDialogue)
+		set_camera_position_to_speaker()
+	
+	else: #it's a normal text entry
+		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal)
+		_vertical_layout_node.add_child(newText)
 
 
 #initialize the choice-selection of a new choice entry prefab
@@ -161,3 +171,36 @@ func clear_and_reset_ui():
 	background_panel_node.set_visible(false)
 	Globals.delete_children(_vertical_layout_node)
 	Globals.GameMode = Globals.GameModes.WALK
+
+
+func get_current_speaker():
+	return current_speaker
+
+
+func find_current_speaker_position():
+	var currentSpeaker = get_current_speaker().to_lower()
+	print("Current Speaker: " + currentSpeaker + "\n")
+	
+	var currentSpeakerIndex = -1
+
+	# Move camera to party character if they are speaking
+	# TODO: make the characters walk towards if they're far away & they speak
+	if "nick" in currentSpeaker:
+		currentSpeakerIndex = 0
+
+	elif "nour" in currentSpeaker:
+		currentSpeakerIndex = 1
+
+	elif "suwan" in currentSpeaker:
+		currentSpeakerIndex = 2
+		
+	else:
+		currentSpeakerIndex = Globals.PartyObject.get_leader_index()
+		
+	return Globals.PartyObject.get_character_objects()[currentSpeakerIndex].get_global_position()
+
+
+func set_camera_position_to_speaker():
+	var followingVector = find_current_speaker_position()
+	Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
+		

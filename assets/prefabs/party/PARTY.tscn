@@ -27,16 +27,20 @@ script = ExtResource( 13 )
 nav_agent_radius = 0.2
 nav_optimize_path = false
 nav_avoidance_enabled = true
-character_speed_multiplier = 20.0
+walk_speed = 4500.0
+character_speed_multiplier = 0.0
 active = false
+nav_timer_interval = 4.0
 
 [node name="NOUR" parent="." instance=ExtResource( 2 )]
 script = ExtResource( 13 )
 nav_agent_radius = 0.2
 nav_optimize_path = false
 nav_avoidance_enabled = true
+walk_speed = 4500.0
 character_speed_multiplier = 17.0
 active = false
+nav_timer_interval = 4.0
 
 [node name="SUWAN" parent="." instance=ExtResource( 1 )]
 position = Vector2( 20, 0 )
@@ -44,5 +48,7 @@ script = ExtResource( 13 )
 nav_agent_radius = 0.2
 nav_optimize_path = false
 nav_avoidance_enabled = true
+walk_speed = 4500.0
 character_speed_multiplier = 15.0
 active = false
+nav_timer_interval = 4.0

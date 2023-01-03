@@ -22,13 +22,13 @@ func _ready():
 # PartyCamera's bounds are updated to suit this room
 func place_party(partyNode):
 	$PlaneManager/Overworld.add_child(partyNode)
-	partyNode.get_leader().set_global_position(party_starting_position)
+	#partyNode.get_leader().set_global_position(party_starting_position)
 	
-	var offset = 0
+	var offset = -16
 	
 	for character in partyNode.get_character_objects():
-		offset += 0.5
-		character.set_global_position(party_starting_position + Vector2(offset, offset))
+		offset += 16
+		character.set_global_position(Vector2(party_starting_position.x + offset, party_starting_position.y))
 	
 	self.add_child(Globals.PartyCamera)
 	Globals.PartyCamera.set_camera_bounds(room_bounds_min, room_bounds_max)

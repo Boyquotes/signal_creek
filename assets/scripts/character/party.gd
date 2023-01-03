@@ -86,6 +86,10 @@ func change_party_sprites(sheet):
 		character.set_sprite(sheet)
 
 
+func get_leader_index():
+	return leaderIndex
+
+
 # Change CornerPortrait in the ui
 func change_portrait(sprite):
 	Globals.CornerPortrait.set_character(sprite, get_leader_inkname())
