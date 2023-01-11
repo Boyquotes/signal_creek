@@ -32,7 +32,7 @@ func _on_InteractArea_body_entered(body):
 
 # When a body exits self, check if player can interact
 func _on_InteractArea_body_exited(body):
-	if body.is_in_group("Player"):
+	if body == Globals.PartyObject.get_leader():
 		_check_if_can_interact()
 
 
