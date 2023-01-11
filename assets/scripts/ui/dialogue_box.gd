@@ -7,6 +7,7 @@ extends Control
 
 # Entry Prefab Types
 export var camera_offset_dialogue = 50.0
+export var typewriter_speed : int = 1
 export var _entry_prefab_normal = preload("res://assets/ui/prefabs/dialoguebox_entrynormal.tscn")
 export var _entry_prefab_dialogue = preload("res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn")
 export var _entry_prefab_choices = preload("res://assets/ui/prefabs/dialoguebox_entrychoices.tscn")
@@ -19,6 +20,8 @@ var _current_choice_entry
 var _current_choice_entry_choices
 var is_displaying_choices
 var current_speaker = "NICK"
+var typing = false
+var current_text_box = null
 
 # Story state save file location 
 var _save_file_path = "res://saves"
@@ -36,6 +39,11 @@ func _ready():
 	#Hide dialoguebox and delete placeholders
 	Globals.delete_children(_vertical_layout_node)
 	background_panel_node.set_visible(false)
+
+
+func _process(_delta):
+	if typing:
+		typewriter_effect()
 
 
 # Opening the player as-is
@@ -109,11 +117,41 @@ func check_entry_type(entryText):
 		current_speaker = entryText.split(":")[0]
 		#print(entryText.split(":")[0])
 		_vertical_layout_node.add_child(newDialogue)
+		
+		#track the text label for typewriter effect
+		current_text_box = newDialogue.get_dialogue_text()
+		#init typewriter effect
+		typing = true
+		
 		set_camera_position_to_speaker()
 	
 	else: #it's a normal text entry
 		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal)
+		
+		#track the text label for typewriter effect
+		current_text_box = newText
+		#init typewriter effect
+		typing = true
+		
 		_vertical_layout_node.add_child(newText)
+
+
+func typewriter_effect():
+	var currentVisibility = current_text_box.get_percent_visible()
+	var totalCharCount = current_text_box.get_total_character_count()
+	var visibleCharacters = current_text_box.get_visible_characters()
+	var increment = totalCharCount * typewriter_speed
+	
+	if currentVisibility >= 1.0:
+		typing = false
+	
+	else:
+		current_text_box.set_visible_characters(visibleCharacters + typewriter_speed)
+
+
+func escape_typewriter_effect():
+	current_text_box.set_percent_visible(1.0)
+	typing = false
 
 
 #initialize the choice-selection of a new choice entry prefab

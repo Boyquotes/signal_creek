@@ -1,20 +1,20 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
+[ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=9]
 [ext_resource path="res://assets/scripts/ui/color_manager.gd" type="Script" id=10]
-[ext_resource path="res://assets/scripts/ui/inkparser.gd" type="Script" id=11]
 
 [node name="DialogueBox" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -16.0
 theme = ExtResource( 9 )
-script = ExtResource( 11 )
+script = ExtResource( 2 )
 
 [node name="InkPlayer" type="Node" parent="."]
 script = ExtResource( 4 )
@@ -42,7 +42,7 @@ scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer"]
 margin_right = 276.0
-margin_bottom = 528.0
+margin_bottom = 460.0
 size_flags_horizontal = 3
 
 [node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance_placeholder="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn"]
@@ -61,7 +61,7 @@ margin_bottom = 388.0
 [node name="DialogueEntry" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 408.0
 margin_right = 276.0
-margin_bottom = 528.0
+margin_bottom = 460.0
 
 [node name="ColorManager" type="Control" parent="."]
 margin_right = 40.0

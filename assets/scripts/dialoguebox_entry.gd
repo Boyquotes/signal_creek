@@ -34,6 +34,10 @@ func set_dialogue(dialoguetext):
 	$VBoxContainer/DialogueTextContainer/Background/VBoxContainer.add_child(dialoguetext)
 
 
+func get_dialogue_text():
+	return $VBoxContainer/DialogueTextContainer/Background/VBoxContainer/Dialogue
+
+
 # functions specifically if self is a choicebox
 
 # Add new choice as a child of choice entry (self)
