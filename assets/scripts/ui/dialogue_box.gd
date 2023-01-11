@@ -9,6 +9,7 @@ extends Control
 export var camera_offset_dialogue = 50.0
 export var typewriter_speed : int = 1
 export var scroll_increment : float = 0.05
+export var panel_opening_speed : float = 0.25
 export var _entry_prefab_normal = preload("res://assets/ui/prefabs/dialoguebox_entrynormal.tscn")
 export var _entry_prefab_dialogue = preload("res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn")
 export var _entry_prefab_choices = preload("res://assets/ui/prefabs/dialoguebox_entrychoices.tscn")
@@ -22,8 +23,11 @@ var _current_choice_entry_choices
 var is_displaying_choices
 var current_speaker = "NICK"
 var is_typing = false
-var current_text_box = null
+var current_text_box
 var is_auto_scrolling = false
+var is_expanding_background_panel = false
+var is_shrinking_background_panel = false
+var background_panel_max_height
 
 # Story state save file location 
 var _save_file_path = "res://saves"
@@ -41,11 +45,22 @@ func _ready():
 	#Hide dialoguebox and delete placeholders
 	Globals.delete_children(_vertical_layout_node)
 	background_panel_node.set_visible(false)
+	
+	var bgPanelDefaultPos = background_panel_node.get_position()
+	background_panel_max_height = background_panel_node.get_size().y
+	background_panel_node.set_position(Vector2(bgPanelDefaultPos.x, -background_panel_max_height))
 
 
 func _process(_delta):
+	if is_expanding_background_panel:
+		expand_background_panel()
+	
+	elif is_shrinking_background_panel:
+		shrink_background_panel()
+	
 	if is_typing:
 		typewriter_effect()
+	
 	if is_auto_scrolling:
 		auto_scroll_down()
 
@@ -61,6 +76,8 @@ func open_at_knot(pathstring):
 	
 	proceed()
 	set_camera_position_to_speaker()
+	
+	is_expanding_background_panel = true
 
 
 # change which choice is currently highlighted
@@ -83,7 +100,8 @@ func select_current_choice():
 # proceeding to the next string that ink should return
 func proceed():
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
-		clear_and_reset_ui()
+#		clear_and_reset_ui()
+		is_shrinking_background_panel = true
 		
 	elif !_ink_player.get_HasChoices(): #create normal text entry
 		_ink_player.Continue()
@@ -148,6 +166,34 @@ func auto_scroll_down():
 		return
 	
 	_scroll_node.set_v_scroll(lerp(scrollValue, maxScrollValue, scroll_increment))
+	
+
+#smoothly decrease size of background panel after dialogue concludes
+func shrink_background_panel():
+	var panelPosition = background_panel_node.get_position()
+	
+	if panelPosition.y <= -background_panel_max_height + panel_opening_speed:
+		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
+		is_shrinking_background_panel = false
+		background_panel_node.set_visible(false)
+		#RESET DIALOGUE BOX
+		clear_and_reset_ui()
+		
+	else:
+		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
+
+
+#smoothly increase size of background panel when dialogue starts
+func expand_background_panel():
+	var panelPosition = background_panel_node.get_position()
+	
+	if panelPosition.y >= -panel_opening_speed:
+		background_panel_node.set_position(Vector2(panelPosition.x, 0))
+		is_expanding_background_panel = false
+		print("expanded")
+	
+	else:
+		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
 
 
 #increment visible characters in most recent richtextlabel

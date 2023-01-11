@@ -25,6 +25,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -348.0
 margin_bottom = 530.0
+rect_clip_content = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 anchor_left = 0.5
