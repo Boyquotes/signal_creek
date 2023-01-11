@@ -8,6 +8,7 @@ extends Control
 # Entry Prefab Types
 export var camera_offset_dialogue = 50.0
 export var typewriter_speed : int = 1
+export var scroll_increment : float = 0.05
 export var _entry_prefab_normal = preload("res://assets/ui/prefabs/dialoguebox_entrynormal.tscn")
 export var _entry_prefab_dialogue = preload("res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn")
 export var _entry_prefab_choices = preload("res://assets/ui/prefabs/dialoguebox_entrychoices.tscn")
@@ -20,8 +21,9 @@ var _current_choice_entry
 var _current_choice_entry_choices
 var is_displaying_choices
 var current_speaker = "NICK"
-var typing = false
+var is_typing = false
 var current_text_box = null
+var is_auto_scrolling = false
 
 # Story state save file location 
 var _save_file_path = "res://saves"
@@ -42,9 +44,10 @@ func _ready():
 
 
 func _process(_delta):
-	if typing:
+	if is_typing:
 		typewriter_effect()
-
+	if is_auto_scrolling:
+		auto_scroll_down()
 
 # Opening the player as-is
 # tell _ink_player to open knot with name that matches pathstring
@@ -77,7 +80,6 @@ func select_current_choice():
 	_current_choice_entry.queue_free() #remove the choicebox
 	is_displaying_choices = false
 
-
 # proceeding to the next string that ink should return
 func proceed():
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
@@ -97,7 +99,7 @@ func proceed():
 		
 	#_scroll_node to bottom when new message appears (make this tween later)
 	yield(get_tree(), "idle_frame")
-	_scroll_node.set_v_scroll(_scroll_node.get_v_scrollbar().max_value)
+	is_auto_scrolling = true
 
 
 # Parses entryText for special characters, determines what type of entry this is
@@ -121,7 +123,7 @@ func check_entry_type(entryText):
 		#track the text label for typewriter effect
 		current_text_box = newDialogue.get_dialogue_text()
 		#init typewriter effect
-		typing = true
+		is_typing = true
 		
 		set_camera_position_to_speaker()
 	
@@ -131,11 +133,24 @@ func check_entry_type(entryText):
 		#track the text label for typewriter effect
 		current_text_box = newText
 		#init typewriter effect
-		typing = true
+		is_typing = true
 		
 		_vertical_layout_node.add_child(newText)
 
 
+#used when a new entry is created
+func auto_scroll_down():
+	var scrollValue = _scroll_node.get_v_scrollbar().get_value()
+	var maxScrollValue = _scroll_node.get_v_scrollbar().max_value
+	
+	if scrollValue >= maxScrollValue:
+		is_auto_scrolling = false
+		return
+	
+	_scroll_node.set_v_scroll(lerp(scrollValue, maxScrollValue, scroll_increment))
+
+
+#increment visible characters in most recent richtextlabel
 func typewriter_effect():
 	var currentVisibility = current_text_box.get_percent_visible()
 	var totalCharCount = current_text_box.get_total_character_count()
@@ -143,7 +158,7 @@ func typewriter_effect():
 	var increment = totalCharCount * typewriter_speed
 	
 	if currentVisibility >= 1.0:
-		typing = false
+		is_typing = false
 	
 	else:
 		current_text_box.set_visible_characters(visibleCharacters + typewriter_speed)
@@ -151,14 +166,16 @@ func typewriter_effect():
 
 func escape_typewriter_effect():
 	current_text_box.set_percent_visible(1.0)
-	typing = false
+	is_typing = false
 
 
 #initialize the choice-selection of a new choice entry prefab
 func display_choices(chooserName):
 	_current_choice_strings = _ink_player.get_CurrentChoices()
 	
-	if _current_choice_strings.size() <= 0: #TO AVOID CRASHING
+	if _current_choice_strings.size() <= 0: #TO AVOID CRASHING; escape choice selection if there's no choices left
+		is_displaying_choices = false
+		proceed()
 		return
 	
 	var newChoiceEntry = DialogueEngine.create_entry_choices(_current_choice_strings, chooserName, _entry_prefab_choices, _choice_prefab)

@@ -24,8 +24,11 @@ func _physics_process(_delta):
 				Globals.DialogueBox.proceed()
 				
 		elif Input.is_action_just_pressed("interact"):
-			if !Globals.DialogueBox.typing:
+			if Globals.DialogueBox.is_typing:
+				Globals.DialogueBox.escape_typewriter_effect()
+			else:
 				Globals.DialogueBox.proceed()
+				
 			#var followingVector = find_current_speaker_position()
 			#Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 			
