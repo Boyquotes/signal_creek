@@ -1,119 +1,111 @@
+class_name Interactive
 extends Area2D
-
-#for the INTERACT area collider of an interactive object
-
-#export var inkFileDream : Resource
-#export var inkFileReal : Resource
-
-var canInteract = false
-var party_is_inside = false
-
-#NOTES ABOUT THIS APPROACH: IT WON'T BE KEPT IN SAVE FILES; DON'T WORRY ABOUT IT FOR DEMO
-#IT'S NOT A LONG-TERM SOLUTION, BUT IT'S NOT SOMETHING TO CARE ABOUT IMMEDIATELY.
-#Idea: check for signals of all interactive objects, when they're emitted, add to a variable list. swag?
-var dreamvisited = false
-var realvisited = false
-
-export var interactiveByNick = false
-export var interactiveByNour = false 
-export var interactiveBySuwan = false
+# Interactive script for the INTERACT area collider of an interactive object
+# Knows if player is close enough to interact with itself
+# Says which characters can interact with itself
+# Knows if the player has visited itself in the dream & real worlds
+# Emits signal, parent "shiftable" script uses it for the outline shader
 
 signal can_interact
 signal cannot_interact
 
+export var _interactive_by_nick = false
+export var _interactive_by_nour = false 
+export var _interactive_by_suwan = false
 
-func _process(_delta):
-	
-	if Input.is_action_just_pressed("party_leader_switch"):
-		if get_overlapping_bodies().size() > 0:
-			call_deferred("check_leader_on_switch") #has to be done on idle frame bc the global leader var has to be updated first (bad structure rip)
-	
-	if canInteract:
-		
-		if Input.is_action_just_pressed("interact"):
-			
-			if Globals.mode == Globals.GameModes.WALK:
-				
-				Globals.mode = Globals.GameModes.TALK
-				
-				#tell inkparser to go to a knot based on this object's name
-				#also tell the parser if this object has already been visited in the other world
-				Globals.dialogueBox.open(get_object_name() + get_visitedinworld_status())
-					
-				Globals.dialogueBox.background_panel_node.set_visible(true)
+var _can_interact = false
+var _party_is_inside = false
+#this will be inkside
+var _dream_visited = false
+var _real_visited = false
 
 
+func _ready():
+	pass
+
+
+# When a body enters self, check if player can interact
 func _on_InteractArea_body_entered(body):
-	party_is_inside = true
-	check_correct_leader(body)
-
-#check if party leader is inside
-func check_leader_on_switch():
-	for body in self.get_overlapping_bodies():
-		if check_correct_leader(body) == true:
-			break
-
-func check_correct_leader(body):
-	
-	if body == Globals.party.get_leader():
-		print(body.get_name())
-		var currentLeader = Globals.party.leaderIndex
-		
-		if currentLeader == 0 && interactiveByNick:
-			canInteract = true
-			emit_signal("can_interact")
-			
-		elif currentLeader == 1 && interactiveByNour:
-			canInteract = true
-			emit_signal("can_interact")
-			
-		elif currentLeader == 2 && interactiveBySuwan:
-			canInteract = true
-			emit_signal("can_interact")
-			
-		else:
-			canInteract = false
-			emit_signal("cannot_interact")
-			
-		return true
+	if body == Globals.PartyObject.get_leader():
+		_check_if_can_interact()
 
 
+# When a body exits self, check if player can interact
 func _on_InteractArea_body_exited(body):
+	if body == Globals.PartyObject.get_leader():
+		_check_if_can_interact()
+
+
+# check if player can interact with object
+# communicate with updatecontroller
+func _check_if_can_interact():
+	if _check_if_leader_in_area() and _check_correct_leader():
+		Globals.UpdateController.set_can_interact(true)
+		Globals.UpdateController.set_closest_object(self)
+		print(Globals.PartyObject.get_leader().get_name() + " Can Interact: " + _get_object_name())
+		emit_signal("can_interact")
+		return
 	
-	if body.is_in_group("Player") && body == Globals.party.get_leader():
+	Globals.UpdateController.set_can_interact(false)
+	print("Cannot Interact: " + _get_object_name())
+	emit_signal("cannot_interact")
+
+
+# Check if party leader is inside area
+# return true or false
+func _check_if_leader_in_area():
+	for body in self.get_overlapping_bodies():
+		if body == Globals.PartyObject.get_leader():
+			return true
+	
+	return false
+
+
+# Check if leader can interact with self
+# Return true or false
+func _check_correct_leader():
+	var currentLeader = Globals.PartyObject.leaderIndex
+	
+	if currentLeader == 0 and _interactive_by_nick:
+		return true
 		
-		canInteract = false
-		emit_signal("cannot_interact")
-		party_is_inside = false
+	elif currentLeader == 1 and _interactive_by_nour:
+		return true
+		
+	elif currentLeader == 2 and _interactive_by_suwan:
+		return true
+		
+	else:
+		return false
 
-#recieves signals on character switch 
-#ex. when we switch to nour, show a nour can interact outline 
 
-#return name of this object as it is stated in the prefab file name, excluding obj_ prefix
-func get_object_name():
+# return name of self as it is stated in the prefab file name
+# excludes obj_ prefix in filename
+func _get_object_name():
 	var rawfilename = self.get_parent().filename
 	
-	#print(rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_"))
-	
 	return rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_")
-	
 
 
-#gets the world we're currently in, then gets whether we've visited this object in the other world
-func get_visitedinworld_status():
-	
-	if Globals.world == Globals.Worlds.DREAM:
-		if realvisited:
-			dreamvisited = true
+# Gets the world the player is currently in
+# Gets whether we've visited this object in the other world
+# Returns appropriate combination of strings
+# TODO: Should this check be inkside instead?
+func _get_visitedinworld_status():
+	if Globals.CurrentWorld == Globals.Worlds.DREAM:
+		if _real_visited:
+			_dream_visited = true
 			return "_realvisited"
-		else:
-			dreamvisited = true
-			return "_dream"
-	else:
-		if dreamvisited:
-			realvisited = true
-			return "_dreamvisited"
-		else:
-			realvisited = true
-			return "_real"
 			
+		else:
+			_dream_visited = true
+			return "_dream"
+			
+	else:
+		if _dream_visited:
+			_real_visited = true
+			return "_dreamvisited"
+			
+		else:
+			_real_visited = true
+			return "_real"

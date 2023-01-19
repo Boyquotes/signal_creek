@@ -2,18 +2,37 @@
 
 == sailormoonposters_dream ==
 
-    NOUR: No way! Finally, some Sailor Moon merchandise with Uranus and Neptune! Oh, I love when they subvert gender roles. And when Uranus would wear a suit, man, I thought she looked so cool....
+    NOUR: No way! Finally, some Sailor Moon merchandise with Uranus and Neptune!
     
-    -> END
+    -> sailormoonposters_gender
+    
+    //visiting this one prompts different messages in womens clothing and cool shirt
+    =sailormoonposters_gender
+    
+        NOUR: I love when anime characters subvert gender roles.
+        
+        NOUR: And when Uranus would wear a suit, man, I thought she looked so cool...
+        
+        NOUR: I fantasized about being like her.
+    
+        -> sailormoonposters_nickanime
+
 
 == sailormoonposters_realvisited ==
     
-    NOUR: Yeah, that's more like it! Uranus and Neptune together. I love it when anime characters subvert gender roles. And when Uranus would wear a suit, man, I thought she looked so cool....
+    NOUR: Yeah, that's more like it! Uranus and Neptune together.
+    
+    -> sailormoonposters_dream.sailormoonposters_gender
+    
+    
+//Prompts nick to look for sailor moon manga in b&n bookstack
+== sailormoonposters_nickanime ==
+
+    NICK: Woah, they're like manga characters! They look super cool!
     
     -> END
 
 //SUBSEQUENT DREAM KNOTS HERE
-
 
 //---------------- REAL WORLD ----------------
 
@@ -22,6 +41,7 @@
     NOUR: This Sailor Moon poster is great and all, but... I'd love to see more Sailor Uranus merchandise.
     
     -> END
+
 
 == sailormoonposters_dreamvisited ==
     

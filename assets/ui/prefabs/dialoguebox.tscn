@@ -1,20 +1,19 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
+[ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
-[ext_resource path="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=9]
-[ext_resource path="res://assets/scripts/ui/charcolors.gd" type="Script" id=10]
-[ext_resource path="res://assets/scripts/ui/inkparser.gd" type="Script" id=11]
+[ext_resource path="res://assets/scripts/ui/color_manager.gd" type="Script" id=10]
 
 [node name="DialogueBox" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -16.0
 theme = ExtResource( 9 )
-script = ExtResource( 11 )
+script = ExtResource( 2 )
 
 [node name="InkPlayer" type="Node" parent="."]
 script = ExtResource( 4 )
@@ -26,6 +25,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -348.0
 margin_bottom = 530.0
+rect_clip_content = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 anchor_left = 0.5
@@ -41,37 +41,41 @@ margin_bottom = 432.0
 scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer"]
-margin_right = 276.0
-margin_bottom = 528.0
+margin_right = 282.0
+margin_bottom = 432.0
+grow_vertical = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
 
-[node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
-margin_right = 276.0
-margin_bottom = 112.0
-
-[node name="RichTextLabel2" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
-margin_top = 132.0
-margin_right = 276.0
-margin_bottom = 244.0
+[node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance_placeholder="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn"]
+margin_top = 52.0
+margin_right = 282.0
+margin_bottom = 164.0
 
 [node name="DialogueEntryChoices" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
-margin_top = 264.0
-margin_bottom = 388.0
+margin_top = 184.0
+margin_right = 282.0
+margin_bottom = 308.0
 
 [node name="DialogueEntry" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-margin_top = 408.0
-margin_right = 276.0
-margin_bottom = 528.0
+margin_top = 328.0
+margin_bottom = 380.0
 
 [node name="ColorManager" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 10 )
 characterColors = {
+"brody": Color( 0.0352941, 0.32549, 0.635294, 1 ),
+"chad": Color( 0.647059, 0.85098, 0.345098, 1 ),
 "clerk": Color( 0.8, 0.403922, 1, 1 ),
+"kannika": Color( 0.380392, 0.670588, 1, 1 ),
 "kid amogus": Color( 1, 0.52549, 0.858824, 1 ),
+"kristy": Color( 1, 0.52549, 0.858824, 1 ),
 "ms suwan": Color( 0.38, 0.67, 1, 1 ),
 "nick": Color( 0.88, 0.78, 0.38, 1 ),
 "nour": Color( 0.78, 0.38, 0.38, 1 ),
+"rina": Color( 1, 0.439216, 0.67451, 1 ),
 "the party": Color( 1, 1, 1, 1 )
 }

@@ -10,11 +10,7 @@
 extents = Vector2( 8, 7.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-<<<<<<< Updated upstream
 extents = Vector2( 18, 20 )
-=======
-extents = Vector2( 25, 22.5 )
->>>>>>> Stashed changes
 
 [node name="BookStack" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 4 )
@@ -52,7 +48,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
-interactiveByNick = true
+_interactive_by_suwan = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 position = Vector2( 0, -7 )

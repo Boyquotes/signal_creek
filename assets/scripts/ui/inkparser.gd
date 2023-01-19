@@ -1,5 +1,7 @@
 extends Control
 
+#READ THIS!!!!!!!!! CURRENTLY NOT BEING USED!!!! SEPARATED INTO TWO FILES: dialoguebox.gd and dialogueengine.gd
+
 #InkParser parses ink passages and interfaces with the ink player
 #inkparser.gd
 
@@ -45,14 +47,12 @@ func _ready():
 
 	#for testing purposes; it starts opened if this is set to true
 	if _startTalking:
-		Globals.mode = Globals.GameModes.TALK
-		#HERE TODO PLS INSERT VISITED COUNT AND UMMMMM START AT THE BEGINNING OF THE KNOT AGAIN IDK WHY ITS NOT WOKRING
-		
+		Globals.GameMode = Globals.GameModes.TALK
 
 #this is where we'll listen to the player's button presses and tell the UI & ink player to do stuff. 
 func _process(_delta):
 	
-	if Globals.mode == Globals.GameModes.TALK:
+	if Globals.GameMode == Globals.GameModes.TALK:
 		if isDisplayingChoices:
 			if Input.is_action_just_released("ui_down"):
 				
@@ -64,7 +64,7 @@ func _process(_delta):
 					
 				currentChoiceEntryChoices[currentlyHighlightedChoice].set_highlighted(true)
 				
-				Globals.soundManager.play_sound(Globals.soundManager.choice_select_sound)
+				Globals.SoundManager.play_sound(Globals.SoundManager.choice_select_sound)
 				
 				
 			if Input.is_action_just_released("ui_up"):
@@ -77,7 +77,7 @@ func _process(_delta):
 					
 				currentChoiceEntryChoices[currentlyHighlightedChoice].set_highlighted(true)
 				
-				Globals.soundManager.play_sound(Globals.soundManager.choice_select_sound)
+				Globals.SoundManager.play_sound(Globals.SoundManager.choice_select_sound)
 				
 			
 			if Input.is_action_just_pressed("interact"):
@@ -98,8 +98,6 @@ func _process(_delta):
 func _proceed():
 	
 	if !player.get_CanContinue() && !player.get_HasChoices():
-#		print(player.SwitchToDefaultFlow())
-		player.SwitchToDefaultFlow()
 		clear_and_reset_ui()
 		
 	elif !player.get_HasChoices(): #create normal text entry
@@ -108,7 +106,7 @@ func _proceed():
 		var currentLine = player.get_CurrentText() #get current text from ink player
 		
 		if currentLine.substr(0, 1) == "&":
-			Globals.planeManager.shiftPlane()
+			Globals.PlaneManager.shift_planes()
 			currentLine = currentLine.trim_prefix('&')
 			
 		if currentLine.substr(0, 1) == ":": #this is a name for the choice entry nametag; not an entry to put in
@@ -154,7 +152,7 @@ func create_entry(text):
 	newEntry.text = text
 	isDisplayingChoices = false
 	
-	Globals.soundManager.play_sound(Globals.soundManager.new_entry_sound)
+	Globals.SoundManager.play_sound(Globals.SoundManager.new_entry_sound)
 
 #make a prefab for an entry that contains character dialogue
 func create_entry_dialogue(newtext):
@@ -163,7 +161,7 @@ func create_entry_dialogue(newtext):
 	vertical_layout_node.add_child(newpre_entrydialogue)
 	
 
-	newpre_entrydialogue.set_nametag(currentSpeaker, Globals.colorManager.get_current_color())
+	newpre_entrydialogue.set_nametag(currentSpeaker, Globals.ColorManager.get_current_color())
 	newpre_entrydialogue.remove_placeholders()
 	
 	var newParagraph = pre_entrynormal.instance()
@@ -172,7 +170,7 @@ func create_entry_dialogue(newtext):
 	
 	isDisplayingChoices = false
 	
-	Globals.soundManager.play_sound(Globals.soundManager.new_entry_sound)
+	Globals.SoundManager.play_sound(Globals.SoundManager.new_entry_sound)
 
 #make prefab for entry that contains new prefabs for all the choices
 func create_entry_choices(choices):
@@ -182,8 +180,7 @@ func create_entry_choices(choices):
 	
 	newChoiceEntry.remove_placeholders()
 	
-	
-	newChoiceEntry.set_nametag(currentSpeaker, Globals.colorManager.get_current_color())
+	newChoiceEntry.set_nametag(currentSpeaker, Globals.ColorManager.get_current_color())
 	
 	for option in choices: #iterate through choices, add nodes as children
 		var newDivert = pre_choice.instance()
@@ -192,7 +189,7 @@ func create_entry_choices(choices):
 		
 		if ":" in option:
 			var nameSubstring = option.split(":", false)[0].strip_escapes()
-			var colorCode = Globals.colorManager.get_current_color()
+			var colorCode = Globals.ColorManager.get_current_color()
 
 			var textSubstring = option.split(":", false)[1].strip_escapes()
 			
@@ -207,21 +204,21 @@ func create_entry_choices(choices):
 	currentlyHighlightedChoiceEntry = newChoiceEntry
 	currentChoiceEntryChoices = newChoiceEntry.get_choices()
 	
-	Globals.soundManager.play_sound(Globals.soundManager.new_choice_entry_sound)
+	Globals.SoundManager.play_sound(Globals.SoundManager.new_choice_entry_sound)
 
 
 #Opening the story for the first time
 func load_story(inkFile):	
-	#player.LoadStoryAndSetState(inkFile, Globals.inkvars)
+	#player.LoadStoryAndSetState(inkFile, Globals.InkStoryState)
 
 	player.LoadStory(inkFile)
-	player.SetVariable("currentPartyChar", Globals.party.get_leader_inkname())
+	player.SetVariable("currentPartyChar", Globals.PartyObject.get_leader_inkname())
 	
 
 #Opening the player as-is
 #string pathstring: name of the knot we're opening
 func open(pathstring):
-	player.SetVariable("currentPartyChar", Globals.party.get_leader_inkname())
+	player.SetVariable("currentPartyChar", Globals.PartyObject.get_leader_inkname())
 	player.SetVariable("currentWorld", Globals.get_world_inkname())
 	
 	player.ChoosePathString(pathstring)
@@ -234,7 +231,7 @@ func save_ink_state():
 
 	#print("saving ink state to disk")
 
-	Globals.inkvars = player.GetState()
+	Globals.InkStoryState = player.GetState()
 	player.SaveStateOnDisk(player.GetState())
 	
 	#print("finished saving state")
@@ -246,13 +243,13 @@ func clear_and_reset_ui():
 	
 	background_panel_node.set_visible(false)
 	Globals.delete_children(vertical_layout_node)
-	Globals.mode = Globals.GameModes.WALK
+	Globals.GameMode = Globals.GameModes.WALK
 
 #for the color manager; set the name that it should return
 func set_current_name(source):
 	
 	currentSpeaker = source
-	Globals.colorManager.set_current_color(source)
+	Globals.ColorManager.set_current_color(source)
 
 
 func bind_external_functions():
