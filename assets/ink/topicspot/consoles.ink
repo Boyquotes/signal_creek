@@ -16,8 +16,6 @@ VAR playCount = 1
     
     The screen reads, "LEVEL {playCount} , NEW CHARACTER UNLOCKED"
     
-    ~playCount = playCount +1
-    
     NICK: LEVEL {playCount} LETS GOOOO!!!
     
     MS SUWAN: Ok come on we got to go.

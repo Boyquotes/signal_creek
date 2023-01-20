@@ -1,21 +1,22 @@
 //---------------- DREAM WORLD ----------------
 
 == victorias_dream ==
+
 //Nour filled the classic young-closeted-gay child who got very flustered whenever she went near or in a victoria's secret
 
     NOUR: Ah. Yes. The store that caused me endless embarrassment as a child.
     
-    SUWAN: Oh? How come?
+    MS SUWAN: Oh? How come?
     
     NOUR: ...Uhh. Because.
     
-    SUWAN: Because..?
+    MS SUWAN: Because..?
     
     NOUR: ...Beautiful women. I will explain no further.
     
-    SUWAN: Haha, I think I understand.
+    MS SUWAN: Haha, I think I understand.
     
-    SUWAN: Femininity is so strange, isn't it? When it's commodified and sold to us in a very specific form, particularly.
+    MS SUWAN: Femininity is so strange, isn't it? When it's commodified and sold to us in a very specific form, particularly.
     
     NOUR: I mean, yeah. I used to think it's all part of this weird, lace-covered box society is trying to push women into. 
     
@@ -23,15 +24,16 @@
     
     NOUR: ...Not me, though. I was pushed into being feminine a little too much to enjoy it.
     
-    SUWAN: All very well and fair. 
+    MS SUWAN: All very well and fair. 
     
-    SUWAN: I leaned into femininity very strongly when I was younger... To put it plainly, it was the least unbearable way for me to exist as a woman. At least, that's how I felt at the time. 
+    MS SUWAN: I leaned into femininity very strongly when I was younger... To put it plainly, it was the least unbearable way for me to exist as a woman. At least, that's how I felt at the time. 
     
     NICK: I don't know much about being feminine but it always felt weird to walk by that store. Kinda makes me uncomfortable.
     
     -> END
 
 == victorias_realvisited ==
+
 //Nour filled the classic young-closeted-gay child who got very flustered whenever she went near or in a victoria's secret
 
     NOUR: Shit, seems like it's up-and-running here. Aaaand all the lingerie and posters are back, lovely.
@@ -54,6 +56,7 @@
 //---------------- REAL WORLD ----------------
 
 == victorias_real ==
+
 //Nour filled the classic young-closeted-gay child who got very flustered whenever she went near or in a victoria's secret
 
     NOUR: Don't look don't look don't look don't look don--

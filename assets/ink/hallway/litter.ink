@@ -27,6 +27,7 @@
     
     -> END
 
+
 == litter_realvisited ==
 
     Scattered on the ground are wrappers from candy bars and crumpled flyers
@@ -67,6 +68,7 @@
     Nick picks up the litter and throws it in the trash.
     
     -> END
+
 
 == litter_dreamvisited ==
 

@@ -10,6 +10,7 @@
     
     -> END
 
+
 == coolshirt_realvisited ==
 
     NICK: Whoa, these shirts completely changed. Didn't they used to be kind of ugly-- I mean... like all dark and edgy before?
@@ -18,7 +19,7 @@
     
     NICK: Whoa! This one's got little birds on it now instead! "So Eggs-citing" -- pfft. That's really cute.
     
-    SUWAN: You should get it. I'm sure it would make you very happy.
+    MS SUWAN: You should get it. I'm sure it would make you very happy.
     
     :NICK:
     
@@ -32,7 +33,15 @@
 
 == manager_convo ==
 
-    NICK: Gotta talk to the manager and see if I can buy this, now...
+    NICK: Oh, right. I guess I have to talk to the manager about buying this, now... 
+    
+    NOUR: You sound pretty reluctant about that.
+    
+    NICK: Haha... it's not like I hate him or anything. It's... um, well, my mom would say buying anything here is a waste of money. 'Cause I don't really need any of this stuff, right?
+    
+    Nick takes a deep breath, looking down at the shirt clutched in his hands. He feels guilty about it, but suddenly feels a rush of irritation at his own guilt. How long had it been since he had last bought himself something?
+    
+    NICK: ...but Ms. Suwan is right. It would make me really happy... I'll talk to him anyway!
     
     -> END
 
@@ -47,25 +56,28 @@
     
     NICK: It doesn't?! I mean... it should... 
     
+    Nick doesn't sound convincing, even to himself. 
+    
     -> END
+
 
 == coolshirt_dreamvisited ==
 
     NICK: Wait, what happened to the design? It got all... edgy again.
     
-    SUWAN: It's a shame. You seemed to like the other one better.
+    MS SUWAN: It's a shame. You seemed to like the other one better.
     
     NICK: Huh? No... of course not. I mean, this one is cool, too. The wolf design is like... so sick, or something.
     
-    SUWAN: That was the most forced compliment I have ever heard, and I've heard a lot of forced compliments in my time. 
+    MS SUWAN: That was the most forced compliment I have ever heard, and I've heard a lot of forced compliments in my time. 
     
     NICK: Ugh... fine. I guess I liked the other one better. It's just that it's -- I dunno... it's so...
     
-    SUWAN: Look, Nick. I would be a hypocrite if I judged you for liking the things that you like. It may seem like a big deal right now, but I promise that if you let yourself enjoy things without caring about what other people think, you'll feel much more content.
+    MS SUWAN: Look, Nick. I would be a hypocrite if I judged you for liking the things that you like. It may seem like a big deal right now, but I promise that if you let yourself enjoy things without caring about what other people think, you'll feel much more content.
     
     NICK: ...I know it's such a little thing. But sometimes my friends blow stuff like this up into a big thing, and they can go for weeks talking about it...
     
-    SUWAN: Trust me. I've been in your place before. I've had a lot of years to realize that living life becomes much easier after you let yourself be yourself.
+    MS SUWAN: Trust me. I've been in your place before. I've had a lot of years to realize that living life becomes much easier after you let yourself be yourself.
     
     -> END
 

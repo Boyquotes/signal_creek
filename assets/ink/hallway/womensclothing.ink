@@ -7,6 +7,7 @@
 +   -> womensclothing_normal
 
 = cbk_appears
+    
     //here, pass a variable to godot to call a function that makes cbk appear in the hallway
     -> womensclothing_normal
     
@@ -70,6 +71,7 @@
     NOUR: Ah, I wish there could be gender neutral clothing...
 
     -> END
+
 
 == womensclothing_dreamvisited ==
 

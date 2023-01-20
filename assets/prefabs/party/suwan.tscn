@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/sprites/characters/placeholders/sheet_party_dream.png" type="Texture" id=1]
-[ext_resource path="res://assets/prefabs/party/PartyCharacterAnimator.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/scripts/character/character.gd" type="Script" id=3]
+[ext_resource path="res://assets/scripts/character/character_navigator.gd" type="Script" id=1]
+[ext_resource path="res://assets/prefabs/party/party_character_animator.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sprites/characters/placeholders/sheet_party_dream.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 4, 2 )
@@ -11,13 +11,13 @@ extents = Vector2( 4, 2 )
 extents = Vector2( 10, 8 )
 
 [node name="SUWAN" type="KinematicBody2D" groups=["Player"]]
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 inkName = "MS SUWAN"
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 2
 position = Vector2( 0, -17 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 16, 110, 16, 34 )
 __meta__ = {
@@ -34,3 +34,9 @@ shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerVisible"]
 shape = SubResource( 20 )
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+navigation_layers = 4
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+radius = 8.0
