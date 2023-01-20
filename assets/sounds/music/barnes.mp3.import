@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/barnes.mp3-fc13a55eb97260bea811ed8b3bac0d38.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/music/barnes.mp3"
+dest_files=[ "res://.import/barnes.mp3-fc13a55eb97260bea811ed8b3bac0d38.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
