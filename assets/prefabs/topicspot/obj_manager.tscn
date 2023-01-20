@@ -47,9 +47,9 @@ script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
-interactiveByNick = true
-interactiveByNour = true
-interactiveBySuwan = true
+_interactive_by_nick = true
+_interactive_by_nour = true
+_interactive_by_suwan = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 position = Vector2( 0, 3 )

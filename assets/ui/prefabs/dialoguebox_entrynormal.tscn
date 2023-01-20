@@ -1,7 +1,9 @@
 [gd_scene format=2]
 
-[node name="RichTextLabel" type="RichTextLabel"]
+[node name="Dialogue" type="RichTextLabel"]
 margin_right = 219.0
 margin_bottom = 55.0
+visible_characters = 0
+percent_visible = 0.0
 text = "Hey. Getting the vaccine made me realize how I want another shot with you. Choosing between Pfizer and Moderna was easy but I don’t think I could pick anyone over you. I might have the antibodies now but your body was the only one I ever loved. You don’t have to reply."
 fit_content_height = true

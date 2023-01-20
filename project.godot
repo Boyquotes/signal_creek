@@ -8,12 +8,54 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Character",
+"language": "GDScript",
+"path": "res://assets/scripts/character/character.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "CharacterNavigator",
+"language": "GDScript",
+"path": "res://assets/scripts/character/character_navigator.gd"
+}, {
+"base": "Area2D",
+"class": "Doortal",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/doortal.gd"
+}, {
+"base": "Area2D",
+"class": "Interactive",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/interactive.gd"
+}, {
+"base": "Node2D",
+"class": "RoomVars",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/room_vars.gd"
+}, {
+"base": "Node2D",
+"class": "Shiftable",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/shiftable.gd"
+} ]
+_global_script_class_icons={
+"Character": "",
+"CharacterNavigator": "",
+"Doortal": "",
+"Interactive": "",
+"RoomVars": "",
+"Shiftable": ""
+}
+
 [application]
 
 config/name="Signal Creek"
 run/main_scene="res://assets/scenes/Game.tscn"
-boot_splash/show_image=false
-boot_splash/bg_color=Color( 0, 0, 0, 1 )
+boot_splash/image="res://assets/sprites/splash_3x.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0.0745098, 0.0784314, 0.121569, 0.901961 )
 
 [audio]
 
@@ -21,13 +63,19 @@ default_bus_layout=""
 
 [autoload]
 
-Globals="*res://assets/scripts/globals/globalvars.gd"
+Globals="*res://assets/scripts/globals/global_vars.gd"
+DialogueEngine="*res://assets/scripts/ui/dialogue_engine.gd"
+RoomEngine="*res://assets/scripts/globals/room_engine.gd"
+
+[debug]
+
+gdscript/completion/autocomplete_setters_and_getters=true
+gdscript/warnings/unused_signal=false
 
 [display]
 
 window/size/width=960
 window/size/height=540
-window/size/resizable=false
 window/size/always_on_top=true
 window/size/test_width=960
 window/size/test_height=540
@@ -222,6 +270,7 @@ quality/shadows/filter_mode=0
 quality/reflections/texture_array_reflections=false
 quality/reflections/high_quality_ggx=false
 quality/depth_prepass/enable=false
+environment/default_clear_color=Color( 0.0470588, 0.0470588, 0.0470588, 1 )
 
 [world]
 

@@ -51,6 +51,7 @@
     
     -> END
 
+
 == graphictees_dreamvisited ==
     
     The rack of tees are covered with over-the-top graphic iconography and strong slogans, like pride flags. One of them proudly calls to "legalize weed". They are purposefully ripped and holey.

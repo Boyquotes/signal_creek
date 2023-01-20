@@ -1,6 +1,7 @@
 //---------------- DREAM WORLD ----------------
 
 == hotwheels_dream ==
+    
     //Should have an initial interaction in the dream world pointing out how new this looks, with Ms. Suwan vividly remembering being given Mattel cars as a child as gifts from local toy markets. She has a uneasy feeling about these toys and the type of media she was “given” to play rather than chosen by herself. Nick can speak up about how he thinks his friends would think the car is really cool, and they can have a conversation about it.
     
     A shiny toy race car. Glimmering in the light as if it was freshly made.
@@ -27,6 +28,7 @@
     
     -> END
 
+
 == hotwheels_realvisited ==
 
     The shiny toy race car. Ms Suwan can see herself in the reflection.
@@ -52,6 +54,7 @@
     She walks away feeling content, knowing that she can't continue being reminded of her past.
     
     -> END
+
 
 //SUBSEQUENT DREAM KNOTS HERE
 
@@ -87,21 +90,24 @@
     NICK: Hey Ms Suwan, can you pass me the toy car?
     
     MS SUWAN: Um, ok
+    
+    :MS SUWAN:
 
-    +pick it up
+    + pick it up
     
         -> hotwheelsshift
         
-    +walk away
+    + walk away
     
         -> DONE
     
     =hotwheelsshift
     
-    &Ms. Suwan picks up the car.
-    
-    -> DONE
-    
+        &Ms. Suwan picks up the car.
+        
+        -> DONE
+
+
 == hotwheels_dreamvisited ==
 
     The hot wheels toy you saw before...

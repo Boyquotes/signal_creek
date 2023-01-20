@@ -8,6 +8,7 @@
     
     -> politicalConvo
 
+
 == pinbuttons_realvisited ==
 
     It's a display of buttons and pins. There's a hammer and sickle pin, a button depicting the cross over an American flag, and various other obscenities that Ms. Suwan doesn't even want to acknowledge.
@@ -15,6 +16,7 @@
     MS SUWAN: This is, uh, a lot more extreme than the friendly political messages I saw before.
     
     -> politicalConvo
+
     
 == politicalConvo ==
 
@@ -36,6 +38,7 @@
     Nick picks the pin up for a moment, looks over it contemplatively, and returns it to the display.
     
     -> END
+
 
 == pinbuttons_dreamvisited ==
 

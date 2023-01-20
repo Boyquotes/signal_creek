@@ -64,6 +64,7 @@
     Chad, Brody, and Kristy disappear while Ms Suwan stares blank eyed into the distance.
 
     -> END
+
     
 == chadbrodykristy_realvisited ==
 
@@ -74,6 +75,7 @@
 == chadbrodykristy_real ==
     
     -> chadbrodykristy_dream
+
 
 == chadbrodykristy_dreamvisited ==
 
