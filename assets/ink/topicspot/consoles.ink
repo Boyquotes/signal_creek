@@ -1,10 +1,3 @@
-INCLUDE bandn/pens.ink
-INCLUDE topicspot/coolshirt.ink
-INCLUDE topicspot/manager.ink
-INCLUDE topicspot/phonecases.ink
-INCLUDE hallway/litter.ink
-INCLUDE bandn/bookstack.ink
-INCLUDE bandn/priceofsalt.ink
 //---------------- DREAM WORLD ----------------
 
 VAR playCount = 1
@@ -22,8 +15,6 @@ VAR playCount = 1
     Nick grabs the console and begins to play.
     
     The screen reads, "LEVEL {playCount} , NEW CHARACTER UNLOCKED"
-    
-    ~playCount = playCount +1
     
     NICK: LEVEL {playCount} LETS GOOOO!!!
     

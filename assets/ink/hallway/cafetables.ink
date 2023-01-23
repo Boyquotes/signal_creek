@@ -20,6 +20,7 @@
 
     -> END
 
+
 == cafetables_realvisited ==
 
     The tables seem even shinier, now that the dirt of the other world is gone. Nick looks at all of them fondly, this time not just at his favorite.
@@ -50,6 +51,7 @@
     NICK: Yeah but... the vending machines don't have the same energy, you know? Vending machines are boring.
     
     -> END
+
 
 == cafetables_dreamvisited ==
 
