@@ -1,5 +1,21 @@
 VAR drinkCount = 0
 
+== bobatea ==
+
+    {
+        - currentWorld == "dream" && bobatea_real:
+            -> bobatea_realvisited
+            
+        - currentWorld == "dream":
+            -> bobatea_dream
+            
+        - currentWorld == "real" && bobatea_dream:
+            -> bobatea_dreamvisited
+        
+        - else:
+            -> bobatea_real
+    }
+
 //---------------- DREAM WORLD ----------------
 
 == bobatea_dream ==

@@ -56,6 +56,7 @@ func _set_to_dream_world():
 	_move_room_objects()
 	Globals.PartyObject.change_assets_world(Globals.CurrentWorld)
 	Globals.GameWorldEnvironment.get_environment().set_adjustment_color_correction(dream_gradient)
+	Globals.DialogueBox.set_current_world("dream")
 
 
 # Sets Global World variable to REAL
@@ -69,6 +70,7 @@ func _set_to_real_world():
 	_move_room_objects()
 	Globals.PartyObject.change_assets_world(Globals.CurrentWorld)
 	Globals.GameWorldEnvironment.get_environment().set_adjustment_color_correction(real_gradient)
+	Globals.DialogueBox.set_current_world("real")
 
 
 func _set_tilesets(setId):

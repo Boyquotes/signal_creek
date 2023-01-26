@@ -1,3 +1,18 @@
+== cafetables ==
+
+    {
+        - currentWorld == "dream" && cafetables_real:
+            -> cafetables_realvisited
+            
+        - currentWorld == "dream":
+            -> cafetables_dream
+            
+        - currentWorld == "real" && cafetables_dream:
+            -> cafetables_dreamvisited
+        
+        - else:
+            -> cafetables_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == cafetables_dream ==

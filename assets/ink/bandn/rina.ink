@@ -1,3 +1,18 @@
+== rina ==
+
+    {
+        - currentWorld == "dream" && rina_real:
+            -> rina_realvisited
+            
+        - currentWorld == "dream":
+            -> rina_dream
+            
+        - currentWorld == "real" && rina_dream:
+            -> rina_dreamvisited
+        
+        - else:
+            -> rina_real
+    }
 //---------------- DREAM WORLD ----------------
 
 // rina will be divided up differently than most other objects, into 'interactions' instead of dreamvisited/realvisited (first interaction, second, third, etc.)

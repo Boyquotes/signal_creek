@@ -1,3 +1,18 @@
+== oldnovel ==
+
+    {
+        - currentWorld == "dream" && oldnovel_real:
+            -> oldnovel_realvisited
+            
+        - currentWorld == "dream":
+            -> oldnovel_dream
+            
+        - currentWorld == "real" && oldnovel_dream:
+            -> oldnovel_dreamvisited
+        
+        - else:
+            -> oldnovel_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == oldnovel_dream ==

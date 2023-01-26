@@ -1,3 +1,18 @@
+== hotwheels ==
+
+    {
+        - currentWorld == "dream" && hotwheels_real:
+            -> hotwheels_realvisited
+            
+        - currentWorld == "dream":
+            -> hotwheels_dream
+            
+        - currentWorld == "real" && hotwheels_dream:
+            -> hotwheels_dreamvisited
+        
+        - else:
+            -> hotwheels_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == hotwheels_dream ==

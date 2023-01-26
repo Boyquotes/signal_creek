@@ -55,7 +55,6 @@ func move_party_by_vector(directionVector):
 func change_leader():
 	leaderIndex = wrapi(leaderIndex + 1, 0,3)
 	update_leader_to(leaderIndex)
-	Globals.ColorManager.set_current_color(characterObjects[leaderIndex].inkName)
 
 
 # called automatically whenever leaderIndex is changed, thanks to setget.
@@ -63,6 +62,7 @@ func change_leader():
 func update_leader_to(newIndex):
 	leaderIndex = newIndex
 	Globals.PartyCamera.camera_following = characterObjects[leaderIndex]
+	Globals.ColorManager.set_current_color(characterObjects[leaderIndex].inkName)
 	
 	if Globals.CurrentWorld == Globals.Worlds.DREAM:
 		change_portrait(dream_portraits[leaderIndex])

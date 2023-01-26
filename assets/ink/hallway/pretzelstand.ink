@@ -1,3 +1,18 @@
+== pretzelstand ==
+
+    {
+        - currentWorld == "dream" && pretzelstand_real:
+            -> pretzelstand_realvisited
+            
+        - currentWorld == "dream":
+            -> pretzelstand_dream
+            
+        - currentWorld == "real" && pretzelstand_dream:
+            -> pretzelstand_dreamvisited
+        
+        - else:
+            -> pretzelstand_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == pretzelstand_dream ==

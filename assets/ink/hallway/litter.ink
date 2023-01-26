@@ -1,3 +1,18 @@
+== litter ==
+
+    {
+        - currentWorld == "dream" && litter_real:
+            -> litter_realvisited
+            
+        - currentWorld == "dream":
+            -> litter_dream
+            
+        - currentWorld == "real" && litter_dream:
+            -> litter_dreamvisited
+        
+        - else:
+            -> litter_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == litter_dream ==

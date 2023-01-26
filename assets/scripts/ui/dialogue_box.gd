@@ -305,3 +305,11 @@ func set_camera_position_to_speaker():
 	var followingVector = find_current_speaker_position()
 	Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 		
+
+func set_current_world(worldName):
+	_ink_player.SetVariable("currentWorld", worldName)
+
+func reset_story():
+	clear_and_reset_ui()
+	_ink_player.Reset()
+	_ink_player.LoadStory(_ink_story)

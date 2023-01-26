@@ -1,3 +1,18 @@
+== makeup ==
+
+    {
+        - currentWorld == "dream" && makeup_real:
+            -> makeup_realvisited
+            
+        - currentWorld == "dream":
+            -> makeup_dream
+            
+        - currentWorld == "real" && makeup_dream:
+            -> makeup_dreamvisited
+        
+        - else:
+            -> makeup_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == makeup_dream ==

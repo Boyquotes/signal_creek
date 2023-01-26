@@ -1,3 +1,18 @@
+== sailormoonposters ==
+
+    {
+        - currentWorld == "dream" && sailormoonposters_real:
+            -> sailormoonposters_realvisited
+            
+        - currentWorld == "dream":
+            -> sailormoonposters_dream
+            
+        - currentWorld == "real" && sailormoonposters_dream:
+            -> sailormoonposters_dreamvisited
+        
+        - else:
+            -> sailormoonposters_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == sailormoonposters_dream ==

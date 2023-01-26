@@ -1,3 +1,18 @@
+== olddoll ==
+
+    {
+        - currentWorld == "dream" && olddoll_real:
+            -> olddoll_realvisited
+            
+        - currentWorld == "dream":
+            -> olddoll_dream
+            
+        - currentWorld == "real" && olddoll_dream:
+            -> olddoll_dreamvisited
+        
+        - else:
+            -> olddoll_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == olddoll_dream ==

@@ -46,6 +46,7 @@ __meta__ = {
 }
 party_starting_position = Vector2( 200, 128 )
 room_bounds_max = Vector2( 960, 320 )
+room_index = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.956863, 0.701961, 0.92549, 1 )

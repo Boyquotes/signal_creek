@@ -1,3 +1,18 @@
+== dragonplush ==
+
+    {
+        - currentWorld == "dream" && dragonplush_real:
+            -> dragonplush_realvisited
+            
+        - currentWorld == "dream":
+            -> dragonplush_dream
+            
+        - currentWorld == "real" && dragonplush_dream:
+            -> dragonplush_dreamvisited
+        
+        - else:
+            -> dragonplush_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == dragonplush_dream ==

@@ -1,3 +1,18 @@
+== priceofsalt ==
+
+    {
+        - currentWorld == "dream" && priceofsalt_real:
+            -> priceofsalt_realvisited
+            
+        - currentWorld == "dream":
+            -> priceofsalt_dream
+            
+        - currentWorld == "real" && priceofsalt_dream:
+            -> priceofsalt_dreamvisited
+        
+        - else:
+            -> priceofsalt_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == priceofsalt_dream ==
