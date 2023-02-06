@@ -12,7 +12,6 @@ extents = Vector2( 10, 7.875 )
 
 [node name="NICK" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
-inkname = "NICK"
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 2
