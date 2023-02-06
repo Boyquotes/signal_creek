@@ -31,4 +31,5 @@ _pathfind_move_away_dist = 16.0
 
 [node name="SUWAN" parent="." instance=ExtResource( 1 )]
 position = Vector2( 20, 0 )
+walk_speed = 3600.0
 _pathfind_stop_approaching_dist = 40.0
