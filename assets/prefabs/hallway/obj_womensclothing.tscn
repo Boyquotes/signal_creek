@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=2]
-[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=3]
+[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
+[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_real.png" type="Texture" id=5]
 
@@ -23,7 +23,7 @@ realsheet = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
-material = ExtResource( 2 )
+material = ExtResource( 3 )
 position = Vector2( 0, -33 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -43,7 +43,7 @@ position = Vector2( -0.5, -33 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }

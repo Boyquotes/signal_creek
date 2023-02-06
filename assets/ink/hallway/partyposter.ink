@@ -1,3 +1,18 @@
+== partyposter ==
+
+    {
+        - currentWorld == "dream" && partyposter_real:
+            -> partyposter_realvisited
+            
+        - currentWorld == "dream":
+            -> partyposter_dream
+            
+        - currentWorld == "real" && partyposter_dream:
+            -> partyposter_dreamvisited
+        
+        - else:
+            -> partyposter_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == partyposter_dream ==

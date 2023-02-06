@@ -22,15 +22,14 @@ real_portraits = [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 12 ) ]
 
 [node name="NICK" parent="." instance=ExtResource( 3 )]
 position = Vector2( -20, 0 )
-nav_agent_radius = 16.0
-nav_optimize_path = true
-nav_timer_interval = 1.5
+_pathfind_stop_approaching_dist = 24.0
+_pathfind_move_away_dist = 16.0
 
 [node name="NOUR" parent="." instance=ExtResource( 2 )]
-character_speed_multiplier = 40.0
-nav_timer_interval = 2.0
+_pathfind_stop_approaching_dist = 24.0
+_pathfind_move_away_dist = 16.0
 
 [node name="SUWAN" parent="." instance=ExtResource( 1 )]
 position = Vector2( 20, 0 )
-character_speed_multiplier = 48.0
-nav_timer_interval = 3.0
+walk_speed = 3600.0
+_pathfind_stop_approaching_dist = 40.0

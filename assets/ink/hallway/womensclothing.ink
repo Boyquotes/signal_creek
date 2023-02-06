@@ -1,3 +1,18 @@
+== womensclothing ==
+
+    {
+        - currentWorld == "dream" && womensclothing_real:
+            -> womensclothing_realvisited
+            
+        - currentWorld == "dream":
+            -> womensclothing_dream
+            
+        - currentWorld == "real" && womensclothing_dream:
+            -> womensclothing_dreamvisited
+        
+        - else:
+            -> womensclothing_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == womensclothing_dream ==

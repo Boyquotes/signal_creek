@@ -1,3 +1,18 @@
+== chadbrodykristy ==
+
+    {
+        - currentWorld == "dream" && chadbrodykristy_real:
+            -> chadbrodykristy_realvisited
+            
+        - currentWorld == "dream":
+            -> chadbrodykristy_dream
+            
+        - currentWorld == "real" && chadbrodykristy_dream:
+            -> chadbrodykristy_dreamvisited
+        
+        - else:
+            -> chadbrodykristy_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == chadbrodykristy_dream ==

@@ -1,3 +1,18 @@
+== polaroid ==
+
+    {
+        - currentWorld == "dream" && polaroid_real:
+            -> polaroid_realvisited
+            
+        - currentWorld == "dream":
+            -> polaroid_dream
+            
+        - currentWorld == "real" && polaroid_dream:
+            -> polaroid_dreamvisited
+        
+        - else:
+            -> polaroid_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == polaroid_dream ==

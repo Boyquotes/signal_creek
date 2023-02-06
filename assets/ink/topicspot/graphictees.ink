@@ -1,3 +1,18 @@
+== graphictees ==
+
+    {
+        - currentWorld == "dream" && graphictees_real:
+            -> graphictees_realvisited
+            
+        - currentWorld == "dream":
+            -> graphictees_dream
+            
+        - currentWorld == "real" && graphictees_dream:
+            -> graphictees_dreamvisited
+        
+        - else:
+            -> graphictees_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == graphictees_dream ==

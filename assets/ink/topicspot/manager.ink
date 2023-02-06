@@ -1,3 +1,18 @@
+== manager ==
+
+    {
+        - currentWorld == "dream" && manager_real:
+            -> manager_realvisited
+            
+        - currentWorld == "dream":
+            -> manager_dream
+            
+        - currentWorld == "real" && manager_dream:
+            -> manager_dreamvisited
+        
+        - else:
+            -> manager_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == manager_dream ==

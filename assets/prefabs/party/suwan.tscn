@@ -12,7 +12,7 @@ extents = Vector2( 10, 8 )
 
 [node name="SUWAN" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
-inkName = "MS SUWAN"
+inkname = "MS SUWAN"
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 2
@@ -34,9 +34,3 @@ shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerVisible"]
 shape = SubResource( 20 )
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-navigation_layers = 4
-
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
-radius = 8.0

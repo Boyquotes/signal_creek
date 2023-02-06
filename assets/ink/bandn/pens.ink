@@ -1,3 +1,18 @@
+== pens ==
+
+    {
+        - currentWorld == "dream" && pens_real:
+            -> pens_realvisited
+            
+        - currentWorld == "dream":
+            -> pens_dream
+            
+        - currentWorld == "real" && pens_dream:
+            -> pens_dreamvisited
+        
+        - else:
+            -> pens_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == pens_dream ==

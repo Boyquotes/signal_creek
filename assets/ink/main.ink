@@ -1,5 +1,5 @@
-VAR currentPartyChar = "NICK"
-VAR currentWorld = "DREAM"
+VAR currentPartyChar = "nick"
+VAR currentWorld = "dream"
 
 INCLUDE bandn/bookstack.ink
 INCLUDE bandn/dragonplush.ink

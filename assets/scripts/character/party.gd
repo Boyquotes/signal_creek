@@ -37,25 +37,19 @@ func _ready():
 
 func move_party_by_vector(directionVector):
 	# TODO: pathfind_to the closest object if there is one (and face the object)
-	var leaderPos = characterObjects[leaderIndex].get_global_position()
+#	var leaderPos = characterObjects[leaderIndex].get_global_position()
 	#first character following leader
-	var followerPos = characterObjects[wrapi(leaderIndex + 1, 0,3)].get_global_position()
+#	var followerPos = characterObjects[wrapi(leaderIndex + 1, 0,3)].get_global_position()
 	
 	characterObjects[leaderIndex].move_character_by_vector(directionVector)
-#	characterObjects[wrapi(leaderIndex + 1, 0,3)].pathfind_to(get_leader())
-#	characterObjects[wrapi(leaderIndex - 1, 0,3)].pathfind_to(get_leader())
-	characterObjects[wrapi(leaderIndex + 1, 0,3)].set_navigation_position(leaderPos)
-	characterObjects[wrapi(leaderIndex - 1, 0,3)].set_navigation_position(followerPos)
-	
-	characterObjects[wrapi(leaderIndex + 1, 0,3)].npc_process(leaderPos)
-	characterObjects[wrapi(leaderIndex - 1, 0,3)].npc_process(followerPos)
+	characterObjects[wrapi(leaderIndex + 1, 0,3)].pathfind_to(get_leader())
+	characterObjects[wrapi(leaderIndex - 1, 0,3)].pathfind_to(get_leader())
 
 
 # Update leader based on index
 func change_leader():
 	leaderIndex = wrapi(leaderIndex + 1, 0,3)
 	update_leader_to(leaderIndex)
-	Globals.ColorManager.set_current_color(characterObjects[leaderIndex].inkName)
 
 
 # called automatically whenever leaderIndex is changed, thanks to setget.
@@ -63,6 +57,7 @@ func change_leader():
 func update_leader_to(newIndex):
 	leaderIndex = newIndex
 	Globals.PartyCamera.camera_following = characterObjects[leaderIndex]
+	Globals.ColorManager.set_current_color(characterObjects[leaderIndex].inkname)
 	
 	if Globals.CurrentWorld == Globals.Worlds.DREAM:
 		change_portrait(dream_portraits[leaderIndex])
@@ -76,7 +71,7 @@ func get_leader():
 
 
 func get_leader_inkname():
-	return get_leader().inkName
+	return get_leader().inkname
 
 
 func get_character_objects():

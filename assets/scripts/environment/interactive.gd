@@ -15,9 +15,10 @@ export var _interactive_by_suwan = false
 
 var _can_interact = false
 var _party_is_inside = false
-#this will be inkside
-var _dream_visited = false
-var _real_visited = false
+
+#OBSOLETE; THIS IS NOW CHECKED IN INK
+#var _dream_visited = false
+#var _real_visited = false
 
 
 func _ready():
@@ -90,22 +91,22 @@ func _get_object_name():
 # Gets the world the player is currently in
 # Gets whether we've visited this object in the other world
 # Returns appropriate combination of strings
-# TODO: Should this check be inkside instead?
-func _get_visitedinworld_status():
-	if Globals.CurrentWorld == Globals.Worlds.DREAM:
-		if _real_visited:
-			_dream_visited = true
-			return "_realvisited"
-			
-		else:
-			_dream_visited = true
-			return "_dream"
-			
-	else:
-		if _dream_visited:
-			_real_visited = true
-			return "_dreamvisited"
-			
-		else:
-			_real_visited = true
-			return "_real"
+# FUNCTION OBSOLETE; STATUS CHECKED IN INK
+#func _get_visitedinworld_status():
+#	if Globals.CurrentWorld == Globals.Worlds.DREAM:
+#		if _real_visited:
+#			_dream_visited = true
+#			return "_realvisited"
+#
+#		else:
+#			_dream_visited = true
+#			return "_dream"
+#
+#	else:
+#		if _dream_visited:
+#			_real_visited = true
+#			return "_dreamvisited"
+#
+#		else:
+#			_real_visited = true
+#			return "_real"

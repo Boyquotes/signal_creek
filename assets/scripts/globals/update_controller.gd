@@ -10,6 +10,9 @@ func _start():
 
 
 func _physics_process(_delta):
+	if Input.is_action_just_pressed("reset"):
+		reset_game()
+	
 	if Globals.GameMode == Globals.GameModes.TALK:
 		
 		if Globals.DialogueBox.is_displaying_choices:
@@ -52,11 +55,13 @@ func _physics_process(_delta):
 					#Globals.GameCanvas.set_camera_following_vector(Vector2(_camera_normal_position.x + camera_offset_dialogue, _camera_normal_position.y))
 					
 					# tell inkparser to go to a knot based on this object's name
-					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name() + _closest_object._get_visitedinworld_status())
+					
+					#METHOD IS OBSOLETE
+					#Globals.DialogueBox.open_at_knot(_closest_object._get_object_name() + _closest_object._get_visitedinworld_status())
+					
+					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
 					Globals.DialogueBox.background_panel_node.set_visible(true)
-		
-		if Input.is_action_just_pressed("reset") && Globals.GameMode == Globals.GameModes.WALK:
-			reset_game()
+
 
 func check_input_character_movement():
 	var directionVector = Vector2(0,0)
@@ -76,7 +81,23 @@ func check_input_character_movement():
 	Globals.PartyObject.move_party_by_vector(directionVector)
 
 func reset_game():
-	print("haha stupid idiot you cant reset")
+	#set the default room's starting pos to the default starting pos
+	#make current party character nick
+	#reset the ink
+	#room enter signal for default room
+	#RoomEngine.Rooms[RoomEngine.Rooms.defaultRoomIndex].set_party_starting_position(RoomEngine.defaultStartingPos)
+	Globals.PartyObject.update_leader_to(0)
+	Globals.CurrentWorld = Globals.Worlds.DREAM
+#	Globals.set_to_dream_world()
+	if RoomEngine.CurrentRoomIndex != RoomEngine.defaultRoomIndex:
+		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[RoomEngine.defaultRoomIndex], RoomEngine.defaultStartingPos)
+		
+	else:
+		RoomEngine.CurrentRoom.move_party_to_position(Globals.PartyObject, RoomEngine.defaultStartingPos)
+		
+	RoomEngine.PlaneManager.set_correct_world()
+	Globals.DialogueBox.reset_story()
+	print("GAME RESET")
 	pass
 
 

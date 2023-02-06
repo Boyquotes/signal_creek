@@ -1,3 +1,18 @@
+== pinbuttons ==
+
+    {
+        - currentWorld == "dream" && pinbuttons_real:
+            -> pinbuttons_realvisited
+            
+        - currentWorld == "dream":
+            -> pinbuttons_dream
+            
+        - currentWorld == "real" && pinbuttons_dream:
+            -> pinbuttons_dreamvisited
+        
+        - else:
+            -> pinbuttons_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == pinbuttons_dream ==

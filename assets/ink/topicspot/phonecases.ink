@@ -1,3 +1,18 @@
+== phonecases ==
+
+    {
+        - currentWorld == "dream" && phonecases_real:
+            -> phonecases_realvisited
+            
+        - currentWorld == "dream":
+            -> phonecases_dream
+            
+        - currentWorld == "real" && phonecases_dream:
+            -> phonecases_dreamvisited
+        
+        - else:
+            -> phonecases_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == phonecases_dream ==

@@ -1,3 +1,18 @@
+== victorias ==
+
+    {
+        - currentWorld == "dream" && victorias_real:
+            -> victorias_realvisited
+            
+        - currentWorld == "dream":
+            -> victorias_dream
+            
+        - currentWorld == "real" && victorias_dream:
+            -> victorias_dreamvisited
+        
+        - else:
+            -> victorias_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == victorias_dream ==

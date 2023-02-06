@@ -1,3 +1,18 @@
+== coolshirt ==
+
+    {
+        - currentWorld == "dream" && coolshirt_real:
+            -> coolshirt_realvisited
+            
+        - currentWorld == "dream":
+            -> coolshirt_dream
+            
+        - currentWorld == "real" && coolshirt_dream:
+            -> coolshirt_dreamvisited
+        
+        - else:
+            -> coolshirt_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == coolshirt_dream ==

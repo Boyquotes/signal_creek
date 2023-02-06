@@ -1,3 +1,18 @@
+== bookstack ==
+
+    {
+        - currentWorld == "dream" && bookstack_real:
+            -> bookstack_realvisited
+            
+        - currentWorld == "dream":
+            -> bookstack_dream
+            
+        - currentWorld == "real" && bookstack_dream:
+            -> bookstack_dreamvisited
+        
+        - else:
+            -> bookstack_real
+    }
 //---------------- DREAM WORLD ----------------
 
 == bookstack_dream ==
