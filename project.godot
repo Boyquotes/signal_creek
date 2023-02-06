@@ -62,7 +62,6 @@ boot_splash/image="res://assets/sprites/splash_3x.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0.0745098, 0.0784314, 0.121569, 0.901961 )
-config/icon="res://assets/sprites/icon.png"
 
 [audio]
 
@@ -83,6 +82,7 @@ gdscript/warnings/unused_signal=false
 
 window/size/width=960
 window/size/height=540
+window/size/always_on_top=true
 window/size/test_width=960
 window/size/test_height=540
 window/stretch/mode="2d"
@@ -95,13 +95,6 @@ scene_naming=1
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/paulloz.ink/plugin.cfg" )
-
-[global]
-
-build=false
-marshall=false
-variables=false
-dependencies=false
 
 [importer_defaults]
 
