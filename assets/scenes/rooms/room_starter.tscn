@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/scripts/globals/camera_manager.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/tilesets/set_proposal_dream.tres" type="TileSet" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=5]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=6]
 [ext_resource path="res://assets/prefabs/party/party.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/sprites/tilesets/set_navigation.tres" type="TileSet" id=8]
 
 [node name="Room" type="Node2D"]
 script = ExtResource( 6 )
@@ -55,24 +54,6 @@ tile_data = PoolIntArray( 0, 7, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="NavigationNick" type="TileMap" parent="PlaneManager"]
-tile_set = ExtResource( 8 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( 393220, 0, 0 )
-
-[node name="NavigationNour" type="TileMap" parent="PlaneManager"]
-tile_set = ExtResource( 8 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( 393221, 1, 0 )
-
-[node name="NavigationSuwan" type="TileMap" parent="PlaneManager"]
-tile_set = ExtResource( 8 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( 393222, 2, 0 )
 
 [node name="Lights" type="Node2D" parent="PlaneManager"]
 __meta__ = {
