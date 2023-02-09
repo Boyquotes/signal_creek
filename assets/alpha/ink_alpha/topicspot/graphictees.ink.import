@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/graphictees.ink-d632e226de824e576e7e6ad7d751121d.res"
+
+[deps]
+
+source_file="res://assets/alpha/ink_alpha/topicspot/graphictees.ink"
+dest_files=[ "res://.import/graphictees.ink-d632e226de824e576e7e6ad7d751121d.res" ]
+
+[params]
+
+is_master_file=false
+compress=false
