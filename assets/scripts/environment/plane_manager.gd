@@ -7,7 +7,7 @@ extends Node
 
 export var _shifting_enabled = false
 export (TileSet) var dreamset = preload("res://assets/sprites/tilesets/set_abstract_dream.tres")
-export (TileSet) var realset = preload("res://assets/sprites/tilesets/set_abstract_real.tres")
+export (TileSet) var realset = preload("res://assets/sprites/tilesets/set_abstract_dream.tres")
 export var dream_gradient = preload("res://assets/shaders/gradient_dream.tres")
 export var real_gradient = preload("res://assets/shaders/gradient_real.tres")
 

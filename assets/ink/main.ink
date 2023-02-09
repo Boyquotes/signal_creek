@@ -28,3 +28,9 @@ INCLUDE topicspot/manager.ink
 INCLUDE topicspot/phonecases.ink
 INCLUDE topicspot/pinbuttons.ink
 INCLUDE topicspot/sailormoonposters.ink
+
+== abstract ==
+
+Hello. This is an Abstract Object. Thank you for coming.
+
+    -> END

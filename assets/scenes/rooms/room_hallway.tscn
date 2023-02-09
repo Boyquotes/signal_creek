@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/sprites/tilesets/set_hallway_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
-[ext_resource path="res://assets/sprites/tilesets/set_hallway_real.tres" type="TileSet" id=4]
+[ext_resource path="res://assets/prefabs/objects/obj_abstract.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_olddoll.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_litter.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_cafechairsfront.tscn" type="PackedScene" id=7]
@@ -22,7 +22,6 @@
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_cafechairsback.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/shaders/shader_outline.gdshader" type="Shader" id=21]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_chadbrodykristy.tscn" type="PackedScene" id=22]
-
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4, 40 )
@@ -57,7 +56,6 @@ __meta__ = {
 [node name="PlaneManager" type="Node2D" parent="."]
 script = ExtResource( 3 )
 dreamset = ExtResource( 1 )
-realset = ExtResource( 4 )
 
 [node name="Ground" type="TileMap" parent="PlaneManager"]
 tile_set = ExtResource( 1 )
@@ -233,6 +231,9 @@ position = Vector2( 802, 167 )
 [node name="ChadBrodyKristy" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
 material = SubResource( 3 )
 position = Vector2( 560, 120 )
+
+[node name="AbstractObject" parent="PlaneManager/Overworld" instance=ExtResource( 4 )]
+position = Vector2( 216, 136 )
 
 [node name="OldDoll" parent="PlaneManager/Overworld" instance=ExtResource( 5 )]
 position = Vector2( 261, 203 )
