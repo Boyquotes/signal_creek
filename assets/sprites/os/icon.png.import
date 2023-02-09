@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/splash_3x.png-73693ffcd013877e99d9308a15ebeeb7.stex"
+path="res://.import/icon.png-0c9075d5dc58669d22f0c7307bb145ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/splash_3x.png"
-dest_files=[ "res://.import/splash_3x.png-73693ffcd013877e99d9308a15ebeeb7.stex" ]
+source_file="res://assets/sprites/os/icon.png"
+dest_files=[ "res://.import/icon.png-0c9075d5dc58669d22f0c7307bb145ee.stex" ]
 
 [params]
 

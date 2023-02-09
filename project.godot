@@ -58,10 +58,11 @@ _global_script_class_icons={
 
 config/name="Signal Creek"
 run/main_scene="res://assets/scenes/Game.tscn"
-boot_splash/image="res://assets/sprites/splash_3x.png"
+boot_splash/image="res://assets/sprites/os/splash_3x.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0.0745098, 0.0784314, 0.121569, 0.901961 )
+config/icon="res://assets/sprites/os/icon.png"
 
 [audio]
 
@@ -95,6 +96,13 @@ scene_naming=1
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/paulloz.ink/plugin.cfg" )
+
+[global]
+
+build=false
+marshall=false
+variables=false
+dependencies=false
 
 [importer_defaults]
 
