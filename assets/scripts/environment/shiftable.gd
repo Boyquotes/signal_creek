@@ -67,7 +67,9 @@ func _set_hint_attributes():
 
 # Activate color of outline shader
 func _on_ActiveArea_can_interact():
+	# IN CASE OF LEADER SWITCHING
 	#$Sprite.material.set_shader_param("color", Globals.ColorManager.current_color)
+	
 	$Sprite.material.set_shader_param("color", Color.white)
 
 

@@ -199,9 +199,9 @@ func expand_background_panel():
 #increment visible characters in most recent richtextlabel
 func typewriter_effect():
 	var currentVisibility = current_text_box.get_percent_visible()
-	var totalCharCount = current_text_box.get_total_character_count()
+	#var totalCharCount = current_text_box.get_total_character_count()
 	var visibleCharacters = current_text_box.get_visible_characters()
-	var increment = totalCharCount * typewriter_speed
+	#var increment = totalCharCount * typewriter_speed
 	
 	if currentVisibility >= 1.0:
 		is_typing = false
@@ -219,7 +219,7 @@ func escape_typewriter_effect():
 func display_choices(chooserName):
 	_current_choice_strings = _ink_player.get_CurrentChoices()
 	
-	if _current_choice_strings.size() <= 0: #TO AVOID CRASHING; escape choice selection if there's no choices left
+	if _current_choice_strings.size() <= 0: #TO AVOID CRASHING; escape choice selection if no choices left
 		is_displaying_choices = false
 		proceed()
 		return
@@ -285,7 +285,6 @@ func find_current_speaker_position():
 	var currentSpeakerIndex = -1
 
 	# Move camera to party character if they are speaking
-	# TODO: make the characters walk towards if they're far away & they speak
 	if "nick" in currentSpeaker:
 		currentSpeakerIndex = 0
 

@@ -5,6 +5,7 @@ extends YSort
 # Stores all 3 character objects
 # Determines which character is the "leader" (being controlled)
 # The other 2 follow
+# LEADER IS ALWAYS NOUR; leader switching is not used currently
 
 
 export var dream_character_sheet : Texture
@@ -29,22 +30,53 @@ onready var characterObjects = [
 	self.get_child(2)
 ]
 
+
+
 func _ready():
 	Globals.Nick = characterObjects[0]
 	Globals.Nour = characterObjects[1]
 	Globals.Suwan = characterObjects[2]
 
 
+# Control leader movement; others follow
 func move_party_by_vector(directionVector):
-	# TODO: pathfind_to the closest object if there is one (and face the object)
-#	var leaderPos = characterObjects[leaderIndex].get_global_position()
-	#first character following leader
-#	var followerPos = characterObjects[wrapi(leaderIndex + 1, 0,3)].get_global_position()
-	
 	characterObjects[leaderIndex].move_character_by_vector(directionVector)
 	characterObjects[wrapi(leaderIndex + 1, 0,3)].pathfind_to(get_leader())
 	characterObjects[wrapi(leaderIndex - 1, 0,3)].pathfind_to(get_leader())
 
+
+# Change CornerPortrait in the ui
+func change_portrait(_sprite):
+	# IN CASE OF LEADER SWITCHING
+	#Globals.CornerPortrait.set_character(sprite, get_leader_inkname())
+	
+	# TODO: if we have a Real World Moment
+	# change this so that it updates the Name - Sprite mapping for each character portrait
+	pass
+
+
+func change_assets_world(currentPlane):
+	if currentPlane == Globals.Worlds.DREAM:
+		change_party_sprites(dream_character_sheet)
+		
+	else:
+		change_party_sprites(real_character_sheet)
+		
+	# IN CASE OF LEADER SWITCHING
+	update_leader_to(leaderIndex)
+
+
+func change_party_sprites(sheet):
+	for character in characterObjects:
+		# will be an array index when they are animated
+		character.set_sprite(sheet)
+
+
+func get_character_objects():
+	return self.characterObjects
+	
+
+# BELOW: IN CASE OF LEADER SWITCHING
 
 # Update leader based on index
 func change_leader():
@@ -74,33 +106,6 @@ func get_leader_inkname():
 	return get_leader().inkname
 
 
-func get_character_objects():
-	return self.characterObjects
-
-
-func change_party_sprites(sheet):
-	for character in characterObjects:
-		# will be an array index when they are animated
-		character.set_sprite(sheet)
-
-
 func get_leader_index():
 	return leaderIndex
 
-
-# Change CornerPortrait in the ui
-func change_portrait(sprite):
-	#Globals.CornerPortrait.set_character(sprite, get_leader_inkname())
-	# Future: if we have a Real World Moment
-	# change this so that it updates the Name - Sprite mapping for each character portrait
-	pass
-
-
-func change_assets_world(currentPlane):
-	if currentPlane == Globals.Worlds.DREAM:
-		change_party_sprites(dream_character_sheet)
-		
-	else:
-		change_party_sprites(real_character_sheet)
-		
-	update_leader_to(leaderIndex)

@@ -17,34 +17,23 @@ var _can_interact = false
 var _party_is_inside = false
 
 
+
 func _ready():
 	pass
 
-# When leader enters self, player can interact
+
+# IN CASE OF LEADER SWITCHING
+# When a body enters self, check if player can interact
 func _on_InteractArea_body_entered(body):
 	if body == Globals.PartyObject.get_leader():
-		_set_can_interact_true()
-		#_check_if_can_interact()
+		_check_if_can_interact()
 
 
-# When leader exits self, player cannot interact
+# When a body exits self, check if player can interact
 func _on_InteractArea_body_exited(body):
 	if body == Globals.PartyObject.get_leader():
 		emit_signal("cannot_interact")
-		#_check_if_can_interact()
-
-## When a body enters self, check if player can interact
-#func _on_InteractArea_body_entered(body):
-#	if body == Globals.PartyObject.get_leader():
-#		_set_can_interact_true()
-#		#_check_if_can_interact()
-#
-#
-## When a body exits self, check if player can interact
-#func _on_InteractArea_body_exited(body):
-#	if body == Globals.PartyObject.get_leader():
-#		emit_signal("cannot_interact")
-#		#_check_if_can_interact()
+		_check_if_can_interact()
 
 
 # Events to trigger when the player can interact with the objects
@@ -54,6 +43,7 @@ func _set_can_interact_true():
 	print(Globals.PartyObject.get_leader().get_name() + " Can Interact: " + _get_object_name())
 	emit_signal("can_interact")
 
+# IN CASE OF LEADER SWITCHING
 # check if player can interact with object
 # communicate with updatecontroller
 func _check_if_can_interact():
@@ -67,6 +57,7 @@ func _check_if_can_interact():
 	emit_signal("cannot_interact")
 
 
+# IN CASE OF LEADER SWITCHING
 # Check if party leader is inside area
 # return true or false
 func _check_if_leader_in_area():
@@ -77,6 +68,7 @@ func _check_if_leader_in_area():
 	return false
 
 
+# IN CASE OF LEADER SWITCHING
 # Check if leader can interact with self
 # Return true or false
 func _check_correct_leader():

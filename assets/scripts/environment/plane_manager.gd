@@ -4,8 +4,10 @@ extends Node
 # applies appropriate recoloration gradient to the WorldEnvironment
 # Moves all room objects to the appropriate positions
 
-export (TileSet) var dreamset 
-export (TileSet) var realset
+
+export var _shifting_enabled = false
+export (TileSet) var dreamset = preload("res://assets/sprites/tilesets/set_proposal_dream.tres")
+export (TileSet) var realset = preload("res://assets/sprites/tilesets/set_proposal_real.tres")
 export var dream_gradient = preload("res://assets/shaders/gradient_dream.tres")
 export var real_gradient = preload("res://assets/shaders/gradient_real.tres")
 
@@ -20,7 +22,7 @@ func _ready():
 
 
 func _physics_process(_delta):
-	if Input.is_action_just_pressed("planeshift"):
+	if Input.is_action_just_pressed("planeshift") and _shifting_enabled:
 		shift_planes()
 
 
