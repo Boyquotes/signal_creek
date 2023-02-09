@@ -8,11 +8,12 @@ extends Node2D
 # Knows if it is present in both dream & real worlds
 
 #export(StreamTexture) var dreamsheet
-export(StreamTexture) var realsheet
 export var real_world_x_position: int
 export var real_world_y_position: int
 export var is_in_dream : bool = true
-export var is_in_real : bool = true
+export var is_in_real : bool = false
+
+var realsheet
 
 onready var dreamsheet = $Sprite.texture
 onready var dream_world_position = self.get_global_position()
@@ -22,6 +23,9 @@ onready var real_world_position
 
 func _ready():
 	if !realsheet:
+		realsheet = dreamsheet
+	else:
+		# TODO: make it take the dreamsheet resource path and change the word dream to real
 		realsheet = dreamsheet
 		
 	if !is_in_real:

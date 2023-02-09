@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_topicSpot_real.png-6141fab6cd9c47ad0d15849526c22565.stex"
+path="res://.import/tiles_topicspot_real.png-77ee22ddf5ec88233a5c57b08dc18f60.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilesets/tiles_topicSpot_real.png"
-dest_files=[ "res://.import/tiles_topicSpot_real.png-6141fab6cd9c47ad0d15849526c22565.stex" ]
+source_file="res://assets/sprites/tilesets/tiles_topicspot_real.png"
+dest_files=[ "res://.import/tiles_topicspot_real.png-77ee22ddf5ec88233a5c57b08dc18f60.stex" ]
 
 [params]
 
