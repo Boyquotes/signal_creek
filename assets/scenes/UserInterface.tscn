@@ -29,6 +29,7 @@ margin_bottom = 540.0
 scroll_increment = 0.01
 
 [node name="Portraits" parent="ReferenceRect" instance=ExtResource( 2 )]
+visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 960.0

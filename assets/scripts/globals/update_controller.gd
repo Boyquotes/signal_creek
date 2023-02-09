@@ -38,12 +38,12 @@ func _physics_process(_delta):
 	elif Globals.GameMode == Globals.GameModes.WALK:
 		check_input_character_movement()
 		
-		if Input.is_action_just_pressed("party_leader_switch"):
-			Globals.PartyObject.change_leader()
-			
-			if _closest_object:
-				if _closest_object.get_overlapping_bodies().size() > 0:
-					_closest_object.call_deferred("_check_if_can_interact")
+#		if Input.is_action_just_pressed("party_leader_switch"):
+#			Globals.PartyObject.change_leader()
+#
+#			if _closest_object:
+#				if _closest_object.get_overlapping_bodies().size() > 0:
+#					_closest_object.call_deferred("_check_if_can_interact")
 					
 		_camera_normal_position = Globals.PartyObject.get_leader().get_global_position()
 		Globals.GameCanvas.set_camera_following_vector(_camera_normal_position)
@@ -52,13 +52,6 @@ func _physics_process(_delta):
 			if Input.is_action_just_pressed("interact"):
 				if Globals.GameMode == Globals.GameModes.WALK:
 					Globals.GameMode = Globals.GameModes.TALK
-					#Globals.GameCanvas.set_camera_following_vector(Vector2(_camera_normal_position.x + camera_offset_dialogue, _camera_normal_position.y))
-					
-					# tell inkparser to go to a knot based on this object's name
-					
-					#METHOD IS OBSOLETE
-					#Globals.DialogueBox.open_at_knot(_closest_object._get_object_name() + _closest_object._get_visitedinworld_status())
-					
 					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
 					Globals.DialogueBox.background_panel_node.set_visible(true)
 

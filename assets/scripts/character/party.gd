@@ -21,7 +21,7 @@ var partyMembers = [
 ]
 
 # Keeps track of current leader
-var leaderIndex = 0 setget update_leader_to
+var leaderIndex = 1 setget update_leader_to
 
 onready var characterObjects = [
 	self.get_child(0),
@@ -90,7 +90,10 @@ func get_leader_index():
 
 # Change CornerPortrait in the ui
 func change_portrait(sprite):
-	Globals.CornerPortrait.set_character(sprite, get_leader_inkname())
+	#Globals.CornerPortrait.set_character(sprite, get_leader_inkname())
+	# Future: if we have a Real World Moment
+	# change this so that it updates the Name - Sprite mapping for each character portrait
+	pass
 
 
 func change_assets_world(currentPlane):
