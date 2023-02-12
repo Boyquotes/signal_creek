@@ -110,7 +110,7 @@ func proceed():
 		var currentLine = _ink_player.get_CurrentText()
 		
 		if currentLine.substr(0, 1) == "&":
-			RoomEngine.PlaneManager.shift_planes()
+			#RoomEngine.PlaneManager.shift_planes()
 			currentLine = currentLine.trim_prefix('&')
 			
 		check_entry_type(currentLine)
