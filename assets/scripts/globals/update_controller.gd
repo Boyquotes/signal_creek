@@ -1,5 +1,7 @@
 extends Node
 
+export var _leader_switching_enabled = false
+
 var _closest_object = null
 var _can_interact = false
 var _camera_normal_position = null
@@ -38,9 +40,11 @@ func _physics_process(_delta):
 	elif Globals.GameMode == Globals.GameModes.WALK:
 		check_input_character_movement()
 		
-		if Input.is_action_just_pressed("party_leader_switch"):
-			Globals.PartyObject.change_leader()
-			
+		# IN CASE OF LEADER SWITCHING
+		if _leader_switching_enabled:
+			if Input.is_action_just_pressed("party_leader_switch") and _leader_switching_enabled:
+				Globals.PartyObject.change_leader()
+#
 			if _closest_object:
 				if _closest_object.get_overlapping_bodies().size() > 0:
 					_closest_object.call_deferred("_check_if_can_interact")
@@ -52,13 +56,6 @@ func _physics_process(_delta):
 			if Input.is_action_just_pressed("interact"):
 				if Globals.GameMode == Globals.GameModes.WALK:
 					Globals.GameMode = Globals.GameModes.TALK
-					#Globals.GameCanvas.set_camera_following_vector(Vector2(_camera_normal_position.x + camera_offset_dialogue, _camera_normal_position.y))
-					
-					# tell inkparser to go to a knot based on this object's name
-					
-					#METHOD IS OBSOLETE
-					#Globals.DialogueBox.open_at_knot(_closest_object._get_object_name() + _closest_object._get_visitedinworld_status())
-					
 					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
 					Globals.DialogueBox.background_panel_node.set_visible(true)
 
@@ -82,11 +79,10 @@ func check_input_character_movement():
 
 func reset_game():
 	#set the default room's starting pos to the default starting pos
-	#make current party character nick
+	#make current party character Nour
 	#reset the ink
 	#room enter signal for default room
-	#RoomEngine.Rooms[RoomEngine.Rooms.defaultRoomIndex].set_party_starting_position(RoomEngine.defaultStartingPos)
-	Globals.PartyObject.update_leader_to(0)
+	Globals.PartyObject.update_leader_to(1)
 	Globals.CurrentWorld = Globals.Worlds.DREAM
 #	Globals.set_to_dream_world()
 	if RoomEngine.CurrentRoomIndex != RoomEngine.defaultRoomIndex:

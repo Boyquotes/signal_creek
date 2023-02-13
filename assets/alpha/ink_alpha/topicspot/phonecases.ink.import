@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/phonecases.ink-c1ecc158ade0e9d3c384b9b632d70345.res"
+
+[deps]
+
+source_file="res://assets/alpha/ink_alpha/topicspot/phonecases.ink"
+dest_files=[ "res://.import/phonecases.ink-c1ecc158ade0e9d3c384b9b632d70345.res" ]
+
+[params]
+
+is_master_file=false
+compress=false
