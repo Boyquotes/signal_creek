@@ -8,7 +8,7 @@ extends KinematicBody2D
 
 const walk_speed : float = 3500.0
 
-export var inkName = "Name"
+export var inkname = "Name"
 # don't keep walking towards another character if self is this close
 export var _pathfind_stop_approaching_dist : float = 22
 # If another character is in this space, back up
