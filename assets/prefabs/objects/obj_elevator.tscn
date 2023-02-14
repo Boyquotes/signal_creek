@@ -1,46 +1,48 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/objects/sheet_abstract_dream.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/objects/sheet_elevator.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 16, 11 )
+extents = Vector2( 48, 31.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 30, 23 )
+extents = Vector2( 13, 12.1875 )
 
-[node name="GenericObject" type="RigidBody2D" groups=["shiftable"]]
+[node name="Elevator" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
-realsheet = null
-is_in_real = true
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -29 )
+position = Vector2( 0, -70 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 1, 10, 34, 58 )
+region_rect = Rect2( 11, 7, 106, 143 )
 
 [node name="Hint" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-offset = Vector2( 0, -29 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -71.5 )
 region_enabled = true
-region_rect = Rect2( 1, 10, 34, 58 )
+region_rect = Rect2( 11, 7, 106, 143 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -11 )
+position = Vector2( 0, -31.5 )
 shape = SubResource( 23 )
+one_way_collision_margin = 0.0
 
 [node name="ActiveArea" type="Area2D" parent="."]
+visible = false
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
