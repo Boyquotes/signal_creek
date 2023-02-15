@@ -30,6 +30,8 @@ var Nick = null
 var Nour = null
 var Suwan = null
 
+var Elevator = null
+
 var InkStoryState = ""
 
 

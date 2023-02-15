@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_topicspot_dream.png-af8eb2ed5cb7ebdbf7bde56b4f2a84b5.stex"
+path="res://.import/glow_elevator.png-67c2a7f9223df465949bdfbbba9306f3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilesets/tiles_topicspot_dream.png"
-dest_files=[ "res://.import/tiles_topicspot_dream.png-af8eb2ed5cb7ebdbf7bde56b4f2a84b5.stex" ]
+source_file="res://assets/textures/lights/glow_elevator.png"
+dest_files=[ "res://.import/glow_elevator.png-67c2a7f9223df465949bdfbbba9306f3.stex" ]
 
 [params]
 
