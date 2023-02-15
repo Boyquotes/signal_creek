@@ -1,5 +1,6 @@
 extends Node
 
+export var _elevator_focus_position : Vector2 = Vector2(344, 168)
 export var _leader_switching_enabled = false
 
 var _closest_object = null
@@ -51,6 +52,9 @@ func _physics_process(_delta):
 					
 		_camera_normal_position = Globals.PartyObject.get_leader().get_global_position()
 		Globals.GameCanvas.set_camera_following_vector(_camera_normal_position)
+		
+		if Globals.Elevator && Globals.Elevator.focus_on_elevator == true:
+			Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
 			
 		if _can_interact:
 			if Input.is_action_just_pressed("interact"):
