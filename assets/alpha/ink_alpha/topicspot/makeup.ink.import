@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/makeup.ink-58b0f6e3f907a66a9d0fb5b7a91fada2.res"
+
+[deps]
+
+source_file="res://assets/alpha/ink_alpha/topicspot/makeup.ink"
+dest_files=[ "res://.import/makeup.ink-58b0f6e3f907a66a9d0fb5b7a91fada2.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

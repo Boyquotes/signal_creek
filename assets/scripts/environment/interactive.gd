@@ -9,21 +9,20 @@ extends Area2D
 signal can_interact
 signal cannot_interact
 
-export var _interactive_by_nick = false
-export var _interactive_by_nour = false 
-export var _interactive_by_suwan = false
+export var _interactive_by_nick = true
+export var _interactive_by_nour = true 
+export var _interactive_by_suwan = true
 
 var _can_interact = false
 var _party_is_inside = false
-#this will be inkside
-var _dream_visited = false
-var _real_visited = false
+
 
 
 func _ready():
 	pass
 
 
+# IN CASE OF LEADER SWITCHING
 # When a body enters self, check if player can interact
 func _on_InteractArea_body_entered(body):
 	if body == Globals.PartyObject.get_leader():
@@ -33,17 +32,24 @@ func _on_InteractArea_body_entered(body):
 # When a body exits self, check if player can interact
 func _on_InteractArea_body_exited(body):
 	if body == Globals.PartyObject.get_leader():
+		emit_signal("cannot_interact")
 		_check_if_can_interact()
 
 
+# Events to trigger when the player can interact with the objects
+func _set_can_interact_true():
+	Globals.UpdateController.set_can_interact(true)
+	Globals.UpdateController.set_closest_object(self)
+	print(Globals.PartyObject.get_leader().get_name() + " Can Interact: " + _get_object_name())
+	emit_signal("can_interact")
+
+# IN CASE OF LEADER SWITCHING
 # check if player can interact with object
 # communicate with updatecontroller
 func _check_if_can_interact():
-	if _check_if_leader_in_area() and _check_correct_leader():
-		Globals.UpdateController.set_can_interact(true)
-		Globals.UpdateController.set_closest_object(self)
-		print(Globals.PartyObject.get_leader().get_name() + " Can Interact: " + _get_object_name())
-		emit_signal("can_interact")
+#	if _check_if_leader_in_area() and _check_correct_leader():
+	if _check_if_leader_in_area():
+		_set_can_interact_true()
 		return
 	
 	Globals.UpdateController.set_can_interact(false)
@@ -51,6 +57,7 @@ func _check_if_can_interact():
 	emit_signal("cannot_interact")
 
 
+# IN CASE OF LEADER SWITCHING
 # Check if party leader is inside area
 # return true or false
 func _check_if_leader_in_area():
@@ -61,6 +68,7 @@ func _check_if_leader_in_area():
 	return false
 
 
+# IN CASE OF LEADER SWITCHING
 # Check if leader can interact with self
 # Return true or false
 func _check_correct_leader():
@@ -86,26 +94,3 @@ func _get_object_name():
 	
 	return rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_")
 
-
-# Gets the world the player is currently in
-# Gets whether we've visited this object in the other world
-# Returns appropriate combination of strings
-# TODO: Should this check be inkside instead?
-func _get_visitedinworld_status():
-	if Globals.CurrentWorld == Globals.Worlds.DREAM:
-		if _real_visited:
-			_dream_visited = true
-			return "_realvisited"
-			
-		else:
-			_dream_visited = true
-			return "_dream"
-			
-	else:
-		if _dream_visited:
-			_real_visited = true
-			return "_dreamvisited"
-			
-		else:
-			_real_visited = true
-			return "_real"
