@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/rina.ink-422b98604f763454d1d50fd948eefc6b.res"
+
+[deps]
+
+source_file="res://assets/alpha/ink_alpha/bandn/rina.ink"
+dest_files=[ "res://.import/rina.ink-422b98604f763454d1d50fd948eefc6b.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

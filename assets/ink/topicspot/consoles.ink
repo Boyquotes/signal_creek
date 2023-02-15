@@ -1,7 +1,22 @@
 //---------------- DREAM WORLD ----------------
 
 VAR playCount = 1
+== consoles ==
 
+    {
+        - currentWorld == "dream" && consoles_real:
+            -> consoles_realvisited
+            
+        - currentWorld == "dream":
+            -> consoles_dream
+            
+        - currentWorld == "real" && consoles_dream:
+            -> consoles_dreamvisited
+        
+        - else:
+            -> consoles_real
+    }
+    
 == consoles_dream ==
     
     ~ playCount = playCount + 1

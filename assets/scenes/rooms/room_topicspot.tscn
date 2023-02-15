@@ -1,21 +1,20 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://assets/sprites/tilesets/set_topicSpot_real.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
-[ext_resource path="res://assets/prefabs/topicspot/obj_manager.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_manager.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=5]
-[ext_resource path="res://assets/prefabs/topicspot/obj_phonecases.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/prefabs/topicspot/obj_pinbuttons.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/prefabs/topicspot/obj_makeup.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/prefabs/topicspot/obj_sailormoonposters.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/prefabs/topicspot/obj_consoles.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/prefabs/topicspot/obj_graphictees.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/prefabs/topicspot/obj_coolshirt.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/sprites/tilesets/set_topicSpot_dream.tres" type="TileSet" id=13]
-[ext_resource path="res://assets/prefabs/topicspot/obj_shelf.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/prefabs/topicspot/obj_chair.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/prefabs/topicspot/obj_shelfside.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_phonecases.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_pinbuttons.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_makeup.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_sailormoonposters.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_consoles.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_graphictees.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_coolshirt.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/sprites/tilesets/set_topicspot_dream.tres" type="TileSet" id=13]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_shelf.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_chair.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_shelfside.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -39,7 +38,6 @@ __meta__ = {
 [node name="PlaneManager" type="Node2D" parent="."]
 script = ExtResource( 3 )
 dreamset = ExtResource( 13 )
-realset = ExtResource( 1 )
 
 [node name="Ground" type="TileMap" parent="PlaneManager"]
 tile_set = ExtResource( 13 )
