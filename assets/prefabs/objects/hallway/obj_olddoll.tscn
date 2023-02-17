@@ -24,15 +24,16 @@ material = ExtResource( 3 )
 position = Vector2( 0, -8 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 58, 114, 25, 17 )
+region_rect = Rect2( 79, 159, 25, 17 )
 
 [node name="Hint" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+texture = ExtResource( 5 )
 offset = Vector2( 0, -8.5 )
 region_enabled = true
-region_rect = Rect2( 58, 114, 25, 17 )
+region_rect = Rect2( 79, 159, 25, 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, -8.5 )
