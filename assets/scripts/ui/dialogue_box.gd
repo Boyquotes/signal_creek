@@ -21,6 +21,7 @@ var _current_choice_index = 0
 var _current_choice_entry
 var _current_choice_entry_choices
 var is_displaying_choices
+var choice_chosen
 var current_speaker = "NICK"
 var is_typing = false
 var current_text_box
@@ -95,7 +96,9 @@ func toggle_choice_selections(changeValue):
 func select_current_choice():
 	_ink_player.ChooseChoiceIndex(_current_choice_index)
 	_current_choice_entry.queue_free() #remove the choicebox
+
 	is_displaying_choices = false
+	choice_chosen = true
 
 # proceeding to the next string that ink should return
 func proceed():
@@ -109,11 +112,25 @@ func proceed():
 		
 		var currentLine = _ink_player.get_CurrentText()
 		
+		if choice_chosen:
+			if !":" in currentLine and '"' in currentLine:
+				currentLine = "NOUR: " + currentLine
+			
+			choice_chosen = false
+		
 		if currentLine.substr(0, 1) == "&":
 			#RoomEngine.PlaneManager.shift_planes()
 			currentLine = currentLine.trim_prefix('&')
+		
+		#elif currentLine.substr(0,1) == '"':
 			
 		check_entry_type(currentLine)
+		
+	else: #default to nour if no nametag provided
+		is_displaying_choices = true
+		current_speaker = "NOUR:"
+		display_choices("NOUR:")
+		set_camera_position_to_speaker()
 		
 	#_scroll_node to bottom when new message appears (make this tween later)
 	yield(get_tree(), "idle_frame")
@@ -124,6 +141,7 @@ func proceed():
 # Entries are normal, dialogue, or choice
 # Call corresponding functionality for type of entry
 func check_entry_type(entryText):
+		
 	if entryText.substr(0, 1) == ":": #this is a name for the choice entry nametag; not an entry to put in
 		var chooserName = entryText.substr(1).strip_escapes()
 		_ink_player.Continue()
@@ -131,7 +149,7 @@ func check_entry_type(entryText):
 		current_speaker = chooserName
 		display_choices(chooserName)
 		set_camera_position_to_speaker()
-	
+		
 	elif ":" in entryText: #if line contains a name, parse name and dialogue after
 		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_normal)
 		current_speaker = entryText.split(":")[0]
@@ -147,7 +165,7 @@ func check_entry_type(entryText):
 	
 	else: #it's a normal text entry
 		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal)
-		
+		print("NORMAL TEXT")
 		#track the text label for typewriter effect
 		current_text_box = newText
 		#init typewriter effect
