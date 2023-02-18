@@ -1,7 +1,9 @@
 -> rina
 
+//Temporary variables, until we decide what knot these routes end on
 VAR last_knot_nick_visited = false
 VAR last_knot_suwan_visited = false
+
 == rina ==
     
     //if this isn't the first time talking to Rina, go straight to the choices
@@ -138,7 +140,7 @@ VAR last_knot_suwan_visited = false
             
                 RINA: "Well, sure I was quiet. But that doesn't mean I agreed with them."
                 
-                RINA: "I didn't tell them that *you're* gay!"
+                RINA: "I didn't tell them that <i>you're</i> gay!"
                 
                 -> saidnothing
             
@@ -175,15 +177,15 @@ VAR last_knot_suwan_visited = false
             
                 RINA: "If I told them I'm an ally, they would think I'm perverted."
                 
-                NOUR: "They would think *you're* perverted?"
+                NOUR: "They would think <i>you're</i> perverted?"
                 
                 -> howifeel
                 
             * "I wanted you to disagree with them[."], and argue that they're just brainwashed by conservatism."
             
-                RINA: "Yeah, but if I disagreed with them right there, they would be suspicious of *me*."
+                RINA: "Yeah, but if I disagreed with them right there, they would be suspicious of <i>me</i>."
                 
-                NOUR: "They would be suspicious of *you*?"
+                NOUR: "They would be suspicious of <i>you</i>?"
                 
                 -> howifeel
                 
@@ -205,7 +207,7 @@ VAR last_knot_suwan_visited = false
         
         RINA: "I told you, I didn't feel any different about you after you came out."
         
-        RINA: "*You* were the one who didn't want to hear it. I didn't even get a chance to make it up to you."
+        RINA: "<i>You</i> were the one who didn't want to hear it. I didn't even get a chance to make it up to you."
  
             * "It's too late. The damage is done.["] I knew if my best friend couldn't stand up for me, it would be a long time before anyone would."
             
@@ -254,14 +256,27 @@ VAR last_knot_suwan_visited = false
         
         * "You might as well have.["] Being complacent is the same thing as agreeing."
         
+            -> neutral
+        
         * "I know...["] You just stayed neutral. Not the best response, not the worst response."
+            
+            -> neutral
+            
+    = neutral
+    
+        RINA: "You're speaking up now, because you wish I did back then. Right?"
         
+        RINA: "But I'm not the person you really want to confront. You want our homophobic friends to know their place."
         
+        RINA: "I was just collateral. You closed yourself to any possiblity for me to support you."
+        
+            -> neverknow
     
     = neverknow
     
+        RINA: "Nour, <i>neither</i> of us had the guts to say anything back then. You'll never know what would have happened if I spoke up."
     
-    -> END
+            -> END
 
 //---------------- HALLWAY ----------------
 //At the end of Ms. Suwan's route, Ms. Suwan is able to apologize for her past behavior and let go.
@@ -334,7 +349,7 @@ VAR last_knot_suwan_visited = false
         
     = neverknow
     
-        RINA: "You missed your chance to forgive me, Nour."
+        RINA: "You missed your chance to forgive me, Nour. You'll never know what would have happened if you forgave me."
 
             -> END
 
@@ -343,6 +358,11 @@ VAR last_knot_suwan_visited = false
 
 == rina_elevator ==
 
+    * "I'm still upset, because...["] You were the only one who understood me."
+    
+    Even though this may not really be Rina, there's now a glimmer of genuine compassion in her eyes.
+    
+    * "My family didn't make me feel comfortable.["] They'd make backhanded comments about 
     //If this knot is already visited, display a TLDR here and end scene.
     //CHOICE: Nour explains why this hurt them so much.
     
@@ -364,7 +384,7 @@ VAR last_knot_suwan_visited = false
     
     NOUR: "Friends are supposed to help each other. You weren't helping me that day, but..."
     
-    RINA: "Seems like you're helping your new companions... would you consider them to be your friends?"
+    RINA: "Seems like you're helping your new companions. Would you consider them to be your friends?"
     
     -> END
 
