@@ -36,15 +36,11 @@ VAR last_knot_suwan_visited = false
                     -> rina_help
             }
             
-            //OTHERWISE:
-            
             Rina glances down at Nick, and up to Ms. Suwan.
             
             She returns her attention to Nour.
             
             RINA: "I think you should focus on helping the people you're with. Based on what they're saying, it seems like <i>they</i> need you right now."
-            
-                -> rina_reset
         
 
         + ["Why would I want to keep being friends with someone who is too much of a coward to stand up for me?"]
@@ -55,13 +51,9 @@ VAR last_knot_suwan_visited = false
                     -> rina_topicspot
             }
             
-            //OTHERWISE:
-            
             NOUR: "I don't feel confident enough to confront you yet..."
             
             NICK: "I kinda get it. Why even try if you know it'll backfire?"
-            
-                -> rina_reset
         
 
         + ["Whatever. You know what, I'm not mad anymore. It's fine. I don't know why I was so upset."]
@@ -72,13 +64,10 @@ VAR last_knot_suwan_visited = false
                     -> rina_hallway
             }
             
-            //OTHERWISE:
-            
             NOUR: "I'm still too angry at you to let go..."
             
             MS SUWAN: "Makes sense. You know you were right back then, why would you want to look back?"
             
-                -> rina_reset
             
         + We're done talking for now.
             
@@ -92,12 +81,10 @@ VAR last_knot_suwan_visited = false
                     -> rina_elevator
             }
     
-    //"resetting" rina, as if she forgot the choice nour just made.
-    = rina_reset
-    
-        Rina's eyes glaze over briefly. She returns to her familiar demeanor.
+        //"resetting" rina, as if she forgot the choice nour just made.
+    -   Rina's eyes glaze over briefly. She returns to her familiar demeanor.
             
-            -> rina_branches
+        -> rina_branches
 
 //---------------- BEGINNING ----------------
 //first encounter, starts Nour's arc; in bandn
@@ -116,17 +103,11 @@ VAR last_knot_suwan_visited = false
             
             RINA: "Hello to you, too, Yousra."
             
-            -> newname
-        
         * "I guess this is what I get for coming back to <i>our</i> mall.["] I was really hoping I wouldn't run into you.
     
             RINA: "Hey, Yousra! Nice to see you after all these years. You know, I'm allowed to exist at this mall. You don't own it."
             
-            -> newname
-            
-    = newname
-
-        * "Yousra?["] Nobody calls me that anymore. I go by Nour now.
+    -   * "Yousra?["] Nobody calls me that anymore. I go by Nour now.
         
             RINA: Oh, okay.
             
@@ -136,90 +117,60 @@ VAR last_knot_suwan_visited = false
             
             RINA: What am I forgetting?
             
-            ** "You were quiet, while the others kept going on about how being gay is immoral."
-            
-                RINA: "Well, sure I was quiet. But that doesn't mean I agreed with them."
+                ** "You were quiet, while the others kept going on about how being gay is immoral."
                 
-                RINA: "I didn't tell them that <i>you're</i> gay!"
+                    RINA: "Well, sure I was quiet. But that doesn't mean I agreed with them."
+                    
+                    RINA: "I didn't tell them that <i>you're</i> gay!"
+                    
+                ** "I had just come out to you, only a few days prior."
                 
-                -> saidnothing
-            
-            ** "I had just come out to you, only a few days prior."
-            
-                RINA: "Yeah, you did just come out to me. But I didn't tell anyone!"
+                    RINA: "Yeah, you did just come out to me. But I didn't tell anyone!"
                 
-                -> saidnothing
-
-    = saidnothing
-    
-        RINA: "I didn't tell your secret to anyone. Isn't that what you wanted?"
+    -   RINA: "I didn't tell your secret to anyone. Isn't that what you wanted?"
         
         * "Thanks for that...["] but that's not the point. Like I said back then, I'm mad that you didn't even try to disagree with the rest of our friends."
         
-            -> dideverything
+        * "I know you didn't.["] Like I said back then, I appreciate you keeping it private. I <i>don't</i> appreciate that you didn't even try to disagree with the rest of our friends.
         
-        * "I know you didn't.["] Like I said back then, I appreciate you keeping it private. I *don't* appreciate that you didn't even try to disagree with the rest of our friends.
-        
-            -> dideverything
-        
-        
-    = dideverything
-        
-            ** "They said everything in the book...["] Like how they all thought people should keep their perversions to themselves. That legalizing gay marriage would destroy family values."
+    -   * "They said everything in the book...["] Like how they all thought people should keep their perversions to themselves. That legalizing gay marriage would destroy family values."
                 
-                RINA: "What did you want <i>me</i> to do about it? Make them suddenly open-minded?"
+            RINA: "What did you want <i>me</i> to do about it? Make them suddenly open-minded?"
+                        
+                ** "I wanted you to be an ally[."], to say that you support queer people, and that you weren't going to take part in that conversation anymore."
                 
-                    -> doaboutit
+                    RINA: "If I told them I'm an ally, they would think I'm perverted."
                     
-    = doaboutit
-
-            * "I wanted you to be an ally[."], to say that you support queer people, and that you weren't going to take part in that conversation anymore."
+                    NOUR: "They would think <i>you're</i> perverted?"
+                    
+                    
+                ** "I wanted you to disagree with them[."], and argue that they're just brainwashed by conservatism."
+                
+                    RINA: "Yeah, but if I disagreed with them right there, they would be suspicious of <i>me</i>."
+                    
+                    NOUR: "They would be suspicious of <i>you</i>?"
+                
+                
+    -   * "Well, imagine how I feel.["] I'm the one whose rights were actually being debated."
             
-                RINA: "If I told them I'm an ally, they would think I'm perverted."
-                
-                NOUR: "They would think <i>you're</i> perverted?"
-                
-                -> howifeel
-                
-            * "I wanted you to disagree with them[."], and argue that they're just brainwashed by conservatism."
+        * "You can still choose to be 'normal' at the end of the day.["] I can't change how I am."
             
-                RINA: "Yeah, but if I disagreed with them right there, they would be suspicious of <i>me</i>."
-                
-                NOUR: "They would be suspicious of <i>you</i>?"
-                
-                -> howifeel
-                
-    = howifeel
-    
-            * "Well, imagine how I feel.["] I'm the one whose rights were actually being debated."
-            
-                -> iknowthat
-            
-            * "You can still choose to be 'normal' at the end of the day.["] I can't change how I am."
-            
-                -> iknowthat
         
-    = iknowthat
-    
-        RINA: "I know that. But I <i>said</i> that I'm sorry. You know I wouldn't throw away ten years of friendship."
+    -   RINA: "I know that. But I <i>said</i> that I'm sorry. You know I wouldn't throw away ten years of friendship."
         
         Tears begin to form in Rina's eyes.
         
-        RINA: "I told you, I didn't feel any different about you after you came out."
+        RINA: "I told you, I didn't feel any different about you after you came out... It's not like you could help it."
         
         RINA: "<i>You</i> were the one who didn't want to hear it. I didn't even get a chance to make it up to you."
  
             * "It's too late. The damage is done.["] I knew if my best friend couldn't stand up for me, it would be a long time before anyone would."
             
-                -> rina_branches
-            
             * "How was I supposed to know you were telling the truth?["] My parents told me nothing would change how they feel about me, too. I knew that being gay would prove that wrong."
             
-                -> rina_branches
-            
             * "You still don't get it, do you?["] You can't just pick and choose when to be a good friend."
-            
-                -> rina_branches
+                
+    - -> rina_branches
 
 
 //---------------- TOPICSPOT ----------------
@@ -238,37 +189,25 @@ VAR last_knot_suwan_visited = false
     
     RINA: "Listen, you can call me a coward. It's fine. But don't you get where I'm coming from?"
     
-    * "You're not the victim here.["] You just watched from the sidelines and enabled our 'friends' to say all of that stuff about people like me."
-    
-        RINA: "I know I'm not the victim, but you have to admit... They would have hated <i>both</i> of us if I said something."
+        * "You're not the victim here.["] You just watched from the sidelines and enabled our 'friends' to say all of that stuff about people like me."
         
-            -> notbadguy
-    
-    * "I get that you don't have principles.["] You don't believe in anything enough to fight for it."
-    
-        RINA: "I <i>do</i> believe that queer people deserve respect. But I had to play it smart, I knew they would hate <i>both</i> of us if I said something."
+            RINA: "I know I'm not the victim, but you have to admit... They would have hated <i>both</i> of us if I said something."
         
-            -> notbadguy
+        * "I get that you don't have principles.["] You don't believe in anything enough to fight for it."
+    
+            RINA: "I <i>do</i> believe that queer people deserve respect. But I had to play it smart, I knew they would hate <i>both</i> of us if I said something."
+        
+    -   RINA: "You know, I'm not the bad guy here. I'm not the one who said what they said."
+        
+            * "You might as well have.["] Being complacent is the same thing as agreeing."
             
-    = notbadguy
-    
-        RINA: "You know, I'm not the bad guy here. I'm not the one who said what they said."
-        
-        * "You might as well have.["] Being complacent is the same thing as agreeing."
-        
-            -> neutral
-        
-        * "I know...["] You just stayed neutral. Not the best response, not the worst response."
+            * "I know...["] You just stayed neutral. Not the best response, not the worst response."
             
-            -> neutral
-            
-    = neutral
-    
-        RINA: "You're speaking up now, because you wish I did back then. Right?"
+    -   RINA: "You're speaking up now, because you wish I did back then. Right?"
         
         RINA: "But I'm not the person you really want to confront. You want our homophobic friends to know their place."
         
-        RINA: "I was just collateral. You closed yourself to any possiblity for me to support you."
+        RINA: "I was just collateral, and you closed yourself to any possiblity for me to support you."
         
             -> neverknow
     
@@ -294,7 +233,6 @@ VAR last_knot_suwan_visited = false
     
     Nour sighs.
     
-    
     RINA: "Really? Because a moment ago, you were huffing about how much I hurt you, and how it's hard for you to trust anyone now."
     
         * "Nope, forget it.["] I'm moving on now."
@@ -303,11 +241,11 @@ VAR last_knot_suwan_visited = false
             
             ** "Well, yeah.["] Clearly, you're not going to admit that you were wrong.
             
-                -> admitwrong
-                
+            -> admitwrong
+            
             ** "I was hurt, so I needed time.["] Time heals all wounds, or something..."
             
-                ->hurtme
+            -> hurtme
         
         * "Sometimes, people who care about you will hurt you.["] It's just a part of life, I've accepted that now."
         
@@ -315,11 +253,11 @@ VAR last_knot_suwan_visited = false
             
             ** "I guess I am.["] I should always expect those I love to hurt me.
             
-                -> hurtme
+            -> hurtme
             
             ** "So you admit that you hurt me?["] You admit that you were wrong?"
             
-                -> admitwrong
+            -> admitwrong
     
     = admitwrong
     
@@ -358,22 +296,79 @@ VAR last_knot_suwan_visited = false
 
 == rina_elevator ==
 
-    * "I'm still upset, because...["] You were the only one who understood me."
+
+    //umm assuming that she's blocking the elevator, which is now working...
+    //that should probably be mentioned here but im tired of this rn so do it later
     
-    Even though this may not really be Rina, there's now a glimmer of genuine compassion in her eyes.
+    //Ms suwan can look back at the past now
+    MS SUWAN: "Nour, think back to when you were friends with Rina. Who was she to you?"
     
-    * "My family didn't make me feel comfortable.["] They'd make backhanded comments about 
-    //If this knot is already visited, display a TLDR here and end scene.
-    //CHOICE: Nour explains why this hurt them so much.
+    * "Rina, you were[..."] the only person who understood me."
     
-    //RINA: "You blocked me, ignored me, iced me out. It was like you didn't really know me, and you expected me to be like them."
-    //what really happened: Nour got extremely vulnerable. They cried b/c they thought that they'd have at least one person to stand up for them, when it felt like their family was against them.
-    //Rina got defensive-- first, she argued that she was right, and that she would have been bullied if she stood up for Nour. Then, she asked nour to just move on, and forget that it happened.
-    //Nour sees how Nick and Ms. Suwan were able to grow past those problems. Nour knows they've been struggling through the same problems. 
-    //They are able to let go, and understand that people change over time. They've grown past that experience, and it's up to Rina to do the same.
-    //Rina shlorps out of existence.
+        Even though this may not really be Rina, there's now a glimmer of genuine compassion in her eyes.
+        
+        MS SUWAN: "Nour, you helped me tell my friends from college what I wish I could have told them sooner."
     
-    -> END
+        MS SUWAN: "You've already told Rina what you wish you could've said, and it isn't working for you."
+        
+        MS SUWAN: "What <i>really</i> happened?"
+        
+        NOUR: "I remember what I told you, when I first came out..."
+        
+            ** "My family didn't help me feel comfortable.["] They'd make backhanded comments about how homosexuality is haram, and a terrible 'choice' to make."
+            
+                NOUR: "Our friends showed how they felt in that cafeteria discussion. But I knew you would never say those things to me, and I always felt comfortable around you."
+            
+            ** "I needed to feel like I wasn't alone.["] I couldn't share how I felt with my family, because they'd warn me that acting on it is haram."
+            
+                NOUR: "I couldn't tell any other friends either, point proven by that cafeteria discussion. So I went to you, because you were always there for me, and made sure I was never alone."
+    
+    -   NOUR: "And when I felt like <i>you</i> weren't looking out for me, I had nobody to go to."
+        
+        //nick isn't as afraid of being a disappointment anymore
+        NICK: "Why'd you <i>really</i> stop talking to Rina? Is it actually about her saying nothing?"
+        
+            * "I'm scared of people turning on me.["] If I left you first, you wouldn't even have a chance to make me feel bad."
+            
+            * "I couldn't bring you down with me.["] I guess I felt like you were better off not being associated with me. It seemed like you would have been happier that way."
+            
+    -   NOUR: "When I say it out loud, it feels silly. I'm still mad at you, but I don't think I want to be."
+        
+        NICK: "You know, I do the stuff I do... I guess because I'm frustrated at the world."
+        
+        NICK: "But I'm actually mad at myself, 'cause I can't be how people want me to be."
+    
+        NICK: "So like, you know..."
+        
+            * "I can't change Rina.["] I'm mad that she didn't say anything, but I'm also mad that <i>I</i> didn't say anything."
+            
+            * "I can't take back my own choices.["] I already made them. I'm <i>really</i> mad at myself for doing what I did, maybe even more than I was mad at Rina."
+            
+        - NOUR: "And it all came back to me feeling like running away was a better choice."
+        
+        NOUR: "I can't change what Rina did. I can't change what <i>I</i> did. It's in the past. It's up to both of us to move forward."
+        
+        NICK: "Well, we're here now. Whether you like it or not. Mostly 'cause we're just stuck here together."
+        
+        MS SUWAN: "Correct, because Rina here is blocking the way."
+        
+        NICK: "Oh, yeah, move it!"
+        
+        RINA: "Nour, are you ready to move on?"
+        
+        *   "With or without you, I'm ready to move on."
+        
+        RINA: "Without. I'm not real, you know..." //maybe it's too silly idk
+        
+        NOUR: "You're in the past now."
+        
+        //rina shlorps out of existence
+        
+        NICK: "NICE! Button smashing time!"
+        
+        MS SUWAN: "Please don't break the elevator again."
+        
+        -> END
 
 
 //---------------- HELP ----------------

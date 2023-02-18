@@ -29,6 +29,9 @@ INCLUDE topicspot/phonecases.ink
 INCLUDE topicspot/pinbuttons.ink
 INCLUDE topicspot/sailormoonposters.ink
 
+INCLUDE bandn/bookshelf.ink
+
+
 == abstract ==
 
 Hello. This is an Abstract Object. Thank you for coming.
