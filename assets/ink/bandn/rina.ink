@@ -227,8 +227,38 @@ VAR last_knot_suwan_visited = false
 == rina_topicspot ==
     
     //If this knot is already visited, display a TLDR here and end scene.
+    {
+        - rina_topicspot:
+            -> neverknow
+    }
     
-    NOUR: "
+    NOUR: "Why would I want to keep being friends with someone who is too much of a coward to stand up for me?"
+    
+    RINA: "Listen, you can call me a coward. It's fine. But don't you get where I'm coming from?"
+    
+    * "You're not the victim here.["] You just watched from the sidelines and enabled our 'friends' to say all of that stuff about people like me."
+    
+        RINA: "I know I'm not the victim, but you have to admit... They would have hated <i>both</i> of us if I said something."
+        
+            -> notbadguy
+    
+    * "I get that you don't have principles.["] You don't believe in anything enough to fight for it."
+    
+        RINA: "I <i>do</i> believe that queer people deserve respect. But I had to play it smart, I knew they would hate <i>both</i> of us if I said something."
+        
+            -> notbadguy
+            
+    = notbadguy
+    
+        RINA: "You know, I'm not the bad guy here. I'm not the one who said what they said."
+        
+        * "You might as well have.["] Being complacent is the same thing as agreeing."
+        
+        * "I know...["] You just stayed neutral. Not the best response, not the worst response."
+        
+        
+    
+    = neverknow
     
     
     -> END
@@ -240,6 +270,12 @@ VAR last_knot_suwan_visited = false
 == rina_hallway ==
     
     //If this knot is already visited, display a TLDR here and end scene.
+    {
+        - rina_hallway:
+            -> neverknow
+    }
+    
+    NOUR: "Whatever. You know what, I'm not mad anymore. It's fine. I don't know why I was so upset."
     
     Nour sighs.
     
@@ -250,14 +286,57 @@ VAR last_knot_suwan_visited = false
         
             RINA: "You're gonna move on, just like that. After ignoring me for three years?"
             
+            ** "Well, yeah.["] Clearly, you're not going to admit that you were wrong.
+            
+                -> admitwrong
                 
+            ** "I was hurt, so I needed time.["] Time heals all wounds, or something..."
+            
+                ->hurtme
         
         * "Sometimes, people who care about you will hurt you.["] It's just a part of life, I've accepted that now."
         
             RINA: "I see. So you're <i>really</i> okay with expecting me to hurt you again?"
+            
+            ** "I guess I am.["] I should always expect those I love to hurt me.
+            
+                -> hurtme
+            
+            ** "So you admit that you hurt me?["] You admit that you were wrong?"
+            
+                -> admitwrong
     
-    //CHOICE HERE
-    -> END
+    = admitwrong
+    
+        RINA: "That's all you want? For me to admit that I was wrong?"
+        
+        RINA: "Fine, I was wrong. I admit it. And I wish I didn't hurt you"
+        
+        -> toolate
+        
+    = hurtme
+        
+        RINA: "I know I hurt you... I'll admit, I was wrong, and I can't take back what I did."
+        
+        -> toolate
+        
+    = toolate
+    
+        RINA: "It's too late for that, though. You closed the door on me, right?"
+        
+        RINA: "I didn't <i>actually</i> get the chance to say any of this."
+        
+        RINA: "It's too late for this resolution."
+        
+        //NOTE It would be nice to incorporate consoling from Ms. Suwan here
+        
+        -> neverknow
+        
+    = neverknow
+    
+        RINA: "You missed your chance to forgive me, Nour."
+
+            -> END
 
 //---------------- ELEVATOR ----------------
 //she's blocking the elevator; end of nour's route
