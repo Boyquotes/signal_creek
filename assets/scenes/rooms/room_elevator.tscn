@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=1]
+[ext_resource path="res://assets/prefabs/location_trigger.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/tilesets/tileset_abstract_dream.tres" type="TileSet" id=4]
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=5]
@@ -78,5 +79,9 @@ tile_data = PoolIntArray( 65543, 0, 327680, 65544, 0, 327684, 65545, 0, 196612, 
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="LocationTrigger" parent="PlaneManager" instance=ExtResource( 2 )]
+position = Vector2( 160, 120 )
+_knot_name = "intro"
 
 [connection signal="body_entered" from="Doortal" to="Doortal" method="_on_Doortal_body_entered"]

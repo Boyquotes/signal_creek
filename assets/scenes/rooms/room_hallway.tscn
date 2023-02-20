@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_hallway_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://assets/shaders/shader_outline.gdshader" type="Shader" id=21]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_chadbrodykristy.tscn" type="PackedScene" id=22]
 [ext_resource path="res://assets/prefabs/objects/obj_elevator.tscn" type="PackedScene" id=23]
+[ext_resource path="res://assets/scripts/environment/location_trigger.gd" type="Script" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4, 40 )
@@ -37,6 +38,9 @@ shader_param/color = Color( 1, 1, 1, 1 )
 shader_param/width = 1.0
 shader_param/pattern = 0
 shader_param/inside = false
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 48, 18.5 )
 
 [node name="Room" type="Node2D"]
 script = ExtResource( 2 )
@@ -279,6 +283,18 @@ position = Vector2( 216, 136 )
 [node name="OldDoll" parent="PlaneManager/Overworld" instance=ExtResource( 5 )]
 position = Vector2( 261, 203 )
 
+[node name="LocationTrigger" type="Area2D" parent="."]
+position = Vector2( 343, 218 )
+script = ExtResource( 24 )
+__meta__ = {
+"_editor_description_": ""
+}
+_knot_name = "intropt2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LocationTrigger"]
+shape = SubResource( 22 )
+
 [connection signal="body_entered" from="PlaneManager/Doortal_BandN" to="PlaneManager/Doortal_BandN" method="_on_Doortal_body_entered"]
 [connection signal="body_entered" from="PlaneManager/Doortal_TopicSpot" to="PlaneManager/Doortal_TopicSpot" method="_on_Doortal_body_entered"]
 [connection signal="body_entered" from="PlaneManager/Doortal_Elevator" to="PlaneManager/Doortal_Elevator" method="_on_Doortal_body_entered"]
+[connection signal="body_entered" from="LocationTrigger" to="LocationTrigger" method="_on_LocationTrigger_body_entered"]
