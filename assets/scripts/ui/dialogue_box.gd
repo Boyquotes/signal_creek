@@ -123,6 +123,9 @@ func proceed():
 			currentLine = currentLine.trim_prefix('&')
 		
 		#elif currentLine.substr(0,1) == '"':
+		
+		currentLine = currentLine.replacen('<', '[')
+		currentLine = currentLine.replacen('>', ']')
 			
 		check_entry_type(currentLine)
 		

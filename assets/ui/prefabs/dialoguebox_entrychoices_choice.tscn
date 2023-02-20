@@ -2,7 +2,6 @@
 
 [ext_resource path="res://assets/scripts/ui/dialoguebox_entrychoices_choice.gd" type="Script" id=1]
 
-
 [node name="Choice" type="RichTextLabel"]
 margin_right = 248.0
 margin_bottom = 15.0

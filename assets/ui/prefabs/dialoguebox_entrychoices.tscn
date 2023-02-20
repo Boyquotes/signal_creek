@@ -4,7 +4,6 @@
 [ext_resource path="res://assets/scripts/ui/dialoguebox_entry.gd" type="Script" id=2]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=3]
 
-
 [node name="ChoiceEntry" type="MarginContainer"]
 margin_right = 276.0
 margin_bottom = 56.0
