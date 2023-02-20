@@ -202,9 +202,7 @@ MS SUWAN: "Well...I used to. But not anymore. Not for a long time..."
 
 <i>She might not be ready to face her ex-friends, but maybe I could ease her into opening up to the idea. If I reconnect her to a hobby, that will make her realize she can change her ways.</i>
 
-<i>But this woman has no hobbies, and she doesn't look ready to pick up her old one quite yet.</i>
-
-<i>If I could find something new and fun for her to do that me or Nick could teach her, that could do just the trick.</i>
+<i>If I could find something related to what she used to love, that could do just the trick.</i>
 
 -> END
 
