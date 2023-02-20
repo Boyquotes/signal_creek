@@ -1,5 +1,3 @@
--> rina
-
 //Temporary variables, until we decide what knot these routes end on
 VAR last_knot_nick_visited = false
 VAR last_knot_suwan_visited = false
