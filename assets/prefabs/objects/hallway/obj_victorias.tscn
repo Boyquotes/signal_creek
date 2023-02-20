@@ -6,10 +6,10 @@
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 92.5, 32.5 )
+extents = Vector2( 72, 32.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 95, 49.5 )
+extents = Vector2( 75, 36 )
 
 [node name="Victorias" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -24,18 +24,19 @@ material = ExtResource( 3 )
 position = Vector2( 0, -33 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 240, 15, 176, 66 )
+region_rect = Rect2( 303, 15, 146, 66 )
 
 [node name="Hint" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+texture = ExtResource( 5 )
 offset = Vector2( 0, -33 )
 region_enabled = true
-region_rect = Rect2( 240, 15, 176, 66 )
+region_rect = Rect2( 303, 15, 146, 66 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -32.5 )
+position = Vector2( 0, -32.5 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -45,7 +46,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -21.5 )
+position = Vector2( 0, -16 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

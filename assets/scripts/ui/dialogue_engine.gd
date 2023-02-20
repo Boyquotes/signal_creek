@@ -11,7 +11,7 @@ func _ready():
 # return newly created entryAsset
 func create_entry(newText, entryAsset):
 	var newEntry = entryAsset.instance()
-	newEntry.text = newText.strip_escapes()
+	newEntry.bbcode_text = newText.strip_escapes()
 
 	return newEntry
 
@@ -29,7 +29,7 @@ func create_entry_dialogue(newText, entryAsset, entryParagraph):
 	newEntry.remove_placeholders()
 	
 	var newParagraph = entryParagraph.instance()
-	newParagraph.text = newDialogue
+	newParagraph.bbcode_text = newDialogue
 	newEntry.set_dialogue(newParagraph)
 
 	return newEntry

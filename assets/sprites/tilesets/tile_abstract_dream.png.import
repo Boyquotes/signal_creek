@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_bandn_dream.png-f55fb7b45bc524011e939661d91121bf.stex"
+path="res://.import/tile_abstract_dream.png-fd15bf35f2dc91e94c338387f03fdea6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilesets/tiles_bandn_dream.png"
-dest_files=[ "res://.import/tiles_bandn_dream.png-f55fb7b45bc524011e939661d91121bf.stex" ]
+source_file="res://assets/sprites/tilesets/tile_abstract_dream.png"
+dest_files=[ "res://.import/tile_abstract_dream.png-fd15bf35f2dc91e94c338387f03fdea6.stex" ]
 
 [params]
 

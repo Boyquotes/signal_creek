@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_abstract_dream.png-24e55427adcb3aeebfc339dcf38fc6cb.stex"
+path="res://.import/sheet_elevator_normals.png-a983ba62d148ea2a5188c0094686c76d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilesets/tiles_abstract_dream.png"
-dest_files=[ "res://.import/tiles_abstract_dream.png-24e55427adcb3aeebfc339dcf38fc6cb.stex" ]
+source_file="res://assets/sprites/objects/sheet_elevator_normals.png"
+dest_files=[ "res://.import/sheet_elevator_normals.png-a983ba62d148ea2a5188c0094686c76d.stex" ]
 
 [params]
 
