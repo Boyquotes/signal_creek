@@ -6,8 +6,8 @@ extends Node
 
 
 export var _shifting_enabled = false
-export (TileSet) var dreamset = preload("res://assets/sprites/tilesets/set_abstract_dream.tres")
-export (TileSet) var realset = preload("res://assets/sprites/tilesets/set_abstract_dream.tres")
+export (TileSet) var dreamset = preload("res://assets/sprites/tilesets/tileset_abstract_dream.tres")
+export (TileSet) var realset
 export var dream_gradient = preload("res://assets/shaders/gradient_dream.tres")
 export var real_gradient = preload("res://assets/shaders/gradient_real.tres")
 
@@ -17,6 +17,10 @@ onready var _room_objects = []
 
 
 func _ready():
+	dreamset = $Ground.get_tileset()
+	if !realset:
+		realset = dreamset
+		
 	for node in get_tree().get_nodes_in_group("shiftable"):
 		_room_objects.push_back(node)
 

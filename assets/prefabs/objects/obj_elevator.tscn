@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/prefabs/objects/ElevatorArea.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_elevatorlights.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_elevator.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/objects/sheet_elevator_normals.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 48, 31.5 )
@@ -24,6 +25,7 @@ light_mask = 4
 material = ExtResource( 3 )
 position = Vector2( 0, -70 )
 texture = ExtResource( 5 )
+normal_map = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( 11, 7, 106, 143 )
 

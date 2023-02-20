@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/scripts/globals/camera_manager.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/tilesets/set_abstract_dream.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/sprites/tilesets/tileset_abstract_dream.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=5]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=6]

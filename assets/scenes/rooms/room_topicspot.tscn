@@ -1,5 +1,6 @@
 [gd_scene load_steps=18 format=2]
 
+[ext_resource path="res://assets/sprites/tilesets/tileset_topicspot_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_manager.tscn" type="PackedScene" id=4]
@@ -11,7 +12,6 @@
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_consoles.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_graphictees.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_coolshirt.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/sprites/tilesets/set_topicspot_dream.tres" type="TileSet" id=13]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_shelf.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_chair.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_shelfside.tscn" type="PackedScene" id=16]
@@ -37,10 +37,9 @@ __meta__ = {
 
 [node name="PlaneManager" type="Node2D" parent="."]
 script = ExtResource( 3 )
-dreamset = ExtResource( 13 )
 
 [node name="Ground" type="TileMap" parent="PlaneManager"]
-tile_set = ExtResource( 13 )
+tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
@@ -86,7 +85,7 @@ __meta__ = {
 }
 
 [node name="Walls" type="TileMap" parent="PlaneManager/Overworld"]
-tile_set = ExtResource( 13 )
+tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_tile_origin = 2
 cell_y_sort = true
