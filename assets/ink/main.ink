@@ -9,6 +9,7 @@ INCLUDE bandn/oldnovel.ink
 INCLUDE bandn/pens.ink
 INCLUDE bandn/polaroid.ink
 INCLUDE bandn/priceofsalt.ink
+INCLUDE bandn/bookshelf.ink
 
 INCLUDE hallway/bobatea.ink
 INCLUDE hallway/cafetables.ink
@@ -29,7 +30,7 @@ INCLUDE topicspot/phonecases.ink
 INCLUDE topicspot/pinbuttons.ink
 INCLUDE topicspot/sailormoonposters.ink
 
-INCLUDE bandn/bookshelf.ink
+INCLUDE betaintro.ink
 
 
 == abstract ==
@@ -38,14 +39,3 @@ INCLUDE bandn/bookshelf.ink
 
     -> END
     
-== intro ==
-
-    Hello. This is where the intro will go. Thank you for coming.
-
-    -> END
-    
-== intropt2 ==
-
-    This is where the second part of the intro will go. Thank you for coming.
-    
-    -> END

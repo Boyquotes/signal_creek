@@ -8,7 +8,7 @@ extends Control
 # Entry Prefab Types
 export var camera_offset_dialogue = 50.0
 export var typewriter_speed : int = 1
-export var scroll_increment : float = 0.05
+export var scroll_increment : float = 0.75
 export var panel_opening_speed : float = 0.25
 export var _entry_prefab_normal = preload("res://assets/ui/prefabs/dialoguebox_entrynormal.tscn")
 export var _entry_prefab_dialogue = preload("res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn")
@@ -118,11 +118,22 @@ func proceed():
 			
 			choice_chosen = false
 		
-		if currentLine.substr(0, 1) == "&":
+		if currentLine.substr(0, 1) == "&": #screen shaking
+			#Globals.GameOverlay.start_shaking(true)
 			#RoomEngine.PlaneManager.shift_planes()
-			currentLine = currentLine.trim_prefix('&')
-		
-		#elif currentLine.substr(0,1) == '"':
+			if currentLine.substr(0, 6) == "&SHAKE":
+				Globals.GameOverlay.start_shaking(false)
+				currentLine = currentLine.trim_prefix('&SHAKE')
+				
+			elif currentLine.substr(0, 6) == "&BLACK":
+				Globals.GameOverlay.set_to_black()
+				currentLine = currentLine.trim_prefix('&BLACK')
+				
+			elif currentLine.substr(0, 6) == "&FDEIN":
+				Globals.GameOverlay.start_fade_in()
+				currentLine = currentLine.trim_prefix('&FDEIN')
+				
+			return
 		
 		currentLine = currentLine.replacen('<', '[')
 		currentLine = currentLine.replacen('>', ']')
@@ -138,6 +149,8 @@ func proceed():
 	#_scroll_node to bottom when new message appears (make this tween later)
 	yield(get_tree(), "idle_frame")
 	is_auto_scrolling = true
+	#scroll_to_bottom()
+	scroll_to_bottom()
 
 
 # Parses entryText for special characters, determines what type of entry this is
@@ -177,17 +190,18 @@ func check_entry_type(entryText):
 		_vertical_layout_node.add_child(newText)
 
 
+func scroll_to_bottom():
+	_scroll_node.set_v_scroll(_scroll_node.get_v_scrollbar().max_value)
+
 #used when a new entry is created
 func auto_scroll_down():
 	var scrollValue = _scroll_node.get_v_scrollbar().get_value()
 	var maxScrollValue = _scroll_node.get_v_scrollbar().max_value
-	
+	_scroll_node.set_v_scroll(lerp(scrollValue, maxScrollValue, scroll_increment))
 	if scrollValue >= maxScrollValue:
 		is_auto_scrolling = false
 		return
-	
-	_scroll_node.set_v_scroll(lerp(scrollValue, maxScrollValue, scroll_increment))
-	
+
 
 #smoothly decrease size of background panel after dialogue concludes
 func shrink_background_panel():

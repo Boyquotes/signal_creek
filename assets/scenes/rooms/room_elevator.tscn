@@ -82,6 +82,6 @@ __meta__ = {
 
 [node name="LocationTrigger" parent="PlaneManager" instance=ExtResource( 2 )]
 position = Vector2( 160, 120 )
-_knot_name = "intro"
+_knot_name = "betaintro_main1"
 
 [connection signal="body_entered" from="Doortal" to="Doortal" method="_on_Doortal_body_entered"]

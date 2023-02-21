@@ -1,8 +1,9 @@
--> betaintro_main1
+//-> betaintro_main1
 
 === betaintro_main1 ===
 //IN REALITY
 //location: elevator
+
 NICK: “QUICK, IN HERE! Maybe she won't find us and give up chasing—”
 
 NOUR: “In the BROKEN ELEVATOR?”
@@ -47,13 +48,15 @@ NICK: "Gee, thanks for throwing me under the bus!"
 
 MS SUWAN: "Save your excuses. I'm going to report you both to the authorities this instance—"
 
-//NICK PRESSES ALL THE BUTTONS IN THE ELEVATOR - elevator button boop SFX
+NICK PRESSES ALL THE BUTTONS IN THE ELEVATOR - elevator button boop SFX
 
 NICK: "C'mon, c'mon, c'mon!"
 
 MS SUWAN: "Nice try. This elevator is broken. It's not going anywhere—"
 
-//ELEVATOR DOOR CLOSES. WHIRRING AND BEEPING...PORTAL IS ACTIVATED
+ELEVATOR DOOR CLOSES. WHIRRING AND BEEPING...PORTAL IS ACTIVATED
+
+&SHAKE
 
 NOUR: "What the—what did you do this time?"
 
@@ -63,13 +66,22 @@ NOUR: "WITH the person we're running from?!"
 
 MS SUWAN: "Quiet down, you punk kids! This elevator shouldn't be working at all—"
 
+&BLACK
+
 NICK: "Why isn't it stopping? What's going on—"
 
 NOUR: "I don't know but brace yourselves—!"
 
+&FDEIN
+
+
+-> END
+
 //TRANSITION
 //IN DREAM PLANE
 //location: Past Level - Hallway
+
+== betaintro_hallway ==
 
 NOUR: "Ugh...I feel sick."
 

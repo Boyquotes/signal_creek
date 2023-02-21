@@ -74,7 +74,6 @@ script = ExtResource( 10 )
 __meta__ = {
 "_editor_description_": "For screen-space shader"
 }
-shift_offset = 0.042
 
 [node name="UserInterface" parent="." instance=ExtResource( 3 )]
 margin_right = 0.0

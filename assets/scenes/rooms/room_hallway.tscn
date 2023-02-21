@@ -289,7 +289,7 @@ script = ExtResource( 24 )
 __meta__ = {
 "_editor_description_": ""
 }
-_knot_name = "intropt2"
+_knot_name = "betaintro_hallway"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LocationTrigger"]
 shape = SubResource( 22 )
