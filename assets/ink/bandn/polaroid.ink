@@ -1,7 +1,8 @@
 == polaroid ==
     //convo after the first time PCs see Rina
     //I think I'm doing this wrong but I'm essentially trying to get this to only play once, then for the polaroidReturned to play everytime after this is played the first time
-    {once: 
+    poop
+//    {once: 
     NARRATOR: A Polaroid One Step camera sits inside a glass case. It's surrounded by a bunch of film photographs of two girls. 
         
         NARRATOR: One of them sits on the floor outside of the case. Nour looks down at it and immediately scowls.
@@ -78,7 +79,7 @@
             //TRIGGERS B&N RINA HERE 
     
         -> END
-    }
+  //  }
     
     //During Nour's route -- before the end -- whenever the polaroid is clicked on
     
