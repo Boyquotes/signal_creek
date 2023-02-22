@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/musicstand.ink-04ad45520cc69a8c5e503431507be0ca.res"
+
+[deps]
+
+source_file="res://assets/ink/bandn/musicstand.ink"
+dest_files=[ "res://.import/musicstand.ink-04ad45520cc69a8c5e503431507be0ca.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

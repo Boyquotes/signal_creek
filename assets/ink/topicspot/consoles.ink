@@ -1,3 +1,5 @@
+VAR nickevent3 = false
+VAR musicstand4 = false
 
 == consoles ==
 
@@ -75,8 +77,6 @@ NOUR: "Ah... thanks, then. Maybe I should stop playing, it seems I don't know en
 
 NICK: "That's alright, it's technically not <i>supposed</i> to be an easy game, so maybe I should shut up but..."
 
-NOUR:
-    
     *"But you seem really knowledgeable about the game."
     
         - He blushes a little, kicking the dirt with his foot.
@@ -93,8 +93,6 @@ NOUR: "That's great, then! Do you play it a lot? Games are cool, you can totally
 Nick's face suddenly falls, and he goes quiet for a moment, glaring at the ground.
 
 NICK: "I don't... actually own the game. I watch a lot of videos about it and watch <i>others</i> play it but..."
-
-NOUR:
 
     * Stay quiet and wait for him to speak.
         -> nickopensup
@@ -115,8 +113,6 @@ NICK: "It's not the <i>same</i>, it's a dumb fucking video game, not like... not
 He motions towards Ms. Suwan, who just blinks quietly in response.
 
 NICK: "I don't have the time to focus on school, and even when I <i>do</i> it's fucking <i>hard</i>. It's like there's a... a brick wall just in front of <i>everything</i>.
-
-NOUR: 
 
     * "But you love this game. You've dedicated so much time to it, you're not useless or dumb."
     

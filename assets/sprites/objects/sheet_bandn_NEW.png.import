@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sheet_topicSpot_dream.png-2034bd39a572e230152dd81168725037.stex"
+path="res://.import/sheet_bandn_NEW.png-f62ba0113d90a6079cb3d265d76758b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/objects/sheet_topicSpot_dream.png"
-dest_files=[ "res://.import/sheet_topicSpot_dream.png-2034bd39a572e230152dd81168725037.stex" ]
+source_file="res://assets/sprites/objects/sheet_bandn_NEW.png"
+dest_files=[ "res://.import/sheet_bandn_NEW.png-f62ba0113d90a6079cb3d265d76758b3.stex" ]
 
 [params]
 
