@@ -4,7 +4,9 @@ extends Node
 # applies appropriate recoloration gradient to the WorldEnvironment
 # Moves all room objects to the appropriate positions
 
-export (TileSet) var dreamset 
+
+export var _shifting_enabled = false
+export (TileSet) var dreamset = preload("res://assets/sprites/tilesets/tileset_abstract_dream.tres")
 export (TileSet) var realset
 export var dream_gradient = preload("res://assets/shaders/gradient_dream.tres")
 export var real_gradient = preload("res://assets/shaders/gradient_real.tres")
@@ -15,12 +17,16 @@ onready var _room_objects = []
 
 
 func _ready():
+	dreamset = $Ground.get_tileset()
+	if !realset:
+		realset = dreamset
+		
 	for node in get_tree().get_nodes_in_group("shiftable"):
 		_room_objects.push_back(node)
 
 
 func _physics_process(_delta):
-	if Input.is_action_just_pressed("planeshift"):
+	if Input.is_action_just_pressed("planeshift") and _shifting_enabled:
 		shift_planes()
 
 
@@ -56,6 +62,7 @@ func _set_to_dream_world():
 	_move_room_objects()
 	Globals.PartyObject.change_assets_world(Globals.CurrentWorld)
 	Globals.GameWorldEnvironment.get_environment().set_adjustment_color_correction(dream_gradient)
+	Globals.DialogueBox.set_current_world("dream")
 
 
 # Sets Global World variable to REAL
@@ -69,6 +76,7 @@ func _set_to_real_world():
 	_move_room_objects()
 	Globals.PartyObject.change_assets_world(Globals.CurrentWorld)
 	Globals.GameWorldEnvironment.get_environment().set_adjustment_color_correction(real_gradient)
+	Globals.DialogueBox.set_current_world("real")
 
 
 func _set_tilesets(setId):

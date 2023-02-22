@@ -26,7 +26,7 @@ func _ready():
 	Globals.PartyCamera.rescale_camera(floor(OS.window_size.x/camera_pixel_size.x))
 	
 	Globals.DialogueBox = $UserInterface/ReferenceRect/DialogueBox
-	Globals.CornerPortrait = $UserInterface/ReferenceRect/Portraits
+	#Globals.CornerPortrait = $UserInterface/ReferenceRect/Portraits
 	Globals.ColorManager = $UserInterface/ReferenceRect/DialogueBox/ColorManager
 	
 	RoomEngine.CurrentRoom = $ViewportContainer/Viewport/Room

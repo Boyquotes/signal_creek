@@ -45,7 +45,7 @@ func import_from_ink(source_file: String, save_path: String, options: Dictionary
 	if !File.new().file_exists(inklecate):
 		printerr("File does not exist: '%s'." % inklecate)
 		return ERR_COMPILATION_FAILED
-
+	
 	var new_file: String = "%d.json" % int(randf() * 100000)
 	var arguments: Array = [
 		"-o",
@@ -54,8 +54,15 @@ func import_from_ink(source_file: String, save_path: String, options: Dictionary
 	]
 
 	if not options["is_master_file"]:
+		var poop: Dictionary = {"is_master_file": true, "compress": true}
+		import_from_ink("res://assets/ink/main.ink", "res://.import/main.ink-c7a8e3d5258ae7ea76f7d25d4db298dc", poop)
 		return _save_resource(save_path, Resource.new(), options)
-
+	
+	print("importing a master ink file")
+	print(source_file)
+	print(save_path)
+	print(options)
+	
 	var _err: int = OK
 	var _output: Array = []
 	match OS.get_name():

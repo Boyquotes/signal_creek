@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/oldnovel.ink-55d763b85b519b3250aeb6e078f9f774.res"
+
+[deps]
+
+source_file="res://assets/alpha/ink_alpha/bandn/oldnovel.ink"
+dest_files=[ "res://.import/oldnovel.ink-55d763b85b519b3250aeb6e078f9f774.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

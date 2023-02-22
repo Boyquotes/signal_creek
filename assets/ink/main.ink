@@ -1,5 +1,5 @@
-VAR currentPartyChar = "NICK"
-VAR currentWorld = "DREAM"
+VAR currentPartyChar = "nick"
+VAR currentWorld = "dream"
 
 INCLUDE bandn/bookstack.ink
 INCLUDE bandn/dragonplush.ink
@@ -9,6 +9,7 @@ INCLUDE bandn/oldnovel.ink
 INCLUDE bandn/pens.ink
 INCLUDE bandn/polaroid.ink
 INCLUDE bandn/priceofsalt.ink
+INCLUDE bandn/bookshelf.ink
 
 INCLUDE hallway/bobatea.ink
 INCLUDE hallway/cafetables.ink
@@ -28,3 +29,13 @@ INCLUDE topicspot/manager.ink
 INCLUDE topicspot/phonecases.ink
 INCLUDE topicspot/pinbuttons.ink
 INCLUDE topicspot/sailormoonposters.ink
+
+INCLUDE betaintro.ink
+
+
+== abstract ==
+
+    Hello. This is an Abstract Object. Thank you for coming.
+
+    -> END
+    
