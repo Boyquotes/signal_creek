@@ -9,17 +9,17 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
+"base": "KinematicBody2D",
 "class": "Character",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character.gd"
 }, {
-"base": "Reference",
+"base": "KinematicBody2D",
 "class": "CharacterFollower",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character_follower.gd"
 }, {
-"base": "Reference",
+"base": "KinematicBody2D",
 "class": "CharacterNavigator",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character_navigator.gd"
@@ -62,6 +62,7 @@ boot_splash/image="res://assets/alpha/sprites_alpha/os/splash_3x.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0.0745098, 0.0784314, 0.121569, 0.901961 )
+config/icon="res://assets/alpha/sprites_alpha/os/icon.png"
 
 [audio]
 
