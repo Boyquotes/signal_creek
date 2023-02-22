@@ -1,35 +1,32 @@
-<<<<<<< HEAD
 == chadbrodykristy ==
 
-    {
-        - currentWorld == "dream" && chadbrodykristy_real:
-            -> chadbrodykristy_realvisited
+    // {
+    //     - currentWorld == "dream" && chadbrodykristy_real:
+    //         -> chadbrodykristy_realvisited
             
-        - currentWorld == "dream":
-            -> chadbrodykristy_dream
+    //     - currentWorld == "dream":
+    //         -> chadbrodykristy_dream
             
-        - currentWorld == "real" && chadbrodykristy_dream:
-            -> chadbrodykristy_dreamvisited
+    //     - currentWorld == "real" && chadbrodykristy_dream:
+    //         -> chadbrodykristy_dreamvisited
         
-        - else:
-            -> chadbrodykristy_real
-    }
+    //     - else:
+    //         -> chadbrodykristy_real
+    // }
 //---------------- DREAM WORLD ----------------
-=======
 // Nour observes Ms Suwan's reluctance, observes her change in demenear when she notices Ms Suwan. She should also not be able to see chad brody kristy until middle-ish of game
   
   
   //When Ms Suwan is not ready to talk to them, at start
   -> chadbrodykristy_notready
       {
-        - chadbrodykristy_notready && musicstand4 && priceofsalt_dreamvisited && pinbuttons_dreamvisited:
+        - chadbrodykristy_notready && musicstand4 && priceofsalt && pinbuttons:
             -> chadbrodykristy_ready
        }
   
   
   
 // ----- Part of First interaction when they just get to the mall-----
->>>>>>> Erna
 
 == chadbrodykristy_first==
 Nick: "Are those people real? How did they even get in here?"
@@ -141,9 +138,4 @@ Ms.Suwan: "Listen Nour. I've imagined what I would say to them if I ever saw the
 
 -> END
 
-
-
-<<<<<<< HEAD
-    -> chadbrodykristy_dream
-=======
->>>>>>> Erna
+    -> chadbrodykristy
