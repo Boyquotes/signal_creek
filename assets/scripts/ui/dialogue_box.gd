@@ -34,6 +34,8 @@ var background_panel_max_height
 var _save_file_path = "res://saves"
 var _ink_story
 
+var fastforward = false
+
 onready var background_panel_node = $Panel
 onready var _scroll_node = $Panel/MarginContainer/ScrollContainer
 onready var _vertical_layout_node = $Panel/MarginContainer/ScrollContainer/VBoxContainer
@@ -101,15 +103,17 @@ func select_current_choice():
 	choice_chosen = true
 
 # proceeding to the next string that ink should return
+# allows for recursion if devs toggle fast forward
 func proceed():
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
 #		clear_and_reset_ui()
 		is_shrinking_background_panel = true
-		
+		return true
+	
 	elif !_ink_player.get_HasChoices(): #create normal text entry
 		_ink_player.Continue()
 		print_state()
-		
+			
 		var currentLine = _ink_player.get_CurrentText()
 		
 		if choice_chosen:
@@ -137,21 +141,24 @@ func proceed():
 		
 		currentLine = currentLine.replacen('<', '[')
 		currentLine = currentLine.replacen('>', ']')
-			
-		check_entry_type(currentLine)
 		
+		check_entry_type(currentLine)
+		if fastforward:
+			return false
 	else: #default to nour if no nametag provided
 		is_displaying_choices = true
 		current_speaker = "NOUR:"
 		display_choices("NOUR:")
 		set_camera_position_to_speaker()
 		
-	#_scroll_node to bottom when new message appears (make this tween later)
 	yield(get_tree(), "idle_frame")
-	is_auto_scrolling = true
-	#scroll_to_bottom()
 	scroll_to_bottom()
+	return false
 
+
+
+func proceed_recurse():
+	pass
 
 # Parses entryText for special characters, determines what type of entry this is
 # Entries are normal, dialogue, or choice
@@ -343,7 +350,13 @@ func set_camera_position_to_speaker():
 func set_current_world(worldName):
 	_ink_player.SetVariable("currentWorld", worldName)
 
+
 func reset_story():
 	clear_and_reset_ui()
 	_ink_player.Reset()
 	_ink_player.LoadStory(_ink_story)
+
+
+func fast_forward(state):
+	fastforward = state
+	
