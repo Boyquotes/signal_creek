@@ -3,19 +3,46 @@
 === betaintro_main1 ===
 //IN REALITY
 //location: elevator
+//NICK AND NOUR RUN INTO THE ELEVATOR
+NICK: “QUICK, IN HERE!"
 
-NICK: “QUICK, IN HERE! Maybe she won't find us and give up chasing—”
+NICK: "Maybe she won't find us and give up chasing—”
 
 NOUR: “In the BROKEN ELEVATOR?”
 
 NICK: "Uh..."
+    * [Try to escape]
+        -> betaintro_escape1
+    * [Give him a piece of your mind]
+        -> betaintro_mind1
+    * [Urge him to stay quiet]
+        -> betaintro_quiet1
 
+=== betaintro_escape1 ===
+NOUR: "We need to get out of here!"
+
+NICK: "No way! She'll never catch us here—"
+    -> betaintro_main1_1
+
+=== betaintro_mind1 ===
 NOUR: "God. This is what I get for listening to a stupid kid!"
 
 NICK: "Hey! You listening to me is technically YOUR FAULT AND NOT MINE! I didn't force you to follow me in here."
 
 NICK: "And I'm NOT stupid—"
+    -> betaintro_main1_1
+    
+=== betaintro_quiet1 ===
+NOUR: "Shhh! Shut up!"
 
+NICK: "NO! <i>YOU</i> SHUT UP!"
+
+NOUR: "If you make so much noise, she's going to notice us—"
+-> betaintro_main1_1
+
+=== betaintro_main1_1 ===
+//MS SUWAN ENTERS THE ELEVATOR
+//HER SPRITE IS BLACK
 ???: "Stop right there."
 
 NICK: "Aw, shoot! The scary old lady caught up!"
@@ -28,23 +55,25 @@ NOUR: "Stop talking!"
 
 NICK: “Well, what are YOU doing here in that case?”
 
-MS SUWAN: "I AM the law."
+//HER SPRITE IS SHOWN NORMALLY
+???: "I AM the law."
 
-NICK: "OH GOD—I'm so sorry I called you old! Please don't get me in trouble! I didn't mean to take the—"
+NICK: "OH GOD—I'm so sorry! Please don't get me in trouble!"
 
 ???: "I'm part of the legal team in charge of inspecting this demolition site."
 
-???: "What did you mean about taking something—"
+NICK: "Please don't tell my Mom! I didn't mean to take the—"
+
+???: "Take what?"
+
+NICK: "...Um."
+
+NICK: "I have the right to remain silent?"
+
+???: "Whatever you kids are doing, it's illegal. You can't be here."
 
 NOUR: "I don't know about him, but I'll be out as fast as possible!" 
-
 NOUR: "I'm only here to take photos. I study journalism, so I wanted to capture this abandoned mall's last moments—"
-
-NICK: "ME TOO!"
-
-NOUR: "What?! I don't even know who you are!"
-
-NICK: "Gee, thanks for throwing me under the bus!"
 
 MS SUWAN: "Save your excuses. I'm going to report you both to the authorities this instance—"
 
@@ -52,15 +81,17 @@ NICK PRESSES ALL THE BUTTONS IN THE ELEVATOR - elevator button boop SFX
 
 NICK: "C'mon, c'mon, c'mon!"
 
-MS SUWAN: "Nice try. This elevator is broken. It's not going anywhere—"
+NOUR: "Really? Pushing those aren't going to work!"
+
+MS SUWAN: "She's right. This elevator is broken. It's not going anywhere—"
 
 ELEVATOR DOOR CLOSES. WHIRRING AND BEEPING...PORTAL IS ACTIVATED
 
 &SHAKE
 
-NOUR: "What the—what did you do this time?"
+NOUR: "What the—WHAT ARE YOU DOING?!"
 
-NICK: "I'm helping us escape!"
+NICK: "SAVING OUR BUTTS!!!"
 
 NOUR: "WITH the person we're running from?!"
 
@@ -68,9 +99,9 @@ MS SUWAN: "Quiet down, you punk kids! This elevator shouldn't be working at all�
 
 &BLACK
 
-NICK: "Why isn't it stopping? What's going on—"
+NICK: "Why isn't it STOPPING? WHAT'S GOING ON—"
 
-NOUR: "I don't know but brace yourselves—!"
+NOUR: "I don't know but BRACE YOURSELVES—!"
 
 &FDEIN
 
@@ -122,7 +153,13 @@ NICK: "I don't remember us knocking our heads either!"
 
 === betaintro_joke1 ===
 
-NOUR: "Maybe it was drugs. This could be a really, really weird trip."
+NOUR: "Maybe this is all a dream..."
+
+NICK: "Haha! Maybe none of us are even real. Ooo!"
+
+MS SUWAN: "No. We are real. That barely makes sense."
+
+NOUR: "Then maybe it was drugs? This could be a really, really weird trip! Haha!"
 
 NICK: "DRUGS?! What kind of drug would make up something like THIS?"
 
