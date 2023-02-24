@@ -22,7 +22,7 @@
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_cafechairsback.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/shaders/shader_outline.gdshader" type="Shader" id=21]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_chadbrodykristy.tscn" type="PackedScene" id=22]
-[ext_resource path="res://assets/prefabs/objects/obj_elevator.tscn" type="PackedScene" id=23]
+[ext_resource path="res://assets/prefabs/objects/hallway/obj_elevator.tscn" type="PackedScene" id=23]
 [ext_resource path="res://assets/scripts/environment/location_trigger.gd" type="Script" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -196,9 +196,7 @@ position = Vector2( 79, 109 )
 z_index = 1
 
 [node name="PartyPoster" parent="PlaneManager/Overworld" instance=ExtResource( 14 )]
-position = Vector2( 608, 64 )
-z_index = 1
-z_as_relative = false
+position = Vector2( 155, 218 )
 
 [node name="Elevator" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 position = Vector2( 344, 192 )

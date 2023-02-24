@@ -1,7 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/objects/sheet_topicspot_dream.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/objects/sheet_topic_dream.png" type="Texture" id=2]
+
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 8, 16 )
@@ -16,7 +17,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 position = Vector2( 0, -41 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 191, 47, 18, 82 )
 

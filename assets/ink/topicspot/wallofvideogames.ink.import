@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/wallofvideogames.ink-9232a17daa79d071d96402f5bc0c4080.res"
+
+[deps]
+
+source_file="res://assets/ink/topicspot/wallofvideogames.ink"
+dest_files=[ "res://.import/wallofvideogames.ink-9232a17daa79d071d96402f5bc0c4080.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

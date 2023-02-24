@@ -34,6 +34,8 @@ var background_panel_max_height
 var _save_file_path = "res://saves"
 var _ink_story
 
+var fastforward = false
+
 onready var background_panel_node = $Panel
 onready var _scroll_node = $Panel/MarginContainer/ScrollContainer
 onready var _vertical_layout_node = $Panel/MarginContainer/ScrollContainer/VBoxContainer
@@ -53,15 +55,19 @@ func _ready():
 
 
 func _process(_delta):
+	if is_typing:
+		typewriter_effect(false)
+		
+	if fastforward and !_ink_player.get_HasChoices() and _ink_player.get_CanContinue():
+		proceed()
+#		escape_typewriter_effect()
+		
 	if is_expanding_background_panel:
 		expand_background_panel()
 	
 	elif is_shrinking_background_panel:
 		shrink_background_panel()
-	
-	if is_typing:
-		typewriter_effect()
-	
+		
 	if is_auto_scrolling:
 		auto_scroll_down()
 
@@ -101,15 +107,20 @@ func select_current_choice():
 	choice_chosen = true
 
 # proceeding to the next string that ink should return
+# allows for recursion if devs toggle fast forward
 func proceed():
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
-#		clear_and_reset_ui()
+#		fastforward = false
+		clear_and_reset_ui()
 		is_shrinking_background_panel = true
-		
+		return
+	
 	elif !_ink_player.get_HasChoices(): #create normal text entry
 		_ink_player.Continue()
-		print_state()
 		
+		if !fastforward:
+			print_state()
+			
 		var currentLine = _ink_player.get_CurrentText()
 		
 		if choice_chosen:
@@ -137,19 +148,16 @@ func proceed():
 		
 		currentLine = currentLine.replacen('<', '[')
 		currentLine = currentLine.replacen('>', ']')
-			
-		check_entry_type(currentLine)
 		
+		check_entry_type(currentLine)
+			
 	else: #default to nour if no nametag provided
 		is_displaying_choices = true
 		current_speaker = "NOUR:"
 		display_choices("NOUR:")
 		set_camera_position_to_speaker()
 		
-	#_scroll_node to bottom when new message appears (make this tween later)
 	yield(get_tree(), "idle_frame")
-	is_auto_scrolling = true
-	#scroll_to_bottom()
 	scroll_to_bottom()
 
 
@@ -181,7 +189,9 @@ func check_entry_type(entryText):
 	
 	else: #it's a normal text entry
 		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal)
-		print("NORMAL TEXT")
+		if !fastforward:
+			print("NORMAL TEXT")
+			
 		#track the text label for typewriter effect
 		current_text_box = newText
 		#init typewriter effect
@@ -225,14 +235,18 @@ func expand_background_panel():
 	if panelPosition.y >= -panel_opening_speed:
 		background_panel_node.set_position(Vector2(panelPosition.x, 0))
 		is_expanding_background_panel = false
-		print("expanded")
+		print("expanded dialogue panel")
 	
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
 
 
 #increment visible characters in most recent richtextlabel
-func typewriter_effect():
+func typewriter_effect(escape):
+	if fastforward or escape:
+		current_text_box.set_percent_visible(1.0)
+		is_typing = false
+		
 	var currentVisibility = current_text_box.get_percent_visible()
 	#var totalCharCount = current_text_box.get_total_character_count()
 	var visibleCharacters = current_text_box.get_visible_characters()
@@ -315,7 +329,8 @@ func get_current_speaker():
 
 func find_current_speaker_position():
 	var currentSpeaker = get_current_speaker().to_lower()
-	print("Current Speaker: " + currentSpeaker + "\n")
+	if !fastforward:
+		print("Current Speaker: " + currentSpeaker + "\n")
 	
 	var currentSpeakerIndex = -1
 
@@ -343,7 +358,13 @@ func set_camera_position_to_speaker():
 func set_current_world(worldName):
 	_ink_player.SetVariable("currentWorld", worldName)
 
+
 func reset_story():
 	clear_and_reset_ui()
 	_ink_player.Reset()
 	_ink_player.LoadStory(_ink_story)
+
+
+func fast_forward(state):
+	fastforward = state
+	

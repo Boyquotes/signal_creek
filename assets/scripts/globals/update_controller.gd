@@ -31,8 +31,9 @@ func _physics_process(_delta):
 				
 		elif Input.is_action_just_pressed("interact"):
 			if Globals.DialogueBox.is_typing:
-				Globals.DialogueBox.escape_typewriter_effect()
-			else:
+				Globals.DialogueBox.typewriter_effect(true)
+			
+			elif !Globals.DialogueBox.fastforward or Globals.DialogueBox._ink_player.get_HasChoices() or !Globals.DialogueBox._ink_player.get_CanContinue():
 				Globals.DialogueBox.proceed()
 				
 			#var followingVector = find_current_speaker_position()
@@ -67,16 +68,16 @@ func _physics_process(_delta):
 func check_input_character_movement():
 	var directionVector = Vector2(0,0)
 
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("move_up"):
 		directionVector += Vector2.UP
 		
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("move_down"):
 		directionVector += Vector2.DOWN
 		
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("move_left"):
 		directionVector += Vector2.LEFT
 		
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		directionVector += Vector2.RIGHT
 		
 	Globals.PartyObject.move_party_by_vector(directionVector)

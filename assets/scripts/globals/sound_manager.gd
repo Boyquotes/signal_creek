@@ -31,3 +31,9 @@ func play_ambience(audioName):
 func play_music(audioName):
 	musicPlayer.stream = audioName
 	musicPlayer.play()
+
+
+func set_mute_audio(mode):
+	soundPlayer.set_stream_paused(mode)
+	ambientPlayer.set_stream_paused(mode)
+	musicPlayer.set_stream_paused(mode)
