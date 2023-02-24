@@ -58,3 +58,19 @@ func get_party_starting_position():
 # Return PlaneManager belonging to self
 func get_plane_manager():
 	return plane_manager
+
+
+func remove_object(objectNode):
+	$PlaneManager/Overworld.remove_child(objectNode)
+	
+
+func place_object(objectNode):
+	$PlaneManager/Overworld.add_child(objectNode)
+	#partyNode.get_leader().set_global_position(party_starting_position)
+
+
+func move_object_to_position(objectNode, objectPosition):
+	objectNode.set_global_position(objectPosition)
+	
+	
+	

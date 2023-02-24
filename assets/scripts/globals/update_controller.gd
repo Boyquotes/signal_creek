@@ -19,10 +19,10 @@ func _physics_process(_delta):
 	if Globals.GameMode == Globals.GameModes.TALK:
 		
 		if Globals.DialogueBox.is_displaying_choices:
-			if Input.is_action_just_released("ui_down"):
+			if Input.is_action_just_released("move_down"):
 				Globals.DialogueBox.toggle_choice_selections(1)
 				
-			elif Input.is_action_just_released("ui_up"):
+			elif Input.is_action_just_released("move_up"):
 				Globals.DialogueBox.toggle_choice_selections(-1)
 				
 			if Input.is_action_just_pressed("interact"):

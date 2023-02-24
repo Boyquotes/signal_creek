@@ -2,17 +2,34 @@
 VAR last_knot_nick_visited = false
 VAR last_knot_suwan_visited = false
 
+
+//rina_state can be start, bandn, topicspot, or hallway
+//rina_state is altered from the other objects
+
 == rina ==
     
     //if this isn't the first time talking to Rina, go straight to the choices
     {
         - rina_bandn:
             -> rina_branches
+            
+        - rina_start:
+            -> rina_bandn
     }
     
     //start from the beginning
-    -> rina_bandn
+    -> rina_start
 
+
+== rina_start ==
+
+    RINA: "poopoopeepee I am next to the elevator"
+    
+    NOUR: "Fuck you bro"
+    
+    &MOV_RINA_BANDN
+    
+    -> END
     
 //---------------- MAIN CHOICE BRANCHES ----------------
 //All choices are always present, but they need to be unlocked.

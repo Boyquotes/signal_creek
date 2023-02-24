@@ -132,17 +132,21 @@ func proceed():
 		if currentLine.substr(0, 1) == "&": #screen shaking
 			#Globals.GameOverlay.start_shaking(true)
 			#RoomEngine.PlaneManager.shift_planes()
-			if currentLine.substr(0, 6) == "&SHAKE":
+			if "&SHAKE" in currentLine:
 				Globals.GameOverlay.start_shaking(false)
-				currentLine = currentLine.trim_prefix('&SHAKE')
+				#currentLine = currentLine.trim_prefix('&SHAKE')
 				
-			elif currentLine.substr(0, 6) == "&BLACK":
+			if "&BLACK" in currentLine:
 				Globals.GameOverlay.set_to_black()
-				currentLine = currentLine.trim_prefix('&BLACK')
+				#currentLine = currentLine.trim_prefix('&BLACK')
 				
-			elif currentLine.substr(0, 6) == "&FDEIN":
+			if "&FDEIN" in currentLine:
 				Globals.GameOverlay.start_fade_in()
-				currentLine = currentLine.trim_prefix('&FDEIN')
+				#currentLine = currentLine.trim_prefix('&FDEIN')
+				
+			if "&MOV_RINA" in currentLine:
+				Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
+				#currentLine = currentLine.trim_prefix('&FDEIN')
 				
 			return
 		

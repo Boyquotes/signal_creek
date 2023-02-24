@@ -49,3 +49,8 @@ func move_party_to_new_room(partyObject, previousRoom, newRoom):
 	newRoom.place_party(partyObject)
 	
 	Globals.GameCanvas.set_camera_pos(partyObject.get_leader().get_global_position(), Globals.PartyCamera)
+
+
+func move_object_to_new_room(objectNode, previousRoom, newRoom):
+	previousRoom.remove_object(objectNode)
+	newRoom.place_object(objectNode)

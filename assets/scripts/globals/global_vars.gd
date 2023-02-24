@@ -30,6 +30,7 @@ var PartyObject = null
 var Nick = null
 var Nour = null
 var Suwan = null
+var Rina = null
 
 var Elevator = null
 
