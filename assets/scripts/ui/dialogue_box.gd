@@ -55,12 +55,16 @@ func _ready():
 
 
 func _process(_delta):
+	if fastforward && !_ink_player.get_HasChoices() && _ink_player.get_CanContinue():
+		proceed()
+		escape_typewriter_effect()
+		
 	if is_expanding_background_panel:
 		expand_background_panel()
 	
 	elif is_shrinking_background_panel:
 		shrink_background_panel()
-	
+		
 	if is_typing:
 		typewriter_effect()
 	
@@ -106,13 +110,16 @@ func select_current_choice():
 # allows for recursion if devs toggle fast forward
 func proceed():
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
-#		clear_and_reset_ui()
+#		fastforward = false
+		clear_and_reset_ui()
 		is_shrinking_background_panel = true
-		return true
+		return
 	
 	elif !_ink_player.get_HasChoices(): #create normal text entry
 		_ink_player.Continue()
-		print_state()
+		
+		if !fastforward:
+			print_state()
 			
 		var currentLine = _ink_player.get_CurrentText()
 		
@@ -143,8 +150,7 @@ func proceed():
 		currentLine = currentLine.replacen('>', ']')
 		
 		check_entry_type(currentLine)
-		if fastforward:
-			return false
+			
 	else: #default to nour if no nametag provided
 		is_displaying_choices = true
 		current_speaker = "NOUR:"
@@ -153,7 +159,6 @@ func proceed():
 		
 	yield(get_tree(), "idle_frame")
 	scroll_to_bottom()
-	return false
 
 
 
