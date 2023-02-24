@@ -40,7 +40,9 @@ func _physics_process(_delta):
 			#Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 			
 	elif Globals.GameMode == Globals.GameModes.WALK:
-		check_input_character_movement()
+		
+		if !Globals.DevTools.typing_knot_name:
+			check_input_character_movement()
 		
 		# IN CASE OF LEADER SWITCHING
 		if _leader_switching_enabled:
