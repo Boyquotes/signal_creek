@@ -9,17 +9,17 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody2D",
+"base": "Reference",
 "class": "Character",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character.gd"
 }, {
-"base": "KinematicBody2D",
+"base": "Reference",
 "class": "CharacterFollower",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character_follower.gd"
 }, {
-"base": "KinematicBody2D",
+"base": "Reference",
 "class": "CharacterNavigator",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character_navigator.gd"
@@ -250,6 +250,11 @@ party_leader_switch={
 switch_character={
 "deadzone": 0.5,
 "events": [  ]
+}
+open_dev_tools={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777218,"unicode":0,"echo":false,"script":null)
+ ]
 }
 
 [physics]
