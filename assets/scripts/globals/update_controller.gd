@@ -31,7 +31,8 @@ func _physics_process(_delta):
 				
 		elif Input.is_action_just_pressed("interact"):
 			if Globals.DialogueBox.is_typing:
-				Globals.DialogueBox.escape_typewriter_effect()
+				Globals.DialogueBox.typewriter_effect(true)
+			
 			elif !Globals.DialogueBox.fastforward or Globals.DialogueBox._ink_player.get_HasChoices() or !Globals.DialogueBox._ink_player.get_CanContinue():
 				Globals.DialogueBox.proceed()
 				

@@ -45,7 +45,7 @@ script = ExtResource( 1 )
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 192.0
-margin_bottom = 410.0
+margin_bottom = 454.0
 
 [node name="DEVELOPER TOOLS" type="RichTextLabel" parent="DevTools/VBoxContainer"]
 margin_right = 184.0
@@ -120,24 +120,31 @@ margin_bottom = 325.0
 size_flags_vertical = 3
 text = "Fast Forward"
 
-[node name="HSeparator2" type="HSeparator" parent="DevTools/VBoxContainer"]
+[node name="Open At Knot" type="Button" parent="DevTools/VBoxContainer"]
 margin_top = 329.0
 margin_right = 184.0
-margin_bottom = 333.0
-
-[node name="Open At Knot" type="Button" parent="DevTools/VBoxContainer"]
-margin_top = 337.0
-margin_right = 184.0
-margin_bottom = 374.0
+margin_bottom = 366.0
 size_flags_vertical = 3
 text = "Open At Knot"
 
 [node name="LineEdit" type="LineEdit" parent="DevTools/VBoxContainer"]
-margin_top = 378.0
+margin_top = 370.0
 margin_right = 184.0
-margin_bottom = 402.0
+margin_bottom = 394.0
 placeholder_text = "type knot name here"
 caret_blink = true
+
+[node name="HSeparator2" type="HSeparator" parent="DevTools/VBoxContainer"]
+margin_top = 398.0
+margin_right = 184.0
+margin_bottom = 402.0
+
+[node name="MuteAudio" type="CheckButton" parent="DevTools/VBoxContainer"]
+margin_top = 406.0
+margin_right = 184.0
+margin_bottom = 446.0
+size_flags_vertical = 3
+text = "Mute Audio"
 
 [connection signal="pressed" from="DevTools/VBoxContainer/Reset" to="DevTools" method="_on_Reset_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/Hallway" to="DevTools" method="_on_Hallway_pressed"]
@@ -145,3 +152,4 @@ caret_blink = true
 [connection signal="pressed" from="DevTools/VBoxContainer/BandN" to="DevTools" method="_on_BandN_pressed"]
 [connection signal="toggled" from="DevTools/VBoxContainer/FastForwardDialogue" to="DevTools" method="_on_FastForwardDialogue_toggled"]
 [connection signal="pressed" from="DevTools/VBoxContainer/Open At Knot" to="DevTools" method="_on_Open_At_Knot_pressed"]
+[connection signal="toggled" from="DevTools/VBoxContainer/MuteAudio" to="DevTools" method="_on_MuteAudio_toggled"]

@@ -55,9 +55,12 @@ func _ready():
 
 
 func _process(_delta):
-	if fastforward && !_ink_player.get_HasChoices() && _ink_player.get_CanContinue():
+	if is_typing:
+		typewriter_effect(false)
+		
+	if fastforward and !_ink_player.get_HasChoices() and _ink_player.get_CanContinue():
 		proceed()
-		escape_typewriter_effect()
+#		escape_typewriter_effect()
 		
 	if is_expanding_background_panel:
 		expand_background_panel()
@@ -65,9 +68,6 @@ func _process(_delta):
 	elif is_shrinking_background_panel:
 		shrink_background_panel()
 		
-	if is_typing:
-		typewriter_effect()
-	
 	if is_auto_scrolling:
 		auto_scroll_down()
 
@@ -161,10 +161,6 @@ func proceed():
 	scroll_to_bottom()
 
 
-
-func proceed_recurse():
-	pass
-
 # Parses entryText for special characters, determines what type of entry this is
 # Entries are normal, dialogue, or choice
 # Call corresponding functionality for type of entry
@@ -193,7 +189,9 @@ func check_entry_type(entryText):
 	
 	else: #it's a normal text entry
 		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal)
-		print("NORMAL TEXT")
+		if !fastforward:
+			print("NORMAL TEXT")
+			
 		#track the text label for typewriter effect
 		current_text_box = newText
 		#init typewriter effect
@@ -237,14 +235,18 @@ func expand_background_panel():
 	if panelPosition.y >= -panel_opening_speed:
 		background_panel_node.set_position(Vector2(panelPosition.x, 0))
 		is_expanding_background_panel = false
-		print("expanded")
+		print("expanded dialogue panel")
 	
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
 
 
 #increment visible characters in most recent richtextlabel
-func typewriter_effect():
+func typewriter_effect(escape):
+	if fastforward or escape:
+		current_text_box.set_percent_visible(1.0)
+		is_typing = false
+		
 	var currentVisibility = current_text_box.get_percent_visible()
 	#var totalCharCount = current_text_box.get_total_character_count()
 	var visibleCharacters = current_text_box.get_visible_characters()
@@ -327,7 +329,8 @@ func get_current_speaker():
 
 func find_current_speaker_position():
 	var currentSpeaker = get_current_speaker().to_lower()
-	print("Current Speaker: " + currentSpeaker + "\n")
+	if !fastforward:
+		print("Current Speaker: " + currentSpeaker + "\n")
 	
 	var currentSpeakerIndex = -1
 

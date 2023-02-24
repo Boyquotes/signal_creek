@@ -54,4 +54,10 @@ func _on_FastForwardDialogue_toggled(button_pressed):
 func _start_in_devmode():
 	self.set_visible(true)
 	hidden = false
-	$VBoxContainer/FastForwardDialogue.emit_signal("toggled", true)
+	$VBoxContainer/FastForwardDialogue.set_pressed(true)
+	$VBoxContainer/MuteAudio.set_pressed(true)
+
+
+func _on_MuteAudio_toggled(button_pressed):
+	Globals.SoundManager.set_mute_audio(button_pressed)
+	pass # Replace with function body.
