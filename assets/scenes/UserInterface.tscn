@@ -113,7 +113,7 @@ bbcode_text = "[b][center]Dialogue[/center][/b]"
 text = "Dialogue"
 fit_content_height = true
 
-[node name="Fast Forward Dialogue" type="CheckButton" parent="DevTools/VBoxContainer"]
+[node name="FastForwardDialogue" type="CheckButton" parent="DevTools/VBoxContainer"]
 margin_top = 285.0
 margin_right = 184.0
 margin_bottom = 325.0
@@ -143,5 +143,5 @@ caret_blink = true
 [connection signal="pressed" from="DevTools/VBoxContainer/Hallway" to="DevTools" method="_on_Hallway_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/TopicSpot" to="DevTools" method="_on_TopicSpot_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/BandN" to="DevTools" method="_on_BandN_pressed"]
-[connection signal="toggled" from="DevTools/VBoxContainer/Fast Forward Dialogue" to="DevTools" method="_on_Fast_Forward_Dialogue_toggled"]
+[connection signal="toggled" from="DevTools/VBoxContainer/FastForwardDialogue" to="DevTools" method="_on_FastForwardDialogue_toggled"]
 [connection signal="pressed" from="DevTools/VBoxContainer/Open At Knot" to="DevTools" method="_on_Open_At_Knot_pressed"]

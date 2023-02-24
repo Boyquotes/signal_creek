@@ -1,22 +1,25 @@
 extends Control
 
+export var devmode = true
+
 var hidden = true
 
 
 func _ready():
 	self.set_visible(false)
+	if devmode:
+		call_deferred("_start_in_devmode")
 
 func _process(_delta):
 	if Input.is_action_just_pressed("open_dev_tools"):
 		if hidden:
-			print(hidden)
 			self.set_visible(true)
 			hidden = false
 			
 		else:
-			print(hidden)
 			self.set_visible(false)
 			hidden = true
+
 
 func _on_Reset_pressed():
 	Globals.UpdateController.reset_game()
@@ -37,13 +40,18 @@ func _on_BandN_pressed():
 		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[0], RoomEngine.Rooms[0].party_teleport_position)
 
 
-func _on_Fast_Forward_Dialogue_toggled(button_pressed):
-	Globals.DialogueBox.fastforward = button_pressed
-	pass # Replace with function body.
-
-
 func _on_Open_At_Knot_pressed():
 	if Globals.GameMode == Globals.GameModes.WALK:
 		Globals.GameMode = Globals.GameModes.TALK
 		Globals.DialogueBox.open_at_knot($VBoxContainer/LineEdit.text)
 		Globals.DialogueBox.background_panel_node.set_visible(true)
+
+
+func _on_FastForwardDialogue_toggled(button_pressed):
+	Globals.DialogueBox.fastforward = button_pressed
+
+
+func _start_in_devmode():
+	self.set_visible(true)
+	hidden = false
+	$VBoxContainer/FastForwardDialogue.emit_signal("toggled", true)
