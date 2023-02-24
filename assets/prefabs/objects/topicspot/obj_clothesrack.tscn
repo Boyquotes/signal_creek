@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
 [ext_resource path="res://assets/sprites/objects/sheet_topic_dream.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_abstract_dream.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 15.5, 8 )
@@ -29,8 +28,8 @@ region_rect = Rect2( 316.493, 55.0203, 33.9133, 29.3713 )
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-texture = ExtResource( 4 )
-offset = Vector2( 0, -14.6857 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, -14.6856 )
 region_enabled = true
 region_rect = Rect2( 316.493, 55.0203, 33.9133, 29.3713 )
 
