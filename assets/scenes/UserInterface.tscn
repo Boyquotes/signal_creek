@@ -37,6 +37,7 @@ visible = false
 [node name="DevTools" type="PanelContainer" parent="."]
 margin_right = 198.0
 margin_bottom = 416.0
+focus_mode = 1
 theme = ExtResource( 2 )
 script = ExtResource( 1 )
 
@@ -135,6 +136,8 @@ text = "Open At Knot"
 margin_top = 378.0
 margin_right = 184.0
 margin_bottom = 402.0
+placeholder_text = "type knot name here"
+caret_blink = true
 
 [connection signal="pressed" from="DevTools/VBoxContainer/Reset" to="DevTools" method="_on_Reset_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/Hallway" to="DevTools" method="_on_Hallway_pressed"]
