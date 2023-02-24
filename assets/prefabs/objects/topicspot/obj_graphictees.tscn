@@ -3,8 +3,7 @@
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_topic_dream.png" type="Texture" id=5]
-
+[ext_resource path="res://assets/sprites/objects/sheet_topicspot.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 6, 4 )
@@ -23,7 +22,7 @@ __meta__ = {
 light_mask = 4
 material = ExtResource( 3 )
 position = Vector2( 0, -11 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 93, 42, 22, 23 )
 
