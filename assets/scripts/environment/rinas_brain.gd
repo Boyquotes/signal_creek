@@ -10,48 +10,60 @@ export var rina_positions : Dictionary = {
 
 var current_room_index = 1
 var current_position = Vector2(100, 100)
+var next_room_index = 3 # store the next room for whenever the player is actually in it
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Globals.Rina = self
-	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-#change states (starting knot name)
-func move_rina(room):
-	print("moving rina to " + room)
-	var roomNum = 0
+# change states (starting knot name)
+# newPosition: String name of the new position, passed from Ink
+# doesn't IMMEDIATELY move rina unless player is already in the room.
+# sets current_room_index and next_room_index vars
+func move_rina(newPosition):
+	print("will move rina in: " + newPosition)
 	
-	match room:
+	var newPositionRoomIndex = 0
+	
+	match newPosition: # determine which room we are going to
 		"START": # start in hallway
-			roomNum = 1
+			newPositionRoomIndex = 1
 			
 		"BANDN":
-			roomNum = 0
+			newPositionRoomIndex = 0
 			
 		"TOPICSPOT":
-			roomNum = 2
+			newPositionRoomIndex = 2
 			
 		"HALLWAY":
-			roomNum = 1
+			newPositionRoomIndex = 1
 			
 		"END": # end in hallway
-			roomNum = 1
+			newPositionRoomIndex = 1
 	
-	if roomNum != current_room_index:
-		current_room_index = roomNum
-	
-	self.get_parent().set_global_position(rina_positions.get(room))
-	
+	next_room_index = newPositionRoomIndex
+	current_position = newPosition
+		 
+	if RoomEngine.CurrentRoomIndex == current_room_index and newPositionRoomIndex == current_room_index: # we are in the same room
+		# make rina invisible
+		self.get_parent().set_global_position(rina_positions.get(newPosition))
+		# make rina visible again
 
-func place_rina():
-	RoomEngine.move_object_to_new_room(self.get_parent(), RoomEngine.Rooms[current_room_index], RoomEngine.Rooms[roomNum])
+	elif RoomEngine.CurrentRoomIndex == newPositionRoomIndex:
+		# make rina invisible
+		place_rina_in_new_room()
+		# make rina visible again
 
-#appear from the void
 
-#disappear into the void
+# call this only when the player is actually in the room
+func place_rina_in_new_room():
+	RoomEngine.move_object_to_new_room(self.get_parent(), RoomEngine.Rooms[current_room_index], RoomEngine.Rooms[next_room_index])
+	self.get_parent().set_global_position(rina_positions.get(current_position))
+	current_room_index = next_room_index
+
+#appear from the void (visually)
+
+#disappear into the void (visually)
+

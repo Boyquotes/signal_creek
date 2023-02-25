@@ -9,17 +9,17 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
+"base": "KinematicBody2D",
 "class": "Character",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character.gd"
 }, {
-"base": "Reference",
+"base": "KinematicBody2D",
 "class": "CharacterFollower",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character_follower.gd"
 }, {
-"base": "Reference",
+"base": "KinematicBody2D",
 "class": "CharacterNavigator",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character_navigator.gd"

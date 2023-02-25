@@ -1,4 +1,5 @@
 extends Node
+# MAIN DRIVER of the game based on player input
 
 export var _elevator_focus_position : Vector2 = Vector2(344, 168)
 export var _leader_switching_enabled = false
