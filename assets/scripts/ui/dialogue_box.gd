@@ -55,15 +55,19 @@ func _ready():
 
 
 func _process(_delta):
+	if is_typing:
+		typewriter_effect(false)
+		
+	if fastforward and !_ink_player.get_HasChoices() and _ink_player.get_CanContinue():
+		proceed()
+#		escape_typewriter_effect()
+		
 	if is_expanding_background_panel:
 		expand_background_panel()
 	
 	elif is_shrinking_background_panel:
 		shrink_background_panel()
-	
-	if is_typing:
-		typewriter_effect()
-	
+		
 	if is_auto_scrolling:
 		auto_scroll_down()
 
@@ -106,13 +110,16 @@ func select_current_choice():
 # allows for recursion if devs toggle fast forward
 func proceed():
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
-#		clear_and_reset_ui()
+#		fastforward = false
+		clear_and_reset_ui()
 		is_shrinking_background_panel = true
-		return true
+		return
 	
 	elif !_ink_player.get_HasChoices(): #create normal text entry
 		_ink_player.Continue()
-		print_state()
+		
+		if !fastforward:
+			print_state()
 			
 		var currentLine = _ink_player.get_CurrentText()
 		
@@ -125,17 +132,21 @@ func proceed():
 		if currentLine.substr(0, 1) == "&": #screen shaking
 			#Globals.GameOverlay.start_shaking(true)
 			#RoomEngine.PlaneManager.shift_planes()
-			if currentLine.substr(0, 6) == "&SHAKE":
+			if "&SHAKE" in currentLine:
 				Globals.GameOverlay.start_shaking(false)
-				currentLine = currentLine.trim_prefix('&SHAKE')
+				#currentLine = currentLine.trim_prefix('&SHAKE')
 				
-			elif currentLine.substr(0, 6) == "&BLACK":
+			if "&BLACK" in currentLine:
 				Globals.GameOverlay.set_to_black()
-				currentLine = currentLine.trim_prefix('&BLACK')
+				#currentLine = currentLine.trim_prefix('&BLACK')
 				
-			elif currentLine.substr(0, 6) == "&FDEIN":
+			if "&FDEIN" in currentLine:
 				Globals.GameOverlay.start_fade_in()
-				currentLine = currentLine.trim_prefix('&FDEIN')
+				#currentLine = currentLine.trim_prefix('&FDEIN')
+				
+			if "&MOV_RINA" in currentLine:
+				Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
+				#currentLine = currentLine.trim_prefix('&FDEIN')
 				
 			return
 		
@@ -143,8 +154,7 @@ func proceed():
 		currentLine = currentLine.replacen('>', ']')
 		
 		check_entry_type(currentLine)
-		if fastforward:
-			return false
+			
 	else: #default to nour if no nametag provided
 		is_displaying_choices = true
 		current_speaker = "NOUR:"
@@ -153,12 +163,7 @@ func proceed():
 		
 	yield(get_tree(), "idle_frame")
 	scroll_to_bottom()
-	return false
 
-
-
-func proceed_recurse():
-	pass
 
 # Parses entryText for special characters, determines what type of entry this is
 # Entries are normal, dialogue, or choice
@@ -188,7 +193,9 @@ func check_entry_type(entryText):
 	
 	else: #it's a normal text entry
 		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal)
-		print("NORMAL TEXT")
+		if !fastforward:
+			print("NORMAL TEXT")
+			
 		#track the text label for typewriter effect
 		current_text_box = newText
 		#init typewriter effect
@@ -232,14 +239,18 @@ func expand_background_panel():
 	if panelPosition.y >= -panel_opening_speed:
 		background_panel_node.set_position(Vector2(panelPosition.x, 0))
 		is_expanding_background_panel = false
-		print("expanded")
+		print("expanded dialogue panel")
 	
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
 
 
 #increment visible characters in most recent richtextlabel
-func typewriter_effect():
+func typewriter_effect(escape):
+	if fastforward or escape:
+		current_text_box.set_percent_visible(1.0)
+		is_typing = false
+		
 	var currentVisibility = current_text_box.get_percent_visible()
 	#var totalCharCount = current_text_box.get_total_character_count()
 	var visibleCharacters = current_text_box.get_visible_characters()
@@ -322,7 +333,8 @@ func get_current_speaker():
 
 func find_current_speaker_position():
 	var currentSpeaker = get_current_speaker().to_lower()
-	print("Current Speaker: " + currentSpeaker + "\n")
+	if !fastforward:
+		print("Current Speaker: " + currentSpeaker + "\n")
 	
 	var currentSpeakerIndex = -1
 

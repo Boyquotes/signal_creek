@@ -1,53 +1,54 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
-[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
+[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_bandn_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/objects/sheet_abstract_dream.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 5, 3.5 )
+extents = Vector2( 47.5, 39 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 14, 8.5 )
+extents = Vector2( 13, 12.1875 )
 
-[node name="Rina" type="RigidBody2D" groups=["shiftable"]]
-material = ExtResource( 3 )
+[node name="Fountain" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
-script = ExtResource( 1 )
-__meta__ = {
-"_editor_description_": ""
-}
-is_in_real = false
-
-[node name="Sprite" type="Sprite" parent="."]
-light_mask = 4
-material = ExtResource( 3 )
-position = Vector2( 0, -17 )
-texture = ExtResource( 5 )
-region_enabled = true
-region_rect = Rect2( 50, 23, 24, 34 )
-
-[node name="Hint" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.313726 )
-show_behind_parent = true
-light_mask = 4
-offset = Vector2( 0, -17 )
-region_enabled = true
-region_rect = Rect2( 50, 23, 24, 34 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -3.5 )
-shape = SubResource( 23 )
-
-[node name="ActiveArea" type="Area2D" parent="."]
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+light_mask = 4
+material = ExtResource( 3 )
+position = Vector2( 0, -40 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 31, 239, 98, 82 )
+
+[node name="Hint" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.313726 )
+show_behind_parent = true
+light_mask = 4
+texture = ExtResource( 4 )
+offset = Vector2( 0, -41 )
+region_enabled = true
+region_rect = Rect2( 31, 239, 98, 82 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, -39 )
+shape = SubResource( 23 )
+
+[node name="ActiveArea" type="Area2D" parent="."]
+visible = false
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, 3.5 )
+position = Vector2( 0, -4 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

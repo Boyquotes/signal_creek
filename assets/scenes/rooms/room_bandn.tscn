@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_bandn_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_polaroid.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_priceofsalt.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/shaders/shader_outline.gdshader" type="Shader" id=14]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_rina.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 32, 4 )
@@ -67,14 +66,6 @@ shader_param/pattern = 0
 shader_param/inside = false
 
 [sub_resource type="ShaderMaterial" id=7]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=13]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -169,9 +160,5 @@ position = Vector2( 135, 177 )
 [node name="PriceOfSalt" parent="PlaneManager/Overworld" instance=ExtResource( 13 )]
 material = SubResource( 7 )
 position = Vector2( 214, 202 )
-
-[node name="Rina" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
-material = SubResource( 13 )
-position = Vector2( 256, 144 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
