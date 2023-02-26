@@ -1,4 +1,5 @@
 extends Node
+# MAIN DRIVER of the game based on player input
 
 export var _elevator_focus_position : Vector2 = Vector2(344, 168)
 export var _leader_switching_enabled = false
@@ -19,10 +20,10 @@ func _physics_process(_delta):
 	if Globals.GameMode == Globals.GameModes.TALK:
 		
 		if Globals.DialogueBox.is_displaying_choices:
-			if Input.is_action_just_released("ui_down"):
+			if Input.is_action_just_released("move_down"):
 				Globals.DialogueBox.toggle_choice_selections(1)
 				
-			elif Input.is_action_just_released("ui_up"):
+			elif Input.is_action_just_released("move_up"):
 				Globals.DialogueBox.toggle_choice_selections(-1)
 				
 			if Input.is_action_just_pressed("interact"):
@@ -31,15 +32,18 @@ func _physics_process(_delta):
 				
 		elif Input.is_action_just_pressed("interact"):
 			if Globals.DialogueBox.is_typing:
-				Globals.DialogueBox.escape_typewriter_effect()
-			else:
+				Globals.DialogueBox.typewriter_effect(true)
+			
+			elif !Globals.DialogueBox.fastforward or Globals.DialogueBox._ink_player.get_HasChoices() or !Globals.DialogueBox._ink_player.get_CanContinue():
 				Globals.DialogueBox.proceed()
 				
 			#var followingVector = find_current_speaker_position()
 			#Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 			
 	elif Globals.GameMode == Globals.GameModes.WALK:
-		check_input_character_movement()
+		
+		if !Globals.DevTools.typing_knot_name:
+			check_input_character_movement()
 		
 		# IN CASE OF LEADER SWITCHING
 		if _leader_switching_enabled:
@@ -67,16 +71,16 @@ func _physics_process(_delta):
 func check_input_character_movement():
 	var directionVector = Vector2(0,0)
 
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("move_up"):
 		directionVector += Vector2.UP
 		
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("move_down"):
 		directionVector += Vector2.DOWN
 		
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("move_left"):
 		directionVector += Vector2.LEFT
 		
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		directionVector += Vector2.RIGHT
 		
 	Globals.PartyObject.move_party_by_vector(directionVector)

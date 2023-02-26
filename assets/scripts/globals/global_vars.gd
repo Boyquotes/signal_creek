@@ -10,6 +10,7 @@ enum AnimationMode { WALK, IDLE }   #todo. do we want each combo ex walk_left id
 #declare global game variables
 
 var GameCanvas = null
+var DevTools = null
 
 var GameMode = GameModes.WALK
 var CurrentWorld = Worlds.DREAM
@@ -29,6 +30,7 @@ var PartyObject = null
 var Nick = null
 var Nour = null
 var Suwan = null
+var Rina = null
 
 var Elevator = null
 

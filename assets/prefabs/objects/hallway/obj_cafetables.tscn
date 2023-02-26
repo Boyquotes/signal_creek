@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 25.25, 8 )
+extents = Vector2( 25, 12 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 35, 29.5 )
@@ -36,7 +36,7 @@ region_enabled = true
 region_rect = Rect2( 127, 15, 50, 34 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.25, -8 )
+position = Vector2( 0, -12 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
