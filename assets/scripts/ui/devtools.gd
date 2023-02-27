@@ -3,10 +3,13 @@ extends Control
 export var devmode = true
 
 var hidden = true
+var typing_knot_name = false
 
 
 func _ready():
+	Globals.DevTools = self
 	self.set_visible(false)
+	
 	if devmode:
 		call_deferred("_start_in_devmode")
 
@@ -61,3 +64,11 @@ func _start_in_devmode():
 func _on_MuteAudio_toggled(button_pressed):
 	Globals.SoundManager.set_mute_audio(button_pressed)
 	pass # Replace with function body.
+
+
+func _on_LineEdit_focus_entered():
+	typing_knot_name = true
+
+
+func _on_LineEdit_focus_exited():
+	typing_knot_name = false

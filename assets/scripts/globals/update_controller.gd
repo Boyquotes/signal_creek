@@ -1,4 +1,5 @@
 extends Node
+# MAIN DRIVER of the game based on player input
 
 export var _elevator_focus_position : Vector2 = Vector2(344, 168)
 export var _leader_switching_enabled = false
@@ -17,12 +18,11 @@ func _physics_process(_delta):
 		reset_game()
 	
 	if Globals.GameMode == Globals.GameModes.TALK:
-		
 		if Globals.DialogueBox.is_displaying_choices:
-			if Input.is_action_just_released("ui_down"):
+			if Input.is_action_just_released("move_down"):
 				Globals.DialogueBox.toggle_choice_selections(1)
 				
-			elif Input.is_action_just_released("ui_up"):
+			elif Input.is_action_just_released("move_up"):
 				Globals.DialogueBox.toggle_choice_selections(-1)
 				
 			if Input.is_action_just_pressed("interact"):
@@ -40,7 +40,9 @@ func _physics_process(_delta):
 			#Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 			
 	elif Globals.GameMode == Globals.GameModes.WALK:
-		check_input_character_movement()
+		
+		if !Globals.DevTools.typing_knot_name:
+			check_input_character_movement()
 		
 		# IN CASE OF LEADER SWITCHING
 		if _leader_switching_enabled:
@@ -60,6 +62,9 @@ func _physics_process(_delta):
 		if _can_interact:
 			if Input.is_action_just_pressed("interact"):
 				if Globals.GameMode == Globals.GameModes.WALK:
+					for character in Globals.PartyObject.characterObjects:
+						character.animate_idle()
+						
 					Globals.GameMode = Globals.GameModes.TALK
 					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
 					Globals.DialogueBox.background_panel_node.set_visible(true)

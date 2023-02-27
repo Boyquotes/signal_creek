@@ -2,17 +2,59 @@
 VAR last_knot_nick_visited = false
 VAR last_knot_suwan_visited = false
 
+
+//rina_state can be start, bandn, topicspot, or hallway
+//rina_state is altered from the other objects
+
 == rina ==
     
     //if this isn't the first time talking to Rina, go straight to the choices
     {
+        - !rina_start:
+            -> rina_start
+            
         - rina_bandn:
             -> rina_branches
+            
+        - rina_start:
+            -> rina_bandn
     }
     
     //start from the beginning
-    -> rina_bandn
+    -> rina_start
 
+
+== rina_start ==
+
+    A petite girl with olive skin and dyed strawberry hair stands before the group.
+    
+    Her entire body is still, as if she's a mannequin. A lifelike, breathing mannequin.
+    
+    There's an immediate glimmer of recognition from Nour.
+    
+    NOUR: <i>Looks like Rina hasn't changed since high school.</i>
+    
+    NICK: "Hey, uh... Nour. Do you know her?"
+    
+        * "Yeah, I <i>did</i>."
+        
+        * "She was from my high school."
+    
+    - Nour says nothing.
+    
+    NICK: "Hello? Random girl that Nour recognizes? Do you see us?"
+    
+    Rina pays no mind to her surroundings.
+    
+    RINA BECOMES INVISIBLE
+    
+    There's visible panic on Nour's face.
+    
+    NICK: "Guess she didn't wanna talk, huh."
+    
+    MS SUWAN: "The more you children talk about your hallucinations, the more I begin to see them too. Maybe we should keep those comments to ourselves."
+    
+    -> END
     
 //---------------- MAIN CHOICE BRANCHES ----------------
 //All choices are always present, but they need to be unlocked.
@@ -45,7 +87,7 @@ VAR last_knot_suwan_visited = false
         
             //IF THE LAST KNOT IN NICK'S ROUTE IS VISITED:
             {
-                - last_knot_nick_visited:
+                - nickopensup:
                     -> rina_topicspot
             }
             
@@ -85,14 +127,12 @@ VAR last_knot_suwan_visited = false
         -> rina_branches
 
 //---------------- BEGINNING ----------------
-//first encounter, starts Nour's arc; in bandn
+//first active conversation with Rina, in Bandn
 //This is the big conversation about the incident in the HS cafeteria; it reaches a boiling point.
 //The boiling point directs to the branches.
 
 == rina_bandn ==
 
-    NOUR: <i>Looks like Rina hasn't changed since high school. She has the same strawberry hair that perfectly frames her smug face.</i>
-    
     NOUR: <i>I can't believe we were ever friends.</i>
     
         * "Rina... I haven't seen you since graduation.["] I wish I could've kept it that way."
@@ -115,7 +155,7 @@ VAR last_knot_suwan_visited = false
             
             RINA: What am I forgetting?
             
-                ** "You were quiet, while the others kept going on about how being gay is immoral."
+                ** "You were quiet, while the others kept going on about how being gay is gross and weird."
                 
                     RINA: "Well, sure I was quiet. But that doesn't mean I agreed with them."
                     
@@ -125,24 +165,26 @@ VAR last_knot_suwan_visited = false
                 
                     RINA: "Yeah, you did just come out to me. But I didn't tell anyone!"
                 
-    -   RINA: "I didn't tell your secret to anyone. Isn't that what you wanted?"
+    -   RINA: "I didn't tell your secret to <i>anyone</i>. Isn't that what you wanted?"
         
         * "Thanks for that...["] but that's not the point. Like I said back then, I'm mad that you didn't even try to disagree with the rest of our friends."
         
         * "I know you didn't.["] Like I said back then, I appreciate you keeping it private. I <i>don't</i> appreciate that you didn't even try to disagree with the rest of our friends.
         
-    -   * "They said everything in the book...["] Like how they all thought people should keep their perversions to themselves. That legalizing gay marriage would destroy family values."
+    -  * "They said everything in the book...["] Like how they all thought people should keep their bad urges to themselves."
+    
+            NOUR: "That legalizing gay marriage would lead us down a slippery slope to <i>even worse things</i>."
                 
-            RINA: "What did you want <i>me</i> to do about it? Make them suddenly open-minded?"
+            RINA: "What did you want <i>me</i> to do about it? Make everyone suddenly unlearn what our middle-eastern parents taught us about queerness?"
                         
-                ** "I wanted you to be an ally[."], to say that you support queer people, and that you weren't going to take part in that conversation anymore."
+                ** "I wanted you to be an ally[."], to say that you support queer people, or at least that we're supposed to love all of god's creations, or whatever."
                 
-                    RINA: "If I told them I'm an ally, they would think I'm perverted."
+                    RINA: "If I told them I'm an ally, they would think I'm gross."
                     
-                    NOUR: "They would think <i>you're</i> perverted?"
+                    NOUR: "They would think <i>you're</i> gross?"
                     
                     
-                ** "I wanted you to disagree with them[."], and argue that they're just brainwashed by conservatism."
+                ** "I wanted you to disagree with them[."], and argue that they're just brainwashed by their parents."
                 
                     RINA: "Yeah, but if I disagreed with them right there, they would be suspicious of <i>me</i>."
                     
@@ -152,9 +194,14 @@ VAR last_knot_suwan_visited = false
     -   * "Well, imagine how I feel.["] I'm the one whose rights were actually being debated."
             
         * "You can still choose to be 'normal' at the end of the day.["] I can't change how I am."
-            
         
     -   RINA: "I know that. But I <i>said</i> that I'm sorry. You know I wouldn't throw away ten years of friendship."
+    
+        RINA: "But you know what would've happened if I said something then?"
+        
+        RINA: "They would've told their siblings, and their cousins. And then people's parents would find out. And all our parents know each other, so they'd <i>all</i> know."
+        
+        RINA: "Then my parents would get mad, too."
         
         Tears begin to form in Rina's eyes.
         
@@ -319,7 +366,9 @@ VAR last_knot_suwan_visited = false
             
             ** "I needed to feel like I wasn't alone.["] I couldn't share how I felt with my family, because they'd warn me that acting on it is haram."
             
-                NOUR: "I couldn't tell any other friends either, point proven by that cafeteria discussion. So I went to you, because you were always there for me, and made sure I was never alone."
+                NOUR: "I couldn't tell any other friends either, point proven by that cafeteria discussion."
+                
+                NOUR: "So I went to you, because you were always there for me, and made sure I was never alone."
     
     -   NOUR: "And when I felt like <i>you</i> weren't looking out for me, I had nobody to go to."
         
@@ -360,7 +409,7 @@ VAR last_knot_suwan_visited = false
         
         NOUR: "You're in the past now."
         
-        //rina shlorps out of existence
+        RINA DISAPPEARS.
         
         NICK: "NICE! Button smashing time!"
         
