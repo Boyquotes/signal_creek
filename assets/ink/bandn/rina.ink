@@ -32,7 +32,7 @@ VAR last_knot_suwan_visited = false
     
     There's an immediate glimmer of recognition from Nour.
     
-    NOUR: <i>Looks like Rina hasn't changed since high school. She has the same strawberry hair that perfectly frames her smug face.</i>
+    NOUR: <i>Looks like Rina hasn't changed since high school.</i>
     
     NICK: "Hey, uh... Nour. Do you know her?"
     
@@ -46,7 +46,7 @@ VAR last_knot_suwan_visited = false
     
     Rina pays no mind to her surroundings.
     
-    //rina becomes invisible here
+    RINA BECOMES INVISIBLE
     
     There's visible panic on Nour's face.
     
@@ -87,7 +87,7 @@ VAR last_knot_suwan_visited = false
         
             //IF THE LAST KNOT IN NICK'S ROUTE IS VISITED:
             {
-                - last_knot_nick_visited:
+                - nickopensup:
                     -> rina_topicspot
             }
             
@@ -165,24 +165,26 @@ VAR last_knot_suwan_visited = false
                 
                     RINA: "Yeah, you did just come out to me. But I didn't tell anyone!"
                 
-    -   RINA: "I didn't tell your secret to anyone. Isn't that what you wanted?"
+    -   RINA: "I didn't tell your secret to <i>anyone</i>. Isn't that what you wanted?"
         
         * "Thanks for that...["] but that's not the point. Like I said back then, I'm mad that you didn't even try to disagree with the rest of our friends."
         
         * "I know you didn't.["] Like I said back then, I appreciate you keeping it private. I <i>don't</i> appreciate that you didn't even try to disagree with the rest of our friends.
         
-    -  * "They said everything in the book...["] Like how they all thought people should keep their bad urges to themselves. That legalizing gay marriage would lead us down a slippery slope to even <i>worse</i> things."
+    -  * "They said everything in the book...["] Like how they all thought people should keep their bad urges to themselves."
+    
+            NOUR: "That legalizing gay marriage would lead us down a slippery slope to <i>even worse things</i>."
                 
-            RINA: "What did you want <i>me</i> to do about it? Make them suddenly open-minded? Separate them from how we were raised?"
+            RINA: "What did you want <i>me</i> to do about it? Make everyone suddenly unlearn what our middle-eastern parents taught us about queerness?"
                         
-                ** "I wanted you to be an ally[."], to say that you support queer people, or at least that we're supposed to love all of god's creations."
+                ** "I wanted you to be an ally[."], to say that you support queer people, or at least that we're supposed to love all of god's creations, or whatever."
                 
                     RINA: "If I told them I'm an ally, they would think I'm gross."
                     
                     NOUR: "They would think <i>you're</i> gross?"
                     
                     
-                ** "I wanted you to disagree with them[."], and argue that they're just brainwashed by their conservative parents."
+                ** "I wanted you to disagree with them[."], and argue that they're just brainwashed by their parents."
                 
                     RINA: "Yeah, but if I disagreed with them right there, they would be suspicious of <i>me</i>."
                     
@@ -364,7 +366,9 @@ VAR last_knot_suwan_visited = false
             
             ** "I needed to feel like I wasn't alone.["] I couldn't share how I felt with my family, because they'd warn me that acting on it is haram."
             
-                NOUR: "I couldn't tell any other friends either, point proven by that cafeteria discussion. So I went to you, because you were always there for me, and made sure I was never alone."
+                NOUR: "I couldn't tell any other friends either, point proven by that cafeteria discussion."
+                
+                NOUR: "So I went to you, because you were always there for me, and made sure I was never alone."
     
     -   NOUR: "And when I felt like <i>you</i> weren't looking out for me, I had nobody to go to."
         
@@ -405,7 +409,7 @@ VAR last_knot_suwan_visited = false
         
         NOUR: "You're in the past now."
         
-        //rina shlorps out of existence
+        RINA DISAPPEARS.
         
         NICK: "NICE! Button smashing time!"
         
