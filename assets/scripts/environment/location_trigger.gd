@@ -18,6 +18,9 @@ func _process(delta):
 
 func _on_LocationTrigger_body_entered(body):
 	if body == Globals.PartyObject.get_leader() && Globals.GameMode == Globals.GameModes.WALK:
+		for character in Globals.PartyObject.characterObjects:
+			character.animate_idle()
+			
 		Globals.GameMode = Globals.GameModes.TALK
 		_talked_to = true
 		

@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=2]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Down"
+length = 0.5
+loop = true
+step = 0.0625
+
+[sub_resource type="Animation" id=16]
+resource_name = "DownIdle"
+length = 0.0625
+loop = true
+step = 0.0625
+
+[sub_resource type="Animation" id=4]
+resource_name = "Left"
+length = 0.5
+loop = true
+step = 0.0625
+
+[sub_resource type="Animation" id=17]
+resource_name = "LeftIdle"
+length = 0.0625
+loop = true
+step = 0.0625
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+
+[sub_resource type="Animation" id=5]
+resource_name = "Right"
+length = 0.5
+loop = true
+step = 0.0625
+
+[sub_resource type="Animation" id=18]
+resource_name = "RightIdle"
+length = 0.0625
+loop = true
+step = 0.0625
+
+[sub_resource type="Animation" id=2]
+resource_name = "Up"
+length = 0.5
+loop = true
+step = 0.0625
+
+[sub_resource type="Animation" id=19]
+resource_name = "UpIdle"
+length = 0.0625
+loop = true
+step = 0.0625
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+anims/Down = SubResource( 3 )
+anims/DownIdle = SubResource( 16 )
+anims/Left = SubResource( 4 )
+anims/LeftIdle = SubResource( 17 )
+anims/RESET = SubResource( 1 )
+anims/Right = SubResource( 5 )
+anims/RightIdle = SubResource( 18 )
+anims/Up = SubResource( 2 )
+anims/UpIdle = SubResource( 19 )

@@ -15,7 +15,7 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_priceofsalt.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/shaders/shader_outline.gdshader" type="Shader" id=14]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_musicstand.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_rina.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/prefabs/obj_rina.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_poster1.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_skeletondisplay.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_poster2.tscn" type="PackedScene" id=19]
@@ -34,6 +34,7 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_notebooks.tscn" type="PackedScene" id=32]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_displaystand.tscn" type="PackedScene" id=33]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_kindle.tscn" type="PackedScene" id=34]
+
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 32, 4 )
