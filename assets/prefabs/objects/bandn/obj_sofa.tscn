@@ -1,18 +1,17 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_NEW.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/objects/sheet_bandn_dream.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 10.5, 5 )
+extents = Vector2( 18, 17.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 11.5, 10 )
+extents = Vector2( 22, 38.5 )
 
-[node name="DragonPlush" type="RigidBody2D" groups=["shiftable"]]
+[node name="Sofa" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 3 )
 mode = 1
 script = ExtResource( 1 )
@@ -23,23 +22,22 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0.52, -8 )
-scale = Vector2( 1.04, 1 )
+position = Vector2( 0, -7 )
 texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 172, 104.3, 24, 23.6995 )
+region_rect = Rect2( 208.812, 4.02298, 36.5165, 70.0453 )
 
 [node name="Hint" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-texture = ExtResource( 5 )
-offset = Vector2( 0, -11.8498 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -35.0226 )
 region_enabled = true
-region_rect = Rect2( 172, 104.3, 24, 23.6995 )
+region_rect = Rect2( 208.812, 4.02298, 36.5165, 70.0453 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.5, -5 )
+position = Vector2( 2, 11.5 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -49,7 +47,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0.5, -9 )
+position = Vector2( 3, -8.5 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
