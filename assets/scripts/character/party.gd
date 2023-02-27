@@ -12,7 +12,7 @@ export var dream_character_sheet : Texture
 export var real_character_sheet : Texture
 export(Array, Texture) var dream_portraits = []
 export(Array, Texture) var real_portraits = []
-#export(Array, Texture) var dream_character_sheet = []
+export(Array, Texture) var dream_character_sheets = []
 #export(Array, Texture) var real_character_sheet = []
 
 var partyMembers = [
@@ -57,7 +57,7 @@ func change_portrait(_sprite):
 
 func change_assets_world(currentPlane):
 	if currentPlane == Globals.Worlds.DREAM:
-		change_party_sprites(dream_character_sheet)
+		change_party_sprites(dream_character_sheets)
 		
 	else:
 		change_party_sprites(real_character_sheet)
@@ -66,10 +66,13 @@ func change_assets_world(currentPlane):
 	update_leader_to(leaderIndex)
 
 
-func change_party_sprites(sheet):
+func change_party_sprites(sheets):
+	
+	var i = 0
 	for character in characterObjects:
 		# will be an array index when they are animated
-		character.set_sprite(sheet)
+		character.set_sprite(sheets[i])
+		i += 1
 
 
 func get_character_objects():

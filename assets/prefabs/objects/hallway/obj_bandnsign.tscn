@@ -14,12 +14,13 @@ light_mask = 4
 position = Vector2( 0, -14 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 32, 143, 29, 28 )
+region_rect = Rect2( 259, 127, 30, 28 )
 
 [node name="Hint" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+texture = ExtResource( 3 )
 offset = Vector2( 0, -14 )
 region_enabled = true
-region_rect = Rect2( 32, 143, 29, 28 )
+region_rect = Rect2( 259, 127, 30, 28 )

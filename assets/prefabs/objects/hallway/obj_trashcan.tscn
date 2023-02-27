@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 7, 7.5 )
+extents = Vector2( 7, 4.5 )
 
 [node name="TrashCan" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -18,16 +18,17 @@ light_mask = 4
 position = Vector2( 0, -12 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 33, 89, 14, 24 )
+region_rect = Rect2( 81, 80, 14, 24 )
 
 [node name="Hint" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+texture = ExtResource( 3 )
 offset = Vector2( 0, -12 )
 region_enabled = true
-region_rect = Rect2( 33, 89, 14, 24 )
+region_rect = Rect2( 81, 80, 14, 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -7.5 )
+position = Vector2( 0, -4.5 )
 shape = SubResource( 23 )

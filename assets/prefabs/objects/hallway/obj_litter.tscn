@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 17, 10 )
+extents = Vector2( 8.5, 6 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 18, 13.5 )
@@ -24,18 +24,19 @@ material = ExtResource( 3 )
 position = Vector2( 0, -10 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 91, 103, 34, 25 )
+region_rect = Rect2( 109, 192, 25, 21 )
 
 [node name="Hint" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-offset = Vector2( 0, -12.5 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, -10.5 )
 region_enabled = true
-region_rect = Rect2( 91, 103, 34, 25 )
+region_rect = Rect2( 109, 192, 25, 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -10 )
+position = Vector2( -0.5, -10 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]

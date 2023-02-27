@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/vapestand.ink-1fb319ed7ac6844312f354a9b1a9478d.res"
+
+[deps]
+
+source_file="res://assets/ink/hallway/vapestand.ink"
+dest_files=[ "res://.import/vapestand.ink-1fb319ed7ac6844312f354a9b1a9478d.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

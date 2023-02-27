@@ -9,6 +9,7 @@ INCLUDE bandn/oldnovel.ink
 INCLUDE bandn/pens.ink
 INCLUDE bandn/polaroid.ink
 INCLUDE bandn/priceofsalt.ink
+INCLUDE bandn/bookshelf.ink
 
 INCLUDE hallway/bobatea.ink
 INCLUDE hallway/cafetables.ink
@@ -29,8 +30,12 @@ INCLUDE topicspot/phonecases.ink
 INCLUDE topicspot/pinbuttons.ink
 INCLUDE topicspot/sailormoonposters.ink
 
+INCLUDE betaintro.ink
+
+
 == abstract ==
 
-Hello. This is an Abstract Object. Thank you for coming.
+    Hello. This is an Abstract Object. Thank you for coming.
 
     -> END
+    
