@@ -18,7 +18,6 @@ func _physics_process(_delta):
 		reset_game()
 	
 	if Globals.GameMode == Globals.GameModes.TALK:
-		
 		if Globals.DialogueBox.is_displaying_choices:
 			if Input.is_action_just_released("move_down"):
 				Globals.DialogueBox.toggle_choice_selections(1)
@@ -63,6 +62,9 @@ func _physics_process(_delta):
 		if _can_interact:
 			if Input.is_action_just_pressed("interact"):
 				if Globals.GameMode == Globals.GameModes.WALK:
+					for character in Globals.PartyObject.characterObjects:
+						character.animate_idle()
+						
 					Globals.GameMode = Globals.GameModes.TALK
 					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
 					Globals.DialogueBox.background_panel_node.set_visible(true)

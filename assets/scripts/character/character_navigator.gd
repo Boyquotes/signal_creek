@@ -62,10 +62,10 @@ func move_character_by_vector(directionVector : Vector2):
 			
 	else:
 		if directionVector.y > 0:
-			animate_up()
+			animate_down()
 			
 		else:
-			animate_down()
+			animate_up()
 			
 	_velocity = directionVector * walk_speed * get_physics_process_delta_time()
 	_velocity = move_and_slide(_velocity)
