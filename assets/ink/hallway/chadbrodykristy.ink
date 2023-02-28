@@ -13,6 +13,7 @@
   
   
 // ----- Part of First interaction when they just get to the mall-----
+== chadbrodykristy ==
 
 {
     - musicstand3:

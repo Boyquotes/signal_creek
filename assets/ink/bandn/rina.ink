@@ -1,7 +1,4 @@
 //Temporary variables, until we decide what knot these routes end on
-VAR last_knot_nick_visited = false
-VAR last_knot_suwan_visited = false
-
 
 //rina_state can be start, bandn, topicspot, or hallway
 //rina_state is altered from the other objects
@@ -72,7 +69,7 @@ VAR last_knot_suwan_visited = false
             
             //IF THE LAST KNOTS IN BOTH ROUTES ARE VISITED:
             {
-                - last_knot_nick_visited && last_knot_suwan_visited:
+                - nicktalksaboutfantasygame && chadbrodykristy3:
                     -> rina_help
             }
             
@@ -87,7 +84,7 @@ VAR last_knot_suwan_visited = false
         
             //IF THE LAST KNOT IN NICK'S ROUTE IS VISITED:
             {
-                - nickopensup:
+                - nicktalksaboutfantasygame:
                     -> rina_topicspot
             }
             
@@ -100,7 +97,7 @@ VAR last_knot_suwan_visited = false
         
             //IF THE LAST KNOT IN SUWAN'S ROUTE IS VISITED:
             {
-                - last_knot_suwan_visited:
+                - chadbrodykristy3:
                     -> rina_hallway
             }
             

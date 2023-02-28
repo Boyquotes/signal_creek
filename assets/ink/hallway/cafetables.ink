@@ -1,7 +1,6 @@
 // VAR chadkristybrody_visitedSW1 = true
 // VAR musicstand_visitedSW2 = false
 // VAR swevent3_visited = false
-VAR cafetablesend = false
 
 // ->cafetables
 
@@ -13,16 +12,21 @@ VAR cafetablesend = false
 //note to self: do some gathers - choices that lead to the same conversation 
 
 {
-    - chadkristybrody2 && musicstand4 && chadbrodykristy3 && cafetablesend:
+    - chadbrodykristy1 && musicstand4 && chadbrodykristy3:
         -> cafetables_end
-    - chadkristybrody2 && musicstand4 && chadbrodykristy3: 
+        
+    - chadbrodykristy2 && musicstand4 && chadbrodykristy3: 
         -> cafetables3
-    - chadkristybrody2 && musicstand4:
+        
+    - chadbrodykristy2 && musicstand4:
         -> cafetables3_5
-    - chadkristybrody2 && cafetables1:
+        
+    - chadbrodykristy2 && cafetables1:
         -> cafetables2_5
-    - chadkristybrody2:
+        
+    - chadbrodykristy2:
         -> cafetables2
+        
     - else: 
         -> cafetables1
 }
@@ -132,8 +136,11 @@ VAR cafetablesend = false
         NOUR: <i>And I do understand her! Way more than she thinks.</i>
         
         NOUR: <i>Maybe I should try approaching this differently...</i>
+            
             -> cafetables_getsuwantotalk
+    
     * [Relate to her situation]
+        
         NOUR: "I used to come here with an old friend. This was our favorite spot in the cafe."
         
         NOUR: "Perfect amount of sun, non-rickety tables, and just far enough from the cashier so that you could actually hear the person you were with."
@@ -189,8 +196,11 @@ VAR cafetablesend = false
         NOUR: <i>She might not be ready to face her ex-friends, but maybe I could ease her into opening up to the idea. If I reconnect her to a hobby, that will make her realize she can change her ways.</i>
         
         NOUR: <i>If I could find something related to what she used to love, that could do just the trick.</i>
+            
             -> END
+    
     * [Bring it up subtly]
+        
         NOUR: "So...do you like going to cafes?"
         
         MS. SUWAN: "No. It's more efficient and cost-effective for me to make my own coffee."
@@ -210,8 +220,11 @@ VAR cafetablesend = false
         NOUR: <i>That didn't go too well. Being indirect got me nowhere near the subject.</i>
         
         NOUR: <i>Maybe I should try approaching this differently...</i>
+            
             -> cafetables_getsuwantotalk
+    
     + [I have nothing to say] I'll try to get her to talk later.
+        
         -> END
 
 === cafetables3_5 ===
@@ -259,9 +272,12 @@ VAR cafetablesend = false
     
     MS. SUWAN: "That didn't seem like nothing to me, but if that's what you want to say..."
     
-    NOUR: <i>I nod at her. I don't like the way she looks at me.</i>{cafetablesend == true}
+    NOUR: <i>I nod at her. I don't like the way she looks at me.</i
+    
         -> cafetables_end
 
 === cafetables_end ===
+
     NOUR: <i>I think we've explored everything we could here.</i>
+        
         -> END

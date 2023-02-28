@@ -29,6 +29,8 @@
 
 // }
 
+== musicstand ==
+
 {
     - musicstand3 && cafetables_getsuwantotalk:
         -> musicstand4
@@ -38,7 +40,7 @@
         -> musicstand3
     - musicstand1:
         -> musicstand2
-    - chadkristybrody1:
+    - chadbrodykristy1:
         -> musicstand1
 }
 
