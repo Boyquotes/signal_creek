@@ -1,6 +1,3 @@
-VAR nickevent3 = false
-VAR musicstand4 = false
-
 == consoles ==
 
 It's a new edition GameStage console, running a demo of the hit game FANTASY GAME. Nour pauses at it, and notes from the corner of her eye that Nick seems to be excited.
@@ -9,7 +6,7 @@ When she turns to speak to him, however, he's turned around completely, obviousl
 
     {
             
-        -nickevent3:
+        - noursuggestion:
         
             -> nourplaysfantasygame
             
@@ -95,14 +92,10 @@ Nick's face suddenly falls, and he goes quiet for a moment, glaring at the groun
 NICK: "I don't... actually own the game. I watch a lot of videos about it and watch <i>others</i> play it but..."
 
     * Stay quiet and wait for him to speak.
-        -> nickopensup
     
     * "It's alright, you can talk to me about it..."
-        -> nickopensup
-    
-== nickopensup ==
 
-Nick seems to fumble for the correct words before shrugging, seemingly resigned. When he looks back up at Nour his eyes are glimmering, not quite crying but close to it.
+- Nick seems to fumble for the correct words before shrugging, seemingly resigned. When he looks back up at Nour his eyes are glimmering, not quite crying but close to it.
 
 NICK: "My mom wouldn't let me get the game and play it because my grades were shit. She said I could get it if I fixed them but it's... it's fucking <i>hard</i>. I'm too fucking dumb to do anything right." 
 
@@ -114,13 +107,13 @@ He motions towards Ms. Suwan, who just blinks quietly in response.
 
 NICK: "I don't have the time to focus on school, and even when I <i>do</i> it's fucking <i>hard</i>. It's like there's a... a brick wall just in front of <i>everything</i>.
 
-    * "But you love this game. You've dedicated so much time to it, you're not useless or dumb."
+    ** "But you love this game. You've dedicated so much time to it, you're not useless or dumb."
     
         -  Nick still seems frustrated, but after a moment searching for something to be angry about, tears start to leak out of his eyes even as he tries to force them down.
         
         NICK: "No one's ever... everyone thinks I'm dumb. I've been useless my entire life... but yeah. I love this game, it means a lot to me, I want to dedicate more time to it."
     
-    * "I'm sorry that it's been so hard for you... but acting out isn't going to make it better.["] If you keep doing this, then you'll never be able to truly get into the thing you love."
+    ** "I'm sorry that it's been so hard for you... but acting out isn't going to make it better.["] If you keep doing this, then you'll never be able to truly get into the thing you love."
     
             - NICK: "So what should I do? It's not that fucking easy, my life is a fucking <i>mess</i>. I don't know what else to do."
 
