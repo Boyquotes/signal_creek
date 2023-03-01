@@ -17,6 +17,9 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("reset"):
 		reset_game()
 	
+	Globals.PartyObject.move_followers_by_pathfind()
+	#print(Globals.Suwan.get_global_position())
+	
 	if Globals.GameMode == Globals.GameModes.TALK:
 		if Globals.DialogueBox.is_displaying_choices:
 			if Input.is_action_just_released("move_down"):
@@ -85,7 +88,7 @@ func check_input_character_movement():
 	if Input.is_action_pressed("move_right"):
 		directionVector += Vector2.RIGHT
 		
-	Globals.PartyObject.move_party_by_vector(directionVector)
+	Globals.PartyObject.move_leader_by_vector(directionVector)
 
 func reset_game():
 	#set the default room's starting pos to the default starting pos

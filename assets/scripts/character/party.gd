@@ -13,7 +13,7 @@ export var real_character_sheet : Texture
 export(Array, Texture) var dream_portraits = []
 export(Array, Texture) var real_portraits = []
 export(Array, Texture) var dream_character_sheets = []
-#export(Array, Texture) var real_character_sheet = []
+export(Array, Texture) var real_character_sheets = []
 
 var partyMembers = [
 	Globals.Characters.NICK,
@@ -36,13 +36,25 @@ func _ready():
 	Globals.Nick = characterObjects[0]
 	Globals.Nour = characterObjects[1]
 	Globals.Suwan = characterObjects[2]
+	
+	Globals.Nick.following_node = get_leader()
+	Globals.Suwan.following_node = get_leader()
 
 
 # Control leader movement; others follow
-func move_party_by_vector(directionVector):
+func move_leader_by_vector(directionVector):
 	characterObjects[leaderIndex].move_character_by_vector(directionVector)
-	characterObjects[wrapi(leaderIndex + 1, 0,3)].pathfind_to(get_leader())
-	characterObjects[wrapi(leaderIndex - 1, 0,3)].pathfind_to(get_leader())
+	
+	#move_followers_by_pathfind()
+
+
+# move following party members toward the node they are following
+func move_followers_by_pathfind():
+	var follower1 = characterObjects[wrapi(leaderIndex + 1, 0,3)]
+	var follower2 = characterObjects[wrapi(leaderIndex - 1, 0,3)]
+	
+	follower1.pathfind_to(follower1.following_node)
+	follower2.pathfind_to(follower2.following_node)
 
 
 # Change CornerPortrait in the ui
