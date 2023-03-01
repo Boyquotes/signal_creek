@@ -3,8 +3,7 @@
     //location: elevator
     //NICK AND NOUR RUN INTO THE ELEVATOR
     &POS_SUWAN_160,256
-    &POS_NICK_184,120
-    &POS_NOUR_160,120
+
     &FOLLOW_SUWAN_SuwanStartingPos
     
     NICK: “QUICK, IN HERE!"

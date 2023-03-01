@@ -16,7 +16,7 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [  ]
 }
-party_starting_position = Vector2( 168, 120 )
+party_starting_position = Vector2( 160, 120 )
 room_bounds_max = Vector2( 320, 192 )
 room_index = 3
 
@@ -33,7 +33,7 @@ __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
 }
 room_index = 1
-exit_position = Vector2( 344, 216 )
+exit_position = Vector2( 474, 284 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doortal"]
 shape = SubResource( 1 )
