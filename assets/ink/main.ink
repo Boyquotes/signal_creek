@@ -42,3 +42,9 @@ INCLUDE betaintro.ink
 
     -> END
     
+== missing_path ==
+
+    This object's name does not match any path in the master ink. Please disable the object's ActiveArea or create a knot with the object's name.
+    
+    -> END
+    

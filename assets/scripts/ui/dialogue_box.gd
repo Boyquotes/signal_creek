@@ -77,6 +77,7 @@ func open_at_knot(pathstring):
 	_ink_player.SetVariable("currentPartyChar", Globals.PartyObject.get_leader_inkname())
 	_ink_player.SetVariable("currentWorld", Globals.get_world_inkname())
 	
+	
 	_ink_player.ChoosePathString(pathstring)
 	
 	current_speaker = Globals.PartyObject.get_leader_inkname()
