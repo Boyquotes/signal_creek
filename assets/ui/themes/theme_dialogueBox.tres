@@ -1,8 +1,9 @@
-[gd_resource type="Theme" load_steps=14 format=2]
+[gd_resource type="Theme" load_steps=15 format=2]
 
 [ext_resource path="res://assets/ui/fonts/cambay/cambay_italic_16.tres" type="DynamicFont" id=1]
-[ext_resource path="res://assets/ui/fonts/pixel operator/pixeloperator_16.tres" type="DynamicFont" id=2]
-[ext_resource path="res://assets/ui/fonts/pixel operator/pixeloperator_bold_16.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Italic.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=4]
 
 [sub_resource type="StyleBoxFlat" id=2]
 content_margin_left = 4.0
@@ -126,6 +127,7 @@ LinkButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 LinkButton/constants/underline_spacing = 2
 LinkButton/fonts/font = ExtResource( 1 )
 LinkButton/styles/focus = null
+Panel/fonts/font = ExtResource( 4 )
 Panel/styles/panel = SubResource( 1 )
 PanelContainer/styles/panel = SubResource( 12 )
 RichTextLabel/colors/default_color = Color( 1, 1, 1, 1 )
@@ -138,9 +140,9 @@ RichTextLabel/constants/shadow_offset_x = 0
 RichTextLabel/constants/shadow_offset_y = 0
 RichTextLabel/constants/table_hseparation = 0
 RichTextLabel/constants/table_vseparation = 0
-RichTextLabel/fonts/bold_font = ExtResource( 3 )
+RichTextLabel/fonts/bold_font = ExtResource( 2 )
 RichTextLabel/fonts/italics_font = ExtResource( 3 )
-RichTextLabel/fonts/normal_font = ExtResource( 2 )
+RichTextLabel/fonts/normal_font = ExtResource( 4 )
 RichTextLabel/styles/focus = null
 RichTextLabel/styles/normal = null
 ScrollContainer/styles/bg = SubResource( 7 )
