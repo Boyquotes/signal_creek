@@ -19,6 +19,9 @@ onready var rina_sprite = self.get_parent().get_child(0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Globals.Rina = self
+	if RoomEngine.CurrentRoom == RoomEngine.Rooms[1]:
+		move_rina("START")
+	rina_shlorp_in()
 
 
 func _process(_delta):
@@ -69,7 +72,7 @@ func place_rina_in_new_room():
 	RoomEngine.move_object_to_new_room(self.get_parent(), RoomEngine.Rooms[current_room_index], RoomEngine.Rooms[next_room_index])
 	self.get_parent().set_global_position(rina_positions.get(current_position))
 	current_room_index = next_room_index
-	rina_shlorp_in()
+#	rina_shlorp_in()
 
 
 # appear from the void (visually)
