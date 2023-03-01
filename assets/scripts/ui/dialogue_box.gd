@@ -149,6 +149,9 @@ func proceed():
 				Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
 				#currentLine = currentLine.trim_prefix('&FDEIN')
 				
+			if "&SHLORP_RINA" in currentLine:
+				Globals.Rina.rina_shlorp_out()
+				
 			if "&POS" in currentLine: #move nick to vector2
 				var charName = currentLine.split("_")[1].strip_escapes()
 				var vectorPos = currentLine.split("_")[2].strip_escapes()
