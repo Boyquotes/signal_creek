@@ -1,11 +1,12 @@
-VAR nickevent1 = true
-
 == bookshelf ==
 
     It's a tall bookshelf, stacked with all kinds of instructional guides, exam prep workbooks, and how-to books... for those interested in <i>cool</i> new hobbies!
     
     {
-        -nickevent1:
+        - noursuggestion && nicktalksaboutfantasygame:
+            -> END
+            
+        - nickaskstobuyvape:
             -> noursuggestion
     }
     

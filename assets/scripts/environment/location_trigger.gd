@@ -2,18 +2,18 @@ extends Area2D
 
 export var _knot_name : String = "abstract"
 
-var _talked_to = false
+onready var _talked_to = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	self.set_pause_mode(false)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Globals.GameMode == Globals.GameModes.WALK && _talked_to:
-		self.queue_free()
+		self.set_pause_mode(true)
 
 
 func _on_LocationTrigger_body_entered(body):

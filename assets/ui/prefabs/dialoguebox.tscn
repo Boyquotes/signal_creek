@@ -49,18 +49,18 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance_placeholder="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn"]
-margin_top = 100.0
+margin_top = 78.0
 margin_right = 282.0
-margin_bottom = 116.0
+margin_bottom = 94.0
 
 [node name="DialogueEntryChoices" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
-margin_top = 136.0
+margin_top = 114.0
 margin_right = 282.0
-margin_bottom = 260.0
+margin_bottom = 238.0
 
 [node name="DialogueEntry" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-margin_top = 280.0
-margin_bottom = 332.0
+margin_top = 258.0
+margin_bottom = 354.0
 
 [node name="ColorManager" type="Control" parent="."]
 margin_right = 40.0
@@ -73,7 +73,8 @@ characterColors = {
 "kannika": Color( 0.380392, 0.670588, 1, 1 ),
 "kid amogus": Color( 1, 0.52549, 0.858824, 1 ),
 "kristy": Color( 1, 0.52549, 0.858824, 1 ),
-"ms suwan": Color( 0.38, 0.67, 1, 1 ),
+"ms suwan": Color( 0.380392, 0.670588, 1, 1 ),
+"ms. suwan": Color( 0.380392, 0.670588, 1, 1 ),
 "nick": Color( 0.88, 0.78, 0.38, 1 ),
 "nour": Color( 0.78, 0.38, 0.38, 1 ),
 "rina": Color( 1, 0.439216, 0.67451, 1 ),
