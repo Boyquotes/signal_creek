@@ -10,6 +10,19 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "KinematicBody2D",
+<<<<<<< HEAD
+=======
+"class": "Character",
+"language": "GDScript",
+"path": "res://assets/scripts/character/character.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "CharacterFollower",
+"language": "GDScript",
+"path": "res://assets/scripts/character/character_follower.gd"
+}, {
+"base": "KinematicBody2D",
+>>>>>>> Erna
 "class": "CharacterNavigator",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character_navigator.gd"
