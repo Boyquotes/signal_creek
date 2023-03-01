@@ -4,11 +4,14 @@
 //Something that he will speak about when he doesn't want to talk after
 //event 2
 {
-    - currentWorld == bookshelf_visited:
-        -> wallofvg1
-    - currentWorld == bookshelf_visited && console_visited:
+    - bookshelf && consoles:
         -> wallofvg2
-    - else: 
+        
+    - bookshelf:
+        -> wallofvg1
+        
+    - else:
+    
         -> wallofvg
 }
 

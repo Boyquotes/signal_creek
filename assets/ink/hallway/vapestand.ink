@@ -4,14 +4,12 @@
 It's a vape stand, with several different flavors on sale. Nick stops in front of them, interested.
 
 {
-    -nickevent1:
+    - !nickaskstobuyvape:
         -> nickaskstobuyvape
 
-    -nickevent2:
+    - noursuggestion:
         -> nicknotinterested
 
-    -nickevent3:
-        -> nicknotinterested
 }
 
 -> END

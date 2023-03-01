@@ -204,7 +204,9 @@ public class InkPlayer : Node
 			}
 			catch (Exception e)
 			{
-				GD.PrintErr(e.ToString());
+				inkStory.ChoosePathString("missing_path");
+				GD.PrintErr("PATH STRING DOES NOT EXIST: " + pathString);
+				//GD.PrintErr(e.ToString());
 			}
 		}
 
