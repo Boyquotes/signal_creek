@@ -148,6 +148,47 @@ func proceed():
 				Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
 				#currentLine = currentLine.trim_prefix('&FDEIN')
 				
+			if "&POS" in currentLine: #move nick to vector2
+				var charName = currentLine.split("_")[1].strip_escapes()
+				var vectorPos = currentLine.split("_")[2].strip_escapes()
+				vectorPos = vectorPos.split(",")
+				vectorPos = Vector2(vectorPos[0], vectorPos[1])
+				
+				match charName:
+					"NICK":
+						Globals.Nick.place_character_at_vector(vectorPos)
+						
+					"NOUR":
+						Globals.Nour.place_character_at_vector(vectorPos)
+						
+					"SUWAN":
+						Globals.Suwan.place_character_at_vector(vectorPos)
+				
+			
+			if "&FOLLOW" in currentLine:
+				var charName = currentLine.split("_")[1].strip_escapes()
+				var posNodeName = currentLine.split("_")[2].strip_escapes()
+				var posNode
+				
+				if posNodeName == "NOUR":
+					posNode = Globals.Nour
+					
+				else:
+					posNode = RoomEngine.CurrentRoom.plane_manager.get_node(posNodeName)
+				
+				match charName:
+					"NICK":
+						Globals.Nick.set_following_node(posNode)
+						
+					"NOUR":
+						Globals.Nour.set_following_node(posNode)
+						
+					"SUWAN":
+						Globals.Suwan.set_following_node(posNode)
+				
+			if "&EMOTE" in currentLine:
+				pass
+				
 			return
 		
 		currentLine = currentLine.replacen('<', '[')
