@@ -2,6 +2,10 @@
     //IN REALITY
     //location: elevator
     //NICK AND NOUR RUN INTO THE ELEVATOR
+    &POS_SUWAN_160,256
+
+    &FOLLOW_SUWAN_SuwanStartingPos
+    
     NICK: “QUICK, IN HERE!"
     
     NICK: "Maybe she won't find us and give up chasing—”
@@ -14,21 +18,29 @@
     
             NICK: "No way! She'll never catch us here—"
             
+            &FOLLOW_SUWAN_NOUR
+            
         * [Give him a piece of your mind]
             NOUR: "God. This is what I get for listening to a stupid kid!"
     
             NICK: "Hey! You listening to me is technically YOUR FAULT AND NOT MINE! I didn't force you to follow me in here."
     
             NICK: "And I'm NOT stupid—"
+            
+            &FOLLOW_SUWAN_NOUR
+            
         * [Urge him to stay quiet]
             NOUR: "Shhh! Shut up!"
     
             NICK: "NO! <i>YOU</i> SHUT UP!"
     
             NOUR: "If you make so much noise, she's going to notice us—"
+            
+            &FOLLOW_SUWAN_NOUR
     
     //MS SUWAN ENTERS THE ELEVATOR
     //HER SPRITE IS BLACK
+    
     - ???: "Stop right there."
     
     NICK: "Aw, shoot! The scary old lady caught up!"

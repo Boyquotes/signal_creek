@@ -10,16 +10,6 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "KinematicBody2D",
-"class": "Character",
-"language": "GDScript",
-"path": "res://assets/scripts/character/character.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "CharacterFollower",
-"language": "GDScript",
-"path": "res://assets/scripts/character/character_follower.gd"
-}, {
-"base": "KinematicBody2D",
 "class": "CharacterNavigator",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character_navigator.gd"
@@ -45,8 +35,6 @@ _global_script_classes=[ {
 "path": "res://assets/scripts/environment/shiftable.gd"
 } ]
 _global_script_class_icons={
-"Character": "",
-"CharacterFollower": "",
 "CharacterNavigator": "",
 "Doortal": "",
 "Interactive": "",
