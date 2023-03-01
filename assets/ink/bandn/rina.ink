@@ -33,9 +33,9 @@
     
     NICK: "Hey, uh... Nour. Do you know her?"
     
-        * "Yeah, I <i>did</i>."
+        * ["Yeah, I did."]
         
-        * "She was from my high school."
+        * ["She was from my high school."]
     
     - Nour says nothing.
     
@@ -43,7 +43,9 @@
     
     Rina pays no mind to her surroundings.
     
-    RINA BECOMES INVISIBLE
+    //&SHLORP_RINA
+    
+    &MOV_RINA_BANDN
     
     There's visible panic on Nour's face.
     

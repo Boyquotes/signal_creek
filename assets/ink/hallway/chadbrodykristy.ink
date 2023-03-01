@@ -380,4 +380,6 @@
         
             //INSERT ELEVATOR BEEP BOOP BUTTON LIGHT STUFF HERE
     
+    &MOV_RINA_HALLWAY
+    
     -> END
