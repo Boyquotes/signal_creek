@@ -57,7 +57,7 @@
     
         * "Ms. Suwan, can you please ask them how we can get out of here?"
     //MS. SUWAN not MS.SUWAN for character tag 
-    - MS SUWAN: "..."
+    - MS. SUWAN: "..."
     
     NOUR: "Hello...? Are you listening?"
     //changing to present tense
@@ -65,15 +65,15 @@
 
     NICK: "MS. SUWAN!!!"
     
-    MS SUWAN: "...!"
+    MS. SUWAN: "...!"
     
-    MS SUWAN: "No need to shout! What's going on?"
+    MS. SUWAN: "No need to shout! What's going on?"
     
     NOUR: "Could you talk to those people over there and ask if they know what's going on?"
     
-    MS SUWAN: "I think that would be a waste of time. All we need to do is get the elevator fixed and we should be good to go."
+    MS. SUWAN: "I think that would be a waste of time. All we need to do is get the elevator fixed and we should be good to go."
     
-    MS SUWAN: "I'm going to try to get a hold of the repair guy and see if he can come down here. Surely there has to be a way."
+    MS. SUWAN: "I'm going to try to get a hold of the repair guy and see if he can come down here. Surely there has to be a way."
         
         *** "Um, I don't think anyone is going to come."
         
@@ -93,9 +93,9 @@
     
     //MS SUWAN: "The elevator just had some technical issues and then broke down. Nothing is out of the ordinary."
     
-    MS SUWAN: "Maybe I mistakened this area of the mall for the wrong one. This...this could be a different floor."
+    MS. SUWAN: "Maybe I mistakened this area of the mall for the wrong one. This...this could be a different floor."
     
-    MS SUWAN: "Whatever is happening here is illegal and wrong. I'm going to report everyone here immediately, and...and..."
+    MS. SUWAN: "Whatever is happening here is illegal and wrong. I'm going to report everyone here immediately, and...and..."
     
     <i>She stares at the three people, dazed. She looks...afraid. Guilty?</i>
     
@@ -117,11 +117,11 @@
     
     NOUR: "If you could just help us out for one second—"
     
-    MS SUWAN: "Give it up. We don't need help from strangers. We can help ourselves just fine."
+    MS. SUWAN: "Give it up. We don't need help from strangers. We can help ourselves just fine."
     
     ???: "Strangers?" 
     
-    MS SUWAN: "!"
+    MS. SUWAN: "!"
     
     ???: "Looks like Chad, Kristy, and Brody all got demoted to strangers. What a surprise."
     
@@ -148,23 +148,23 @@
     
     BRODY: "Don't worry. I'm sure that once she finds her words, she'll spin us some new excuse for what she did to us."
     
-    MS SUWAN: "..."
+    MS. SUWAN: "..."
     
     NOUR: "Ms. Suwan, do you—"
     
-    MS SUWAN: "We're leaving."
+    MS. SUWAN: "We're leaving."
     
     BRODY: "Don't worry Kan—we'll be right here in case you want to ignore us again."
     
-    MS SUWAN: "<i>I said we're done here.</i>"
+    MS. SUWAN: "<i>I said we're done here.</i>"
     
     NOUR: "I...alright. We can leave."
     
     NICK: "But I thought that they could help us out?"
     
-    MS SUWAN: "Word of advice, kid? The only person you can trust is yourself. I'm figuring this out alone."
+    MS. SUWAN: "Word of advice, kid? The only person you can trust is yourself. I'm figuring this out alone."
     
-    MS SUWAN: "I think there was a B&N on this floor. Maybe a computer there is working so we can contact someone to get us out of here."
+    MS. SUWAN: "I think there was a B&N on this floor. Maybe a computer there is working so we can contact someone to get us out of here."
     
     NOUR: <i>I want to talk about those three people to Ms. Suwan, but I don't think she's going to say a single thing about them.</i>
     
@@ -177,20 +177,20 @@
 == chadbrodykristy_notready==
     NOUR: "Is everything alright, Ms. Suwan?"
     
-    MS SUWAN: "..."
+    MS. SUWAN: "..."
     
     NOUR: <i>I wish she wouldn't be so stubborn and just say something—anything—to them.</i>
     
     NOUR: "You sure you don't want to just talk to them?"
     
-    MS SUWAN: "What? Huh?"
+    MS. SUWAN: "What? Huh?"
     
-    MS SUWAN: "I mean, no. I have nothing to say. Let's just go."
+    MS. SUWAN: "I mean, no. I have nothing to say. Let's just go."
     
         **** "Come on, they could tell us how to leave!"
             NOUR: "They might know something about this place that we don't—"
     
-            MS SUWAN: "Nour, I said no. Now, let's go."
+            MS. SUWAN: "Nour, I said no. Now, let's go."
     
             NOUR: "...Fine." 
     
@@ -204,25 +204,25 @@
 == chadbrodykristy2 ==
     NOUR: "There's no backing out of this now. You have to face them once and for all. You'll feel better, I promise."
     
-    MS SUWAN: "You're right."
+    MS. SUWAN: "You're right."
     //present tense already here, good!!
     <i>Ms. Suwan approaches Chad, Brody, and Kristy.</i>
     
     KRISTY: "The one and only Kannika! You finally decided to speak to us, and it's not just for our study notes. Must be a miracle!"
     
-    MS SUWAN: "Is it really you guys? How are you here?"
+    MS. SUWAN: "Is it really you guys? How are you here?"
     
     KRISTY: "Why did you abandon us Kan? We missed you so much."
     
-    MS SUWAN: "I didn't abandon you, I had-"
+    MS. SUWAN: "I didn't abandon you, I had-"
     
     BRODY: "Let me guess, work? It's always work with you."
     
-    MS SUWAN: "I'm sorry I actually studied so I wouldn't flunk school instead of wasting my nights drinking and going to Paradise concerts."
+    MS. SUWAN: "I'm sorry I actually studied so I wouldn't flunk school instead of wasting my nights drinking and going to Paradise concerts."
     
     BRODY: "Yeesh, sorry for wanting to just hang out like normal friends."
     
-    MS SUWAN: "I had a so much riding on my career. For me to sabotage it like that when it hadn't even started? No. Failing was not an option."
+    MS. SUWAN: "I had a so much riding on my career. For me to sabotage it like that when it hadn't even started? No. Failing was not an option."
     
     CHAD: "Fail? Kan, you always did better than any of us. We have never seen you get below a 90 on an exam, ever."
     
@@ -253,11 +253,11 @@
     
     <i>Chad, Kristy, and Brody stop staring at Ms. Suwan and keep to themselves. Impenetrable.</i>
     
-    MS SUWAN: "..."
+    MS. SUWAN: "..."
     
-    MS SUWAN: "I tried. And look where that got me."
+    MS. SUWAN: "I tried. And look where that got me."
     
-    MS SUWAN: "...I want to leave. Now."
+    MS. SUWAN: "...I want to leave. Now."
     
     NOUR: <i>That went horribly. I thought that maybe confronting them would work things out, but it doesn't seem like Ms. Suwan realizes what she did was wrong.</i>
     
@@ -344,25 +344,25 @@
     
     NOUR: "I'm sorry it turned out that way."//possible space for gather
     
-    MS SUWAN: "It's ok. I didn't expect anything to change miraculously."
+    MS. SUWAN: "It's ok. I didn't expect anything to change miraculously."
     
     NOUR: "Maybe if we could find them again, we could change how—"
     
-    MS SUWAN: "There's no changing what could've been. But that's ok with me."
+    MS. SUWAN: "There's no changing what could've been. But that's ok with me."
     
-    MS SUWAN: "I've spent so much time fighting to keep my regrets out, but now I've finally looked it in the eye...and I think I can lay this feeling to rest."
+    MS. SUWAN: "I've spent so much time fighting to keep my regrets out, but now I've finally looked it in the eye...and I think I can lay this feeling to rest."
     
     NOUR: "But don't you think you could be happier if it had gone better?"
     
-    MS SUWAN: "Sometimes it's not about things getting better. To face them is enough for me."
+    MS. SUWAN: "Sometimes it's not about things getting better. To face them is enough for me."
     
-    MS SUWAN: "Even if they weren't real and this was all just one big dream, my feelings are real."
+    MS. SUWAN: "Even if they weren't real and this was all just one big dream, my feelings are real."
     
     NOUR: "But it did just happened. This, this could be real! We all saw it."
     
-    MS SUWAN: "Listen Nour...I've imagined this moment in my head so many times. I couldn't fool myself into thinking there would be a happy ending for all of us."
+    MS. SUWAN: "Listen Nour...I've imagined this moment in my head so many times. I couldn't fool myself into thinking there would be a happy ending for all of us."
     
-    MS SUWAN: "But I think this might actually have been a happy ending after all. There are some things you just can't fix, and that's okay. Worry about the things you can."
+    MS. SUWAN: "But I think this might actually have been a happy ending after all. There are some things you just can't fix, and that's okay. Worry about the things you can."
     
     NOUR: "..."
     
@@ -372,11 +372,11 @@
         * Pick up the album on the floor
             NOUR: "Here. I think they all wanted you to have this."
             
-            MS SUWAN: "Oh..."
+            MS. SUWAN: "Oh..."
         
             <i>Ms. Suwan accepts the album and holds it close to her.</i>
         
-            MS SUWAN: "Thank you, Nour."
+            MS. SUWAN: "Thank you, Nour."
         
             //INSERT ELEVATOR BEEP BOOP BUTTON LIGHT STUFF HERE
     
