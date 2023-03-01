@@ -130,5 +130,7 @@ Nick thinks for a moment, before looking over at Ms. Suwan, then at Nour. Then, 
 NICK: "... Here. Can you put it back for me? I... I don't need it anymore."
 
 Nour smiles and takes the bracelet.
+
+&MOV_RINA_TOPICSPOT
     
 -> END
