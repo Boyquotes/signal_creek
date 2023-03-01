@@ -1,9 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/scripts/character/character_navigator.gd" type="Script" id=1]
-[ext_resource path="res://assets/prefabs/party/party_character_animator.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/alpha/sprites_alpha/characters/placeholders/sheet_party_dream.png" type="Texture" id=3]
-
+[ext_resource path="res://assets/sprites/characters/nick_walking_past.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sprites/characters/sheet_nick_past.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 5, 2 )
@@ -18,7 +17,8 @@ script = ExtResource( 1 )
 light_mask = 2
 position = Vector2( 0, -15 )
 texture = ExtResource( 3 )
-region_enabled = true
+hframes = 6
+vframes = 4
 region_rect = Rect2( 14, 15, 20, 33 )
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PQpzb3VyY2V8PQpsYXllcnw9Cm9wX2V4cHw9RmFsc2UKb19mb2xkZXJ8PQpvX25hbWV8PQpvbmx5X3Zpc2libGV8PUZhbHNlCm9fZXhfcHw9Cg=="

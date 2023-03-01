@@ -7,7 +7,7 @@
 extents = Vector2( 88, 36 )
 
 [node name="TopicSpot" type="RigidBody2D" groups=["shiftable"]]
-position = Vector2( 200, 76 )
+position = Vector2( 0, 1 )
 mode = 1
 script = ExtResource( 1 )
 __meta__ = {
@@ -16,7 +16,7 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
-position = Vector2( 0, -44 )
+position = Vector2( 0, -33 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 272, 176, 176, 64 )
@@ -31,5 +31,5 @@ region_enabled = true
 region_rect = Rect2( 272, 176, 176, 64 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -40 )
+position = Vector2( 0, -36 )
 shape = SubResource( 23 )

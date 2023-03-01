@@ -16,6 +16,8 @@
 == chadbrodykristy ==
 
 {
+    - musicstand3 && musicstand4: 
+        -> chadbrodykristy3
     - musicstand3:
         -> chadbrodykristy2
     - chadbrodykristy1: 
