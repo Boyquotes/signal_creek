@@ -1,72 +1,46 @@
-// this is crucial to Ms Suwan's character arc
-
 //First visit
 // Noor runs up to music stand and starts convo about how her parents would listen to this music all of the time so she grew up around it 
 // Ms Suwan then opens up about her old college friends and how they went to concerts all of the time
 // Nour asks if they're still close and she ignores the question
-
-// Next visit- after second interaction with chad brody kristy
 //Ms Suwan goes to music stand and reveals more about the friendship
 //each added interaction leads to more information being added until you visited all of the other Suwan objecs when Nour decides to buy Ms Suwan the record for her 
 //that gesture unlocks her ability to talk to her
 
-
-// -> musicstand_1 
-// {
-//   - musicstand_1:
-//     -> musicstand2
-
-//     - musicstand_1 && pinbuttons:
-//     -> musicstand3
-
-//     - musicstand2 && priceofsalt: 
-//     -> musicstand4
-
-// }
-// {
-//     - musicstand4 && chadbrodykristy_ready:
-//     -> musicstand5
-
-// }
-
 == musicstand ==
 
 {
-    - musicstand3 && cafetables_getsuwantotalk:
-        -> musicstand4
-    - musicstand3:
-        -> musicstand_interval
-    - musicstand2:
-        -> musicstand3
-    - musicstand1:
+    - chadbrodykristy1 && musicstand1 && cafetables_getsuwantotalk:
         -> musicstand2
+    - chadbrodykristy1 && musicstand1:
+        -> musicstand_interval
     - chadbrodykristy1:
         -> musicstand1
 }
 
 
 ==musicstand1==
+//better onboarding from CBK
+
+
     NOUR: "Oh my god, they have it!"
     
-    MS SUWAN: "Have what?" 
+    MS. SUWAN: "Have what?" 
     
     NOUR: "<i>Actually, I Do Mind</i>—only the best Paradise album! I haven't heard it in forever."
     
-    MS SUWAN: "Hm..."
+    MS. SUWAN: "I remember that one. Good album."
     
-    NOUR: "Um, do you know Paradise?"
+    NOUR: "You...you listen to Paradise?"
     
-    //continuity - law school not just college
+    MS. SUWAN: "Yes. Well, used to."
     
-    MS SUWAN: "I did listen to them quite a bit when I was still a student."
+    NOUR: "Oh...that's, wow!"
     
-    NOUR: "You...you did?"
-    
-    MS SUWAN: "Yes. Why are you looking at me like that?"
+    MS. SUWAN: "Why are you looking at me like that?"
     
     NOUR: "Uh, well..."
         
-        * [It's unexpected]
+        * [Tell her it's unexpected]
             
             NOUR: "I just didn't expect you to listen to a rock band. You don't really—no offense—seem like the type."
             
@@ -76,80 +50,70 @@
             
             MS SUWAN: "No. It was a distraction, so I stopped."
             
-            NOUR: <i>She looks a little uncomfortable. Maybe I should ask her more about it in a different way.</i>
+            NOUR: <i>She looks a little uncomfortable.</i>
         
-        * [It's nothing]
+        * [Hide the surprise]
             NOUR: "Oh, it's nothing. I wasn't going to say anything—"
             
-            MS SUWAN: "I know—you were going to say that I don't seem like the type, right?"
+            MS SUWAN: "You were going to say that I don't seem like the type, right?"
     
             NOUR: "Um...yeah. Sorry."
             
-            MS SUWAN: "Well, I don't anymore. It was a distraction, so I stopped."
+            MS SUWAN: "Well, I don't anymore, so you aren't entirely incorrect. It was a distraction, so I stopped."
             
-            NOUR: <i>She looks a little uncomfortable. Maybe I should ask her more about it in a different way.</i>
+            NOUR: <i>She looks a little uncomfortable.</i>
     
--   NOUR: "Where did you go for law school?"
-    
-    MS SUWAN: "Oh it was this little law school upstate. Seton Hall University."
-    NOUR: "That's pretty cool! Did you like it?"
-    
-    MS SUWAN: "It was challenging. However, my education there got me where I needed to be."
-    
-    NOUR: "That's nice. I guess you probably were a student while Paradise came out with this, right?"
+-   NOUR: "I see. I guess you probably were a student while Paradise came out with this, right?"
     
     MS SUWAN: "Right. During school, me and my friends used to..."
     
     MS SUWAN: "..."
-    
-    NOUR: "..."
-    
-    NOUR: "Are you ok-"
-    
-    MS SUWAN: "Can we go look at something else? I'm not sure this is the best use of our time."
-    
-    NOUR: "Uh, yeah. Sorry." 
-    
-    NOUR: <i>I wonder what happened with her and her friends. Maybe I could play one of the records for her.</i>
-    
-    -> END
+        * [Ask if she's ok]
+            NOUR: "Are you ok?"
+            
+            MS. SUWAN: "I'm fine. Paradise just reminds me of hard times. That's all."
 
-==musicstand2==
+        * [Ask about law school]
+            NOUR: "Where did you go for law school?"
+    
+            MS. SUWAN: "Seton Hall University."
+    
+            NOUR: "That's pretty cool. Did you like it?"
+    
+            MS SUWAN: "It was challenging. However, my education there got me where I needed to be."
+            
+        * [Ask about her friends]
+            NOUR: "What did you and your friends used to do?"
+    
+    - NOUR: "Did you listen to this with your friends?"
+    
+    MS. SUWAN: "Yes. After moving to New Jersey from Thailand, I came to law school. Since we all lived in the same dorm floor, we became close." 
+    
+    MS. SUWAN: "We used to host study sessions and play Paradise while we studied."
+    
+    MS. SUWAN: "I think I owe Paradise my first real friendships."
+    
+    NICK: "Rocking out led to your friendships? That's so cool..."
+    
+    MS. SUWAN: "But that was a different time. Things change."
+    
+    NICK: "How 'bout we rock out right now then? For old time's sake?"
+    
+    MS. SUWAN: "I don't think this would be a good use of our time."
+    
+    
+    
+    
+     
     NOUR: "Do you mind if I play this album? I really miss it."
     
     MS SUWAN: "I don't care either way. Go ahead."
     
     NOUR: "Time to put on a classic...<i>Sounds like Old Angst</i>!" 
     <i>The record slowly enters the player, and suddenly the music begins to fill the entire store.</i>
+    
     //CODE HERE - PLAY "SOUNDS LIKE OLD ANGST" 
-    
-    NOUR: "Oh my god, this is just as good as it was when I was 14."
-    
-    MS SUWAN: "I haven't listened to this in ages."
-    
-    NOUR: "You listened to it with your friends, right?"
-    
-    MS SUWAN: "I don't talk about them anymore."
-    
-    NICK: "Did something happen between you and them?" 
-    
-    NOUR: "Nick! Sorry, we don't mean to pry."
-    
-    NOUR: <i>Thank god he asked first. I really want to know what happened...</i>
-    
-    MS. SUWAN: "I had some close friends in law school. We all lived on the same dorm floor so that's how we all met. I had just moved to New Jersey from Thailand so I didn't know anyone." 
-    
-    MS. SUWAN: "They were my first real friends here. We used to host study sessions together all of the time, it was really nice."
-    
-    MS. SUWAN: "We had this study session once right after that Paradise album came out. We couldn't stop playing it, I think we played it over and over again all night."
-    
-    NOUR: "Haha, really?"
-    
-    MS. SUWAN: "After that we started having study and listen sessions where we would play Paradise while we studied and rock out all night."
-    
-    NICK: "YOU ROCK OUT?"
-    
-    MS. SUWAN: "I suppose I did 'rock out' a little back then. But that was a different time. Things change."
+
     
     NOUR: "So, your friends...do you still talk to them often?"
     
@@ -163,54 +127,22 @@
     
     NICK: "What? I wanna know!"
     
-    MS. SUWAN: "Can you turn that off? It's starting to give me a migraine."
-    
-    NOUR: "Oh, sure."
-    
-    <i>The music stops playing.</i>
     
     //CODE HERE - STOP PLAYING "SOUNDS LIKE OLD ANGST" 
     
-    <i>Ms. Suwan takes the record off of the record player and places it back on the shelf.</i>
     
-    NOUR: <i>Ok, something definitely happened with her friends. I don't want to make her more upset, but if we could get to the bottom of this, I could convince her to talk to those three...</i>
-    
-    NOUR: <i>Maybe I could play it just one more time.</i>
-    
-    ->DONE
+   
+    MS. SUWAN: "Can you turn that off? It's starting to give me a migraine."
 
-==musicstand3==
-// <i>Nick grabs the Paradise album and places it on the record player.</i>
-// <i>Suddenly, the room fills with rock music—the same tune from before.</i>
-// NOUR: "Nick!"
-// NICK: "What?"
-// NOUR: "You know Ms.Suwan is sensitive to this music!"
-// MS. SUWAN: "I'm alright my migraine went away, you can keep it playing."
-// NOUR: "That's good."
-// NOUR: <i>I really want to ask about her friends but I don't want to pry.</i>
-    MS. SUWAN: "Ok. What do you want?"
-    
-    NOUR: "What?"
-    
-    MS. SUWAN: "I know you want to know more about my old friends. Isn't that why we keep circling back here?"
-    
-    NOUR: <i>Oh god. Was I talking out loud? I know she's smart...but can she read my thoughts?</i>
-    
-    NOUR: <i>Wait, focus. I have to answer her...</i>
-    
-    NOUR: "Yeah, you got me."
-    
-    MS. SUWAN: "Nosy, aren't you?"
-    
-    NOUR: "I prefer curious...but also, you didn't seem well when first saw them, so...
 
-    MS. SUWAN: "When we had those study sessions, I started doing worse in my classes. After a while, we stopped the sessions completely and just went to Paradise concerts."
-    
-    MS. SUWAN: "We spent too much time talking about Paradise and listening to them without actually focusing, which doubled the time it took me to complete assignments."
-    
-    MS. SUWAN: "But for some reason, they still performed perfectly because they were naturally gifted students. Meanwhile, I struggled to catch up because I was still learning English at the time."
 
-    MS. SUWAN: "Once, they invited me to a concert but I couldn't go because I was close to failing an important final. They got upset with me for not coming which was ridiculous—clearly, they didn't care enough about my situation. They started going to concerts without me and stopped inviting me to places all together."
+    MS. SUWAN: "Soon after, we went to Paradise concerts. Studying and listening to music doubled the time it took me to complete assignments."
+    
+    MS. SUWAN: "I struggled to catch up because I was still learning English at the time, but my friends did just fine."
+
+    MS. SUWAN: "Once, they got upset at me for not going to a concert with them. I chose to not fail my finals in the end. They didn't care about my situation, so I stopped caring about them." 
+    
+    MS. SUWAN: "I stopped hanging out with them, they started going to concerts without me, and the rest is history."
     
     NICK: "That really sucks."
     
@@ -224,9 +156,10 @@
     
     NOUR: <i>This is getting us nowhere! If we could just have her make amends, maybe those three could help us get out of here!</i>
     
+    
     NOUR: "Ok, that's it! You can't keep avoiding your friends then coming back here and being all sad about it."
     
-    MS. SUWAN: "Nour?"
+    MS. SUWAN: "Excuse me??"
     
     NOUR: "NO, THAT'S IT! I'VE TRIED TO HELP YOU THIS ENTIRE TIME, BUT YOU'RE THE ONE THAT'S NOT DEALING WITH YOUR OWN PROBLEMS!"
     
@@ -267,7 +200,7 @@
     
     -> DONE
 
-==musicstand4==
+==musicstand2==
     MS. SUWAN: "...Back here again, it seems."
     
     NOUR: "I also liked to listen to Paradise with my friend in the past. Sometimes it hurts to listen to it, which is why I hadn't played it in so long."
@@ -310,7 +243,7 @@
     
     - MS. SUWAN: "Thank you, Nour."
     
-    MS. SUWAN: "I...I'm ready. I want to take this album and go apologize to them all."
+    MS. SUWAN: "I want to take this album and go apologize to them all."
     
     MS. SUWAN: "I don't know if they'll accept my apology, but I have to try."
     
