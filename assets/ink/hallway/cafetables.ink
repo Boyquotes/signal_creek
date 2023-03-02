@@ -12,13 +12,13 @@
 //note to self: do some gathers - choices that lead to the same conversation 
 
 {
-    - chadbrodykristy1 && musicstand4 && chadbrodykristy3:
+    - chadbrodykristy1 && musicstand2 && chadbrodykristy3:
         -> cafetables_end
         
-    - chadbrodykristy2 && musicstand4 && chadbrodykristy3: 
+    - chadbrodykristy2 && musicstand2 && chadbrodykristy3: 
         -> cafetables3
         
-    - chadbrodykristy2 && musicstand4:
+    - chadbrodykristy2 && musicstand2:
         -> cafetables3_5
         
     - chadbrodykristy2 && cafetables1:
@@ -32,7 +32,7 @@
 }
 
 === cafetables1 ===
-    NOUR: "Didn't think I'd see this cafe here. It's even in good condition. Seems like anything is possible in this place..."
+    NOUR: "Didn't think I'd see this cafe here. It's even in good condition."
     
     MS. SUWAN: "I still refuse to think any of this is real. I was right here before leaving this floor for demolition."
     
