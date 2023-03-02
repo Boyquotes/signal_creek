@@ -1,4 +1,8 @@
 extends Node
+# MAIN DRIVER of the game based on player input
+
+export var _elevator_focus_position : Vector2 = Vector2(344, 168)
+export var _leader_switching_enabled = false
 
 var _closest_object = null
 var _can_interact = false
@@ -10,13 +14,18 @@ func _start():
 
 
 func _physics_process(_delta):
+	if Input.is_action_just_pressed("reset"):
+		reset_game()
+	
+	Globals.PartyObject.move_followers_by_pathfind()
+	#print(Globals.Suwan.get_global_position())
+	
 	if Globals.GameMode == Globals.GameModes.TALK:
-		
 		if Globals.DialogueBox.is_displaying_choices:
-			if Input.is_action_just_released("ui_down"):
+			if Input.is_action_just_released("move_down"):
 				Globals.DialogueBox.toggle_choice_selections(1)
 				
-			elif Input.is_action_just_released("ui_up"):
+			elif Input.is_action_just_released("move_up"):
 				Globals.DialogueBox.toggle_choice_selections(-1)
 				
 			if Input.is_action_just_pressed("interact"):
@@ -25,58 +34,79 @@ func _physics_process(_delta):
 				
 		elif Input.is_action_just_pressed("interact"):
 			if Globals.DialogueBox.is_typing:
-				Globals.DialogueBox.escape_typewriter_effect()
-			else:
+				Globals.DialogueBox.typewriter_effect(true)
+			
+			elif !Globals.DialogueBox.fastforward or Globals.DialogueBox._ink_player.get_HasChoices() or !Globals.DialogueBox._ink_player.get_CanContinue():
 				Globals.DialogueBox.proceed()
 				
 			#var followingVector = find_current_speaker_position()
 			#Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 			
 	elif Globals.GameMode == Globals.GameModes.WALK:
-		check_input_character_movement()
 		
-		if Input.is_action_just_pressed("party_leader_switch"):
-			Globals.PartyObject.change_leader()
-			
+		if !Globals.DevTools.typing_knot_name:
+			check_input_character_movement()
+		
+		# IN CASE OF LEADER SWITCHING
+		if _leader_switching_enabled:
+			if Input.is_action_just_pressed("party_leader_switch") and _leader_switching_enabled:
+				Globals.PartyObject.change_leader()
+#
 			if _closest_object:
 				if _closest_object.get_overlapping_bodies().size() > 0:
 					_closest_object.call_deferred("_check_if_can_interact")
 					
 		_camera_normal_position = Globals.PartyObject.get_leader().get_global_position()
 		Globals.GameCanvas.set_camera_following_vector(_camera_normal_position)
+		
+		if Globals.Elevator && Globals.Elevator.focus_on_elevator == true:
+			Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
 			
 		if _can_interact:
 			if Input.is_action_just_pressed("interact"):
 				if Globals.GameMode == Globals.GameModes.WALK:
+					for character in Globals.PartyObject.characterObjects:
+						character.animate_idle()
+						
 					Globals.GameMode = Globals.GameModes.TALK
-					#Globals.GameCanvas.set_camera_following_vector(Vector2(_camera_normal_position.x + camera_offset_dialogue, _camera_normal_position.y))
-					
-					# tell inkparser to go to a knot based on this object's name
-					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name() + _closest_object._get_visitedinworld_status())
+					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
 					Globals.DialogueBox.background_panel_node.set_visible(true)
-		
-		if Input.is_action_just_pressed("reset") && Globals.GameMode == Globals.GameModes.WALK:
-			reset_game()
+
 
 func check_input_character_movement():
 	var directionVector = Vector2(0,0)
 
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("move_up"):
 		directionVector += Vector2.UP
 		
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("move_down"):
 		directionVector += Vector2.DOWN
 		
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("move_left"):
 		directionVector += Vector2.LEFT
 		
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		directionVector += Vector2.RIGHT
 		
-	Globals.PartyObject.move_party_by_vector(directionVector)
+	Globals.PartyObject.move_leader_by_vector(directionVector)
 
 func reset_game():
-	print("haha stupid idiot you cant reset")
+	#set the default room's starting pos to the default starting pos
+	#make current party character Nour
+	#reset the ink
+	#room enter signal for default room
+	Globals.PartyObject.update_leader_to(1)
+	Globals.CurrentWorld = Globals.Worlds.DREAM
+#	Globals.set_to_dream_world()
+	if RoomEngine.CurrentRoomIndex != RoomEngine.defaultRoomIndex:
+		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[RoomEngine.defaultRoomIndex], RoomEngine.defaultStartingPos)
+		
+	else:
+		RoomEngine.CurrentRoom.move_party_to_position(Globals.PartyObject, RoomEngine.defaultStartingPos)
+		
+	RoomEngine.PlaneManager.set_correct_world()
+	Globals.DialogueBox.reset_story()
+	print("GAME RESET")
 	pass
 
 

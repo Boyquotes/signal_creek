@@ -8,6 +8,8 @@ extends Node2D
 export(Vector2) var party_starting_position = Vector2(260, 140)
 export(Vector2) var room_bounds_min = Vector2(0,0)
 export(Vector2) var room_bounds_max = Vector2(464, 320)
+export(Vector2) var party_teleport_position = Vector2(room_bounds_max.x / 2, room_bounds_max.y / 2)
+export var room_index : int
 
 onready var plane_manager = $PlaneManager
 
@@ -24,14 +26,17 @@ func place_party(partyNode):
 	$PlaneManager/Overworld.add_child(partyNode)
 	#partyNode.get_leader().set_global_position(party_starting_position)
 	
+	move_party_to_position(partyNode, party_starting_position)
+	
+	self.add_child(Globals.PartyCamera)
+	Globals.PartyCamera.set_camera_bounds(room_bounds_min, room_bounds_max)
+
+func move_party_to_position(partyNode, newPosition):
 	var offset = -16
 	
 	for character in partyNode.get_character_objects():
 		offset += 16
-		character.set_global_position(Vector2(party_starting_position.x + offset, party_starting_position.y))
-	
-	self.add_child(Globals.PartyCamera)
-	Globals.PartyCamera.set_camera_bounds(room_bounds_min, room_bounds_max)
+		character.set_global_position(Vector2(newPosition.x + offset, newPosition.y))
 
 
 # Removes partyNode as a child of self
@@ -47,11 +52,25 @@ func set_party_starting_position(partyPos):
 
 # Return the Vector2 position the party starts in
 func get_party_starting_position():
-	
 	return self.party_starting_position
 
 
 # Return PlaneManager belonging to self
 func get_plane_manager():
-	
 	return plane_manager
+
+
+func remove_object(objectNode):
+	$PlaneManager/Overworld.remove_child(objectNode)
+	
+
+func place_object(objectNode):
+	$PlaneManager/Overworld.add_child(objectNode)
+	#partyNode.get_leader().set_global_position(party_starting_position)
+
+
+func move_object_to_position(objectNode, objectPosition):
+	objectNode.set_global_position(objectPosition)
+	
+	
+	

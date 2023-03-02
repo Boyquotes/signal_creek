@@ -1,54 +1,97 @@
-//---------------- DREAM WORLD ----------------
-
-== polaroid_dream ==
-
-    //This was the first polaroid camera Nour had. Her parents bought it for her when she first started showing interest in photography, since her mother's family had one when she was young.
+== polaroid ==
     
-    NOUR: It's an old polaroid! Looks like it's one of the O-G's from the 80s.   
+    { -!polaroid_first_visit:
+        -> polaroid_first_visit
+    }
+    //convo after the first time PCs see Rina
     
-    NICK: It definitely seems old-school. Have you ever used one of them before?
+    NOUR: Look, I said I don't want to look at this right now.
     
-    NOUR: Mmhm, I've had a ton of different film camera's. The one with me now is a film camera, too, though a more modern one. 
-    
-    NOUR: Wish I had one now like this one, but they tend to be pretty pricey.
+    MS SUWAN: Fine, we'll come back later then.
     
     -> END
-
-== polaroid_realvisited ==
-
-    //This was the first polaroid camera Nour had. Her parents bought it for her when she first started showing interest in photography, since her mother's family had one when she was young.
     
-    NOUR: Oh wow, it's the same polaroid! Looks like it's actually functional, though.
+== polaroid_first_visit ==
     
-    NOUR: I don't really use them anymore, though I think there are some of the o-g retro ones at my university.
+    A Polaroid One Step camera sits inside a glass case. It's surrounded by a bunch of film photographs of two girls. 
     
-    NOUR: I wonder if there's any film around...
+    One of them sits on the floor outside of the case. Nour looks down at it and immediately scowls.
     
-    -> END
-
-
-//SUBSEQUENT DREAM KNOTS HERE
-
-
-//---------------- REAL WORLD ----------------
-
-== polaroid_real ==
-
-    //This was the first polaroid camera Nour had. Her parents bought it for her when she first started showing interest in photography, since her mother's family had one when she was young.
+    NOUR: ...No way. 
     
-    NOUR: Oh man, this camera is so old. It must've been here for forever. Though this one could be new and just neglected -- social media caused a resurgence of these types of cameras.
+    NICK: Hm?
     
-    NOUR: The film in it must be completely useless by now, though.
+    NOUR: I think that's my dad's old camera. Well, my camera, technically.
     
-    NOUR: I remember by mom giving me an old family camera that looked a lot like this one. It was my first real camera, now that I think about it...
+    NICK? Ooh, really?! That's so cool!! Retro stuff is super trendy now, y'know. Did you use it a lot?
     
-    -> END
-
-
-== polaroid_dreamvisited ==
-
-    NOUR: It's the polaroid again. This one looks pretty f-ed up, though.
+    NOUR: Yeah, kind of. It's... it's whatever, let's go somewhere else.
     
-    -> END
-
-//SUBSEQUENT REAL KNOTS HERE
+    Nour tries to kick the photo away, but Ms. Suwan stops it with her foot.
+    
+    She picks it up and examines it, then looks at Nour with an eyebrow raised.
+    
+    MS SUWAN: This is you, isn't it? Who's what you're with?
+    
+    * I <i>said</i> let's go somewhere else, I don't want to talk about it.
+        -> refuseToTalk
+    
+    * ...An old friend.
+        -> deflect
+ 
+    
+    = refuseToTalk
+    
+        MS SUWAN: ...Hm. If you say so.
+        
+        NARRATOR: Ms. Suwan picks up the photograph and places it on top of the glass case.
+        
+        MS SUWAN: We'll come back to this later. But you're going to have to face up to what happened.
+        
+        NOUR: Hmph. I don't see why when I didn't do anything wrong, but whatever. Let's go.
+        
+        Nick leans in and whispers to Ms. Suwan.
+        
+        NICK: I think she did something she's not happy about.
+        
+        MS SUWAN: Yes, well. We've all done things that might have been in poor judgement. But for now, let's keep looking around until she's ready to talk about it.
+        
+        NOUR: I can <i>hear</i> you, y'know.
+        
+        NICK: Psh, no you can't!
+        
+        &MOV_RINA_BANDN
+        
+        -> END
+    
+    = deflect
+    
+        NOUR: She's an old friend. I... cared about her, a lot. But we don't talk anymore. It doesn't matter.
+        
+        NICK: It does though! How did you meet her? Did you know her for a long time? What's her name?
+        
+        NOUR: I'm answering none of those, and you're going to stop asking questions.
+        
+        NICK: Aww, but I wanna know! Why don't you wanna talk about her?
+        
+        NOUR: What did I <i>just</i> say?
+        
+        MS SUWAN: Children, peace.
+        
+        NOUR: I'm not a child.
+        
+        NICK: Neither am I.
+        
+        NOUR: Yeah, right.
+        
+        MS SUWAN: <i>Children.<i/> Hush. Nick, stop asking Nour questions if she really doesn't want to talk about it.
+        
+        NICK: Psh, boooooring.
+        
+        MS SUWAN: And Nour, we'll come back to this later. Whatever happened, you're going to have to face up to it at some point.
+        
+        NOUR: I don't see why. Let's just go.
+    
+        &MOV_RINA_BANDN
+        
+        -> END

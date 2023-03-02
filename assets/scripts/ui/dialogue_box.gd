@@ -8,7 +8,7 @@ extends Control
 # Entry Prefab Types
 export var camera_offset_dialogue = 50.0
 export var typewriter_speed : int = 1
-export var scroll_increment : float = 0.05
+export var scroll_increment : float = 0.75
 export var panel_opening_speed : float = 0.25
 export var _entry_prefab_normal = preload("res://assets/ui/prefabs/dialoguebox_entrynormal.tscn")
 export var _entry_prefab_dialogue = preload("res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn")
@@ -21,6 +21,7 @@ var _current_choice_index = 0
 var _current_choice_entry
 var _current_choice_entry_choices
 var is_displaying_choices
+var choice_chosen
 var current_speaker = "NICK"
 var is_typing = false
 var current_text_box
@@ -32,6 +33,8 @@ var background_panel_max_height
 # Story state save file location 
 var _save_file_path = "res://saves"
 var _ink_story
+
+var fastforward = false
 
 onready var background_panel_node = $Panel
 onready var _scroll_node = $Panel/MarginContainer/ScrollContainer
@@ -52,15 +55,19 @@ func _ready():
 
 
 func _process(_delta):
+	if is_typing:
+		typewriter_effect(false)
+		
+	if fastforward and !_ink_player.get_HasChoices() and _ink_player.get_CanContinue():
+		proceed()
+#		escape_typewriter_effect()
+		
 	if is_expanding_background_panel:
 		expand_background_panel()
 	
 	elif is_shrinking_background_panel:
 		shrink_background_panel()
-	
-	if is_typing:
-		typewriter_effect()
-	
+		
 	if is_auto_scrolling:
 		auto_scroll_down()
 
@@ -69,6 +76,7 @@ func _process(_delta):
 func open_at_knot(pathstring):
 	_ink_player.SetVariable("currentPartyChar", Globals.PartyObject.get_leader_inkname())
 	_ink_player.SetVariable("currentWorld", Globals.get_world_inkname())
+	
 	
 	_ink_player.ChoosePathString(pathstring)
 	
@@ -95,35 +103,126 @@ func toggle_choice_selections(changeValue):
 func select_current_choice():
 	_ink_player.ChooseChoiceIndex(_current_choice_index)
 	_current_choice_entry.queue_free() #remove the choicebox
+
 	is_displaying_choices = false
+	choice_chosen = true
 
 # proceeding to the next string that ink should return
+# allows for recursion if devs toggle fast forward
 func proceed():
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
-#		clear_and_reset_ui()
+#		fastforward = false
+		clear_and_reset_ui()
 		is_shrinking_background_panel = true
-		
+		return
+	
 	elif !_ink_player.get_HasChoices(): #create normal text entry
 		_ink_player.Continue()
-		print_state()
 		
+		if !fastforward:
+			print_state()
+			
 		var currentLine = _ink_player.get_CurrentText()
 		
-		if currentLine.substr(0, 1) == "&":
-			RoomEngine.PlaneManager.shift_planes()
-			currentLine = currentLine.trim_prefix('&')
+		if choice_chosen:
+			if !":" in currentLine and '"' in currentLine:
+				currentLine = "NOUR: " + currentLine
 			
-		check_entry_type(currentLine)
+			choice_chosen = false
 		
-	#_scroll_node to bottom when new message appears (make this tween later)
+		if currentLine.substr(0, 1) == "&": #screen shaking
+			#Globals.GameOverlay.start_shaking(true)
+			#RoomEngine.PlaneManager.shift_planes()
+			if "&SHAKE" in currentLine:
+				Globals.GameOverlay.start_shaking(false)
+				#currentLine = currentLine.trim_prefix('&SHAKE')
+				
+			if "&BLACK" in currentLine:
+				Globals.GameOverlay.set_to_black()
+				#currentLine = currentLine.trim_prefix('&BLACK')
+				
+			if "&FDEIN" in currentLine:
+				Globals.GameOverlay.start_fade_in()
+				#currentLine = currentLine.trim_prefix('&FDEIN')
+				
+			if "&MOV_RINA" in currentLine:
+				Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
+				#currentLine = currentLine.trim_prefix('&FDEIN')
+				
+			if "&SHLORP_RINA" in currentLine:
+				Globals.Rina.rina_shlorp_out()
+				
+			if "&POS" in currentLine: #move nick to vector2
+				var charName = currentLine.split("_")[1].strip_escapes()
+				var vectorPos = currentLine.split("_")[2].strip_escapes()
+				vectorPos = vectorPos.split(",")
+				vectorPos = Vector2(vectorPos[0], vectorPos[1])
+				
+				match charName:
+					"NICK":
+						Globals.Nick.place_character_at_vector(vectorPos)
+						
+					"NOUR":
+						Globals.Nour.place_character_at_vector(vectorPos)
+						
+					"SUWAN":
+						Globals.Suwan.place_character_at_vector(vectorPos)
+				
+			
+			if "&FOLLOW" in currentLine:
+				var charName = currentLine.split("_")[1].strip_escapes()
+				var posNodeName = currentLine.split("_")[2].strip_escapes()
+				var posNode
+				
+				if posNodeName == "NOUR":
+					posNode = Globals.Nour
+					
+				else:
+					posNode = RoomEngine.CurrentRoom.plane_manager.get_node(posNodeName)
+				
+				match charName:
+					"NICK":
+						Globals.Nick.set_following_node(posNode)
+						
+					"NOUR":
+						Globals.Nour.set_following_node(posNode)
+						
+					"SUWAN":
+						Globals.Suwan.set_following_node(posNode)
+				
+			if "&EMOTE" in currentLine:
+				pass
+				
+			if "&LIGHT" in currentLine:
+				# TODO: make global elevator var and make this parsing work 
+				# so that erna can test the elevator script
+				#&LIGHT_Nick0
+				#var lightName = currentLine.split("_")[1].strip_escapes()
+				#turn_turn_light(lightName)
+				pass
+				
+			return
+		
+		currentLine = currentLine.replacen('<', '[')
+		currentLine = currentLine.replacen('>', ']')
+		
+		check_entry_type(currentLine)
+			
+	else: #default to nour if no nametag provided
+		is_displaying_choices = true
+		current_speaker = "NOUR:"
+		display_choices("NOUR:")
+		set_camera_position_to_speaker()
+		
 	yield(get_tree(), "idle_frame")
-	is_auto_scrolling = true
+	scroll_to_bottom()
 
 
 # Parses entryText for special characters, determines what type of entry this is
 # Entries are normal, dialogue, or choice
 # Call corresponding functionality for type of entry
 func check_entry_type(entryText):
+		
 	if entryText.substr(0, 1) == ":": #this is a name for the choice entry nametag; not an entry to put in
 		var chooserName = entryText.substr(1).strip_escapes()
 		_ink_player.Continue()
@@ -131,7 +230,7 @@ func check_entry_type(entryText):
 		current_speaker = chooserName
 		display_choices(chooserName)
 		set_camera_position_to_speaker()
-	
+		
 	elif ":" in entryText: #if line contains a name, parse name and dialogue after
 		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_normal)
 		current_speaker = entryText.split(":")[0]
@@ -147,7 +246,9 @@ func check_entry_type(entryText):
 	
 	else: #it's a normal text entry
 		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal)
-		
+		if !fastforward:
+			print("NORMAL TEXT")
+			
 		#track the text label for typewriter effect
 		current_text_box = newText
 		#init typewriter effect
@@ -156,17 +257,18 @@ func check_entry_type(entryText):
 		_vertical_layout_node.add_child(newText)
 
 
+func scroll_to_bottom():
+	_scroll_node.set_v_scroll(_scroll_node.get_v_scrollbar().max_value)
+
 #used when a new entry is created
 func auto_scroll_down():
 	var scrollValue = _scroll_node.get_v_scrollbar().get_value()
 	var maxScrollValue = _scroll_node.get_v_scrollbar().max_value
-	
+	_scroll_node.set_v_scroll(lerp(scrollValue, maxScrollValue, scroll_increment))
 	if scrollValue >= maxScrollValue:
 		is_auto_scrolling = false
 		return
-	
-	_scroll_node.set_v_scroll(lerp(scrollValue, maxScrollValue, scroll_increment))
-	
+
 
 #smoothly decrease size of background panel after dialogue concludes
 func shrink_background_panel():
@@ -190,18 +292,22 @@ func expand_background_panel():
 	if panelPosition.y >= -panel_opening_speed:
 		background_panel_node.set_position(Vector2(panelPosition.x, 0))
 		is_expanding_background_panel = false
-		print("expanded")
+		print("expanded dialogue panel")
 	
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
 
 
 #increment visible characters in most recent richtextlabel
-func typewriter_effect():
+func typewriter_effect(escape):
+	if fastforward or escape:
+		current_text_box.set_percent_visible(1.0)
+		is_typing = false
+		
 	var currentVisibility = current_text_box.get_percent_visible()
-	var totalCharCount = current_text_box.get_total_character_count()
+	#var totalCharCount = current_text_box.get_total_character_count()
 	var visibleCharacters = current_text_box.get_visible_characters()
-	var increment = totalCharCount * typewriter_speed
+	#var increment = totalCharCount * typewriter_speed
 	
 	if currentVisibility >= 1.0:
 		is_typing = false
@@ -219,7 +325,7 @@ func escape_typewriter_effect():
 func display_choices(chooserName):
 	_current_choice_strings = _ink_player.get_CurrentChoices()
 	
-	if _current_choice_strings.size() <= 0: #TO AVOID CRASHING; escape choice selection if there's no choices left
+	if _current_choice_strings.size() <= 0: #TO AVOID CRASHING; escape choice selection if no choices left
 		is_displaying_choices = false
 		proceed()
 		return
@@ -280,12 +386,12 @@ func get_current_speaker():
 
 func find_current_speaker_position():
 	var currentSpeaker = get_current_speaker().to_lower()
-	print("Current Speaker: " + currentSpeaker + "\n")
+	if !fastforward:
+		print("Current Speaker: " + currentSpeaker + "\n")
 	
 	var currentSpeakerIndex = -1
 
 	# Move camera to party character if they are speaking
-	# TODO: make the characters walk towards if they're far away & they speak
 	if "nick" in currentSpeaker:
 		currentSpeakerIndex = 0
 
@@ -305,3 +411,17 @@ func set_camera_position_to_speaker():
 	var followingVector = find_current_speaker_position()
 	Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 		
+
+func set_current_world(worldName):
+	_ink_player.SetVariable("currentWorld", worldName)
+
+
+func reset_story():
+	clear_and_reset_ui()
+	_ink_player.Reset()
+	_ink_player.LoadStory(_ink_story)
+
+
+func fast_forward(state):
+	fastforward = state
+	

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/partyposter.ink-5061d73acfb4a5e34e400a76f1c4e29d.res"
+
+[deps]
+
+source_file="res://assets/alpha/ink_alpha/hallway/partyposter.ink"
+dest_files=[ "res://.import/partyposter.ink-5061d73acfb4a5e34e400a76f1c4e29d.res" ]
+
+[params]
+
+is_master_file=false
+compress=false
