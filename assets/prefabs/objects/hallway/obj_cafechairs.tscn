@@ -24,8 +24,8 @@ region_rect = Rect2( 146, 112, 12, 16 )
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+position = Vector2( 0, -8 )
 texture = ExtResource( 3 )
-offset = Vector2( 0, -8 )
 region_enabled = true
 region_rect = Rect2( 146, 112, 12, 16 )
 

@@ -48,3 +48,8 @@ func add_choice_child(newNode):
 # Get all choice nodes inside choice entry (self)
 func get_choices():
 	return $HBoxContainer/VBoxContainer/DialogueTextContainer/Background/VBoxContainer.get_children()
+
+
+# Source texture - preloaded asset
+func set_portrait(sourceTexture):
+	$HBoxContainer/Portrait.set_texture(sourceTexture)

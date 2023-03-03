@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/static_bandn.ink-7badd8b8963bff3a5244e5a8b35d199d.res"
+
+[deps]
+
+source_file="res://assets/ink/bandn/static_bandn.ink"
+dest_files=[ "res://.import/static_bandn.ink-7badd8b8963bff3a5244e5a8b35d199d.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

@@ -39,6 +39,7 @@ func _ready():
 		
 	if Engine.editor_hint:
 		$Sprite.texture = dreamsheet
+		$Hint.visible = false
 		
 	else:
 		$Hint.visible = false
@@ -66,7 +67,8 @@ func _set_hint_attributes():
 	$Hint.region_rect = $Sprite.region_rect
 	$Hint.set_position(Vector2(real_world_x_position, real_world_y_position))
 	$Hint.set_texture(realsheet)
-	$Hint.offset.y = $Sprite.region_rect.size.y / -2
+	$Hint.set_position($Sprite.get_position())
+	#$Hint.offset.y = ($Sprite.region_rect.size.y / -2) - $Sprite.transform.get_origin().x
 
 
 # Activate color of outline shader

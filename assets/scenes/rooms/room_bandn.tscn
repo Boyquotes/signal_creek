@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_bandn_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_priceofsalt.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/shaders/shader_outline.gdshader" type="Shader" id=14]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_musicstand.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/prefabs/obj_rina.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_poster1.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_skeletondisplay.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_poster2.tscn" type="PackedScene" id=19]
@@ -34,7 +33,6 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_notebooks.tscn" type="PackedScene" id=32]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_displaystand.tscn" type="PackedScene" id=33]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_kindle.tscn" type="PackedScene" id=34]
-
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 32, 4 )
@@ -88,14 +86,6 @@ shader_param/pattern = 0
 shader_param/inside = false
 
 [sub_resource type="ShaderMaterial" id=7]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=13]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -286,10 +276,6 @@ position = Vector2( 137, 169 )
 [node name="PriceOfSalt" parent="PlaneManager/Overworld" instance=ExtResource( 13 )]
 material = SubResource( 7 )
 position = Vector2( 214, 202 )
-
-[node name="Rina" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
-material = SubResource( 13 )
-position = Vector2( 256, 144 )
 
 [node name="SkeletonDIsplay" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
 position = Vector2( 101, 106 )
