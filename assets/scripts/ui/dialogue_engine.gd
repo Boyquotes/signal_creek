@@ -9,9 +9,12 @@ func _ready():
 
 # use newText to make a new NORMAL entryAsset
 # return newly created entryAsset
-func create_entry(newText, entryAsset):
+func create_entry(newText, entryAsset, entryParagraph):
 	var newEntry = entryAsset.instance()
-	newEntry.bbcode_text = newText.strip_escapes()
+	
+	var newParagraph = entryParagraph.instance()
+	newParagraph.bbcode_text = newText
+	newEntry.set_text(newParagraph)
 
 	return newEntry
 

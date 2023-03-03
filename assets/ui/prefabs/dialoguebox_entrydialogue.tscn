@@ -30,6 +30,8 @@ custom_constants/separation = 16
 
 [node name="Portrait" type="TextureRect" parent="HBoxContainer"]
 material = ExtResource( 4 )
+margin_right = 96.0
+margin_bottom = 225.0
 rect_min_size = Vector2( 96, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 3
@@ -46,7 +48,7 @@ size_flags_horizontal = 3
 
 [node name="Name" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
 margin_right = 245.0
-margin_bottom = 19.0
+margin_bottom = 18.0
 custom_colors/default_color = Color( 1, 0.556863, 0.556863, 1 )
 bbcode_enabled = true
 bbcode_text = "[b]Sugma Deek[/b]"
@@ -54,9 +56,9 @@ text = "Sugma Deek"
 fit_content_height = true
 
 [node name="DialogueTextContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
-margin_top = 39.0
+margin_top = 38.0
 margin_right = 245.0
-margin_bottom = 58.0
+margin_bottom = 57.0
 custom_constants/margin_left = 16
 
 [node name="Background" type="PanelContainer" parent="HBoxContainer/VBoxContainer/DialogueTextContainer"]

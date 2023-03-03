@@ -29,10 +29,17 @@ func set_nametag(newName, newColor):
 	$HBoxContainer/VBoxContainer/DialogueTextContainer/Background.get_stylebox("panel").set("border_color", newColor)
 
 
-# Bro im too tired to describe this
+# add paragraph child to dialogue entry
 func set_dialogue(dialoguetext):
 	$HBoxContainer/VBoxContainer/DialogueTextContainer/Background/VBoxContainer.add_child(dialoguetext)
 
+
+# add paragraph child to normal entry
+func set_text(dialoguetext):
+	$HBoxContainer/VBoxContainer.add_child(dialoguetext)
+
+func get_text_normal():
+	return $HBoxContainer/VBoxContainer/Dialogue
 
 func get_dialogue_text():
 	return $HBoxContainer/VBoxContainer/DialogueTextContainer/Background/VBoxContainer/Dialogue
@@ -53,3 +60,4 @@ func get_choices():
 # Source texture - preloaded asset
 func set_portrait(sourceTexture):
 	$HBoxContainer/Portrait.set_texture(sourceTexture)
+	
