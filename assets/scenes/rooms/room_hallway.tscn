@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_hallway_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -41,11 +41,21 @@
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_bandn.tscn" type="PackedScene" id=39]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_smallshrub.tscn" type="PackedScene" id=40]
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=41]
+[ext_resource path="res://assets/prefabs/location_trigger.tscn" type="PackedScene" id=42]
+[ext_resource path="res://assets/prefabs/obj_rina.tscn" type="PackedScene" id=43]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 24, 8 )
 
 [sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=4]
 resource_local_to_scene = true
 shader = ExtResource( 4 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -93,6 +103,10 @@ exit_position = Vector2( 232, 256 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal_TopicSpot"]
 position = Vector2( -8, -32 )
 shape = SubResource( 2 )
+
+[node name="LocationTrigger" parent="PlaneManager" instance=ExtResource( 42 )]
+position = Vector2( 472, 280 )
+_knot_name = "betaintro_hallway"
 
 [node name="Doortal_Bandn" type="Area2D" parent="PlaneManager"]
 position = Vector2( 464, 712 )
@@ -306,6 +320,7 @@ position = Vector2( -56, 48 )
 
 [node name="BandNSign" parent="PlaneManager/Overworld" instance=ExtResource( 12 )]
 position = Vector2( 510, 670 )
+z_index = 1
 
 [node name="SofaBack" parent="PlaneManager/Overworld" instance=ExtResource( 17 )]
 position = Vector2( 121, 194 )
@@ -499,6 +514,10 @@ position = Vector2( 829, 372 )
 
 [node name="SmallShrub3" parent="PlaneManager/Overworld" instance=ExtResource( 40 )]
 position = Vector2( 756, 371 )
+
+[node name="Rina" parent="PlaneManager/Overworld" instance=ExtResource( 43 )]
+material = SubResource( 4 )
+position = Vector2( 376, 192 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal_TopicSpot" to="PlaneManager/Doortal_TopicSpot" method="_on_Doortal_body_entered"]
 [connection signal="body_entered" from="PlaneManager/Doortal_Bandn" to="PlaneManager/Doortal_Bandn" method="_on_Doortal_body_entered"]
