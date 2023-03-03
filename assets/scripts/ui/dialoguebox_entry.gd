@@ -21,7 +21,7 @@ func remove_placeholders():
 
 # Set color and text contents of name to newName and newColor
 func set_nametag(newName, newColor):
-	$HBoxContainer/VBoxContainer/Name.bbcode_text = '[b]' + newName + '[/b]'
+ 	$HBoxContainer/VBoxContainer/Name.bbcode_text = '[b]' + newName + '[/b]'
 	$HBoxContainer/VBoxContainer/Name.set("custom_colors/default_color", newColor)
 
 	var newboxstyle = $HBoxContainer/VBoxContainer/DialogueTextContainer/Background.get_stylebox("panel").duplicate()

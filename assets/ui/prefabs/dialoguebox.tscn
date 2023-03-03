@@ -52,22 +52,22 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance_placeholder="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn"]
-margin_top = 87.0
+margin_top = 83.0
 margin_right = 354.0
-margin_bottom = 106.0
+margin_bottom = 102.0
 
 [node name="DialogueEntryChoices" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
-margin_top = 126.0
+margin_top = 122.0
 margin_right = 354.0
-margin_bottom = 262.0
+margin_bottom = 242.0
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="DialogueEntry" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-margin_top = 282.0
+margin_top = 262.0
 margin_right = 354.0
-margin_bottom = 378.0
+margin_bottom = 382.0
 
 [node name="ColorManager" type="Control" parent="."]
 margin_right = 40.0
