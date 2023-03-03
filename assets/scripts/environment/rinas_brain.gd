@@ -19,8 +19,8 @@ onready var rina_sprite = self.get_parent().get_child(0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Globals.Rina = self
-	if RoomEngine.CurrentRoom == RoomEngine.Rooms[1]:
-		move_rina("START")
+#	if RoomEngine.CurrentRoom == RoomEngine.Rooms[1]:
+#		move_rina("START")
 	rina_shlorp_in()
 
 
