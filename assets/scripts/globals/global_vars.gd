@@ -33,6 +33,7 @@ var Suwan = null
 var Rina = null
 
 var Elevator = null
+var RouteLights = null
 
 var InkStoryState = ""
 

@@ -193,6 +193,14 @@ func proceed():
 			if "&EMOTE" in currentLine:
 				pass
 				
+			if "&LIGHT" in currentLine:
+				# TODO: make global elevator var and make this parsing work 
+				# so that erna can test the elevator script
+				#&LIGHT_Nick0
+				#var lightName = currentLine.split("_")[1].strip_escapes()
+				#turn_turn_light(lightName)
+				pass
+				
 			return
 		
 		currentLine = currentLine.replacen('<', '[')
