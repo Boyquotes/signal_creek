@@ -9,17 +9,11 @@
 [node name="UserInterface" type="Control"]
 margin_right = 960.0
 margin_bottom = 540.0
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
 margin_right = 960.0
 margin_bottom = 540.0
 border_color = Color( 1, 1, 1, 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="DialogueBox" parent="ReferenceRect" instance=ExtResource( 6 )]
 anchor_right = 0.0

@@ -17,21 +17,19 @@ anti_aliasing = false
 Panel/styles/panel = SubResource( 3 )
 
 [node name="DialogueEntry" type="MarginContainer"]
-margin_right = 282.0
-margin_bottom = 56.0
+margin_right = 357.0
+margin_bottom = 225.0
 theme = ExtResource( 3 )
 script = ExtResource( 2 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 282.0
-margin_bottom = 96.0
+margin_right = 357.0
+margin_bottom = 225.0
 size_flags_vertical = 3
 custom_constants/separation = 16
 
 [node name="Portrait" type="TextureRect" parent="HBoxContainer"]
 material = ExtResource( 4 )
-margin_right = 96.0
-margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 3
@@ -42,13 +40,13 @@ stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 112.0
-margin_right = 282.0
-margin_bottom = 96.0
+margin_right = 357.0
+margin_bottom = 225.0
 size_flags_horizontal = 3
 
 [node name="Name" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
-margin_right = 170.0
-margin_bottom = 16.0
+margin_right = 245.0
+margin_bottom = 19.0
 custom_colors/default_color = Color( 1, 0.556863, 0.556863, 1 )
 bbcode_enabled = true
 bbcode_text = "[b]Sugma Deek[/b]"
@@ -56,20 +54,21 @@ text = "Sugma Deek"
 fit_content_height = true
 
 [node name="DialogueTextContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
-margin_top = 36.0
-margin_right = 170.0
-margin_bottom = 52.0
+margin_top = 39.0
+margin_right = 245.0
+margin_bottom = 58.0
 custom_constants/margin_left = 16
 
 [node name="Background" type="PanelContainer" parent="HBoxContainer/VBoxContainer/DialogueTextContainer"]
 margin_left = 16.0
-margin_right = 170.0
-margin_bottom = 16.0
+margin_right = 245.0
+margin_bottom = 19.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/DialogueTextContainer/Background"]
 margin_left = 12.0
-margin_right = 154.0
-margin_bottom = 16.0
+margin_right = 229.0
+margin_bottom = 19.0
 
 [node name="Dialogue" parent="HBoxContainer/VBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
-margin_right = 142.0
+margin_right = 217.0
+margin_bottom = 19.0
