@@ -33,8 +33,8 @@ region_rect = Rect2( 11, 7, 106, 143 )
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+position = Vector2( 0, -70 )
 texture = ExtResource( 3 )
-offset = Vector2( 0, -71.5 )
 region_enabled = true
 region_rect = Rect2( 11, 7, 106, 143 )
 
@@ -128,6 +128,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_editor_description_": ""
 }
+_disable_interactivity = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 position = Vector2( 0, 28 )
