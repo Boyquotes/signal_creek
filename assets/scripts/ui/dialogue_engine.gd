@@ -28,7 +28,7 @@ func create_entry_dialogue(newText, entryAsset, entryParagraph):
 	
 	Globals.ColorManager.set_current_color(dialogueLine[0])
 	
-	newEntry.set_nametag(dialogueLine[0] + ":", Globals.ColorManager.get_current_color())
+	newEntry.set_nametag(dialogueLine[0], Globals.ColorManager.get_current_color())
 	newEntry.set_portrait(Globals.ColorManager.get_current_portrait())
 	newEntry.remove_placeholders()
 	
@@ -59,7 +59,7 @@ func create_entry_choices(newChoices, currentSpeaker, entryAsset, choiceAsset):
 			Globals.ColorManager.set_current_color(nameSubstring)
 			var colorCode = Globals.ColorManager.get_current_color()
 			var textSubstring = option.split(":", false)[1].strip_escapes()
-			newText = '[color=#' + colorCode.to_html() + '][b]'  + nameSubstring + ':[/b][/color]' + textSubstring 
+			newText = '[color=#' + colorCode.to_html() + '][b]'  + nameSubstring + '[/b][/color]' + textSubstring 
 			
 		else:
 			newText = '[' + option + ']'

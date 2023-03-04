@@ -29,7 +29,7 @@ margin_bottom = -10.0
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 anchor_left = -0.175
 anchor_top = -0.00188679
-anchor_right = 0.926
+anchor_right = 0.970509
 anchor_bottom = 0.877
 margin_left = -1.0236
 margin_right = -1.06943
@@ -39,35 +39,37 @@ __meta__ = {
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
-margin_right = 370.0
-margin_bottom = 465.0
+margin_right = 386.0
+margin_bottom = 466.0
 scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer"]
-margin_right = 354.0
-margin_bottom = 465.0
+margin_right = 370.0
+margin_bottom = 466.0
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance_placeholder="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn"]
-margin_top = 83.0
-margin_right = 354.0
+margin_top = 6.0
+margin_right = 370.0
 margin_bottom = 102.0
 
 [node name="DialogueEntryChoices" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
 margin_top = 122.0
-margin_right = 354.0
-margin_bottom = 242.0
+margin_right = 370.0
+margin_bottom = 281.0
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="DialogueEntry" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-margin_top = 262.0
-margin_right = 354.0
-margin_bottom = 382.0
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_top = 301.0
+margin_right = 370.0
+margin_bottom = 460.0
 
 [node name="ColorManager" type="Control" parent="."]
 margin_right = 40.0

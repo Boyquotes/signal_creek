@@ -211,8 +211,8 @@ func proceed():
 			
 	else: #default to nour if no nametag provided
 		is_displaying_choices = true
-		current_speaker = "NOUR:"
-		display_choices("NOUR:")
+		current_speaker = "NOUR"
+		display_choices("NOUR")
 		set_camera_position_to_speaker()
 		
 	yield(get_tree(), "idle_frame")

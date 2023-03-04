@@ -9,6 +9,7 @@ extends Control
 
 export(NodePath) var content_box
 export(NodePath) var nametag
+export(NodePath) var name_separator
 export(NodePath) var portrait
 
 func _ready():
@@ -25,8 +26,10 @@ func remove_placeholders():
 
 # Set color and text contents of name to newName and newColor
 func set_nametag(newName, newColor):
-	get_node(nametag).bbcode_text = '[b]' + newName + '[/b]'
+	get_node(nametag).bbcode_text = '[b][center]' + newName + '[/center][/b]'
 	get_node(nametag).set("custom_colors/default_color", newColor)
+	get_node(name_separator).set("custom_styles/separator/color", newColor)
+#	get_node(name_separator).set("custom_colors/color", newColor)
 # 	$HBoxContainer/VBoxContainer/Name.bbcode_text = '[b]' + newName + '[/b]'
 #	$HBoxContainer/VBoxContainer/Name.set("custom_colors/default_color", newColor)
 
