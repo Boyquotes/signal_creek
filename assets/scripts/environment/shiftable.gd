@@ -43,7 +43,7 @@ func _ready():
 		
 	else:
 		$Hint.visible = false
-		if (get_node_or_null("ActiveArea") != null):
+		if (get_node_or_null("ActiveArea") != null) and $Sprite.get_material():
 			$Sprite.material.set_shader_param("color", Color.transparent)
 
 
@@ -75,10 +75,11 @@ func _set_hint_attributes():
 func _on_ActiveArea_can_interact():
 	# IN CASE OF LEADER SWITCHING
 	#$Sprite.material.set_shader_param("color", Globals.ColorManager.current_color)
-	
-	$Sprite.material.set_shader_param("color", Color.white)
+	if $Sprite.get_material():
+		$Sprite.material.set_shader_param("color", Color.white)
 
 
 # Deactivate color of outline shader
 func _on_ActiveArea_cannot_interact():
-	$Sprite.material.set_shader_param("color", Color.transparent)
+	if $Sprite.get_material():
+		$Sprite.material.set_shader_param("color", Color.transparent)
