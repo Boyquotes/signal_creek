@@ -1,22 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entry_paragraph.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scripts/ui/dialoguebox_entry.gd" type="Script" id=2]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=3]
 [ext_resource path="res://assets/shaders/material_portraitborder.tres" type="Material" id=4]
 [ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/nick_dream.png" type="Texture" id=5]
-
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.278431, 0.647059, 0.803922, 1 )
-border_width_top = 1
-border_width_bottom = 1
-border_color = Color( 0.956863, 0.607843, 0.607843, 1 )
-
-[sub_resource type="Theme" id=5]
-HSeparator/styles/separator = SubResource( 6 )
-
-[sub_resource type="StyleBoxLine" id=7]
-thickness = 2
 
 [sub_resource type="StyleBoxFlat" id=3]
 content_margin_left = 1.0
@@ -29,6 +17,7 @@ anti_aliasing = false
 Panel/styles/panel = SubResource( 3 )
 
 [node name="DialogueEntry" type="VBoxContainer"]
+light_mask = 9
 anchor_top = -0.007
 anchor_bottom = -0.007
 margin_top = 3.78
@@ -42,37 +31,39 @@ name_separator = NodePath("MarginContainer/HBoxContainer/HSeparator")
 portrait = NodePath("HBoxContainer/Portrait")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+light_mask = 9
 margin_right = 395.0
 margin_bottom = 19.0
 custom_constants/margin_left = 80
 
 [node name="HBoxContainer" type="HFlowContainer" parent="MarginContainer"]
+light_mask = 9
 margin_left = 80.0
 margin_right = 395.0
 margin_bottom = 19.0
 rect_min_size = Vector2( 0, 16 )
 
 [node name="Name" type="RichTextLabel" parent="MarginContainer/HBoxContainer"]
-margin_right = 110.0
+light_mask = 9
+margin_right = 99.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_stretch_ratio = 0.48
 custom_colors/default_color = Color( 1, 0.556863, 0.556863, 1 )
 bbcode_enabled = true
-bbcode_text = "[right][b]MS. SUWAN[/b][/right]"
+bbcode_text = "[b]MS. SUWAN[/b]"
 text = "MS. SUWAN"
 fit_content_height = true
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer"]
-margin_left = 114.0
+light_mask = 9
+margin_left = 103.0
 margin_right = 314.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.8
-theme = SubResource( 5 )
-custom_styles/separator = SubResource( 7 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+light_mask = 9
 margin_top = 39.0
 margin_right = 395.0
 margin_bottom = 159.0
@@ -80,6 +71,7 @@ size_flags_vertical = 3
 custom_constants/separation = 16
 
 [node name="Portrait" type="TextureRect" parent="HBoxContainer"]
+light_mask = 9
 material = ExtResource( 4 )
 margin_right = 120.0
 margin_bottom = 120.0
@@ -92,6 +84,7 @@ expand = true
 stretch_mode = 6
 
 [node name="DialogueTextContainer" type="MarginContainer" parent="HBoxContainer"]
+light_mask = 9
 margin_left = 136.0
 margin_right = 395.0
 margin_bottom = 120.0
@@ -100,20 +93,23 @@ custom_constants/margin_right = 16
 custom_constants/margin_left = 8
 
 [node name="Background" type="PanelContainer" parent="HBoxContainer/DialogueTextContainer"]
+light_mask = 9
 margin_left = 8.0
 margin_right = 243.0
 margin_bottom = 120.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/DialogueTextContainer/Background"]
+light_mask = 9
 margin_right = 235.0
 margin_bottom = 120.0
 alignment = 1
 
 [node name="Dialogue" parent="HBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
+light_mask = 9
 margin_top = 31.0
 margin_right = 235.0
 margin_bottom = 88.0
 bbcode_text = "Why cant i see any of this text bro what the fuck SJDFlksjeflkjelkj lkesjlkreskjfkkfkk"
-visible_characters = 157
-percent_visible = 3.20408
+visible_characters = -1
+percent_visible = 1.0
 text = "Why cant i see any of this text bro what the fuck SJDFlksjeflkjelkj lkesjlkreskjfkkfkk"

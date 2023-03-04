@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=16 format=2]
+[gd_resource type="Theme" load_steps=17 format=2]
 
 [ext_resource path="res://assets/ui/fonts/cambay/cambay_italic_16.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold.tres" type="DynamicFont" id=2]
@@ -41,6 +41,10 @@ border_color = Color( 0.8, 0.8, 0.8, 0.470588 )
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 anti_aliasing = false
+
+[sub_resource type="StyleBoxLine" id=13]
+color = Color( 0.988235, 0.596078, 0.596078, 1 )
+thickness = 2
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0745098, 0.0784314, 0.121569, 0.901961 )
@@ -119,6 +123,8 @@ Button/styles/focus = SubResource( 2 )
 Button/styles/hover = SubResource( 10 )
 Button/styles/normal = SubResource( 11 )
 Button/styles/pressed = SubResource( 2 )
+HSeparator/constants/separation = 4
+HSeparator/styles/separator = SubResource( 13 )
 LinkButton/colors/font_color = Color( 1, 1, 1, 0.784314 )
 LinkButton/colors/font_color_focus = Color( 1, 1, 1, 1 )
 LinkButton/colors/font_color_hover = Color( 1, 1, 1, 1 )
