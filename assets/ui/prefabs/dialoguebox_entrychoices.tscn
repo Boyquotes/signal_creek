@@ -30,6 +30,9 @@ margin_right = 394.0
 margin_bottom = 211.0
 theme = ExtResource( 3 )
 script = ExtResource( 2 )
+content_box = NodePath("Portrait/VBoxContainer/DialogueTextContainer/Background/VBoxContainer")
+nametag = NodePath("MarginContainer/Name")
+portrait = NodePath("Portrait")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 margin_right = 394.0

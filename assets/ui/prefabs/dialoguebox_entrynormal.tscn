@@ -17,6 +17,7 @@ Panel/styles/panel = SubResource( 3 )
 margin_right = 219.0
 margin_bottom = 55.0
 script = ExtResource( 2 )
+content_box = NodePath("HBoxContainer/VBoxContainer")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_right = 219.0
