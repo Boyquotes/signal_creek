@@ -11,6 +11,7 @@ export var typewriter_speed : int = 1
 export var scroll_increment : float = 0.75
 export var panel_opening_speed : float = 0.25
 export var _entry_prefab_normal = preload("res://assets/ui/prefabs/dialoguebox_entrynormal.tscn")
+export var _entry_prefab_paragraph = preload("res://assets/ui/prefabs/dialoguebox_entry_paragraph.tscn")
 export var _entry_prefab_dialogue = preload("res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn")
 export var _entry_prefab_choices = preload("res://assets/ui/prefabs/dialoguebox_entrychoices.tscn")
 export var _choice_prefab = preload("res://assets/ui/prefabs/dialoguebox_entrychoices_choice.tscn")
@@ -232,7 +233,7 @@ func check_entry_type(entryText):
 		set_camera_position_to_speaker()
 		
 	elif ":" in entryText: #if line contains a name, parse name and dialogue after
-		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_normal)
+		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_paragraph)
 		current_speaker = entryText.split(":")[0]
 		#print(entryText.split(":")[0])
 		_vertical_layout_node.add_child(newDialogue)
@@ -245,12 +246,12 @@ func check_entry_type(entryText):
 		set_camera_position_to_speaker()
 	
 	else: #it's a normal text entry
-		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal)
+		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal, _entry_prefab_paragraph)
 		if !fastforward:
 			print("NORMAL TEXT")
 			
 		#track the text label for typewriter effect
-		current_text_box = newText
+		current_text_box = newText.get_text_normal()
 		#init typewriter effect
 		is_typing = true
 		
