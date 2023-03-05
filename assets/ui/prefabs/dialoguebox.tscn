@@ -20,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 9 )
 script = ExtResource( 2 )
+typewriter_speed = 2
 
 [node name="InkPlayer" type="Node" parent="."]
 script = ExtResource( 4 )

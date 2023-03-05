@@ -8,6 +8,7 @@
     &POS_SUWAN_160,248
     &FOLLOW_NICK_NickElevatorPos
     &FOLLOW_NOUR_NourStartingPos
+    
     &FOLLOW_SUWAN_SuwanStartingPos
     
     NICK: "Maybe she won't find us and give up chasing—”
@@ -175,13 +176,18 @@
     
     NICK: "Maybe we’re in some kind of backrooms of the universe!"
     
+    &EMOTE_SUWAN_LeftIdle
+    
     MS. SUWAN: "…Pardon?"
+    
+    &EMOTE_NICK_RightIdle
     
     NICK: "Y’know, liminal spaces? Weird alternate dimensions where everything feels off."
     
     NICK: "A place where space and time aren’t acting as they should."
     
     MS. SUWAN: "We must be hallucinating. That’s the only explanation I can think of to describe… whatever it is that we’re seeing."
+    
         * [Agree with her]
             NOUR: "Maybe we hit our heads somewhere...or a potential gas leak?"
             
@@ -215,11 +221,19 @@
 
     - MS. SUWAN: "This is absurd. We need to go back."
     
+    &EMOTE_NOUR_UpIdle
+    
     NOUR: "The elevator is closed though, and it doesn't look like the doors will budge either."
+    
+    &EMOTE_SUWAN_UpIdle
     
     MS. SUWAN: "Then I'll just press the—"
     
     NICK: "Hey, the buttons for this elevator are missing!"
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
     
     NICK: "And why are there so many lights on this elevator? That's kinda whacky, haha!"
     
@@ -239,11 +253,21 @@
     
     NICK: "Maybe if we find a way to make the elevator work again, we could go back down!"
     
+    &EMOTE_SUWAN_DownIdle
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_NICK_RightIdle
+    
     MS. SUWAN: "It would make more sense to find another way out of here. I'm going to try calling someone..."
     
     MS. SUWAN: "..."
     
     MS. SUWAN: "Hmm. No service and no WiFi."
+    
+    &EMOTE_NICK_DownIdle
+    
+    &EMOTE_NOUR_DownIdle
     
     NICK: "Aw, man. Same! I can't play any of my phone games..."
     
