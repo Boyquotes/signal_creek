@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
-[ext_resource path="res://assets/ui/prefabs/MarginContainer.gd" type="Script" id=3]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
@@ -41,7 +40,6 @@ anchor_bottom = 0.877
 margin_left = -1.0236
 margin_right = -1.06943
 margin_bottom = 0.189972
-script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
