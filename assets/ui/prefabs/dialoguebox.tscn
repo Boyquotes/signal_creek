@@ -1,17 +1,24 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
+[ext_resource path="res://assets/ui/prefabs/MarginContainer.gd" type="Script" id=3]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=9]
 [ext_resource path="res://assets/scripts/ui/color_manager.gd" type="Script" id=10]
 
+[sub_resource type="Gradient" id=1]
+
+[sub_resource type="GradientTexture2D" id=2]
+gradient = SubResource( 1 )
+fill_from = Vector2( 1, 0.1 )
+fill_to = Vector2( 1, 0.2 )
+
 [node name="DialogueBox" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -16.0
 theme = ExtResource( 9 )
 script = ExtResource( 2 )
 
@@ -21,46 +28,64 @@ autoLoadStory = true
 story = ExtResource( 1 )
 
 [node name="Panel" type="Panel" parent="."]
-anchor_left = 1.0
+anchor_left = 0.643
 anchor_right = 1.0
-margin_left = -348.0
-margin_bottom = 530.0
-rect_clip_content = true
+anchor_bottom = 1.0
+margin_bottom = -10.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -149.0
-margin_top = 20.0
-margin_right = 149.0
-margin_bottom = 452.0
+anchor_left = -0.175
+anchor_top = 0.0603774
+anchor_right = 0.970509
+anchor_bottom = 0.877
+margin_left = -1.0236
+margin_right = -1.06943
+margin_bottom = 0.189972
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
-margin_right = 298.0
+margin_right = 392.0
 margin_bottom = 432.0
 scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer"]
-margin_right = 282.0
-margin_bottom = 432.0
+light_mask = 9
+margin_right = 370.0
+margin_bottom = 454.0
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance_placeholder="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn"]
-margin_top = 78.0
-margin_right = 282.0
-margin_bottom = 94.0
+margin_right = 370.0
+margin_bottom = 96.0
 
 [node name="DialogueEntryChoices" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
-margin_top = 114.0
-margin_right = 282.0
-margin_bottom = 238.0
+margin_top = 116.0
+margin_right = 370.0
+margin_bottom = 275.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="DialogueEntry" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-margin_top = 258.0
-margin_bottom = 354.0
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_top = 295.0
+margin_right = 370.0
+margin_bottom = 454.0
+
+[node name="Light2D" type="Light2D" parent="Panel"]
+visible = false
+position = Vector2( 136.657, 279.563 )
+scale = Vector2( 8.2832, 8.70117 )
+texture = SubResource( 2 )
+mode = 3
+range_item_cull_mask = 8
 
 [node name="ColorManager" type="Control" parent="."]
 margin_right = 40.0

@@ -34,6 +34,13 @@ INCLUDE topicspot/sailormoonposters.ink
 INCLUDE topicspot/wallofvideogames.ink
 
 INCLUDE betaintro.ink
+INCLUDE hallway/static_hallway.ink
+INCLUDE topicspot/static_topicspot.ink
+INCLUDE bandn/static_bandn.ink
+
+
+
+
 
 
 == abstract ==

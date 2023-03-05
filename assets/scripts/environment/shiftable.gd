@@ -39,10 +39,11 @@ func _ready():
 		
 	if Engine.editor_hint:
 		$Sprite.texture = dreamsheet
+		$Hint.visible = false
 		
 	else:
 		$Hint.visible = false
-		if (get_node_or_null("ActiveArea") != null):
+		if (get_node_or_null("ActiveArea") != null) and $Sprite.get_material():
 			$Sprite.material.set_shader_param("color", Color.transparent)
 
 
@@ -66,17 +67,19 @@ func _set_hint_attributes():
 	$Hint.region_rect = $Sprite.region_rect
 	$Hint.set_position(Vector2(real_world_x_position, real_world_y_position))
 	$Hint.set_texture(realsheet)
-	$Hint.offset.y = $Sprite.region_rect.size.y / -2
+	$Hint.set_position($Sprite.get_position())
+	#$Hint.offset.y = ($Sprite.region_rect.size.y / -2) - $Sprite.transform.get_origin().x
 
 
 # Activate color of outline shader
 func _on_ActiveArea_can_interact():
 	# IN CASE OF LEADER SWITCHING
 	#$Sprite.material.set_shader_param("color", Globals.ColorManager.current_color)
-	
-	$Sprite.material.set_shader_param("color", Color.white)
+	if $Sprite.get_material():
+		$Sprite.material.set_shader_param("color", Color.white)
 
 
 # Deactivate color of outline shader
 func _on_ActiveArea_cannot_interact():
-	$Sprite.material.set_shader_param("color", Color.transparent)
+	if $Sprite.get_material():
+		$Sprite.material.set_shader_param("color", Color.transparent)
