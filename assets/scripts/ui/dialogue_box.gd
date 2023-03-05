@@ -232,7 +232,7 @@ func parse_commands(currentLine):
 				Globals.Suwan.animate_emote(emoteName)
 		
 	if "&LIGHT" in currentLine:
-
+	
 		# EXAMPLE WRITTEN IN INK: &LIGHT_Nick0
 		
 		# var lightName = currentLine.split("_")[1].strip_escapes()
@@ -240,6 +240,11 @@ func parse_commands(currentLine):
 		# When parsed, lightName will look like this: Nick0
 		
 		#Globals.RouteLights.turn_on_light(lightName)
+		
+		# if !Globals.RouteLights.first_light_turned_on:
+			# Globals.RouteLights.first_light_turned_on = true
+			# do the stuff for the first light conversation here
+			# Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[1], Vector2(472, 304))
 		pass
 
 

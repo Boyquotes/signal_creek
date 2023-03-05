@@ -7,7 +7,7 @@ extends Light2D
 
 var _closing = false
 var _opening = false
-onready var _max_door_width
+onready var _max_door_width = self.scale.x
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +15,7 @@ func _ready():
 
 func _process(_delta):
 	if _closing:
+		
 		pass
 
 func close_doors():

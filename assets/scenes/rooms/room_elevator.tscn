@@ -92,7 +92,6 @@ range_item_cull_mask = 7
 
 [node name="ElevatorLight" type="Light2D" parent="PlaneManager/Lights"]
 position = Vector2( 160, 164.001 )
-scale = Vector2( 1.06667, 2.57136 )
 texture = ExtResource( 7 )
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.9
