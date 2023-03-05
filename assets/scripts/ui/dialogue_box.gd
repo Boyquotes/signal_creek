@@ -60,7 +60,8 @@ func _process(_delta):
 		typewriter_effect(false)
 		
 	if fastforward and !_ink_player.get_HasChoices() and _ink_player.get_CanContinue():
-		proceed()
+		if Globals.PartyObject.get_following_done():
+			proceed()
 #		escape_typewriter_effect()
 		
 	if is_expanding_background_panel:
@@ -131,78 +132,9 @@ func proceed():
 			
 			choice_chosen = false
 		
-		if currentLine.substr(0, 1) == "&": #screen shaking
-			#Globals.GameOverlay.start_shaking(true)
-			#RoomEngine.PlaneManager.shift_planes()
-			if "&SHAKE" in currentLine:
-				Globals.GameOverlay.start_shaking(false)
-				#currentLine = currentLine.trim_prefix('&SHAKE')
-				
-			if "&BLACK" in currentLine:
-				Globals.GameOverlay.set_to_black()
-				#currentLine = currentLine.trim_prefix('&BLACK')
-				
-			if "&FDEIN" in currentLine:
-				Globals.GameOverlay.start_fade_in()
-				#currentLine = currentLine.trim_prefix('&FDEIN')
-				
-			if "&MOV_RINA" in currentLine:
-				Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
-				#currentLine = currentLine.trim_prefix('&FDEIN')
-				
-			if "&SHLORP_RINA" in currentLine:
-				Globals.Rina.rina_shlorp_out()
-				
-			if "&POS" in currentLine: #move nick to vector2
-				var charName = currentLine.split("_")[1].strip_escapes()
-				var vectorPos = currentLine.split("_")[2].strip_escapes()
-				vectorPos = vectorPos.split(",")
-				vectorPos = Vector2(vectorPos[0], vectorPos[1])
-				
-				match charName:
-					"NICK":
-						Globals.Nick.place_character_at_vector(vectorPos)
-						
-					"NOUR":
-						Globals.Nour.place_character_at_vector(vectorPos)
-						
-					"SUWAN":
-						Globals.Suwan.place_character_at_vector(vectorPos)
-				
-			
-			if "&FOLLOW" in currentLine:
-				var charName = currentLine.split("_")[1].strip_escapes()
-				var posNodeName = currentLine.split("_")[2].strip_escapes()
-				var posNode
-				
-				if posNodeName == "NOUR":
-					posNode = Globals.Nour
-					
-				else:
-					posNode = RoomEngine.CurrentRoom.plane_manager.get_node(posNodeName)
-				
-				match charName:
-					"NICK":
-						Globals.Nick.set_following_node(posNode)
-						
-					"NOUR":
-						Globals.Nour.set_following_node(posNode)
-						
-					"SUWAN":
-						Globals.Suwan.set_following_node(posNode)
-				
-			if "&EMOTE" in currentLine:
-				pass
-				
-			if "&LIGHT" in currentLine:
-				# TODO: make global elevator var and make this parsing work 
-				# so that erna can test the elevator script
-				#&LIGHT_Nick0
-				#var lightName = currentLine.split("_")[1].strip_escapes()
-				#turn_turn_light(lightName)
-				pass
-				
-			return
+		if currentLine.substr(0, 1) == "&":
+			parse_commands(currentLine)
+			return "command"
 		
 		currentLine = currentLine.replacen('<', '[')
 		currentLine = currentLine.replacen('>', ']')
@@ -217,6 +149,95 @@ func proceed():
 		
 	yield(get_tree(), "idle_frame")
 	scroll_to_bottom()
+	return "no command"
+
+
+func parse_commands(currentLine):
+		#Globals.GameOverlay.start_shaking(true)
+	#RoomEngine.PlaneManager.shift_planes()
+	if "&SHAKE" in currentLine:
+		Globals.GameOverlay.start_shaking(false)
+		#currentLine = currentLine.trim_prefix('&SHAKE')
+		
+	if "&BLACK" in currentLine:
+		Globals.GameOverlay.set_to_black()
+		#currentLine = currentLine.trim_prefix('&BLACK')
+		
+	if "&FDEIN" in currentLine:
+		Globals.GameOverlay.start_fade_in()
+		#currentLine = currentLine.trim_prefix('&FDEIN')
+		
+	if "&MOV_RINA" in currentLine:
+		Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
+		#currentLine = currentLine.trim_prefix('&FDEIN')
+		
+	if "&SHLORP_RINA" in currentLine:
+		Globals.Rina.rina_shlorp_out()
+		
+	if "&POS" in currentLine: #move nick to vector2
+		var charName = currentLine.split("_")[1].strip_escapes()
+		var vectorPos = currentLine.split("_")[2].strip_escapes()
+		vectorPos = vectorPos.split(",")
+		vectorPos = Vector2(vectorPos[0], vectorPos[1])
+		
+		match charName:
+			"NICK":
+				Globals.Nick.place_character_at_vector(vectorPos)
+				
+			"NOUR":
+				Globals.Nour.place_character_at_vector(vectorPos)
+				
+			"SUWAN":
+				Globals.Suwan.place_character_at_vector(vectorPos)
+		
+	
+	if "&FOLLOW" in currentLine:
+		var charName = currentLine.split("_")[1].strip_escapes()
+		var posNodeName = currentLine.split("_")[2].strip_escapes()
+		var posNode
+		
+		if posNodeName == "NOUR":
+			posNode = Globals.Nour
+			
+		elif posNodeName != "stop":
+			posNode = RoomEngine.CurrentRoom.plane_manager.get_node(posNodeName)
+		
+		match charName:
+			"NICK":
+				Globals.Nick.set_following_node(posNode)
+				
+			"NOUR":
+				if "stop" in posNodeName:
+					Globals.PartyObject.force_nour_movement = false
+					
+				else:
+					Globals.PartyObject.force_nour_movement = true
+					Globals.Nour.set_following_node(posNode)
+				
+			"SUWAN":
+				Globals.Suwan.set_following_node(posNode)
+		
+	if "&EMOTE" in currentLine:
+		var charName = currentLine.split("_")[1].strip_escapes()
+		var emoteName = currentLine.split("_")[2].strip_escapes()
+		
+		match charName:
+			"NICK":
+				Globals.Nick.animate_emote(emoteName)
+				
+			"NOUR":
+				Globals.Nour.animate_emote(emoteName)
+				
+			"SUWAN":
+				Globals.Suwan.animate_emote(emoteName)
+		
+	if "&LIGHT" in currentLine:
+		# TODO: make global elevator var and make this parsing work 
+		# so that erna can test the elevator script
+		#&LIGHT_Nick0
+		#var lightName = currentLine.split("_")[1].strip_escapes()
+		#turn_turn_light(lightName)
+		pass
 
 
 # Parses entryText for special characters, determines what type of entry this is

@@ -2,15 +2,23 @@
     //IN REALITY
     //location: elevator
     //NICK AND NOUR RUN INTO THE ELEVATOR
-    &POS_SUWAN_160,256
-
-    &FOLLOW_SUWAN_SuwanStartingPos
     
     NICK: “QUICK, IN HERE!"
     
+    &POS_SUWAN_160,248
+    &FOLLOW_NICK_NickElevatorPos
+    &FOLLOW_NOUR_NourStartingPos
+    &FOLLOW_SUWAN_SuwanStartingPos
+    
     NICK: "Maybe she won't find us and give up chasing—”
     
+    &EMOTE_NICK_DownIdle
+    &FOLLOW_NOUR_NourElevatorPos
+    &EMOTE_NICK_LeftIdle
+    
     NOUR: “In the BROKEN ELEVATOR?”
+   
+    &EMOTE_NOUR_RightIdle
     
     NICK: "Uh..."
         * [Try to escape]
@@ -43,11 +51,21 @@
     
     - ???: "Stop right there."
     
+    &EMOTE_NOUR_DownIdle
+    
+    &EMOTE_NICK_LookAround
+    
     NICK: "Aw, shoot! The scary old lady caught up!"
+    
+    &EMOTE_NICK_DownIdle
     
     ???: "What did you just call me—"
     
+    &EMOTE_NOUR_RightIdle
+    
     NOUR: "Stop talking!"
+    
+    &EMOTE_NOUR_DownIdle
     
     ???: "You're both trespassing. That could mean a lot of trouble for the both of you in the face of the law."
     
@@ -56,6 +74,8 @@
     //HER SPRITE IS SHOWN NORMALLY
     ???: "I AM the law."
     
+    &EMOTE_NICK_LookAround
+    
     NICK: "OH GOD—I'm so sorry! Please don't get me in trouble!"
     
     ???: "I'm part of the legal team in charge of inspecting this demolition site."
@@ -63,6 +83,8 @@
     NICK: "Please don't tell my Mom! I didn't mean to take the—"
     
     ???: "Take what?"
+    
+    &EMOTE_NICK_DownIdle
     
     NICK: "...Um."
     
@@ -73,15 +95,23 @@
     NOUR: "I don't know about him, but I'll be out as fast as possible!" 
     NOUR: "I'm only here to take photos. I study journalism, so I wanted to capture this abandoned mall's last moments—"
     
+    &FOLLOW_NICK_NickButtonPressingPos
+    
     MS. SUWAN: "Save your excuses. I'm going to report you both to the authorities this instance—"
     
-    NICK PRESSES ALL THE BUTTONS IN THE ELEVATOR - elevator button boop SFX
+    &EMOTE_SUWAN_DownIdle
+    
+    &EMOTE_NICK_ButtonPress
+    
+    ELEVATOR BUTTONS BEEP BOOP SFX
     
     NICK: "C'mon, c'mon, c'mon!"
     
     NOUR: "Really? Pushing those aren't going to work!"
     
     MS. SUWAN: "She's right. This elevator is broken. It's not going anywhere—"
+    
+    &FOLLOW_SUWAN_SuwanBackup
     
     ELEVATOR DOOR CLOSES. WHIRRING AND BEEPING...PORTAL IS ACTIVATED
     
@@ -91,17 +121,35 @@
     
     NICK: "SAVING OUR BUTTS!!!"
     
+    &FOLLOW_NICK_NickRetreat
+    
+    &EMOTE_NOUR_LookAround
+    
     NOUR: "WITH the person we're running from?!"
+    
+    &EMOTE_NICK_LookAround
+    
+    &FOLLOW_SUWAN_NOUR
     
     MS. SUWAN: "Quiet down, you punk kids! This elevator shouldn't be working at all—"
     
-    &BLACK
+    &EMOTE_SUWAN_DownIdle
     
     NICK: "Why isn't it STOPPING? WHAT'S GOING ON—"
     
+    &BLACK
+    
+    &FOLLOW_NICK_NOUR
+    
     NOUR: "I don't know but BRACE YOURSELVES—!"
     
+    &FOLLOW_NOUR_stop
+    
     &FDEIN
+    
+    &EMOTE_NICK_DownIdle
+    
+    &EMOTE_NOUR_DownIdle
     
     
     -> END
@@ -113,7 +161,11 @@
 == betaintro_hallway ==
     NOUR: "Ugh...I feel sick."
     
+    &EMOTE_NICK_LookAround
+    
     NICK: “Woah, this is crazy...! Are you seeing what I’m seeing?!”
+    
+    &EMOTE_NICK_DownIdle
     
     NOUR: "This...this is one of the floors of the mall! The top floor!"
     

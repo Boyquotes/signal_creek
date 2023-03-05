@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/sprites/characters/sheet_suwan_past.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 5, 2.5 )
+extents = Vector2( 4, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 10, 8 )

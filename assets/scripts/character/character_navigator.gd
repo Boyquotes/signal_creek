@@ -19,6 +19,8 @@ var _current_idle_sprite : String = "DownIdle"
 var _animating_emote = false
 var _current_emote = _current_idle_sprite
 
+var done_following = false
+
 onready var _animation_player = $AnimationPlayer
 onready var following_node
 
@@ -53,6 +55,7 @@ func animate_idle():
 # new track should be added to animation player for character
 # TODO: once the animation ends, make animate_emote false
 func animate_emote(emoteName):
+	_current_idle_sprite = emoteName
 	_animation_player.play(emoteName)
 
 
@@ -63,8 +66,10 @@ func move_character_by_vector(directionVector : Vector2):
 		
 	if directionVector.length() == 0: # not moving, _current_idle_sprite and return early
 		animate_idle()
+		done_following = true
 		return
 		
+	done_following = false
 	
 	directionVector = directionVector.normalized()
 	_direction_facing = directionVector
