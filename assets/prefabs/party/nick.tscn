@@ -44,6 +44,8 @@ extents = Vector2( 10, 7.875 )
 
 [node name="NICK" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
+_pathfind_stop_approaching_dist = 28.0
+_pathfind_move_away_dist = 18.0
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 2

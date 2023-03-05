@@ -34,7 +34,6 @@ margin_bottom = 416.0
 focus_mode = 1
 theme = ExtResource( 2 )
 script = ExtResource( 1 )
-devmode = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="DevTools"]
 margin_left = 8.0

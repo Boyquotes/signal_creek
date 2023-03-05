@@ -136,7 +136,7 @@ func get_leader_index():
 func get_following_done():
 	for character in characterObjects:
 		if !character.done_following:
-			print(character.inkname + " not done following")
+#			print(character.inkname + " not done following")
 			if character.inkname == "NOUR" and force_nour_movement:
 				return false
 				
@@ -144,6 +144,7 @@ func get_following_done():
 				return false
 			
 		else:
-			print(character.inkname + " done following")
+#			print(character.inkname + " done following")
+			pass
 			
 	return true

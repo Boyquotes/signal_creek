@@ -16,7 +16,7 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [  ]
 }
-party_starting_position = Vector2( 160, 264 )
+party_starting_position = Vector2( 160, 248 )
 room_bounds_max = Vector2( 320, 192 )
 room_index = 3
 
