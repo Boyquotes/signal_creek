@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/objects/sheet_elevatorlights.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/sprites/objects/sheet_elevator_normals.png" type="Texture" id=4]
 [ext_resource path="res://assets/prefabs/objects/ElevatorArea.gd" type="Script" id=5]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=6]
+[ext_resource path="res://assets/prefabs/objects/hallway/RouteLights.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 48, 31.5 )
@@ -40,6 +41,7 @@ region_enabled = true
 region_rect = Rect2( 11, 7, 106, 143 )
 
 [node name="RouteLights" type="Node2D" parent="."]
+script = ExtResource( 7 )
 
 [node name="SheetElevatorlights" type="Light2D" parent="RouteLights"]
 visible = false
@@ -47,7 +49,6 @@ position = Vector2( 0, -58 )
 texture = ExtResource( 2 )
 
 [node name="Nick0" type="Sprite" parent="RouteLights"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -12, -64 )
 texture = ExtResource( 2 )
@@ -55,7 +56,6 @@ region_enabled = true
 region_rect = Rect2( 1, 0, 4, 3 )
 
 [node name="Nick1" type="Sprite" parent="RouteLights"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -12, -60 )
 texture = ExtResource( 2 )
@@ -63,7 +63,6 @@ region_enabled = true
 region_rect = Rect2( 1, 4, 4, 3 )
 
 [node name="Nick2" type="Sprite" parent="RouteLights"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -12, -53 )
 texture = ExtResource( 2 )
@@ -71,7 +70,6 @@ region_enabled = true
 region_rect = Rect2( 0, 10, 6, 6 )
 
 [node name="Nour0" type="Sprite" parent="RouteLights"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 0, -64 )
 texture = ExtResource( 2 )
@@ -79,7 +77,6 @@ region_enabled = true
 region_rect = Rect2( 13, 0, 4, 3 )
 
 [node name="Nour1" type="Sprite" parent="RouteLights"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 0, -60 )
 texture = ExtResource( 2 )
@@ -87,7 +84,6 @@ region_enabled = true
 region_rect = Rect2( 13, 4, 4, 3 )
 
 [node name="Nour2" type="Sprite" parent="RouteLights"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 0, -53 )
 texture = ExtResource( 2 )
@@ -95,7 +91,6 @@ region_enabled = true
 region_rect = Rect2( 12, 10, 6, 6 )
 
 [node name="Suwan0" type="Sprite" parent="RouteLights"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 12, -64 )
 texture = ExtResource( 2 )
@@ -103,7 +98,6 @@ region_enabled = true
 region_rect = Rect2( 25, 0, 4, 3 )
 
 [node name="Suwan1" type="Sprite" parent="RouteLights"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 12, -60 )
 texture = ExtResource( 2 )
@@ -111,7 +105,6 @@ region_enabled = true
 region_rect = Rect2( 25, 4, 4, 3 )
 
 [node name="Suwan2" type="Sprite" parent="RouteLights"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 12, -53 )
 texture = ExtResource( 2 )

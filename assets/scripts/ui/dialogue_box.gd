@@ -198,8 +198,9 @@ func proceed():
 				# TODO: make global elevator var and make this parsing work 
 				# so that erna can test the elevator script
 				#&LIGHT_Nick0
-				#var lightName = currentLine.split("_")[1].strip_escapes()
-				#turn_turn_light(lightName)
+				
+				var lightName = currentLine.split("_")[1].strip_escapes()
+				Globals.RouteLights.turn_on_light("Nour0");
 				pass
 				
 			return
