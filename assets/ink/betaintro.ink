@@ -45,7 +45,7 @@
     
     NICK: "Aw, shoot! The scary old lady caught up!"
     
-    ???" "What did you just call me—"
+    ???: "What did you just call me—"
     
     NOUR: "Stop talking!"
     

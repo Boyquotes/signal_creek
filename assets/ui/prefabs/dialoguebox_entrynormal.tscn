@@ -1,9 +1,44 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="Dialogue" type="RichTextLabel"]
+[ext_resource path="res://assets/scripts/ui/dialoguebox_entry.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 1.0
+content_margin_right = 1.0
+content_margin_top = 1.0
+content_margin_bottom = 1.0
+anti_aliasing = false
+
+[sub_resource type="Theme" id=4]
+Panel/styles/panel = SubResource( 3 )
+
+[node name="EntryNormal" type="MarginContainer"]
+light_mask = 9
 margin_right = 219.0
 margin_bottom = 55.0
-bbcode_enabled = true
-visible_characters = 0
-percent_visible = 0.0
-fit_content_height = true
+script = ExtResource( 2 )
+content_box = NodePath("HBoxContainer/VBoxContainer")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+light_mask = 9
+margin_right = 219.0
+margin_bottom = 96.0
+
+[node name="Portrait" type="TextureRect" parent="HBoxContainer"]
+light_mask = 9
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme = SubResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+light_mask = 9
+margin_left = 100.0
+margin_right = 219.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+alignment = 1
