@@ -246,6 +246,15 @@ func parse_commands(currentLine):
 			# do the stuff for the first light conversation here
 			# Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[1], Vector2(472, 304))
 		pass
+		
+	if "&ELEVATOR" in currentLine:
+		var action = currentLine.split("_")[1].strip_escapes()
+		
+		if "OPEN" in action:
+			Globals.ElevatorDoorLight.open_doors()
+			
+		elif "CLOSE" in action:
+			Globals.ElevatorDoorLight.close_doors()
 
 
 # Parses entryText for special characters, determines what type of entry this is

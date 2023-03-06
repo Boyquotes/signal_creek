@@ -114,6 +114,8 @@
     
     &FOLLOW_SUWAN_SuwanBackup
     
+    &ELEVATOR_CLOSE
+    
     ELEVATOR DOOR CLOSES. WHIRRING AND BEEPING...PORTAL IS ACTIVATED
     
     &SHAKE
@@ -151,6 +153,10 @@
     &EMOTE_NICK_DownIdle
     
     &EMOTE_NOUR_DownIdle
+    
+    ELEVATOR OPENS...
+    
+    &ELEVATOR_OPEN
     
     
     -> END
