@@ -38,6 +38,8 @@ __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
 party_starting_position = Vector2( 232, 248 )
+room_bounds_min = Vector2( 0, -144 )
+room_bounds_max = Vector2( 464, 288 )
 room_index = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
@@ -63,7 +65,7 @@ __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
 }
 room_index = 1
-exit_position = Vector2( 200, 96 )
+exit_position = Vector2( -8, 64 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal"]
 position = Vector2( 0, -4 )
