@@ -23,7 +23,9 @@
     
     &LIGHT_Nick0
     
-    &it quickly fades away.
+    -> light_on
+    
+    //&it quickly fades away.
     
     -> END
 

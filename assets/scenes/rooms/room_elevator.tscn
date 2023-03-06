@@ -178,10 +178,7 @@ cell_size = Vector2( 16, 16 )
 cell_tile_origin = 2
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( 131080, 0, 327680, 131081, 0, 327684, 131082, 0, 196612, 131083, 0, 393219, 327688, 2, 0, 327689, 1, 0, 327690, 1, 0, 327691, 3, 0 )
-__meta__ = {
-"_edit_lock_": true
-}
+tile_data = PoolIntArray( 327688, 2, 0, 327689, 1, 0, 327690, 1, 0, 327691, 3, 0 )
 
 [node name="LocationTrigger" parent="PlaneManager" instance=ExtResource( 2 )]
 position = Vector2( 160, 256 )

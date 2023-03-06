@@ -115,7 +115,7 @@ func set_sprite(sprite):
 
 # what node the pathfinding should be following
 func set_following_node(nodeToFollow):
-	print(nodeToFollow.get_global_position())
+#	print(nodeToFollow.get_global_position())
 	
 	if nodeToFollow != Globals.Nour:
 		_pathfind_stop_approaching_dist = 2
@@ -130,5 +130,5 @@ func set_following_node(nodeToFollow):
 
 
 func place_character_at_vector(vectorPosition):
-	print(vectorPosition)
+#	print(vectorPosition)
 	self.set_global_position(vectorPosition)
