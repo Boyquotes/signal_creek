@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_hallway_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -43,6 +43,7 @@
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=41]
 [ext_resource path="res://assets/prefabs/location_trigger.tscn" type="PackedScene" id=42]
 [ext_resource path="res://assets/prefabs/obj_rina.tscn" type="PackedScene" id=43]
+[ext_resource path="res://assets/textures/lights/elevatorlight.png" type="Texture" id=44]
 [ext_resource path="res://assets/scripts/environment/tutorial_trigger.gd" type="Script" id=45]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -170,7 +171,7 @@ energy = 0.71
 
 [node name="Light2D4" type="Light2D" parent="PlaneManager/Lights"]
 light_mask = 7
-position = Vector2( -376, 144 )
+position = Vector2( -402, 212 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
 offset = Vector2( 84.1217, 7.26978 )
@@ -179,7 +180,7 @@ energy = 0.71
 
 [node name="Light2D5" type="Light2D" parent="PlaneManager/Lights"]
 light_mask = 7
-position = Vector2( -168, 104 )
+position = Vector2( -125, 114 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
 offset = Vector2( 84.1217, 7.26978 )
@@ -251,7 +252,7 @@ energy = 0.71
 
 [node name="Light2D13" type="Light2D" parent="PlaneManager/Lights"]
 light_mask = 7
-position = Vector2( 8.00003, 728 )
+position = Vector2( -94, 717 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
 offset = Vector2( 84.1217, 7.26978 )
@@ -266,6 +267,22 @@ texture = ExtResource( 41 )
 offset = Vector2( 84.1217, 7.26978 )
 color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
+
+[node name="Light2D15" type="Light2D" parent="PlaneManager/Lights"]
+position = Vector2( -8, 73 )
+rotation = 3.14159
+scale = Vector2( 1, 1.04231 )
+texture = ExtResource( 44 )
+energy = 0.6
+range_item_cull_mask = 9
+
+[node name="Light2D16" type="Light2D" parent="PlaneManager/Lights"]
+position = Vector2( 376, 709 )
+rotation = 3.14159
+scale = Vector2( 1.2972, 0.936323 )
+texture = ExtResource( 44 )
+energy = 0.6
+range_item_cull_mask = 9
 
 [node name="Overworld" type="YSort" parent="PlaneManager"]
 __meta__ = {
