@@ -15,6 +15,8 @@ export(Array, Texture) var real_portraits = []
 export(Array, Texture) var dream_character_sheets = []
 export(Array, Texture) var real_character_sheets = []
 
+var force_nour_movement = false
+
 var partyMembers = [
 	Globals.Characters.NICK,
 	Globals.Characters.NOUR,
@@ -55,6 +57,10 @@ func move_followers_by_pathfind():
 	
 	follower1.pathfind_to(follower1.following_node)
 	follower2.pathfind_to(follower2.following_node)
+
+
+func force_move_leader():
+	characterObjects[leaderIndex].pathfind_to(characterObjects[leaderIndex].following_node)
 
 
 # Change CornerPortrait in the ui
@@ -124,3 +130,21 @@ func get_leader_inkname():
 func get_leader_index():
 	return leaderIndex
 
+
+# see if all characters have reached their desired destination
+# TODO: make this work; fr now it does nothing to suwan bc she breaks the beginning of the game.
+func get_following_done():
+	for character in characterObjects:
+		if !character.done_following:
+#			print(character.inkname + " not done following")
+			if character.inkname == "NOUR" and force_nour_movement:
+				return false
+				
+			elif character.inkname == "NICK": #Ms suwan fucks up the beginning idk why
+				return false
+			
+		else:
+#			print(character.inkname + " done following")
+			pass
+			
+	return true
