@@ -140,14 +140,18 @@ shape = SubResource( 2 )
 [node name="Lights" type="Node2D" parent="PlaneManager"]
 
 [node name="Light2D" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( -176, 160 )
 scale = Vector2( 7.70313, 7.70313 )
 texture = ExtResource( 41 )
 offset = Vector2( 84.1217, 7.26978 )
 color = Color( 1, 0.960784, 0.862745, 1 )
-energy = 0.71
+energy = 0.7
+range_height = 221.4
+range_item_cull_mask = 7
 
 [node name="Light2D2" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( -392, 520 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -156,6 +160,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D3" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( -384, 336 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -164,6 +169,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D4" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( -376, 144 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -172,6 +178,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D5" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( -168, 104 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -180,6 +187,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D6" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( 48, -160 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -188,6 +196,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D7" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( 696, 40 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -196,6 +205,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D8" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( 408, -336 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -204,6 +214,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D9" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( 640, -320 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -212,6 +223,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D10" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( 472, 272 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -220,6 +232,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D11" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( 656, 296 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -228,6 +241,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D12" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( 256, 704 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -236,6 +250,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D13" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( 8.00003, 728 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
@@ -244,6 +259,7 @@ color = Color( 1, 0.960784, 0.862745, 1 )
 energy = 0.71
 
 [node name="Light2D14" type="Light2D" parent="PlaneManager/Lights"]
+light_mask = 7
 position = Vector2( -320, 704 )
 scale = Vector2( 3.84268, 3.84268 )
 texture = ExtResource( 41 )
