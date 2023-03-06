@@ -21,6 +21,8 @@
         
     Ms Suwan's fingertips lightly touch the glossy figurine. As she tries to grip her plam around the doll...
     
+    &LIGHT_Nick0
+    
     &it quickly fades away.
     
     -> END
