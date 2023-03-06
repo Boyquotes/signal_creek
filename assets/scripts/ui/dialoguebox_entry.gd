@@ -9,7 +9,9 @@ extends Control
 
 export(NodePath) var content_box
 export(NodePath) var nametag
+export(NodePath) var name_separator
 export(NodePath) var portrait
+export var nametag_space_from_separator := 72.0
 
 func _ready():
 	pass
@@ -25,15 +27,21 @@ func remove_placeholders():
 
 # Set color and text contents of name to newName and newColor
 func set_nametag(newName, newColor):
-	get_node(nametag).bbcode_text = '[b]' + newName + '[/b]'
-	get_node(nametag).set("custom_colors/default_color", newColor)
-# 	$HBoxContainer/VBoxContainer/Name.bbcode_text = '[b]' + newName + '[/b]'
-#	$HBoxContainer/VBoxContainer/Name.set("custom_colors/default_color", newColor)
-
-#	var newboxstyle = $HBoxContainer/VBoxContainer/DialogueTextContainer/Background.get_stylebox("panel").duplicate()
-#	$HBoxContainer/VBoxContainer/DialogueTextContainer/Background.add_stylebox_override("panel", newboxstyle)
-#	$HBoxContainer/VBoxContainer/DialogueTextContainer/Background.get_stylebox("panel").set("border_color", newColor)
-
+	var name_tag = get_node(nametag)
+	name_tag.bbcode_text = '[b]' + newName + '[/b]'
+	
+	var nameStringSize = get_node(nametag).get_font("bold_font").get_string_size(newName).x
+	var parentSize = get_node(nametag).get_parent().rect_size.x
+	
+	name_tag.size_flags_stretch_ratio =  nameStringSize
+	get_node(name_separator).size_flags_stretch_ratio = parentSize - nameStringSize - nametag_space_from_separator
+	
+	name_tag.set("custom_colors/default_color", newColor)
+#	get_node(name_separator).set("border_color", newColor)
+	var newlinestyle = get_node(name_separator).get_stylebox("separator").duplicate()
+#	print(newlinestyle)
+	get_node(name_separator).add_stylebox_override("separator", newlinestyle)
+	get_node(name_separator).get_stylebox("separator").set("color", newColor)
 
 # add paragraph child to dialogue entry
 func set_dialogue(dialoguetext):

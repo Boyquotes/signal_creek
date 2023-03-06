@@ -55,3 +55,37 @@ INCLUDE bandn/static_bandn.ink
     
     -> END
     
+== first_light ==
+
+    &FIRSTLIGHT
+    
+    &BLACK
+    
+    ...
+    
+    &FDEIN
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    NICK: "Oh shit bro did that light turn on?"
+    
+    NOUR: "What does it mean man..."
+    
+    MS. SUWAN: "This is deep, not everyone will understand."
+    
+    -> END
+    
+== light_on ==
+
+    {
+        -!first_light:
+            -> first_light
+    }
+    
+    Another light turned on bro.
+    
+    -> END

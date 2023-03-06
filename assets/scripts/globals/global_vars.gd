@@ -34,6 +34,7 @@ var Rina = null
 
 var Elevator = null
 var RouteLights = null
+var ElevatorDoorLight = null
 
 var InkStoryState = ""
 

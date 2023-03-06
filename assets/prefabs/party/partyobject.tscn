@@ -26,6 +26,7 @@ dream_character_sheets = [ ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14
 
 [node name="NICK" parent="." instance=ExtResource( 3 )]
 position = Vector2( -20, 0 )
+inkname = "NICK"
 _pathfind_stop_approaching_dist = 24.0
 _pathfind_move_away_dist = 16.0
 
@@ -33,6 +34,3 @@ _pathfind_move_away_dist = 16.0
 
 [node name="SUWAN" parent="." instance=ExtResource( 1 )]
 position = Vector2( 20, 0 )
-walk_speed = 4200.0
-_pathfind_stop_approaching_dist = 40.0
-_pathfind_move_away_dist = 32.0
