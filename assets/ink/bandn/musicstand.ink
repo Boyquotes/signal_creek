@@ -44,30 +44,30 @@
             
             NOUR: "I just didn't expect you to listen to a rock band. You don't really—no offense—seem like the type."
             
-            MS SUWAN: "I was very different back then."
+            MS. SUWAN: "I was very different back then."
             
             NOUR: "Do you listen to them now?"
             
-            MS SUWAN: "No. It was a distraction, so I stopped."
+            MS. SUWAN: "No. It was a distraction, so I stopped."
             
             NOUR: <i>She looks a little uncomfortable.</i>
         
         * [Hide the surprise]
             NOUR: "Oh, it's nothing. I wasn't going to say anything—"
             
-            MS SUWAN: "You were going to say that I don't seem like the type, right?"
+            MS. SUWAN: "You were going to say that I don't seem like the type, right?"
     
             NOUR: "Um...yeah. Sorry."
             
-            MS SUWAN: "Well, I don't anymore, so you aren't entirely incorrect. It was a distraction, so I stopped."
+            MS. SUWAN: "Well, I don't anymore, so you aren't entirely incorrect. It was a distraction, so I stopped."
             
             NOUR: <i>She looks a little uncomfortable.</i>
     
 -   NOUR: "I see. I guess you probably were a student while Paradise came out with this, right?"
     
-    MS SUWAN: "Right. During school, me and my friends used to..."
+    MS. SUWAN: "Right. During school, me and my friends used to..."
     
-    MS SUWAN: "..."
+    MS. SUWAN: "..."
         * [Ask if she's ok]
             NOUR: "Are you ok?"
             
@@ -113,7 +113,7 @@
 
     - Ms. Suwan sighs and steps back.
     
-    MS SUWAN: "Fine. Go ahead."
+    MS. SUWAN: "Fine. Go ahead."
     
     NOUR: "Time to put on a classic...<i>Sounds like Old Angst</i>!" 
     
