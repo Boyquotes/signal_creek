@@ -97,7 +97,6 @@ func move_character_by_vector(directionVector : Vector2):
 # Current pathfinding
 func pathfind_to(target : Node2D):
 	var angleTowards = target.get_global_position() - self.get_global_position()
-	
 	if(angleTowards.length() < _pathfind_stop_approaching_dist):
 		if(angleTowards.length() < _pathfind_move_away_dist):
 			angleTowards = -angleTowards
