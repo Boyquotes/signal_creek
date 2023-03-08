@@ -1,6 +1,6 @@
 extends Control
 
-export var devmode = true
+export var devmode = false
 
 var hidden = true
 var typing_knot_name = false

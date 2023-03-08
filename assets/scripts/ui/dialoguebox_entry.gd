@@ -39,7 +39,7 @@ func set_nametag(newName, newColor):
 	name_tag.set("custom_colors/default_color", newColor)
 #	get_node(name_separator).set("border_color", newColor)
 	var newlinestyle = get_node(name_separator).get_stylebox("separator").duplicate()
-	print(newlinestyle)
+#	print(newlinestyle)
 	get_node(name_separator).add_stylebox_override("separator", newlinestyle)
 	get_node(name_separator).get_stylebox("separator").set("color", newColor)
 
