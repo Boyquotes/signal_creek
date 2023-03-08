@@ -97,7 +97,6 @@ func move_character_by_vector(directionVector : Vector2):
 # Current pathfinding
 func pathfind_to(target : Node2D):
 	var angleTowards = target.get_global_position() - self.get_global_position()
-	
 	if(angleTowards.length() < _pathfind_stop_approaching_dist):
 		if(angleTowards.length() < _pathfind_move_away_dist):
 			angleTowards = -angleTowards
@@ -115,7 +114,7 @@ func set_sprite(sprite):
 
 # what node the pathfinding should be following
 func set_following_node(nodeToFollow):
-	print(nodeToFollow.get_global_position())
+#	print(nodeToFollow.get_global_position())
 	
 	if nodeToFollow != Globals.Nour:
 		_pathfind_stop_approaching_dist = 2
@@ -130,5 +129,5 @@ func set_following_node(nodeToFollow):
 
 
 func place_character_at_vector(vectorPosition):
-	print(vectorPosition)
+#	print(vectorPosition)
 	self.set_global_position(vectorPosition)

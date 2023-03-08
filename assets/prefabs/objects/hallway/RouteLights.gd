@@ -29,3 +29,13 @@ func turn_on_light(light_name):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+# move party to the position for light tutorial conversation
+func activate_light_tutorial():
+	if RoomEngine.CurrentRoomIndex == 1:
+		RoomEngine.CurrentRoom.move_party_to_position(Globals.PartyObject, Vector2(472, 304))
+		
+	else:
+		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[1], Vector2(472, 304))
+		
+	Globals.Elevator.focus_on_elevator = true

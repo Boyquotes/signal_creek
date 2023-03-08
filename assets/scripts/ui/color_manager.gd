@@ -30,7 +30,11 @@ func set_current_color(characterName):
 		current_portrait = characterPortraits.get(characterName.to_lower().trim_suffix(":"))
 	
 	else:
-		current_portrait = characterPortraits.get("placeholder")
+		if characterName == "???":
+			current_portrait = characterPortraits.get("ms. suwan")
+			
+		else:
+			current_portrait = characterPortraits.get("placeholder")
 
 
 # returns a color code

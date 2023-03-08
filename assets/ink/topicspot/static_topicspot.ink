@@ -30,7 +30,21 @@
     
 == spraycans ==
 
-    It's a bunch of spray cans. Must be 18+ to purchase!
+    It's a bunch of spray cans. 
+    
+    NICK: "<i>Must be 18+ to purchase...</i>"
+    
+    NICK: "This sucks! This might be the ONLY time I wish I were an adult!"
+    
+    NICK: "Wait a minute, Nour! You're over 18! Could you get some—"
+    
+    NOUR: "I don't think I trust you with these."
+    
+    NICK: "Dang it."
+    
+    NICK: "So long, beautiful spray cans...wait for me because one day, we will meet again!"
+    
+    NICK: "...In exactly TWO years!"
     
     -> END
     

@@ -3,7 +3,7 @@
     //location: elevator
     //NICK AND NOUR RUN INTO THE ELEVATOR
     
-    NICK: “QUICK, IN HERE!"
+    NICK: “QUICK, IN HERE! There's no way she'll find us here!"
     
     &POS_SUWAN_160,248
     &FOLLOW_NICK_NickElevatorPos
@@ -11,7 +11,7 @@
     
     &FOLLOW_SUWAN_SuwanStartingPos
     
-    NICK: "Maybe she won't find us and give up chasing—”
+    NICK: "If we hide here, she'll give up chasing us down—”
     
     &EMOTE_NICK_DownIdle
     &FOLLOW_NOUR_NourElevatorPos
@@ -77,23 +77,20 @@
     
     &EMOTE_NICK_LookAround
     
-    NICK: "OH GOD—I'm so sorry! Please don't get me in trouble!"
+    NICK: "OH GOD—I'm so sorry! Please don't tell my Mom!"
     
-    ???: "I'm part of the legal team in charge of inspecting this demolition site."
-    
-    NICK: "Please don't tell my Mom! I didn't mean to take the—"
-    
-    ???: "Take what?"
+    ???: "...I'm part of the legal team in charge of inspecting this demolition site."
     
     &EMOTE_NICK_DownIdle
     
-    NICK: "...Um."
+    NICK: "I...um..."
     
     NICK: "I have the right to remain silent?"
     
     ???: "Whatever you kids are doing, it's illegal. You can't be here."
     
     NOUR: "I don't know about him, but I'll be out as fast as possible!" 
+    
     NOUR: "I'm only here to take photos. I study journalism, so I wanted to capture this abandoned mall's last moments—"
     
     &FOLLOW_NICK_NickButtonPressingPos
@@ -113,6 +110,8 @@
     MS. SUWAN: "She's right. This elevator is broken. It's not going anywhere—"
     
     &FOLLOW_SUWAN_SuwanBackup
+    
+    &ELEVATOR_CLOSE
     
     ELEVATOR DOOR CLOSES. WHIRRING AND BEEPING...PORTAL IS ACTIVATED
     
@@ -151,6 +150,10 @@
     &EMOTE_NICK_DownIdle
     
     &EMOTE_NOUR_DownIdle
+    
+    ELEVATOR OPENS...
+    
+    &ELEVATOR_OPEN
     
     
     -> END
