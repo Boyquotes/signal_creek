@@ -11,6 +11,7 @@ export var typewriter_speed : int = 1
 export var scroll_increment : float = 0.75
 export var panel_opening_speed : float = 0.25
 export var _entry_prefab_normal = preload("res://assets/ui/prefabs/dialoguebox_entrynormal.tscn")
+export var _entry_prefab_paragraph = preload("res://assets/ui/prefabs/dialoguebox_entry_paragraph.tscn")
 export var _entry_prefab_dialogue = preload("res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn")
 export var _entry_prefab_choices = preload("res://assets/ui/prefabs/dialoguebox_entrychoices.tscn")
 export var _choice_prefab = preload("res://assets/ui/prefabs/dialoguebox_entrychoices_choice.tscn")
@@ -59,6 +60,9 @@ func _process(_delta):
 		typewriter_effect(false)
 		
 	if fastforward and !_ink_player.get_HasChoices() and _ink_player.get_CanContinue():
+		if !Globals.PartyObject.get_following_done():
+			pass
+			
 		proceed()
 #		escape_typewriter_effect()
 		
@@ -108,10 +112,8 @@ func select_current_choice():
 	choice_chosen = true
 
 # proceeding to the next string that ink should return
-# allows for recursion if devs toggle fast forward
 func proceed():
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
-#		fastforward = false
 		clear_and_reset_ui()
 		is_shrinking_background_panel = true
 		return
@@ -130,78 +132,9 @@ func proceed():
 			
 			choice_chosen = false
 		
-		if currentLine.substr(0, 1) == "&": #screen shaking
-			#Globals.GameOverlay.start_shaking(true)
-			#RoomEngine.PlaneManager.shift_planes()
-			if "&SHAKE" in currentLine:
-				Globals.GameOverlay.start_shaking(false)
-				#currentLine = currentLine.trim_prefix('&SHAKE')
-				
-			if "&BLACK" in currentLine:
-				Globals.GameOverlay.set_to_black()
-				#currentLine = currentLine.trim_prefix('&BLACK')
-				
-			if "&FDEIN" in currentLine:
-				Globals.GameOverlay.start_fade_in()
-				#currentLine = currentLine.trim_prefix('&FDEIN')
-				
-			if "&MOV_RINA" in currentLine:
-				Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
-				#currentLine = currentLine.trim_prefix('&FDEIN')
-				
-			if "&SHLORP_RINA" in currentLine:
-				Globals.Rina.rina_shlorp_out()
-				
-			if "&POS" in currentLine: #move nick to vector2
-				var charName = currentLine.split("_")[1].strip_escapes()
-				var vectorPos = currentLine.split("_")[2].strip_escapes()
-				vectorPos = vectorPos.split(",")
-				vectorPos = Vector2(vectorPos[0], vectorPos[1])
-				
-				match charName:
-					"NICK":
-						Globals.Nick.place_character_at_vector(vectorPos)
-						
-					"NOUR":
-						Globals.Nour.place_character_at_vector(vectorPos)
-						
-					"SUWAN":
-						Globals.Suwan.place_character_at_vector(vectorPos)
-				
-			
-			if "&FOLLOW" in currentLine:
-				var charName = currentLine.split("_")[1].strip_escapes()
-				var posNodeName = currentLine.split("_")[2].strip_escapes()
-				var posNode
-				
-				if posNodeName == "NOUR":
-					posNode = Globals.Nour
-					
-				else:
-					posNode = RoomEngine.CurrentRoom.plane_manager.get_node(posNodeName)
-				
-				match charName:
-					"NICK":
-						Globals.Nick.set_following_node(posNode)
-						
-					"NOUR":
-						Globals.Nour.set_following_node(posNode)
-						
-					"SUWAN":
-						Globals.Suwan.set_following_node(posNode)
-				
-			if "&EMOTE" in currentLine:
-				pass
-				
-			if "&LIGHT" in currentLine:
-				# TODO: make global elevator var and make this parsing work 
-				# so that erna can test the elevator script
-				#&LIGHT_Nick0
-				#var lightName = currentLine.split("_")[1].strip_escapes()
-				#turn_turn_light(lightName)
-				pass
-				
-			return
+		if currentLine.substr(0, 1) == "&":
+			parse_commands(currentLine)
+			return "command"
 		
 		currentLine = currentLine.replacen('<', '[')
 		currentLine = currentLine.replacen('>', ']')
@@ -210,12 +143,120 @@ func proceed():
 			
 	else: #default to nour if no nametag provided
 		is_displaying_choices = true
-		current_speaker = "NOUR:"
-		display_choices("NOUR:")
+		current_speaker = "NOUR"
+		display_choices("NOUR")
 		set_camera_position_to_speaker()
 		
 	yield(get_tree(), "idle_frame")
 	scroll_to_bottom()
+	return "no command"
+
+
+# Parse function requests from ink writing
+func parse_commands(currentLine):
+	if "&SHAKE" in currentLine:
+		Globals.GameOverlay.start_shaking(false)
+		
+	elif "&BLACK" in currentLine:
+		Globals.GameOverlay.set_to_black()
+		
+	elif "&FDEIN" in currentLine:
+		Globals.GameOverlay.start_fade_in()
+		
+	elif "&MOV_RINA" in currentLine:
+		Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
+		
+	elif "&SHLORP_RINA" in currentLine:
+		Globals.Rina.rina_shlorp_out()
+		
+	elif "&POS" in currentLine: #move nick to vector2
+		var charName = currentLine.split("_")[1].strip_escapes()
+		var vectorPos = currentLine.split("_")[2].strip_escapes()
+		vectorPos = vectorPos.split(",")
+		vectorPos = Vector2(vectorPos[0], vectorPos[1])
+		
+		match charName:
+			"NICK":
+				Globals.Nick.place_character_at_vector(vectorPos)
+				
+			"NOUR":
+				Globals.Nour.place_character_at_vector(vectorPos)
+				
+			"SUWAN":
+				Globals.Suwan.place_character_at_vector(vectorPos)
+				
+	elif "&FOLLOW" in currentLine:
+		var charName = currentLine.split("_")[1].strip_escapes()
+		var posNodeName = currentLine.split("_")[2].strip_escapes()
+		var posNode
+		
+		if posNodeName == "NOUR":
+			posNode = Globals.Nour
+			
+		elif posNodeName != "stop":
+			posNode = RoomEngine.CurrentRoom.plane_manager.get_node(posNodeName)
+		
+		match charName:
+			"NICK":
+				Globals.Nick.set_following_node(posNode)
+				
+			"NOUR":
+				if "stop" in posNodeName:
+					Globals.PartyObject.force_nour_movement = false
+					
+				else:
+					Globals.PartyObject.force_nour_movement = true
+					Globals.Nour.set_following_node(posNode)
+				
+			"SUWAN":
+				Globals.Suwan.set_following_node(posNode)
+		
+	elif "&EMOTE" in currentLine:
+		var charName = currentLine.split("_")[1].strip_escapes()
+		var emoteName = currentLine.split("_")[2].strip_escapes()
+		
+		match charName:
+			"NICK":
+				Globals.Nick.animate_emote(emoteName)
+				
+			"NOUR":
+				Globals.Nour.animate_emote(emoteName)
+				
+			"SUWAN":
+				Globals.Suwan.animate_emote(emoteName)
+		
+	elif "&LIGHT" in currentLine:
+	
+		# EXAMPLE WRITTEN IN INK: &LIGHT_Nick0
+		
+		var lightName = currentLine.split("_")[1].strip_escapes()
+		
+		# When parsed, lightName will look like this: Nick0
+		
+		Globals.RouteLights.turn_on_light(lightName)
+		
+#		if !Globals.RouteLights.first_light_turned_on:
+#			Globals.RouteLights.first_light_turned_on = true
+			
+		
+	elif "&ELEVATOR" in currentLine:
+		var action = currentLine.split("_")[1].strip_escapes()
+		
+		if "OPEN" in action:
+			Globals.ElevatorDoorLight.open_doors()
+			
+		elif "CLOSE" in action:
+			Globals.ElevatorDoorLight.close_doors()
+	
+	elif "&FIRSTLIGHT" in currentLine:
+		Globals.RouteLights.activate_light_tutorial()
+		
+	elif "&CAMERA" in currentLine:
+		var vectorPos = currentLine.split("_")[1].strip_escapes()
+		vectorPos = vectorPos.split(",")
+		vectorPos = Vector2(vectorPos[0], vectorPos[1])
+		
+		Globals.GameCanvas.set_camera_following_vector(vectorPos)
 
 
 # Parses entryText for special characters, determines what type of entry this is
@@ -232,7 +273,7 @@ func check_entry_type(entryText):
 		set_camera_position_to_speaker()
 		
 	elif ":" in entryText: #if line contains a name, parse name and dialogue after
-		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_normal)
+		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_paragraph)
 		current_speaker = entryText.split(":")[0]
 		#print(entryText.split(":")[0])
 		_vertical_layout_node.add_child(newDialogue)
@@ -245,12 +286,12 @@ func check_entry_type(entryText):
 		set_camera_position_to_speaker()
 	
 	else: #it's a normal text entry
-		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal)
+		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal, _entry_prefab_paragraph)
 		if !fastforward:
 			print("NORMAL TEXT")
 			
 		#track the text label for typewriter effect
-		current_text_box = newText
+		current_text_box = newText.get_text_normal()
 		#init typewriter effect
 		is_typing = true
 		
@@ -259,6 +300,7 @@ func check_entry_type(entryText):
 
 func scroll_to_bottom():
 	_scroll_node.set_v_scroll(_scroll_node.get_v_scrollbar().max_value)
+
 
 #used when a new entry is created
 func auto_scroll_down():
@@ -408,9 +450,17 @@ func find_current_speaker_position():
 
 
 func set_camera_position_to_speaker():
-	var followingVector = find_current_speaker_position()
-	Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
+	var followingVector
+	
+	if Globals.Elevator and Globals.Elevator.focus_on_elevator:
+		followingVector = Globals.UpdateController._elevator_focus_position
+		Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
+		return
 		
+	followingVector = find_current_speaker_position()
+	Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
+	
+
 
 func set_current_world(worldName):
 	_ink_player.SetVariable("currentWorld", worldName)

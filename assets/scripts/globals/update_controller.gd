@@ -7,6 +7,7 @@ export var _leader_switching_enabled = false
 var _closest_object = null
 var _can_interact = false
 var _camera_normal_position = null
+var _elevator_tutorial = false
 
 
 func _start():
@@ -18,9 +19,13 @@ func _physics_process(_delta):
 		reset_game()
 	
 	Globals.PartyObject.move_followers_by_pathfind()
+
 	#print(Globals.Suwan.get_global_position())
 	
 	if Globals.GameMode == Globals.GameModes.TALK:
+		if Globals.PartyObject.force_nour_movement:
+			Globals.PartyObject.force_move_leader()
+		
 		if Globals.DialogueBox.is_displaying_choices:
 			if Input.is_action_just_released("move_down"):
 				Globals.DialogueBox.toggle_choice_selections(1)
@@ -37,8 +42,17 @@ func _physics_process(_delta):
 				Globals.DialogueBox.typewriter_effect(true)
 			
 			elif !Globals.DialogueBox.fastforward or Globals.DialogueBox._ink_player.get_HasChoices() or !Globals.DialogueBox._ink_player.get_CanContinue():
-				Globals.DialogueBox.proceed()
 				
+				if !Globals.PartyObject.get_following_done():
+					pass
+					
+				var inkCommand = Globals.DialogueBox.proceed()
+				
+				while inkCommand and "command" in inkCommand:
+					inkCommand = Globals.DialogueBox.proceed()
+				
+#		if Globals.Elevator && Globals.Elevator.focus_on_elevator == true:
+#			Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
 			#var followingVector = find_current_speaker_position()
 			#Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 			
@@ -58,9 +72,6 @@ func _physics_process(_delta):
 					
 		_camera_normal_position = Globals.PartyObject.get_leader().get_global_position()
 		Globals.GameCanvas.set_camera_following_vector(_camera_normal_position)
-		
-		if Globals.Elevator && Globals.Elevator.focus_on_elevator == true:
-			Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
 			
 		if _can_interact:
 			if Input.is_action_just_pressed("interact"):
@@ -71,7 +82,9 @@ func _physics_process(_delta):
 					Globals.GameMode = Globals.GameModes.TALK
 					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
 					Globals.DialogueBox.background_panel_node.set_visible(true)
-
+			
+		if Globals.Elevator && Globals.Elevator.focus_on_elevator == true:
+			Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
 
 func check_input_character_movement():
 	var directionVector = Vector2(0,0)
@@ -116,4 +129,3 @@ func set_closest_object(objectName):
 
 func set_can_interact(condition):
 	_can_interact = condition
-
