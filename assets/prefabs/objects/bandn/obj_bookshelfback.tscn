@@ -9,7 +9,7 @@
 extents = Vector2( 40.5, 12.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 42.5, 30 )
+extents = Vector2( 48, 23.5 )
 
 [node name="BookshelfBack" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 3 )
@@ -39,18 +39,18 @@ region_enabled = true
 region_rect = Rect2( 204, 171, 83, 56 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -12.5 )
+position = Vector2( -0.5, -13 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
-position = Vector2( 0, -19 )
+position = Vector2( 0, -28 )
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( -0.5, -7 )
+position = Vector2( 0, 19.5 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

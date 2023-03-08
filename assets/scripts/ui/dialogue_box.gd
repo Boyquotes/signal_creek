@@ -235,8 +235,8 @@ func parse_commands(currentLine):
 		
 		Globals.RouteLights.turn_on_light(lightName)
 		
-		if !Globals.RouteLights.first_light_turned_on:
-			Globals.RouteLights.first_light_turned_on = true
+#		if !Globals.RouteLights.first_light_turned_on:
+#			Globals.RouteLights.first_light_turned_on = true
 			
 		
 	elif "&ELEVATOR" in currentLine:
