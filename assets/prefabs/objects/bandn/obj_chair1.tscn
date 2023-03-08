@@ -28,6 +28,7 @@ region_enabled = true
 region_rect = Rect2( 256.709, 81, 30.1945, 29.8003 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4

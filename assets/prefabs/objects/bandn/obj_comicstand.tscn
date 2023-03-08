@@ -6,13 +6,12 @@
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_NEW.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 12.5, 17.5 )
+extents = Vector2( 12.5, 13.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 18, 12.5 )
+extents = Vector2( 13.5, 32 )
 
 [node name="ComicStand" type="RigidBody2D" groups=["shiftable"]]
-position = Vector2( 0, 28 )
 mode = 1
 script = ExtResource( 1 )
 __meta__ = {
