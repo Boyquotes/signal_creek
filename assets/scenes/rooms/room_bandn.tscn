@@ -334,6 +334,7 @@ __meta__ = {
 script = ExtResource( 3 )
 
 [node name="Ground" type="TileMap" parent="PlaneManager"]
+position = Vector2( -33, 1 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
@@ -415,9 +416,9 @@ energy = 0.9
 range_item_cull_mask = 7
 
 [node name="Overworld" type="YSort" parent="PlaneManager"]
+position = Vector2( -33, 1 )
 
 [node name="Walls" type="TileMap" parent="PlaneManager/Overworld"]
-position = Vector2( -2, 0 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_tile_origin = 2

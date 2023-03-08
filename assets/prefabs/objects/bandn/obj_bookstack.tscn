@@ -6,10 +6,10 @@
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_NEW.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 43, 16 )
+extents = Vector2( 40.5, 11.75 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 39.25, 11 )
+extents = Vector2( 46, 21 )
 
 [node name="BookStack" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 3 )
@@ -22,7 +22,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( -1, -29 )
+position = Vector2( 0, -27 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 112.197, 168, 87.8032, 60.5818 )
@@ -32,14 +32,14 @@ visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-position = Vector2( -1, -29 )
+position = Vector2( 0, -27 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -30.2909 )
 region_enabled = true
 region_rect = Rect2( 112.197, 168, 87.8032, 60.5818 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2, -13 )
+position = Vector2( -0.5, -11.75 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -50,7 +50,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( -2, 12 )
+position = Vector2( 1, 12 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

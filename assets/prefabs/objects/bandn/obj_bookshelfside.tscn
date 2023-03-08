@@ -6,10 +6,10 @@
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_NEW.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 8, 18 )
+extents = Vector2( 9, 36 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 11.5, 12.5 )
+extents = Vector2( 14.5, 39 )
 
 [node name="BookshelfSide" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 3 )
