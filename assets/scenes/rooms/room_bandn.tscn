@@ -348,7 +348,7 @@ __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
 }
 room_index = 1
-exit_position = Vector2( 80, 144 )
+exit_position = Vector2( 377, 712 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal"]
 position = Vector2( -1, 1 )
@@ -360,59 +360,59 @@ __meta__ = {
 }
 
 [node name="BigLight" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 239, 169 )
-scale = Vector2( 3.625, 2.5 )
+position = Vector2( 212.4, 113.4 )
 texture = ExtResource( 10 )
+texture_scale = 4.85
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.85
 range_item_cull_mask = 7
 
 [node name="BigLight5" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 236, -257 )
-scale = Vector2( 3.625, 2.5 )
+position = Vector2( 209.4, -312.6 )
 texture = ExtResource( 10 )
+texture_scale = 4.85
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.85
 range_item_cull_mask = 7
 
 [node name="BigLight6" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 461, -258 )
-scale = Vector2( 3.625, 2.5 )
+position = Vector2( 434.4, -313.6 )
 texture = ExtResource( 10 )
+texture_scale = 4.85
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.85
 range_item_cull_mask = 7
 
 [node name="BigLight7" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( -8, -256 )
-scale = Vector2( 3.625, 2.5 )
+position = Vector2( -34.6, -311.6 )
 texture = ExtResource( 10 )
+texture_scale = 4.85
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.85
 range_item_cull_mask = 7
 
 [node name="BigLight4" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 240, -91 )
-scale = Vector2( 3.625, 2.5 )
+position = Vector2( 213.4, -146.6 )
 texture = ExtResource( 10 )
+texture_scale = 4.85
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.85
 range_item_cull_mask = 7
 
 [node name="BigLight2" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 21, 89 )
-scale = Vector2( 3.625, 2.5 )
+position = Vector2( -5.60001, 33.4 )
 texture = ExtResource( 10 )
+texture_scale = 4.85
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.85
 range_item_cull_mask = 7
 
 [node name="BigLight3" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 453, 90 )
-scale = Vector2( 3.625, 2.5 )
+position = Vector2( 426.4, 34.4 )
 texture = ExtResource( 10 )
+texture_scale = 4.85
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.85
 range_item_cull_mask = 7
 
 [node name="Overworld" type="YSort" parent="PlaneManager"]
