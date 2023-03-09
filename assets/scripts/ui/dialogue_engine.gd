@@ -54,15 +54,9 @@ func create_entry_choices(newChoices, currentSpeaker, entryAsset, choiceAsset):
 		var newDivert = choiceAsset.instance()
 		var newText
 		
-		if ":" in option: #this option contains a character name
-			var nameSubstring = option.split(":", false)[0].strip_escapes()
-			Globals.ColorManager.set_current_color(nameSubstring)
-			var colorCode = Globals.ColorManager.get_current_color()
-			var textSubstring = option.split(":", false)[1].strip_escapes()
-			newText = '[color=#' + colorCode.to_html() + '][b]'  + nameSubstring + '[/b][/color]' + textSubstring 
-			
-		else:
-			newText = '[' + option + ']'
+		newText = '[' + option + ']'
+		newText = newText.replacen('<', '[')
+		newText = newText.replacen('>', ']')
 		
 		newDivert.set_choice_text(newText)
 		newEntry.add_choice_child(newDivert)

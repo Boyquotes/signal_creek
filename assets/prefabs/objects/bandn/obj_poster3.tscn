@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_NEW.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 14, 2 )
+extents = Vector2( 16, 2 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 16, 18.5 )
@@ -21,7 +21,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -17 )
+position = Vector2( 0, -26 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 80, 12, 30, 37 )
@@ -31,14 +31,13 @@ visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-position = Vector2( 0, -17 )
+position = Vector2( 0, -26 )
 texture = ExtResource( 5 )
 offset = Vector2( 0, -20.0932 )
 region_enabled = true
 region_rect = Rect2( 80, 12, 30, 37 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -2 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]

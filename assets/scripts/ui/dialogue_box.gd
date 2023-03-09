@@ -164,7 +164,8 @@ func parse_commands(currentLine):
 		Globals.GameOverlay.start_fade_in()
 		
 	elif "&MOV_RINA" in currentLine:
-		Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
+		if Globals.Rina:
+			Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
 		
 	elif "&SHLORP_RINA" in currentLine:
 		Globals.Rina.rina_shlorp_out()
