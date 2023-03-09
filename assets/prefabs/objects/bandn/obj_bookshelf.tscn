@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
-[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
+[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_NEW.png" type="Texture" id=4]
 
@@ -11,10 +11,10 @@ extents = Vector2( 40.5, 11.75 )
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 46, 21 )
 
-[node name="BookStack" type="RigidBody2D" groups=["shiftable"]]
+[node name="BookShelf" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 3 )
 mode = 1
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -44,7 +44,7 @@ shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
 position = Vector2( -1, -17 )
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
