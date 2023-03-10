@@ -163,7 +163,7 @@
         
         MS. SUWAN: "But they were distractions for me in the end. Our hobbies, our hangouts...it was all time and energy I knew I could use for my career."
         
-        MS. SUWAN: "So, I made my decision. When they were gone, I had everything: 175 on my LSAT, a stacked resume, and a promising career."
+        MS. SUWAN: "So, I made my decision. When they were gone, I had everything—175 on my LSAT, a stacked resume, and a promising career."
         
         NOUR: "Was it worth it?"
         

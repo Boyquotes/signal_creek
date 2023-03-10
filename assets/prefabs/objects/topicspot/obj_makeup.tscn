@@ -5,12 +5,11 @@
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_topic_dream.png" type="Texture" id=4]
 
-
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 16, 8 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 25, 19.5 )
+extents = Vector2( 21, 16.5 )
 
 [node name="Makeup" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -28,9 +27,12 @@ region_enabled = true
 region_rect = Rect2( 47, 79, 34, 43 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+position = Vector2( 0, -21 )
+texture = ExtResource( 4 )
 offset = Vector2( 0, -21.5 )
 region_enabled = true
 region_rect = Rect2( 47, 79, 34, 43 )
@@ -46,7 +48,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, 3.5 )
+position = Vector2( 0, 0.5 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
