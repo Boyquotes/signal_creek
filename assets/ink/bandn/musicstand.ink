@@ -253,9 +253,9 @@
             
             NOUR: "What matters is that you can free yourself of guilt by acknowledging that you aren't perfect. It's ok to forgive yourself."
     
-    - NOUR: "And I thought about what you said earlier. You're right. There are things you can't fix, and you should worry about the one's you can."
+    // - NOUR: "And I thought about what you said earlier. You're right. There are things you can't fix, and you should worry about the one's you can."
     
-    NOUR: "You can't change what happened, but that doesn't mean you should avoid it entirely."
+    - NOUR: "You can't change what happened, but that doesn't mean you should avoid it entirely."
     
     NOUR: "Plus, you have the strange opportunity to do that anyway, thanks to this weird mall."
     
@@ -270,8 +270,8 @@
         * [<i>Stain</i>]
             Nour gives Ms. Suwan <i>Stain</i>. 
             
-        * [<i>Out Utero</i>]
-            Nour gives Ms. Suwan <i>Out Utero</i>. 
+        * [<i>Out Birth</i>]
+            Nour gives Ms. Suwan <i>Out Birth</i>. 
     
     - MS. SUWAN: "Thank you, Nour."
     
