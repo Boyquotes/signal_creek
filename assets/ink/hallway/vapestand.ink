@@ -38,7 +38,11 @@ NICK: "Oh yeah? Name one thing."
 
 NOUR: "You're on. Give me a bit, we can definitely find something in this mall that's cooler than vaping."
 
-*"Maybe I can introduce him to photography? That or reading, I enjoy both, so maybe he will too..."
+NOUR: <i>Maybe I can introduce him to photography? That or reading, I enjoy both, so maybe he will too...</i>
+
+NICK: "I hope that whatever you're planning to show me is EXTRA cool!"
+
+NOUR: <i>I should lead Nick somewhere I can find a safe but fun hobby. Now where could that be in a big mall like this?</i>
 
 -> END
 

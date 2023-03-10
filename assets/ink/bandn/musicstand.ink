@@ -48,30 +48,30 @@
             
             NOUR: "I just didn't expect you to listen to a rock band. You don't really—no offense—seem like the type."
             
-            MS SUWAN: "I was very different back then."
+            MS. SUWAN: "I was very different back then."
             
             NOUR: "Do you listen to them now?"
             
-            MS SUWAN: "No. It was a distraction, so I stopped."
+            MS. SUWAN: "No. It was a distraction, so I stopped."
             
             NOUR: <i>She looks a little uncomfortable.</i>
         
         * [Hide the surprise]
             NOUR: "Oh, it's nothing. I wasn't going to say anything—"
             
-            MS SUWAN: "You were going to say that I don't seem like the type, right?"
+            MS. SUWAN: "You were going to say that I don't seem like the type, right?"
     
             NOUR: "Um...yeah. Sorry."
             
-            MS SUWAN: "Well, I don't anymore, so you aren't entirely incorrect. It was a distraction, so I stopped."
+            MS. SUWAN: "Well, I don't anymore, so you aren't entirely incorrect. It was a distraction, so I stopped."
             
             NOUR: <i>She looks a little uncomfortable.</i>
     
 -   NOUR: "I see. I guess you probably were a student while Paradise came out with this, right?"
     
-    MS SUWAN: "Right. During school, me and my friends used to..."
+    MS. SUWAN: "Right. During school, me and my friends used to..."
     
-    MS SUWAN: "..."
+    MS. SUWAN: "..."
         * [Ask if she's ok]
             NOUR: "Are you ok?"
             
@@ -117,7 +117,7 @@
 
     - Ms. Suwan sighs and steps back.
     
-    MS SUWAN: "Fine. Go ahead."
+    MS. SUWAN: "Fine. Go ahead."
     
     NOUR: "Time to put on a classic...<i>Sounds like Old Angst</i>!" 
     
@@ -253,9 +253,9 @@
             
             NOUR: "What matters is that you can free yourself of guilt by acknowledging that you aren't perfect. It's ok to forgive yourself."
     
-    - NOUR: "And I thought about what you said earlier. You're right. There are things you can't fix, and you should worry about the one's you can."
+    // - NOUR: "And I thought about what you said earlier. You're right. There are things you can't fix, and you should worry about the one's you can."
     
-    NOUR: "You can't change what happened, but that doesn't mean you should avoid it entirely."
+    - NOUR: "You can't change what happened, but that doesn't mean you should avoid it entirely."
     
     NOUR: "Plus, you have the strange opportunity to do that anyway, thanks to this weird mall."
     
@@ -270,8 +270,8 @@
         * [<i>Stain</i>]
             Nour gives Ms. Suwan <i>Stain</i>. 
             
-        * [<i>Out Utero</i>]
-            Nour gives Ms. Suwan <i>Out Utero</i>. 
+        * [<i>Out Birth</i>]
+            Nour gives Ms. Suwan <i>Out Birth</i>. 
     
     - MS. SUWAN: "Thank you, Nour."
     
