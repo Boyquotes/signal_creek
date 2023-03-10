@@ -269,8 +269,8 @@ Nour smiles and takes the bracelet.
 NOUR: "Sure thing, Nick."
 &LIGHT_Nick2
 &MOV_RINA_TOPICSPOT
-    
--> END
+    -> light_on
+// -> END
 
 === consoles_end ===
 
