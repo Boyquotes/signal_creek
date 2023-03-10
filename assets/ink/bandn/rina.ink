@@ -122,6 +122,8 @@
     
         //"resetting" rina, as if she forgot the choice nour just made.
     -   Rina's eyes glaze over briefly. She returns to her familiar demeanor.
+    
+                &LIGHT_Nour1
             
         -> rina_branches
 
@@ -258,6 +260,7 @@
     = neverknow
     
         RINA: "Nour, <i>neither</i> of us had the guts to say anything back then. You'll never know what would have happened if I spoke up."
+                &LIGHT_Nour1
     
             -> END
 
@@ -409,6 +412,8 @@
         NOUR: "You're in the past now."
         
         RINA DISAPPEARS.
+        
+        &LIGHT_Nour2
         
         NICK: "NICE! Button smashing time!"
         

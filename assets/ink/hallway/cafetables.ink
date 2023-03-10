@@ -196,6 +196,7 @@
         NOUR: <i>I got through to her with an old memory of her friends. Maybe she's ready to revisit another old love of hers with a new perspective.</i>
         
         NOUR: <i>I wonder...is she ready to listen to Paradise again? I should lead her there to find out.</i>
+            &LIGHT_Suwan0
             
             -> END
     
