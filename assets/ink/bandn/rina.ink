@@ -66,6 +66,17 @@
 
     RINA: "Look, 'Nour'. I don't know why you're <i>still</i> upset. You're the one who blocked me out... I <i>tried</i> to keep being your friend!"
     
+            //DISPLAY ONCE ALL OTHER CHOICES ARE VISITED
+            {
+                - rina_final:
+                
+                    -> rina_elevator
+                    
+                - rina_bandn && rina_topicspot && rina_hallway:
+                
+                    -> rina_final
+            }
+    
         //this choice always works, and Rina tells Nour to help the people they're with now (Nick and Suwan)
         + "Friends help each other when they need it, not afterwards."
             
@@ -112,13 +123,13 @@
             
             Rina's eyes glaze over.
             
-                -> END
+            &LIGHT_Nour0
+            
+            -> light_on
+            
+            -> END
         
-        //DISPLAY ONCE ALL OTHER CHOICES ARE VISITED
-            {
-                - rina_bandn && rina_topicspot && rina_hallway:
-                    -> rina_elevator
-            }
+
     
         //"resetting" rina, as if she forgot the choice nour just made.
     -   Rina's eyes glaze over briefly. She returns to her familiar demeanor.
@@ -127,6 +138,14 @@
                 -> light_on
             
         -> rina_branches
+
+== rina_final ==
+
+    RINA: I'm going to the elevator now bye
+    
+    &MOV_RINA_END
+    
+    -> END
 
 //---------------- BEGINNING ----------------
 //first active conversation with Rina, in Bandn
