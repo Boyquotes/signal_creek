@@ -169,7 +169,7 @@
         * "All you need to do is return the bracelet..."
     
     - Nick shakes his head.
-    
+&LIGHT_Nick1
     -> END
     
     
