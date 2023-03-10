@@ -64,7 +64,7 @@
 
 == rina_branches ==
 
-    RINA: Look, "Nour". I don't know why you're <i>still</i> upset. You're the one who blocked me out... I <i>tried</i> to keep being your friend!
+    RINA: "Look, 'Nour'. I don't know why you're <i>still</i> upset. You're the one who blocked me out... I <i>tried</i> to keep being your friend!"
     
         //this choice always works, and Rina tells Nour to help the people they're with now (Nick and Suwan)
         + "Friends help each other when they need it, not afterwards."
@@ -123,7 +123,8 @@
         //"resetting" rina, as if she forgot the choice nour just made.
     -   Rina's eyes glaze over briefly. She returns to her familiar demeanor.
     
-                &LIGHT_Nour1
+                &LIGHT_Nour0
+                -> light_on
             
         -> rina_branches
 
@@ -146,15 +147,15 @@
     
             RINA: "Hey, Yousra! Nice to see you after all these years. You know, I'm allowed to exist at this mall. You don't own it."
             
-    -   * "Yousra?["] Nobody calls me that anymore. I go by Nour now.
+    -   * "Yousra?["] Nobody calls me that anymore. I go by Nour now."
         
-            RINA: Oh, okay.
+            RINA: "Oh, okay."
             
-            RINA: This is a good start. At least you're talking to me again.
+            RINA: "This is a good start. At least you're talking to me again."
             
-            RINA: So... what happened back then? We were having lunch with our friends, we started talking about gay marriage being legalized...
+            RINA: "So... what happened back then? We were having lunch with our friends, we started talking about gay marriage being legalized..."
             
-            RINA: What am I forgetting?
+            RINA: "What am I forgetting?"
             
                 ** "You were quiet, while the others kept going on about how being gay is gross and weird."
                 
@@ -261,7 +262,7 @@
     
         RINA: "Nour, <i>neither</i> of us had the guts to say anything back then. You'll never know what would have happened if I spoke up."
                 &LIGHT_Nour1
-    
+                -> light_on
             -> END
 
 //---------------- HALLWAY ----------------

@@ -281,8 +281,8 @@
     
     NOUR: <i>It looks like Ms. Suwan is ready to apologize to Chad, Kristy, and Brody. I should go lead her to them now.</i>
         &LIGHT_Suwan1
-    
-    -> END
+        -> light_on
+    // -> END
 
 
 

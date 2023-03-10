@@ -5,9 +5,9 @@
     }
     //convo after the first time PCs see Rina
     
-    NOUR: Look, I said I don't want to look at this right now.
+    NOUR: "Look, I said I don't want to look at this right now."
     
-    MS SUWAN: Fine, we'll come back later then.
+    MS. SUWAN: "Fine, we'll come back later then."
     
     -> END
     
@@ -17,80 +17,70 @@
     
     One of them sits on the floor outside of the case. Nour looks down at it and immediately scowls.
     
-    NOUR: ...No way. 
+    NOUR: "...No way."
     
-    NICK: Hm?
+    NICK: "Hm?"
     
-    NOUR: I think that's my dad's old camera. Well, my camera, technically.
+    NOUR: "I think that's my dad's old camera. Well, my camera, technically."
     
-    NICK? Ooh, really?! That's so cool!! Retro stuff is super trendy now, y'know. Did you use it a lot?
+    NICK: "Ooh, really?! That's so cool!! Retro stuff is super trendy now, y'know. Did you use it a lot?"
     
-    NOUR: Yeah, kind of. It's... it's whatever, let's go somewhere else.
+    NOUR: "Yeah, kind of. It's... it's whatever, let's go somewhere else."
     
     Nour tries to kick the photo away, but Ms. Suwan stops it with her foot.
     
     She picks it up and examines it, then looks at Nour with an eyebrow raised.
     
-    MS SUWAN: This is you, isn't it? Who's what you're with?
+    MS. SUWAN: "This is you, isn't it? Who's what you're with?"
     
-    * I <i>said</i> let's go somewhere else, I don't want to talk about it.
-        -> refuseToTalk
-    
-    * ...An old friend.
-        -> deflect
- 
-    
-    = refuseToTalk
-    
-        MS SUWAN: ...Hm. If you say so.
+    * "I don't want to talk about it."
+        MS. SUWAN: "...Hm. If you say so."
         
-        NARRATOR: Ms. Suwan picks up the photograph and places it on top of the glass case.
+        NARRATOR: "Ms. Suwan picks up the photograph and places it on top of the glass case."
         
-        MS SUWAN: We'll come back to this later. But you're going to have to face up to what happened.
+        MS. SUWAN: "We'll come back to this later. But you're going to have to face up to what happened."
         
-        NOUR: Hmph. I don't see why when I didn't do anything wrong, but whatever. Let's go.
+        NOUR: "Hmph. I don't see why when I didn't do anything wrong, but whatever. Let's go."
         
         Nick leans in and whispers to Ms. Suwan.
         
-        NICK: I think she did something she's not happy about.
+        NICK: "I think she did something she's not happy about."
         
-        MS SUWAN: Yes, well. We've all done things that might have been in poor judgement. But for now, let's keep looking around until she's ready to talk about it.
+        MS. SUWAN: "We've all done things that might have been in poor judgement. But for now, let's keep looking around until she's ready to talk about it."
         
-        NOUR: I can <i>hear</i> you, y'know.
+        NOUR: "I can <i>hear</i> you, y'know."
         
-        NICK: Psh, no you can't!
+        NICK: "Psh, no you can't!"
         
         &MOV_RINA_BANDN
         
         -> END
-    
-    = deflect
-    
-        NOUR: She's an old friend. I... cared about her, a lot. But we don't talk anymore. It doesn't matter.
+    * "...An old friend."
+        NOUR: "She's an old friend. I... cared about her, a lot. But we don't talk anymore. It doesn't matter."
         
-        NICK: It does though! How did you meet her? Did you know her for a long time? What's her name?
+        NICK: "It does though! How did you meet her? Did you know her for a long time? What's her name?"
         
-        NOUR: I'm answering none of those, and you're going to stop asking questions.
+        NOUR: "I'm answering none of those, and you're going to stop asking questions."
         
-        NICK: Aww, but I wanna know! Why don't you wanna talk about her?
+        NICK: "Aww, but I wanna know! Why don't you wanna talk about her?"
         
-        NOUR: What did I <i>just</i> say?
+        NOUR: "What did I <i>just</i> say?"
         
-        MS SUWAN: Children, peace.
+        MS. SUWAN: "Children, peace."
         
-        NOUR: I'm not a child.
+        NOUR: "I'm not a child."
         
-        NICK: Neither am I.
+        NICK: "Neither am I!"
         
-        NOUR: Yeah, right.
+        NOUR: "Yeah, right."
         
-        MS SUWAN: <i>Children.<i/> Hush. Nick, stop asking Nour questions if she really doesn't want to talk about it.
+        MS. SUWAN: "<i>Children.<i/> Hush. Nick, stop asking Nour questions if she really doesn't want to talk about it."
         
-        NICK: Psh, boooooring.
+        NICK: "Psh, boooooring."
         
-        MS SUWAN: And Nour, we'll come back to this later. Whatever happened, you're going to have to face up to it at some point.
+        MS. SUWAN: "And Nour? We'll come back to this later. Whatever happened, you're going to have to face up to it at some point."
         
-        NOUR: I don't see why. Let's just go.
+        NOUR: "I don't see why. Let's just go."
     
         &MOV_RINA_BANDN
         
