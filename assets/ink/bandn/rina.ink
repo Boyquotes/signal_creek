@@ -51,7 +51,7 @@
     
     NICK: "Guess she didn't wanna talk, huh."
     
-    MS SUWAN: "The more you children talk about your hallucinations, the more I begin to see them too. Maybe we should keep those comments to ourselves."
+    MS. SUWAN: "The more you children talk about your hallucinations, the more I begin to see them too. Maybe we should keep those comments to ourselves."
     
     -> END
     
@@ -105,7 +105,7 @@
             
             NOUR: "I'm still too angry at you to let go..."
             
-            MS SUWAN: "Makes sense. You know you were right back then, why would you want to look back?"
+            MS. SUWAN: "Makes sense. You know you were right back then, why would you want to look back?"
             
             
         + We're done talking for now.
@@ -345,17 +345,17 @@
     //that should probably be mentioned here but im tired of this rn so do it later
     
     //Ms suwan can look back at the past now
-    MS SUWAN: "Nour, think back to when you were friends with Rina. Who was she to you?"
+    MS. SUWAN: "Nour, think back to when you were friends with Rina. Who was she to you?"
     
     * "Rina, you were[..."] the only person who understood me."
     
         Even though this may not really be Rina, there's now a glimmer of genuine compassion in her eyes.
         
-        MS SUWAN: "Nour, you helped me tell my friends from college what I wish I could have told them sooner."
+        MS. SUWAN: "Nour, you helped me tell my friends from college what I wish I could have told them sooner."
     
-        MS SUWAN: "You've already told Rina what you wish you could've said, and it isn't working for you."
+        MS. SUWAN: "You've already told Rina what you wish you could've said, and it isn't working for you."
         
-        MS SUWAN: "What <i>really</i> happened?"
+        MS. SUWAN: "What <i>really</i> happened?"
         
         NOUR: "I remember what I told you, when I first came out..."
         
@@ -396,7 +396,7 @@
         
         NICK: "Well, we're here now. Whether you like it or not. Mostly 'cause we're just stuck here together."
         
-        MS SUWAN: "Correct, because Rina here is blocking the way."
+        MS. SUWAN: "Correct, because Rina here is blocking the way."
         
         NICK: "Oh, yeah, move it!"
         
@@ -412,7 +412,7 @@
         
         NICK: "NICE! Button smashing time!"
         
-        MS SUWAN: "Please don't break the elevator again."
+        MS. SUWAN: "Please don't break the elevator again."
         
         -> END
 

@@ -30,7 +30,11 @@ NICK: "<i>Duh</i> I'm underage. It's why I'm asking you to get them for me. Come
 
 MS. SUWAN: "Nick, vaping doesn't make you look cool. It makes you look like a deadbeat addict."
 
-NICK: "Sheesh, you sound like those Say No To Drugs assemblies we have in school every other month. It's not a big deal! So many of my friends vape. And they do it in the <i>bathroom</i>."
+NICK: "Sheesh, you sound like those Say No To Drugs assemblies we have in school every other month."
+
+MS. SUWAN: "Good. It means I'm saying the right things that you should listen to."
+
+NICK: "Look, it's not a big deal! So many of my friends vape. And they do it in the <i>bathroom</i>."
 
 NOUR: "...In the bathroom, huh... Well, Nick, there's plenty of other perfectly cool things to do out in the world that won't get you addicted to drugs."
 
@@ -43,7 +47,7 @@ NOUR: <i>Maybe I can introduce him to photography? That or reading, I enjoy both
 NICK: "I hope that whatever you're planning to show me is EXTRA cool!"
 
 NOUR: <i>I should lead Nick somewhere I can find a safe but fun hobby. Now where could that be in a big mall like this?</i>
-
+&LIGHT_Nick0
 -> END
 
 == nicknotinterested ==

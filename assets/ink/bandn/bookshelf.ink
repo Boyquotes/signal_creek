@@ -138,9 +138,13 @@
     
     On Nick's wrist, Nour sees a black bracelet with metallic studs.
     
-    NOUR: <i>Wasn't that bracelet in TopicSpot...?</i>
+    //NOUR: <i>Wasn't that bracelet in TopicSpot...?</i>
     
-    MS. SUWAN: "Well, isn't that nice."
+    NOUR: <i>Wait. I don't recognize that bracelet on him?</i>
+    
+    NOUR: <i>Is that a tag on the end of it...?</i>
+    
+    MS. SUWAN: "...Well, isn't that nice."
     
         * "Ms. Suwan, do you recognize that bracelet?"
         
@@ -165,7 +169,7 @@
         * "All you need to do is return the bracelet..."
     
     - Nick shakes his head.
-    
+&LIGHT_Nick1
     -> END
     
     
