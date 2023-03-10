@@ -2,10 +2,10 @@ extends Interactive
 
 export var rina_positions : Dictionary = {
 	"START": Vector2(322, 114),
-	"BANDN": Vector2(100, 100),
-	"TOPICSPOT": Vector2(100, 100),
-	"HALLWAY": Vector2(100, 100),
-	"END": Vector2(100, 100)
+	"BANDN": Vector2(146, -256),
+	"TOPICSPOT": Vector2(284, -21),
+	"HALLWAY": Vector2(869, -309),
+	"END": Vector2(469, 289)
 }
 
 var current_room_index = 1
