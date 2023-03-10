@@ -364,7 +364,7 @@
     //INSERT ELEVATOR BEEP BOOP BUTTON LIGHT STUFF HERE
     
     //should there be a moment here that has an SFX for the elevator light...and then have Nour comment on it???
-
+    &LIGHT_Suwan2
     &MOV_RINA_HALLWAY
     
     -> END
