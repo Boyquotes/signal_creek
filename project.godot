@@ -46,6 +46,7 @@ _global_script_class_icons={
 
 config/name="Signal Creek"
 run/main_scene="res://assets/scenes/Game.tscn"
+boot_splash/show_image=false
 boot_splash/image="res://assets/alpha/sprites_alpha/os/splash_3x.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
