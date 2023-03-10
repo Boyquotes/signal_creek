@@ -3,13 +3,13 @@
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
 [ext_resource path="res://assets/sprites/objects/sheet_topic_dream.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_abstract_dream.png" type="Texture" id=4]
+[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 6, 4 )
+extents = Vector2( 36, 4 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 13, 12.1875 )
+extents = Vector2( 36, 17 )
 
 [node name="Shirt Wall" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -20,22 +20,24 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
-position = Vector2( 0, -8 )
+material = ExtResource( 4 )
+position = Vector2( 0, -26 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 317, 15, 70, 37 )
+region_rect = Rect2( 316, 14, 72, 39 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-texture = ExtResource( 4 )
+position = Vector2( 0, -26 )
+texture = ExtResource( 3 )
 offset = Vector2( 0, -18.5 )
 region_enabled = true
-region_rect = Rect2( 317, 15, 70, 37 )
+region_rect = Rect2( 316, 14, 72, 39 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -4 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -45,7 +47,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -8 )
+position = Vector2( 0, 9 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

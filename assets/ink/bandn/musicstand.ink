@@ -8,6 +8,8 @@
 
 == musicstand ==
 
+    It's a music stand.
+
 {
     - chadbrodykristy1 && musicstand1 && cafetables_getsuwantotalk:
         -> musicstand2
@@ -16,6 +18,8 @@
     - chadbrodykristy1:
         -> musicstand1
 }
+
+-> END
 
 
 ==musicstand1==

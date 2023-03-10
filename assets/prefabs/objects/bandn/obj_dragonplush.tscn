@@ -9,7 +9,7 @@
 extents = Vector2( 10, 5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 11, 10 )
+extents = Vector2( 15, 14.5 )
 
 [node name="DragonPlush" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 3 )
@@ -22,7 +22,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -8 )
+position = Vector2( 0, -28 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -33,14 +33,13 @@ visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-position = Vector2( 0, -8 )
+position = Vector2( 0, -28 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -11.8498 )
 region_enabled = true
 region_rect = Rect2( 174, 106, 19, 18 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -5 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -50,7 +49,6 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -3 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

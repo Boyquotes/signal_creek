@@ -6,10 +6,10 @@
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_NEW.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 13, 17 )
+extents = Vector2( 15, 1.75 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 15, 18.5 )
+extents = Vector2( 15, 18.75 )
 
 [node name="Poster2" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -21,7 +21,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -17 )
+position = Vector2( 0, -25 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 50, 7, 28, 36 )
@@ -31,18 +31,16 @@ visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-position = Vector2( 0, -17 )
+position = Vector2( 0, -25 )
 texture = ExtResource( 5 )
 offset = Vector2( 0, -18.346 )
 region_enabled = true
 region_rect = Rect2( 50, 7, 28, 36 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -17 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
-position = Vector2( 0, -4 )
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
