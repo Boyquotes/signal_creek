@@ -8,8 +8,8 @@ extends KinematicBody2D
 
 export var walk_speed : float = 4500.0
 export var inkname = "Name"
-export var _pathfind_stop_approaching_dist : float = 32
-export var _pathfind_move_away_dist : float = 24
+export var _pathfind_stop_approaching_dist : float = 16
+export var _pathfind_move_away_dist : float = 8
 
 export var sight_dist : float = 16.0
 export var _navtimer_interval : float = 0.2
@@ -111,9 +111,8 @@ func move_character_by_vector(directionVector : Vector2):
 	directionVector = directionVector.normalized()
 	_direction_facing = directionVector
 
-	#play the correct animation based movement direction angle
+	#play the correct animation based on movement direction angle
 	if abs(directionVector.x) >= abs(directionVector.y):
-		#x mag is greater, use left/right animations
 		if directionVector.x > 0:
 			animate_right()
 			
@@ -126,9 +125,36 @@ func move_character_by_vector(directionVector : Vector2):
 			
 		else:
 			animate_up()
+	
+	if Globals.GameMode == Globals.GameModes.WALK and self != Globals.Nour:
+		directionVector = Vector2(stepify(directionVector.x, 0.5), stepify(directionVector.y, 0.5))
+		
+		#directionVector = check_for_collision(directionVector)
+		
+		var selfPos = self.get_global_position()
+		var followingPos = following_node.get_global_position()
+		
+#		if abs(directionVector.x) >= abs(directionVector.y):
+#			#QUICKLY align y with nour's
+#			print("Velocity Y: " + String(_velocity.y))
+#			self.set_global_position(Vector2(selfPos.x, lerp(selfPos.y, followingPos.y, 0.5)))
+#			pass
+#		else:
+#			#QUICKLY align x with nour's
+#			print("Velocity X: " + String(_velocity.x))
+#			self.set_global_position(Vector2(lerp(selfPos.x, followingPos.x, 0.5), selfPos.y))
+#			pass
 			
 	_velocity = directionVector * walk_speed * get_physics_process_delta_time()
 	_velocity = move_and_slide(_velocity)
+
+
+func check_for_collision(sourceVector):
+	#amount of distnce to check should = speed/delta or whatever
+	#check if areas contain rigid bodies
+	print(sourceVector)
+	return sourceVector
+	pass
 
 
 # Current pathfinding

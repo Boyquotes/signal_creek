@@ -39,8 +39,8 @@ func _ready():
 	Globals.Nour = characterObjects[1]
 	Globals.Suwan = characterObjects[2]
 	
-	Globals.Nick.following_node = get_leader()
-	Globals.Suwan.following_node = get_leader()
+	Globals.Nick.following_node = Globals.Nour
+	Globals.Suwan.following_node = Globals.Nick
 
 
 # Control leader movement; others follow
@@ -55,8 +55,13 @@ func move_followers_by_pathfind():
 	var follower1 = characterObjects[wrapi(leaderIndex + 1, 0,3)]
 	var follower2 = characterObjects[wrapi(leaderIndex - 1, 0,3)]
 	
-	follower1.pathfind_to(follower1.following_node)
-	follower2.pathfind_to(follower2.following_node)
+	if Globals.GameMode == Globals.GameModes.WALK:
+		Globals.Nick.pathfind_to(Globals.Nour)
+		Globals.Suwan.pathfind_to(Globals.Nick)
+	
+	else:
+		follower1.pathfind_to(follower1.following_node)
+		follower2.pathfind_to(follower2.following_node)
 
 
 func force_move_leader():
