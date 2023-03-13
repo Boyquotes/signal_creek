@@ -7,6 +7,7 @@ extends Node2D
 signal doorway_entered(newroom, partyposition)
 
 export var camera_pixel_size : Vector2 = Vector2(320, 180)
+export var testing_enabled = false
 
 var _following_vector = Vector2(0, 0)
 
@@ -33,9 +34,12 @@ func _ready():
 	RoomEngine.PlaneManager = $ViewportContainer/Viewport/Room/PlaneManager
 	
 	#emit_signal("doorway_entered", RoomEngine.Rooms[RoomEngine.CurrentRoomIndex], RoomEngine.Rooms[RoomEngine.CurrentRoomIndex].get_party_starting_position())
-	call_deferred("_doorway_entered", RoomEngine.Rooms[RoomEngine.CurrentRoomIndex], RoomEngine.Rooms[RoomEngine.CurrentRoomIndex].get_party_starting_position())
+	if testing_enabled:
+		call_deferred("_doorway_entered", RoomEngine.Rooms[0], RoomEngine.Rooms[0].get_party_starting_position())
+	else:
+		call_deferred("_doorway_entered", RoomEngine.Rooms[RoomEngine.CurrentRoomIndex], RoomEngine.Rooms[RoomEngine.CurrentRoomIndex].get_party_starting_position())
 
-func _process(delta):
+func _physics_process(delta):
 	if Globals.PartyCamera.is_inside_tree():
 		viewport_container.material.set_shader_param("cam_offset", Globals.PartyCamera.pixel_perfect(delta, _following_vector))
 

@@ -46,6 +46,7 @@ _global_script_class_icons={
 
 config/name="Signal Creek"
 run/main_scene="res://assets/scenes/Game.tscn"
+run/delta_sync_after_draw=true
 boot_splash/show_image=false
 boot_splash/image="res://assets/alpha/sprites_alpha/os/splash_3x.png"
 boot_splash/fullsize=false
@@ -67,6 +68,7 @@ RoomEngine="*res://assets/scripts/globals/room_engine.gd"
 
 gdscript/completion/autocomplete_setters_and_getters=true
 gdscript/warnings/unused_signal=false
+shapes/collision/shape_color=Color( 0, 0.6, 0.701961, 0.113725 )
 
 [display]
 
@@ -75,6 +77,7 @@ window/size/height=540
 window/size/always_on_top=true
 window/size/test_width=960
 window/size/test_height=540
+window/vsync/vsync_via_compositor=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -248,7 +251,6 @@ project/assembly_name="Signal Creek"
 [physics]
 
 3d/active_soft_world=false
-2d/use_bvh=false
 3d/default_gravity=0.0
 
 [rendering]

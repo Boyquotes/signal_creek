@@ -6,7 +6,7 @@ extends KinematicBody2D
 
 # TODO: add timer for updating pathfinding position
 
-export var walk_speed : float = 4500.0
+export var walk_speed : float = 3000.0
 export var inkname = "Name"
 export var _pathfind_stop_approaching_dist : float = 16
 export var _pathfind_move_away_dist : float = 8

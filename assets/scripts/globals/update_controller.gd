@@ -9,12 +9,11 @@ var _can_interact = false
 var _camera_normal_position = null
 var _elevator_tutorial = false
 
-
 func _start():
 	pass
 
 
-func _physics_process(_delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("reset"):
 		reset_game()
 	
