@@ -9,7 +9,7 @@ export var rina_positions : Dictionary = {
 }
 
 var current_room_index = 1
-var current_position = Vector2(100, 100)
+var current_position = "START"
 var next_room_index = 3 # store the next room for whenever the player is actually in it
 var _shlorping_in = false
 var _shlorping_out = false
@@ -69,6 +69,8 @@ func move_rina(newPosition):
 
 # call this only when the player is actually in the room
 func place_rina_in_new_room():
+	if !Globals.Rina:
+		return
 	RoomEngine.move_object_to_new_room(self.get_parent(), RoomEngine.Rooms[current_room_index], RoomEngine.Rooms[next_room_index])
 	self.get_parent().set_global_position(rina_positions.get(current_position))
 	current_room_index = next_room_index

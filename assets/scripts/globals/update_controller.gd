@@ -103,23 +103,10 @@ func check_input_character_movement():
 	Globals.PartyObject.move_leader_by_vector(directionVector)
 
 func reset_game():
-	#set the default room's starting pos to the default starting pos
-	#make current party character Nour
-	#reset the ink
-	#room enter signal for default room
-	Globals.PartyObject.update_leader_to(1)
-	Globals.CurrentWorld = Globals.Worlds.DREAM
-#	Globals.set_to_dream_world()
-	if RoomEngine.CurrentRoomIndex != RoomEngine.defaultRoomIndex:
-		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[RoomEngine.defaultRoomIndex], RoomEngine.defaultStartingPos)
-		
-	else:
-		RoomEngine.CurrentRoom.move_party_to_position(Globals.PartyObject, RoomEngine.defaultStartingPos)
-		
-	RoomEngine.PlaneManager.set_correct_world()
+	#Reset overworld tree and dialoguebox
+	Globals.GameCanvas.reload()
 	Globals.DialogueBox.reset_story()
 	print("GAME RESET")
-	pass
 
 
 func set_closest_object(objectName):

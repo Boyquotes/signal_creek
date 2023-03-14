@@ -7,12 +7,13 @@ const room_hallway = preload("res://assets/scenes/rooms/room_hallway.tscn")
 const room_topicSpot = preload("res://assets/scenes/rooms/room_topicspot.tscn")
 const room_elevator = preload("res://assets/scenes/rooms/room_elevator.tscn")
 
-var defaultRoomIndex = 3
+var defaultRoomIndex = 4
 var defaultStartingPos = null
 
 onready var PlaneManager = null
 onready var CurrentRoom = null
 onready var CurrentRoomIndex = defaultRoomIndex
+onready var starter
 onready var bandn = null
 onready var hallway = null
 onready var topicspot = null
@@ -26,8 +27,8 @@ func _ready():
 	topicspot = room_topicSpot.instance()
 	elevator = room_elevator.instance()
 	
-	Rooms = [bandn, hallway, topicspot, elevator]
-	defaultStartingPos = Rooms[defaultRoomIndex].get_party_starting_position()
+	Rooms = [bandn, hallway, topicspot, elevator, starter]
+	#defaultStartingPos = Rooms[defaultRoomIndex].get_party_starting_position()
 
 
 # Remove previousRoom from viewport, add newRoom to viewport
@@ -59,3 +60,11 @@ func move_party_to_new_room(partyObject, previousRoom, newRoom):
 func move_object_to_new_room(objectNode, previousRoom, newRoom):
 	previousRoom.remove_object(objectNode)
 	newRoom.place_object(objectNode)
+
+func reload():
+	bandn = room_BandN.instance()
+	hallway = room_hallway.instance()
+	topicspot = room_topicSpot.instance()
+	elevator = room_elevator.instance()
+	
+	Rooms = [bandn, hallway, topicspot, elevator, starter]
