@@ -14,8 +14,11 @@ var _shake_timer
 var _is_shaking = false
 var shake_magnitude = shake_min_magnitude
 
-var _fade_timer
-var _is_fading = false
+var _fade_in_timer
+var _is_fading_in = false
+
+var _fade_out_timer
+var _is_fading_out = false
 
 var _overlay_material
 
@@ -28,19 +31,29 @@ func _ready():
 	_shake_timer.connect("timeout", self, "_shake_timer_timeout")
 	_shake_timer.set_one_shot(true)
 	
-	_fade_timer = Timer.new()
-	add_child(_fade_timer)
-	_fade_timer.wait_time = fade_timer_interval
-	_fade_timer.connect("timeout", self, "_fade_timer_timeout")
-	_fade_timer.set_one_shot(true)
+	_fade_in_timer = Timer.new()
+	add_child(_fade_in_timer)
+	_fade_in_timer.wait_time = fade_timer_interval
+	_fade_in_timer.connect("timeout", self, "_fade_in_timer_timeout")
+	_fade_in_timer.set_one_shot(true)
+	_overlay_material = self.material
+	
+	_fade_out_timer = Timer.new()
+	add_child(_fade_out_timer)
+	_fade_out_timer.wait_time = fade_timer_interval
+	_fade_out_timer.connect("timeout", self, "_fade_out_timer_timeout")
+	_fade_out_timer.set_one_shot(true)
 	_overlay_material = self.material
 
 
 func _process(_delta):
 #	if _is_shifting:
 #		_overlay_material.set_shader_param("spread", shift_offset * _shift_timer.get_time_left())
-	if _is_fading:
-		set_fade(fade_timer_interval - _fade_timer.get_time_left())
+	if _is_fading_in:
+		set_fade(fade_timer_interval - _fade_in_timer.get_time_left())
+		
+	elif _is_fading_out:
+		set_fade(_fade_out_timer.get_time_left())
 
 	if _is_shaking:
 		var randomvector = Vector2(rand_range(-shake_magnitude, shake_magnitude), rand_range(-shake_magnitude, shake_magnitude))
@@ -69,20 +82,35 @@ func set_to_black():
 	self.modulate = Color(0.0, 0.0, 0.0)
 
 func start_fade_in():
-	_is_fading = true
+	_is_fading_in = true
 	_is_shaking = false
 	screen_shake(0.0, 0.0, 0.0, 1.0)
 	self.modulate = Color(0.0, 0.0, 0.0)
-	_fade_timer.start()
+	_fade_in_timer.start()
+
+
+func start_fade_out():
+	_is_fading_out = true
+	_is_shaking = false
+	screen_shake(0.0, 0.0, 0.0, 1.0)
+	self.modulate = Color(1.0, 1.0, 1.0)
+	_fade_out_timer.start()
+
 
 func start_shaking(timed):
 	_is_shaking = true
 	if timed:
 		_shake_timer.start()
 
-func _fade_timer_timeout():
+func _fade_in_timer_timeout():
 	set_fade(1.0)
-	_is_fading = false
+	_is_fading_in = false
+
+
+func _fade_out_timer_timeout():
+	set_fade(0.0)
+	_is_fading_out = false
+
 
 
 func _shake_timer_timeout():
@@ -96,9 +124,9 @@ func reload():
 	_shake_timer.connect("timeout", self, "_shake_timer_timeout")
 	_shake_timer.set_one_shot(true)
 	
-	_fade_timer = Timer.new()
-	add_child(_fade_timer)
-	_fade_timer.wait_time = fade_timer_interval
-	_fade_timer.connect("timeout", self, "_fade_timer_timeout")
-	_fade_timer.set_one_shot(true)
+	_fade_in_timer = Timer.new()
+	add_child(_fade_in_timer)
+	_fade_in_timer.wait_time = fade_timer_interval
+	_fade_in_timer.connect("timeout", self, "_fade_in_timer_timeout")
+	_fade_in_timer.set_one_shot(true)
 	_overlay_material = self.material

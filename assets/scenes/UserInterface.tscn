@@ -39,7 +39,7 @@ script = ExtResource( 1 )
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 192.0
-margin_bottom = 454.0
+margin_bottom = 538.0
 
 [node name="DEVELOPER TOOLS" type="RichTextLabel" parent="DevTools/VBoxContainer"]
 margin_right = 184.0
@@ -98,45 +98,68 @@ margin_top = 242.0
 margin_right = 184.0
 margin_bottom = 246.0
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="DevTools/VBoxContainer"]
+[node name="RichTextLabel3" type="RichTextLabel" parent="DevTools/VBoxContainer"]
 margin_top = 250.0
 margin_right = 184.0
 margin_bottom = 281.0
+bbcode_enabled = true
+bbcode_text = "[b][center]Teleport to Room[/center][/b]"
+text = "Teleport to Room"
+fit_content_height = true
+
+[node name="Resolution" type="OptionButton" parent="DevTools/VBoxContainer"]
+margin_top = 285.0
+margin_right = 184.0
+margin_bottom = 322.0
+size_flags_vertical = 3
+text = "960 x 540"
+items = [ "960 x 540", null, false, 0, null, "1920 x 1080", null, false, 1, null, "2880 x 1620", null, false, 2, null ]
+selected = 0
+
+[node name="HSeparator4" type="HSeparator" parent="DevTools/VBoxContainer"]
+margin_top = 326.0
+margin_right = 184.0
+margin_bottom = 330.0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="DevTools/VBoxContainer"]
+margin_top = 334.0
+margin_right = 184.0
+margin_bottom = 365.0
 bbcode_enabled = true
 bbcode_text = "[b][center]Dialogue[/center][/b]"
 text = "Dialogue"
 fit_content_height = true
 
 [node name="FastForwardDialogue" type="CheckButton" parent="DevTools/VBoxContainer"]
-margin_top = 285.0
+margin_top = 369.0
 margin_right = 184.0
-margin_bottom = 325.0
+margin_bottom = 409.0
 size_flags_vertical = 3
 text = "Fast Forward"
 
 [node name="Open At Knot" type="Button" parent="DevTools/VBoxContainer"]
-margin_top = 329.0
+margin_top = 413.0
 margin_right = 184.0
-margin_bottom = 366.0
+margin_bottom = 450.0
 size_flags_vertical = 3
 text = "Open At Knot"
 
 [node name="LineEdit" type="LineEdit" parent="DevTools/VBoxContainer"]
-margin_top = 370.0
+margin_top = 454.0
 margin_right = 184.0
-margin_bottom = 394.0
+margin_bottom = 478.0
 placeholder_text = "type knot name here"
 caret_blink = true
 
 [node name="HSeparator2" type="HSeparator" parent="DevTools/VBoxContainer"]
-margin_top = 398.0
+margin_top = 482.0
 margin_right = 184.0
-margin_bottom = 402.0
+margin_bottom = 486.0
 
 [node name="MuteAudio" type="CheckButton" parent="DevTools/VBoxContainer"]
-margin_top = 406.0
+margin_top = 490.0
 margin_right = 184.0
-margin_bottom = 446.0
+margin_bottom = 530.0
 size_flags_vertical = 3
 text = "Mute Audio"
 
@@ -144,6 +167,7 @@ text = "Mute Audio"
 [connection signal="pressed" from="DevTools/VBoxContainer/Hallway" to="DevTools" method="_on_Hallway_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/TopicSpot" to="DevTools" method="_on_TopicSpot_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/BandN" to="DevTools" method="_on_BandN_pressed"]
+[connection signal="item_selected" from="DevTools/VBoxContainer/Resolution" to="DevTools" method="_on_Resolution_item_selected"]
 [connection signal="toggled" from="DevTools/VBoxContainer/FastForwardDialogue" to="DevTools" method="_on_FastForwardDialogue_toggled"]
 [connection signal="pressed" from="DevTools/VBoxContainer/Open At Knot" to="DevTools" method="_on_Open_At_Knot_pressed"]
 [connection signal="focus_entered" from="DevTools/VBoxContainer/LineEdit" to="DevTools" method="_on_LineEdit_focus_entered"]
