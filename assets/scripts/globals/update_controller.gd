@@ -26,10 +26,10 @@ func _process(_delta):
 			Globals.PartyObject.force_move_leader()
 		
 		if Globals.DialogueBox.is_displaying_choices:
-			if Input.is_action_just_released("move_down"):
+			if Input.is_action_just_released("move_down") or Input.is_action_just_released("ui_down"):
 				Globals.DialogueBox.toggle_choice_selections(1)
 				
-			elif Input.is_action_just_released("move_up"):
+			elif Input.is_action_just_released("move_up") or Input.is_action_just_released("ui_up"):
 				Globals.DialogueBox.toggle_choice_selections(-1)
 				
 			if Input.is_action_just_pressed("interact"):
