@@ -49,8 +49,8 @@ func move_party_to_new_room(partyObject, previousRoom, newRoom):
 	previousRoom.remove_party(partyObject)
 	newRoom.place_party(partyObject)
 	
-	Globals.GameCanvas.set_camera_pos(partyObject.get_leader().get_global_position(), Globals.PartyCamera)
-	Globals.GameOverlay.start_fade_in()
+#	Globals.GameCanvas.set_camera_pos(partyObject.get_leader().get_global_position(), Globals.PartyCamera)
+#	Globals.GameOverlay.start_fade_in()
 	
 	if Globals.Rina and newRoom == Rooms[Globals.Rina.next_room_index]:
 		Globals.Rina.place_rina_in_new_room()
