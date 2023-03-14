@@ -20,7 +20,7 @@ func _ready():
 
 func _on_Doortal_body_entered(body):
 	
-	if Globals.GameMode == Globals.GameModes.WALK and body.is_in_group("Player") && body == Globals.PartyObject.get_leader():
+	if Globals.GameMode == Globals.GameModes.WALK and body.is_in_group("Player") and body == Globals.PartyObject.get_leader():
 		entrance_timer.start()
 		
 		

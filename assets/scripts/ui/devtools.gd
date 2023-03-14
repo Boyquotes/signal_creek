@@ -86,4 +86,5 @@ func _on_Resolution_item_selected(index):
 	elif index == 2:
 		OS.window_size = Vector2(2880, 1620)
 		Globals.PartyCamera.rescale_camera(18)
-		pass
+		
+		

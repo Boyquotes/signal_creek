@@ -469,3 +469,12 @@ func reset_story():
 func fast_forward(state):
 	fastforward = state
 	
+
+
+func _on_Fullscreen_toggled(button_pressed):
+	if OS.window_fullscreen:
+		OS.window_fullscreen = false
+		
+	else:
+		OS.window_fullscreen = true
+	pass # Replace with function body.
