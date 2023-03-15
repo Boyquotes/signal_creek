@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/scripts/ui/dialoguebox_entry.gd" type="Script" id=2]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=3]
 [ext_resource path="res://assets/shaders/material_portraitborder.tres" type="Material" id=4]
-[ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/nick_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/nour_real.png" type="Texture" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 1.0
@@ -16,23 +16,56 @@ anti_aliasing = false
 [sub_resource type="Theme" id=2]
 Panel/styles/panel = SubResource( 1 )
 
-[node name="ChoiceEntry" type="MarginContainer"]
-margin_right = 276.0
-margin_bottom = 56.0
+[node name="ChoiceEntry" type="VBoxContainer"]
+margin_right = 394.0
+margin_bottom = 211.0
 theme = ExtResource( 3 )
 script = ExtResource( 2 )
+content_box = NodePath("HBoxContainer/DialogueTextContainer/Background/VBoxContainer")
+nametag = NodePath("MarginContainer/HBoxContainer/Name")
+name_separator = NodePath("MarginContainer/HBoxContainer/HSeparator")
+portrait = NodePath("HBoxContainer/Portrait")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 394.0
+margin_bottom = 19.0
+custom_constants/margin_left = 80
+
+[node name="HBoxContainer" type="HFlowContainer" parent="MarginContainer"]
+margin_left = 80.0
+margin_right = 394.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="Name" type="RichTextLabel" parent="MarginContainer/HBoxContainer"]
+margin_right = 99.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.48
+custom_colors/default_color = Color( 1, 0.556863, 0.556863, 1 )
+bbcode_enabled = true
+bbcode_text = "[b]MS. SUWAN[/b]"
+text = "MS. SUWAN"
+fit_content_height = true
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer"]
+margin_left = 103.0
+margin_right = 313.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 276.0
-margin_bottom = 124.0
-size_flags_vertical = 3
+margin_top = 39.0
+margin_right = 394.0
+margin_bottom = 159.0
 custom_constants/separation = 16
+alignment = 1
 
 [node name="Portrait" type="TextureRect" parent="HBoxContainer"]
 material = ExtResource( 4 )
-margin_right = 96.0
-margin_bottom = 124.0
-rect_min_size = Vector2( 96, 96 )
+margin_right = 120.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 120, 120 )
 size_flags_horizontal = 0
 size_flags_vertical = 3
 theme = SubResource( 2 )
@@ -40,47 +73,35 @@ texture = ExtResource( 5 )
 expand = true
 stretch_mode = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 112.0
-margin_right = 276.0
-margin_bottom = 124.0
+[node name="DialogueTextContainer" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 136.0
+margin_right = 394.0
+margin_bottom = 120.0
 size_flags_horizontal = 3
+custom_constants/margin_right = 16
+custom_constants/margin_left = 8
 
-[node name="Name" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
-margin_right = 164.0
-margin_bottom = 16.0
-custom_colors/default_color = Color( 1, 0.87451, 0.556863, 1 )
-bbcode_enabled = true
-bbcode_text = "[b]Sugma Deek[/b]"
-text = "Sugma Deek"
-fit_content_height = true
+[node name="Background" type="PanelContainer" parent="HBoxContainer/DialogueTextContainer"]
+margin_left = 8.0
+margin_right = 242.0
+margin_bottom = 120.0
 
-[node name="DialogueTextContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
-margin_top = 36.0
-margin_right = 164.0
-margin_bottom = 124.0
-custom_constants/margin_left = 16
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/DialogueTextContainer/Background"]
+margin_right = 234.0
+margin_bottom = 120.0
+alignment = 1
 
-[node name="Background" type="PanelContainer" parent="HBoxContainer/VBoxContainer/DialogueTextContainer"]
-margin_left = 16.0
-margin_right = 164.0
-margin_bottom = 88.0
+[node name="Choice" parent="HBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
+margin_top = 11.0
+margin_right = 234.0
+margin_bottom = 30.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/DialogueTextContainer/Background"]
-margin_left = 12.0
-margin_right = 148.0
-margin_bottom = 88.0
+[node name="Choice2" parent="HBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
+margin_top = 50.0
+margin_right = 234.0
+margin_bottom = 69.0
 
-[node name="Choice" parent="HBoxContainer/VBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
-margin_right = 136.0
-margin_bottom = 16.0
-
-[node name="Choice2" parent="HBoxContainer/VBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
-margin_top = 36.0
-margin_right = 136.0
-margin_bottom = 52.0
-
-[node name="Choice3" parent="HBoxContainer/VBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
-margin_top = 72.0
-margin_right = 136.0
-margin_bottom = 88.0
+[node name="Choice3" parent="HBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
+margin_top = 89.0
+margin_right = 234.0
+margin_bottom = 108.0

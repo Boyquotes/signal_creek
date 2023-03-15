@@ -34,6 +34,13 @@ INCLUDE topicspot/sailormoonposters.ink
 INCLUDE topicspot/wallofvideogames.ink
 
 INCLUDE betaintro.ink
+INCLUDE hallway/static_hallway.ink
+INCLUDE topicspot/static_topicspot.ink
+INCLUDE bandn/static_bandn.ink
+
+
+
+
 
 
 == abstract ==
@@ -48,3 +55,37 @@ INCLUDE betaintro.ink
     
     -> END
     
+== first_light ==
+
+    &FIRSTLIGHT
+    
+    &BLACK
+    
+    ...
+    
+    &FDEIN
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    NICK: "Oh shit bro did that light turn on?"
+    
+    NOUR: "What does it mean man..."
+    
+    MS. SUWAN: "This is deep, not everyone will understand."
+    
+    -> END
+    
+== light_on ==
+
+    {
+        -!first_light:
+            -> first_light
+    }
+    
+    Another light turned on bro.
+    
+    -> END

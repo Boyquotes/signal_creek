@@ -3,7 +3,7 @@ extends Area2D
 export var _knot_name : String = "abstract"
 
 onready var _talked_to = false
-
+onready var _default_position = self.get_global_position()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +13,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Globals.GameMode == Globals.GameModes.WALK && _talked_to:
-		self.set_pause_mode(true)
+		self.set_global_position(Vector2(-1000, -1000))
 
 
 func _on_LocationTrigger_body_entered(body):

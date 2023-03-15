@@ -5,9 +5,8 @@
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_topic_dream.png" type="Texture" id=4]
 
-
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 9, 6 )
+extents = Vector2( 21, 6 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 21, 17.5 )
@@ -22,15 +21,18 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -18 )
+position = Vector2( 0, -37 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 14, 78, 20, 36 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+position = Vector2( 0, -37 )
+texture = ExtResource( 4 )
 offset = Vector2( 0, -18 )
 region_enabled = true
 region_rect = Rect2( 14, 78, 20, 36 )

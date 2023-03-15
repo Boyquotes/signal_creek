@@ -12,13 +12,13 @@
 //note to self: do some gathers - choices that lead to the same conversation 
 
 {
-    - chadbrodykristy1 && musicstand4 && chadbrodykristy3:
+    - chadbrodykristy1 && musicstand2 && chadbrodykristy3:
         -> cafetables_end
         
-    - chadbrodykristy2 && musicstand4 && chadbrodykristy3: 
+    - chadbrodykristy2 && musicstand2 && chadbrodykristy3: 
         -> cafetables3
         
-    - chadbrodykristy2 && musicstand4:
+    - chadbrodykristy2 && musicstand2:
         -> cafetables3_5
         
     - chadbrodykristy2 && cafetables1:
@@ -32,7 +32,7 @@
 }
 
 === cafetables1 ===
-    NOUR: "Didn't think I'd see this cafe here. It's even in good condition. Seems like anything is possible in this place..."
+    NOUR: "Didn't think I'd see this cafe here. It's even in good condition."
     
     MS. SUWAN: "I still refuse to think any of this is real. I was right here before leaving this floor for demolition."
     
@@ -62,23 +62,21 @@
 === cafetables2 ===
     NOUR: "Didn't think I'd see this cafe here. It's even in good condition. Seems like anything is possible in this place..."
     
-    MS SUWAN: "Same chairs and tables, but now they look much newer. Like how I remember they used to be."
+    MS. SUWAN: "Same chairs and tables, but now they look much newer. Like how I remember they used to be."
     
-    NOUR: "You've been here before?"
+    MS. SUWAN: "But why are we here, Nour?"
     
-    MS SUWAN: "A long time ago. It was the only table big enough for...a group."
+    NOUR: "Oh. Um, well...Did you come here with them? Those three from before?"
     
-    NOUR: "Did you come here with them? Those people from before? They seemed like, well...important."
-    
-    MS SUWAN: "Forget it. I don't want to talk about this or them anymore. It's a complete waste of time."
+    MS. SUWAN: "I don't want to talk about this or them anymore. It's a complete waste of time."
     
     NICK: "Ms. Suwan...are you really ok?"
     
-    MS SUWAN: "I'm fine. Just—just stop asking questions. It's over now."
+    MS. SUWAN: "I'm fine. Just—just stop asking questions. It's over now."
     
     NICK: "You don't look so good though..."
     
-    MS SUWAN: "..."
+    MS. SUWAN: "..."
     
     NOUR: <i>For her to not even be able to hide that look on her face means that those three really did mean a lot to her.</i>
     
@@ -90,17 +88,17 @@
     -> cafetables_getsuwantotalk
 
 === cafetables2_5 ===
-    NOUR: "Did you come here with them? Those people from before? They seemed like, well...important."
+    NOUR: "Did you come here with them? Those three from before? They seemed like, well...they cared about you."
     
-    MS SUWAN: "Forget it. I don't want to talk about this or them anymore. It's a complete waste of time."
+    MS. SUWAN: "I don't want to talk about this or them anymore. It's a complete waste of time."
     
     NICK: "Ms. Suwan...are you really ok?"
     
-    MS SUWAN: "I'm fine. Just—just stop asking questions. It's over now."
+    MS. SUWAN: "I'm fine. Just—just stop asking questions. It's over now."
     
     NICK: "You don't look so good though..."
     
-    MS SUWAN: "..."
+    MS. SUWAN: "..."
     
     NOUR: <i>For her to not even be able to hide that look on her face means that those three really did mean a lot to her.</i>
     
@@ -165,7 +163,7 @@
         
         MS. SUWAN: "But they were distractions for me in the end. Our hobbies, our hangouts...it was all time and energy I knew I could use for my career."
         
-        MS. SUWAN: "So I made my decision. When they were gone, I had everything: 175 on my LSAT, a stacked resume, and eventually, a fruitful career."
+        MS. SUWAN: "So, I made my decision. When they were gone, I had everything—175 on my LSAT, a stacked resume, and a promising career."
         
         NOUR: "Was it worth it?"
         
@@ -191,12 +189,13 @@
         
         NOUR: <i>Ms. Suwan looks like she's...she's in shock. What Nick asked about what she does for fun now must've shaken her up.</i>
         
-        NOUR: <i>I'm glad she opened up more about what happened, but I can't just stop here. Her past pain shouldn't hold her back from the things that used to—and could still—make her happy.</i>
+        NOUR: <i>I can't just stop here. Her past pain shouldn't hold her back from the things that used to—and could still—make her happy.</i>
         
-        NOUR: <i>She might not be ready to face her ex-friends, but maybe I could ease her into opening up to the idea. If I reconnect her to a hobby, that will make her realize she can change her ways.</i>
+        NOUR: <i>She might not be ready to face her ex-friends, but maybe I could ease her into opening up to the idea.</i>
         
-        NOUR: <i>If I could find something related to what she used to love, that could do just the trick.</i>
-            
+        NOUR: <i>I got through to her with an old memory of her friends. Maybe she's ready to revisit another old love of hers with a new perspective.</i>
+        
+        NOUR: <i>I wonder...is she ready to listen to Paradise again? I should lead her there to find out.</i>
             -> END
     
     * [Bring it up subtly]
@@ -223,9 +222,9 @@
             
             -> cafetables_getsuwantotalk
     
-    + [I have nothing to say] I'll try to get her to talk later.
+    // + [I have nothing to say] I'll try to get her to talk later.
         
-        -> END
+    //     -> END
 
 === cafetables3_5 ===
     MS. SUWAN: "Let's not stop here. I'm ready to talk to the three of them."
@@ -262,7 +261,7 @@
     
     NOUR: <i>It sounds like this cafe really did hold precious memories for her. It did for me, too...</i>
     
-    NOUR: <i>Would I have been hapier if I had ended things differently with my friend?</i>
+    NOUR: <i>Would I have been happier if I had ended things differently with my friend?</i>
     
     MS. SUWAN: "Nour? Are you ok?"
     

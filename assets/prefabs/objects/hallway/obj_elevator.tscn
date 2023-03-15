@@ -1,17 +1,18 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/objects/sheet_elevatorlights.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/objects/sheet_elevator.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_elevator_normals.png" type="Texture" id=4]
-[ext_resource path="res://assets/prefabs/objects/ElevatorArea.gd" type="Script" id=5]
+[ext_resource path="res://assets/scripts/environment/elevator_area.gd" type="Script" id=5]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=6]
+[ext_resource path="res://assets/prefabs/objects/hallway/RouteLights.gd" type="Script" id=7]
+[ext_resource path="res://assets/textures/lights/glow_64.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 48, 31.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 40, 36 )
+extents = Vector2( 40, 19.5 )
 
 [node name="Elevator" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -21,104 +22,118 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-light_mask = 4
+light_mask = 5
 material = ExtResource( 6 )
 position = Vector2( 0, -70 )
 texture = ExtResource( 3 )
-normal_map = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 11, 7, 106, 143 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+position = Vector2( 0, -70 )
 texture = ExtResource( 3 )
-offset = Vector2( 0, -71.5 )
 region_enabled = true
 region_rect = Rect2( 11, 7, 106, 143 )
 
 [node name="RouteLights" type="Node2D" parent="."]
+script = ExtResource( 7 )
 
 [node name="SheetElevatorlights" type="Light2D" parent="RouteLights"]
-visible = false
 position = Vector2( 0, -58 )
 texture = ExtResource( 2 )
+energy = 3.87
+mode = 2
+range_height = 2048.0
+range_item_cull_mask = 15
+shadow_item_cull_mask = 7
 
 [node name="Nick0" type="Sprite" parent="RouteLights"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0.313726, 0, 0.364706, 0.698039 )
+light_mask = 0
 position = Vector2( -12, -64 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 1, 0, 4, 3 )
 
 [node name="Nick1" type="Sprite" parent="RouteLights"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0.313726, 0, 0.364706, 0.698039 )
+light_mask = 0
 position = Vector2( -12, -60 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 1, 4, 4, 3 )
 
 [node name="Nick2" type="Sprite" parent="RouteLights"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0.313726, 0, 0.364706, 0.698039 )
+light_mask = 0
 position = Vector2( -12, -53 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 10, 6, 6 )
 
 [node name="Nour0" type="Sprite" parent="RouteLights"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0.313726, 0, 0.364706, 0.698039 )
+light_mask = 0
 position = Vector2( 0, -64 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 13, 0, 4, 3 )
 
 [node name="Nour1" type="Sprite" parent="RouteLights"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0.313726, 0, 0.364706, 0.698039 )
+light_mask = 0
 position = Vector2( 0, -60 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 13, 4, 4, 3 )
 
 [node name="Nour2" type="Sprite" parent="RouteLights"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0.313726, 0, 0.364706, 0.698039 )
+light_mask = 0
 position = Vector2( 0, -53 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 12, 10, 6, 6 )
 
 [node name="Suwan0" type="Sprite" parent="RouteLights"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0.313726, 0, 0.364706, 0.698039 )
+light_mask = 0
 position = Vector2( 12, -64 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 25, 0, 4, 3 )
 
 [node name="Suwan1" type="Sprite" parent="RouteLights"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0.313726, 0, 0.364706, 0.698039 )
+light_mask = 0
 position = Vector2( 12, -60 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 25, 4, 4, 3 )
 
 [node name="Suwan2" type="Sprite" parent="RouteLights"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0.313726, 0, 0.364706, 0.698039 )
+light_mask = 0
 position = Vector2( 12, -53 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 24, 10, 6, 6 )
 
+[node name="SheetElevatorlights2" type="Light2D" parent="RouteLights"]
+position = Vector2( 3.8147e-06, -58 )
+scale = Vector2( 3.26563, 2.05469 )
+texture = ExtResource( 8 )
+color = Color( 1, 0.733333, 0.968627, 1 )
+energy = 0.4
+range_height = 1199.3
+range_item_cull_mask = 15
+shadow_item_cull_mask = 7
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 0, -31.5 )
 shape = SubResource( 23 )
 one_way_collision_margin = 0.0
@@ -128,9 +143,10 @@ script = ExtResource( 5 )
 __meta__ = {
 "_editor_description_": ""
 }
+_disable_interactivity = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, 28 )
+position = Vector2( 0, 11.5 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

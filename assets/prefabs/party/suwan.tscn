@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/sprites/characters/sheet_suwan_past.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 4, 2 )
+extents = Vector2( 4, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 10, 8 )
@@ -16,7 +16,7 @@ inkname = "MS SUWAN"
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 2
-position = Vector2( 0, -17 )
+position = Vector2( 0, -18 )
 texture = ExtResource( 3 )
 hframes = 6
 vframes = 4
@@ -29,10 +29,13 @@ __meta__ = {
 [node name="AnimationPlayer" parent="." instance=ExtResource( 2 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -2 )
+position = Vector2( 0, -1.5 )
 shape = SubResource( 6 )
 
 [node name="PlayerVisible" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerVisible"]
 shape = SubResource( 20 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true

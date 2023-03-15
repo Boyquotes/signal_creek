@@ -13,6 +13,8 @@ export var _interactive_by_nick = true
 export var _interactive_by_nour = true 
 export var _interactive_by_suwan = true
 
+export var _disable_interactivity = false
+
 var _can_interact = false
 var _party_is_inside = false
 
@@ -25,13 +27,13 @@ func _ready():
 # IN CASE OF LEADER SWITCHING
 # When a body enters self, check if player can interact
 func _on_InteractArea_body_entered(body):
-	if body == Globals.PartyObject.get_leader():
+	if body == Globals.PartyObject.get_leader() and !_disable_interactivity:
 		_check_if_can_interact()
 
 
 # When a body exits self, check if player can interact
 func _on_InteractArea_body_exited(body):
-	if body == Globals.PartyObject.get_leader():
+	if Globals.PartyObject and body == Globals.PartyObject.get_leader():
 		emit_signal("cannot_interact")
 		_check_if_can_interact()
 

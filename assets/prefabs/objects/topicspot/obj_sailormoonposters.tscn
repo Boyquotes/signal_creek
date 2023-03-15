@@ -5,12 +5,11 @@
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_topic_dream.png" type="Texture" id=4]
 
-
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 16, 8 )
+extents = Vector2( 16, 4 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 26, 19 )
+extents = Vector2( 16, 19 )
 
 [node name="SailorMoonPosters" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -22,22 +21,23 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -30 )
+position = Vector2( 0, -27 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 129, 15, 30, 40 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+position = Vector2( 0, -27 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -20 )
 region_enabled = true
 region_rect = Rect2( 129, 15, 30, 40 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -8 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
