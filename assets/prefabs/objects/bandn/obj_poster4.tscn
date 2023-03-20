@@ -6,10 +6,10 @@
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_NEW.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 17.5, 15.25 )
+extents = Vector2( 16, 2 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 16, 7 )
+extents = Vector2( 16, 10 )
 
 [node name="Poster4" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -21,22 +21,23 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -8 )
+position = Vector2( 0, -24 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 110.236, 5.03813, 31.9495, 29.2038 )
+region_rect = Rect2( 111, 7, 29, 25 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+position = Vector2( 0, -24 )
 texture = ExtResource( 5 )
 offset = Vector2( 0, -14.6019 )
 region_enabled = true
-region_rect = Rect2( 110.236, 5.03813, 31.9495, 29.2038 )
+region_rect = Rect2( 111, 7, 29, 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -7.75 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -46,7 +47,6 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -2 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

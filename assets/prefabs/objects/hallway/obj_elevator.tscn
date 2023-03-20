@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/objects/sheet_elevatorlights.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/objects/sheet_elevator.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_elevator_normals.png" type="Texture" id=4]
 [ext_resource path="res://assets/scripts/environment/elevator_area.gd" type="Script" id=5]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=6]
 [ext_resource path="res://assets/prefabs/objects/hallway/RouteLights.gd" type="Script" id=7]
@@ -27,7 +26,6 @@ light_mask = 5
 material = ExtResource( 6 )
 position = Vector2( 0, -70 )
 texture = ExtResource( 3 )
-normal_map = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 11, 7, 106, 143 )
 

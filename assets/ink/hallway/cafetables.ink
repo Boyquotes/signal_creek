@@ -163,7 +163,7 @@
         
         MS. SUWAN: "But they were distractions for me in the end. Our hobbies, our hangouts...it was all time and energy I knew I could use for my career."
         
-        MS. SUWAN: "So, I made my decision. When they were gone, I had everything: 175 on my LSAT, a stacked resume, and a promising career."
+        MS. SUWAN: "So, I made my decision. When they were gone, I had everything—175 on my LSAT, a stacked resume, and a promising career."
         
         NOUR: "Was it worth it?"
         
@@ -196,7 +196,6 @@
         NOUR: <i>I got through to her with an old memory of her friends. Maybe she's ready to revisit another old love of hers with a new perspective.</i>
         
         NOUR: <i>I wonder...is she ready to listen to Paradise again? I should lead her there to find out.</i>
-            
             -> END
     
     * [Bring it up subtly]
@@ -262,7 +261,7 @@
     
     NOUR: <i>It sounds like this cafe really did hold precious memories for her. It did for me, too...</i>
     
-    NOUR: <i>Would I have been hapier if I had ended things differently with my friend?</i>
+    NOUR: <i>Would I have been happier if I had ended things differently with my friend?</i>
     
     MS. SUWAN: "Nour? Are you ok?"
     

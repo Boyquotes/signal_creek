@@ -23,7 +23,7 @@ current = true
 editor_draw_screen = false
 script = ExtResource( 1 )
 camera_following = NodePath("../PlaneManager/Overworld/PARTY/NICK")
-lerpSpeed = 8
+lerpSpeed = 16
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D"]
 margin_left = -352.0
@@ -61,10 +61,11 @@ __meta__ = {
 
 [node name="BigLight" type="Light2D" parent="PlaneManager/Lights"]
 position = Vector2( 160, 144 )
-scale = Vector2( 3.625, 2.5 )
 texture = ExtResource( 5 )
+texture_scale = 2.98
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.9
+range_height = 2048.0
 range_item_cull_mask = 7
 
 [node name="BigLight2" type="Light2D" parent="PlaneManager/Lights"]
@@ -72,6 +73,7 @@ position = Vector2( 96, 120 )
 texture = ExtResource( 4 )
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.9
+range_height = 1467.7
 range_item_cull_mask = 7
 
 [node name="Overworld" type="YSort" parent="PlaneManager"]

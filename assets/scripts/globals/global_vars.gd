@@ -52,3 +52,33 @@ static func delete_children(node):
 	for n in node.get_children():
 		node.remove_child(n)
 		n.queue_free()
+
+func reload():
+#	GameCanvas = null
+#	DevTools = null
+
+	GameMode = GameModes.WALK
+	CurrentWorld = Worlds.DREAM
+
+#	UpdateController = null
+#	GameWorldEnvironment = null
+#	GameOverlay = null
+
+#	SoundManager = null
+
+#	DialogueBox = null
+	CornerPortrait = null
+#	ColorManager = null
+
+	PartyCamera = null
+	PartyObject = null
+	Nick = null
+	Nour = null
+	Suwan = null
+	Rina = null
+
+	Elevator = null
+	RouteLights = null
+	ElevatorDoorLight = null
+
+	InkStoryState = ""
