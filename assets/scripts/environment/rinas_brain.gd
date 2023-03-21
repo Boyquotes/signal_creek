@@ -1,7 +1,7 @@
 extends Interactive
 
 export var rina_positions : Dictionary = {
-	"START": Vector2(322, 114),
+	"START": Vector2(472, 280),
 	"BANDN": Vector2(146, -256),
 	"TOPICSPOT": Vector2(284, -21),
 	"HALLWAY": Vector2(869, -309),

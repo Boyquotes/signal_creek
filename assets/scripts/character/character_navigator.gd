@@ -154,6 +154,9 @@ func move_character_by_vector(directionVector : Vector2):
 	
 	if Globals.GameMode == Globals.GameModes.WALK and self != Globals.Nour:
 		
+		# TODO: compare character position with nour position and directionvector
+		# basically to see if nour is walking in front of them
+		
 		if _navtimer.get_time_left() <= 0:
 			directionVector = Vector2(stepify(directionVector.x, 0.5), stepify(directionVector.y, 0.5))
 			var selfPos = self.get_global_position()
