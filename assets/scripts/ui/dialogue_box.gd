@@ -242,6 +242,12 @@ func parse_commands(currentLine):
 			
 		elif "CLOSE" in action:
 			Globals.ElevatorDoorLight.close_doors()
+			
+		elif "SHUT" in action:
+			Globals.RouteLights.door_close_anim()
+			
+		elif "UNSHUT" in action:
+			pass
 	
 	elif "&FIRSTLIGHT" in currentLine:
 		Globals.RouteLights.activate_light_tutorial()

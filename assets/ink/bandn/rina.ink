@@ -22,7 +22,9 @@
     //they walk down 
     //elevator door CLOSES
     
-    ELEVATOR DOOR CLOSES
+    ...
+    
+    &ELEVATOR_SHUT
     
     &FOLLOW_NICK_NickOutElevatorPos
     
@@ -42,6 +44,8 @@
     
     &EMOTE_NOUR_UpIdle
     
+    &FOLLOW_SUWAN_SuwanPhonePos
+    
     MS. SUWAN: "...This floor should have been shut down months ago."
     
     MS. SUWAN: "I need to call one of my higher-ups about this."
@@ -56,19 +60,19 @@
     
     NICK BEEP BOOPS HIS PHONE
     
-    NICK: "Aw, man. Same! I can't play any of my phone games..."
+    &EMOTE_NICK_RightIdle
     
-    RINA APPEARS...
+    NICK: "Aw, man. Same! I can't play any of my phone games..."
     
     &MOV_RINA_START
     
-    A petite girl with olive skin and dyed strawberry hair stands before the group.
+    A petite girl with olive skin and dyed strawberry hair appears before the group.
     
     Her entire body is still, like a mannequin. A lifelike, breathing mannequin.
     
     NICK: "<i>WHAT THE-</i>"
     
-    &EMOTE_SUWAN_UpIdle
+    &EMOTE_SUWAN_LeftIdle
     
     &EMOTE_NOUR_UpIdle
     
@@ -78,7 +82,7 @@
     
     NICK: "Hey, did you miss the part where she magically appeared in front of us?"
     
-    MS. SUWAN: "Stop messing around, kid."
+    MS. SUWAN: "Magic? Stop messing around, kid."
     
     NOUR: <i>...Rina?</i>
     
@@ -102,7 +106,11 @@
     
     NICK: "Guess she didn't wanna talk, huh."
     
+    &EMOTE_NICK_UpIdle
+    
     NICK: "And... those funny lights are off now."
+    
+    &EMOTE_NICK_RightIdle
     
     MS. SUWAN: "We must be hallucinating. That’s the only explanation I can think of to describe… whatever it is that we’re seeing."
     
@@ -145,19 +153,29 @@
     
     &EMOTE_SUWAN_UpIdle
     
+    &FOLLOW_NICK_NickOuterButtonPos
+    
     MS. SUWAN: "Then I'll just press the—"
+    
+    
+    
+    // &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NICK_ButtonPress
     
     NICK: "Hey, the buttons for this elevator are missing!"
     
-    &EMOTE_NICK_UpIdle
+    // &EMOTE_NICK_UpIdle
     
-    &EMOTE_NOUR_UpIdle
+    // &EMOTE_NOUR_UpIdle
 
 
     
     NOUR: "No use in waiting for an elevator that won't work. We should try to find a way out of here."
     
-    NICK: "While we're here, I wanna see if they still have games in the TopicSpot."
+    &EMOTE_NICK_DownIdle
+    
+    NICK: "While we're at it, I wanna see if they still have games in the TopicSpot."
     
     MS. SUWAN: "<i>That's</i> what you choose to think about right now?"
     
