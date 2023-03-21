@@ -9,12 +9,11 @@ var _can_interact = false
 var _camera_normal_position = null
 var _elevator_tutorial = false
 
-
 func _start():
 	pass
 
 
-func _physics_process(_delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("reset"):
 		reset_game()
 	
@@ -27,10 +26,10 @@ func _physics_process(_delta):
 			Globals.PartyObject.force_move_leader()
 		
 		if Globals.DialogueBox.is_displaying_choices:
-			if Input.is_action_just_released("move_down"):
+			if Input.is_action_just_released("move_down") or Input.is_action_just_released("ui_down"):
 				Globals.DialogueBox.toggle_choice_selections(1)
 				
-			elif Input.is_action_just_released("move_up"):
+			elif Input.is_action_just_released("move_up") or Input.is_action_just_released("ui_up"):
 				Globals.DialogueBox.toggle_choice_selections(-1)
 				
 			if Input.is_action_just_pressed("interact"):
@@ -104,23 +103,10 @@ func check_input_character_movement():
 	Globals.PartyObject.move_leader_by_vector(directionVector)
 
 func reset_game():
-	#set the default room's starting pos to the default starting pos
-	#make current party character Nour
-	#reset the ink
-	#room enter signal for default room
-	Globals.PartyObject.update_leader_to(1)
-	Globals.CurrentWorld = Globals.Worlds.DREAM
-#	Globals.set_to_dream_world()
-	if RoomEngine.CurrentRoomIndex != RoomEngine.defaultRoomIndex:
-		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[RoomEngine.defaultRoomIndex], RoomEngine.defaultStartingPos)
-		
-	else:
-		RoomEngine.CurrentRoom.move_party_to_position(Globals.PartyObject, RoomEngine.defaultStartingPos)
-		
-	RoomEngine.PlaneManager.set_correct_world()
+	#Reset overworld tree and dialoguebox
+	Globals.GameCanvas.reload()
 	Globals.DialogueBox.reset_story()
 	print("GAME RESET")
-	pass
 
 
 func set_closest_object(objectName):
