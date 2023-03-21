@@ -244,7 +244,10 @@
     NOUR: <i>The three of them mentioned something about the cafe. I also used to go to the cafe here a lot too with...nevermind. That's not important right now.</i>
     
     NOUR: <i>I could try going there to see if it could spark a memory of Ms. Suwan's that could get her to realize her mistake.</i>
--> END
+
+&LIGHT_Suwan0
+-> light_on
+// -> END
 
 === chadbrodykristy3 ===
     
@@ -366,5 +369,5 @@
     //should there be a moment here that has an SFX for the elevator light...and then have Nour comment on it???
     &LIGHT_Suwan2
     &MOV_RINA_HALLWAY
-    
-    -> END
+        -> light_on    
+    // -> END

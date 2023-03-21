@@ -48,7 +48,8 @@ NICK: "I hope that whatever you're planning to show me is EXTRA cool!"
 
 NOUR: <i>I should lead Nick somewhere I can find a safe but fun hobby. Now where could that be in a big mall like this?</i>
 &LIGHT_Nick0
--> END
+-> light_on
+// -> END
 
 == nicknotinterested ==
 

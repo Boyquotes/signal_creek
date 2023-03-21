@@ -170,6 +170,7 @@
     
     - Nick shakes his head.
 &LIGHT_Nick1
-    -> END
+-> light_on
+    // -> END
     
     

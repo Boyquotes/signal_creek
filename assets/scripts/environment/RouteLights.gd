@@ -1,10 +1,7 @@
 extends Node2D
 
+export var light_timer := 0.5
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-#reference light
 onready var nickLight0 = $Nick0;
 onready var nickLight1 = $Nick1;
 onready var nickLight2 = $Nick2;
@@ -24,11 +21,14 @@ func _ready():
 	pass # Replace with function body.
 
 func turn_on_light(light_name): 
-	
 	get_node(light_name).visible = false;
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func turn_off_light(light_name):
+	get_node(light_name).visible = true
 
 # move party to the position for light tutorial conversation
 func activate_light_tutorial():
@@ -39,3 +39,31 @@ func activate_light_tutorial():
 		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[1], Vector2(472, 304))
 		
 	Globals.Elevator.focus_on_elevator = true
+
+
+func turn_on_all_lights():
+	turn_on_light("Nick0")
+	turn_on_light("Nour0")
+	turn_on_light("Suwan0")
+	yield(get_tree().create_timer(light_timer), "timeout")
+	turn_on_light("Nick1")
+	turn_on_light("Nour1")
+	turn_on_light("Suwan1")
+	yield(get_tree().create_timer(light_timer), "timeout")
+	turn_on_light("Nick2")
+	turn_on_light("Nour2")
+	turn_on_light("Suwan2")
+
+
+func turn_off_all_lights():
+	turn_off_light("Nick0")
+	turn_off_light("Nour0")
+	turn_off_light("Suwan0")
+	yield(get_tree().create_timer(light_timer), "timeout")
+	turn_off_light("Nick1")
+	turn_off_light("Nour1")
+	turn_off_light("Suwan1")
+	yield(get_tree().create_timer(light_timer), "timeout")
+	turn_off_light("Nick2")
+	turn_off_light("Nour2")
+	turn_off_light("Suwan2")

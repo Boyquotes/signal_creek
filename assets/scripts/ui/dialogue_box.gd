@@ -6,6 +6,7 @@ extends Control
 # Adds newly produced prefabs to DialogueBox UI
 
 # Entry Prefab Types
+export var print_information = false
 export var camera_offset_dialogue = 50.0
 export var typewriter_speed : int = 1
 export var scroll_increment : float = 0.75
@@ -121,7 +122,7 @@ func proceed():
 	elif !_ink_player.get_HasChoices(): #create normal text entry
 		_ink_player.Continue()
 		
-		if !fastforward:
+		if !fastforward and print_information:
 			print_state()
 			
 		var currentLine = _ink_player.get_CurrentText()
@@ -227,18 +228,11 @@ func parse_commands(currentLine):
 				Globals.Suwan.animate_emote(emoteName)
 		
 	elif "&LIGHT" in currentLine:
-	
 		# EXAMPLE WRITTEN IN INK: &LIGHT_Nick0
 		
 		var lightName = currentLine.split("_")[1].strip_escapes()
-		
 		# When parsed, lightName will look like this: Nick0
-		
 		Globals.RouteLights.turn_on_light(lightName)
-		
-#		if !Globals.RouteLights.first_light_turned_on:
-#			Globals.RouteLights.first_light_turned_on = true
-			
 		
 	elif "&ELEVATOR" in currentLine:
 		var action = currentLine.split("_")[1].strip_escapes()
@@ -258,6 +252,12 @@ func parse_commands(currentLine):
 		vectorPos = Vector2(vectorPos[0], vectorPos[1])
 		
 		Globals.GameCanvas.set_camera_following_vector(vectorPos)
+		
+	elif "&ALLON" in currentLine:
+		Globals.RouteLights.turn_on_all_lights()
+		
+	elif "&ALLOFF" in currentLine:
+		Globals.RouteLights.turn_off_all_lights()
 
 
 # Parses entryText for special characters, determines what type of entry this is
@@ -276,7 +276,6 @@ func check_entry_type(entryText):
 	elif ":" in entryText: #if line contains a name, parse name and dialogue after
 		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_paragraph)
 		current_speaker = entryText.split(":")[0]
-		#print(entryText.split(":")[0])
 		_vertical_layout_node.add_child(newDialogue)
 		
 		#track the text label for typewriter effect
@@ -288,7 +287,7 @@ func check_entry_type(entryText):
 	
 	else: #it's a normal text entry
 		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal, _entry_prefab_paragraph)
-		if !fastforward:
+		if !fastforward and print_information:
 			print("NORMAL TEXT")
 			
 		#track the text label for typewriter effect
@@ -335,7 +334,9 @@ func expand_background_panel():
 	if panelPosition.y >= -panel_opening_speed:
 		background_panel_node.set_position(Vector2(panelPosition.x, 0))
 		is_expanding_background_panel = false
-		print("expanded dialogue panel")
+		
+		if print_information:
+			print("expanded dialogue panel")
 	
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
@@ -348,9 +349,7 @@ func typewriter_effect(escape):
 		is_typing = false
 		
 	var currentVisibility = current_text_box.get_percent_visible()
-	#var totalCharCount = current_text_box.get_total_character_count()
 	var visibleCharacters = current_text_box.get_visible_characters()
-	#var increment = totalCharCount * typewriter_speed
 	
 	if currentVisibility >= 1.0:
 		is_typing = false
@@ -429,9 +428,9 @@ func get_current_speaker():
 
 func find_current_speaker_position():
 	var currentSpeaker = get_current_speaker().to_lower()
-	if !fastforward:
+	if !fastforward and print_information:
 		print("Current Speaker: " + currentSpeaker + "\n")
-	
+		
 	var currentSpeakerIndex = -1
 
 	# Move camera to party character if they are speaking
@@ -476,3 +475,12 @@ func reset_story():
 func fast_forward(state):
 	fastforward = state
 	
+
+
+func _on_Fullscreen_toggled(button_pressed):
+	if OS.window_fullscreen:
+		OS.window_fullscreen = false
+		
+	else:
+		OS.window_fullscreen = true
+	pass # Replace with function body.

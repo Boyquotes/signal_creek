@@ -7,9 +7,6 @@
     
     //if this isn't the first time talking to Rina, go straight to the choices
     {
-        - !rina_start:
-            -> rina_start
-            
         - rina_bandn:
             -> rina_branches
             
@@ -17,21 +14,77 @@
             -> rina_bandn
     }
     
-    //start from the beginning
-    -> rina_start
+    -> END
 
 
 == rina_start ==
-
+    //Everyone is pooped out of the elevator
+    //they walk down 
+    //elevator door CLOSES
+    
+    ELEVATOR DOOR CLOSES
+    
+    &FOLLOW_NICK_NickOutElevatorPos
+    
+    &FOLLOW_NOUR_NourOutElevatorPos
+    
+    &FOLLOW_SUWAN_SuwanOutElevatorPos
+    
+    NOUR: "Ugh...I feel sick."
+    
+    NICK: “Isn't this the top floor of the mall?”
+    
+    NOUR: "Yeah, but it feels... something feels off."
+    
+    &EMOTE_NICK_UpIdle
+    
+    NICK: "What's with all those lights at the top of the elevator?"
+    
+    &EMOTE_NOUR_UpIdle
+    
+    MS. SUWAN: "...This floor should have been shut down months ago."
+    
+    MS. SUWAN: "I need to call one of my higher-ups about this."
+    
+    MS SUWAN BEEP BOOPS HER PHONE
+    
+    MS. SUWAN: "Hmm. No signal and no WiFi."
+    
+    // &EMOTE_NICK_DownIdle
+    
+    // &EMOTE_NOUR_DownIdle
+    
+    NICK BEEP BOOPS HIS PHONE
+    
+    NICK: "Aw, man. Same! I can't play any of my phone games..."
+    
+    RINA APPEARS...
+    
+    &MOV_RINA_START
+    
     A petite girl with olive skin and dyed strawberry hair stands before the group.
     
-    Her entire body is still, as if she's a mannequin. A lifelike, breathing mannequin.
+    Her entire body is still, like a mannequin. A lifelike, breathing mannequin.
     
-    There's an immediate glimmer of recognition from Nour.
+    NICK: "<i>WHAT THE-</i>"
     
-    NOUR: <i>Looks like Rina hasn't changed since high school.</i>
+    &EMOTE_SUWAN_UpIdle
     
-    NICK: "Hey, uh... Nour. Do you know her?"
+    &EMOTE_NOUR_UpIdle
+    
+    ...
+    
+    MS. SUWAN: "You're not supposed to be here, young lady."
+    
+    NICK: "Hey, did you miss the part where she magically appeared in front of us?"
+    
+    MS. SUWAN: "Stop messing around, kid."
+    
+    NOUR: <i>...Rina?</i>
+    
+    NOUR LOOKS SHOCKED
+    
+    NICK: "Hey, uh... Nour? Do you know her?"
     
         * ["Yeah, I did."]
         
@@ -40,18 +93,83 @@
     - Nour says nothing.
     
     NICK: "Hello? Random girl that Nour recognizes? Do you see us?"
-    
-    Rina pays no mind to her surroundings.
-    
-    //&SHLORP_RINA
+
+    &ALLOFF
     
     &MOV_RINA_BANDN
     
-    There's visible panic on Nour's face.
+    ...
     
     NICK: "Guess she didn't wanna talk, huh."
     
-    MS. SUWAN: "The more you children talk about your hallucinations, the more I begin to see them too. Maybe we should keep those comments to ourselves."
+    NICK: "And... those funny lights are off now."
+    
+    MS. SUWAN: "We must be hallucinating. That’s the only explanation I can think of to describe… whatever it is that we’re seeing."
+    
+        * [Agree with her]
+            NOUR: "Maybe we hit our heads somewhere...or a potential gas leak?"
+            
+            MS. SUWAN: "That would also be somewhat realistic. I want to agree, but..."
+            
+            MS. SUWAN: "This place would've been closed off much more securely if there was any immediate danger. It would've been reported to me, too."
+            
+            NICK: "I don't remember us knocking our heads either!"
+            
+        * [Lighten the mood]
+            NOUR: "Maybe this is all just a dream..."
+            
+            NICK: "Haha! Maybe none of us are even real. Ooo!"
+            
+            NOUR: "Or drugs? This could be a really, really weird trip!"
+            
+            NICK: "DRUGS?! What kind of drug would make up something like THIS?"
+            
+            NICK: "...do you have anymore?"
+            
+            MS. SUWAN: "Enough of your nonsense, please."
+    
+        * [Convince her it's real]
+            NOUR: "I don't know. If this floor really was torn down, I don't think we can explain anything around us with logic. Or at least, the logic of our reality."
+            
+            NOUR: "Wherever we are...it's definitely not the demolition site from before."
+            
+            NICK: "That's so cool! It's like we warped through some kind of elevator-shaped portal!"
+            
+            MS. SUWAN: "I'm not buying any of this. There is no such thing as a magical elevator or whatever laminated space."
+
+    - MS. SUWAN: "This is absurd. We need to go back."
+    
+    &EMOTE_NOUR_UpIdle
+    
+    NOUR: "The elevator is closed though, and it doesn't look like the doors will budge either."
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    MS. SUWAN: "Then I'll just press the—"
+    
+    NICK: "Hey, the buttons for this elevator are missing!"
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+
+
+    
+    NOUR: "No use in waiting for an elevator that won't work. We should try to find a way out of here."
+    
+    NICK: "While we're here, I wanna see if they still have games in the TopicSpot."
+    
+    MS. SUWAN: "<i>That's</i> what you choose to think about right now?"
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NOUR
+    
+    &FOLLOW_NOUR_stop
+    
+    // ->END
+
+   
     
     -> END
     
@@ -64,7 +182,18 @@
 
 == rina_branches ==
 
-    RINA: Look, "Nour". I don't know why you're <i>still</i> upset. You're the one who blocked me out... I <i>tried</i> to keep being your friend!
+    RINA: "Look, 'Nour'. I don't know why you're <i>still</i> upset. You're the one who blocked me out... I <i>tried</i> to keep being your friend!"
+    
+            //DISPLAY ONCE ALL OTHER CHOICES ARE VISITED
+            {
+                - rina_final:
+                
+                    -> rina_elevator
+                    
+                - rina_bandn && rina_topicspot && rina_hallway:
+                
+                    -> rina_final
+            }
     
         //this choice always works, and Rina tells Nour to help the people they're with now (Nick and Suwan)
         + "Friends help each other when they need it, not afterwards."
@@ -112,20 +241,29 @@
             
             Rina's eyes glaze over.
             
-                -> END
+            &LIGHT_Nour0
+            
+            -> light_on
+            
+            -> END
         
-        //DISPLAY ONCE ALL OTHER CHOICES ARE VISITED
-            {
-                - rina_bandn && rina_topicspot && rina_hallway:
-                    -> rina_elevator
-            }
+
     
         //"resetting" rina, as if she forgot the choice nour just made.
     -   Rina's eyes glaze over briefly. She returns to her familiar demeanor.
     
-                &LIGHT_Nour1
+                &LIGHT_Nour0
+                -> light_on
             
         -> rina_branches
+
+== rina_final ==
+
+    RINA: I'm going to the elevator now bye
+    
+    &MOV_RINA_END
+    
+    -> END
 
 //---------------- BEGINNING ----------------
 //first active conversation with Rina, in Bandn
@@ -146,15 +284,15 @@
     
             RINA: "Hey, Yousra! Nice to see you after all these years. You know, I'm allowed to exist at this mall. You don't own it."
             
-    -   * "Yousra?["] Nobody calls me that anymore. I go by Nour now.
+    -   * "Yousra?["] Nobody calls me that anymore. I go by Nour now."
         
-            RINA: Oh, okay.
+            RINA: "Oh, okay."
             
-            RINA: This is a good start. At least you're talking to me again.
+            RINA: "This is a good start. At least you're talking to me again."
             
-            RINA: So... what happened back then? We were having lunch with our friends, we started talking about gay marriage being legalized...
+            RINA: "So... what happened back then? We were having lunch with our friends, we started talking about gay marriage being legalized..."
             
-            RINA: What am I forgetting?
+            RINA: "What am I forgetting?"
             
                 ** "You were quiet, while the others kept going on about how being gay is gross and weird."
                 
@@ -261,7 +399,7 @@
     
         RINA: "Nour, <i>neither</i> of us had the guts to say anything back then. You'll never know what would have happened if I spoke up."
                 &LIGHT_Nour1
-    
+                -> light_on
             -> END
 
 //---------------- HALLWAY ----------------
