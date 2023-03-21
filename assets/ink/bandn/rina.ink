@@ -252,8 +252,8 @@
         //"resetting" rina, as if she forgot the choice nour just made.
     -   Rina's eyes glaze over briefly. She returns to her familiar demeanor.
     
-                &LIGHT_Nour0
-                -> light_on
+                // &LIGHT_Nour0
+                // -> light_on
             
         -> rina_branches
 
