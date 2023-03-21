@@ -259,10 +259,6 @@
             
             Rina's eyes glaze over.
             
-            &LIGHT_Nour0
-            
-            -> light_on
-            
             -> END
         
 
@@ -416,7 +412,7 @@
     = neverknow
     
         RINA: "Nour, <i>neither</i> of us had the guts to say anything back then. You'll never know what would have happened if I spoke up."
-                &LIGHT_Nour1
+                &LIGHT_Nour0
                 -> light_on
             -> END
 
@@ -491,6 +487,9 @@
     = neverknow
     
         RINA: "You missed your chance to forgive me, Nour. You'll never know what would have happened if you forgave me."
+        
+        &LIGHT_Nour1
+            -> light_on
 
             -> END
 
