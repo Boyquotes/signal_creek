@@ -106,16 +106,24 @@ func toggle_choice_selections(changeValue):
 
 # select the currently highlighted choice
 func select_current_choice():
+	if !is_displaying_choices:
+		return
+		
+	free_old_choicebox()
 	_ink_player.ChooseChoiceIndex(_current_choice_index)
-	_current_choice_entry.queue_free() #remove the choicebox
-
 	is_displaying_choices = false
 	choice_chosen = true
+
+func free_old_choicebox():
+	if _current_choice_entry:
+		_current_choice_entry.queue_free() #remove the choicebox
+
 
 # proceeding to the next string that ink should return
 func proceed():
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
 		clear_and_reset_ui()
+		is_displaying_choices = false
 		is_shrinking_background_panel = true
 		return
 	
@@ -242,6 +250,12 @@ func parse_commands(currentLine):
 			
 		elif "CLOSE" in action:
 			Globals.ElevatorDoorLight.close_doors()
+			
+		elif "SHUT" in action:
+			Globals.RouteLights.door_close_anim()
+			
+		elif "UNSHUT" in action:
+			pass
 	
 	elif "&FIRSTLIGHT" in currentLine:
 		Globals.RouteLights.activate_light_tutorial()
@@ -252,6 +266,12 @@ func parse_commands(currentLine):
 		vectorPos = Vector2(vectorPos[0], vectorPos[1])
 		
 		Globals.GameCanvas.set_camera_following_vector(vectorPos)
+		
+	elif "&ALLON" in currentLine:
+		Globals.RouteLights.turn_on_all_lights()
+		
+	elif "&ALLOFF" in currentLine:
+		Globals.RouteLights.turn_off_all_lights()
 
 
 # Parses entryText for special characters, determines what type of entry this is

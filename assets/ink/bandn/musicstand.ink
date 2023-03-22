@@ -1,20 +1,14 @@
-//First visit
-// Noor runs up to music stand and starts convo about how her parents would listen to this music all of the time so she grew up around it 
-// Ms Suwan then opens up about her old college friends and how they went to concerts all of the time
-// Nour asks if they're still close and she ignores the question
-//Ms Suwan goes to music stand and reveals more about the friendship
-//each added interaction leads to more information being added until you visited all of the other Suwan objecs when Nour decides to buy Ms Suwan the record for her 
-//that gesture unlocks her ability to talk to her
-
 == musicstand ==
 
     It's a music stand.
 
 {
+    - musicstand2:
+        -> musicstand2_repeat
     - chadbrodykristy1 && musicstand1 && cafetables_getsuwantotalk:
         -> musicstand2
     - chadbrodykristy1 && musicstand1:
-        -> musicstand_interval
+        -> musicstand1_repeat
     - chadbrodykristy1:
         -> musicstand1
 }
@@ -24,13 +18,8 @@
 
 ==musicstand1==
 //better onboarding from CBK
-
-
-    NOUR: "Oh my god, they have it!"
     
-    MS. SUWAN: "Have what?" 
-    
-    NOUR: "<i>Actually, I Do Mind</i>—only the best Paradise album! I haven't heard it in forever."
+    NOUR: "Wow, a vintage record of <i>Actually, I Do Mind</i>! I haven't heard it in forever."
     
     MS. SUWAN: "I remember that one. Good album."
     
@@ -67,7 +56,7 @@
             
             NOUR: <i>She looks a little uncomfortable.</i>
     
--   NOUR: "I see. I guess you probably were a student while Paradise came out with this, right?"
+-   NOUR: "I guess you probably were a student while Paradise came out with this, right?"
     
     MS. SUWAN: "Right. During school, me and my friends used to..."
     
@@ -88,6 +77,8 @@
             
         * [Ask about her friends]
             NOUR: "What did you and your friends used to do?"
+            
+            MS. SUWAN: "..."
     
     - NOUR: "Did you listen to this with your friends?"
     
@@ -137,7 +128,7 @@
     
     NICK: "What? I wanna know!"
 
-    MS. SUWAN: "Soon after, we went to Paradise concerts. Studying and listening to music doubled the time it took me to complete assignments."
+    MS. SUWAN: "Studying and listening to music doubled the time it took me to complete assignments."
     
     MS. SUWAN: "I struggled to catch up because I was still learning English at the time, but my friends did just fine."
 
@@ -176,13 +167,13 @@
             MS. SUWAN: "...Nour. Did you hear what I just said?"
             
             //post beta, we can have this option perhaps
-                // ** [Confront of her]
+                ** [Confront of her]
                 
-                // ** [Turn the music up louder]
+                ** [Turn the music up louder]
                     
-                //     //CODE HERE - MAKE MUSIC VOLUME LOUDER
+                    //CODE HERE - MAKE MUSIC VOLUME LOUDER
                     
-                //     MS. SUWAN: "This is extremely immature."
+                    MS. SUWAN: "This is extremely immature."
     
     - NOUR: "Ok, that's it! You can't keep avoiding your friends then coming back here and being all sad about it."
     
@@ -223,9 +214,10 @@
     -> END
 
 //figure out how to implement intervals for when other items are not collected
-==musicstand_interval==
-    NOUR: <i>I don't want to make Ms. Suwan more upset. I should come back when she feels more open to re-accepting her old hobby.</i>
+==musicstand1_repeat==
+    NOUR: <i>This made Ms. Suwan pretty upset. It'd be nice to get her to re-accept her old hobby, but I don't think she's ready yet.</i>
     
+    NOUR: <i>I can come back to this later. For now, I should go to Chad, Kristy, and Brody since Ms. Suwan is ready to talk to them.</i>
     -> DONE
 
 ==musicstand2==
@@ -284,5 +276,10 @@
         -> light_on
     // -> END
 
+=== musicstand2_repeat ===
+    MS. SUWAN: "I want to apologize to Chad, Kristy, and Brody. Properly, this time."
+    
+    NOUR: "Alright. Let's go to them now."
 
-
+    NOUR: <i>She's ready. I should go lead her to where they are in the hallway.</i>
+-> END
