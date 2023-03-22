@@ -202,9 +202,9 @@
 
 == rina_branches ==
 
-    RINA: "Look, 'Nour'. I don't know why you're <i>still</i> upset. You're the one who blocked me out...
+    RINA: "Look, 'Nour'. I don't know why you're <i>still</i> upset. You're the one who blocked me out..."
     
-    RINA: I <i>tried</i> to keep being your friend!"
+    RINA: "I <i>tried</i> to keep being your friend!"
     
             //DISPLAY ONCE ALL OTHER CHOICES ARE VISITED
             {
