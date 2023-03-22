@@ -1,25 +1,15 @@
 
-//---------------- DREAM WORLD ----------------
-// Nour observes Ms Suwan's reluctance, observes her change in demenear when she notices Ms Suwan. She should also not be able to see chad brody kristy until middle-ish of game
-//  -> chadbrodykristy_first 
-  
-//   //When Ms Suwan is not ready to talk to them, at start
-//   -> chadbrodykristy_notready
-//       {
-//         - chadbrodykristy_notready && musicstand4 && priceofsalt && pinbuttons:
-//             -> chadbrodykristy_suwanreturns
-//       }
-  
-  
-  
-// ----- Part of First interaction when they just get to the mall-----
 == chadbrodykristy ==
 
 {
     - musicstand1 && musicstand2: 
         -> chadbrodykristy3
+    - chadbrodykristy2:
+        -> chadbrodkristy2_repeat
     - musicstand1:
         -> chadbrodykristy2
+    - chadbrodykristy_notready:
+        -> chadbrodykristy_notready_repeat
     - chadbrodykristy1: 
         -> chadbrodykristy_notready
     - else:
@@ -32,11 +22,7 @@
     NOUR: <i>We could go up to them and ask? Maybe they know how to get out of here?</i>
     
         * "Nick, can you go ask them what's going on?"
-            NICK: "Why do I have to do it?"
-    
-            NOUR: "Because you're a kid, so they might be more willing to help us."
-            
-            NICK: "Or—now, hear me out—maybe they would be more willing to listen to the older person in the group?"
+            NICK: "Won't they be more willing to listen to the older person in the group?"
             
                 **"Fine, I guess you're right. Ms. Suwan what do you think?"
     
@@ -46,13 +32,13 @@
     
     NOUR: "Hello...? Are you listening?"
     //changing to present tense
-    <i>Ms Suwan's face turns pale. Her eyes fixate on the group of kids standing three feet away.</i>
+    <i>Ms Suwan's face turns pale. Her eyes fixate on the group of kids.</i>
 
     NICK: "MS. SUWAN!!!"
     
     MS. SUWAN: "...!"
     
-    MS. SUWAN: "No need to shout! What's going on?"
+    MS. SUWAN: "No need to shout. What's going on?"
     
     NOUR: "Could you talk to those people over there and ask if they know what's going on?"
     
@@ -60,7 +46,7 @@
     
     MS. SUWAN: "I'm going to try to get a hold of the repair guy and see if he can come down here."
         
-        *** "Um, I don't think anyone is going to come."
+        *** "I don't think anyone is going to come."
         
         *** "It would be easier to just ask them."
     
@@ -68,13 +54,11 @@
     
     NOUR: <i>If...if they even are real people?</i>
     
-    NOUR: "Didn't you see the lights go crazy and the elevator fly up super fast? Wherever we are, we aren't where we're suppose to be."
-    
     NICK: "I don't think a repair guy could fix the elevator, even if he managed to get here somehow..."
     
     MS. SUWAN: "Maybe I mistakened this area of the mall for the wrong one. This...this could be a different floor."
     
-    MS. SUWAN: "Whatever is happening here is illegal and wrong. I'm going to report everyone here immediately, and...and..."
+    MS. SUWAN: "Whatever is happening here is illegal and wrong...and..."
     
     <i>She stares at the three people, dazed. She looks...afraid. Guilty?</i>
     
@@ -134,11 +118,11 @@
     
     NICK: "But I thought that they could help us out?"
     
-    MS. SUWAN: "Word of advice, kid? The only person you can trust is yourself. I'm figuring this out alone."
+    MS. SUWAN: "Word of advice? The only person you can trust is yourself. I'm figuring this out alone."
     
     //MS. SUWAN: "I think there was a B&N on this floor. Maybe a computer there is working so we can contact someone to get us out of here."
     
-    MS. SUWAN: "There's a bookstore on this floor—the B&N? There must be something there that could help us escape this place. Let's look for something there."
+    MS. SUWAN: "There's a bookstore on this floor—the B&N? There must be something there that could help us escape this place."
     
     NOUR: <i>I want to talk about those three people to Ms. Suwan, but I don't think she's going to say a single thing about them.</i>
     
@@ -149,17 +133,11 @@
     ->END
 
 == chadbrodykristy_notready==
-    NOUR: "Is everything alright, Ms. Suwan?"
-    
-    MS. SUWAN: "..."
-    
-    NOUR: <i>I wish she wouldn't be so stubborn and just say something—anything—to them.</i>
-    
-    NOUR: "You sure you don't want to just talk to them?"
+    NOUR: "Are you sure you can't ask them anything?"
     
     MS. SUWAN: "I have nothing to say. Let's just go."
     
-        **** "Come on, they could tell us how to leave!"
+        **** "They could tell us how to leave!"
             NOUR: "They might know something about this place that we don't—"
     
             MS. SUWAN: "Nour, I said no. Now, let's go."
@@ -167,11 +145,25 @@
             NOUR: "...Fine." 
     
         **** "Ok, let's go visit some place else." 
-        
-    - NOUR: <i>Looks like she's still not ready to open up to me. I have to try a different way to know what happened between them so they could help us.</i>
+    
+    - MS. SUWAN: "Let's go the B&N. There should be some things in there that can help us leave this place."
+    
+    NICK: "I'm still thinking about the rock concerts they mentioned..."
+    
+    NICK: "I can't imagine you going to one! Can I ask what band it was? Did you wear something CRAZY?"
+    
+    MS. SUWAN: "Enough about the rock concerts. Nour, we should explore the B&N."
+    -> chadbrodykristy_notready_repeat
             
-    NOUR: <i>...But I do remember those three talking about rock concerts. If I find something related to that, maybe I could get more information about what happened.</i>
-            -> END
+=== chadbrodykristy_notready_repeat ===
+    NOUR: <i>Looks like Ms. Suwan's still not ready to open up to either of us. I guess we should go to the B&N and see if there's anything useful.</i>
+            
+    NOUR: <i>...Though Nick brings up a good point. If she went to rock concerts with those three people and doesn't want to talk to them...something must've happened.</i>
+    
+    NOUR: <i>If I find something related to the band or their music, maybe I could get more information about what happened.</i>
+    
+    NOUR: <i>Maybe B&N has a music section somewhere?</i>
+        -> END
 
 == chadbrodykristy2 ==
     NOUR: "Are you ready to talk to them, Ms. Suwan?"
@@ -227,28 +219,45 @@
     
     CHAD: "Don't talk to us until you're actually ready to apologize."
     
-    BRODY: "Like she'll ever be. We should've never invited her to our <b>cafe</b> sessions from the very beginning."
+    BRODY: "Like she'll ever be. We should've never invited her to our <b>cafe</b> study sessions from the very beginning."
+    
+    CHAD: "And we always waited for you to go to the cafe beause you promised us."
+    
+    KRISTY: "We always waited."
+    
+    BRODY: "Always."
     
     <i>Chad, Kristy, and Brody stop staring at Ms. Suwan and keep to themselves.</i>
     
     MS. SUWAN: "..."
     
-    MS. SUWAN: "I tried. And look where that got me."
+    NICK: "Cafe study sessions? You mean at the cafe here at the mall?"
     
-    MS. SUWAN: "...I want to leave. Now."
+    NOUR: "I used to go that place all the time."
     
-    NOUR: <i>I thought that maybe confronting them would work things out, but it doesn't seem like Ms. Suwan realizes what she did was wrong.</i>
+    NOUR: "Is that why they're here at the mall? Are they waiting for...you?"
+    
+    MS. SUWAN: "Idiots. Why wait for someone who wouldn't wait for you?"
+    
+    MS. SUWAN: "I...I tried. And look where that got me."
+    
+    MS. SUWAN: "I want to leave. Now."
+    
+    NOUR: <i>Ms. Suwan doesn't realize what she did was wrong.</i>
     
     NOUR: <i>I have to make her realize that her friendship could have been saved if she had done things differently.</i>
     
-    NOUR: <i>The three of them mentioned something about the cafe. I also used to go to the cafe here a lot too with...nevermind. That's not important right now.</i>
-    
-    NOUR: <i>I could try going there to see if it could spark a memory of Ms. Suwan's that could get her to realize her mistake.</i>
+    NOUR: <i>If she doesn't want to be here, I should go to where she was supposed to go all those years ago to make good on that promise.</i>
 
 &LIGHT_Suwan0
 -> light_on
-// -> END
+-> END
 
+=== chadbrodkristy2_repeat ===
+    NOUR: <i>The three of them mentioned something about the cafe. I also used to go to the cafe here a lot too with...nevermind. That's not important right now.</i>
+    
+    NOUR: <i>I could try going there to see if it could spark a memory of Ms. Suwan's that could get her to realize her mistake.</i>
+-> END
 === chadbrodykristy3 ===
     
     NOUR: "We're back. Go ahead, Ms. Suwan."
