@@ -22,6 +22,9 @@ func _process(_delta):
 	#print(Globals.Suwan.get_global_position())
 	
 	if Globals.GameMode == Globals.GameModes.TALK:
+		if Globals.DialogueBox.is_expanding_background_panel or Globals.DialogueBox.is_shrinking_background_panel:
+			return
+			
 		if Globals.PartyObject.force_nour_movement:
 			Globals.PartyObject.force_move_leader()
 		
@@ -34,6 +37,7 @@ func _process(_delta):
 				
 			if Input.is_action_just_pressed("interact"):
 				Globals.DialogueBox.select_current_choice()
+#				Globals.DialogueBox.free_old_choicebox()
 				Globals.DialogueBox.proceed()
 				
 		elif Input.is_action_just_pressed("interact"):

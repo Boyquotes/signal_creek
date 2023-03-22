@@ -5,7 +5,7 @@ export var rina_positions : Dictionary = {
 	"BANDN": Vector2(146, -256),
 	"TOPICSPOT": Vector2(284, -21),
 	"HALLWAY": Vector2(869, -309),
-	"END": Vector2(469, 289)
+	"END": Vector2(472, 280)
 }
 
 var current_room_index = 1
@@ -81,22 +81,16 @@ func place_rina_in_new_room():
 func rina_shlorp_in():
 	rina_sprite.material.set_shader_param("time", 0.0)
 	_shlorping_in = true
-	get_parent().set_pause_mode(false)
+#	get_parent().set_pause_mode(false)
 
 
 func rina_shlorp():
 	var timeValue = rina_sprite.material.get_shader_param("time")
 	
-	if _shlorping_in:
-		if timeValue > 1.56:
-			_shlorping_in = false
-			rina_sprite.material.set_shader_param("time", 1.57)
-			
-			return
-			
-		rina_sprite.material.set_shader_param("time", timeValue + .05)
+
 	
-	elif _shlorping_out:
+	if _shlorping_out:
+		rina_sprite.material.set_shader_param("time", timeValue - .05)
 		if timeValue < .05:
 			_shlorping_out = false
 			rina_sprite.material.set_shader_param("time", 0)
@@ -109,7 +103,17 @@ func rina_shlorp():
 				
 			return
 			
-		rina_sprite.material.set_shader_param("time", timeValue - .05)
+			
+	elif _shlorping_in:
+		rina_sprite.material.set_shader_param("time", timeValue + .05)
+		if timeValue > 1.56:
+			_shlorping_in = false
+			rina_sprite.material.set_shader_param("time", 1.57)
+			
+			return
+			
+		
+		
 
 
 # disappear into the void (visually)
