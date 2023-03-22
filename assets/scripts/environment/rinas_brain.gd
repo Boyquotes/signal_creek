@@ -5,7 +5,7 @@ export var rina_positions : Dictionary = {
 	"BANDN": Vector2(146, -256),
 	"TOPICSPOT": Vector2(284, -21),
 	"HALLWAY": Vector2(869, -309),
-	"END": Vector2(469, 289)
+	"END": Vector2(472, 280)
 }
 
 var current_room_index = 1
