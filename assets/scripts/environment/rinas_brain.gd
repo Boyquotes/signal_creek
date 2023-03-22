@@ -22,9 +22,12 @@ func _ready():
 #	if RoomEngine.CurrentRoom == RoomEngine.Rooms[1]:
 #		move_rina("START")
 	rina_shlorp_in()
+	self.get_parent().set_global_position(rina_positions.get(current_position))
 
 
 func _process(_delta):
+	if Input.is_action_just_pressed("party_leader_switch"):
+		print("RINA'S COORDINATES: " + String(self.get_parent().get_global_position()))
 	if _shlorping_in or _shlorping_out:
 		rina_shlorp()
 
@@ -35,6 +38,7 @@ func _process(_delta):
 # sets current_room_index and next_room_index vars
 func move_rina(newPosition):
 	print("will move rina in: " + newPosition)
+	print("Rina's COORDINATES: " + String(rina_positions.get(newPosition)))
 	
 	var newPositionRoomIndex = 0
 	
@@ -74,20 +78,18 @@ func place_rina_in_new_room():
 	RoomEngine.move_object_to_new_room(self.get_parent(), RoomEngine.Rooms[current_room_index], RoomEngine.Rooms[next_room_index])
 	self.get_parent().set_global_position(rina_positions.get(current_position))
 	current_room_index = next_room_index
-#	rina_shlorp_in()
+	rina_shlorp_in()
 
 
 # appear from the void (visually)
 func rina_shlorp_in():
 	rina_sprite.material.set_shader_param("time", 0.0)
 	_shlorping_in = true
-#	get_parent().set_pause_mode(false)
+	get_parent().set_pause_mode(false)
 
 
 func rina_shlorp():
 	var timeValue = rina_sprite.material.get_shader_param("time")
-	
-
 	
 	if _shlorping_out:
 		rina_sprite.material.set_shader_param("time", timeValue - .05)
