@@ -242,6 +242,12 @@ func parse_commands(currentLine):
 			
 		elif "CLOSE" in action:
 			Globals.ElevatorDoorLight.close_doors()
+			
+		elif "SHUT" in action:
+			Globals.RouteLights.door_close_anim()
+			
+		elif "UNSHUT" in action:
+			pass
 	
 	elif "&FIRSTLIGHT" in currentLine:
 		Globals.RouteLights.activate_light_tutorial()
@@ -252,6 +258,12 @@ func parse_commands(currentLine):
 		vectorPos = Vector2(vectorPos[0], vectorPos[1])
 		
 		Globals.GameCanvas.set_camera_following_vector(vectorPos)
+		
+	elif "&ALLON" in currentLine:
+		Globals.RouteLights.turn_on_all_lights()
+		
+	elif "&ALLOFF" in currentLine:
+		Globals.RouteLights.turn_off_all_lights()
 
 
 # Parses entryText for special characters, determines what type of entry this is
