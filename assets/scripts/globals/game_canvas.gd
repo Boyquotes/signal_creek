@@ -8,6 +8,7 @@ signal doorway_entered(newroom, partyposition)
 
 export var camera_pixel_size : Vector2 = Vector2(320, 180)
 export var testing_enabled = false
+export var testing_start_pos : Vector2 = Vector2(716, -320)
 
 var _following_vector = Vector2(0, 0)
 
@@ -36,7 +37,8 @@ func _ready():
 	
 	#emit_signal("doorway_entered", RoomEngine.Rooms[RoomEngine.CurrentRoomIndex], RoomEngine.Rooms[RoomEngine.CurrentRoomIndex].get_party_starting_position())
 	if testing_enabled:
-		call_deferred("_doorway_entered", RoomEngine.Rooms[0], RoomEngine.Rooms[0].get_party_starting_position())
+		RoomEngine.Rooms[1].set_party_starting_position(testing_start_pos)
+		call_deferred("_doorway_entered", RoomEngine.Rooms[1], RoomEngine.Rooms[1].get_party_starting_position())
 	else:
 		call_deferred("_doorway_entered", RoomEngine.Rooms[3], RoomEngine.Rooms[3].get_party_starting_position())
 
