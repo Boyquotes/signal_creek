@@ -299,7 +299,6 @@ position = Vector2( -1, 1 )
 shape = SubResource( 12 )
 
 [node name="Lights" type="Node2D" parent="PlaneManager"]
-visible = false
 __meta__ = {
 "_edit_lock_": true
 }

@@ -73,5 +73,5 @@ func _doorway_entered(newRoom, partyPosition):
 func reload():
 	Globals.reload()
 	RoomEngine.reload()
-	get_tree().reload_current_scene()
+	var _reloaded = get_tree().reload_current_scene()
 	Globals.GameOverlay.reload()

@@ -57,8 +57,8 @@ func _process(_delta):
 
 	if _is_shaking:
 		var randomvector = Vector2(rand_range(-shake_magnitude, shake_magnitude), rand_range(-shake_magnitude, shake_magnitude))
-		var randomvector2 = Vector2(rand_range(-shake_magnitude, shake_magnitude), rand_range(-shake_magnitude, shake_magnitude))
-		var randomvector3 = Vector2(rand_range(-shake_magnitude, shake_magnitude), rand_range(-shake_magnitude, shake_magnitude))
+#		var randomvector2 = Vector2(rand_range(-shake_magnitude, shake_magnitude), rand_range(-shake_magnitude, shake_magnitude))
+#		var randomvector3 = Vector2(rand_range(-shake_magnitude, shake_magnitude), rand_range(-shake_magnitude, shake_magnitude))
 		screen_shake(randomvector, randomvector, randomvector, rand_range(0, 1))
 		shake_magnitude *= 2
 		
@@ -70,7 +70,7 @@ func set_fade(darkness):
 	self.modulate = Color(darkness, darkness, darkness, 1.0)
 
 
-func screen_shake(rdisp, gdisp, bdisp, darkness):
+func screen_shake(rdisp, gdisp, bdisp, _darkness):
 	#_set_shader(shift_shader)
 	_overlay_material.set_shader_param("r_displacement", rdisp)
 	_overlay_material.set_shader_param("g_displacement", gdisp)
