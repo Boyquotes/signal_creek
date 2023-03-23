@@ -292,6 +292,6 @@ NICK: "Maybe! I guess the only way to find out would be to play..."
 
 === consoles_end2 ===
 
-NOUR: <i>I've already looked at this. Maybe I should try looking at something or talking to someone else...</i>
+NOUR: <i>I've already looked at this. Maybe I should try looking at something or talking to someone else.</i>
 
 -> END

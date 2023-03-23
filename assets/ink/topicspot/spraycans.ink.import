@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/spraycans.ink-094dd893922234ac381511320268a716.res"
+
+[deps]
+
+source_file="res://assets/ink/topicspot/spraycans.ink"
+dest_files=[ "res://.import/spraycans.ink-094dd893922234ac381511320268a716.res" ]
+
+[params]
+
+is_master_file=false
+compress=false
