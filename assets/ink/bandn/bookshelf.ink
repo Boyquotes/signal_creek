@@ -6,7 +6,7 @@
         - noursuggestion && nicktalksaboutfantasygame:
             -> END
             
-        - nickaskstobuyvape:
+        - spraycans1:
             -> noursuggestion
     }
     
