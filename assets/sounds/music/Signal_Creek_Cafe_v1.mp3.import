@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Signal_Creek_Cafe_v1.mp3-79a6d4541bf9c4d385f9455e9c04feb5.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/music/Signal_Creek_Cafe_v1.mp3"
+dest_files=[ "res://.import/Signal_Creek_Cafe_v1.mp3-79a6d4541bf9c4d385f9455e9c04feb5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

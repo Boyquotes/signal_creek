@@ -65,7 +65,7 @@
     
 == elevator ==
 
-    It's a weird elevator.
+    It's a weird elevator. How do we get those lights to turn on?
 
     -> END
     

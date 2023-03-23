@@ -61,8 +61,8 @@ func _start_in_devmode():
 	$VBoxContainer/MuteAudio.set_pressed(true)
 
 
-func _on_MuteAudio_toggled(button_pressed):
-	Globals.SoundManager.set_mute_audio(button_pressed)
+func _on_MuteAudio_toggled(_button_pressed):
+#	Globals.SoundManager.set_mute_audio(_button_pressed)
 	pass # Replace with function body.
 
 

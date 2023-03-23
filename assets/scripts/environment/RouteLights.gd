@@ -1,6 +1,7 @@
 extends Node2D
 
 export var light_timer := 0.5
+export (NodePath) var anim_player
 
 onready var nickLight0 = $Nick0;
 onready var nickLight1 = $Nick1;
@@ -67,3 +68,7 @@ func turn_off_all_lights():
 	turn_off_light("Nick2")
 	turn_off_light("Nour2")
 	turn_off_light("Suwan2")
+
+
+func door_close_anim():
+	get_node(anim_player).play("ElevatorClose")

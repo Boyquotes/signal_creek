@@ -10,9 +10,11 @@
         - rina_bandn:
             -> rina_branches
             
-        - rina_start:
+        - polaroid:
             -> rina_bandn
     }
+    
+    NOUR: <i>I can't talk to her. I don't even want to see her.</i>
     
     -> END
 
@@ -22,7 +24,9 @@
     //they walk down 
     //elevator door CLOSES
     
-    ELEVATOR DOOR CLOSES
+    ...
+    
+    &ELEVATOR_SHUT
     
     &FOLLOW_NICK_NickOutElevatorPos
     
@@ -42,6 +46,8 @@
     
     &EMOTE_NOUR_UpIdle
     
+    &FOLLOW_SUWAN_SuwanPhonePos
+    
     MS. SUWAN: "...This floor should have been shut down months ago."
     
     MS. SUWAN: "I need to call one of my higher-ups about this."
@@ -56,19 +62,19 @@
     
     NICK BEEP BOOPS HIS PHONE
     
-    NICK: "Aw, man. Same! I can't play any of my phone games..."
+    &EMOTE_NICK_RightIdle
     
-    RINA APPEARS...
+    NICK: "Aw, man. Same! I can't play any of my phone games..."
     
     &MOV_RINA_START
     
-    A petite girl with olive skin and dyed strawberry hair stands before the group.
+    A petite girl with olive skin and dyed strawberry hair appears before the group.
     
     Her entire body is still, like a mannequin. A lifelike, breathing mannequin.
     
     NICK: "<i>WHAT THE-</i>"
     
-    &EMOTE_SUWAN_UpIdle
+    &EMOTE_SUWAN_LeftIdle
     
     &EMOTE_NOUR_UpIdle
     
@@ -78,7 +84,7 @@
     
     NICK: "Hey, did you miss the part where she magically appeared in front of us?"
     
-    MS. SUWAN: "Stop messing around, kid."
+    MS. SUWAN: "Magic? Stop messing around, kid."
     
     NOUR: <i>...Rina?</i>
     
@@ -102,7 +108,11 @@
     
     NICK: "Guess she didn't wanna talk, huh."
     
+    &EMOTE_NICK_UpIdle
+    
     NICK: "And... those funny lights are off now."
+    
+    &EMOTE_NICK_RightIdle
     
     MS. SUWAN: "We must be hallucinating. That’s the only explanation I can think of to describe… whatever it is that we’re seeing."
     
@@ -145,19 +155,29 @@
     
     &EMOTE_SUWAN_UpIdle
     
+    &FOLLOW_NICK_NickOuterButtonPos
+    
     MS. SUWAN: "Then I'll just press the—"
+    
+    
+    
+    // &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NICK_ButtonPress
     
     NICK: "Hey, the buttons for this elevator are missing!"
     
-    &EMOTE_NICK_UpIdle
+    // &EMOTE_NICK_UpIdle
     
-    &EMOTE_NOUR_UpIdle
+    // &EMOTE_NOUR_UpIdle
 
 
     
     NOUR: "No use in waiting for an elevator that won't work. We should try to find a way out of here."
     
-    NICK: "While we're here, I wanna see if they still have games in the TopicSpot."
+    &EMOTE_NICK_DownIdle
+    
+    NICK: "While we're at it, I wanna see if they still have games in the TopicSpot."
     
     MS. SUWAN: "<i>That's</i> what you choose to think about right now?"
     
@@ -182,17 +202,15 @@
 
 == rina_branches ==
 
-    RINA: "Look, 'Nour'. I don't know why you're <i>still</i> upset. You're the one who blocked me out... I <i>tried</i> to keep being your friend!"
+    RINA: "Look, 'Nour'. I don't know why you're <i>still</i> upset. You're the one who blocked me out..."
+    
+    RINA: "I <i>tried</i> to keep being your friend!"
     
             //DISPLAY ONCE ALL OTHER CHOICES ARE VISITED
             {
                 - rina_final:
-                
                     -> rina_elevator
                     
-                - rina_bandn && rina_topicspot && rina_hallway:
-                
-                    -> rina_final
             }
     
         //this choice always works, and Rina tells Nour to help the people they're with now (Nick and Suwan)
@@ -211,10 +229,13 @@
             RINA: "I think you should focus on helping the people you're with. Based on what they're saying, it seems like <i>they</i> need you right now."
         
 
-        + ["Why would I want to keep being friends with someone who is too much of a coward to stand up for me?"]
+        + "Why would I want to keep being friends with someone who is too much of a coward to stand up for me?"
         
             //IF THE LAST KNOT IN NICK'S ROUTE IS VISITED:
             {
+                - rina_topicspot:
+                    -> rina_topicspot.neverknow
+                    
                 - nicktalksaboutfantasygame:
                     -> rina_topicspot
             }
@@ -224,10 +245,13 @@
             NICK: "I kinda get it. Why even try if you know it'll backfire?"
         
 
-        + ["Whatever. You know what, I'm not mad anymore. It's fine. I don't know why I was so upset."]
+        + "Whatever. You know what, I'm not mad anymore. It's fine. I don't know why I was so upset."
         
             //IF THE LAST KNOT IN SUWAN'S ROUTE IS VISITED:
             {
+                - rina_hallway:
+                    -> rina_hallway.neverknow
+                    
                 - chadbrodykristy3:
                     -> rina_hallway
             }
@@ -238,12 +262,14 @@
             
             
         + We're done talking for now.
+           
+           {
+            - rina_bandn && rina_topicspot && rina_hallway:
+        
+            -> rina_final
+            }
             
             Rina's eyes glaze over.
-            
-            &LIGHT_Nour0
-            
-            -> light_on
             
             -> END
         
@@ -251,11 +277,8 @@
     
         //"resetting" rina, as if she forgot the choice nour just made.
     -   Rina's eyes glaze over briefly. She returns to her familiar demeanor.
-    
-                &LIGHT_Nour0
-                -> light_on
-            
         -> rina_branches
+
 
 == rina_final ==
 
@@ -362,13 +385,7 @@
 //Nour takes this to mean that she should be confident, but she's OVER confident as a result.
 
 == rina_topicspot ==
-    
-    //If this knot is already visited, display a TLDR here and end scene.
-    {
-        - rina_topicspot:
-            -> neverknow
-    }
-    
+
     NOUR: "Why would I want to keep being friends with someone who is too much of a coward to stand up for me?"
     
     RINA: "Listen, you can call me a coward. It's fine. But don't you get where I'm coming from?"
@@ -398,21 +415,25 @@
     = neverknow
     
         RINA: "Nour, <i>neither</i> of us had the guts to say anything back then. You'll never know what would have happened if I spoke up."
-                &LIGHT_Nour1
-                -> light_on
-            -> END
+        
+        { - !neverknowlight:
+                -> neverknowlight
+            
+            - else: 
+                -> END
+        }
+        
+    = neverknowlight
+    
+        &LIGHT_Nour0
+    
+        -> light_on
 
 //---------------- HALLWAY ----------------
 //At the end of Ms. Suwan's route, Ms. Suwan is able to apologize for her past behavior and let go.
 //Nour takes this to mean that she should let things slide, and she ends up being too passive as a result.
 
 == rina_hallway ==
-    
-    //If this knot is already visited, display a TLDR here and end scene.
-    {
-        - rina_hallway:
-            -> neverknow
-    }
     
     NOUR: "Whatever. You know what, I'm not mad anymore. It's fine. I don't know why I was so upset."
     
@@ -473,6 +494,18 @@
     = neverknow
     
         RINA: "You missed your chance to forgive me, Nour. You'll never know what would have happened if you forgave me."
+        
+        { - !neverknowlight:
+                -> neverknowlight
+            
+            - else: 
+                -> END
+        }
+        
+    = neverknowlight
+        
+        &LIGHT_Nour1
+            -> light_on
 
             -> END
 

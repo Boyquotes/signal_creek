@@ -96,3 +96,11 @@ func _get_object_name():
 	
 	return rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_")
 
+
+
+func _on_ActiveArea_can_interact():
+	pass # Replace with function body.
+
+
+func _on_ActiveArea_cannot_interact():
+	pass # Replace with function body.

@@ -43,7 +43,7 @@ corner_radius_bottom_right = 2
 anti_aliasing = false
 
 [sub_resource type="StyleBoxLine" id=13]
-color = Color( 0.988235, 0.596078, 0.596078, 1 )
+color = Color( 1, 1, 1, 1 )
 thickness = 2
 
 [sub_resource type="StyleBoxFlat" id=1]

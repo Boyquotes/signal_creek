@@ -1,15 +1,16 @@
 extends Interactive
 
 export var rina_positions : Dictionary = {
+	"VOID": Vector2(-1000, -1000),
 	"START": Vector2(472, 280),
 	"BANDN": Vector2(146, -256),
 	"TOPICSPOT": Vector2(284, -21),
 	"HALLWAY": Vector2(869, -309),
-	"END": Vector2(469, 289)
+	"END": Vector2(472, 280)
 }
 
 var current_room_index = 1
-var current_position = "START"
+var current_position = "VOID"
 var next_room_index = 3 # store the next room for whenever the player is actually in it
 var _shlorping_in = false
 var _shlorping_out = false
@@ -21,10 +22,13 @@ func _ready():
 	Globals.Rina = self
 #	if RoomEngine.CurrentRoom == RoomEngine.Rooms[1]:
 #		move_rina("START")
-	rina_shlorp_in()
+#	rina_shlorp_in()
+	self.get_parent().set_global_position(rina_positions.get(current_position))
 
 
 func _process(_delta):
+	if Input.is_action_just_pressed("party_leader_switch"):
+		print("RINA'S COORDINATES: " + String(self.get_parent().get_global_position()))
 	if _shlorping_in or _shlorping_out:
 		rina_shlorp()
 
@@ -35,6 +39,7 @@ func _process(_delta):
 # sets current_room_index and next_room_index vars
 func move_rina(newPosition):
 	print("will move rina in: " + newPosition)
+	print("Rina's COORDINATES: " + String(rina_positions.get(newPosition)))
 	
 	var newPositionRoomIndex = 0
 	
@@ -74,7 +79,7 @@ func place_rina_in_new_room():
 	RoomEngine.move_object_to_new_room(self.get_parent(), RoomEngine.Rooms[current_room_index], RoomEngine.Rooms[next_room_index])
 	self.get_parent().set_global_position(rina_positions.get(current_position))
 	current_room_index = next_room_index
-#	rina_shlorp_in()
+	rina_shlorp_in()
 
 
 # appear from the void (visually)
@@ -87,16 +92,8 @@ func rina_shlorp_in():
 func rina_shlorp():
 	var timeValue = rina_sprite.material.get_shader_param("time")
 	
-	if _shlorping_in:
-		if timeValue > 1.56:
-			_shlorping_in = false
-			rina_sprite.material.set_shader_param("time", 1.57)
-			
-			return
-			
-		rina_sprite.material.set_shader_param("time", timeValue + .05)
-	
-	elif _shlorping_out:
+	if _shlorping_out:
+		rina_sprite.material.set_shader_param("time", timeValue - .05)
 		if timeValue < .05:
 			_shlorping_out = false
 			rina_sprite.material.set_shader_param("time", 0)
@@ -109,7 +106,17 @@ func rina_shlorp():
 				
 			return
 			
-		rina_sprite.material.set_shader_param("time", timeValue - .05)
+			
+	elif _shlorping_in:
+		rina_sprite.material.set_shader_param("time", timeValue + .05)
+		if timeValue > 1.56:
+			_shlorping_in = false
+			rina_sprite.material.set_shader_param("time", 1.57)
+			
+			return
+			
+		
+		
 
 
 # disappear into the void (visually)

@@ -17,10 +17,13 @@
         
     - chadbrodykristy2 && musicstand2 && chadbrodykristy3: 
         -> cafetables3
-        
+
     - chadbrodykristy2 && musicstand2:
         -> cafetables3_5
         
+    - chadbrodykristy2 && cafetables2_5:
+        -> cafetables2_5_repeat
+
     - chadbrodykristy2 && cafetables1:
         -> cafetables2_5
         
@@ -187,15 +190,13 @@
         
         MS. SUWAN: "Well...I used to. But not anymore. Not for a long time..."
         
-        NOUR: <i>Ms. Suwan looks like she's...she's in shock. What Nick asked about what she does for fun now must've shaken her up.</i>
+        NOUR: <i>What Nick asked about what she does for fun now must've shaken her up.</i>
         
-        NOUR: <i>I can't just stop here. Her past pain shouldn't hold her back from the things that used to—and could still—make her happy.</i>
+        NOUR: <i>Her past pain shouldn't hold her back from the things that used to—and could still—make her happy.</i>
         
         NOUR: <i>She might not be ready to face her ex-friends, but maybe I could ease her into opening up to the idea.</i>
         
-        NOUR: <i>I got through to her with an old memory of her friends. Maybe she's ready to revisit another old love of hers with a new perspective.</i>
-        
-        NOUR: <i>I wonder...is she ready to listen to Paradise again? I should lead her there to find out.</i>
+        NOUR: <i>I should show her something that she used to love with her friends...because I think she's ready to hear it again.</i>
             -> END
     
     * [Bring it up subtly]
@@ -225,7 +226,11 @@
     // + [I have nothing to say] I'll try to get her to talk later.
         
     //     -> END
-
+=== cafetables2_5_repeat ===
+        NOUR: <i>I got through to her with an old memory of her friends. Maybe she's ready to revisit another old love of hers with a new perspective.</i>
+        
+        NOUR: <i>I wonder...is she ready to listen to Paradise again? I should lead her there to find out.</i>
+-> END
 === cafetables3_5 ===
     MS. SUWAN: "Let's not stop here. I'm ready to talk to the three of them."
     
