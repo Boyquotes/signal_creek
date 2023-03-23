@@ -1,12 +1,16 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
+[ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/suwan_dream.png" type="Texture" id=3]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
+[ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/nick_dream.png" type="Texture" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sprites/characters/sheet_portraits_nour.png" type="Texture" id=8]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=9]
 [ext_resource path="res://assets/scripts/ui/color_manager.gd" type="Script" id=10]
+[ext_resource path="res://assets/sprites/characters/portrait_placeholder.png" type="Texture" id=11]
 
 [sub_resource type="Gradient" id=1]
 
@@ -104,4 +108,10 @@ characterColors = {
 "nour": Color( 0.78, 0.38, 0.38, 1 ),
 "rina": Color( 1, 0.439216, 0.67451, 1 ),
 "the party": Color( 1, 1, 1, 1 )
+}
+characterPortraits = {
+"ms. suwan": ExtResource( 3 ),
+"nick": ExtResource( 5 ),
+"nour": ExtResource( 8 ),
+"placeholder": ExtResource( 11 )
 }
