@@ -9,10 +9,10 @@ export var characterColors : Dictionary = {
 }
 
 export var characterPortraits : Dictionary = {
-	"nour": preload("res://assets/alpha/sprites_alpha/characters/portraits/nour_real.png"),
-	"nick": preload("res://assets/alpha/sprites_alpha/characters/portraits/nick_dream.png"),
-	"ms. suwan": preload("res://assets/alpha/sprites_alpha/characters/portraits/suwan_dream.png"),
-	"placeholder": preload("res://assets/sprites/characters/portrait_placeholder.png")
+	"nour": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"nick": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"ms. suwan": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png")
 }
 
 var current_color = "the party"
