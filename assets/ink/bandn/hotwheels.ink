@@ -1,19 +1,4 @@
 == hotwheels ==
-
-    // {
-    //     - currentWorld == "dream" && hotwheels_real:
-    //         -> hotwheels_realvisited
-            
-    //     - currentWorld == "dream":
-    //         -> hotwheels_dream
-            
-    //     - currentWorld == "real" && hotwheels_dream:
-    //         -> hotwheels_dreamvisited
-        
-    //     - else:
-    //         -> hotwheels_real
-    // }
-//---------------- DREAM WORLD ----------------
 {
     - hotwheels1:
         -> hotwheels_visited
@@ -25,19 +10,15 @@
     
     //Should have an initial interaction in the dream world pointing out how new this looks, with Ms. Suwan vividly remembering being given Mattel cars as a child as gifts from local toy markets. She has a uneasy feeling about these toys and the type of media she was “given” to play rather than chosen by herself. Nick can speak up about how he thinks his friends would think the car is really cool, and they can have a conversation about it.
     
-    A shiny toy race car.// Glimmering in the light as if it was freshly made.
-    
-    // Ms Suwan stares down at it as she forms a crooked grin.
+    A shiny toy race car.
     
     NICK: "Yo! I used to play with these things all the time. My go to was the '20 Dodge Charger Hellcat."
     
     MS. SUWAN: "I played with them too back in Thailand."// The 1970 Mattel Hot Wheels Side kick Thailand SC Police Diecast Car was the one I would play with the most.
     
-    NICK: "You had Hot Wheels in Thailand?!?"
-
-    NOUR: "There are American toys everywhere—not just in America."
+    NICK: "You had Hot Wheels too?"
     
-    MS. SUWAN: "They were everywhere in my neighborhood street markets."
+    MS. SUWAN: "They were everywhere in my neighborhood street markets back in Thailand."
     
     MS. SUWAN: "My mother would buy them for me all of the time. I never asked for them but she still bought them for me."
     
@@ -75,7 +56,7 @@
             
             MS. SUWAN: "Humid and hot in the summers. Winters were better because it doesn't get as cold as it does here."
             
-            MS. SUWAN: "Lots of nature. Lots of people. Winding paths, crossing from one place to the next. Easier to talk to aunties and neighbors."
+            MS. SUWAN: "Lots of nature. Lots of people. Winding paths, crossing from one place to the next. Easier to talk to aunties."
             
             MS. SUWAN: "And of course, toy markets. Those were there, too."
             
