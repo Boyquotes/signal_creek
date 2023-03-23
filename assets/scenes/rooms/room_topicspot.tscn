@@ -147,7 +147,7 @@ position = Vector2( 104, 109 )
 position = Vector2( 132, 109 )
 
 [node name="TrinketSide2" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
-position = Vector2( 255, 19 )
+position = Vector2( 256, 18 )
 
 [node name="TrinketSide3" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
 position = Vector2( 213, 18 )
@@ -174,7 +174,7 @@ position = Vector2( 406, 133 )
 position = Vector2( 406, 223 )
 
 [node name="PhoneCases2" parent="PlaneManager/Overworld" instance=ExtResource( 6 )]
-position = Vector2( 235, 70 )
+position = Vector2( 192, 77 )
 
 [node name="StoreManager" parent="PlaneManager/Overworld" instance=ExtResource( 4 )]
 position = Vector2( 234, 140 )
@@ -183,7 +183,7 @@ position = Vector2( 234, 140 )
 position = Vector2( 162, 14 )
 
 [node name="Table3" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-position = Vector2( 235, 67 )
+position = Vector2( 192, 74 )
 
 [node name="KirbyPoster" parent="PlaneManager/Overworld" instance=ExtResource( 20 )]
 position = Vector2( 293, -63 )
@@ -195,7 +195,7 @@ position = Vector2( 293, 97 )
 position = Vector2( 311, 44 )
 
 [node name="JewelryStand" parent="PlaneManager/Overworld" instance=ExtResource( 19 )]
-position = Vector2( 327, 211 )
+position = Vector2( 349, 221 )
 
 [node name="GraphicTees" parent="PlaneManager/Overworld" instance=ExtResource( 11 )]
 position = Vector2( 288, 225 )
@@ -213,10 +213,10 @@ position = Vector2( 232, 187 )
 position = Vector2( 234, -34 )
 
 [node name="Table" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-position = Vector2( 234, -51 )
+position = Vector2( 234, -48 )
 
 [node name="Consoles" parent="PlaneManager/Overworld" instance=ExtResource( 10 )]
-position = Vector2( 235, -50 )
+position = Vector2( 236, -48 )
 
 [node name="Clothes Rack2" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
 position = Vector2( 80, 242 )
