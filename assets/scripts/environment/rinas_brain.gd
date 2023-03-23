@@ -29,6 +29,7 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("party_leader_switch"):
 		print("RINA'S COORDINATES: " + String(self.get_parent().get_global_position()))
+
 	if _shlorping_in or _shlorping_out:
 		rina_shlorp()
 
