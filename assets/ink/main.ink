@@ -38,6 +38,8 @@ INCLUDE betaintro.ink
 INCLUDE hallway/static_hallway.ink
 INCLUDE topicspot/static_topicspot.ink
 INCLUDE bandn/static_bandn.ink
+INCLUDE topicspot/jewelrystand.ink
+
 
 
 == abstract ==

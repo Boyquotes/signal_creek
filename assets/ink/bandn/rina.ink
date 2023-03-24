@@ -24,7 +24,7 @@
     //they walk down 
     //elevator door CLOSES
     
-    NOUR: "Ugh...I feel sick."
+    NOUR: "Ugh... I feel sick."
     
     &ELEVATOR_SHUT
     
@@ -46,23 +46,19 @@
     
     &FOLLOW_SUWAN_SuwanPhonePos
     
-    MS. SUWAN: "...This floor should have been shut down months ago."
+    MS. SUWAN: "This floor should have been shut down <i>months</i> ago."
     
-    MS. SUWAN: "I need to call one of my higher-ups about this."
+    MS. SUWAN: "I must call one of my higher-ups about this."
     
     MS SUWAN BEEP BOOPS HER PHONE
     
-    MS. SUWAN: "Hmm. No signal and no WiFi."
-    
-    // &EMOTE_NICK_DownIdle
-    
-    // &EMOTE_NOUR_DownIdle
+    MS. SUWAN: "Hmm. No signal and no WiFi." (CONCERN)
     
     NICK BEEP BOOPS HIS PHONE
     
     &EMOTE_NICK_RightIdle
     
-    NICK: "Aw, man. Same! I can't play any of my phone games..."
+    NICK: "Aw, man. Same! I can't play any of my phone games..." (POUTING)
     
     &MOV_RINA_START
     
@@ -78,7 +74,7 @@
     
     &EMOTE_NOUR_UpIdle
     
-    NOUR: ...
+    NOUR: ... (SHOCKED)
     
     MS. SUWAN: "You're not supposed to be here, young lady."
     
@@ -86,9 +82,7 @@
     
     MS. SUWAN: "Magic? Stop messing around, kid."
     
-    NOUR: <i>...Rina?</i>
-    
-    NOUR LOOKS SHOCKED
+    NOUR: <i>...Rina?</i> (SHOCKED)
     
     NICK: "Hey, uh... Nour? Do you know her?"
     
@@ -106,7 +100,7 @@
     
     &MOV_RINA_BANDN
     
-    NOUR: ...
+    NOUR: ... (NERVOUS)
     
     NICK: "Guess she didn't wanna talk, huh."
     
@@ -181,7 +175,9 @@
     
     NICK: "While we're at it, I wanna see if they still have games in the TopicSpot."
     
-    MS. SUWAN: "<i>That's</i> what you choose to think about right now?"
+    MS. SUWAN: "<i>That's</i> what you are choosing to think about right now?"
+    
+    NOUR: "It's a start. Who knows, maybe we'll be able to ask someone for help there."
     
     &FOLLOW_NICK_NOUR
     
@@ -301,7 +297,7 @@
     
     RINA: "I fixed the elevator that you all broke."
     
-    NICK: "How the heck did you know how to do that?"
+    NICK: "How the heck did you know how to do that?" (SURPRISED)
     
     MS. SUWAN: "You don't exactly seem old enough to know how to fix an elevator."
     
@@ -398,9 +394,7 @@
         
         RINA: "And all our parents know each other, so they'd <i>all</i> know."
         
-        RINA: "Then my parents would get mad, too."
-        
-        RINA IS TEARFUL
+        RINA: "Then my parents would get mad, too." (TEARING UP)
         
         RINA: "I told you, I didn't feel any different about you after you came out... It's not like you could help it."
         
@@ -582,7 +576,7 @@
                 
                 NOUR: "So I went to you, because you were always there for me, and made sure I was never alone."
     
-    -   NOUR: "And when I felt like <i>you</i> weren't looking out for me, I had nobody to go to."
+    -   NOUR: "And when I felt like <i>you</i> weren't looking out for me, I had nobody to go to." CONCERN
         
         //nick isn't as afraid of being a disappointment anymore
         NICK: "Why'd you <i>really</i> stop talking to Rina? Is it actually about her saying nothing?"
@@ -591,7 +585,7 @@
             
             * "I couldn't bring you down with me.["] I guess I felt like you were better off not being associated with me. It seemed like you would have been happier that way."
             
-    -   NOUR: "When I say it out loud, it feels silly. I'm still mad at you, but I don't think I want to be."
+    -   NOUR: "When I say it out loud, it feels silly. I'm still mad at you, but I don't think I want to be." (TEARING UP)
         
         NICK: "You know, I do the stuff I do... I guess because I'm frustrated at the world."
         
