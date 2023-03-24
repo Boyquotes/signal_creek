@@ -66,6 +66,8 @@
     
     &MOV_RINA_START
     
+    RINA: ...
+    
     A petite girl with olive skin and dyed strawberry hair appears before the group.
     
     Her entire body is still, like a mannequin. A lifelike, breathing mannequin.
@@ -95,6 +97,8 @@
         * ["She was from my high school."]
     
     - NOUR: ...
+    
+    RINA: ...
     
     NICK: "Hello? Random girl that Nour recognizes? Do you see us?"
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=9]
 [ext_resource path="res://assets/scripts/ui/color_manager.gd" type="Script" id=10]
 [ext_resource path="res://assets/sprites/characters/portraits/portrait_placeholder.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/characters/portraits/portrait_rina_neutral.png" type="Texture" id=12]
 
 [sub_resource type="Gradient" id=1]
 
@@ -113,5 +114,6 @@ characterPortraits = {
 "ms. suwan": ExtResource( 3 ),
 "nick": ExtResource( 5 ),
 "nour": ExtResource( 8 ),
-"placeholder": ExtResource( 11 )
+"placeholder": ExtResource( 11 ),
+"rina": ExtResource( 12 )
 }
