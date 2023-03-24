@@ -40,10 +40,6 @@ INCLUDE topicspot/static_topicspot.ink
 INCLUDE bandn/static_bandn.ink
 
 
-
-
-
-
 == abstract ==
 
     Hello. This is an Abstract Object. Thank you for coming.
