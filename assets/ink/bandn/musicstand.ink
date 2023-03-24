@@ -3,6 +3,10 @@
     It's a music stand.
 
 {
+    - musicstand4:
+        -> musicstand_end
+    - chadbrodykristy3:
+        -> musicstand4
     - musicstand2:
         -> musicstand2_repeat
     - chadbrodykristy1 && musicstand1 && cafetables_getsuwantotalk:
@@ -209,13 +213,17 @@
     
     MS. SUWAN: "...Fine. I'll talk to them."
     
-    NOUR: <i>I finally managed to convince her! I should go find Chad, Kristy, and Brody now so that Ms. Suwan can confront them once and for all.</i>
+    NOUR: <i>I finally managed to convince her to confront them. I should go find Chad, Kristy, and Brody now.</i>
 
     -> END
 
 //figure out how to implement intervals for when other items are not collected
 ==musicstand1_repeat==
-    NOUR: <i>This made Ms. Suwan pretty upset. It'd be nice to get her to re-accept her old hobby, but I don't think she's ready yet.</i>
+    // MS. SUWAN: "If I listen to that again, I'm seriously going to get a headache."
+    
+    // NOUR: "I won't turn it on..."
+    
+    NOUR: <i>It'd be nice to get her to re-accept her old hobby, but I don't think she's quite ready yet.</i>
     
     NOUR: <i>I can come back to this later. For now, I should go to Chad, Kristy, and Brody since Ms. Suwan is ready to talk to them.</i>
     -> DONE
@@ -277,9 +285,34 @@
     // -> END
 
 === musicstand2_repeat ===
-    MS. SUWAN: "I want to apologize to Chad, Kristy, and Brody. Properly, this time."
+    // MS. SUWAN: "I want to apologize to Chad, Kristy, and Brody. Properly, this time."
     
-    NOUR: "Alright. Let's go to them now."
+    // NOUR: "Alright. Let's go to them now."
 
-    NOUR: <i>She's ready. I should go lead her to where they are in the hallway.</i>
+    NOUR: <i>Ms. Suwan's ready to truly apologize to Chad, Kristy, and Brody. I should go to them now.</i>
 -> END
+
+=== musicstand4 ===
+    NOUR: "I wish I could've gone to a Paradise concert. It must've been so cool to hear them live." 
+    
+    MS. SUWAN: "It was. Nothing like the digital recordings—the energy isn't the same."
+    
+    MS. SUWAN: "I should've gone to more concerts."
+        * [Tell her it's not too late]
+            NOUR: "It's not too late. If you discover newer rock artists, you could go to their concerts."
+            
+            NOUR: "And older bands do reunion concerts too. Whatever the future holds, I know there's a rock concert waiting for you in it."
+            
+        * [Assure her that the records are the next best thing]
+            NOUR: "At least we still have these records. Nothing like having vinyl to really get into the music."
+            
+            NOUR: "I bet you could even find live recordings, too."
+
+    - MS. SUWAN: "I'll keep that in mind, then."
+    
+    MS. SUWAN: "Thank you, Nour."
+        -> END
+=== musicstand_end ===
+    NOUR: <i>I think we've explored everything we could here.</i>
+        
+        -> END

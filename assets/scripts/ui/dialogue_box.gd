@@ -247,7 +247,7 @@ func typewriter_effect(escape):
 		current_text_box.set_percent_visible(1.0)
 		is_typing = false
 		
-	var currentVisibility = current_text_box.get_percent_visible()
+	var     currentVisibility = current_text_box.get_percent_visible()
 	var visibleCharacters = current_text_box.get_visible_characters()
 	
 	if currentVisibility >= 1.0:

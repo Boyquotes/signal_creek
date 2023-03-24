@@ -146,3 +146,14 @@ func parse_commands(currentLine):
 		# &VOLUME_level
 		# TODO: Figure out how tihs works
 		pass
+		
+	# expects &SHLORP_CBK_Chad_out
+	elif "&SHLORP_CBK" in currentLine:
+		var characterName = currentLine.split("_")[2].strip_escapes()
+		var inOrOut = currentLine.split("_")[3].strip_escapes()
+		
+		if "out" in inOrOut:
+			Globals.ChadBrodyKristy.cbk_shlorp_out(characterName)
+			
+		else: 
+			Globals.ChadBrodyKristy.cbk_shlorp_in(characterName)

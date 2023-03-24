@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/scripts/character/character_navigator.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/suwan_walking_past.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/sprites/characters/sheet_suwan_past.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/animations/suwan_walking_past.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_suwan_past.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 4, 2.5 )

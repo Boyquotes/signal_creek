@@ -124,11 +124,11 @@
     
     MS. SUWAN: "There's a bookstore on this floor—the B&N? There must be something there that could help us escape this place."
     
-    NOUR: <i>I want to talk about those three people to Ms. Suwan, but I don't think she's going to say a single thing about them.</i>
+    NOUR: <i>I want to talk about those three people to Ms. Suwan, but she really wants to avoid them at all costs...</i>
     
-    NOUR: <i>I guess we could take a look at the B&N and see if there's anything that could help us leave here...</i>
+    NOUR: <i>I guess we could take a look at the B&N and see if there's anything that could help us leave here.</i>
     
-    NOUR: <i>Wherever we decide to go, I think it's best if I don't mention these three until Ms. Suwan is ready to open up to me.</i>
+    NOUR: <i>Maybe something there will make Ms. Suwan open up about all of this.</i>
     
     ->END
 
@@ -146,21 +146,19 @@
     
         **** "Ok, let's go visit some place else." 
     
-    - MS. SUWAN: "Let's go the B&N. There should be some things in there that can help us leave this place."
+    - NICK: "I'm still thinking about the rock concerts that you <i>supposedly</i> went to..."
     
-    NICK: "I'm still thinking about the rock concerts they mentioned..."
+    NICK: "Can I ask what band it was? Did you wear something CRAZY?"
     
-    NICK: "I can't imagine you going to one! Can I ask what band it was? Did you wear something CRAZY?"
-    
-    MS. SUWAN: "Enough about the rock concerts. Nour, we should explore the B&N."
+    MS. SUWAN: "Enough about the rock concerts. Nour, we should explore the B&N and find something to help us leave."
     -> chadbrodykristy_notready_repeat
             
 === chadbrodykristy_notready_repeat ===
-    NOUR: <i>Looks like Ms. Suwan's still not ready to open up to either of us. I guess we should go to the B&N and see if there's anything useful.</i>
+    NOUR: <i>Looks like Ms. Suwan's still not ready to open up to either of us.</i>
             
-    NOUR: <i>...Though Nick brings up a good point. If she went to rock concerts with those three people and doesn't want to talk to them...something must've happened.</i>
+    NOUR: <i>If she went to rock concerts with those three people and doesn't want to talk to them...something must've happened.</i>
     
-    NOUR: <i>If I find something related to the band or their music, maybe I could get more information about what happened.</i>
+    NOUR: <i>If I find something related to the band or their music, maybe I could learn more about what happened.</i>
     
     NOUR: <i>Maybe B&N has a music section somewhere?</i>
         -> END
@@ -188,13 +186,18 @@
     
     MS. SUWAN: "I'm sorry I actually studied so I wouldn't flunk school instead of wasting my nights drinking and going to Paradise concerts."
     
-    BRODY: "Yeesh, sorry for wanting to just hang out like normal friends."
+    BRODY: "We weren't wasting nights! We studied and hung out like friends like NORMAL people."
     
     MS. SUWAN: "I had a so much riding on my career. For me to sabotage it like that when it hadn't even started? No. Failing was not an option."
     
-    CHAD: "Fail? Kannika, you always did better than any of us. We never saw get below a 90 on an exam, ever."
+    BRODY: "So that meant abandoning your friends, never keeping promises, and ignoring us past graduation? Is that success to you?"
     
-    KRISTY: "You always blamed us for your failures when in reality? You just had ridiculous standards you were always trying to beat."
+    CHAD: "Kannika, you always did better than any of us. We never saw get below a 90 on an exam, ever."
+    
+    KRISTY: "It wasn't fair to us for you to cut us off with no explanation, only to hear from you that we were distractions that threatened your success."
+    
+    BRODY: "It's always about you, isn't it?"
+    
     //I LIKE TURNING INTO KANNIKA 
     
     NOUR: <i>Ms. Suwan's face morphs into a bitter expression. A reflection of her younger, rasher self...</i>
@@ -235,15 +238,19 @@
     
     NOUR: "I used to go that place all the time."
     
-    NOUR: "Is that why they're here at the mall? Are they waiting for...you?"
+    NICK: "Is that why they're here at the mall? Are they waiting for...you?"
     
-    MS. SUWAN: "Idiots. Why wait for someone who wouldn't wait for you?"
+    MS. SUWAN: "Those three idiots...Why wait for someone who wouldn't wait for you?"
     
-    MS. SUWAN: "I...I tried. And look where that got me."
+    NOUR: "Ms. Suwan, why don't we try to talk to them again?"
+    
+    MS. SUWAN: "I <i>did</i> talk to them again. And look where that got me."
+    
+    NOUR: "I...you could try one more time—"
     
     MS. SUWAN: "I want to leave. Now."
     
-    NOUR: <i>Ms. Suwan doesn't realize what she did was wrong.</i>
+    NOUR: <i>Ms. Suwan doesn't realize what she did to her friends was wrong.</i>
     
     NOUR: <i>I have to make her realize that her friendship could have been saved if she had done things differently.</i>
     
@@ -251,10 +258,12 @@
 
 &LIGHT_Suwan0
 -> light_on
--> END
+// -> END
 
 === chadbrodkristy2_repeat ===
-    NOUR: <i>The three of them mentioned something about the cafe. I also used to go to the cafe here a lot too with...nevermind. That's not important right now.</i>
+    NOUR: <i>The three of them mentioned something about studying at the cafe with Ms. Suwan and her bailing on them.</i>
+    
+    NOUR: <i>I also used to go to the cafe here a lot too with...nevermind. That's not important right now.</i>
     
     NOUR: <i>I could try going there to see if it could spark a memory of Ms. Suwan's that could get her to realize her mistake.</i>
 -> END
@@ -297,7 +306,9 @@
     KRISTY: "It hurt a lot. But it's ok, Niki. You're doing well, and that's all that mattered to me."
     
     KANNIKA: "Kristy, I'm so sorry about everything. Please-"
-    //CODE TO MAKE KRISTY NPC DISAPPEAR
+    
+    &SHLORP_CBK_Kristy_out
+    
     <i>Kristy suddenly disappears.</i>
     
     NOUR: "Where did she—"
@@ -311,7 +322,9 @@
     BRODY: "I don't know if I can accept this apology of yours, but I hope that you know it'll never be too late to change."
     
     KANNIKA: "Brody, wait—"
-    //CODE TO MAKE BRODY NPC DISAPPEAR
+    
+    &SHLORP_CBK_Brody_out
+    
     <i>Brody disappears.</i>
     
     CHAD: "You locked yourself in your room studying all of the time. We never got to see you. We were worried."
@@ -327,7 +340,8 @@
     KANNIKA: "I...I promise."
     
     CHAD: "Good. That's all we ever really wanted for you, Kannika."
-    //CODE TO MAKE CHAD DISAPPEAR
+    
+    &SHLORP_CBK_Chad_out
     
     <i>Chad suddenly disppeared.</i>
     

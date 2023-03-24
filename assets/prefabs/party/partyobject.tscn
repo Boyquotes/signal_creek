@@ -12,9 +12,9 @@
 [ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/suwan_dream.png" type="Texture" id=10]
 [ext_resource path="res://assets/scripts/character/party.gd" type="Script" id=11]
 [ext_resource path="res://assets/alpha/sprites_alpha/characters/placeholders/sheet_party_dream.png" type="Texture" id=12]
-[ext_resource path="res://assets/sprites/characters/sheet_nour_past.png" type="Texture" id=13]
-[ext_resource path="res://assets/sprites/characters/sheet_suwan_past.png" type="Texture" id=14]
-[ext_resource path="res://assets/sprites/characters/sheet_nick_past.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_nour_past.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_suwan_past.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_nick_past.png" type="Texture" id=15]
 
 [node name="PARTY" type="YSort"]
 script = ExtResource( 11 )
