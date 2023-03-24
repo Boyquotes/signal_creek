@@ -31,6 +31,7 @@ var Nick = null
 var Nour = null
 var Suwan = null
 var Rina = null
+var ChadBrodyKristy = null
 
 var Elevator = null
 var RouteLights = null

@@ -306,7 +306,9 @@
     KRISTY: "It hurt a lot. But it's ok, Niki. You're doing well, and that's all that mattered to me."
     
     KANNIKA: "Kristy, I'm so sorry about everything. Please-"
-    //CODE TO MAKE KRISTY NPC DISAPPEAR
+    
+    &SHLORP_CBK_Kristy_out
+    
     <i>Kristy suddenly disappears.</i>
     
     NOUR: "Where did she—"
@@ -320,7 +322,9 @@
     BRODY: "I don't know if I can accept this apology of yours, but I hope that you know it'll never be too late to change."
     
     KANNIKA: "Brody, wait—"
-    //CODE TO MAKE BRODY NPC DISAPPEAR
+    
+    &SHLORP_CBK_Brody_out
+    
     <i>Brody disappears.</i>
     
     CHAD: "You locked yourself in your room studying all of the time. We never got to see you. We were worried."
@@ -336,7 +340,8 @@
     KANNIKA: "I...I promise."
     
     CHAD: "Good. That's all we ever really wanted for you, Kannika."
-    //CODE TO MAKE CHAD DISAPPEAR
+    
+    &SHLORP_CBK_Chad_out
     
     <i>Chad suddenly disppeared.</i>
     

@@ -18,6 +18,8 @@
     &EMOTE_NICK_LeftIdle
     
     NOUR: “In the BROKEN ELEVATOR?”
+    
+    &SOUND_InquisitiveSound
    
     &EMOTE_NOUR_RightIdle
     
