@@ -32,11 +32,11 @@
         
         NOUR: "<i>You</i> don't look right.
         
-        MANAGER: "Hey! D: That isn't cool."
+        MANAGER: "Hey! ;-; That isn't cool."
         
         -> manager_wayout
         
-    * -> 
+    + -> 
         NOUR: "Uh, never mind. Seems like you can't help us get out of here. Thanks anyways."
     
         -> END
@@ -64,7 +64,7 @@
         
         NOUR: "But with the actual symbols, not their names. How are we even comprehending this right now?"
         
-        MANAGER: "I was born with it! I'm special like that :3"
+        MANAGER: "I was born with it! I'm special like that owo"
         
         NOUR: "Sure... alright. Forget I asked."
     
