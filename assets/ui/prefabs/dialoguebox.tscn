@@ -36,13 +36,15 @@ story = ExtResource( 1 )
 anchor_left = 0.643
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -9.28003
+margin_right = -16.0
 margin_bottom = -10.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
-anchor_left = -0.175
-anchor_top = 0.0603774
-anchor_right = 0.970509
-anchor_bottom = 0.877
+anchor_left = -0.160644
+anchor_top = 0.045283
+anchor_right = 0.973421
+anchor_bottom = 0.965679
 margin_left = -1.0236
 margin_right = -1.06943
 margin_bottom = 0.189972
@@ -51,28 +53,28 @@ __meta__ = {
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
-margin_right = 392.0
-margin_bottom = 432.0
+margin_right = 381.0
+margin_bottom = 488.0
 scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer"]
 light_mask = 9
-margin_right = 376.0
-margin_bottom = 432.0
+margin_right = 365.0
+margin_bottom = 488.0
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance_placeholder="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn"]
-margin_top = 9.0
-margin_right = 376.0
-margin_bottom = 105.0
+margin_top = 37.0
+margin_right = 365.0
+margin_bottom = 133.0
 
 [node name="DialogueEntryChoices" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
-margin_top = 125.0
-margin_right = 376.0
-margin_bottom = 264.0
+margin_top = 153.0
+margin_right = 365.0
+margin_bottom = 292.0
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -80,9 +82,9 @@ __meta__ = {
 [node name="DialogueEntry" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_top = 284.0
-margin_right = 376.0
-margin_bottom = 423.0
+margin_top = 312.0
+margin_right = 365.0
+margin_bottom = 451.0
 
 [node name="Light2D" type="Light2D" parent="Panel"]
 visible = false
@@ -97,7 +99,8 @@ margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 10 )
 characterColors = {
-"brody": Color( 0.0352941, 0.32549, 0.635294, 1 ),
+"???": Color( 1, 1, 1, 1 ),
+"brody": Color( 0.462745, 0.6, 0.741176, 1 ),
 "chad": Color( 0.647059, 0.85098, 0.345098, 1 ),
 "clerk": Color( 0.8, 0.403922, 1, 1 ),
 "kannika": Color( 0.380392, 0.670588, 1, 1 ),

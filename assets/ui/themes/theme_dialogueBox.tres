@@ -48,9 +48,9 @@ thickness = 2
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0745098, 0.0784314, 0.121569, 0.901961 )
-border_width_left = 2
-border_width_right = 2
-border_width_bottom = 2
+border_width_left = 3
+border_width_right = 3
+border_width_bottom = 3
 border_color = Color( 0.784314, 0.721569, 0.803922, 1 )
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4

@@ -35,7 +35,7 @@
         
         MS. SUWAN: "You're going to have to take tests for the rest of your life. Get used to it."
         
-        NICK: "You're really testing my patience, ma'am."
+        NICK: "You're really <i>testing</i> my patience, ma'am."
         
         -> noursuggestion
         
@@ -44,7 +44,7 @@
     
         -> nickargument
     
-    * "I see... <i>Get Ready for LSATs</i>."
+    * "There's also... <i>Get Ready for LSATs</i>."
     
         Nour looks over at Ms. Suwan.
     
