@@ -59,6 +59,9 @@ func move_rina(newPosition):
 			
 		"END": # end in hallway
 			newPositionRoomIndex = 1
+			
+		"VOID":
+			newPositionRoomIndex = 1
 	
 	next_room_index = newPositionRoomIndex
 	current_position = newPosition

@@ -391,6 +391,15 @@
     
     //should there be a moment here that has an SFX for the elevator light...and then have Nour comment on it???
     &LIGHT_Suwan2
+    
+    LIGHT ON BEEP BOOP
+    
+    An elevator <i>ding</i> is heard from the hallway.
+    
     &MOV_RINA_HALLWAY
-        -> light_on    
-    // -> END
+    
+    MS. SUWAN: "Nour, your friend is here. Again."
+    
+    MS. SUWAN: "If I could talk to Chad, Brody, and Kristy about what happened... I believe you are prepared to do the same with her."
+    
+        -> light_on

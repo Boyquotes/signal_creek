@@ -16,10 +16,7 @@ margin_bottom = 540.0
 border_color = Color( 1, 1, 1, 1 )
 
 [node name="DialogueBox" parent="ReferenceRect" instance=ExtResource( 6 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 944.0
-margin_bottom = 540.0
+camera_offset_dialogue = 64.0
 scroll_increment = 0.01
 
 [node name="Interact_Indicator" parent="." instance=ExtResource( 3 )]

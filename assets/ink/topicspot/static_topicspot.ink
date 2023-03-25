@@ -10,11 +10,11 @@
     
     -> END
     
-== jewelrystand ==
+// == jewelrystand ==
 
-    It's a jewelry stand. Max has to write stuff here, so if you're reading this, tell him to write it.
+//     It's a jewelry stand. Max has to write stuff here, so if you're reading this, tell him to write it.
     
-    -> END
+//     -> END
     
 == kirbyposter ==
 
