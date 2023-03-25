@@ -1,33 +1,81 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/environment/chadbrodykristy_brains.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/alpha/sprites_alpha/characters/placeholders/sheet_chadbrodykristy.png" type="Texture" id=4]
 
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float time:hint_range(0.0, 1.57, 0.001) = 1.57;
+
+float rand(vec2 co){
+    return fract(sin(dot(co.xy ,vec2(12.9898,96.233))) * 43758.5453);
+}
+
+void fragment()
+{
+	vec2 texture_resolution = 1.0 / TEXTURE_PIXEL_SIZE;
+	vec2 within_texture_pixel=floor(UV * texture_resolution);
+	vec4 color= texture(TEXTURE,UV);
+	
+	if(sin(time) > rand(within_texture_pixel))
+		COLOR = color;
+	else
+		COLOR = vec4(0.0,0.0,0.0,0.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=24]
+shader = SubResource( 1 )
+shader_param/time = 1.57
+
+[sub_resource type="ShaderMaterial" id=25]
+shader = SubResource( 1 )
+shader_param/time = 1.57
+
+[sub_resource type="ShaderMaterial" id=26]
+shader = SubResource( 1 )
+shader_param/time = 1.57
+
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 22.5, 7.5 )
+extents = Vector2( 21.5, 6 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 33.5, 15.5 )
+extents = Vector2( 25, 11.25 )
 
-[node name="ChadBrodyKristy" type="RigidBody2D" groups=["shiftable"]]
-material = ExtResource( 3 )
+[node name="ChadBrodyKristy" type="RigidBody2D"]
 mode = 1
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Chad" type="Sprite" parent="."]
 light_mask = 4
-material = ExtResource( 3 )
-position = Vector2( 0, -19 )
+material = SubResource( 24 )
+position = Vector2( 20, -15 )
 texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 3, 4, 58, 39 )
+region_rect = Rect2( 43, 13, 17, 29 )
+
+[node name="Brody" type="Sprite" parent="."]
+light_mask = 4
+material = SubResource( 25 )
+position = Vector2( 2, -22 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 25, 5, 18, 31 )
+
+[node name="Kristy" type="Sprite" parent="."]
+light_mask = 4
+material = SubResource( 26 )
+position = Vector2( -17, -16 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 4, 11, 21, 32 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
@@ -37,7 +85,7 @@ region_enabled = true
 region_rect = Rect2( 3, 4, 58, 39 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.5, -7.5 )
+position = Vector2( 0.5, -6 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -47,10 +95,10 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -7 )
+position = Vector2( 0, -0.25 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
-[connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
-[connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]
+[connection signal="can_interact" from="ActiveArea" to="ActiveArea" method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="ActiveArea" to="ActiveArea" method="_on_ActiveArea_cannot_interact"]

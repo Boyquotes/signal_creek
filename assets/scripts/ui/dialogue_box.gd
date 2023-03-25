@@ -82,7 +82,6 @@ func open_at_knot(pathstring):
 	_ink_player.SetVariable("currentPartyChar", Globals.PartyObject.get_leader_inkname())
 	_ink_player.SetVariable("currentWorld", Globals.get_world_inkname())
 	
-	
 	_ink_player.ChoosePathString(pathstring)
 	
 	current_speaker = Globals.PartyObject.get_leader_inkname()
@@ -101,7 +100,7 @@ func toggle_choice_selections(changeValue):
 	_current_choice_index = wrapi(_current_choice_index + changeValue, 0, _current_choice_strings.size())
 	_current_choice_entry_choices[_current_choice_index].set_highlighted(true)
 	
-	Globals.SoundManager.play_sound(Globals.SoundManager.choice_select_sound)
+	Globals.SoundManager.play_sound("ChoiceSelect")
 
 
 # select the currently highlighted choice
@@ -142,7 +141,7 @@ func proceed():
 			choice_chosen = false
 		
 		if currentLine.substr(0, 1) == "&":
-			parse_commands(currentLine)
+			InkCommands.parse_commands(currentLine)
 			return "command"
 		
 		currentLine = currentLine.replacen('<', '[')
@@ -160,125 +159,10 @@ func proceed():
 	scroll_to_bottom()
 	return "no command"
 
-
-# Parse function requests from ink writing
-func parse_commands(currentLine):
-	if "&SHAKE" in currentLine:
-		Globals.GameOverlay.start_shaking(false)
-		
-	elif "&BLACK" in currentLine:
-		Globals.GameOverlay.set_to_black()
-		
-	elif "&FDEIN" in currentLine:
-		Globals.GameOverlay.start_fade_in()
-		
-	elif "&MOV_RINA" in currentLine:
-		if Globals.Rina:
-			Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
-		
-	elif "&SHLORP_RINA" in currentLine:
-		Globals.Rina.rina_shlorp_out()
-		
-	elif "&POS" in currentLine: #move nick to vector2
-		var charName = currentLine.split("_")[1].strip_escapes()
-		var vectorPos = currentLine.split("_")[2].strip_escapes()
-		vectorPos = vectorPos.split(",")
-		vectorPos = Vector2(vectorPos[0], vectorPos[1])
-		
-		match charName:
-			"NICK":
-				Globals.Nick.place_character_at_vector(vectorPos)
-				
-			"NOUR":
-				Globals.Nour.place_character_at_vector(vectorPos)
-				
-			"SUWAN":
-				Globals.Suwan.place_character_at_vector(vectorPos)
-				
-	elif "&FOLLOW" in currentLine:
-		var charName = currentLine.split("_")[1].strip_escapes()
-		var posNodeName = currentLine.split("_")[2].strip_escapes()
-		var posNode
-		
-		if posNodeName == "NOUR":
-			posNode = Globals.Nour
-			
-		elif posNodeName != "stop":
-			posNode = RoomEngine.CurrentRoom.plane_manager.get_node(posNodeName)
-		
-		match charName:
-			"NICK":
-				Globals.Nick.set_following_node(posNode)
-				
-			"NOUR":
-				if "stop" in posNodeName:
-					Globals.PartyObject.force_nour_movement = false
-					
-				else:
-					Globals.PartyObject.force_nour_movement = true
-					Globals.Nour.set_following_node(posNode)
-				
-			"SUWAN":
-				Globals.Suwan.set_following_node(posNode)
-		
-	elif "&EMOTE" in currentLine:
-		var charName = currentLine.split("_")[1].strip_escapes()
-		var emoteName = currentLine.split("_")[2].strip_escapes()
-		
-		match charName:
-			"NICK":
-				Globals.Nick.animate_emote(emoteName)
-				
-			"NOUR":
-				Globals.Nour.animate_emote(emoteName)
-				
-			"SUWAN":
-				Globals.Suwan.animate_emote(emoteName)
-		
-	elif "&LIGHT" in currentLine:
-		# EXAMPLE WRITTEN IN INK: &LIGHT_Nick0
-		
-		var lightName = currentLine.split("_")[1].strip_escapes()
-		# When parsed, lightName will look like this: Nick0
-		Globals.RouteLights.turn_on_light(lightName)
-		
-	elif "&ELEVATOR" in currentLine:
-		var action = currentLine.split("_")[1].strip_escapes()
-		
-		if "OPEN" in action:
-			Globals.ElevatorDoorLight.open_doors()
-			
-		elif "CLOSE" in action:
-			Globals.ElevatorDoorLight.close_doors()
-			
-		elif "SHUT" in action:
-			Globals.RouteLights.door_close_anim()
-			
-		elif "UNSHUT" in action:
-			pass
-	
-	elif "&FIRSTLIGHT" in currentLine:
-		Globals.RouteLights.activate_light_tutorial()
-		
-	elif "&CAMERA" in currentLine:
-		var vectorPos = currentLine.split("_")[1].strip_escapes()
-		vectorPos = vectorPos.split(",")
-		vectorPos = Vector2(vectorPos[0], vectorPos[1])
-		
-		Globals.GameCanvas.set_camera_following_vector(vectorPos)
-		
-	elif "&ALLON" in currentLine:
-		Globals.RouteLights.turn_on_all_lights()
-		
-	elif "&ALLOFF" in currentLine:
-		Globals.RouteLights.turn_off_all_lights()
-
-
 # Parses entryText for special characters, determines what type of entry this is
 # Entries are normal, dialogue, or choice
 # Call corresponding functionality for type of entry
 func check_entry_type(entryText):
-		
 	if entryText.substr(0, 1) == ":": #this is a name for the choice entry nametag; not an entry to put in
 		var chooserName = entryText.substr(1).strip_escapes()
 		_ink_player.Continue()
@@ -296,10 +180,11 @@ func check_entry_type(entryText):
 		current_text_box = newDialogue.get_dialogue_text()
 		#init typewriter effect
 		is_typing = true
-		
 		set_camera_position_to_speaker()
+#		Globals.SoundManager.play_sound("NewEntrySound")
 	
 	else: #it's a normal text entry
+#		Globals.SoundManager.play_sound("NewEntrySound")
 		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal, _entry_prefab_paragraph)
 		if !fastforward and print_information:
 			print("NORMAL TEXT")
@@ -362,7 +247,7 @@ func typewriter_effect(escape):
 		current_text_box.set_percent_visible(1.0)
 		is_typing = false
 		
-	var currentVisibility = current_text_box.get_percent_visible()
+	var     currentVisibility = current_text_box.get_percent_visible()
 	var visibleCharacters = current_text_box.get_visible_characters()
 	
 	if currentVisibility >= 1.0:
@@ -370,6 +255,7 @@ func typewriter_effect(escape):
 	
 	else:
 		current_text_box.set_visible_characters(visibleCharacters + typewriter_speed)
+		Globals.SoundManager.play_sound_ui("TypewriterSound")
 
 
 func escape_typewriter_effect():
@@ -393,6 +279,8 @@ func display_choices(chooserName):
 	_current_choice_entry_choices[_current_choice_index].set_highlighted(true)
 	_vertical_layout_node.add_child(newChoiceEntry)
 	_current_choice_entry = newChoiceEntry
+	
+	Globals.SoundManager.play_sound("NewChoiceEntry")
 
 
 # parse json story state from ink player; print the stuff we care about
@@ -488,10 +376,9 @@ func reset_story():
 
 func fast_forward(state):
 	fastforward = state
-	
 
 
-func _on_Fullscreen_toggled(button_pressed):
+func _on_Fullscreen_toggled(_button_pressed):
 	if OS.window_fullscreen:
 		OS.window_fullscreen = false
 		

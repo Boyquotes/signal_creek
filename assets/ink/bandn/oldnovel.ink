@@ -1,108 +1,90 @@
-== oldnovel ==
-
-    {
-        - currentWorld == "dream" && oldnovel_real:
-            -> oldnovel_realvisited
-            
-        - currentWorld == "dream":
-            -> oldnovel_dream
-            
-        - currentWorld == "real" && oldnovel_dream:
-            -> oldnovel_dreamvisited
-        
-        - else:
-            -> oldnovel_real
-    }
+// Ms Suwan and Nour focused conversation regarding old novel 
+//gives insight to Ms Suwans background in Thailand 
 //---------------- DREAM WORLD ----------------
 
-== oldnovel_dream ==
+    {
+        - oldnovel_first:
+            -> oldnovel_revisit
+            
+        - chadbrodykristy3:
+            -> oldnovel_end
+    }
+== oldnovel_first ==
 
-    Ms Suwan opens the novel, turning to a random page. The scent of the old book prickles her nose. She tries to read the first sentence of the paragraph but her mind wanders.
+    Ms Suwan picks up an old novel laying on the bookshelf and turns it to a random page. The scent of the old book prickles her nose. She tries to read the first sentence of the paragraph but her mind wanders.
     
-    NOUR: Is that Jane Eyre? I read that book my junior year of high school for AP Lit. Pretty interesting.
+    NOUR: Is that Jane Eyre? 
     
-    :MS SUWAN:
-        +[I've never read it] When I first moved to the US I saw a copy of Jane Eyre being sold in a local bookstore and I was taken back because the book was banned in China when I lived there.
+    MS SUWAN: What?
     
-    NOUR: Wait why was the book banned?
-
-    :MS SUWAN:
-        ++[It was a different time] Well during the late 80s, the novel was censored in China due to it being seen by the government as "socially corrupting" to the youth of China during the Cultural Revolution.
+    MS SUWAN: Oh is it? Interesting. Do you know this book?
+    
+    NOUR: 
+        * [I read that book my junior year of high school for AP Lit.] -> oldnovel_nouropenup 
+        * [I've heard of it somewhere] -> oldnovel_nouropenup
+        * [It's my favorite novel] -> oldnovel_nouropenup
         
-    NOUR: [writing notes in her journal] oh I did not know that. Thank you for telling me about this. I learned a bit about the Cultural Revolution in school but I never knew about the specifics.
+    == oldnovel_nouropenup ==
+    
+    NOUR: Yeah I read it a long time ago, it's really good!
+    
+    MS SUWAN: Hm
+    
+    NOUR: Do you know this book?
+    
+    MS SUWAN: What. Oh um not really.
+    
+    NOUR: I don't know you seemed to have your eye on it for quite a bit.
+    
+    MS SUWAN: I never read it but there was a lot of talk about those kinds of books back home.  
+    
+    NOUR: What kind of talk?
+    
+    MS SUWAN: Well when I was a kid, the government didn't let people read books that were seen as "socially corrupting" so I didn't even see it until I moved to the US and saw a copy being sold at a bookstore. 
+    
+    NOUR: Oh I see...
+    
+    NOUR SAYS SHIT ABOUT POLITICS IN EGYPT
+    
+    NOUR: But I didn't know about all of that stuff going on in China, like I went over a bit of it in school and stuff but I never knew the specifics so thank you for telling me about this.
+    
+    MS SUWAN: No problem kiddo.
         
-    May I ask why you never read the book?
+    NOUR: So..may I ask why you never read the book?
         
-    :MS SUWAN:
-        +++[Honestly] It wouldn't be right.
+    MS SUWAN: I don't know it just...
+    
+    MS SUWAN: ...
+    
+    MS: SUWAN: it wasn't right back and I don't feel like it would ever feel right for me now.
+    
+    NOUR: Hm damn well I can't fully understand how that must feel like for you but I know enough about those kinds of situations to know that it's really hard to shake those feelings.
+    
+    MS SUWAN: Thank you for understanding Nour.
     
     Ms Suwan puts the novel back to the shelf, trying to brush off the discontentness shes feeling.
-
-    -> END
-
-
-== oldnovel_realvisited ==
-
-    Just the same copies of Jane Eyre on the bookshelf
+    
     
     -> END
+
 
 //SUBSEQUENT DREAM KNOTS HERE
 
-
-//---------------- REAL WORLD ----------------
-
-== oldnovel_real ==
-
-    Ms Suwan notices a copy of Jane Eyre sitting vacantly on the bookshelf.
+==oldnovel_revisit == 
+    Just the same copies of Jane Eyre on the bookshelf.
+-> END
+//if you have finished Ms Suwan's storyline, she would come back and take the old novel to read
+==oldnovel_end ==
+    Ms Suwan once again picks up the novel of Jane Eyre but this time her 
     
-    :MS SUWAN:
+    MS SUWAN: I think I'm gonna grab a copy.
     
-        * Pick it up
-            -> pickUpJaneEyre
-        * Walk away
-            -> walkAway
-
-
-==pickUpJaneEyre==
-
-    Ms. Suwan picks up the novel. Her fingertips graze the thick dust coating the cover. The cover is faded and the edges are bent.
+    NOUR: Really?
     
-    :MS SUWAN:
-        
-        * Open it
-            -> openJane //shift plane
-            
-        * Put it back
-            -> putItBack
+    MS SUWAN: Yeah I think it's time to read something other than contracts and case law.
     
-    =openJane
+    NOUR: Well I'm happy for you.
     
-        &Ms. Suwan opens the book.
-        -> DONE
-
-
-== putItBack ==
-
-    She places the novel back on the shelf, unable to allow herself to remember.
+    Ms Suwan puts the book into her purse.
     
-    :MS SUWAN:
-    
-        * Walk away
-            -> walkAway
-
-
-== walkAway==
-
-    Ms. Suwan slowly walks away from the bookshelf, her mind still stuck on the novel.
-    
-    -> END
-
-
-== oldnovel_dreamvisited ==
-
-    The Jane Eyre book, sitting alone on the bookshelf.
-
-    -> END
-
-//SUBSEQUENT REAL KNOTS HERE
+-> END 

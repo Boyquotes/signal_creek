@@ -29,8 +29,27 @@
     -> END
     
 == computerdesk ==
-
-    It's a desk with a computer on it.
+    MS SUWAN: Hey look over here! I knew there would be a computer somewhere in here!
+    
+    NICK: But does it work though?
+    
+    NOUR: Looks like it's missing the floppy disk.
+    
+    NICK: Floppy disk?
+    
+    NOUR: It's like a small card you had to put into old computers to get them to work.
+    
+    MS SUWAN: Wow Nour, I didn't think people your age knew about floppy disks, I thought it would be all selfies and social media.
+    
+    NOUR: People my age? Girl I grew up using this computer because my parent's didn't like using new tech and I didn't even get my first phone until high school.
+    
+    NICK: Ok so where is this floppy dip? 
+    
+    MS SUWAN: Disk and I don't see one anywhere on this desk...strange.
+    
+    NICK: You think THAT is strange??? We're in a different dimension Ms Suwan.
+    
+    NOUR: We've been trying to tell you there's no way we can contact someone from here. We're gonna have to figure out how to get out of here ourselves.
     
     -> END
     

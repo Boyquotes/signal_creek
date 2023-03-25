@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/jewelrystand.ink-b695bd5db93375cb3d3177039540562c.res"
+
+[deps]
+
+source_file="res://assets/ink/topicspot/jewelrystand.ink"
+dest_files=[ "res://.import/jewelrystand.ink-b695bd5db93375cb3d3177039540562c.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

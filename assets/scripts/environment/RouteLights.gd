@@ -46,28 +46,38 @@ func turn_on_all_lights():
 	turn_on_light("Nick0")
 	turn_on_light("Nour0")
 	turn_on_light("Suwan0")
+	Globals.SoundManager.play_sound("TapSound")
+	
 	yield(get_tree().create_timer(light_timer), "timeout")
 	turn_on_light("Nick1")
 	turn_on_light("Nour1")
 	turn_on_light("Suwan1")
+	Globals.SoundManager.play_sound("TapSound")
+	
 	yield(get_tree().create_timer(light_timer), "timeout")
 	turn_on_light("Nick2")
 	turn_on_light("Nour2")
 	turn_on_light("Suwan2")
+	Globals.SoundManager.play_sound("TapSound")
 
 
 func turn_off_all_lights():
 	turn_off_light("Nick0")
 	turn_off_light("Nour0")
 	turn_off_light("Suwan0")
+	Globals.SoundManager.play_sound("TapSound")
+	
 	yield(get_tree().create_timer(light_timer), "timeout")
 	turn_off_light("Nick1")
 	turn_off_light("Nour1")
 	turn_off_light("Suwan1")
+	Globals.SoundManager.play_sound("TapSound")
+	
 	yield(get_tree().create_timer(light_timer), "timeout")
 	turn_off_light("Nick2")
 	turn_off_light("Nour2")
 	turn_off_light("Suwan2")
+	Globals.SoundManager.play_sound("TapSound")
 
 
 func door_close_anim():

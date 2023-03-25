@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sheet_suwan_past.png-64bc44918305120e0615fcbd0108b431.stex"
+path="res://.import/portrait_placeholder.png-814c8a0e0fb0c8b6b7bf2b050eabdb61.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/sheet_suwan_past.png"
-dest_files=[ "res://.import/sheet_suwan_past.png-64bc44918305120e0615fcbd0108b431.stex" ]
+source_file="res://assets/sprites/characters/portraits/portrait_placeholder.png"
+dest_files=[ "res://.import/portrait_placeholder.png-814c8a0e0fb0c8b6b7bf2b050eabdb61.stex" ]
 
 [params]
 
