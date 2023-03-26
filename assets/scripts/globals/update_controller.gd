@@ -14,6 +14,10 @@ func _start():
 
 
 func _process(_delta):
+	
+	if Input.is_action_just_pressed("open_menu"):
+		Globals.PauseMenu.toggle_visible()
+		
 	if Input.is_action_just_pressed("reset"):
 		reset_game()
 	

@@ -75,3 +75,6 @@ func set_mute_audio(mode):
 	soundPlayer.set_stream_paused(mode)
 	ambientPlayer.set_stream_paused(mode)
 	musicPlayer.set_stream_paused(mode)
+	
+func set_stream_volume(stream, streamVolume: float):
+	stream.set_volume_db(streamVolume)

@@ -11,6 +11,7 @@ enum AnimationMode { WALK, IDLE }   #todo. do we want each combo ex walk_left id
 
 var GameCanvas = null
 var DevTools = null
+var PauseMenu = null
 
 var GameMode = GameModes.WALK
 var CurrentWorld = Worlds.DREAM
