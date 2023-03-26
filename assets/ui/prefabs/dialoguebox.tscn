@@ -51,12 +51,12 @@ margin_right = -7.06946
 margin_bottom = 0.189758
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
-margin_right = 368.0
+margin_right = 371.0
 margin_bottom = 424.0
 rect_clip_content = false
 focus_mode = 2
 size_flags_vertical = 3
-scroll_vertical = 95
+scroll_horizontal_enabled = false
 script = ExtResource( 13 )
 damping = 0.65
 over_drag_multiplicator_top = 0
@@ -64,9 +64,8 @@ over_drag_multiplicator_bottom = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer"]
 light_mask = 9
-margin_top = -95.0
 margin_right = 349.0
-margin_bottom = 435.0
+margin_bottom = 530.0
 rect_min_size = Vector2( 349, 424 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
