@@ -38,12 +38,15 @@ var _save_file_path = "res://saves"
 var _ink_story
 
 var fastforward = false
+var pause = false
+var pause_timer
 
 onready var background_panel_node = $Panel
 onready var _scroll_node = $Panel/MarginContainer/ScrollContainer
 onready var _scrollbar = _scroll_node.get_v_scrollbar()
 onready var _vertical_layout_node = $Panel/MarginContainer/ScrollContainer/VBoxContainer
 onready var _ink_player = $InkPlayer
+onready var _pause_timer
 
 
 func _ready():
@@ -60,11 +63,17 @@ func _ready():
 	_scrollbar.connect("changed", self, "scroll_to_bottom")
 	max_scroll_length = _scrollbar.max_value
 	
+	_pause_timer = Timer.new()
+	add_child(_pause_timer)
+	_pause_timer.connect("timeout", self, "_pause_timer_timeout")
+	_pause_timer.set_one_shot(true)
 
+
+func _pause_timer_timeout():
+	pause = false
 
 
 func _process(_delta):
-	
 	var allEntries = _vertical_layout_node.get_children()
 	
 	for entry in allEntries:
@@ -134,6 +143,9 @@ func free_old_choicebox():
 
 # proceeding to the next string that ink should return
 func proceed():
+	if pause:
+		return
+		
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
 		clear_and_reset_ui()
 		is_displaying_choices = false
@@ -418,6 +430,11 @@ func _on_Fullscreen_toggled(_button_pressed):
 		OS.window_fullscreen = true
 	pass # Replace with function body.
 
+
+func pause_dialogue(pauseDuration: float):
+	pause = true
+	_pause_timer.wait_time = pauseDuration
+	_pause_timer.start()
 
 #func _on_VBoxContainer_resized():
 #	pass # Replace with function body.

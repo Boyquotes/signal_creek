@@ -63,16 +63,18 @@ INCLUDE topicspot/jewelrystand.ink
     MS. SUWAN: "It sounded like...an elevator chime."
     
     NICK: "Quick! Let's go back to the elevator and check it out!"
-
-    &FIRSTLIGHT
     
     &BLACK
+
+    &FIRSTLIGHT
     
     &EMOTE_NICK_UpIdle
     
     &EMOTE_SUWAN_UpIdle
     
     &EMOTE_NOUR_UpIdle
+    
+    &PAUSE_1.0
     
     NICK: "Woah, look at that! One of the weird elevator lights turned <b>on</b>!"
     
