@@ -55,8 +55,9 @@ func _on_Game_doorway_entered(newRoom, partyPosition):
 	
 
 func play_loading_screen():
-	loadingscreen.set_visible(true)
+#	Globals.GameOverlay.start_fade_out()
 	Globals.SoundManager.set_music_pause_mode(true)
+	loadingscreen.set_visible(true)
 	loadingscreen_animation.play("Loading")
 	yield(get_tree().create_timer(1.5), "timeout")
 	loadingscreen.set_visible(false)

@@ -32,9 +32,6 @@ func place_party(partyNode):
 	Globals.GameCanvas.set_camera_following_vector(partyNode.get_leader().get_global_position())
 	Globals.GameCanvas.set_camera_pos(partyNode.get_leader().get_global_position(), Globals.PartyCamera)
 	Globals.GameCanvas.play_loading_screen()
-	
-
-	
 	Globals.PartyCamera.set_camera_bounds(room_bounds_min, room_bounds_max)
 
 func move_party_to_position(partyNode, newPosition):

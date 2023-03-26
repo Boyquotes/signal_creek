@@ -3,8 +3,6 @@
     //location: elevator
     //NICK AND NOUR RUN INTO THE ELEVATOR
     
-    &PAUSE_0.5
-    
     NICK: “QUICK, IN HERE! There's no way she'll find us here!"
     
     &POS_SUWAN_160,248
@@ -162,8 +160,6 @@
     &EMOTE_NICK_DownIdle
     
     &EMOTE_NOUR_DownIdle
-    
-    ELEVATOR OPENS...
     
     &ELEVATOR_OPEN
     

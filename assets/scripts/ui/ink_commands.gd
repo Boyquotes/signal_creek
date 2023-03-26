@@ -10,6 +10,9 @@ func parse_commands(currentLine):
 	elif "&BLACK" in currentLine:
 		Globals.GameOverlay.set_to_black()
 		
+	elif "&FDEOUT" in currentLine:
+		Globals.GameOverlay.start_fade_out()
+		
 	# fade in from black
 	elif "&FDEIN" in currentLine:
 		Globals.GameOverlay.start_fade_in()

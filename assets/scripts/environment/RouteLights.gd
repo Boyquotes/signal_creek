@@ -39,7 +39,8 @@ func activate_light_tutorial():
 	
 	if RoomEngine.CurrentRoomIndex == 1:
 		RoomEngine.CurrentRoom.move_party_to_position(Globals.PartyObject, Vector2(472, 304))
-		
+		Globals.GameCanvas.set_camera_following_vector(Vector2(472, 304))
+		Globals.GameCanvas.play_loading_screen()
 	else:
 		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[1], Vector2(472, 304))
 		
