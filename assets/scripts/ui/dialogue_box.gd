@@ -31,6 +31,7 @@ var is_auto_scrolling = false
 var is_expanding_background_panel = false
 var is_shrinking_background_panel = false
 var background_panel_max_height
+var max_scroll_length := 0
 
 # Story state save file location 
 var _save_file_path = "res://saves"
@@ -40,6 +41,7 @@ var fastforward = false
 
 onready var background_panel_node = $Panel
 onready var _scroll_node = $Panel/MarginContainer/ScrollContainer
+onready var _scrollbar = _scroll_node.get_v_scrollbar()
 onready var _vertical_layout_node = $Panel/MarginContainer/ScrollContainer/VBoxContainer
 onready var _ink_player = $InkPlayer
 
@@ -54,9 +56,23 @@ func _ready():
 	var bgPanelDefaultPos = background_panel_node.get_position()
 	background_panel_max_height = background_panel_node.get_size().y
 	background_panel_node.set_position(Vector2(bgPanelDefaultPos.x, -background_panel_max_height))
+	
+	_scrollbar.connect("changed", self, "scroll_to_bottom")
+	max_scroll_length = _scrollbar.max_value
+	
+
 
 
 func _process(_delta):
+	
+	var allEntries = _vertical_layout_node.get_children()
+	
+	for entry in allEntries:
+		# get entry's distance from the Prime Visibility Coordinate
+		# set its modulate to be lower the further it is from Prime Visibility coordinate
+		# there should be a safe zone for the most recent passage
+		pass
+	
 	if is_typing:
 		typewriter_effect(false)
 		
@@ -72,9 +88,7 @@ func _process(_delta):
 	
 	elif is_shrinking_background_panel:
 		shrink_background_panel()
-		
-	if is_auto_scrolling:
-		auto_scroll_down()
+
 
 # Opening the player as-is
 # tell _ink_player to open knot with name that matches pathstring
@@ -155,8 +169,14 @@ func proceed():
 		display_choices("NOUR")
 		set_camera_position_to_speaker()
 		
-	yield(get_tree(), "idle_frame")
-	scroll_to_bottom()
+#	var last_child = _vertical_layout_node.get_child(_vertical_layout_node.get_child_count() - 1)
+#	_vertical_layout_node.set_focus
+	
+	
+#	_scroll_node.scroll_vertical(159)
+	yield(VisualServer, 'frame_post_draw')
+	_scroll_node.scroll_to_bottom()
+#	_scroll_node.scrolling_to_bottom = true
 	return "no command"
 
 # Parses entryText for special characters, determines what type of entry this is
@@ -175,6 +195,9 @@ func check_entry_type(entryText):
 		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_paragraph)
 		current_speaker = entryText.split(":")[0]
 		_vertical_layout_node.add_child(newDialogue)
+#		newDialogue.grab_focus()
+#		yield(VisualServer, 'frame_post_draw')
+#		_scroll_node.ensure_control_visible(newDialogue)
 		
 		#track the text label for typewriter effect
 		current_text_box = newDialogue.get_dialogue_text()
@@ -195,20 +218,25 @@ func check_entry_type(entryText):
 		is_typing = true
 		
 		_vertical_layout_node.add_child(newText)
+#		newText.grab_focus()
+#		yield(VisualServer, 'frame_post_draw')
+#		_scroll_node.ensure_control_visible(newText)
 
 
 func scroll_to_bottom():
-	_scroll_node.set_v_scroll(_scroll_node.get_v_scrollbar().max_value)
+	if _scrollbar.max_value != max_scroll_length:
+		max_scroll_length = _scrollbar.max_value
+		_scroll_node.set_v_scroll(_scrollbar.max_value)
 
 
-#used when a new entry is created
-func auto_scroll_down():
-	var scrollValue = _scroll_node.get_v_scrollbar().get_value()
-	var maxScrollValue = _scroll_node.get_v_scrollbar().max_value
-	_scroll_node.set_v_scroll(lerp(scrollValue, maxScrollValue, scroll_increment))
-	if scrollValue >= maxScrollValue:
-		is_auto_scrolling = false
-		return
+##used when a new entry is created
+#func auto_scroll_down():
+#	var scrollValue = _scroll_node.get_v_scrollbar().get_value()
+#	var maxScrollValue = _scroll_node.get_v_scrollbar().max_value
+#	_scroll_node.set_v_scroll(lerp(scrollValue, maxScrollValue, scroll_increment))
+#	if scrollValue >= maxScrollValue:
+#		is_auto_scrolling = false
+#		return
 
 
 #smoothly decrease size of background panel after dialogue concludes
@@ -278,6 +306,10 @@ func display_choices(chooserName):
 	_current_choice_entry_choices = newChoiceEntry.get_choices()
 	_current_choice_entry_choices[_current_choice_index].set_highlighted(true)
 	_vertical_layout_node.add_child(newChoiceEntry)
+#	newChoiceEntry.grab_focus()
+#	yield(VisualServer, 'frame_post_draw')
+#	_scroll_node.ensure_control_visible(newChoiceEntry)
+	
 	_current_choice_entry = newChoiceEntry
 	
 	Globals.SoundManager.play_sound("NewChoiceEntry")
@@ -385,3 +417,7 @@ func _on_Fullscreen_toggled(_button_pressed):
 	else:
 		OS.window_fullscreen = true
 	pass # Replace with function body.
+
+
+#func _on_VBoxContainer_resized():
+#	pass # Replace with function body.
