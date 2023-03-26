@@ -44,8 +44,8 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.48
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "[b]MS. SUWAN[/b]"
-text = "MS. SUWAN"
+bbcode_text = "[b]NOUR[/b]"
+text = "NOUR"
 fit_content_height = true
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer"]

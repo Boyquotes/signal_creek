@@ -60,10 +60,6 @@ INCLUDE topicspot/jewelrystand.ink
     
     &BLACK
     
-    ...
-    
-    &FDEIN
-    
     &EMOTE_NICK_UpIdle
     
     &EMOTE_SUWAN_UpIdle
