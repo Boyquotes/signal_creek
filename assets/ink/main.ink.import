@@ -2,11 +2,13 @@
 
 importer="ink"
 type="Resource"
-valid=false
+path="res://.import/main.ink-c7a8e3d5258ae7ea76f7d25d4db298dc.res"
 
 [deps]
 
 source_file="res://assets/ink/main.ink"
+dest_files=[ "res://.import/main.ink-c7a8e3d5258ae7ea76f7d25d4db298dc.res" ]
+
 [params]
 
 is_master_file=true
