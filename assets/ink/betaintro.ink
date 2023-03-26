@@ -3,6 +3,8 @@
     //location: elevator
     //NICK AND NOUR RUN INTO THE ELEVATOR
     
+    &PAUSE_0.5
+    
     NICK: “QUICK, IN HERE! There's no way she'll find us here!"
     
     &POS_SUWAN_160,248
@@ -11,11 +13,17 @@
     
     &FOLLOW_SUWAN_SuwanStartingPos
     
+    &PAUSE_0.5
+    
     NICK: "If we hide here, she'll give up chasing us down—”
+    
+    
     
     &EMOTE_NICK_DownIdle
     &FOLLOW_NOUR_NourElevatorPos
     &EMOTE_NICK_LeftIdle
+    
+    &PAUSE_0.5
     
     NOUR: “In the BROKEN ELEVATOR?”
     
@@ -57,6 +65,8 @@
     &EMOTE_NOUR_DownIdle
     
     &EMOTE_NICK_LookAround
+    
+    &PAUSE_0.5
     
     NICK: "Aw, shoot! The scary old lady caught up!"
     
