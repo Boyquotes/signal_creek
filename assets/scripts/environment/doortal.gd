@@ -21,6 +21,8 @@ func _ready():
 func _on_Doortal_body_entered(body):
 	
 	if Globals.GameMode == Globals.GameModes.WALK and body.is_in_group("Player") and body == Globals.PartyObject.get_leader():
+		Globals.GameOverlay.start_fade_out()
+		Globals.GameCanvas.loadingscreen_animation.play("Off")
 		entrance_timer.start()
 		
 		

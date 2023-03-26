@@ -56,13 +56,17 @@ INCLUDE topicspot/jewelrystand.ink
     
 == first_light ==
 
-    &FIRSTLIGHT
+    SFX ELEVATOR LIGHT CHIME PLAYS
+
+    NOUR: "What was that noise?"
+    
+    MS. SUWAN: "It sounded like...an elevator chime."
+    
+    NICK: "Quick! Let's go back to the elevator and check it out!"
     
     &BLACK
-    
-    ...
-    
-    &FDEIN
+
+    &FIRSTLIGHT
     
     &EMOTE_NICK_UpIdle
     
@@ -70,11 +74,29 @@ INCLUDE topicspot/jewelrystand.ink
     
     &EMOTE_NOUR_UpIdle
     
-    NICK: "Oh shit bro did that light turn on?"
+    &PAUSE_1.0
     
-    NOUR: "What does it mean man..."
+    NICK: "Woah, look at that! One of the weird elevator lights turned <b>on</b>!"
     
-    MS. SUWAN: "This is deep, not everyone will understand."
+    NOUR: "I could've sworn this elevator was broken."
+    
+    NICK: "It definitely still looks broken..."
+    
+    MS. SUWAN: "This is becoming stranger and stranger. What made it light up in the first place?"
+    
+    NICK: "I dunno, but we must've done <i>something</i> to make the elevator work again!"
+    
+    NICK: "WAIT..."
+    
+    NICK: "The mall...is LISTENING. It knows what we're doing!"
+    
+    MS. SUWAN: "That's creepy."
+    
+    NICK: "No, it's cool! The mall is our friend!"
+    
+    NOUR: "Whatever we did, it must've been the right thing."
+    
+    NOUR: "We should keep an eye on this elevator and its lights."
     
     -> END
     
@@ -85,6 +107,10 @@ INCLUDE topicspot/jewelrystand.ink
             -> first_light
     }
     
-    Another light turned on bro.
+    SFX ELEVATOR LIGHT CHIME PLAYS
+    
+    //would be cool if this text was in a different color. 
+    
+    Another light turned on.
     
     -> END

@@ -63,51 +63,45 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 content_margin_right = 16.0
 
 [sub_resource type="StyleBoxFlat" id=3]
-content_margin_left = 2.0
-content_margin_right = 2.0
-bg_color = Color( 0.447059, 0.447059, 0.447059, 1 )
-border_color = Color( 0.8, 0.8, 0.8, 0 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
+bg_color = Color( 0.23428, 0.2136, 0.24, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 4
+shadow_color = Color( 0, 0, 0, 0 )
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=8]
-content_margin_left = 2.0
-content_margin_right = 2.0
-bg_color = Color( 1, 1, 1, 0.470588 )
-border_color = Color( 0.8, 0.8, 0.8, 0 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.35406, 0.3204, 0.36, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 4
+shadow_color = Color( 0, 0, 0, 0 )
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=9]
-content_margin_left = 2.0
-content_margin_right = 2.0
-bg_color = Color( 1, 1, 1, 0.392157 )
-border_color = Color( 0.8, 0.8, 0.8, 0 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.304885, 0.2759, 0.31, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 4
+shadow_color = Color( 0, 0, 0, 0 )
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id=6]
 content_margin_left = 3.0
 content_margin_right = 3.0
-bg_color = Color( 1, 1, 1, 0 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 1, 1, 1, 0.313726 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
+bg_color = Color( 0.784314, 0.721569, 0.803922, 0.12549 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+corner_detail = 4
 anti_aliasing = false
 
 [resource]
@@ -160,7 +154,7 @@ VScrollBar/icons/increment = null
 VScrollBar/icons/increment_highlight = null
 VScrollBar/icons/increment_pressed = null
 VScrollBar/styles/grabber = SubResource( 3 )
-VScrollBar/styles/grabber_highlight = SubResource( 8 )
-VScrollBar/styles/grabber_pressed = SubResource( 9 )
+VScrollBar/styles/grabber_highlight = SubResource( 14 )
+VScrollBar/styles/grabber_pressed = SubResource( 15 )
 VScrollBar/styles/scroll = SubResource( 6 )
 VScrollBar/styles/scroll_focus = null

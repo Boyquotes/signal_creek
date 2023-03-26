@@ -14,6 +14,8 @@ var _following_vector = Vector2(0, 0)
 
 onready var viewport_container = $ViewportContainer
 onready var viewport = $ViewportContainer/Viewport
+onready var loadingscreen = $LoadingScreen
+onready var loadingscreen_animation = $LoadingScreen/AnimationPlayer
 
 
 func _ready():
@@ -51,6 +53,16 @@ func _on_Game_doorway_entered(newRoom, partyPosition):
 	newRoom.call_deferred("set_party_starting_position", partyPosition)
 	RoomEngine.call_deferred("change_current_room", RoomEngine.CurrentRoom, newRoom, viewport)
 	
+
+func play_loading_screen():
+	loadingscreen.set_visible(true)
+	Globals.SoundManager.set_music_pause_mode(true)
+	loadingscreen_animation.play("Loading")
+	yield(get_tree().create_timer(1.5), "timeout")
+	loadingscreen.set_visible(false)
+	Globals.SoundManager.set_music_pause_mode(false)
+	Globals.SoundManager.play_music_by_index(Globals.SoundManager.room_music[RoomEngine.CurrentRoomIndex])
+	Globals.GameOverlay.start_fade_in()
 
 
 # Update position of specified camera to newCameraPos

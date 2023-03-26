@@ -33,6 +33,10 @@ func turn_off_light(light_name):
 
 # move party to the position for light tutorial conversation
 func activate_light_tutorial():
+	
+
+	yield(Globals.GameCanvas.get_tree().create_timer(1.0), "timeout")
+	
 	if RoomEngine.CurrentRoomIndex == 1:
 		RoomEngine.CurrentRoom.move_party_to_position(Globals.PartyObject, Vector2(472, 304))
 		

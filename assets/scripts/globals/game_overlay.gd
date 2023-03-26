@@ -9,6 +9,7 @@ export var shake_min_magnitude : float = 2.0
 export var shake_max_magnitude : float = 10.0
 
 export var fade_timer_interval : float = 1.0
+export var fade_out_timer_interval := 0.25
 
 var _shake_timer
 var _is_shaking = false
@@ -40,7 +41,7 @@ func _ready():
 	
 	_fade_out_timer = Timer.new()
 	add_child(_fade_out_timer)
-	_fade_out_timer.wait_time = fade_timer_interval
+	_fade_out_timer.wait_time = fade_out_timer_interval
 	_fade_out_timer.connect("timeout", self, "_fade_out_timer_timeout")
 	_fade_out_timer.set_one_shot(true)
 	_overlay_material = self.material

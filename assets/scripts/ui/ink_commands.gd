@@ -157,3 +157,7 @@ func parse_commands(currentLine):
 			
 		else: 
 			Globals.ChadBrodyKristy.cbk_shlorp_in(characterName)
+			
+	elif "&PAUSE" in currentLine:
+		var pauseTime = float(currentLine.split("_")[1].strip_escapes())
+		Globals.DialogueBox.pause_dialogue(pauseTime)
