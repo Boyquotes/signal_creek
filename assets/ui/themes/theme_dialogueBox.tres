@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=15 format=2]
+[gd_resource type="Theme" load_steps=17 format=2]
 
 [ext_resource path="res://assets/ui/fonts/cambay/cambay_italic_16.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold.tres" type="DynamicFont" id=2]
@@ -63,7 +63,27 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 content_margin_right = 16.0
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.312533, 0.288, 0.32, 1 )
+bg_color = Color( 0.23428, 0.2136, 0.24, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 4
+shadow_color = Color( 0, 0, 0, 0 )
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.35406, 0.3204, 0.36, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 4
+shadow_color = Color( 0, 0, 0, 0 )
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.304885, 0.2759, 0.31, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -134,7 +154,7 @@ VScrollBar/icons/increment = null
 VScrollBar/icons/increment_highlight = null
 VScrollBar/icons/increment_pressed = null
 VScrollBar/styles/grabber = SubResource( 3 )
-VScrollBar/styles/grabber_highlight = SubResource( 3 )
-VScrollBar/styles/grabber_pressed = SubResource( 3 )
+VScrollBar/styles/grabber_highlight = SubResource( 14 )
+VScrollBar/styles/grabber_pressed = SubResource( 15 )
 VScrollBar/styles/scroll = SubResource( 6 )
 VScrollBar/styles/scroll_focus = null
