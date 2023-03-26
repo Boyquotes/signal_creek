@@ -64,17 +64,16 @@ INCLUDE topicspot/jewelrystand.ink
     
     NICK: "Quick! Let's go back to the elevator and check it out!"
     
-    &BLACK
-
+    &FDEOUT
     &FIRSTLIGHT
+    &PAUSE_1.0
+    // &FDEIN
     
     &EMOTE_NICK_UpIdle
     
     &EMOTE_SUWAN_UpIdle
     
     &EMOTE_NOUR_UpIdle
-    
-    &PAUSE_1.0
     
     NICK: "Woah, look at that! One of the weird elevator lights turned <b>on</b>!"
     
