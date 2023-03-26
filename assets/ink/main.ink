@@ -76,6 +76,8 @@ INCLUDE topicspot/jewelrystand.ink
     
     &PAUSE_1.0
     
+    &FDEIN
+    
     NICK: "Woah, look at that! One of the weird elevator lights turned <b>on</b>!"
     
     NOUR: "I could've sworn this elevator was broken."

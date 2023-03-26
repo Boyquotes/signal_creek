@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
 [ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/suwan_dream.png" type="Texture" id=3]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
-[ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/nick_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/characters/portraits/portrait_nick_neutral.png" type="Texture" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/sprites/characters/portraits/portrait_nour_neutral.png" type="Texture" id=8]
@@ -47,8 +47,9 @@ anchor_top = 0.045283
 anchor_right = 0.973421
 anchor_bottom = 0.844925
 margin_left = 5.97638
-margin_right = -7.06946
+margin_right = -4.06946
 margin_bottom = 0.189758
+rect_min_size = Vector2( 371, 424 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
 margin_right = 371.0
