@@ -10,11 +10,11 @@
     
     -> END
     
-== jewelrystand ==
+// == jewelrystand ==
 
-    It's a jewelry stand. Max has to write stuff here, so if you're reading this, tell him to write it.
+//     It's a jewelry stand. Max has to write stuff here, so if you're reading this, tell him to write it.
     
-    -> END
+//     -> END
     
 == kirbyposter ==
 
@@ -28,25 +28,25 @@
     
     -> END
     
-== spraycans ==
+// == spraycans ==
 
-    It's a bunch of spray cans. 
+//     It's a bunch of spray cans. 
     
-    NICK: "<i>Must be 18+ to purchase...</i>"
+//     NICK: "<i>Must be 18+ to purchase...</i>"
     
-    NICK: "This sucks! This might be the ONLY time I wish I were an adult!"
+//     NICK: "This sucks! This might be the ONLY time I wish I were an adult!"
     
-    NICK: "Wait a minute, Nour! You're over 18! Could you get some—"
+//     NICK: "Wait a minute, Nour! You're over 18! Could you get some—"
     
-    NOUR: "I don't think I trust you with these."
+//     NOUR: "I don't think I trust you with these."
     
-    NICK: "Dang it."
+//     NICK: "Dang it."
     
-    NICK: "So long, beautiful spray cans...wait for me because one day, we will meet again!"
+//     NICK: "So long, beautiful spray cans...wait for me because one day, we will meet again!"
     
-    NICK: "...In exactly TWO years!"
+//     NICK: "...In exactly TWO years!"
     
-    -> END
+//     -> END
     
 == trinkets ==
 

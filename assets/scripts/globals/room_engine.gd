@@ -49,6 +49,9 @@ func move_party_to_new_room(partyObject, previousRoom, newRoom):
 	previousRoom.remove_party(partyObject)
 	newRoom.place_party(partyObject)
 	
+
+	
+	
 #	Globals.GameCanvas.set_camera_pos(partyObject.get_leader().get_global_position(), Globals.PartyCamera)
 #	Globals.GameOverlay.start_fade_in()
 	

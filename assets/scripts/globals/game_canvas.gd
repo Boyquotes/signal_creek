@@ -8,11 +8,14 @@ signal doorway_entered(newroom, partyposition)
 
 export var camera_pixel_size : Vector2 = Vector2(320, 180)
 export var testing_enabled = false
+export var testing_start_pos : Vector2 = Vector2(716, -320)
 
 var _following_vector = Vector2(0, 0)
 
 onready var viewport_container = $ViewportContainer
 onready var viewport = $ViewportContainer/Viewport
+onready var loadingscreen = $LoadingScreen
+onready var loadingscreen_animation = $LoadingScreen/AnimationPlayer
 
 
 func _ready():
@@ -36,7 +39,8 @@ func _ready():
 	
 	#emit_signal("doorway_entered", RoomEngine.Rooms[RoomEngine.CurrentRoomIndex], RoomEngine.Rooms[RoomEngine.CurrentRoomIndex].get_party_starting_position())
 	if testing_enabled:
-		call_deferred("_doorway_entered", RoomEngine.Rooms[0], RoomEngine.Rooms[0].get_party_starting_position())
+		RoomEngine.Rooms[1].set_party_starting_position(testing_start_pos)
+		call_deferred("_doorway_entered", RoomEngine.Rooms[1], RoomEngine.Rooms[1].get_party_starting_position())
 	else:
 		call_deferred("_doorway_entered", RoomEngine.Rooms[3], RoomEngine.Rooms[3].get_party_starting_position())
 
@@ -49,6 +53,17 @@ func _on_Game_doorway_entered(newRoom, partyPosition):
 	newRoom.call_deferred("set_party_starting_position", partyPosition)
 	RoomEngine.call_deferred("change_current_room", RoomEngine.CurrentRoom, newRoom, viewport)
 	
+
+func play_loading_screen():
+#	Globals.GameOverlay.start_fade_out()
+	Globals.SoundManager.set_music_pause_mode(true)
+	loadingscreen.set_visible(true)
+	loadingscreen_animation.play("Loading")
+	yield(get_tree().create_timer(1.5), "timeout")
+	loadingscreen.set_visible(false)
+	Globals.SoundManager.set_music_pause_mode(false)
+	Globals.SoundManager.play_music_by_index(Globals.SoundManager.room_music[RoomEngine.CurrentRoomIndex])
+	Globals.GameOverlay.start_fade_in()
 
 
 # Update position of specified camera to newCameraPos
@@ -73,5 +88,5 @@ func _doorway_entered(newRoom, partyPosition):
 func reload():
 	Globals.reload()
 	RoomEngine.reload()
-	get_tree().reload_current_scene()
+	var _reloaded = get_tree().reload_current_scene()
 	Globals.GameOverlay.reload()

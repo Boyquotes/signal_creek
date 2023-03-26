@@ -63,6 +63,7 @@ default_bus_layout=""
 Globals="*res://assets/scripts/globals/global_vars.gd"
 DialogueEngine="*res://assets/scripts/ui/dialogue_engine.gd"
 RoomEngine="*res://assets/scripts/globals/room_engine.gd"
+InkCommands="*res://assets/scripts/ui/ink_commands.gd"
 
 [debug]
 

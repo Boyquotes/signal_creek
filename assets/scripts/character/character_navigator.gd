@@ -47,13 +47,13 @@ func _ready():
 	_navtimer.start()
 	_navtimer.set_one_shot(true)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 #	var space_state = get_world_2d().direct_space_state
 #	var result = space_state.intersect_ray(Vector2(0, 0), Vector2(0, 0) + draw_look_far_left)
 #	print(result)
 	pass
 
-func _process(delta):
+func _process(_delta):
 	update()
 
 

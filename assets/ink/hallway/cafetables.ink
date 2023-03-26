@@ -1,18 +1,8 @@
-// VAR chadkristybrody_visitedSW1 = true
-// VAR musicstand_visitedSW2 = false
-// VAR swevent3_visited = false
-
-// ->cafetables
-
 === cafetables === 
-//chadkristybrody_visitedSW1 is the first conversation with CBK, Suwan's Route Event 1
-//musicstand_visistedSW2 is the conversation about the live recording with music stand, Suwan's Route Event 2
-//swevent3_visited is if Ms. Suwan's route is complete
-
 //note to self: do some gathers - choices that lead to the same conversation 
 
 {
-    - chadbrodykristy1 && musicstand2 && chadbrodykristy3:
+    - cafetables3:
         -> cafetables_end
         
     - chadbrodykristy2 && musicstand2 && chadbrodykristy3: 
@@ -21,7 +11,7 @@
     - chadbrodykristy2 && musicstand2:
         -> cafetables3_5
         
-    - chadbrodykristy2 && cafetables2_5:
+    - cafetables_getsuwantotalk:
         -> cafetables2_5_repeat
 
     - chadbrodykristy2 && cafetables1:
@@ -232,7 +222,7 @@
         NOUR: <i>I wonder...is she ready to listen to Paradise again? I should lead her there to find out.</i>
 -> END
 === cafetables3_5 ===
-    MS. SUWAN: "Let's not stop here. I'm ready to talk to the three of them."
+    // MS. SUWAN: "Let's not stop here. I'm ready to talk to the three of them."
     
     NOUR: <i>I should go find Chad, Kristy, and Brody.</i>
         -> END
@@ -242,9 +232,13 @@
     
     NOUR: "Really?"
     
-    MS. SUWAN: "Chad, Kristy, Brody, and I would discuss the concepts and inspirations behind Paradise's albums. We would pool in money to afford limited edition shirts and CDs..."
+    MS. SUWAN: "Chad, Kristy, Brody, and I would discuss the concepts and inspirations behind Paradise's albums."
     
-    MS. SUWAN: "We were notorious for being rowdy and hounding the cafe owner into playing Paradise."
+    MS. SUWAN: "We would pool in money to afford limited edition shirts and CDs..."
+    
+    MS. SUWAN: "And we were notorious for being rowdy and hounding the cafe owner into playing Paradise."
+    
+    NICK: "I wish I could've seen that!"
     
     NOUR: "Did it work?"
     
@@ -256,11 +250,17 @@
     
     MS. SUWAN: "What?"
     
-    NICK: "You were cool this WHOLE TIME?"
+    NICK: "You were so COOL back then!"
     
     MS. SUWAN: "Don't get any wrong ideas. You shouldn't behave that way in public."
     
-    MS. SUWAN: "...But of course, I believe that any establishment should listen to the people's demands. Healthy discourse and all that."
+    MS. SUWAN: "...But of course, I believe that any establishment should listen to the people's demands."
+    
+    NOUR: "Agreed. Plus, I don't think your actual job is totally different either."
+    
+    MS. SUWAN: "A lawyer states their case and persuades others for their cause."
+    
+    MS. SUWAN: "I just spend my time doing it at the office and not in a cafe mall."
     
     Ms. Suwan begrudgingly smiles. Nick looks at her with newfound respect.
     
@@ -276,7 +276,7 @@
     
     MS. SUWAN: "That didn't seem like nothing to me, but if that's what you want to say..."
     
-    NOUR: <i>I nod at her. I don't like the way she looks at me.</i
+    NOUR: <i>I nod at her. I don't like the way she looks at me.</i>
     
         -> cafetables_end
 

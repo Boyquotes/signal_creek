@@ -1,6 +1,7 @@
 extends Interactive
 
 export var rina_positions : Dictionary = {
+	"VOID": Vector2(-1000, -1000),
 	"START": Vector2(472, 280),
 	"BANDN": Vector2(146, -256),
 	"TOPICSPOT": Vector2(284, -21),
@@ -9,7 +10,7 @@ export var rina_positions : Dictionary = {
 }
 
 var current_room_index = 1
-var current_position = "START"
+var current_position = "VOID"
 var next_room_index = 3 # store the next room for whenever the player is actually in it
 var _shlorping_in = false
 var _shlorping_out = false
@@ -21,13 +22,14 @@ func _ready():
 	Globals.Rina = self
 #	if RoomEngine.CurrentRoom == RoomEngine.Rooms[1]:
 #		move_rina("START")
-	rina_shlorp_in()
+#	rina_shlorp_in()
 	self.get_parent().set_global_position(rina_positions.get(current_position))
 
 
 func _process(_delta):
 	if Input.is_action_just_pressed("party_leader_switch"):
 		print("RINA'S COORDINATES: " + String(self.get_parent().get_global_position()))
+
 	if _shlorping_in or _shlorping_out:
 		rina_shlorp()
 
@@ -56,6 +58,9 @@ func move_rina(newPosition):
 			newPositionRoomIndex = 1
 			
 		"END": # end in hallway
+			newPositionRoomIndex = 1
+			
+		"VOID":
 			newPositionRoomIndex = 1
 	
 	next_room_index = newPositionRoomIndex

@@ -11,7 +11,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Globals.GameMode == Globals.GameModes.WALK && _talked_to:
 		self.set_global_position(Vector2(-1000, -1000))
 

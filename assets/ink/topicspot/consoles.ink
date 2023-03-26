@@ -267,8 +267,19 @@ NICK: "... Here. Can you put it back for me? I... I don't need it anymore."
 Nour smiles and takes the bracelet.
 
 NOUR: "Sure thing, Nick."
+
 &LIGHT_Nick2
+
+BEEP ELEVATOR LIGHT SFX
+
 &MOV_RINA_TOPICSPOT
+
+NICK: "AGH, she's here! What does she want now?"
+
+NICK: "You know what, Nour... I think you should confront her about how she treated you."
+
+NICK: "You can do it!"
+
     -> light_on
 // -> END
 
@@ -292,6 +303,6 @@ NICK: "Maybe! I guess the only way to find out would be to play..."
 
 === consoles_end2 ===
 
-NOUR: <i>I've already looked at this. Maybe I should try looking at something or talking to someone else...</i>
+NOUR: <i>I've already looked at this. Maybe I should try looking at something or talking to someone else.</i>
 
 -> END

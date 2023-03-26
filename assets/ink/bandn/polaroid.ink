@@ -36,7 +36,7 @@
     * "I don't want to talk about it."
         MS. SUWAN: "...Hm. If you say so."
         
-        NARRATOR: "Ms. Suwan picks up the photograph and places it on top of the glass case."
+        Ms. Suwan picks up the photograph and places it on top of the glass case.
         
         MS. SUWAN: "We'll come back to this later. But you're going to have to face up to what happened."
         
@@ -53,6 +53,12 @@
         NICK: "Psh, no you can't!"
         
         &MOV_RINA_BANDN
+        
+        NOUR SHOCKED PORTARIT
+        
+        NOUR: <i>She's... here? Again?</i>
+        
+        NOUR: <i>I better tell her to get out of our way.</i>
         
         -> END
     * "...An old friend."
@@ -83,5 +89,11 @@
         NOUR: "I don't see why. Let's just go."
     
         &MOV_RINA_BANDN
+        
+        NOUR SHOCKED PORTARIT
+        
+        NOUR: <i>She's... here? Again?</i>
+        
+        NOUR: <i>I better tell her to get out of our way.</i>
         
         -> END
