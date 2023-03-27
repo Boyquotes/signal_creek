@@ -40,6 +40,8 @@ INCLUDE topicspot/static_topicspot.ink
 INCLUDE bandn/static_bandn.ink
 INCLUDE topicspot/jewelrystand.ink
 
+INCLUDE bandn/aplequestguide.ink
+
 
 
 == abstract ==

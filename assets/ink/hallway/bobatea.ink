@@ -1,167 +1,166 @@
-VAR drinkCount = 0
-
-== bobatea ==
-
+=== bobatea ===
+    
+    The vending machine is full of coffee, sparkling water, and diet sodas. The last row in the vending machine is a row of Specialty Drinks—japanese sodas and canned boba. 
+    
     {
-        - currentWorld == "dream" && bobatea_real:
-            -> bobatea_realvisited
-            
-        - currentWorld == "dream":
-            -> bobatea_dream
-            
-        - currentWorld == "real" && bobatea_dream:
-            -> bobatea_dreamvisited
-        
+        - bobatea2:
+            -> bobatea_end
+        - consoles3:
+            -> bobatea2
+        - bobatea1:
+            -> bobatea1_repeat
         - else:
-            -> bobatea_real
+            -> bobatea1
     }
 
-//---------------- DREAM WORLD ----------------
-
-== bobatea_dream ==
-
-    The vending machine is full of cool Japanese drinks, like Ramune and Boba Tea. There are other things in there, marketed by words that Nick can't understand, but their bright and bold letters and mascots make him smile.
+=== bobatea1 ===
+    Nick's nose scrunches up.
     
-    He runs over to the machine, peering in through the glass case.
+    NICK: "Bleh! Most of these suck."
     
-    :NICK:
+    NOUR: "These are more like liquid sugar than coffee... and the bad kind of liquid sugar, too."
     
-    * [Inspect the vending machine closer.]
-        -> inspect_vendingmachine_firsttime
+    MS. SUWAN: "I don't recognize any of these brands. I find that disturbing."
+    
+    NICK: "These all stink except for the boba!"
+    
+    NOUR: "But Nick, that stuff's canned. Wouldn't you rather get fresh boba from an actual shop?"
+    
+    NICK: "Mmm...well..."
+    
+    NICK: "The canned stuff is cheaper so..."
+    
+    NOUR: "Oh...yeah, you're right." 
+    
+        + [Offer to get him one]
         
-    * [Walk away.] Though it interests him greatly, he looks over at Nour and Ms.Suwan, embarassed, and steps away from the machine before he can really appreciate the drinks.
+            NICK: "No thanks. I'm ok."
+            
+            NOUR: "Are you sure?"
+            
+            NICK: "Yeah. If I accept something from someone, I'd wanna repay them."
+        
+        + [Leave the vending machine]
+    
+    - NOUR: "Ok. We should move on to something else, then."
+    
         -> END
 
-
-===inspect_vendingmachine_firsttime===
-
-    Upon further inspection, it seems the vending machine has been recently stocked. Not a single drink taken out yet. The panel on the side blinks enticingly - "BUY ONE FOR A DOLLAR, GET ANOTHER ONE FREE."
-    
-    NICK: Look! These look so tasty! Maybe we can take a break to have some? If we buy...
-    
-    He takes a moment to count on his fingers before exclaiming.
-    
-    Three! If we buy three we can each get two, and it'll only cost us three bucks! What a steal!
-    
-    :THE PARTY:
-    
-    *NOUR: Oh... I think I'll pass.
-        -> nour_doesnt_like_boba
+=== bobatea1_repeat ===
+    NOUR: <i>We've already looked at all the drinks here.</i>
         
-    *MS SUWAN: Oh! I didn't realize they sold Boba in vending machines. Perhaps I'll try one, later.
-        -> nick_ill_hold_you_to_it
+        -> END
 
+=== bobatea2 ===
+    NOUR: <i>We've already looked at all the drinks here.</i>
 
-===nour_doesnt_like_boba===
-
-    NICK: You don't like Boba, Nour???
+    NOUR: <i>...Wait a minute. What's that weird drink at the very end of the vending machine></i>
     
-    NOUR: Ah... not really, no. I prefer coffee.
+    MS. SUWAN: "There's something...wriggling? Inside that canned boba."
+
+    NOUR: "It...it looks like an apple!"
     
-    NICK: Gross. Well... maybe we'll find a coffee dispenser for you somewhere. Or maybe one of those fancy drinks from SandDollars. You think there's a SandDollars around?
+    NOUR: "We should buy the boba to free it. Do you want the boba, Nick?"
     
-    NOUR: SandDollars is a horrible company. If I had to choose, I'd take no coffee instead of their coffee.
+    NOUR: "I'm sure it'll taste real, um, apple-y. That's not too bad, right?"
+
+    Nick shrugs. After a moment, Ms. Suwan clears her throat.
+        
+    MS. SUWAN: "It's been quite an eventful day so far. Perhaps a drink is warranted."
     
-    NICK: Okayyy... No SandDollars... got it.
+    MS. SUWAN: "It'd be a waste to get rid of the boba for the sake of an apple."
     
-    -> END
-
-
-===nick_ill_hold_you_to_it===
-
-    NICK: Well then I'll hold you to it later!
+    Nick shakes his head. 
     
-    MS SUWAN: Of course. Maybe once we explore a little more we can have a Boba break.
+    NICK: "Can't repay you. So I don't want it."
     
-    NICK: Hell yeah... Boba Break Time! Let's get going, then. 
+        * [Offer to split the price]
+        
+        * [Suggest breaking the machine]
+            NOUR: "We could break the apple out of the confines of this machine. What do you say?"
+            
+            NOUR: "It would be free."
+            
+            MS. SUWAN: "Let's be reasonable, please. We could simply all pitch in and pay."
+            
+            Nick smiles a little but quickly smothers it with a scowl.
+        
+    - NOUR: "Would you be more comfortable if we all split the price of the drink?"
     
-    -> END
-
-
-== bobatea_realvisited ==
-
-    {drinkCount < 2:
+    NICK: "...Just 50 cents each?"
+        
+    MS. SUWAN: "Exactly."
     
-        The vending machine is once again full of cool Japanese drinks, like Ramune and Boba tea and other things that Nick can't understand.
-        
-        He looks wistful as he approaches.
-        
-        NICK: Thank god it's not coffee. That shit is rancid. This is much better.
-        
-        Nour makes a face, visibly disagreeing with the sentiment, but says nothing.
-        
-        NICK: So... what do you say, Ms.Suwan? Want to buy that drink now?
-        
-        Ms.Suwan seems to think for a moment, before smiling briefly, mostly with her eyes. 
-        MS SUWAN: It's been quite an eventful day so far. Perhaps a drink is warranted. It's buy one, get one free, yes? I could buy one and give you the other-
-        
-        NICK: NO! I mean... sorry. No it's alright, we can split the cost so it's just 50 cents each, yeah?
-        
-        Ms.Suwan seems taken aback for a moment, but after a second she nods slowly. 
-        
-        MS SUWAN: Yes, of course. That sounds reasonable. Do you want to insert the coins or should I?
-        
-        NICK: Here! Let me do it.
-        
-        He takes the coins from Ms.Suwan, fishing out 50 cents of his own, and puts them into the machine. It seems the machine knows what both he and Ms.Suwan knows without need for any input, as two bottles slide out, one strawberry, one melon.
-        
-        Nick takes his happily, giving the melon one to Ms.Suwan. 
-        
-        ~ drinkCount = drinkCount + 1
-        
-    }
-
-    {drinkCount > 2:
+    NICK: "You should have some too, then. To make it fair."
     
-        The vending machine is once again full of cool Japanese drinks, like Ramune and Boba tea and other things that Nick can't understand.
+    NOUR: "We will."
+    
+    SFX COINS INTO VENDING MACHINE
+    
+    Nick fishes out two quarters from his pocket and inserts it into the vending machine.
+    
+    SFX CAN DISPENSED FROM MACHINE
+    
+    More quarters enter the vending machine. Soon, a can of boba rolls out.
+    
+    NOUR: "Here it is."
+    
+        * [Open the can]
         
-        He looks wistful as he approaches. He doesn't seem eager to buy another drink.
+        * [Give it to Ms. Suwan]
+            NOUR: "Could you open this, Ms. Suwan? I trust you the most."
+            
+            MS. SUWAN: "Very well."
         
-        MS SUWAN: Are you alright, Nick? 
+        * [Give it to Nick]
+            NOUR: "How about you open it, Nick? You know more about all of this than the two of us."
+            
+            MS. SUWAN: "Agreed."
+            
+            Nick shrugs again and takes the can.
+    
+    - The can is opened, and an apple squeezes out!
+    
+    ???: "FREEDOM..."
+    
+    NICK: "Woah...!"
+    
+    ???: "SWEET, SWEET FREEDOM!"
+    
+    ???: "THIS BOBA PRISON SHALL NO LONGER CONTAIN ME!"
         
-        NICK: Hm? Oh... yeah. Do you think since it's the dream world... I can buy an infinite amount of Boba? I don't have any more coins.
+    NOUR: "Um, hello. We're on behalf of Emperor Evercrisp to rescue you."
+    
+    ???: "Ah...yes. Thank you! HAR HAR!"
+    
+    ???: "It seems I, <i>ROYAL GUARD GALA</i>, have failed to find my prince."
+    
+    ROYAL GUARD GALA: "I hope that you may continue the search and bear the fruits of success, HAR HAR!"
+    
+    ROYAL GUARD GALA: "As a small reward, let me tell you something special that may help you on your multi-plane journey, Dream Walkers!"
+    
+    ROYAL GUARD GALA: "[insert epic lore drop here]"
+    
+    NOUR: "Huh. Interesting..."
+    
+    ROYAL GUARD GALA: "Let us charge forth and CONTINUE THE SEARCH!"
+    
+    NOUR: "Well, you heard what he said. Shall we?"
+    
+    Ms. Suwan nods, and Nick drinks the boba. 
+    
+    NOUR: "How's that tasting, Nick?"
+    
+    NICK: "Bad."
+    
+    Nick drinks more of it.
+    
+    NOUR: "...Sure it is. Make sure to save some for the rest of us."
+    
+        -> END
+
+=== bobatea_end ===
+
+    NOUR: <i>I think we've explored everything we could here.</i>
         
-        MS SUWAN: ... Maybe? Perhaps you can try? I'm not sure what you'd try but... you can will it into existence?
-        
-        Nick seems to focus all his attention on the machine, squinting very hard. After a few moments, it makes a noise, causing Nick to look in excitement... but nothing happens, and he looks disappointed.
-        
-        MS SUWAN: Do you want me to buy you a drink this time? It's still buy one, get one free.
-        
-        NICK: It's alright, thank you Ms.Suwan. I've had enough tea already, honestly. This is probably better before I get diabetes, lol. 
-    
-    }
-
-    -> END
-
-
-//SUBSEQUENT DREAM KNOTS HERE
-
-
-//---------------- REAL WORLD ----------------
-
-== bobatea_real ==
-
-    The vending machine is full of coffee, sparkling water, and diet sodas. Nick's nose scrunches up.
-    
-    NICK: I swear they used to have better stuff in here last I was here. I'm not buying any of this crap, it's not worth it.
-    
-    Nour looks at the assortment of drinks and seems equally unimpressed. 
-    
-    NOUR: They don't even have the good brands. These are more like liquid sugar than coffee... and the bad kind of liquid sugar, too.
-    
-    MS SUWAN: No point dwelling on the vending machine, then. Maybe there'll be better drinks around somewhere else.
-    
-    -> END
-
-
-== bobatea_dreamvisited ==
-
-    The vending machine is full of coffee, sparkling water, and diet sodas again. Nick's nose scrunches up.
-    
-    NICK: The backrooms knows whats up. What the hell is all this boring shit? Boba and Ramune are so much better. We shoud go back, I'm thirsty... and not for any of this.
-    
-    -> END
-
-//SUBSEQUENT REAL KNOTS HERE
-
-
+        -> END
