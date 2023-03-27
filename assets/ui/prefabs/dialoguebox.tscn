@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
-[ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/suwan_dream.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/portraits/portrait_mssuwan_neutral.png" type="Texture" id=3]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
 [ext_resource path="res://assets/sprites/characters/portraits/portrait_nick_neutral.png" type="Texture" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
@@ -217,7 +217,8 @@ characterPortraits = {
 "rina": ExtResource( 12 )
 }
 portraitLibrary = {
-"nick_netural": ExtResource( 3 ),
+"ms. suwan_neutral": ExtResource( 3 ),
+"nick_netural": ExtResource( 5 ),
 "nour_neutral": ExtResource( 8 ),
 "placeholder": ExtResource( 11 ),
 "rina_netural": ExtResource( 12 )
