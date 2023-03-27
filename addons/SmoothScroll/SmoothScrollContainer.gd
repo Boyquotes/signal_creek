@@ -28,8 +28,9 @@ var scrolling_to_bottom := true
 
 func _ready() -> void:
 	get_v_scrollbar().connect("scrolling", self, "_on_VScrollBar_scrolling")
-	for c in get_children():
-		content_node = c
+	content_node = $VBoxContainer
+#	for c in get_children():
+#		content_node = c
 
 
 func _process(delta: float) -> void:
@@ -148,3 +149,6 @@ func scroll_to_bottom() -> void:
 	content_node.rect_position = pos
 	# Update vertical scroll bar
 	set_v_scroll(-pos.y)
+
+func reload():
+	self.get_tree().reload_current_scene()

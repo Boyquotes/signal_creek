@@ -5,15 +5,19 @@ enum Characters { NICK, NOUR, SUWAN }
 enum GameModes { WALK, TALK, SHIFT }
 enum Worlds { REAL, DREAM }
 enum WalkDir { LEFT, RIGHT, UP, DOWN }
-enum AnimationMode { WALK, IDLE }   #todo. do we want each combo ex walk_left idle_right or use with WalkDir
+enum AnimationMode { WALK, IDLE }
+enum GameStates { START, GAME, END }
 
 #declare global game variables
 
 var GameCanvas = null
 var DevTools = null
+var PauseMenu = null
+var StartScreen = null
 
 var GameMode = GameModes.WALK
 var CurrentWorld = Worlds.DREAM
+var GameState = GameStates.START
 
 var UpdateController = null
 var GameWorldEnvironment = null

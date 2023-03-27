@@ -1,8 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
-[ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/suwan_dream.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/portraits/portrait_mssuwan_neutral.png" type="Texture" id=3]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
 [ext_resource path="res://assets/sprites/characters/portraits/portrait_nick_neutral.png" type="Texture" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
@@ -13,6 +13,64 @@
 [ext_resource path="res://assets/sprites/characters/portraits/portrait_placeholder.png" type="Texture" id=11]
 [ext_resource path="res://assets/sprites/characters/portraits/portrait_rina_neutral.png" type="Texture" id=12]
 [ext_resource path="res://addons/SmoothScroll/SmoothScrollContainer.gd" type="Script" id=13]
+[ext_resource path="res://assets/ui/images/downarrow.png" type="Texture" id=14]
+[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe_12.tres" type="DynamicFont" id=15]
+
+[sub_resource type="Animation" id=3]
+resource_name = "CanProceed"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.001, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 309, 509 ), Vector2( 309, 509 ), Vector2( 309, 512 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.6, 0.6, 0.6, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 309, 509 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.45, 0.45, 0.45, 1 ) ]
+}
 
 [sub_resource type="Gradient" id=1]
 
@@ -96,6 +154,34 @@ margin_top = 391.0
 margin_right = 349.0
 margin_bottom = 530.0
 
+[node name="DownArrow" type="TextureRect" parent="Panel"]
+modulate = Color( 0.6, 0.6, 0.6, 1 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -27.0
+margin_top = -21.0
+margin_right = 14.0
+margin_bottom = 4.00049
+rect_scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 14 )
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/DownArrow"]
+anims/CanProceed = SubResource( 3 )
+anims/Idle = SubResource( 4 )
+
+[node name="Space" type="RichTextLabel" parent="Panel"]
+visible = false
+margin_left = 281.0
+margin_top = 481.0
+margin_right = 326.0
+margin_bottom = 500.0
+custom_fonts/normal_font = ExtResource( 15 )
+text = "[SPACE]"
+fit_content_height = true
+
 [node name="Light2D" type="Light2D" parent="."]
 visible = false
 position = Vector2( 719.797, 232.563 )
@@ -129,4 +215,11 @@ characterPortraits = {
 "nour": ExtResource( 8 ),
 "placeholder": ExtResource( 11 ),
 "rina": ExtResource( 12 )
+}
+portraitLibrary = {
+"ms. suwan_neutral": ExtResource( 3 ),
+"nick_netural": ExtResource( 5 ),
+"nour_neutral": ExtResource( 8 ),
+"placeholder": ExtResource( 11 ),
+"rina_netural": ExtResource( 12 )
 }

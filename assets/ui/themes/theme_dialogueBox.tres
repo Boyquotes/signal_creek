@@ -5,6 +5,7 @@
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Italic.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=4]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe_BoldItalic.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/ui/themes/style_dialoguepanel.tres" type="StyleBox" id=6]
 
 [sub_resource type="StyleBoxFlat" id=2]
 content_margin_left = 4.0
@@ -45,16 +46,6 @@ anti_aliasing = false
 [sub_resource type="StyleBoxLine" id=13]
 color = Color( 1, 1, 1, 1 )
 thickness = 2
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.0745098, 0.0784314, 0.121569, 0.901961 )
-border_width_left = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color( 0.784314, 0.721569, 0.803922, 1 )
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -127,7 +118,7 @@ LinkButton/constants/underline_spacing = 2
 LinkButton/fonts/font = ExtResource( 1 )
 LinkButton/styles/focus = null
 Panel/fonts/font = ExtResource( 4 )
-Panel/styles/panel = SubResource( 1 )
+Panel/styles/panel = ExtResource( 6 )
 PanelContainer/styles/panel = SubResource( 12 )
 RichTextLabel/colors/default_color = Color( 1, 1, 1, 1 )
 RichTextLabel/colors/font_color_selected = Color( 1, 1, 1, 1 )

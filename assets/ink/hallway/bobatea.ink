@@ -3,11 +3,11 @@
     The vending machine is full of coffee, sparkling water, and diet sodas. The last row in the vending machine is a row of Specialty Drinks—japanese sodas and canned boba. 
     
     {
-        -> bobatea2
+        - bobatea2:
             -> bobatea_end
-        - console3:
+        - consoles3:
             -> bobatea2
-        - bobatea 1:
+        - bobatea1:
             -> bobatea1_repeat
         - else:
             -> bobatea1
@@ -46,7 +46,7 @@
     
         -> END
 
-=== bobatea1 ===
+=== bobatea1_repeat ===
     NOUR: <i>We've already looked at all the drinks here.</i>
         
         -> END

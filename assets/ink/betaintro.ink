@@ -29,6 +29,8 @@
    
     &EMOTE_NOUR_RightIdle
     
+    // &PORTRAIT_nour_placeholder
+    
     NICK: "Uh..."
         * [Try to escape]
             NOUR: "We need to get out of here!"
