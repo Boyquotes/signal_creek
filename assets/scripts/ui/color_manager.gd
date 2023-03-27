@@ -15,6 +15,10 @@ export var characterPortraits : Dictionary = {
 	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png")
 }
 
+export var portraitLibrary : Dictionary = {
+	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+}
+
 var current_color = "the party"
 var current_portrait = "nour"
 
@@ -44,3 +48,7 @@ func get_current_color():
 
 func get_current_portrait():
 	return current_portrait
+
+func set_character_portrait(characterName, portraitName):
+	var portraitToUse = portraitLibrary.get(portraitName)
+	characterPortraits[characterName] = portraitToUse

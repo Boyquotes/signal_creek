@@ -164,3 +164,8 @@ func parse_commands(currentLine):
 	elif "&PAUSE" in currentLine:
 		var pauseTime = float(currentLine.split("_")[1].strip_escapes())
 		Globals.DialogueBox.pause_dialogue(pauseTime)
+		
+	elif "&PORTRAIT" in currentLine:
+		var characterName = currentLine.split("_")[1].strip_escapes().to_lower()
+		var portraitToUse = currentLine.split("_")[2].strip_escapes().to_lower()
+		Globals.ColorManager.set_character_portrait(characterName, portraitToUse)

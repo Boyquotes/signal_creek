@@ -130,3 +130,9 @@ characterPortraits = {
 "placeholder": ExtResource( 11 ),
 "rina": ExtResource( 12 )
 }
+portraitLibrary = {
+"nick_netural": ExtResource( 3 ),
+"nour_neutral": ExtResource( 8 ),
+"placeholder": ExtResource( 11 ),
+"rina_netural": ExtResource( 12 )
+}
