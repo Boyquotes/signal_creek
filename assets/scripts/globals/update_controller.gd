@@ -18,9 +18,7 @@ func _process(_delta):
 	if Globals.GameState == Globals.GameStates.START:
 		
 		if Input.is_action_just_pressed("interact"):
-			Globals.StartScreen.set_visible(false)
-			Globals.GameState = Globals.GameStates.GAME
-			Globals.SoundManager.set_mute_audio(false)
+			Globals.StartScreen.start_game()
 		
 	elif Globals.GameState == Globals.GameStates.GAME:
 		
