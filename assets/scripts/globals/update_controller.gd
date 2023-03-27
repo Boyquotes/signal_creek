@@ -135,3 +135,9 @@ func set_closest_object(objectName):
 
 func set_can_interact(condition):
 	_can_interact = condition
+
+
+func _on_StartButton_pressed():
+	Globals.StartScreen.set_visible(false)
+	Globals.GameState = Globals.GameStates.GAME
+	Globals.SoundManager.set_mute_audio(false)
