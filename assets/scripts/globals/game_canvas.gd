@@ -61,7 +61,8 @@ func play_loading_screen():
 	loadingscreen_animation.play("Loading")
 	yield(get_tree().create_timer(1.5), "timeout")
 	loadingscreen.set_visible(false)
-	Globals.SoundManager.set_music_pause_mode(false)
+	if Globals.GameState == Globals.GameStates.GAME:
+		Globals.SoundManager.set_music_pause_mode(false)
 	Globals.SoundManager.play_music_by_index(Globals.SoundManager.room_music[RoomEngine.CurrentRoomIndex])
 	Globals.GameOverlay.start_fade_in()
 
@@ -90,3 +91,7 @@ func reload():
 	RoomEngine.reload()
 	var _reloaded = get_tree().reload_current_scene()
 	Globals.GameOverlay.reload()
+
+
+func _on_QuitButton_pressed():
+	get_tree().quit()
