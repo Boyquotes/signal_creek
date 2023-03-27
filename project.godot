@@ -93,10 +93,10 @@ enabled=PoolStringArray( "res://addons/paulloz.ink/plugin.cfg" )
 
 [global]
 
+build=false
 marshall=false
 variables=false
 dependencies=false
-build=false
 
 [importer_defaults]
 
