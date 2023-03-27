@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://import/sliderhandle_hover.png-4982373380b1a9747a5ad714855c35eb.stex"
+path="res://.import/sliderhandle_hover.png-4982373380b1a9747a5ad714855c35eb.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://assets/ui/images/sliderhandle_hover.png"
-dest_files=[ "res://import/sliderhandle_hover.png-4982373380b1a9747a5ad714855c35eb.stex" ]
+dest_files=[ "res://.import/sliderhandle_hover.png-4982373380b1a9747a5ad714855c35eb.stex" ]
 
 [params]
 
