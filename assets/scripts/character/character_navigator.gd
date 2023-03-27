@@ -58,14 +58,13 @@ func _process(_delta):
 
 
 func _draw():
-#	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_far_left, Color.red, 1.0)
-#	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_left, Color.orangered, 1.0)
-#	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_straight, Color.orange, 1.0)
-#	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_right, Color.yellow, 1.0)
-#	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_far_right, Color.yellowgreen, 1.0)
-#	draw_line(self.get_global_position(), self.get_global_position() + draw_look_left, Color.red, 2.0)
+	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_far_left, Color.red, 1.0)
+	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_left, Color.orangered, 1.0)
+	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_straight, Color.orange, 1.0)
+	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_right, Color.yellow, 1.0)
+	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_far_right, Color.yellowgreen, 1.0)
+	draw_line(self.get_global_position(), self.get_global_position() + draw_look_left, Color.red, 2.0)
 	pass
-
 
 func timer_timeout():
 

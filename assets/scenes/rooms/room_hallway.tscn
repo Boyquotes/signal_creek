@@ -112,7 +112,7 @@ position = Vector2( 500, 295 )
 position = Vector2( 519, 295 )
 
 [node name="Doortal_TopicSpot" type="Area2D" parent="PlaneManager"]
-position = Vector2( 952, -360 )
+position = Vector2( 953, -371 )
 script = ExtResource( 19 )
 __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
@@ -142,15 +142,14 @@ _knot_name = "first_light"
 shape = SubResource( 22 )
 
 [node name="Doortal_Bandn" type="Area2D" parent="PlaneManager"]
-position = Vector2( 464, 712 )
+position = Vector2( 376, 688 )
 script = ExtResource( 19 )
 __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
 }
-exit_position = Vector2( 232, 256 )
+exit_position = Vector2( 240, 123 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal_Bandn"]
-position = Vector2( -88, -24 )
 shape = SubResource( 2 )
 
 [node name="Lights" type="Node2D" parent="PlaneManager"]
