@@ -26,6 +26,17 @@ export var sound_effects : Dictionary = {
 	"TypewriterSound": preload("res://assets/sounds/uisounds/typewriter.wav")
 }
 
+export var character_voices : Dictionary = {
+	"nour": preload("res://assets/sounds/uisounds/typewriter.wav"),
+	"nick": preload("res://assets/sounds/uisounds/typewriter.wav"),
+	"ms. suwan": preload("res://assets/sounds/uisounds/typewriter.wav"),
+	"chad": preload("res://assets/sounds/uisounds/typewriter.wav"),
+	"brody": preload("res://assets/sounds/uisounds/typewriter.wav"),
+	"kristy": preload("res://assets/sounds/uisounds/typewriter.wav"),
+	"manager": preload("res://assets/sounds/uisounds/typewriter.wav"),
+	"placeholder": preload("res://assets/sounds/uisounds/typewriter.wav")
+}
+
 onready var room_music = [music_bandn, music_hallway, music_topicspot, music_elevator, music_starter]
 
 onready var soundPlayer = $SoundEffects
@@ -34,7 +45,7 @@ onready var musicPlayer = $Music
 onready var uiSoundPlayer = $UISounds
 
 func _ready():
-	pass
+	set_mute_audio(true)
 
 
 func play_sound(audioName):
@@ -78,3 +89,7 @@ func set_mute_audio(mode):
 	
 func set_stream_volume(stream, streamVolume: float):
 	stream.set_volume_db(streamVolume)
+
+
+func set_typewriter_sound(soundName):
+	sound_effects["TypewriterSound"] = character_voices.get(soundName)

@@ -1,16 +1,28 @@
 extends Control
 
+var panel_opening_speed := 0.25
+var is_expanding_background_panel := false
+var is_shrinking_background_panel := false
+var background_panel_max_height
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+onready var background_panel_node = $Panel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Globals.PauseMenu = self
 	self.set_visible(false)
-	pass # Replace with function body.
+	
+	var bgPanelDefaultPos = background_panel_node.get_position()
+	background_panel_max_height = background_panel_node.get_size().y
+	background_panel_node.set_position(Vector2(bgPanelDefaultPos.x, -background_panel_max_height))
+	
+
+func _process(_delta):
+	if is_expanding_background_panel:
+		expand_background_panel()
+	
+	elif is_shrinking_background_panel:
+		shrink_background_panel()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,9 +31,17 @@ func _ready():
 
 func toggle_visible():
 	if self.visible:
+		is_expanding_background_panel = false
+		
+		var bgPanelDefaultPos = background_panel_node.get_position()
+		background_panel_max_height = background_panel_node.get_size().y
+		background_panel_node.set_position(Vector2(bgPanelDefaultPos.x, -background_panel_max_height))
+#		is_shrinking_background_panel = true
 		self.set_visible(false)
 		return
 	
+	is_expanding_background_panel = true
+#	is_shrinking_background_panel = false
 	self.set_visible(true)
 
 
@@ -44,6 +64,28 @@ func _on_Resolution_item_selected(index):
 	elif index == 3:
 		OS.window_fullscreen = true
 
+func expand_background_panel():
+	var panelPosition = background_panel_node.get_position()
+	
+	if panelPosition.y >= -panel_opening_speed:
+		background_panel_node.set_position(Vector2(panelPosition.x, 0))
+		is_expanding_background_panel = false
+	
+	else:
+		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
+
+
+func shrink_background_panel():
+	var panelPosition = background_panel_node.get_position()
+	
+	if panelPosition.y <= -background_panel_max_height + panel_opening_speed:
+		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
+		is_shrinking_background_panel = false
+		background_panel_node.set_visible(false)
+		
+	else:
+		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
+
 
 func _on_Reset_pressed():
 	Globals.UpdateController.reset_game()
@@ -63,3 +105,13 @@ func _on_UIVolumeSlider_value_changed(value):
 
 func _on_MuteAudio_toggled(button_pressed):
 	Globals.SoundManager.set_mute_audio(button_pressed)
+
+
+func _on_Save_pressed():
+	Globals.DialogueBox.save_story()
+	pass # Replace with function body.
+
+
+func _on_Exit_pressed():
+	get_tree().quit()
+	pass # Replace with function body.

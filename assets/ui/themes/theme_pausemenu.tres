@@ -1,6 +1,8 @@
-[gd_resource type="Theme" load_steps=10 format=2]
+[gd_resource type="Theme" load_steps=12 format=2]
 
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/ui/images/sliderhandle_hover.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/images/sliderhandle.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.37797, 0.2881, 0.43, 1 )
@@ -30,7 +32,7 @@ grow_end = -6.0
 thickness = 2
 
 [sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0.65925, 0.5025, 0.75, 1 )
+bg_color = Color( 0.658824, 0.501961, 0.74902, 1 )
 border_color = Color( 0.619608, 0.470588, 0.705882, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
@@ -65,6 +67,8 @@ Button/styles/hover = SubResource( 5 )
 Button/styles/normal = SubResource( 6 )
 Button/styles/pressed = SubResource( 7 )
 HSeparator/styles/separator = SubResource( 1 )
+HSlider/icons/grabber = ExtResource( 3 )
+HSlider/icons/grabber_highlight = ExtResource( 2 )
 HSlider/styles/grabber_area = SubResource( 8 )
 HSlider/styles/grabber_area_highlight = SubResource( 8 )
 HSlider/styles/slider = SubResource( 9 )

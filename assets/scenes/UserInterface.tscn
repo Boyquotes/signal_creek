@@ -85,7 +85,7 @@ fit_content_height = true
 [node name="MusicVolumeSlider" type="HSlider" parent="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/MusicVolume"]
 margin_left = 169.0
 margin_right = 334.0
-margin_bottom = 16.0
+margin_bottom = 18.0
 size_flags_horizontal = 3
 min_value = -16.0
 max_value = 3.5
@@ -110,7 +110,7 @@ fit_content_height = true
 [node name="SFXVolumeSlider" type="HSlider" parent="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/SFXVolume"]
 margin_left = 169.0
 margin_right = 334.0
-margin_bottom = 16.0
+margin_bottom = 18.0
 size_flags_horizontal = 3
 min_value = -16.0
 max_value = 3.5
@@ -132,7 +132,7 @@ fit_content_height = true
 [node name="UIVolumeSlider" type="HSlider" parent="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/UIVolume"]
 margin_left = 169.0
 margin_right = 334.0
-margin_bottom = 16.0
+margin_bottom = 18.0
 size_flags_horizontal = 3
 min_value = -16.0
 max_value = 3.5
@@ -187,7 +187,6 @@ margin_right = 334.0
 margin_bottom = 294.0
 focus_mode = 1
 size_flags_vertical = 3
-disabled = true
 enabled_focus_mode = 1
 text = "Save Game"
 
@@ -197,7 +196,6 @@ margin_right = 334.0
 margin_bottom = 329.0
 focus_mode = 1
 size_flags_vertical = 3
-disabled = true
 enabled_focus_mode = 1
 text = "Exit"
 
@@ -330,6 +328,8 @@ text = "Mute Audio"
 [connection signal="value_changed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/UIVolume/UIVolumeSlider" to="ReferenceRect/PauseMenu" method="_on_UIVolumeSlider_value_changed"]
 [connection signal="toggled" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/MuteAudio" to="ReferenceRect/PauseMenu" method="_on_MuteAudio_toggled"]
 [connection signal="item_selected" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/WindowSize/Resolution" to="ReferenceRect/PauseMenu" method="_on_Resolution_item_selected"]
+[connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Save" to="ReferenceRect/PauseMenu" method="_on_Save_pressed"]
+[connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Exit" to="ReferenceRect/PauseMenu" method="_on_Exit_pressed"]
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Reset" to="ReferenceRect/PauseMenu" method="_on_Reset_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/Hallway" to="DevTools" method="_on_Hallway_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/TopicSpot" to="DevTools" method="_on_TopicSpot_pressed"]

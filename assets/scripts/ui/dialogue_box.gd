@@ -34,7 +34,7 @@ var background_panel_max_height
 var max_scroll_length := 0
 
 # Story state save file location 
-var _save_file_path = "res://saves"
+var _save_file_path = "res://saves/save1.txt"
 var _ink_story
 
 var fastforward = false
@@ -47,6 +47,8 @@ onready var _scrollbar = _scroll_node.get_v_scrollbar()
 onready var _vertical_layout_node = $Panel/MarginContainer/ScrollContainer/VBoxContainer
 onready var _ink_player = $InkPlayer
 onready var _pause_timer
+onready var _down_arrow = $Panel/DownArrow
+onready var _down_arrow_animate = $Panel/DownArrow/AnimationPlayer
 
 
 func _ready():
@@ -70,10 +72,14 @@ func _ready():
 
 
 func _pause_timer_timeout():
+	_down_arrow_animate.play("CanProceed")
 	pause = false
 
 
 func _process(_delta):
+	if Globals.GameState == Globals.GameStates.START:
+		return
+		
 	var allEntries = _vertical_layout_node.get_children()
 	
 	for entry in allEntries:
@@ -144,6 +150,7 @@ func free_old_choicebox():
 # proceeding to the next string that ink should return
 func proceed():
 	if pause:
+		_down_arrow_animate.play("Idle")
 		return
 		
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
@@ -174,6 +181,7 @@ func proceed():
 		currentLine = currentLine.replacen('>', ']')
 		
 		check_entry_type(currentLine)
+
 			
 	else: #default to nour if no nametag provided
 		is_displaying_choices = true
@@ -286,12 +294,15 @@ func typewriter_effect(escape):
 	if fastforward or escape:
 		current_text_box.set_percent_visible(1.0)
 		is_typing = false
+		_down_arrow_animate.play("CanProceed")
 		
-	var     currentVisibility = current_text_box.get_percent_visible()
+	_down_arrow_animate.play("Idle")
+	var currentVisibility = current_text_box.get_percent_visible()
 	var visibleCharacters = current_text_box.get_visible_characters()
 	
 	if currentVisibility >= 1.0:
 		is_typing = false
+		_down_arrow_animate.play("CanProceed")
 	
 	else:
 		current_text_box.set_visible_characters(visibleCharacters + typewriter_speed)
@@ -301,6 +312,7 @@ func typewriter_effect(escape):
 func escape_typewriter_effect():
 	current_text_box.set_percent_visible(1.0)
 	is_typing = false
+
 
 
 #initialize the choice-selection of a new choice entry prefab
@@ -429,3 +441,8 @@ func pause_dialogue(pauseDuration: float):
 
 #func _on_VBoxContainer_resized():
 #	pass # Replace with function body.
+
+
+func save_story():
+	_ink_player.SaveStateOnDisk(_save_file_path)
+	print("game saved")
