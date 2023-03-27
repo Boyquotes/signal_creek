@@ -6,13 +6,22 @@
         - noursuggestion && nicktalksaboutfantasygame:
             -> END
             
-        - nickaskstobuyvape:
+        - spraycans1:
             -> noursuggestion
     }
     
     This might come in handy.
 
     -> END
+
+== bookshelfback == 
+
+    -> bookshelf
+    
+== bookshelfside ==
+
+    ->bookshelf
+
     
 == noursuggestion ==
 
@@ -26,20 +35,22 @@
         
         MS. SUWAN: "You're going to have to take tests for the rest of your life. Get used to it."
         
-        NICK: "You're really testing my patience, ma'am."
+        NICK: "You're really <i>testing</i> my patience, ma'am."
         
         -> noursuggestion
         
     
-    * "Look at this, Nick... <i>How to Draw: Manga Characters</i>"
+    * "Look at this, Nick... <i>How to Draw Manga Characters</i>"
     
         -> nickargument
     
-    * "I see... <i>Get Ready for LSATs</i>."[]Nour looks over at Ms. Suwan.
+    * "There's also... <i>Get Ready for LSATs</i>."
     
-        MS SUWAN: "I didn't have that particular book, though I did use study aids."
+        Nour looks over at Ms. Suwan.
+    
+        MS. SUWAN: "I didn't have that particular book, though I did use study aids."
         
-        MS SUWAN: "Taking that extra step ensures that you excel at what you do."
+        MS. SUWAN: "Taking that extra step ensures that you excel at what you do."
         
         -> noursuggestion
     
@@ -61,17 +72,17 @@
     
         * "Fashion Design 101?"
         
-        * "How it's made: Video Games?"
+        * "How it's made- Video Games?"
         
         * "JavaScript for Poopyheads?"
         
     - NICK: "I literally <i>don't care</i>. I don't want to study anything."
     
-    MS SUWAN: "You're going to end up a deadbeat if you don't change that mindset of yours."
+    MS. SUWAN: "You're going to end up a deadbeat if you don't change that mindset of yours."
     
         * "That's a bit harsh, Ms. Suwan..."
         
-            MS SUWAN: "Listen, if this kid's parents aren't giving him the truth, someone has to. I had to learn the hard way."
+            MS. SUWAN: "Listen, if this kid's parents aren't giving him the truth, someone has to. I had to learn the hard way."
         
         * "Nick, people will think you're cool if you know how to do something. Isn't that what you want?"
         
@@ -79,11 +90,11 @@
             
             NICK: "I just... I don't know, it's a waste of time."
             
-            MS SUWAN: "As if you're not wasting your time now, being a delinquent teenager?"
+            MS. SUWAN: "As if you're not wasting your time now, being a delinquent teenager?"
         
     - NICK: "You're old and boring. Study <i>this</i>, responsiblility <i>that</i>, whatever. Do you even have friends?"
     
-    MS SUWAN: "I'm not a <i>child</i> who plays games with their friends. That's not how the real world works-"
+    MS. SUWAN: "I'm not a <i>child</i> who plays games with their friends. That's not how the real world works-"
     
         * "Making the real world seem bleak won't help anyone.["] You can have fun practicing your skills, and it may even lead you somewhere in life."
         
@@ -95,9 +106,11 @@
     
         * "I still had to practice, I wasn't born with the ability to take pictures.["] It's okay to put time into something before you're good at it."
         
-        * "How do you know I'm good at it?["] For all you know, I could suck at taking pictures. It doesn't matter, because I actually put the time into it, and at least I <i>know</i> things."
+        * "How do you know I'm good at it?["] For all you know, I could suck at taking pictures."
+        
+            NOUR: "It doesn't matter, because I actually put the time into it, and at least I <i>know</i> things."
     
-    - MS SUWAN: "Stop expecting things to just be placed in your lap."
+    - MS. SUWAN: "Stop expecting things to just be placed in your lap."
     
     NICK: "I'm so TIRED of people saying I'm lazy. You <i>DON'T</i> know my story! People expect me to do everything!"
     
@@ -129,13 +142,17 @@
     
     On Nick's wrist, Nour sees a black bracelet with metallic studs.
     
-    NOUR: <i>Wasn't that bracelet in TopicSpot...?</i>
+    //NOUR: <i>Wasn't that bracelet in TopicSpot...?</i>
     
-    MS SUWAN: "Well, isn't that nice."
+    NOUR: <i>Wait. I don't recognize that bracelet on him?</i>
+    
+    NOUR: <i>Is that a tag on the end of it...?</i>
+    
+    MS. SUWAN: "...Well, isn't that nice."
     
         * "Ms. Suwan, do you recognize that bracelet?"
         
-            MS SUWAN: "Not on Nick."
+            MS. SUWAN: "Not on Nick."
         
         * "Nick, where'd you get that bracelet?"
         
@@ -143,7 +160,7 @@
     
     - Nick quickly retracts his hand, hiding it behind his back.
     
-    MS SUWAN: "Suspicious. If you had gotten that bracelet through innocent means, why hide your hand now?"
+    MS. SUWAN: "Suspicious. If you had gotten that bracelet through innocent means, why hide your hand now?"
     
         * "Did you steal the bracelet, Nick?"
         
@@ -157,6 +174,10 @@
     
     - Nick shakes his head.
     
-    -> END
+    &LIGHT_Nick1
+    
+    BEEP ELEVATOR LIGHT SFX
+    
+    -> light_on
     
     

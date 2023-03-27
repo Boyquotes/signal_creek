@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/scripts/character/character_navigator.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/nour_walking_past.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/sprites/characters/sheet_nour_past.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/animations/nour_walking_past.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_nour_past.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=21]
 resource_name = "LookAround"
@@ -52,3 +52,6 @@ shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerVisible"]
 shape = SubResource( 20 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true

@@ -6,6 +6,7 @@ extends Control
 # Adds newly produced prefabs to DialogueBox UI
 
 # Entry Prefab Types
+export var print_information = false
 export var camera_offset_dialogue = 50.0
 export var typewriter_speed : int = 1
 export var scroll_increment : float = 0.75
@@ -30,17 +31,24 @@ var is_auto_scrolling = false
 var is_expanding_background_panel = false
 var is_shrinking_background_panel = false
 var background_panel_max_height
+var max_scroll_length := 0
 
 # Story state save file location 
-var _save_file_path = "res://saves"
+var _save_file_path = "res://saves/save1.txt"
 var _ink_story
 
 var fastforward = false
+var pause = false
+var pause_timer
 
 onready var background_panel_node = $Panel
 onready var _scroll_node = $Panel/MarginContainer/ScrollContainer
+onready var _scrollbar = _scroll_node.get_v_scrollbar()
 onready var _vertical_layout_node = $Panel/MarginContainer/ScrollContainer/VBoxContainer
 onready var _ink_player = $InkPlayer
+onready var _pause_timer
+onready var _down_arrow = $Panel/DownArrow
+onready var _down_arrow_animate = $Panel/DownArrow/AnimationPlayer
 
 
 func _ready():
@@ -53,9 +61,33 @@ func _ready():
 	var bgPanelDefaultPos = background_panel_node.get_position()
 	background_panel_max_height = background_panel_node.get_size().y
 	background_panel_node.set_position(Vector2(bgPanelDefaultPos.x, -background_panel_max_height))
+	
+	_scrollbar.connect("changed", self, "scroll_to_bottom")
+	max_scroll_length = _scrollbar.max_value
+	
+	_pause_timer = Timer.new()
+	add_child(_pause_timer)
+	_pause_timer.connect("timeout", self, "_pause_timer_timeout")
+	_pause_timer.set_one_shot(true)
+
+
+func _pause_timer_timeout():
+	_down_arrow_animate.play("CanProceed")
+	pause = false
 
 
 func _process(_delta):
+	if Globals.GameState == Globals.GameStates.START:
+		return
+		
+	var allEntries = _vertical_layout_node.get_children()
+	
+	for entry in allEntries:
+		# get entry's distance from the Prime Visibility Coordinate
+		# set its modulate to be lower the further it is from Prime Visibility coordinate
+		# there should be a safe zone for the most recent passage
+		pass
+	
 	if is_typing:
 		typewriter_effect(false)
 		
@@ -71,16 +103,13 @@ func _process(_delta):
 	
 	elif is_shrinking_background_panel:
 		shrink_background_panel()
-		
-	if is_auto_scrolling:
-		auto_scroll_down()
+
 
 # Opening the player as-is
 # tell _ink_player to open knot with name that matches pathstring
 func open_at_knot(pathstring):
 	_ink_player.SetVariable("currentPartyChar", Globals.PartyObject.get_leader_inkname())
 	_ink_player.SetVariable("currentWorld", Globals.get_world_inkname())
-	
 	
 	_ink_player.ChoosePathString(pathstring)
 	
@@ -100,28 +129,40 @@ func toggle_choice_selections(changeValue):
 	_current_choice_index = wrapi(_current_choice_index + changeValue, 0, _current_choice_strings.size())
 	_current_choice_entry_choices[_current_choice_index].set_highlighted(true)
 	
-	Globals.SoundManager.play_sound(Globals.SoundManager.choice_select_sound)
+	Globals.SoundManager.play_sound("ChoiceSelect")
 
 
 # select the currently highlighted choice
 func select_current_choice():
+	if !is_displaying_choices:
+		return
+		
+	free_old_choicebox()
 	_ink_player.ChooseChoiceIndex(_current_choice_index)
-	_current_choice_entry.queue_free() #remove the choicebox
-
 	is_displaying_choices = false
 	choice_chosen = true
 
+func free_old_choicebox():
+	if _current_choice_entry:
+		_current_choice_entry.queue_free() #remove the choicebox
+
+
 # proceeding to the next string that ink should return
 func proceed():
+	if pause:
+		_down_arrow_animate.play("Idle")
+		return
+		
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
 		clear_and_reset_ui()
+		is_displaying_choices = false
 		is_shrinking_background_panel = true
 		return
 	
 	elif !_ink_player.get_HasChoices(): #create normal text entry
 		_ink_player.Continue()
 		
-		if !fastforward:
+		if !fastforward and print_information:
 			print_state()
 			
 		var currentLine = _ink_player.get_CurrentText()
@@ -133,13 +174,14 @@ func proceed():
 			choice_chosen = false
 		
 		if currentLine.substr(0, 1) == "&":
-			parse_commands(currentLine)
+			InkCommands.parse_commands(currentLine)
 			return "command"
 		
 		currentLine = currentLine.replacen('<', '[')
 		currentLine = currentLine.replacen('>', ']')
 		
 		check_entry_type(currentLine)
+
 			
 	else: #default to nour if no nametag provided
 		is_displaying_choices = true
@@ -147,123 +189,20 @@ func proceed():
 		display_choices("NOUR")
 		set_camera_position_to_speaker()
 		
-	yield(get_tree(), "idle_frame")
-	scroll_to_bottom()
+#	var last_child = _vertical_layout_node.get_child(_vertical_layout_node.get_child_count() - 1)
+#	_vertical_layout_node.set_focus
+	
+	
+#	_scroll_node.scroll_vertical(159)
+	yield(VisualServer, 'frame_post_draw')
+	_scroll_node.scroll_to_bottom()
+#	_scroll_node.scrolling_to_bottom = true
 	return "no command"
-
-
-# Parse function requests from ink writing
-func parse_commands(currentLine):
-	if "&SHAKE" in currentLine:
-		Globals.GameOverlay.start_shaking(false)
-		
-	elif "&BLACK" in currentLine:
-		Globals.GameOverlay.set_to_black()
-		
-	elif "&FDEIN" in currentLine:
-		Globals.GameOverlay.start_fade_in()
-		
-	elif "&MOV_RINA" in currentLine:
-		Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
-		
-	elif "&SHLORP_RINA" in currentLine:
-		Globals.Rina.rina_shlorp_out()
-		
-	elif "&POS" in currentLine: #move nick to vector2
-		var charName = currentLine.split("_")[1].strip_escapes()
-		var vectorPos = currentLine.split("_")[2].strip_escapes()
-		vectorPos = vectorPos.split(",")
-		vectorPos = Vector2(vectorPos[0], vectorPos[1])
-		
-		match charName:
-			"NICK":
-				Globals.Nick.place_character_at_vector(vectorPos)
-				
-			"NOUR":
-				Globals.Nour.place_character_at_vector(vectorPos)
-				
-			"SUWAN":
-				Globals.Suwan.place_character_at_vector(vectorPos)
-				
-	elif "&FOLLOW" in currentLine:
-		var charName = currentLine.split("_")[1].strip_escapes()
-		var posNodeName = currentLine.split("_")[2].strip_escapes()
-		var posNode
-		
-		if posNodeName == "NOUR":
-			posNode = Globals.Nour
-			
-		elif posNodeName != "stop":
-			posNode = RoomEngine.CurrentRoom.plane_manager.get_node(posNodeName)
-		
-		match charName:
-			"NICK":
-				Globals.Nick.set_following_node(posNode)
-				
-			"NOUR":
-				if "stop" in posNodeName:
-					Globals.PartyObject.force_nour_movement = false
-					
-				else:
-					Globals.PartyObject.force_nour_movement = true
-					Globals.Nour.set_following_node(posNode)
-				
-			"SUWAN":
-				Globals.Suwan.set_following_node(posNode)
-		
-	elif "&EMOTE" in currentLine:
-		var charName = currentLine.split("_")[1].strip_escapes()
-		var emoteName = currentLine.split("_")[2].strip_escapes()
-		
-		match charName:
-			"NICK":
-				Globals.Nick.animate_emote(emoteName)
-				
-			"NOUR":
-				Globals.Nour.animate_emote(emoteName)
-				
-			"SUWAN":
-				Globals.Suwan.animate_emote(emoteName)
-		
-	elif "&LIGHT" in currentLine:
-	
-		# EXAMPLE WRITTEN IN INK: &LIGHT_Nick0
-		
-		var lightName = currentLine.split("_")[1].strip_escapes()
-		
-		# When parsed, lightName will look like this: Nick0
-		
-		Globals.RouteLights.turn_on_light(lightName)
-		
-#		if !Globals.RouteLights.first_light_turned_on:
-#			Globals.RouteLights.first_light_turned_on = true
-			
-		
-	elif "&ELEVATOR" in currentLine:
-		var action = currentLine.split("_")[1].strip_escapes()
-		
-		if "OPEN" in action:
-			Globals.ElevatorDoorLight.open_doors()
-			
-		elif "CLOSE" in action:
-			Globals.ElevatorDoorLight.close_doors()
-	
-	elif "&FIRSTLIGHT" in currentLine:
-		Globals.RouteLights.activate_light_tutorial()
-		
-	elif "&CAMERA" in currentLine:
-		var vectorPos = currentLine.split("_")[1].strip_escapes()
-		vectorPos = vectorPos.split(",")
-		vectorPos = Vector2(vectorPos[0], vectorPos[1])
-		
-		Globals.GameCanvas.set_camera_following_vector(vectorPos)
-
 
 # Parses entryText for special characters, determines what type of entry this is
 # Entries are normal, dialogue, or choice
 # Call corresponding functionality for type of entry
 func check_entry_type(entryText):
-		
 	if entryText.substr(0, 1) == ":": #this is a name for the choice entry nametag; not an entry to put in
 		var chooserName = entryText.substr(1).strip_escapes()
 		_ink_player.Continue()
@@ -275,19 +214,22 @@ func check_entry_type(entryText):
 	elif ":" in entryText: #if line contains a name, parse name and dialogue after
 		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_paragraph)
 		current_speaker = entryText.split(":")[0]
-		#print(entryText.split(":")[0])
 		_vertical_layout_node.add_child(newDialogue)
+#		newDialogue.grab_focus()
+#		yield(VisualServer, 'frame_post_draw')
+#		_scroll_node.ensure_control_visible(newDialogue)
 		
 		#track the text label for typewriter effect
 		current_text_box = newDialogue.get_dialogue_text()
 		#init typewriter effect
 		is_typing = true
-		
 		set_camera_position_to_speaker()
+#		Globals.SoundManager.play_sound("NewEntrySound")
 	
 	else: #it's a normal text entry
+#		Globals.SoundManager.play_sound("NewEntrySound")
 		var newText = DialogueEngine.create_entry(entryText.strip_escapes(), _entry_prefab_normal, _entry_prefab_paragraph)
-		if !fastforward:
+		if !fastforward and print_information:
 			print("NORMAL TEXT")
 			
 		#track the text label for typewriter effect
@@ -296,20 +238,25 @@ func check_entry_type(entryText):
 		is_typing = true
 		
 		_vertical_layout_node.add_child(newText)
+#		newText.grab_focus()
+#		yield(VisualServer, 'frame_post_draw')
+#		_scroll_node.ensure_control_visible(newText)
 
 
 func scroll_to_bottom():
-	_scroll_node.set_v_scroll(_scroll_node.get_v_scrollbar().max_value)
+	if _scrollbar.max_value != max_scroll_length:
+		max_scroll_length = _scrollbar.max_value
+		_scroll_node.set_v_scroll(_scrollbar.max_value)
 
 
-#used when a new entry is created
-func auto_scroll_down():
-	var scrollValue = _scroll_node.get_v_scrollbar().get_value()
-	var maxScrollValue = _scroll_node.get_v_scrollbar().max_value
-	_scroll_node.set_v_scroll(lerp(scrollValue, maxScrollValue, scroll_increment))
-	if scrollValue >= maxScrollValue:
-		is_auto_scrolling = false
-		return
+##used when a new entry is created
+#func auto_scroll_down():
+#	var scrollValue = _scroll_node.get_v_scrollbar().get_value()
+#	var maxScrollValue = _scroll_node.get_v_scrollbar().max_value
+#	_scroll_node.set_v_scroll(lerp(scrollValue, maxScrollValue, scroll_increment))
+#	if scrollValue >= maxScrollValue:
+#		is_auto_scrolling = false
+#		return
 
 
 #smoothly decrease size of background panel after dialogue concludes
@@ -334,7 +281,9 @@ func expand_background_panel():
 	if panelPosition.y >= -panel_opening_speed:
 		background_panel_node.set_position(Vector2(panelPosition.x, 0))
 		is_expanding_background_panel = false
-		print("expanded dialogue panel")
+		
+		if print_information:
+			print("expanded dialogue panel")
 	
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
@@ -345,22 +294,25 @@ func typewriter_effect(escape):
 	if fastforward or escape:
 		current_text_box.set_percent_visible(1.0)
 		is_typing = false
+		_down_arrow_animate.play("CanProceed")
 		
+	_down_arrow_animate.play("Idle")
 	var currentVisibility = current_text_box.get_percent_visible()
-	#var totalCharCount = current_text_box.get_total_character_count()
 	var visibleCharacters = current_text_box.get_visible_characters()
-	#var increment = totalCharCount * typewriter_speed
 	
 	if currentVisibility >= 1.0:
 		is_typing = false
+		_down_arrow_animate.play("CanProceed")
 	
 	else:
 		current_text_box.set_visible_characters(visibleCharacters + typewriter_speed)
+		Globals.SoundManager.play_sound_ui("TypewriterSound")
 
 
 func escape_typewriter_effect():
 	current_text_box.set_percent_visible(1.0)
 	is_typing = false
+
 
 
 #initialize the choice-selection of a new choice entry prefab
@@ -378,7 +330,13 @@ func display_choices(chooserName):
 	_current_choice_entry_choices = newChoiceEntry.get_choices()
 	_current_choice_entry_choices[_current_choice_index].set_highlighted(true)
 	_vertical_layout_node.add_child(newChoiceEntry)
+#	newChoiceEntry.grab_focus()
+#	yield(VisualServer, 'frame_post_draw')
+#	_scroll_node.ensure_control_visible(newChoiceEntry)
+	
 	_current_choice_entry = newChoiceEntry
+	
+	Globals.SoundManager.play_sound("NewChoiceEntry")
 
 
 # parse json story state from ink player; print the stuff we care about
@@ -428,9 +386,9 @@ func get_current_speaker():
 
 func find_current_speaker_position():
 	var currentSpeaker = get_current_speaker().to_lower()
-	if !fastforward:
+	if !fastforward and print_information:
 		print("Current Speaker: " + currentSpeaker + "\n")
-	
+		
 	var currentSpeakerIndex = -1
 
 	# Move camera to party character if they are speaking
@@ -474,4 +432,17 @@ func reset_story():
 
 func fast_forward(state):
 	fastforward = state
-	
+
+
+func pause_dialogue(pauseDuration: float):
+	pause = true
+	_pause_timer.wait_time = pauseDuration
+	_pause_timer.start()
+
+#func _on_VBoxContainer_resized():
+#	pass # Replace with function body.
+
+
+func save_story():
+	_ink_player.SaveStateOnDisk(_save_file_path)
+	print("game saved")

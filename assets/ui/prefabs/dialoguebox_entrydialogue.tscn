@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/scripts/ui/dialoguebox_entry.gd" type="Script" id=2]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=3]
 [ext_resource path="res://assets/shaders/material_portraitborder.tres" type="Material" id=4]
-[ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/nick_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/characters/portraits/portrait_nour_neutral.png" type="Texture" id=5]
 
 [sub_resource type="StyleBoxFlat" id=3]
 content_margin_left = 1.0
@@ -49,10 +49,10 @@ margin_right = 99.0
 margin_bottom = 19.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.48
-custom_colors/default_color = Color( 1, 0.556863, 0.556863, 1 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "[b]MS. SUWAN[/b]"
-text = "MS. SUWAN"
+bbcode_text = "[b]NOUR[/b]"
+text = "[b]NOUR[/b]"
 fit_content_height = true
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer"]
@@ -73,9 +73,9 @@ custom_constants/separation = 16
 [node name="Portrait" type="TextureRect" parent="HBoxContainer"]
 light_mask = 9
 material = ExtResource( 4 )
-margin_right = 120.0
+margin_right = 100.0
 margin_bottom = 120.0
-rect_min_size = Vector2( 120, 120 )
+rect_min_size = Vector2( 100, 100 )
 size_flags_horizontal = 0
 size_flags_vertical = 3
 theme = SubResource( 2 )
@@ -85,7 +85,7 @@ stretch_mode = 6
 
 [node name="DialogueTextContainer" type="MarginContainer" parent="HBoxContainer"]
 light_mask = 9
-margin_left = 136.0
+margin_left = 116.0
 margin_right = 395.0
 margin_bottom = 120.0
 size_flags_horizontal = 3
@@ -95,19 +95,19 @@ custom_constants/margin_left = 8
 [node name="Background" type="PanelContainer" parent="HBoxContainer/DialogueTextContainer"]
 light_mask = 9
 margin_left = 8.0
-margin_right = 243.0
+margin_right = 263.0
 margin_bottom = 120.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/DialogueTextContainer/Background"]
 light_mask = 9
-margin_right = 235.0
+margin_right = 255.0
 margin_bottom = 120.0
 alignment = 1
 
 [node name="Dialogue" parent="HBoxContainer/DialogueTextContainer/Background/VBoxContainer" groups=["placeholder"] instance=ExtResource( 1 )]
 light_mask = 9
 margin_top = 31.0
-margin_right = 235.0
+margin_right = 255.0
 margin_bottom = 88.0
 bbcode_text = "Why cant i see any of this text bro what the fuck SJDFlksjeflkjelkj lkesjlkreskjfkkfkk"
 visible_characters = -1

@@ -1,26 +1,19 @@
-// VAR chadkristybrody_visitedSW1 = true
-// VAR musicstand_visitedSW2 = false
-// VAR swevent3_visited = false
-
-// ->cafetables
-
 === cafetables === 
-//chadkristybrody_visitedSW1 is the first conversation with CBK, Suwan's Route Event 1
-//musicstand_visistedSW2 is the conversation about the live recording with music stand, Suwan's Route Event 2
-//swevent3_visited is if Ms. Suwan's route is complete
-
 //note to self: do some gathers - choices that lead to the same conversation 
 
 {
-    - chadbrodykristy1 && musicstand2 && chadbrodykristy3:
+    - cafetables3:
         -> cafetables_end
         
     - chadbrodykristy2 && musicstand2 && chadbrodykristy3: 
         -> cafetables3
-        
+
     - chadbrodykristy2 && musicstand2:
         -> cafetables3_5
         
+    - cafetables_getsuwantotalk:
+        -> cafetables2_5_repeat
+
     - chadbrodykristy2 && cafetables1:
         -> cafetables2_5
         
@@ -163,7 +156,7 @@
         
         MS. SUWAN: "But they were distractions for me in the end. Our hobbies, our hangouts...it was all time and energy I knew I could use for my career."
         
-        MS. SUWAN: "So, I made my decision. When they were gone, I had everything: 175 on my LSAT, a stacked resume, and a promising career."
+        MS. SUWAN: "So, I made my decision. When they were gone, I had everything—175 on my LSAT, a stacked resume, and a promising career."
         
         NOUR: "Was it worth it?"
         
@@ -187,16 +180,13 @@
         
         MS. SUWAN: "Well...I used to. But not anymore. Not for a long time..."
         
-        NOUR: <i>Ms. Suwan looks like she's...she's in shock. What Nick asked about what she does for fun now must've shaken her up.</i>
+        NOUR: <i>What Nick asked about what she does for fun now must've shaken her up.</i>
         
-        NOUR: <i>I can't just stop here. Her past pain shouldn't hold her back from the things that used to—and could still—make her happy.</i>
+        NOUR: <i>Her past pain shouldn't hold her back from the things that used to—and could still—make her happy.</i>
         
         NOUR: <i>She might not be ready to face her ex-friends, but maybe I could ease her into opening up to the idea.</i>
         
-        NOUR: <i>I got through to her with an old memory of her friends. Maybe she's ready to revisit another old love of hers with a new perspective.</i>
-        
-        NOUR: <i>I wonder...is she ready to listen to Paradise again? I should lead her there to find out.</i>
-            
+        NOUR: <i>I should show her something that she used to love with her friends...because I think she's ready to hear it again.</i>
             -> END
     
     * [Bring it up subtly]
@@ -226,9 +216,13 @@
     // + [I have nothing to say] I'll try to get her to talk later.
         
     //     -> END
-
+=== cafetables2_5_repeat ===
+        NOUR: <i>I got through to her with an old memory of her friends. Maybe she's ready to revisit another old love of hers with a new perspective.</i>
+        
+        NOUR: <i>I wonder...is she ready to listen to Paradise again? I should lead her there to find out.</i>
+-> END
 === cafetables3_5 ===
-    MS. SUWAN: "Let's not stop here. I'm ready to talk to the three of them."
+    // MS. SUWAN: "Let's not stop here. I'm ready to talk to the three of them."
     
     NOUR: <i>I should go find Chad, Kristy, and Brody.</i>
         -> END
@@ -238,9 +232,13 @@
     
     NOUR: "Really?"
     
-    MS. SUWAN: "Chad, Kristy, Brody, and I would discuss the concepts and inspirations behind Paradise's albums. We would pool in money to afford limited edition shirts and CDs..."
+    MS. SUWAN: "Chad, Kristy, Brody, and I would discuss the concepts and inspirations behind Paradise's albums."
     
-    MS. SUWAN: "We were notorious for being rowdy and hounding the cafe owner into playing Paradise."
+    MS. SUWAN: "We would pool in money to afford limited edition shirts and CDs..."
+    
+    MS. SUWAN: "And we were notorious for being rowdy and hounding the cafe owner into playing Paradise."
+    
+    NICK: "I wish I could've seen that!"
     
     NOUR: "Did it work?"
     
@@ -252,17 +250,23 @@
     
     MS. SUWAN: "What?"
     
-    NICK: "You were cool this WHOLE TIME?"
+    NICK: "You were so COOL back then!"
     
     MS. SUWAN: "Don't get any wrong ideas. You shouldn't behave that way in public."
     
-    MS. SUWAN: "...But of course, I believe that any establishment should listen to the people's demands. Healthy discourse and all that."
+    MS. SUWAN: "...But of course, I believe that any establishment should listen to the people's demands."
+    
+    NOUR: "Agreed. Plus, I don't think your actual job is totally different either."
+    
+    MS. SUWAN: "A lawyer states their case and persuades others for their cause."
+    
+    MS. SUWAN: "I just spend my time doing it at the office and not in a cafe mall."
     
     Ms. Suwan begrudgingly smiles. Nick looks at her with newfound respect.
     
     NOUR: <i>It sounds like this cafe really did hold precious memories for her. It did for me, too...</i>
     
-    NOUR: <i>Would I have been hapier if I had ended things differently with my friend?</i>
+    NOUR: <i>Would I have been happier if I had ended things differently with my friend?</i>
     
     MS. SUWAN: "Nour? Are you ok?"
     
@@ -272,7 +276,7 @@
     
     MS. SUWAN: "That didn't seem like nothing to me, but if that's what you want to say..."
     
-    NOUR: <i>I nod at her. I don't like the way she looks at me.</i
+    NOUR: <i>I nod at her. I don't like the way she looks at me.</i>
     
         -> cafetables_end
 

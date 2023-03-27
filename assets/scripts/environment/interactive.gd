@@ -33,7 +33,7 @@ func _on_InteractArea_body_entered(body):
 
 # When a body exits self, check if player can interact
 func _on_InteractArea_body_exited(body):
-	if body == Globals.PartyObject.get_leader():
+	if Globals.PartyObject and body == Globals.PartyObject.get_leader():
 		emit_signal("cannot_interact")
 		_check_if_can_interact()
 
@@ -96,3 +96,11 @@ func _get_object_name():
 	
 	return rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_")
 
+
+
+func _on_ActiveArea_can_interact():
+	pass # Replace with function body.
+
+
+func _on_ActiveArea_cannot_interact():
+	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_topicspot_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=2]
@@ -20,7 +20,6 @@
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_clothesrack.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_jewelrystand.tscn" type="PackedScene" id=19]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_kirbyposter.tscn" type="PackedScene" id=20]
-[ext_resource path="res://assets/prefabs/objects/topicspot/obj_hotwheel.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_trinketside.tscn" type="PackedScene" id=22]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_table.tscn" type="PackedScene" id=23]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_shirtwall.tscn" type="PackedScene" id=24]
@@ -78,34 +77,42 @@ __meta__ = {
 
 [node name="BigLight" type="Light2D" parent="PlaneManager/Lights"]
 position = Vector2( 232, 160 )
-scale = Vector2( 3.625, 2.5 )
 texture = ExtResource( 5 )
+texture_scale = 2.8
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.8
 range_item_cull_mask = 7
 
 [node name="BigLight2" type="Light2D" parent="PlaneManager/Lights"]
 position = Vector2( 234, -17 )
-scale = Vector2( 3.72266, 2.56735 )
 texture = ExtResource( 5 )
+texture_scale = 2.8
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.8
 range_item_cull_mask = 7
 
 [node name="BigLight4" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 371, 135 )
-scale = Vector2( 3.72266, 2.56735 )
+position = Vector2( 383, 151 )
 texture = ExtResource( 5 )
+texture_scale = 2.8
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.8
+range_item_cull_mask = 7
+
+[node name="BigLight5" type="Light2D" parent="PlaneManager/Lights"]
+position = Vector2( 232, -43 )
+texture = ExtResource( 5 )
+texture_scale = 2.8
+color = Color( 0.933333, 0.858824, 0.709804, 1 )
+energy = 0.8
 range_item_cull_mask = 7
 
 [node name="BigLight3" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 95, 138 )
-scale = Vector2( 3.72266, 2.56735 )
+position = Vector2( 96, 123 )
 texture = ExtResource( 5 )
+texture_scale = 2.8
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.8
 range_item_cull_mask = 7
 
 [node name="Overworld" type="YSort" parent="PlaneManager"]
@@ -127,32 +134,32 @@ __meta__ = {
 [node name="Table2" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 position = Vector2( 97, 150 )
 
-[node name="PinButtons" parent="PlaneManager/Overworld/Table2" instance=ExtResource( 7 )]
-position = Vector2( 0, -14 )
+[node name="PinButtons" parent="PlaneManager/Overworld" instance=ExtResource( 7 )]
+position = Vector2( 97, 151 )
 
 [node name="Trinkets2" parent="PlaneManager/Overworld" instance=ExtResource( 26 )]
-position = Vector2( 69, 96 )
+position = Vector2( 69, 109 )
 
 [node name="Trinkets" parent="PlaneManager/Overworld" instance=ExtResource( 26 )]
-position = Vector2( 104, 96 )
+position = Vector2( 104, 109 )
 
 [node name="TrinketSide" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
-position = Vector2( 132, 104 )
+position = Vector2( 132, 109 )
 
 [node name="TrinketSide2" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
-position = Vector2( 255, 19 )
+position = Vector2( 256, 18 )
 
 [node name="TrinketSide3" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
 position = Vector2( 213, 18 )
 
 [node name="WallofVideoGames" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
-position = Vector2( 175, -82 )
+position = Vector2( 175, -63 )
 
-[node name="AbstractObject" parent="PlaneManager/Overworld" instance=ExtResource( 25 )]
+[node name="SprayCans" parent="PlaneManager/Overworld" instance=ExtResource( 25 )]
 position = Vector2( 383, 151 )
 
 [node name="Shirt Wall" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
-position = Vector2( 359, 78 )
+position = Vector2( 353, 97 )
 
 [node name="Shelf" parent="PlaneManager/Overworld" instance=ExtResource( 14 )]
 position = Vector2( 72, 211 )
@@ -167,37 +174,34 @@ position = Vector2( 406, 133 )
 position = Vector2( 406, 223 )
 
 [node name="PhoneCases2" parent="PlaneManager/Overworld" instance=ExtResource( 6 )]
-position = Vector2( 234, 34 )
+position = Vector2( 192, 77 )
 
 [node name="StoreManager" parent="PlaneManager/Overworld" instance=ExtResource( 4 )]
 position = Vector2( 234, 140 )
 
 [node name="Makeup" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-position = Vector2( 162, 31 )
+position = Vector2( 162, 14 )
 
 [node name="Table3" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-position = Vector2( 235, 67 )
+position = Vector2( 192, 74 )
 
-[node name="HotWheels" parent="PlaneManager/Overworld/Table3" instance=ExtResource( 21 )]
-position = Vector2( 0, -4 )
+[node name="KirbyPoster" parent="PlaneManager/Overworld" instance=ExtResource( 20 )]
+position = Vector2( 293, -63 )
 
 [node name="SailorMoonPosters" parent="PlaneManager/Overworld" instance=ExtResource( 9 )]
-position = Vector2( 293, 101 )
-
-[node name="AbstractObject" parent="PlaneManager/Overworld/SailorMoonPosters" instance=ExtResource( 20 )]
-position = Vector2( -2, -182 )
+position = Vector2( 293, 97 )
 
 [node name="ShelfSide3" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
-position = Vector2( 310, 69 )
+position = Vector2( 311, 44 )
 
 [node name="JewelryStand" parent="PlaneManager/Overworld" instance=ExtResource( 19 )]
-position = Vector2( 327, 192 )
+position = Vector2( 349, 221 )
 
 [node name="GraphicTees" parent="PlaneManager/Overworld" instance=ExtResource( 11 )]
-position = Vector2( 288, 207 )
+position = Vector2( 288, 225 )
 
 [node name="CoolShirt" parent="PlaneManager/Overworld" instance=ExtResource( 12 )]
-position = Vector2( 176, 205 )
+position = Vector2( 176, 225 )
 
 [node name="Clothes Rack" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
 position = Vector2( 231, 224 )
@@ -209,10 +213,10 @@ position = Vector2( 232, 187 )
 position = Vector2( 234, -34 )
 
 [node name="Table" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-position = Vector2( 234, -51 )
+position = Vector2( 234, -48 )
 
-[node name="Consoles" parent="PlaneManager/Overworld/Table" instance=ExtResource( 10 )]
-position = Vector2( -2, -4 )
+[node name="Consoles" parent="PlaneManager/Overworld" instance=ExtResource( 10 )]
+position = Vector2( 236, -48 )
 
 [node name="Clothes Rack2" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
 position = Vector2( 80, 242 )

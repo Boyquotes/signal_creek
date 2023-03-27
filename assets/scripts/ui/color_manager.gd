@@ -9,10 +9,18 @@ export var characterColors : Dictionary = {
 }
 
 export var characterPortraits : Dictionary = {
-	"nour": preload("res://assets/alpha/sprites_alpha/characters/portraits/nour_real.png"),
-	"nick": preload("res://assets/alpha/sprites_alpha/characters/portraits/nick_dream.png"),
-	"ms. suwan": preload("res://assets/alpha/sprites_alpha/characters/portraits/suwan_dream.png"),
-	"placeholder": preload("res://assets/sprites/characters/portrait_placeholder.png")
+	"nour": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"nick": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"ms. suwan": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"chad": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"brody": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"kristy": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"manager": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png")
+}
+
+export var portraitLibrary : Dictionary = {
+	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 }
 
 var current_color = "the party"
@@ -20,7 +28,8 @@ var current_portrait = "nour"
 
 
 func _ready():
-	set_current_color("nick")
+	pass
+#	set_current_color("nick")
 
 
 # asks for string, sets current_color from dictionary
@@ -28,13 +37,13 @@ func set_current_color(characterName):
 	current_color = characterColors.get(characterName.to_lower().trim_suffix(":"))
 	if characterPortraits.get(characterName.to_lower().trim_suffix(":")):
 		current_portrait = characterPortraits.get(characterName.to_lower().trim_suffix(":"))
-	
+		
+		if Globals.SoundManager:
+			Globals.SoundManager.set_typewriter_sound(characterName.to_lower().trim_suffix(":"))
+		
 	else:
-		if characterName == "???":
-			current_portrait = characterPortraits.get("ms. suwan")
-			
-		else:
-			current_portrait = characterPortraits.get("placeholder")
+		current_portrait = characterPortraits.get("placeholder")
+		
 
 
 # returns a color code
@@ -44,3 +53,8 @@ func get_current_color():
 
 func get_current_portrait():
 	return current_portrait
+
+
+func set_character_portrait(characterName, portraitName):
+	var portraitToUse = portraitLibrary.get(portraitName)
+	characterPortraits[characterName] = portraitToUse

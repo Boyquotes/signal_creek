@@ -7,51 +7,187 @@
     
     //if this isn't the first time talking to Rina, go straight to the choices
     {
-        - !rina_start:
-            -> rina_start
-            
         - rina_bandn:
             -> rina_branches
             
-        - rina_start:
+        - polaroid:
             -> rina_bandn
     }
     
-    //start from the beginning
-    -> rina_start
+    NOUR: <i>I can't talk to her. I don't even want to see her.</i>
+    
+    -> END
 
 
 == rina_start ==
-
-    A petite girl with olive skin and dyed strawberry hair stands before the group.
+    //Everyone is pooped out of the elevator
+    //they walk down 
+    //elevator door CLOSES
     
-    Her entire body is still, as if she's a mannequin. A lifelike, breathing mannequin.
+    NOUR: "Ugh... I feel sick."
     
-    There's an immediate glimmer of recognition from Nour.
+    &ELEVATOR_SHUT
     
-    NOUR: <i>Looks like Rina hasn't changed since high school.</i>
+    &FOLLOW_NICK_NickOutElevatorPos
     
-    NICK: "Hey, uh... Nour. Do you know her?"
+    &FOLLOW_NOUR_NourOutElevatorPos
+    
+    &FOLLOW_SUWAN_SuwanOutElevatorPos
+    
+    NICK: “Isn't this the top floor of the mall?”
+    
+    NOUR: "Yeah, but it feels... something feels off."
+    
+    &EMOTE_NICK_UpIdle
+    
+    NICK: "What's with all those lights at the top of the elevator?"
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &FOLLOW_SUWAN_SuwanPhonePos
+    
+    MS. SUWAN: "This floor should have been shut down <i>months</i> ago."
+    
+    MS. SUWAN: "I must call one of my higher-ups about this."
+    
+    MS SUWAN BEEP BOOPS HER PHONE
+    
+    MS. SUWAN: "Hmm. No signal and no WiFi." (CONCERN)
+    
+    NICK BEEP BOOPS HIS PHONE
+    
+    &EMOTE_NICK_RightIdle
+    
+    NICK: "Aw, man. Same! I can't play any of my phone games..." (POUTING)
+    
+    &MOV_RINA_START
+    
+    RINA: ...
+    
+    A petite girl with olive skin and dyed strawberry hair appears before the group.
+    
+    Her entire body is still, like a mannequin. A lifelike, breathing mannequin.
+    
+    NICK: "<i>WHAT THE-</i>"
+    
+    &EMOTE_SUWAN_LeftIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    NOUR: ... (SHOCKED)
+    
+    MS. SUWAN: "You're not supposed to be here, young lady."
+    
+    NICK: "Hey, did you miss the part where she magically appeared in front of us?"
+    
+    MS. SUWAN: "Magic? Stop messing around, kid."
+    
+    NOUR: <i>...Rina?</i> (SHOCKED)
+    
+    NICK: "Hey, uh... Nour? Do you know her?"
     
         * ["Yeah, I did."]
         
         * ["She was from my high school."]
     
-    - Nour says nothing.
+    - NOUR: ...
+    
+    RINA: ...
     
     NICK: "Hello? Random girl that Nour recognizes? Do you see us?"
-    
-    Rina pays no mind to her surroundings.
-    
-    //&SHLORP_RINA
+
+    &ALLOFF
     
     &MOV_RINA_BANDN
     
-    There's visible panic on Nour's face.
+    NOUR: ... (NERVOUS)
     
     NICK: "Guess she didn't wanna talk, huh."
     
-    MS SUWAN: "The more you children talk about your hallucinations, the more I begin to see them too. Maybe we should keep those comments to ourselves."
+    &EMOTE_NICK_UpIdle
+    
+    NICK: "And... those funny lights are off now."
+    
+    &EMOTE_NICK_RightIdle
+    
+    MS. SUWAN: "We must be hallucinating. That’s the only explanation I can think of to describe… whatever it is that we’re seeing."
+    
+        * [Agree with her]
+            NOUR: "Maybe we hit our heads somewhere...or a potential gas leak?"
+            
+            MS. SUWAN: "That would also be somewhat realistic. I want to agree, but..."
+            
+            MS. SUWAN: "This place would've been closed off much more securely if there was any immediate danger. It would've been reported to me, too."
+            
+            NICK: "I don't remember us knocking our heads either!"
+            
+        * [Lighten the mood]
+            NOUR: "Maybe this is all just a dream..."
+            
+            NICK: "Haha! Maybe none of us are even real. Ooo!"
+            
+            NOUR: "Or drugs? This could be a really, really weird trip!"
+            
+            NICK: "DRUGS?! What kind of drug would make up something like THIS?"
+            
+            NICK: "...do you have anymore?"
+            
+            MS. SUWAN: "Enough of your nonsense, please."
+    
+        * [Convince her it's real]
+            NOUR: "I don't know. If this floor really was torn down, I don't think we can explain anything around us with logic. Or at least, the logic of our reality."
+            
+            NOUR: "Wherever we are...it's definitely not the demolition site from before."
+            
+            NICK: "That's so cool! It's like we warped through some kind of elevator-shaped portal!"
+            
+            MS. SUWAN: "I'm not buying any of this. There is no such thing as a magical elevator or whatever laminated space."
+
+    - MS. SUWAN: "This is absurd. We need to go back."
+    
+    &EMOTE_NOUR_UpIdle
+    
+    NOUR: "The elevator is closed though, and it doesn't look like the doors will budge either."
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &FOLLOW_NICK_NickOuterButtonPos
+    
+    MS. SUWAN: "Then I'll just press the—"
+    
+    
+    
+    // &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NICK_ButtonPress
+    
+    NICK: "Hey, the buttons for this elevator are missing!"
+    
+    // &EMOTE_NICK_UpIdle
+    
+    // &EMOTE_NOUR_UpIdle
+
+
+    
+    NOUR: "No use in waiting for an elevator that won't work. We should try to find a way out of here."
+    
+    &EMOTE_NICK_DownIdle
+    
+    NICK: "While we're at it, I wanna see if they still have games in the TopicSpot."
+    
+    MS. SUWAN: "<i>That's</i> what you are choosing to think about right now?"
+    
+    NOUR: "It's a start. Who knows, maybe we'll be able to ask someone for help there."
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NOUR
+    
+    &FOLLOW_NOUR_stop
+    
+    // ->END
+
+   
     
     -> END
     
@@ -64,16 +200,26 @@
 
 == rina_branches ==
 
-    RINA: Look, "Nour". I don't know why you're <i>still</i> upset. You're the one who blocked me out... I <i>tried</i> to keep being your friend!
+    RINA: "Look, 'Nour'. I don't know why you're <i>still</i> upset. You're the one who blocked me out..."
+    
+    RINA: "I <i>tried</i> to keep being your friend!"
+    
+            //DISPLAY ONCE ALL OTHER CHOICES ARE VISITED
+            {
+                - rina_final:
+                    -> rina_elevator
+            }
     
         //this choice always works, and Rina tells Nour to help the people they're with now (Nick and Suwan)
-        + "Friends help each other when they need it, not afterwards."
+        + [Remind Rina what friends are for.]
             
             //IF THE LAST KNOTS IN BOTH ROUTES ARE VISITED:
             {
                 - nicktalksaboutfantasygame && chadbrodykristy3:
                     -> rina_help
             }
+            
+            NOUR: "Friends are supposed to help each other. You didn't help me that day."
             
             Rina glances down at Nick, and up to Ms. Suwan.
             
@@ -82,48 +228,90 @@
             RINA: "I think you should focus on helping the people you're with. Based on what they're saying, it seems like <i>they</i> need you right now."
         
 
-        + ["Why would I want to keep being friends with someone who is too much of a coward to stand up for me?"]
+        + [Confront Rina for what she did.]
         
             //IF THE LAST KNOT IN NICK'S ROUTE IS VISITED:
             {
+                - rina_topicspot:
+                    -> rina_topicspot.neverknow
+                    
                 - nicktalksaboutfantasygame:
                     -> rina_topicspot
             }
             
-            NOUR: "I don't feel confident enough to confront you yet..."
+            NOUR: "I don't think I have the guts to confront you yet..."
             
             NICK: "I kinda get it. Why even try if you know it'll backfire?"
+            
+            NOUR: <i>Nick is speaking as if he has no confidence in his beliefs. Or in himself.</i>
+            
+            NOUR: <i>I wonder if I can encourage him to be more confident in himself?</i>
         
 
-        + ["Whatever. You know what, I'm not mad anymore. It's fine. I don't know why I was so upset."]
+        + [Let go of what Rina did.]
         
             //IF THE LAST KNOT IN SUWAN'S ROUTE IS VISITED:
             {
+                - rina_hallway:
+                    -> rina_hallway.neverknow
+                    
                 - chadbrodykristy3:
                     -> rina_hallway
             }
             
             NOUR: "I'm still too angry at you to let go..."
             
-            MS SUWAN: "Makes sense. You know you were right back then, why would you want to look back?"
+            MS. SUWAN: "Makes sense. You know you were right back then, why would you want to look back?"
+            
+            NOUR: <i>Ms. Suwan seems to be avoiding her past... But that doesn't seem healthy. I don't think I should listen to her.</i>
+            
+            NOUR: <i>But maybe... I can help her look into her past more?<i>
             
             
-        + We're done talking for now.
+        + [We're done talking for now.]
+           
+           {
+            - rina_bandn && rina_topicspot && rina_hallway:
+                -> rina_final
+            }
             
             Rina's eyes glaze over.
             
-                -> END
-        
-        //DISPLAY ONCE ALL OTHER CHOICES ARE VISITED
-            {
-                - rina_bandn && rina_topicspot && rina_hallway:
-                    -> rina_elevator
-            }
+            NOUR: <i>I don't feel prepared to explore every possible outcome of this conversation.</i>
+            
+            NOUR: <i>I'll just try to help Nick and Ms. Suwan first.</i>
+            
+            -> END
     
         //"resetting" rina, as if she forgot the choice nour just made.
     -   Rina's eyes glaze over briefly. She returns to her familiar demeanor.
-            
+        
         -> rina_branches
+
+
+== rina_final ==
+
+    RINA: "You're almost ready to move on from the past... <i>Almost</i>."
+    
+    SFX OF POWER GENERATOR STARTING UP
+    
+    RINA: "I fixed the elevator that you all broke."
+    
+    NICK: "How the heck did you know how to do that?" (SURPRISED)
+    
+    MS. SUWAN: "You don't exactly seem old enough to know how to fix an elevator."
+    
+    NICK: "Maybe she controls the mall with her <i>magical powers</i>..."
+    
+    &MOV_RINA_END
+    
+    NICK: "See? Magical."
+    
+    NOUR: "Well, I guess we can get out of here now?"
+    
+    MS. SUWAN: "<i>Please.</i> Let us go."
+    
+    -> END
 
 //---------------- BEGINNING ----------------
 //first active conversation with Rina, in Bandn
@@ -131,6 +319,8 @@
 //The boiling point directs to the branches.
 
 == rina_bandn ==
+
+    NOUR: <i>I don't know how the hell Rina got in here, but regardless...</i>
 
     NOUR: <i>I can't believe we were ever friends.</i>
     
@@ -144,17 +334,19 @@
     
             RINA: "Hey, Yousra! Nice to see you after all these years. You know, I'm allowed to exist at this mall. You don't own it."
             
-    -   * "Yousra?["] Nobody calls me that anymore. I go by Nour now.
+    -   * "Yousra?["] Nobody calls me that anymore. I go by Nour now."
         
-            RINA: Oh, okay.
+            RINA: "Oh, okay."
             
-            RINA: This is a good start. At least you're talking to me again.
+            RINA: "This is a good start. At least you're talking to me again."
             
-            RINA: So... what happened back then? We were having lunch with our friends, we started talking about gay marriage being legalized...
+            RINA: "So... what happened back then? We were having lunch with our friends..."
             
-            RINA: What am I forgetting?
+            RINA: "We started talking about gay marriage being legalized..."
             
-                ** "You were quiet, while the others kept going on about how being gay is gross and weird."
+            RINA: "What am I forgetting?"
+            
+                ** "You were quiet[."], while the others kept going on about how being gay is gross and weird."
                 
                     RINA: "Well, sure I was quiet. But that doesn't mean I agreed with them."
                     
@@ -198,11 +390,11 @@
     
         RINA: "But you know what would've happened if I said something then?"
         
-        RINA: "They would've told their siblings, and their cousins. And then people's parents would find out. And all our parents know each other, so they'd <i>all</i> know."
+        RINA: "They would've told their siblings, and their cousins. And then people's parents would find out."
         
-        RINA: "Then my parents would get mad, too."
+        RINA: "And all our parents know each other, so they'd <i>all</i> know."
         
-        Tears begin to form in Rina's eyes.
+        RINA: "Then my parents would get mad, too." (TEARING UP)
         
         RINA: "I told you, I didn't feel any different about you after you came out... It's not like you could help it."
         
@@ -222,13 +414,7 @@
 //Nour takes this to mean that she should be confident, but she's OVER confident as a result.
 
 == rina_topicspot ==
-    
-    //If this knot is already visited, display a TLDR here and end scene.
-    {
-        - rina_topicspot:
-            -> neverknow
-    }
-    
+
     NOUR: "Why would I want to keep being friends with someone who is too much of a coward to stand up for me?"
     
     RINA: "Listen, you can call me a coward. It's fine. But don't you get where I'm coming from?"
@@ -258,20 +444,27 @@
     = neverknow
     
         RINA: "Nour, <i>neither</i> of us had the guts to say anything back then. You'll never know what would have happened if I spoke up."
+        
+        { - !neverknowlight:
+                -> neverknowlight
+            
+            - else: 
+                -> END
+        }
+        
+    = neverknowlight
     
-            -> END
+        &LIGHT_Nour0
+        
+        BEEP ELEVATOR LIGHT SFX
+    
+        -> light_on
 
 //---------------- HALLWAY ----------------
 //At the end of Ms. Suwan's route, Ms. Suwan is able to apologize for her past behavior and let go.
 //Nour takes this to mean that she should let things slide, and she ends up being too passive as a result.
 
 == rina_hallway ==
-    
-    //If this knot is already visited, display a TLDR here and end scene.
-    {
-        - rina_hallway:
-            -> neverknow
-    }
     
     NOUR: "Whatever. You know what, I'm not mad anymore. It's fine. I don't know why I was so upset."
     
@@ -332,8 +525,22 @@
     = neverknow
     
         RINA: "You missed your chance to forgive me, Nour. You'll never know what would have happened if you forgave me."
+        
+        { - !neverknowlight:
+                -> neverknowlight
+            
+            - else: 
+                -> END
+        }
+        
+    = neverknowlight
+        
+        &LIGHT_Nour1
+        
+        BEEP ELEVATOR LIGHT SFX
+        
+        -> light_on
 
-            -> END
 
 //---------------- ELEVATOR ----------------
 //she's blocking the elevator; end of nour's route
@@ -345,17 +552,17 @@
     //that should probably be mentioned here but im tired of this rn so do it later
     
     //Ms suwan can look back at the past now
-    MS SUWAN: "Nour, think back to when you were friends with Rina. Who was she to you?"
+    MS. SUWAN: "Nour, think back to when you were friends with Rina. Who was she to you?"
     
     * "Rina, you were[..."] the only person who understood me."
     
         Even though this may not really be Rina, there's now a glimmer of genuine compassion in her eyes.
         
-        MS SUWAN: "Nour, you helped me tell my friends from college what I wish I could have told them sooner."
+        MS. SUWAN: "Nour, you helped me tell my friends from college what I wish I could have told them sooner."
     
-        MS SUWAN: "You've already told Rina what you wish you could've said, and it isn't working for you."
+        MS. SUWAN: "You've already told Rina what you wish you could've said, and it isn't working for you."
         
-        MS SUWAN: "What <i>really</i> happened?"
+        MS. SUWAN: "What <i>really</i> happened?"
         
         NOUR: "I remember what I told you, when I first came out..."
         
@@ -369,7 +576,7 @@
                 
                 NOUR: "So I went to you, because you were always there for me, and made sure I was never alone."
     
-    -   NOUR: "And when I felt like <i>you</i> weren't looking out for me, I had nobody to go to."
+    -   NOUR: "And when I felt like <i>you</i> weren't looking out for me, I had nobody to go to." CONCERN
         
         //nick isn't as afraid of being a disappointment anymore
         NICK: "Why'd you <i>really</i> stop talking to Rina? Is it actually about her saying nothing?"
@@ -378,7 +585,7 @@
             
             * "I couldn't bring you down with me.["] I guess I felt like you were better off not being associated with me. It seemed like you would have been happier that way."
             
-    -   NOUR: "When I say it out loud, it feels silly. I'm still mad at you, but I don't think I want to be."
+    -   NOUR: "When I say it out loud, it feels silly. I'm still mad at you, but I don't think I want to be." (TEARING UP)
         
         NICK: "You know, I do the stuff I do... I guess because I'm frustrated at the world."
         
@@ -396,7 +603,7 @@
         
         NICK: "Well, we're here now. Whether you like it or not. Mostly 'cause we're just stuck here together."
         
-        MS SUWAN: "Correct, because Rina here is blocking the way."
+        MS. SUWAN: "Correct, because Rina here is blocking the way."
         
         NICK: "Oh, yeah, move it!"
         
@@ -408,11 +615,17 @@
         
         NOUR: "You're in the past now."
         
-        RINA DISAPPEARS.
+        &MOV_RINA_VOID
+        
+        &LIGHT_Nour2
+        
+        BEEP ELEVATOR LIGHT SFX
         
         NICK: "NICE! Button smashing time!"
         
-        MS SUWAN: "Please don't break the elevator again."
+        MS. SUWAN: "Please don't break the elevator again."
+        
+        THEY WALK INTO THE ELEVATOR
         
         -> END
 
@@ -426,6 +639,8 @@
     NOUR: "Friends are supposed to help each other. You weren't helping me that day, but..."
     
     RINA: "Seems like you're helping your new companions. Would you consider them to be your friends?"
+    
+    NOUR: <i>Yeah, maybe I'm ready to explore all possible outcomes from talking to Rina. I'll try to talk to her again.</i>
     
     -> END
 

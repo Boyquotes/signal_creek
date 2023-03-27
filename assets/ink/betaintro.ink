@@ -11,15 +11,25 @@
     
     &FOLLOW_SUWAN_SuwanStartingPos
     
+    &PAUSE_0.5
+    
     NICK: "If we hide here, she'll give up chasing us down—”
+    
+    
     
     &EMOTE_NICK_DownIdle
     &FOLLOW_NOUR_NourElevatorPos
     &EMOTE_NICK_LeftIdle
     
+    &PAUSE_0.5
+    
     NOUR: “In the BROKEN ELEVATOR?”
+    
+    &SOUND_InquisitiveSound
    
     &EMOTE_NOUR_RightIdle
+    
+    // &PORTRAIT_nour_placeholder
     
     NICK: "Uh..."
         * [Try to escape]
@@ -55,6 +65,8 @@
     &EMOTE_NOUR_DownIdle
     
     &EMOTE_NICK_LookAround
+    
+    &PAUSE_0.5
     
     NICK: "Aw, shoot! The scary old lady caught up!"
     
@@ -150,8 +162,6 @@
     &EMOTE_NICK_DownIdle
     
     &EMOTE_NOUR_DownIdle
-    
-    ELEVATOR OPENS...
     
     &ELEVATOR_OPEN
     

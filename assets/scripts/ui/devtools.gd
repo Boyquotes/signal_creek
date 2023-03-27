@@ -61,8 +61,9 @@ func _start_in_devmode():
 	$VBoxContainer/MuteAudio.set_pressed(true)
 
 
-func _on_MuteAudio_toggled(button_pressed):
-	Globals.SoundManager.set_mute_audio(button_pressed)
+func _on_MuteAudio_toggled(_button_pressed):
+#	Globals.SoundManager.set_mute_audio(_button_pressed)
+	Globals.SoundManager.set_music_pause_mode(_button_pressed)
 	pass # Replace with function body.
 
 
@@ -72,3 +73,19 @@ func _on_LineEdit_focus_entered():
 
 func _on_LineEdit_focus_exited():
 	typing_knot_name = false
+
+
+func _on_Resolution_item_selected(index):
+	if index == 0:
+		OS.window_size = Vector2(960, 540)
+		Globals.PartyCamera.rescale_camera(6)
+		
+	elif index == 1:
+		OS.window_size = Vector2(1920, 1080)
+		Globals.PartyCamera.rescale_camera(12)
+		
+	elif index == 2:
+		OS.window_size = Vector2(2880, 1620)
+		Globals.PartyCamera.rescale_camera(18)
+		
+		

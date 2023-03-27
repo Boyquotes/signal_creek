@@ -7,11 +7,15 @@ extends Node2D
 signal doorway_entered(newroom, partyposition)
 
 export var camera_pixel_size : Vector2 = Vector2(320, 180)
+export var testing_enabled = false
+export var testing_start_pos : Vector2 = Vector2(716, -320)
 
 var _following_vector = Vector2(0, 0)
 
 onready var viewport_container = $ViewportContainer
 onready var viewport = $ViewportContainer/Viewport
+onready var loadingscreen = $LoadingScreen
+onready var loadingscreen_animation = $LoadingScreen/AnimationPlayer
 
 
 func _ready():
@@ -30,13 +34,18 @@ func _ready():
 	Globals.ColorManager = $UserInterface/ReferenceRect/DialogueBox/ColorManager
 	
 	RoomEngine.CurrentRoom = $ViewportContainer/Viewport/Room
+	RoomEngine.starter = RoomEngine.CurrentRoom
 	RoomEngine.PlaneManager = $ViewportContainer/Viewport/Room/PlaneManager
 	
 	#emit_signal("doorway_entered", RoomEngine.Rooms[RoomEngine.CurrentRoomIndex], RoomEngine.Rooms[RoomEngine.CurrentRoomIndex].get_party_starting_position())
-	call_deferred("_doorway_entered", RoomEngine.Rooms[RoomEngine.CurrentRoomIndex], RoomEngine.Rooms[RoomEngine.CurrentRoomIndex].get_party_starting_position())
+	if testing_enabled:
+		RoomEngine.Rooms[1].set_party_starting_position(testing_start_pos)
+		call_deferred("_doorway_entered", RoomEngine.Rooms[1], RoomEngine.Rooms[1].get_party_starting_position())
+	else:
+		call_deferred("_doorway_entered", RoomEngine.Rooms[3], RoomEngine.Rooms[3].get_party_starting_position())
 
-func _process(delta):
-	if Globals.PartyCamera.is_inside_tree():
+func _physics_process(delta):
+	if Globals.PartyCamera and Globals.PartyCamera.is_inside_tree():
 		viewport_container.material.set_shader_param("cam_offset", Globals.PartyCamera.pixel_perfect(delta, _following_vector))
 
 
@@ -44,6 +53,18 @@ func _on_Game_doorway_entered(newRoom, partyPosition):
 	newRoom.call_deferred("set_party_starting_position", partyPosition)
 	RoomEngine.call_deferred("change_current_room", RoomEngine.CurrentRoom, newRoom, viewport)
 	
+
+func play_loading_screen():
+#	Globals.GameOverlay.start_fade_out()
+	Globals.SoundManager.set_music_pause_mode(true)
+	loadingscreen.set_visible(true)
+	loadingscreen_animation.play("Loading")
+	yield(get_tree().create_timer(1.5), "timeout")
+	loadingscreen.set_visible(false)
+	if Globals.GameState == Globals.GameStates.GAME:
+		Globals.SoundManager.set_music_pause_mode(false)
+	Globals.SoundManager.play_music_by_index(Globals.SoundManager.room_music[RoomEngine.CurrentRoomIndex])
+	Globals.GameOverlay.start_fade_in()
 
 
 # Update position of specified camera to newCameraPos
@@ -64,3 +85,13 @@ func set_camera_following_vector(newCameraPos):
 # Called on ready only
 func _doorway_entered(newRoom, partyPosition):
 	emit_signal("doorway_entered", newRoom, partyPosition)
+	
+func reload():
+	Globals.reload()
+	RoomEngine.reload()
+	var _reloaded = get_tree().reload_current_scene()
+	Globals.GameOverlay.reload()
+
+
+func _on_QuitButton_pressed():
+	get_tree().quit()

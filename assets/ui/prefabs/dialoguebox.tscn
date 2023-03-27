@@ -1,19 +1,83 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
+[ext_resource path="res://assets/alpha/sprites_alpha/characters/portraits/suwan_dream.png" type="Texture" id=3]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
+[ext_resource path="res://assets/sprites/characters/portraits/portrait_nick_neutral.png" type="Texture" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sprites/characters/portraits/portrait_nour_neutral.png" type="Texture" id=8]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=9]
 [ext_resource path="res://assets/scripts/ui/color_manager.gd" type="Script" id=10]
+[ext_resource path="res://assets/sprites/characters/portraits/portrait_placeholder.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/characters/portraits/portrait_rina_neutral.png" type="Texture" id=12]
+[ext_resource path="res://addons/SmoothScroll/SmoothScrollContainer.gd" type="Script" id=13]
+[ext_resource path="res://assets/ui/images/downarrow.png" type="Texture" id=14]
+[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe_12.tres" type="DynamicFont" id=15]
+
+[sub_resource type="Animation" id=3]
+resource_name = "CanProceed"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.001, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 309, 509 ), Vector2( 309, 509 ), Vector2( 309, 512 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.6, 0.6, 0.6, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 309, 509 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.45, 0.45, 0.45, 1 ) ]
+}
 
 [sub_resource type="Gradient" id=1]
 
 [sub_resource type="GradientTexture2D" id=2]
 gradient = SubResource( 1 )
-fill_from = Vector2( 1, 0.1 )
-fill_to = Vector2( 1, 0.2 )
+fill_from = Vector2( 1, 1 )
+fill_to = Vector2( 1, 0.945098 )
 
 [node name="DialogueBox" type="Control"]
 anchor_right = 1.0
@@ -31,42 +95,54 @@ story = ExtResource( 1 )
 anchor_left = 0.643
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -9.28003
+margin_right = -16.0
 margin_bottom = -10.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
-anchor_left = -0.175
-anchor_top = 0.0603774
-anchor_right = 0.970509
-anchor_bottom = 0.877
-margin_left = -1.0236
-margin_right = -1.06943
-margin_bottom = 0.189972
-__meta__ = {
-"_edit_use_anchors_": true
-}
+anchor_left = -0.160644
+anchor_top = 0.045283
+anchor_right = 0.973421
+anchor_bottom = 0.844925
+margin_left = 5.97638
+margin_right = -4.06946
+margin_bottom = 0.189758
+rect_min_size = Vector2( 371, 424 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
-margin_right = 392.0
-margin_bottom = 432.0
+margin_right = 371.0
+margin_bottom = 424.0
+rect_clip_content = false
+focus_mode = 2
+size_flags_vertical = 3
 scroll_horizontal_enabled = false
+script = ExtResource( 13 )
+damping = 0.65
+over_drag_multiplicator_top = 0
+over_drag_multiplicator_bottom = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer"]
 light_mask = 9
-margin_right = 370.0
-margin_bottom = 454.0
-grow_vertical = 2
+margin_right = 349.0
+margin_bottom = 530.0
+rect_min_size = Vector2( 349, 424 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance_placeholder="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn"]
-margin_right = 370.0
+margin_right = 349.0
 margin_bottom = 96.0
 
-[node name="DialogueEntryChoices" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
+[node name="RichTextLabel2" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance_placeholder="res://assets/ui/prefabs/dialoguebox_entrynormal.tscn"]
 margin_top = 116.0
-margin_right = 370.0
-margin_bottom = 275.0
+margin_right = 349.0
+margin_bottom = 212.0
+
+[node name="DialogueEntryChoices" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
+margin_top = 232.0
+margin_right = 349.0
+margin_bottom = 371.0
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -74,14 +150,42 @@ __meta__ = {
 [node name="DialogueEntry" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 anchor_top = 0.0
 anchor_bottom = 0.0
-margin_top = 295.0
-margin_right = 370.0
-margin_bottom = 454.0
+margin_top = 391.0
+margin_right = 349.0
+margin_bottom = 530.0
 
-[node name="Light2D" type="Light2D" parent="Panel"]
+[node name="DownArrow" type="TextureRect" parent="Panel"]
+modulate = Color( 0.6, 0.6, 0.6, 1 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -27.0
+margin_top = -21.0
+margin_right = 14.0
+margin_bottom = 4.00049
+rect_scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 14 )
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/DownArrow"]
+anims/CanProceed = SubResource( 3 )
+anims/Idle = SubResource( 4 )
+
+[node name="Space" type="RichTextLabel" parent="Panel"]
 visible = false
-position = Vector2( 136.657, 279.563 )
-scale = Vector2( 8.2832, 8.70117 )
+margin_left = 281.0
+margin_top = 481.0
+margin_right = 326.0
+margin_bottom = 500.0
+custom_fonts/normal_font = ExtResource( 15 )
+text = "[SPACE]"
+fit_content_height = true
+
+[node name="Light2D" type="Light2D" parent="."]
+visible = false
+position = Vector2( 719.797, 232.563 )
+scale = Vector2( 7.50634, 7.23241 )
 texture = SubResource( 2 )
 mode = 3
 range_item_cull_mask = 8
@@ -91,7 +195,8 @@ margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 10 )
 characterColors = {
-"brody": Color( 0.0352941, 0.32549, 0.635294, 1 ),
+"???": Color( 1, 1, 1, 1 ),
+"brody": Color( 0.462745, 0.6, 0.741176, 1 ),
 "chad": Color( 0.647059, 0.85098, 0.345098, 1 ),
 "clerk": Color( 0.8, 0.403922, 1, 1 ),
 "kannika": Color( 0.380392, 0.670588, 1, 1 ),
@@ -103,4 +208,17 @@ characterColors = {
 "nour": Color( 0.78, 0.38, 0.38, 1 ),
 "rina": Color( 1, 0.439216, 0.67451, 1 ),
 "the party": Color( 1, 1, 1, 1 )
+}
+characterPortraits = {
+"ms. suwan": ExtResource( 3 ),
+"nick": ExtResource( 5 ),
+"nour": ExtResource( 8 ),
+"placeholder": ExtResource( 11 ),
+"rina": ExtResource( 12 )
+}
+portraitLibrary = {
+"nick_netural": ExtResource( 3 ),
+"nour_neutral": ExtResource( 8 ),
+"placeholder": ExtResource( 11 ),
+"rina_netural": ExtResource( 12 )
 }
