@@ -91,3 +91,7 @@ func reload():
 	RoomEngine.reload()
 	var _reloaded = get_tree().reload_current_scene()
 	Globals.GameOverlay.reload()
+
+
+func _on_QuitButton_pressed():
+	get_tree().quit()
