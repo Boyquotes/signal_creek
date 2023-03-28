@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/wertoys.ink-c44df4025c2179f93aa17fdb8fb81832.res"
+
+[deps]
+
+source_file="res://assets/ink/hallway/wertoys.ink"
+dest_files=[ "res://.import/wertoys.ink-c44df4025c2179f93aa17fdb8fb81832.res" ]
+
+[params]
+
+is_master_file=false
+compress=false
