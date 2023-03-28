@@ -5,22 +5,16 @@
     
     NICK: “QUICK, IN HERE! There's no way she'll find us here!"
     
+    &SPEED_NICK_120.0
+    &SPEED_NOUR_100.0
     &FOLLOW_NICK_NickElevatorPos
     &FOLLOW_SUWAN_SuwanStartingPos
     &POS_SUWAN_160,248
     &FOLLOW_NOUR_NourStartingPos
     
-
-    
-    
-    
-
+    &PAUSE_0.5
     
     &EMOTE_NICK_DownIdle
-    
-    
-    
-    &PAUSE_0.5
     
     NICK: "If we hide here, she'll give up chasing us down—”
     
@@ -35,6 +29,8 @@
     
     &SOUND_InquisitiveSound
 
+    &SPEED_NICK_72.0
+    &SPEED_NOUR_72.0
     
     // &PORTRAIT_nour_placeholder
     
@@ -71,6 +67,8 @@
     &FOLLOW_SUWAN_SuwanElevatorPos
     
     &EMOTE_NOUR_DownIdle
+    
+    &VOLUME_-120.0
     
     &EMOTE_NICK_LookAround
     

@@ -5,8 +5,8 @@ extends KinematicBody2D
 # Updates sprites/animations accordingly.
 
 # TODO: add timer for updating pathfinding position
+export var default_walk_speed : float = 72
 
-export var walk_speed : float = 72
 export var inkname = "Name"
 export var _pathfind_stop_approaching_dist : float = 16
 export var _pathfind_move_away_dist : float = 8
@@ -16,6 +16,7 @@ export var _navtimer_interval : float = 0.64
 # this probably needs to be the sight dist with delta and speed or some crazy bazingafied shit
 var _navtimer
 
+var walk_speed = default_walk_speed
 var _pathfind_stop_approaching_dist_default = _pathfind_stop_approaching_dist
 var _pathfind_move_away_dist_default = _pathfind_move_away_dist
 var _velocity : Vector2 = Vector2()
@@ -197,3 +198,9 @@ func set_following_node(nodeToFollow):
 func place_character_at_vector(vectorPosition):
 #	print(vectorPosition)
 	self.set_global_position(vectorPosition)
+	
+func set_speed(speedValue):
+	walk_speed = speedValue
+	
+func reset_speed():
+	walk_speed = default_walk_speed

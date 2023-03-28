@@ -87,6 +87,20 @@ func parse_commands(currentLine):
 				
 			"SUWAN":
 				Globals.Suwan.animate_emote(emoteName)
+				
+	elif "&SPEED" in currentLine:
+		var charName = currentLine.split("_")[1].strip_escapes()
+		var speedValue = float(currentLine.split("_")[2].strip_escapes())
+		
+		match charName:
+			"NICK":
+				Globals.Nick.set_speed(speedValue)
+				
+			"NOUR":
+				Globals.Nour.set_speed(speedValue)
+				
+			"SUWAN":
+				Globals.Suwan.set_speed(speedValue)
 		
 	# Make this route light turn on
 	elif "&LIGHT" in currentLine:
@@ -149,9 +163,8 @@ func parse_commands(currentLine):
 		
 	# Change volume of music
 	elif "&VOLUME" in currentLine:
-		# &VOLUME_level
-		# TODO: Figure out how tihs works
-		pass
+		var volumeLevel = float(currentLine.split("_")[1].strip_escapes())
+		Globals.SoundManager.set_stream_volume(Globals.SoundManager.musicPlayer, volumeLevel)
 		
 	# expects &SHLORP_CBK_Chad_out
 	elif "&SHLORP_CBK" in currentLine:

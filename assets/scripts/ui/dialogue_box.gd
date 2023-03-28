@@ -380,6 +380,11 @@ func clear_and_reset_ui():
 	if Globals.Nour and Globals.Nick:
 		Globals.Nick.set_following_node(Globals.Nour)
 		Globals.Suwan.set_following_node(Globals.Nick)
+		
+	if Globals.PartyObject:
+		for character in Globals.PartyObject.characterObjects:
+			character.reset_speed()
+		
 	Globals.GameMode = Globals.GameModes.WALK
 
 
