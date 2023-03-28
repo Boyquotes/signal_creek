@@ -55,13 +55,13 @@ func move_followers_by_pathfind():
 	var follower1 = characterObjects[wrapi(leaderIndex + 1, 0,3)]
 	var follower2 = characterObjects[wrapi(leaderIndex - 1, 0,3)]
 	
-	if Globals.GameMode == Globals.GameModes.WALK:
-		Globals.Nick.pathfind_to(Globals.Nour)
-		Globals.Suwan.pathfind_to(Globals.Nick)
-	
-	else:
-		follower1.pathfind_to(follower1.following_node)
-		follower2.pathfind_to(follower2.following_node)
+#	if Globals.GameMode == Globals.GameModes.WALK:
+#		Globals.Nick.pathfind_to(Globals.Nour)
+#		Globals.Suwan.pathfind_to(Globals.Nick)
+#
+#	else:
+	follower1.pathfind_to(follower1.following_node)
+	follower2.pathfind_to(follower2.following_node)
 
 
 func force_move_leader():

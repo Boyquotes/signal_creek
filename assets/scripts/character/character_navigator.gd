@@ -8,11 +8,11 @@ extends KinematicBody2D
 
 export var walk_speed : float = 64
 export var inkname = "Name"
-export var _pathfind_stop_approaching_dist : float = 32
-export var _pathfind_move_away_dist : float = 16
+export var _pathfind_stop_approaching_dist : float = 16
+export var _pathfind_move_away_dist : float = 8
 
 export var sight_dist := 8.0
-export var _navtimer_interval : float = 0.5
+export var _navtimer_interval : float = 0.64
 # this probably needs to be the sight dist with delta and speed or some crazy bazingafied shit
 var _navtimer
 
@@ -31,58 +31,61 @@ onready var _animation_player = $AnimationPlayer
 onready var following_node
 
 onready var angle_towards = Vector2(0, 0)
-onready var angle_towards_mod = angle_towards
-onready var sight_ray = $RayCast2D
+#onready var angle_towards_mod = angle_towards
+#
+#onready var sight_rays = []
+#onready var direction_vectors = []
+#
+#onready var draw_first_extension_origin = Vector2(0,0)
+#onready var draw_first_extension = Vector2(0,0)
+#onready var draw_second_extension_origin = Vector2(0,0)
+#onready var draw_second_extension = Vector2(0,0)
 
-onready var sight_rays = []
-onready var direction_vectors = []
+onready var following_vector_queue = [self.get_global_position()]
 
-onready var draw_first_extension_origin = Vector2(0,0)
-onready var draw_first_extension = Vector2(0,0)
-onready var draw_second_extension_origin = Vector2(0,0)
-onready var draw_second_extension = Vector2(0,0)
-
-onready var following_vector_queue = []
-onready var colors = [
-	Color.red,
-	Color.orangered,
-	Color.yellow,
-	Color.yellowgreen,
-	Color.purple,
-	Color.magenta
-	]
+#onready var colors = [
+#	Color.red,
+#	Color.orangered,
+#	Color.yellow,
+#	Color.yellowgreen,
+#	Color.purple,
+#	Color.magenta
+#	]
 
 func _ready():
 	_navtimer = Timer.new()
 	add_child(_navtimer)
-	_navtimer.wait_time = _navtimer_interval
+	_navtimer.wait_time = _navtimer_interval / walk_speed
 	_navtimer.connect("timeout", self, "timer_timeout")
 	_navtimer.start()
 	_navtimer.set_one_shot(true)
 	
-	sight_rays = [RayCast2D.new(), RayCast2D.new(), RayCast2D.new(), RayCast2D.new(), RayCast2D.new()]
+#	following_vector_queue = [self.get_global_position()]
+#	sight_rays = [RayCast2D.new(), RayCast2D.new(), RayCast2D.new(), RayCast2D.new(), RayCast2D.new()]
+	
 
-func _physics_process(_delta):
-#	var space_state = get_world_2d().direct_space_state
-#	var result = space_state.intersect_ray(Vector2(0, 0), Vector2(0, 0) + draw_look_far_left)
-#	print(result)
-	pass
+#func _physics_process(_delta):
+##	var space_state = get_world_2d().direct_space_state
+##	var result = space_state.intersect_ray(Vector2(0, 0), Vector2(0, 0) + draw_look_far_left)
+##	print(result)
+#
+#	pass
+#
+#func _process(_delta):
+#
+##	update()
+#	pass
 
-func _process(_delta):
-	sight_dist = walk_speed
-	update()
-
-
-func _draw():
-	var i = 0
-	for vector in direction_vectors:
-		
-		draw_line(Vector2(0, 0), vector * sight_dist, colors[i], 1.0)
-		i += 1
+#func _draw():
+#	var i = 0
+#	for vector in direction_vectors:
+#
+#		draw_line(Vector2(0, 0), vector * sight_dist, colors[i], 1.0)
+#		i += 1
 
 func timer_timeout():
 
-		pass
+	pass
 
 
 # Play respective directional animations
@@ -122,26 +125,26 @@ func animate_emote(emoteName):
 	_animation_player.play(emoteName)
 
 
-func check_for_collision_raycast():
-	var i = 0
-	for ray in sight_rays:
-		if !ray.is_colliding():
-			return i
-			
-		i += 1
-	
-	return 0
-	pass
+#func check_for_collision_raycast():
+#	var i = 0
+#	for ray in sight_rays:
+#		if !ray.is_colliding():
+#			return i
+#
+#		i += 1
+#
+#	return 0
+#	pass
 
 
-func collision_shape_query(directionVector, spaceState):
-	var collisionShapeQuery = Physics2DShapeQueryParameters.new()
-	collisionShapeQuery.set_shape($CollisionShape2D.get_shape())
-	
-	collisionShapeQuery.transform = $CollisionShape2D.global_transform
-	collisionShapeQuery.transform = collisionShapeQuery.transform.translated(directionVector * sight_dist)
-	
-	return spaceState.intersect_shape(collisionShapeQuery)
+#func collision_shape_query(directionVector, spaceState):
+#	var collisionShapeQuery = Physics2DShapeQueryParameters.new()
+#	collisionShapeQuery.set_shape($CollisionShape2D.get_shape())
+#
+#	collisionShapeQuery.transform = $CollisionShape2D.global_transform
+#	collisionShapeQuery.transform = collisionShapeQuery.transform.translated(directionVector * sight_dist)
+#
+#	return spaceState.intersect_shape(collisionShapeQuery)
 
 
 func rotate_direction_vector(directionVector, degrees):
@@ -163,6 +166,7 @@ func move_character_by_vector(directionVector : Vector2):
 	directionVector = directionVector.normalized()
 	_direction_facing = directionVector
 
+	var oldIdle = _current_idle_sprite
 	#play the correct animation based on movement direction angle
 	if abs(directionVector.x) >= abs(directionVector.y):
 		if directionVector.x > 0:
@@ -177,91 +181,88 @@ func move_character_by_vector(directionVector : Vector2):
 			
 		else:
 			animate_up()
+			
+	if _current_idle_sprite != oldIdle:
+#		print("durchange")
+#		following_vector_queue.pop_front()
+#		following_vector_queue.push_back(self.get_global_position() - (direction_vector * walk_speed/2))
+
+		pass
 	
-	if Globals.GameMode == Globals.GameModes.WALK and self != Globals.Nour:
+	
+#	if Globals.GameMode == Globals.GameModes.WALK and self != Globals.Nour:
+#
+#		# TODO: compare character position with nour position and directionvector
+#		# basically to see if nour is walking in front of them
+#
+#
+#
+#		if _navtimer.get_time_left() <= 0:
+##			print("piss")
+#			directionVector = Vector2(stepify(directionVector.x, 0.5), stepify(directionVector.y, 0.5))
+#
+##			directionVector = vector_check(self.get_global_position(), directionVector, true)
+#			direction_vector = directionVector
+#
+#
+#
+#			_navtimer.start()
+#
+#
+#	else:
+	direction_vector = directionVector
+	
+	if _navtimer.get_time_left() <= 0:
+		if following_vector_queue.back() != self.get_global_position() - (direction_vector * 4):
+			following_vector_queue.push_back(self.get_global_position() - (direction_vector * 4))
 		
-		# TODO: compare character position with nour position and directionvector
-		# basically to see if nour is walking in front of them
-		
-		if _navtimer.get_time_left() <= 0:
-#			print("piss")
-			directionVector = Vector2(stepify(directionVector.x, 0.5), stepify(directionVector.y, 0.5))
-
+		if following_vector_queue.size() > 4:
+			following_vector_queue.pop_front()
 			
-				
-			directionVector = vector_check(self.get_global_position(), directionVector, true)
-			
-			direction_vector = directionVector
-			
-			#nav timer multiplier could equal the width of the colliding body
-			
-#			_navtimer.wait_time = max(1/selfPos.distance_to(followingPos), 0.1)
-			_navtimer.start()
-			
-#			if directionVector != previous_direction:
-#				previous_direction = direction_vector
-#				direction_vector = directionVector
-
-		
-			following_vector_queue.push_front(direction_vector)
-			following_vector_queue.push_front(direction_vector)
-			
-#			print("reached")
-#			following_vector_queue.remove(following_vector_queue[0])
-			#and then basically we append to the vector queue and remove the previous one when the timer stops
-			# and basically the vector we use is always the last one in the list
-			# everything should be really fast please god
-#			print(following_vector_queue)
-		
-	else:
-		direction_vector = directionVector
+		_navtimer.start()
 		
 	_velocity = direction_vector * walk_speed
 	_velocity = move_and_slide(_velocity)
 
-# check collision count for each direction, and recurse if it's recursive
-func check_for_collision(directionDictionaries, directionVectors, rec: bool):
-#	print("--------------------")
-#	print(self.name)
-	var i : int = 0
-	for direction in directionDictionaries:
-		# THIS IS THE DIRECTION WE SHOULD GO IN FIRST (MAYBE)
-		if !direction or direction.size() == 0:
-			if rec:
-				var extension_dir = vector_check(directionVectors[i] * sight_dist, directionVectors[i], false)
-#				print(extension_dir)
-				var j = min(i + 1, directionDictionaries.size() - 1)
-				var extension_dir_2 = vector_check(directionVectors[j] * sight_dist, directionVectors[j], false)
-				
-				draw_first_extension_origin = directionVectors[i] * sight_dist
-				draw_first_extension = extension_dir * sight_dist
-				
-				draw_second_extension_origin = directionVectors[j] * sight_dist
-				draw_second_extension = extension_dir_2 * sight_dist
-				
-				return i
-				pass
-			
-			else:
-				return i
-			
-		for collision in direction:
-#			if collision.get("collider") != following_node:
-#				print(String(collision))
-#			Vector2(0, 0) + draw_look_far_left
+## check collision count for each direction, and recurse if it's recursive
+#func check_for_collision(directionDictionaries, directionVectors, rec: bool):
+##	print("--------------------")
+##	print(self.name)
+#	var i : int = 0
+#	for direction in directionDictionaries:
+#		# THIS IS THE DIRECTION WE SHOULD GO IN FIRST (MAYBE)
+#		if !direction or direction.size() == 0:
+#			if rec:
+#				var extension_dir = vector_check(directionVectors[i] * sight_dist, directionVectors[i], false)
+##				print(extension_dir)
+#				var j = min(i + 1, directionDictionaries.size() - 1)
+#				var extension_dir_2 = vector_check(directionVectors[j] * sight_dist, directionVectors[j], false)
+#
+#				draw_first_extension_origin = directionVectors[i] * sight_dist
+#				draw_first_extension = extension_dir * sight_dist
+#
+#				draw_second_extension_origin = directionVectors[j] * sight_dist
+#				draw_second_extension = extension_dir_2 * sight_dist
+#
+#				return i
+#				pass
 #
 #			else:
-#			if collision.get("collider") == following_node:
 #				return i
-			pass
-		i += 1
-		
-	return i - 1
+#
+#		i += 1
+#
+#	return i - 1
 
 
 # Current pathfinding
 func pathfind_to(target : Node2D):
-	angle_towards = target.get_global_position() - self.get_global_position()
+	angle_towards = target.get_global_position() - self.get_global_position() #instead of target global position, do the last item on target's positional queue
+	
+	if target == Globals.Nour or target == Globals.Nick and self != Globals.Nour and Globals.GameMode == Globals.GameModes.WALK:
+		
+		angle_towards = target.following_vector_queue.front() - self.get_global_position()
+	
 	if(angle_towards.length() < _pathfind_stop_approaching_dist):
 		if(angle_towards.length() < _pathfind_move_away_dist):
 			angle_towards = -angle_towards
@@ -281,7 +282,7 @@ func set_sprite(sprite):
 func set_following_node(nodeToFollow):
 #	print(nodeToFollow.get_global_position())
 	
-	if nodeToFollow != Globals.Nour:
+	if nodeToFollow != Globals.Nour and nodeToFollow != Globals.Suwan:
 		_pathfind_stop_approaching_dist = 2
 		_pathfind_move_away_dist = 0
 		
@@ -298,52 +299,52 @@ func place_character_at_vector(vectorPosition):
 	self.set_global_position(vectorPosition)
 
 
-func vector_check(startPos, directionVector, isRecursive):
-	var followingPos = following_node.get_global_position()
-	var spaceState = get_world_2d().direct_space_state
-	
-	direction_vectors = [
-		directionVector, # STRAIGHT
-		rotate_direction_vector(directionVector, 45), # LEFT
-		rotate_direction_vector(directionVector, 90), # FAR LEFT
-		rotate_direction_vector(directionVector, -45), # RIGHT
-		rotate_direction_vector(directionVector, -90) # FAR RIGHT
-	]
-	
-	var i = 0
-	for vector in direction_vectors:
-		sight_rays[i].set_cast_to(direction_vectors[i] * sight_dist)
-		
-	var collision_queries = []
-	
-	for vector in direction_vectors:
-		collision_queries.push_back(collision_shape_query(vector, spaceState))
-	
-	#find left or right bias and make array accordingly
-	
-#	var allDirectionsCollisions
-	var firstFreeDirection = 0
-	var allDirectionVectors = direction_vectors
-
-	var allDirectionsCollisions = [ # RIGHT BIAS
-		collision_queries[0],
-		collision_queries[3],
-		collision_queries[1],
-		collision_queries[4],
-		collision_queries[2]
-		]
-##
-#	#distance - closer to left or right?
-#	# CLOSER TO LEFT
-	if (direction_vectors[1] * sight_dist).distance_to(followingPos) < (direction_vectors[3] * sight_dist).distance_to(followingPos):
-		allDirectionsCollisions = [ # LEFT BIAS
-			collision_queries[0],
-			collision_queries[1],
-			collision_queries[3],
-			collision_queries[2],
-			collision_queries[4]
-			]
-		
-	firstFreeDirection = check_for_collision(allDirectionsCollisions, allDirectionVectors, isRecursive)
-#	firstFreeDirection = check_for_collision_raycast()
-	return allDirectionVectors[firstFreeDirection]
+#func vector_check(startPos, directionVector, isRecursive):
+#	var followingPos = following_node.get_global_position()
+#	var spaceState = get_world_2d().direct_space_state
+#
+#	direction_vectors = [
+#		directionVector, # STRAIGHT
+#		rotate_direction_vector(directionVector, 45), # LEFT
+#		rotate_direction_vector(directionVector, 90), # FAR LEFT
+#		rotate_direction_vector(directionVector, -45), # RIGHT
+#		rotate_direction_vector(directionVector, -90) # FAR RIGHT
+#	]
+#
+#	var i = 0
+#	for vector in direction_vectors:
+#		sight_rays[i].set_cast_to(direction_vectors[i] * sight_dist)
+#
+#	var collision_queries = []
+#
+#	for vector in direction_vectors:
+#		collision_queries.push_back(collision_shape_query(vector, spaceState))
+#
+#	#find left or right bias and make array accordingly
+#
+##	var allDirectionsCollisions
+#	var firstFreeDirection = 0
+#	var allDirectionVectors = direction_vectors
+#
+#	var allDirectionsCollisions = [ # RIGHT BIAS
+#		collision_queries[0],
+#		collision_queries[3],
+#		collision_queries[1],
+#		collision_queries[4],
+#		collision_queries[2]
+#		]
+###
+##	#distance - closer to left or right?
+##	# CLOSER TO LEFT
+#	if (direction_vectors[1] * sight_dist).distance_to(followingPos) < (direction_vectors[3] * sight_dist).distance_to(followingPos):
+#		allDirectionsCollisions = [ # LEFT BIAS
+#			collision_queries[0],
+#			collision_queries[1],
+#			collision_queries[3],
+#			collision_queries[2],
+#			collision_queries[4]
+#			]
+#
+#	firstFreeDirection = check_for_collision(allDirectionsCollisions, allDirectionVectors, isRecursive)
+##	firstFreeDirection = check_for_collision_raycast()
+#	return allDirectionVectors[firstFreeDirection]
