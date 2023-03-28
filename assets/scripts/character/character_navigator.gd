@@ -123,9 +123,9 @@ func move_character_by_vector(directionVector : Vector2):
 	animate_character(directionVector)
 	direction_vector = directionVector
 	
-	if _navtimer.get_time_left() <= 0:
-		if following_vector_queue.back() != self.get_global_position() - (direction_vector * 3):
-			following_vector_queue.push_back(self.get_global_position() - (direction_vector * 3))
+	if _navtimer.get_time_left() <= 0 and Globals.GameMode == Globals.GameModes.WALK:
+		if following_vector_queue.back() != self.get_global_position() - (direction_vector * 8):
+			following_vector_queue.push_back(self.get_global_position() - (direction_vector * 8))
 		
 		if following_vector_queue.size() > 4:
 			following_vector_queue.pop_front()
