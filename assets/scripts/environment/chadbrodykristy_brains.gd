@@ -25,6 +25,7 @@ func _ready():
 	Globals.Brody = $Brody
 	Globals.Kristy = $Kristy
 	print("cbk started")
+	#SAVE SYSTEM: if cbk final visited, remove self from everything
 
 
 func _process(_delta):
