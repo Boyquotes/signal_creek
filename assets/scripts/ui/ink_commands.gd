@@ -185,3 +185,14 @@ func parse_commands(currentLine):
 		var characterName = currentLine.split("_")[1].strip_escapes().to_lower()
 		var portraitToUse = currentLine.split("_")[2].strip_escapes().to_lower()
 		Globals.ColorManager.set_character_portrait(characterName, portraitToUse)
+		
+	# AUDIO_FADEIN or AUDIO_FADEOUT
+	elif "&AUDIO" in currentLine:
+		var command = currentLine.split("_")[1].strip_escapes().to_lower()
+		
+		if "FADEIN" in currentLine:
+			Globals.SoundManager.increasing_music_volume = true
+			Globals.SoundManager.musicPlayer.set_stream_paused(false)
+			
+		elif "FADEOUT" in currentLine:
+			Globals.SoundManager.decreasing_music_volume = true

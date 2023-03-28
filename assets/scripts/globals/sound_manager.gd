@@ -11,6 +11,12 @@ export var music_hallway : AudioStreamMP3
 export var music_topicspot : AudioStreamMP3
 export var music_elevator : AudioStreamMP3
 export var music_starter : AudioStreamMP3
+export var smooth_change_volume_rate := 0.5
+
+var decreasing_music_volume
+var increasing_music_volume
+
+# VOLUME RANGE: -40dB to 2.4dB
 
 export var music_tracks : Dictionary = {
 	"BandNMusic": music_bandn,
@@ -46,6 +52,14 @@ onready var uiSoundPlayer = $UISounds
 
 func _ready():
 	set_mute_audio(true)
+
+
+func _process(_delta):
+	if decreasing_music_volume:
+		smooth_decrease_stream_volume(musicPlayer)
+		
+	elif increasing_music_volume:
+		smooth_increase_stream_volume(musicPlayer)
 
 
 func play_sound(audioName):
@@ -93,3 +107,24 @@ func set_stream_volume(stream, streamVolume: float):
 
 func set_typewriter_sound(soundName):
 	sound_effects["TypewriterSound"] = character_voices.get(soundName)
+	
+
+func smooth_decrease_stream_volume(stream):
+	var currentVolume = stream.get_volume_db()
+	
+	if stream.get_volume_db() > -40.0:
+		stream.set_volume_db(currentVolume - smooth_change_volume_rate)
+		return
+	
+	decreasing_music_volume = false
+	stream.set_stream_paused(true)
+	
+func smooth_increase_stream_volume(stream):
+	var currentVolume = stream.get_volume_db()
+	
+	if stream.get_volume_db() < 0.0:
+		stream.set_volume_db(currentVolume + smooth_change_volume_rate)
+		return
+	
+	increasing_music_volume = false
+	stream.set_volume_db(0.0)
