@@ -52,6 +52,9 @@ func parse_commands(currentLine):
 		if posNodeName == "NOUR":
 			posNode = Globals.Nour
 			
+		elif posNodeName == "NICK":
+			posNode = Globals.Nick
+			
 		elif posNodeName != "stop":
 			posNode = RoomEngine.CurrentRoom.plane_manager.get_node(posNodeName)
 		

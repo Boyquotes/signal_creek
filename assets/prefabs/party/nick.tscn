@@ -37,7 +37,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 7, 3.5 )
+extents = Vector2( 6, 3.5 )
 
 [node name="NICK" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
@@ -48,6 +48,7 @@ position = Vector2( 0, -17 )
 texture = ExtResource( 3 )
 hframes = 6
 vframes = 5
+frame = 24
 region_rect = Rect2( 14, 15, 20, 33 )
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PQpzb3VyY2V8PQpsYXllcnw9Cm9wX2V4cHw9RmFsc2UKb19mb2xkZXJ8PQpvX25hbWV8PQpvbmx5X3Zpc2libGV8PUZhbHNlCm9fZXhfcHw9Cg=="

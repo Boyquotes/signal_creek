@@ -22,13 +22,15 @@ dream_character_sheet = ExtResource( 12 )
 real_character_sheet = ExtResource( 5 )
 dream_portraits = [ ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ) ]
 real_portraits = [ ExtResource( 8 ), ExtResource( 4 ), ExtResource( 6 ) ]
-dream_character_sheets = [ ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14 ) ]
+dream_character_sheets = [ ExtResource( 13 ), ExtResource( 15 ), ExtResource( 14 ) ]
+
+[node name="NOUR" parent="." instance=ExtResource( 2 )]
+_navtimer_interval = 0.4
 
 [node name="NICK" parent="." instance=ExtResource( 3 )]
 position = Vector2( -20, 0 )
 inkname = "NICK"
-
-[node name="NOUR" parent="." instance=ExtResource( 2 )]
+_navtimer_interval = 0.7
 
 [node name="SUWAN" parent="." instance=ExtResource( 1 )]
 position = Vector2( 20, 0 )

@@ -18,13 +18,13 @@ export(Array, Texture) var real_character_sheets = []
 var force_nour_movement = false
 
 var partyMembers = [
-	Globals.Characters.NICK,
 	Globals.Characters.NOUR,
+	Globals.Characters.NICK,
 	Globals.Characters.SUWAN
 ]
 
 # Keeps track of current leader
-var leaderIndex = 1 setget update_leader_to
+var leaderIndex = 0 setget update_leader_to
 
 onready var characterObjects = [
 	self.get_child(0),
@@ -35,8 +35,8 @@ onready var characterObjects = [
 
 
 func _ready():
-	Globals.Nick = characterObjects[0]
-	Globals.Nour = characterObjects[1]
+	Globals.Nour = characterObjects[0]
+	Globals.Nick = characterObjects[1]
 	Globals.Suwan = characterObjects[2]
 	
 	Globals.Nick.following_node = Globals.Nour

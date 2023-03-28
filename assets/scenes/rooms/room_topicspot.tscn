@@ -63,7 +63,7 @@ __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
 }
 room_index = 1
-exit_position = Vector2( 953, -357 )
+exit_position = Vector2( 952, -336 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal"]
 position = Vector2( 0, -4 )

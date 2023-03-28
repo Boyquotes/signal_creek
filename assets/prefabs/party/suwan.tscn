@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_suwan_past.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 4, 2.5 )
+extents = Vector2( 5, 3.5 )
 
 [node name="SUWAN" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
@@ -17,7 +17,7 @@ position = Vector2( 0, -18 )
 texture = ExtResource( 3 )
 hframes = 6
 vframes = 4
-frame = 6
+frame = 1
 region_rect = Rect2( 33, 8, 16, 34 )
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PQpzb3VyY2V8PQpsYXllcnw9Cm9wX2V4cHw9RmFsc2UKb19mb2xkZXJ8PQpvX25hbWV8PQpvbmx5X3Zpc2libGV8PUZhbHNlCm9fZXhfcHw9Cg=="
@@ -26,5 +26,5 @@ __meta__ = {
 [node name="AnimationPlayer" parent="." instance=ExtResource( 2 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -2.5 )
+position = Vector2( 0, -3.5 )
 shape = SubResource( 6 )

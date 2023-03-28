@@ -141,7 +141,7 @@
     
     &EMOTE_NICK_LookAround
     
-    &FOLLOW_SUWAN_NOUR
+    // &FOLLOW_SUWAN_NICK
     
     MS. SUWAN: "Quiet down, you punk kids! This elevator shouldn't be working at all—"
     

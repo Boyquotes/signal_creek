@@ -377,6 +377,8 @@ func print_state():
 func clear_and_reset_ui():
 	background_panel_node.set_visible(false)
 	Globals.delete_children(_vertical_layout_node)
+	Globals.Nick.set_following_node(Globals.Nour)
+	Globals.Suwan.set_following_node(Globals.Nick)
 	Globals.GameMode = Globals.GameModes.WALK
 
 
