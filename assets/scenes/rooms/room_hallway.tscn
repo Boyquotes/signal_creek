@@ -100,7 +100,7 @@ tile_data = PoolIntArray( -1769489, 7, 0, -1769488, 7, 0, -1769487, 7, 0, -17694
 position = Vector2( 444, 288 )
 
 [node name="NickOuterButtonPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 509, 276 )
+position = Vector2( 496, 280 )
 
 [node name="NourOutElevatorPos" type="Node2D" parent="PlaneManager"]
 position = Vector2( 472, 304 )

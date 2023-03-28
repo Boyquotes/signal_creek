@@ -6,7 +6,7 @@ extends KinematicBody2D
 
 # TODO: add timer for updating pathfinding position
 
-export var walk_speed : float = 64
+export var walk_speed : float = 72
 export var inkname = "Name"
 export var _pathfind_stop_approaching_dist : float = 16
 export var _pathfind_move_away_dist : float = 8
@@ -109,6 +109,7 @@ func rotate_direction_vector(directionVector, degrees):
 
 func move_character_by_vector(directionVector : Vector2):
 	if _animating_emote: # emote animations, triggered from dialogue
+		_animation_player.playback_speed = 1
 		animate_emote(_current_emote)
 		return
 	
@@ -137,6 +138,7 @@ func move_character_by_vector(directionVector : Vector2):
 
 func animate_character(directionVector):
 	var oldIdle = _current_idle_sprite
+	_animation_player.playback_speed = walk_speed / 60
 	if abs(directionVector.x) >= abs(directionVector.y):
 		
 		if directionVector.x > 0:
@@ -180,7 +182,7 @@ func set_sprite(sprite):
 
 # what node the pathfinding should be following
 func set_following_node(nodeToFollow):
-	if nodeToFollow != Globals.Nour and nodeToFollow != Globals.Suwan:
+	if nodeToFollow != Globals.Nour and nodeToFollow != Globals.Nick:
 		_pathfind_stop_approaching_dist = 2
 		_pathfind_move_away_dist = 0
 		
