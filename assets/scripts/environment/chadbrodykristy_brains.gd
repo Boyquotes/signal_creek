@@ -21,6 +21,9 @@ var _shlorping_out : Dictionary = {
 
 func _ready():
 	Globals.ChadBrodyKristy = self
+	Globals.Chad = $Chad
+	Globals.Brody = $Brody
+	Globals.Kristy = $Kristy
 	print("cbk started")
 
 

@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/scripts/environment/elevator_light.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 8 )
+extents = Vector2( 24, 8 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "ClosedIdle"

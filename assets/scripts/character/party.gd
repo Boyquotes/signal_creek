@@ -42,7 +42,6 @@ func _ready():
 	Globals.Nick.following_node = Globals.Nour
 	Globals.Suwan.following_node = Globals.Nick
 
-
 # Control leader movement; others follow
 func move_leader_by_vector(directionVector):
 	characterObjects[leaderIndex].move_character_by_vector(directionVector)

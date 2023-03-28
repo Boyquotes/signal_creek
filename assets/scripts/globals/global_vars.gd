@@ -36,6 +36,11 @@ var Nour = null
 var Suwan = null
 var Rina = null
 var ChadBrodyKristy = null
+var Chad = null
+var Brody = null
+var Kristy = null
+var Manager = null
+var SpeechBubble = null
 
 var Elevator = null
 var RouteLights = null
@@ -81,6 +86,11 @@ func reload():
 	Nour = null
 	Suwan = null
 	Rina = null
+	Chad = null
+	Brody = null
+	Kristy = null
+	ChadBrodyKristy = null
+	Manager = null
 
 	Elevator = null
 	RouteLights = null

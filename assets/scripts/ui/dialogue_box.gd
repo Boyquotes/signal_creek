@@ -224,6 +224,7 @@ func check_entry_type(entryText):
 		#init typewriter effect
 		is_typing = true
 		set_camera_position_to_speaker()
+		
 #		Globals.SoundManager.play_sound("NewEntrySound")
 	
 	else: #it's a normal text entry
@@ -241,6 +242,7 @@ func check_entry_type(entryText):
 #		newText.grab_focus()
 #		yield(VisualServer, 'frame_post_draw')
 #		_scroll_node.ensure_control_visible(newText)
+		Globals.SpeechBubble.set_visible(false)
 
 
 func scroll_to_bottom():
@@ -384,6 +386,8 @@ func clear_and_reset_ui():
 	if Globals.PartyObject:
 		for character in Globals.PartyObject.characterObjects:
 			character.reset_speed()
+			
+		Globals.SpeechBubble.set_visible(false)
 		
 	Globals.GameMode = Globals.GameModes.WALK
 
@@ -397,29 +401,51 @@ func find_current_speaker_position():
 	if !fastforward and print_information:
 		print("Current Speaker: " + currentSpeaker + "\n")
 		
-	var currentSpeakerIndex = -1
+	var currentSpeakerNode = Globals.Nour
+	Globals.SpeechBubble.set_visible(true)
+	var speechBubbleOffset
+	
+#	Globals.SpeechBubble.set_visible(true)
 
 	# Move camera to party character if they are speaking
+	if "nour" in currentSpeaker:
+		currentSpeakerNode = Globals.Nour
+		
 	if "nick" in currentSpeaker:
-		currentSpeakerIndex = 0
-
-	elif "nour" in currentSpeaker:
-		currentSpeakerIndex = 1
+		currentSpeakerNode = Globals.Nick
 
 	elif "suwan" in currentSpeaker:
-		currentSpeakerIndex = 2
+		currentSpeakerNode = Globals.Suwan
 		
-	else:
-		currentSpeakerIndex = Globals.PartyObject.get_leader_index()
+	elif "chad" in currentSpeaker:
+		currentSpeakerNode = Globals.Chad
+	
+	elif "brody" in currentSpeaker:
+		currentSpeakerNode = Globals.Brody
 		
-	return Globals.PartyObject.get_character_objects()[currentSpeakerIndex].get_global_position()
+	elif "kristy" in currentSpeaker:
+		currentSpeakerNode = Globals.Kristy
+		
+	elif "rina" in currentSpeaker:
+		currentSpeakerNode = Globals.Rina
+		
+	elif "manager" in currentSpeaker:
+		currentSpeakerNode = Globals.Manager
+		
+	elif "???" in currentSpeaker or "..." in currentSpeaker:
+		Globals.SpeechBubble.set_visible(false)
+		
+	Globals.SpeechBubble.set_following_node(currentSpeakerNode)
+	
+	return currentSpeakerNode.get_global_position()
 
 
 func set_camera_position_to_speaker():
 	var followingVector
-	
+
 	if Globals.Elevator and Globals.Elevator.focus_on_elevator:
 		followingVector = Globals.UpdateController._elevator_focus_position
+		var _speechBubblePos = find_current_speaker_position()
 		Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 		return
 		

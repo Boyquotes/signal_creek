@@ -53,24 +53,27 @@ __meta__ = {
 [node name="Chad" type="Sprite" parent="."]
 light_mask = 4
 material = SubResource( 24 )
-position = Vector2( 20, -15 )
+position = Vector2( 20, -1 )
 texture = ExtResource( 4 )
+offset = Vector2( 0, -14 )
 region_enabled = true
 region_rect = Rect2( 43, 13, 17, 29 )
 
 [node name="Brody" type="Sprite" parent="."]
 light_mask = 4
 material = SubResource( 25 )
-position = Vector2( 2, -22 )
+position = Vector2( 2, -7 )
 texture = ExtResource( 4 )
+offset = Vector2( 0, -15 )
 region_enabled = true
 region_rect = Rect2( 25, 5, 18, 31 )
 
 [node name="Kristy" type="Sprite" parent="."]
 light_mask = 4
 material = SubResource( 26 )
-position = Vector2( -17, -16 )
+position = Vector2( -16, 0 )
 texture = ExtResource( 4 )
+offset = Vector2( -1, -16 )
 region_enabled = true
 region_rect = Rect2( 4, 11, 21, 32 )
 
