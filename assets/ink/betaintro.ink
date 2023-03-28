@@ -68,7 +68,7 @@
     
     &EMOTE_NOUR_DownIdle
     
-    &VOLUME_-120.0
+    // &VOLUME_-120.0
     
     &EMOTE_NICK_LookAround
     
