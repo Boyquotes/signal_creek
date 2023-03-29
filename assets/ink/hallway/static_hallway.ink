@@ -49,11 +49,11 @@
         -> END
         
         
-== beautystand ==
+// == beautystand ==
 
-    It's an Aple Beauty makeover booth.
+//     It's an Aple Beauty makeover booth.
     
-    -> END
+//     -> END
     
 
 == directionsign ==
@@ -81,8 +81,8 @@
     
     -> END
     
-== wertoys == 
+// == wertoys == 
 
-    It's the old toy store, We r Toys.
+//     It's the old toy store, We r Toys.
     
-    -> END
+//     -> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/fountain.ink-e9822845de5a411932fb739f42512880.res"
+
+[deps]
+
+source_file="res://assets/ink/hallway/fountain.ink"
+dest_files=[ "res://.import/fountain.ink-e9822845de5a411932fb739f42512880.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

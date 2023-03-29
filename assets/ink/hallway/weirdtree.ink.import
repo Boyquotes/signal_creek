@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/weirdtree.ink-b438dcb42180feec8a5e6dd53504a936.res"
+
+[deps]
+
+source_file="res://assets/ink/hallway/weirdtree.ink"
+dest_files=[ "res://.import/weirdtree.ink-b438dcb42180feec8a5e6dd53504a936.res" ]
+
+[params]
+
+is_master_file=false
+compress=false
