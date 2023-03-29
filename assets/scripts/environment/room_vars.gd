@@ -34,12 +34,16 @@ func place_party(partyNode):
 	Globals.GameCanvas.play_loading_screen()
 	Globals.PartyCamera.set_camera_bounds(room_bounds_min, room_bounds_max)
 
+
 func move_party_to_position(partyNode, newPosition):
-	var offset = -16
+	var offset = -15
 	
 	for character in partyNode.get_character_objects():
-		offset += 16
 		character.set_global_position(Vector2(newPosition.x + offset, newPosition.y))
+#		character.animate_emote("UpIdle")
+		character.following_vector_queue = [character.get_global_position()]
+#		character._current_idle_sprite = "UpIdle"
+		offset += 15
 
 
 # Removes partyNode as a child of self

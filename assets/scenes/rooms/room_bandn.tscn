@@ -322,13 +322,12 @@ shader_param/pattern = 0
 shader_param/inside = false
 
 [node name="Room" type="Node2D"]
-position = Vector2( 29, -1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [  ]
 }
-party_starting_position = Vector2( 240, 264 )
+party_starting_position = Vector2( 109, 80 )
 room_bounds_min = Vector2( -176, -496 )
 room_bounds_max = Vector2( 760, 312 )
 
@@ -342,7 +341,6 @@ __meta__ = {
 script = ExtResource( 3 )
 
 [node name="Ground" type="TileMap" parent="PlaneManager"]
-position = Vector2( -33, 1 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
@@ -353,16 +351,15 @@ __meta__ = {
 }
 
 [node name="Doortal" type="Area2D" parent="PlaneManager"]
-position = Vector2( 213, 108 )
+position = Vector2( 240, 141 )
 script = ExtResource( 5 )
 __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
 }
 room_index = 1
-exit_position = Vector2( 377, 712 )
+exit_position = Vector2( 376, 720 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal"]
-position = Vector2( -1, 1 )
 shape = SubResource( 12 )
 
 [node name="Lights" type="Node2D" parent="PlaneManager"]
@@ -427,10 +424,8 @@ energy = 0.85
 range_item_cull_mask = 7
 
 [node name="Overworld" type="YSort" parent="PlaneManager"]
-position = Vector2( -38, 2 )
 
 [node name="Walls" type="TileMap" parent="PlaneManager/Overworld"]
-position = Vector2( 5, 0 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_tile_origin = 2
@@ -651,3 +646,4 @@ material = SubResource( 65 )
 position = Vector2( 245, 31 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
+[connection signal="body_exited" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_exited"]

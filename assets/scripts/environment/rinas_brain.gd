@@ -23,6 +23,7 @@ func _ready():
 #	if RoomEngine.CurrentRoom == RoomEngine.Rooms[1]:
 #		move_rina("START")
 #	rina_shlorp_in()
+	# SAVE SYSTEM: Keep track of rina's current state in ink
 	self.get_parent().set_global_position(rina_positions.get(current_position))
 
 

@@ -52,6 +52,9 @@ func parse_commands(currentLine):
 		if posNodeName == "NOUR":
 			posNode = Globals.Nour
 			
+		elif posNodeName == "NICK":
+			posNode = Globals.Nick
+			
 		elif posNodeName != "stop":
 			posNode = RoomEngine.CurrentRoom.plane_manager.get_node(posNodeName)
 		
@@ -84,6 +87,20 @@ func parse_commands(currentLine):
 				
 			"SUWAN":
 				Globals.Suwan.animate_emote(emoteName)
+				
+	elif "&SPEED" in currentLine:
+		var charName = currentLine.split("_")[1].strip_escapes()
+		var speedValue = float(currentLine.split("_")[2].strip_escapes())
+		
+		match charName:
+			"NICK":
+				Globals.Nick.set_speed(speedValue)
+				
+			"NOUR":
+				Globals.Nour.set_speed(speedValue)
+				
+			"SUWAN":
+				Globals.Suwan.set_speed(speedValue)
 		
 	# Make this route light turn on
 	elif "&LIGHT" in currentLine:
@@ -146,9 +163,8 @@ func parse_commands(currentLine):
 		
 	# Change volume of music
 	elif "&VOLUME" in currentLine:
-		# &VOLUME_level
-		# TODO: Figure out how tihs works
-		pass
+		var volumeLevel = float(currentLine.split("_")[1].strip_escapes())
+		Globals.SoundManager.set_stream_volume(Globals.SoundManager.musicPlayer, volumeLevel)
 		
 	# expects &SHLORP_CBK_Chad_out
 	elif "&SHLORP_CBK" in currentLine:
@@ -169,3 +185,14 @@ func parse_commands(currentLine):
 		var characterName = currentLine.split("_")[1].strip_escapes().to_lower()
 		var portraitToUse = currentLine.split("_")[2].strip_escapes().to_lower()
 		Globals.ColorManager.set_character_portrait(characterName, portraitToUse)
+		
+	# AUDIO_FADEIN or AUDIO_FADEOUT
+	elif "&AUDIO" in currentLine:
+		var command = currentLine.split("_")[1].strip_escapes().to_lower()
+		
+		if "FADEIN" in currentLine:
+			Globals.SoundManager.increasing_music_volume = true
+			Globals.SoundManager.musicPlayer.set_stream_paused(false)
+			
+		elif "FADEOUT" in currentLine:
+			Globals.SoundManager.decreasing_music_volume = true

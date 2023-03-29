@@ -5,16 +5,18 @@ extends KinematicBody2D
 # Updates sprites/animations accordingly.
 
 # TODO: add timer for updating pathfinding position
+export var default_walk_speed : float = 72
 
-export var walk_speed : float = 64
 export var inkname = "Name"
-export var _pathfind_stop_approaching_dist : float = 32
-export var _pathfind_move_away_dist : float = 16
+export var _pathfind_stop_approaching_dist : float = 16
+export var _pathfind_move_away_dist : float = 8
 
-export var sight_dist : float = 16
-export var _navtimer_interval : float = 0.5
+export var sight_dist := 8.0
+export var _navtimer_interval : float = 0.64
+# this probably needs to be the sight dist with delta and speed or some crazy bazingafied shit
 var _navtimer
 
+var walk_speed = default_walk_speed
 var _pathfind_stop_approaching_dist_default = _pathfind_stop_approaching_dist
 var _pathfind_move_away_dist_default = _pathfind_move_away_dist
 var _velocity : Vector2 = Vector2()
@@ -30,46 +32,22 @@ onready var _animation_player = $AnimationPlayer
 onready var following_node
 
 onready var angle_towards = Vector2(0, 0)
-onready var angle_towards_mod = angle_towards
-onready var sight_ray = $RayCast2D
 
-onready var draw_look_straight = Vector2(0,0)
-onready var draw_look_left = Vector2(0,0)
-onready var draw_look_right = Vector2(0,0)
-onready var draw_look_far_left = Vector2(0,0)
-onready var draw_look_far_right = Vector2(0,0)
+var following_vector_queue
+
 
 func _ready():
 	_navtimer = Timer.new()
 	add_child(_navtimer)
-	_navtimer.wait_time = _navtimer_interval
+	_navtimer.wait_time = _navtimer_interval / walk_speed
 	_navtimer.connect("timeout", self, "timer_timeout")
 	_navtimer.start()
 	_navtimer.set_one_shot(true)
 
-func _physics_process(_delta):
-#	var space_state = get_world_2d().direct_space_state
-#	var result = space_state.intersect_ray(Vector2(0, 0), Vector2(0, 0) + draw_look_far_left)
-#	print(result)
-	pass
-
-func _process(_delta):
-	update()
-
-
-func _draw():
-#	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_far_left, Color.red, 1.0)
-#	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_left, Color.orangered, 1.0)
-#	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_straight, Color.orange, 1.0)
-#	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_right, Color.yellow, 1.0)
-#	draw_line(Vector2(0, 0), Vector2(0, 0) + draw_look_far_right, Color.yellowgreen, 1.0)
-#	draw_line(self.get_global_position(), self.get_global_position() + draw_look_left, Color.red, 2.0)
-	pass
-
 
 func timer_timeout():
 
-		pass
+	pass
 
 
 # Play respective directional animations
@@ -96,7 +74,6 @@ func animate_right():
 
 func animate_idle():
 #	_animation_player.set_autoplay(false)
-#	yield(_animation_player, "animation_finished")
 	_animation_player.play(_current_idle_sprite);
 
 
@@ -109,14 +86,20 @@ func animate_emote(emoteName):
 	_animation_player.play(emoteName)
 
 
-func collision_shape_query(directionVector, spaceState):
-	var collisionShapeQuery = Physics2DShapeQueryParameters.new()
-	collisionShapeQuery.set_shape($CollisionShape2D.get_shape())
-	
-	collisionShapeQuery.transform = $CollisionShape2D.global_transform
-	collisionShapeQuery.transform = collisionShapeQuery.transform.translated(directionVector * sight_dist)
-	
-	return spaceState.intersect_shape(collisionShapeQuery)
+func check_if_input_walking():
+	if Input.is_action_just_released("move_up"):
+		return true
+		
+	if Input.is_action_just_released("move_down"):
+		return true
+		
+	if Input.is_action_just_released("move_left"):
+		return true
+		
+	if Input.is_action_just_released("move_right"):
+		return true
+		
+	return false
 
 
 func rotate_direction_vector(directionVector, degrees):
@@ -127,18 +110,38 @@ func rotate_direction_vector(directionVector, degrees):
 
 func move_character_by_vector(directionVector : Vector2):
 	if _animating_emote: # emote animations, triggered from dialogue
+		_animation_player.playback_speed = 1
 		animate_emote(_current_emote)
-		return
-		
-	if directionVector.length() == 0: # not moving, _current_idle_sprite and return early
-		animate_idle()
 		return
 	
 	directionVector = directionVector.normalized()
 	_direction_facing = directionVector
-
+	
+	if directionVector.length() == 0:
+		animate_idle()
+		return
+		
 	#play the correct animation based on movement direction angle
+	animate_character(directionVector)
+	direction_vector = directionVector
+	
+	if _navtimer.get_time_left() <= 0 and Globals.GameMode == Globals.GameModes.WALK:
+		if following_vector_queue.back() != self.get_global_position() - (direction_vector * 8):
+			following_vector_queue.push_back(self.get_global_position() - (direction_vector * 8))
+		
+		if following_vector_queue.size() > 4:
+			following_vector_queue.pop_front()
+			
+		_navtimer.start()
+		
+	_velocity = direction_vector * walk_speed
+	_velocity = move_and_slide(_velocity)
+
+func animate_character(directionVector):
+	var oldIdle = _current_idle_sprite
+	_animation_player.playback_speed = walk_speed / 60
 	if abs(directionVector.x) >= abs(directionVector.y):
+		
 		if directionVector.x > 0:
 			animate_right()
 			
@@ -151,113 +154,18 @@ func move_character_by_vector(directionVector : Vector2):
 			
 		else:
 			animate_up()
-	
-	if Globals.GameMode == Globals.GameModes.WALK and self != Globals.Nour:
-		
-		# TODO: compare character position with nour position and directionvector
-		# basically to see if nour is walking in front of them
-		
-		if _navtimer.get_time_left() <= 0:
-			directionVector = Vector2(stepify(directionVector.x, 0.5), stepify(directionVector.y, 0.5))
-			var selfPos = self.get_global_position()
-			var followingPos = following_node.get_global_position()
-			var spaceState = get_world_2d().direct_space_state
 			
-			var bodiesStraight = collision_shape_query(directionVector, spaceState)
-			
-			var directionVectorLeft = rotate_direction_vector(directionVector, 45)
-			var bodiesLeft = collision_shape_query(directionVectorLeft, spaceState)
-			
-			var directionVectorFarLeft = rotate_direction_vector(directionVector, 90)
-			var bodiesFarLeft = collision_shape_query(directionVectorFarLeft, spaceState)
-			
-			var directionVectorRight = rotate_direction_vector(directionVector, -45)
-			var bodiesRight = collision_shape_query(directionVectorRight, spaceState)
-			
-			var directionVectorFarRight = rotate_direction_vector(directionVector, -90)
-			var bodiesFarRight = collision_shape_query(directionVectorFarRight, spaceState)
-			
-			
-			draw_look_straight = directionVector * sight_dist
-			draw_look_left = directionVectorLeft * sight_dist
-			draw_look_far_left = directionVectorFarLeft * sight_dist
-			draw_look_right = directionVectorRight * sight_dist
-			draw_look_far_right = directionVectorFarRight * sight_dist
-			
-			#find left or right bias and make array accordingly
-			
-			var allDirectionsCollisions
-			var firstFreeDirection = 0
-			var allDirectionVectors = [
-				directionVector,
-				directionVectorRight,
-				directionVectorFarRight,
-				directionVectorLeft,
-				directionVectorFarLeft
-				]
-			
-			#distance - closer to left or right?
-			if (selfPos + draw_look_left).distance_to(followingPos) < (selfPos + draw_look_right).distance_to(followingPos):
-				allDirectionsCollisions = [bodiesStraight, bodiesLeft, bodiesFarLeft, bodiesRight, bodiesFarRight]
-				firstFreeDirection = check_for_collision(allDirectionsCollisions)
-				
-				allDirectionVectors = [
-				directionVector,
-				directionVectorLeft,
-				directionVectorFarLeft,
-				directionVectorRight,
-				directionVectorFarRight
-				]
-				
-			else:
-				allDirectionsCollisions = [bodiesStraight, bodiesRight, bodiesFarRight, bodiesLeft, bodiesFarLeft]
-				firstFreeDirection = check_for_collision(allDirectionsCollisions)
-				
-			directionVector = allDirectionVectors[firstFreeDirection]
-			
-			direction_vector = directionVector
-			
-			#nav timer multiplier could equal the width of the colliding body
-			
-#			_navtimer.wait_time = max(1/selfPos.distance_to(followingPos), 0.1)
-			_navtimer.start()
-			
-#			if directionVector != previous_direction:
-#				previous_direction = direction_vector
-#				direction_vector = directionVector
-		
-	else:
-		direction_vector = directionVector
-		
-	_velocity = direction_vector * walk_speed
-	_velocity = move_and_slide(_velocity)
+	if _current_idle_sprite != oldIdle and Globals.GameMode == Globals.GameModes.WALK:
+		_animation_player.seek(0.125, true)
+		pass
 
 
-func check_for_collision(directionDictionaries):
-#	print("--------------------")
-#	print(self.name)
-	var i : int = 0
-	for direction in directionDictionaries:
-		if !direction or direction.size() == 0:
-#			print("FREE DIRECTION: " + String(i))
-			return i
-			
-		for collision in direction:
-#			if collision.get("collider") != following_node:
-#				print(String(collision))
-#
-#			else:
-			if collision.get("collider") == following_node:
-				return i
-				
-		i += 1
-		
-	return i - 1
-
-
-# Current pathfinding
 func pathfind_to(target : Node2D):
-	angle_towards = target.get_global_position() - self.get_global_position()
+	angle_towards = target.get_global_position() - self.get_global_position() #instead of target global position, do the last item on target's positional queue
+	
+	if target == Globals.Nour or target == Globals.Nick and self != Globals.Nour and Globals.GameMode == Globals.GameModes.WALK:
+		angle_towards = target.following_vector_queue.front() - self.get_global_position()
+	
 	if(angle_towards.length() < _pathfind_stop_approaching_dist):
 		if(angle_towards.length() < _pathfind_move_away_dist):
 			angle_towards = -angle_towards
@@ -275,9 +183,7 @@ func set_sprite(sprite):
 
 # what node the pathfinding should be following
 func set_following_node(nodeToFollow):
-#	print(nodeToFollow.get_global_position())
-	
-	if nodeToFollow != Globals.Nour:
+	if nodeToFollow != Globals.Nour and nodeToFollow != Globals.Nick:
 		_pathfind_stop_approaching_dist = 2
 		_pathfind_move_away_dist = 0
 		
@@ -292,3 +198,9 @@ func set_following_node(nodeToFollow):
 func place_character_at_vector(vectorPosition):
 #	print(vectorPosition)
 	self.set_global_position(vectorPosition)
+	
+func set_speed(speedValue):
+	walk_speed = speedValue
+	
+func reset_speed():
+	walk_speed = default_walk_speed

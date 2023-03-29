@@ -1,66 +1,50 @@
 == pinbuttons ==
 
-    {
-        - currentWorld == "dream" && pinbuttons_real:
-            -> pinbuttons_realvisited
-            
-        - currentWorld == "dream":
-            -> pinbuttons_dream
-            
-        - currentWorld == "real" && pinbuttons_dream:
-            -> pinbuttons_dreamvisited
+    //flag pins and lgbt stuff, so Ms. Suwan and Nour can have a moment
+    
+    It's a display of buttons and pins of all kinds. Most are adorned with pop culture references, band insignia, and different pride flags. 
+    
+    Nour picks up a lesbian flag pin and flips it with her thumb.
+    
+    MS. SUWAN: "I would have never thought flags like these would be sold in such large franchise stores like this."
+    
+    NOUR: "Honestly, my thirteen-year-old self would be just as surprised. She'd be surprised by a lot, but. Especially this."
+    
+    MS. SUWAN: "Hm."
+    
+    Ms. Suwan looks thoughtful.
+    
+        * "You seem to have something on your mind.["] I'm guessing you relate to that in a similar way that I do?"
         
-        - else:
-            -> pinbuttons_real
-    }
-//---------------- DREAM WORLD ----------------
-
-== pinbuttons_dream ==
-
-    It's a display of buttons and pins. There's a hammer and sickle pin, a button depicting the cross over an American flag, and various other obscenities that Ms. Suwan doesn't even want to acknowledge.
+            MS. SUWAN: "I have my own reasons. None that I feel like sharing."
+        
+            NOUR: "And I won't make you. But it can be helpful to talk things through, especially with someone who might understand."
+            
+            MS. SUWAN: "And what makes it seem as though I'd want to? You're a child. Our experiences are not the same."
+        
+            NOUR: "I'm not a child, but of course they're not."
+            
+            NOUR: "There's no pressure, I was only wondering if it'd help you the way it helps me. Sometimes you just need to talk things through."
+            
+            NOUR: "Just think about it."
+        
+        
+        * "Do you vibe with any of these?"
+            
+            MS. SUWAN: "...No."
+            
+            NOUR: "Are you sure..?"
+            
+            MS. SUWAN: "Yes, I'm sure in the fact that I'm not going to talk about it. Stop asking questions."
+            
+            NOUR: "Okay, okay. I'm sorry, I don't mean to pry, necessarily."
+            
+        - Ms. Suwan's eyebrow furrows.
     
-    MS SUWAN: God, why are they selling these things?
+    - MS. SUWAN: "...Hm."
     
-    -> politicalConvo
-
-
-== pinbuttons_realvisited ==
-
-    It's a display of buttons and pins. There's a hammer and sickle pin, a button depicting the cross over an American flag, and various other obscenities that Ms. Suwan doesn't even want to acknowledge.
+    NICK: "Ooh, they have Aple Quest pins, too!!"
     
-    MS SUWAN: This is, uh, a lot more extreme than the friendly political messages I saw before.
-    
-    -> politicalConvo
-
-    
-== politicalConvo ==
-
-    Nour and Ms Suwan discuss extreme political ideologies.
-    
-    -> END
-
-//SUBSEQUENT DREAM KNOTS HERE
-
-
-//---------------- REAL WORLD ----------------
-
-== pinbuttons_real ==
-
-    It's a display of buttons and pins. There's a pride flag pin, a button adorning an anarchy symbol, and others with messages like "Eat. Sleep. Game. Repeat."
-    
-    NICK: Oh, sick! A gamer pin!
-    
-    Nick picks the pin up for a moment, looks over it contemplatively, and returns it to the display.
+    NOUR: "Didn't my brother get you one of those for your birthday?"
     
     -> END
-
-
-== pinbuttons_dreamvisited ==
-
-    It's a display of buttons and pins. There's a pride flag pin, a button adorning an anarchy symbol, and others with messages like "Eat. Sleep. Game. Repeat."
-    
-    MS SUWAN: Ah. Back to the typical corporate-friendly political statements.
-    
-    -> END
-
-//SUBSEQUENT REAL KNOTS HERE

@@ -46,7 +46,6 @@ func _ready():
 		if (get_node_or_null("ActiveArea") != null) and $Sprite.get_material():
 			$Sprite.material.set_shader_param("color", Color.transparent)
 
-
 func _process(_delta):
 	if Engine.editor_hint:
 		_set_hint_attributes()
