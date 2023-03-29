@@ -18,13 +18,13 @@ export(Array, Texture) var real_character_sheets = []
 var force_nour_movement = false
 
 var partyMembers = [
-	Globals.Characters.NICK,
 	Globals.Characters.NOUR,
+	Globals.Characters.NICK,
 	Globals.Characters.SUWAN
 ]
 
 # Keeps track of current leader
-var leaderIndex = 1 setget update_leader_to
+var leaderIndex = 0 setget update_leader_to
 
 onready var characterObjects = [
 	self.get_child(0),
@@ -35,13 +35,12 @@ onready var characterObjects = [
 
 
 func _ready():
-	Globals.Nick = characterObjects[0]
-	Globals.Nour = characterObjects[1]
+	Globals.Nour = characterObjects[0]
+	Globals.Nick = characterObjects[1]
 	Globals.Suwan = characterObjects[2]
 	
 	Globals.Nick.following_node = Globals.Nour
 	Globals.Suwan.following_node = Globals.Nick
-
 
 # Control leader movement; others follow
 func move_leader_by_vector(directionVector):
@@ -55,13 +54,13 @@ func move_followers_by_pathfind():
 	var follower1 = characterObjects[wrapi(leaderIndex + 1, 0,3)]
 	var follower2 = characterObjects[wrapi(leaderIndex - 1, 0,3)]
 	
-	if Globals.GameMode == Globals.GameModes.WALK:
-		Globals.Nick.pathfind_to(Globals.Nour)
-		Globals.Suwan.pathfind_to(Globals.Nick)
-	
-	else:
-		follower1.pathfind_to(follower1.following_node)
-		follower2.pathfind_to(follower2.following_node)
+#	if Globals.GameMode == Globals.GameModes.WALK:
+#		Globals.Nick.pathfind_to(Globals.Nour)
+#		Globals.Suwan.pathfind_to(Globals.Nick)
+#
+#	else:
+	follower1.pathfind_to(follower1.following_node)
+	follower2.pathfind_to(follower2.following_node)
 
 
 func force_move_leader():

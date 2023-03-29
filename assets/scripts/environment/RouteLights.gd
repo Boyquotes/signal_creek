@@ -2,6 +2,7 @@ extends Node2D
 
 export var light_timer := 0.5
 export (NodePath) var anim_player
+export (NodePath) var elevator_doortal
 
 onready var nickLight0 = $Nick0;
 onready var nickLight1 = $Nick1;
@@ -16,16 +17,14 @@ onready var suwanLight1= $Suwan1;
 onready var suwanLight2 = $Suwan2;
 
 var first_light_turned_on = false;
-#Called when the node enters the scene tree for the first time.
+
+
 func _ready():
 	Globals.RouteLights = self;
-	pass # Replace with function body.
+	activate_doortal(false)
 
 func turn_on_light(light_name): 
 	get_node(light_name).visible = false;
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func turn_off_light(light_name):
@@ -33,8 +32,6 @@ func turn_off_light(light_name):
 
 # move party to the position for light tutorial conversation
 func activate_light_tutorial():
-	
-
 	yield(Globals.GameCanvas.get_tree().create_timer(1.0), "timeout")
 	
 	if RoomEngine.CurrentRoomIndex == 1:
@@ -87,3 +84,6 @@ func turn_off_all_lights():
 
 func door_close_anim():
 	get_node(anim_player).play("ElevatorClose")
+	
+func activate_doortal(mode : bool):
+	get_node(elevator_doortal).monitoring = mode

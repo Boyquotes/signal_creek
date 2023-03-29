@@ -21,7 +21,11 @@ var _shlorping_out : Dictionary = {
 
 func _ready():
 	Globals.ChadBrodyKristy = self
+	Globals.Chad = $Chad
+	Globals.Brody = $Brody
+	Globals.Kristy = $Kristy
 	print("cbk started")
+	#SAVE SYSTEM: if cbk final visited, remove self from everything
 
 
 func _process(_delta):

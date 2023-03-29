@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/prefabs/party/suwan.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/prefabs/party/nour.tscn" type="PackedScene" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_nour_past.png" type="Texture" id=13]
 [ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_suwan_past.png" type="Texture" id=14]
 [ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_nick_past.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/talking_bubble.png" type="Texture" id=16]
+[ext_resource path="res://assets/scripts/environment/speech_bubble.gd" type="Script" id=17]
 
 [node name="PARTY" type="YSort"]
 script = ExtResource( 11 )
@@ -22,13 +24,22 @@ dream_character_sheet = ExtResource( 12 )
 real_character_sheet = ExtResource( 5 )
 dream_portraits = [ ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ) ]
 real_portraits = [ ExtResource( 8 ), ExtResource( 4 ), ExtResource( 6 ) ]
-dream_character_sheets = [ ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14 ) ]
+dream_character_sheets = [ ExtResource( 13 ), ExtResource( 15 ), ExtResource( 14 ) ]
+
+[node name="NOUR" parent="." instance=ExtResource( 2 )]
+_navtimer_interval = 0.4
 
 [node name="NICK" parent="." instance=ExtResource( 3 )]
 position = Vector2( -20, 0 )
 inkname = "NICK"
-
-[node name="NOUR" parent="." instance=ExtResource( 2 )]
+_navtimer_interval = 0.7
 
 [node name="SUWAN" parent="." instance=ExtResource( 1 )]
 position = Vector2( 20, 0 )
+
+[node name="SpeechBubble" type="Node2D" parent="."]
+script = ExtResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="SpeechBubble"]
+position = Vector2( 1, -45 )
+texture = ExtResource( 16 )

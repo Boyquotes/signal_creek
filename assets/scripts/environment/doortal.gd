@@ -7,6 +7,7 @@ extends Area2D
 export var room_index : int = 0 #what room this leads to
 export var exit_position : Vector2 #where to place the party in the new room
 export var entrance_timer_interval := 0.2
+export var entrance_direction := Vector2(0, 1)
 
 var entrance_timer
 
@@ -21,9 +22,10 @@ func _ready():
 func _on_Doortal_body_entered(body):
 	
 	if Globals.GameMode == Globals.GameModes.WALK and body.is_in_group("Player") and body == Globals.PartyObject.get_leader():
-		Globals.GameOverlay.start_fade_out()
-		Globals.GameCanvas.loadingscreen_animation.play("Off")
-		entrance_timer.start()
+		if body.direction_vector == entrance_direction:
+			Globals.GameOverlay.start_fade_out()
+			Globals.GameCanvas.loadingscreen_animation.play("Off")
+			entrance_timer.start()
 		
 		
 
