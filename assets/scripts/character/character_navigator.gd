@@ -1,39 +1,35 @@
 class_name CharacterNavigator
 extends KinematicBody2D
-# Individual character. 
-# Can move.
-# Updates sprites/animations accordingly.
 
-# TODO: add timer for updating pathfinding position
+# Individual dynamically moving character; can be the player OR an NPC
+# Has simple pathfinding, calls animations to self's animation player
+
 export var default_walk_speed : float = 72
 
-export var inkname = "Name"
+export var walking_spritesheet : Texture
 export var _pathfind_stop_approaching_dist : float = 16
 export var _pathfind_move_away_dist : float = 8
 
-export var sight_dist := 8.0
 export var _navtimer_interval : float = 0.64
-# this probably needs to be the sight dist with delta and speed or some crazy bazingafied shit
 var _navtimer
-
-var walk_speed = default_walk_speed
 var _pathfind_stop_approaching_dist_default = _pathfind_stop_approaching_dist
 var _pathfind_move_away_dist_default = _pathfind_move_away_dist
 var _velocity : Vector2 = Vector2()
 var _direction_facing : Vector2 = Vector2()
-var _current_idle_sprite : String = "DownIdle"
-var _animating_emote = false
+var _current_idle_sprite := "DownIdle"
+var _animating_emote := false
 var _current_emote = _current_idle_sprite
+
+var walk_speed = default_walk_speed
 var direction_vector := Vector2(0,0)
-var previous_direction := direction_vector
 var done_following = false
+var following_vector_queue # Vector2 positions to move towards
 
 onready var _animation_player = $AnimationPlayer
 onready var following_node
 
 onready var angle_towards = Vector2(0, 0)
 
-var following_vector_queue
 
 
 func _ready():
@@ -45,48 +41,46 @@ func _ready():
 	_navtimer.set_one_shot(true)
 
 
-func timer_timeout():
-
+func timer_timeout() -> void:
 	pass
 
 
 # Play respective directional animations
 # Used by party_manager
-func animate_up():
+func animate_up() -> void:
 	_animation_player.play("Up")
 	_current_idle_sprite = "UpIdle"
 
 
-func animate_down():
+func animate_down() -> void:
 	_animation_player.play("Down")
 	_current_idle_sprite = "DownIdle"
 
 
-func animate_left():
+func animate_left() -> void:
 	_animation_player.play("Left")
 	_current_idle_sprite = "LeftIdle"
 
 
-func animate_right():
+func animate_right() -> void:
 	_animation_player.play("Right")
 	_current_idle_sprite = "RightIdle"
 
 
-func animate_idle():
+func animate_idle() -> void:
 #	_animation_player.set_autoplay(false)
 	_animation_player.play(_current_idle_sprite);
 
 
-# emoteName: string
-# anything beyond the walk cycle will be called this wa
-# new track should be added to animation player for character
-# TODO: once the animation ends, make animate_emote false
-func animate_emote(emoteName):
+# Any animation beyond the walk cycle is called this way
+# New track should be added to animation player for character
+func animate_emote(emoteName: String) -> void:
 	_current_idle_sprite = emoteName
 	_animation_player.play(emoteName)
 
 
-func check_if_input_walking():
+# Check whether walking input is being recieved from process_controller
+func check_if_input_walking() -> bool:
 	if Input.is_action_just_released("move_up"):
 		return true
 		
@@ -102,14 +96,11 @@ func check_if_input_walking():
 	return false
 
 
-func rotate_direction_vector(directionVector, degrees):
-	var rotatedVector = directionVector.rotated(deg2rad(degrees))
-	rotatedVector = Vector2(stepify(rotatedVector.x, 0.5), stepify(rotatedVector.y, 0.5))
-	return rotatedVector
-
-
-func move_character_by_vector(directionVector : Vector2):
-	if _animating_emote: # emote animations, triggered from dialogue
+# Call appropriate animations, based on current movement vector OR current emote
+# Add Vector2 positions that self wil move to next to following_vector_queue
+func move_character_by_vector(directionVector : Vector2) -> void:
+	# ANIMATING AN EMOTE; triggered by ink_commands
+	if _animating_emote: 
 		_animation_player.playback_speed = 1
 		animate_emote(_current_emote)
 		return
@@ -117,18 +108,21 @@ func move_character_by_vector(directionVector : Vector2):
 	directionVector = directionVector.normalized()
 	_direction_facing = directionVector
 	
+	# No distance is being traveled
 	if directionVector.length() == 0:
 		animate_idle()
 		return
 		
-	#play the correct animation based on movement direction angle
+	# play the correct animation based on movement direction angle
 	animate_character(directionVector)
 	direction_vector = directionVector
 	
+	# Add new position to queue of positions that self is following
 	if _navtimer.get_time_left() <= 0 and Globals.GameMode == Globals.GameModes.WALK:
 		if following_vector_queue.back() != self.get_global_position() - (direction_vector * 8):
 			following_vector_queue.push_back(self.get_global_position() - (direction_vector * 8))
 		
+		# pop old positions if exceeding max queue count
 		if following_vector_queue.size() > 4:
 			following_vector_queue.pop_front()
 			
@@ -137,17 +131,22 @@ func move_character_by_vector(directionVector : Vector2):
 	_velocity = direction_vector * walk_speed
 	_velocity = move_and_slide(_velocity)
 
-func animate_character(directionVector):
+
+# CALLED BY move_character_by_vector
+# Call walking animations to self's AnimationPlayer, based on movement vector
+func animate_character(directionVector: Vector2) -> void:
 	var oldIdle = _current_idle_sprite
 	_animation_player.playback_speed = walk_speed / 60
+	
+	# Horizontal movement
 	if abs(directionVector.x) >= abs(directionVector.y):
-		
 		if directionVector.x > 0:
 			animate_right()
 			
 		else:
 			animate_left()
 			
+	# Vertical movement
 	else:
 		if directionVector.y > 0:
 			animate_down()
@@ -155,12 +154,15 @@ func animate_character(directionVector):
 		else:
 			animate_up()
 			
+	# if changing direction, start in the middle of the walk cycle for good game feel
 	if _current_idle_sprite != oldIdle and Globals.GameMode == Globals.GameModes.WALK:
 		_animation_player.seek(0.125, true)
-		pass
 
 
-func pathfind_to(target : Node2D):
+# CALLED BY party.gd
+# Detect vector angle at which self should use to move towards target position
+# Call move_character_by_vector if self is further than desired distance from target position
+func pathfind_to(target : Node2D) -> void:
 	angle_towards = target.get_global_position() - self.get_global_position() #instead of target global position, do the last item on target's positional queue
 	
 	if target == Globals.Nour or target == Globals.Nick and self != Globals.Nour and Globals.GameMode == Globals.GameModes.WALK:
@@ -176,31 +178,36 @@ func pathfind_to(target : Node2D):
 	move_character_by_vector(angle_towards)
 
 
-# set sprite animation of this character
-func set_sprite(sprite):
+# Set source Texture of self's Sprite
+func set_sprite(sprite: Texture) -> void:
 	$Sprite.set_texture(sprite)
 
 
-# what node the pathfinding should be following
-func set_following_node(nodeToFollow):
-	if nodeToFollow != Globals.Nour and nodeToFollow != Globals.Nick:
-		_pathfind_stop_approaching_dist = 2
-		_pathfind_move_away_dist = 0
-		
-	else:
+# Set the node that self is positionally following
+# If self is following another CharacterNavigator, use default stop_approaching and move_away distances
+func set_following_node(nodeToFollow: Node2D) -> void:
+	if nodeToFollow.get_class() == "CharacterNavigator":
 		_pathfind_stop_approaching_dist = _pathfind_stop_approaching_dist_default
 		_pathfind_move_away_dist = _pathfind_move_away_dist_default
+		
+	else:
+		_pathfind_stop_approaching_dist = 2
+		_pathfind_move_away_dist = 0
 		
 	if nodeToFollow:
 		following_node = nodeToFollow
 
 
-func place_character_at_vector(vectorPosition):
-#	print(vectorPosition)
+# immediately move self to specified global position
+func place_character_at_vector(vectorPosition: Vector2) -> void:
 	self.set_global_position(vectorPosition)
-	
-func set_speed(speedValue):
+
+
+# Set self's walking speed to value
+func set_speed(speedValue: float) -> void:
 	walk_speed = speedValue
-	
-func reset_speed():
+
+
+# Reset self's walking speed to its default value
+func reset_speed() -> void:
 	walk_speed = default_walk_speed

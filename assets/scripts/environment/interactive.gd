@@ -1,5 +1,6 @@
 class_name Interactive
 extends Area2D
+
 # Interactive script for the INTERACT area collider of an interactive object
 # Knows if player is close enough to interact with itself
 # Says which characters can interact with itself
@@ -26,43 +27,46 @@ func _ready():
 
 # IN CASE OF LEADER SWITCHING
 # When a body enters self, check if player can interact
-func _on_InteractArea_body_entered(body):
+func _on_InteractArea_body_entered(body) -> void:
 	if body == Globals.PartyObject.get_leader() and !_disable_interactivity:
 		_check_if_can_interact()
 
 
 # When a body exits self, check if player can interact
-func _on_InteractArea_body_exited(body):
+func _on_InteractArea_body_exited(body) -> void:
 	if Globals.PartyObject and body == Globals.PartyObject.get_leader():
 		emit_signal("cannot_interact")
 		_check_if_can_interact()
 
 
 # Events to trigger when the player can interact with the objects
-func _set_can_interact_true():
+func _set_can_interact_true() -> void:
 	Globals.UpdateController.set_can_interact(true)
 	Globals.UpdateController.set_closest_object(self)
-	print(Globals.PartyObject.get_leader().get_name() + " Can Interact: " + _get_object_name())
 	emit_signal("can_interact")
+	
+	if Globals.GameCanvas.testing_enabled:
+		print(Globals.PartyObject.get_leader().get_name() + " Can Interact: " + _get_object_name())
+
 
 # IN CASE OF LEADER SWITCHING
 # check if player can interact with object
 # communicate with updatecontroller
-func _check_if_can_interact():
-#	if _check_if_leader_in_area() and _check_correct_leader():
+func _check_if_can_interact() -> void:
 	if _check_if_leader_in_area():
 		_set_can_interact_true()
 		return
 	
 	Globals.UpdateController.set_can_interact(false)
-	print("Cannot Interact: " + _get_object_name())
 	emit_signal("cannot_interact")
+	
+	if Globals.GameCanvas.testing_enabled:
+		print("Cannot Interact: " + _get_object_name())
 
 
 # IN CASE OF LEADER SWITCHING
 # Check if party leader is inside area
-# return true or false
-func _check_if_leader_in_area():
+func _check_if_leader_in_area() -> bool:
 	for body in self.get_overlapping_bodies():
 		if body == Globals.PartyObject.get_leader():
 			return true
@@ -73,7 +77,7 @@ func _check_if_leader_in_area():
 # IN CASE OF LEADER SWITCHING
 # Check if leader can interact with self
 # Return true or false
-func _check_correct_leader():
+func _check_correct_leader() -> bool:
 	var currentLeader = Globals.PartyObject.leaderIndex
 	
 	if currentLeader == 0 and _interactive_by_nick:
@@ -91,16 +95,15 @@ func _check_correct_leader():
 
 # return name of self as it is stated in the prefab file name
 # excludes obj_ prefix in filename
-func _get_object_name():
+func _get_object_name() -> String:
 	var rawfilename = self.get_parent().filename
 	
 	return rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_")
 
 
+func _on_ActiveArea_can_interact() -> void:
+	pass
 
-func _on_ActiveArea_can_interact():
-	pass # Replace with function body.
 
-
-func _on_ActiveArea_cannot_interact():
-	pass # Replace with function body.
+func _on_ActiveArea_cannot_interact() -> void:
+	pass

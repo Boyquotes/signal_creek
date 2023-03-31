@@ -92,8 +92,6 @@ func _process(_delta):
 		typewriter_effect(false)
 		
 	if fastforward and !_ink_player.get_HasChoices() and _ink_player.get_CanContinue():
-		if !Globals.PartyObject.get_following_done():
-			pass
 			
 		proceed()
 #		escape_typewriter_effect()
@@ -108,12 +106,9 @@ func _process(_delta):
 # Opening the player as-is
 # tell _ink_player to open knot with name that matches pathstring
 func open_at_knot(pathstring):
-	_ink_player.SetVariable("currentPartyChar", Globals.PartyObject.get_leader_inkname())
-	_ink_player.SetVariable("currentWorld", Globals.get_world_inkname())
-	
 	_ink_player.ChoosePathString(pathstring)
 	
-	current_speaker = Globals.PartyObject.get_leader_inkname()
+	current_speaker = Globals.PartyObject.get_leader().get_name()
 	
 	proceed()
 	set_camera_position_to_speaker()
@@ -443,7 +438,7 @@ func find_current_speaker_position():
 func set_camera_position_to_speaker():
 	var followingVector
 
-	if Globals.Elevator and Globals.Elevator.focus_on_elevator:
+	if Globals.Elevator and Globals.Elevator.focus_camera_on_elevator:
 		followingVector = Globals.UpdateController._elevator_focus_position
 		var _speechBubblePos = find_current_speaker_position()
 		Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))

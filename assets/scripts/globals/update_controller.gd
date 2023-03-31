@@ -56,16 +56,13 @@ func _process(_delta):
 					Globals.DialogueBox.typewriter_effect(true)
 				
 				elif !Globals.DialogueBox.fastforward or Globals.DialogueBox._ink_player.get_HasChoices() or !Globals.DialogueBox._ink_player.get_CanContinue():
-					
-					if !Globals.PartyObject.get_following_done():
-						pass
 						
 					var inkCommand = Globals.DialogueBox.proceed()
 					
 					while inkCommand and "command" in inkCommand:
 						inkCommand = Globals.DialogueBox.proceed()
 					
-	#		if Globals.Elevator && Globals.Elevator.focus_on_elevator == true:
+	#		if Globals.Elevator && Globals.Elevator.focus_camera_on_elevator == true:
 	#			Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
 				#var followingVector = find_current_speaker_position()
 				#Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
@@ -97,7 +94,7 @@ func _process(_delta):
 						Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
 						Globals.DialogueBox.background_panel_node.set_visible(true)
 				
-			if Globals.Elevator && Globals.Elevator.focus_on_elevator == true:
+			if Globals.Elevator && Globals.Elevator.focus_camera_on_elevator == true:
 				Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
 
 func check_input_character_movement():

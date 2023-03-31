@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Camera2D",
+"class": "CameraManager",
+"language": "GDScript",
+"path": "res://assets/scripts/globals/camera_manager.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "CharacterNavigator",
 "language": "GDScript",
@@ -19,10 +24,35 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://assets/scripts/environment/doortal.gd"
 }, {
+"base": "Interactive",
+"class": "ElevatorArea",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/elevator_area.gd"
+}, {
+"base": "Light2D",
+"class": "ElevatorDoorsFloorlight",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/elevator_doors_floorlight.gd"
+}, {
 "base": "Area2D",
 "class": "Interactive",
 "language": "GDScript",
 "path": "res://assets/scripts/environment/interactive.gd"
+}, {
+"base": "Area2D",
+"class": "LocationTrigger",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/location_trigger.gd"
+}, {
+"base": "YSort",
+"class": "PartyManager",
+"language": "GDScript",
+"path": "res://assets/scripts/character/party.gd"
+}, {
+"base": "Node",
+"class": "PlaneManager",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/plane_manager.gd"
 }, {
 "base": "Node2D",
 "class": "RoomVars",
@@ -30,15 +60,27 @@ _global_script_classes=[ {
 "path": "res://assets/scripts/environment/room_vars.gd"
 }, {
 "base": "Node2D",
+"class": "RouteLights",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/route_lights.gd"
+}, {
+"base": "Node2D",
 "class": "Shiftable",
 "language": "GDScript",
 "path": "res://assets/scripts/environment/shiftable.gd"
 } ]
 _global_script_class_icons={
+"CameraManager": "",
 "CharacterNavigator": "",
 "Doortal": "",
+"ElevatorArea": "",
+"ElevatorDoorsFloorlight": "",
 "Interactive": "",
+"LocationTrigger": "",
+"PartyManager": "",
+"PlaneManager": "",
 "RoomVars": "",
+"RouteLights": "",
 "Shiftable": ""
 }
 

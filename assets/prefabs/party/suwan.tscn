@@ -9,7 +9,7 @@ extents = Vector2( 5, 3.5 )
 
 [node name="SUWAN" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
-inkname = "MS SUWAN"
+walking_spritesheet = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 2
