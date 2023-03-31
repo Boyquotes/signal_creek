@@ -1,4 +1,6 @@
+class_name InputDriver
 extends Node
+
 # MAIN DRIVER of the game based on player input
 
 export var _elevator_focus_position : Vector2 = Vector2(344, 168)
@@ -9,19 +11,18 @@ var _can_interact = false
 var _camera_normal_position = null
 var _elevator_tutorial = false
 
+
+
 func _ready():
-	
 	pass
 
 
 func _process(_delta):
 	if Globals.GameState == Globals.GameStates.START:
-		
 		if Input.is_action_just_pressed("interact"):
 			Globals.StartScreen.start_game()
 		
 	elif Globals.GameState == Globals.GameStates.GAME:
-		
 		if Input.is_action_just_pressed("open_menu"):
 			Globals.PauseMenu.toggle_visible()
 			
@@ -29,8 +30,6 @@ func _process(_delta):
 			reset_game()
 		
 		Globals.PartyObject.move_followers_by_pathfind()
-
-		#print(Globals.Suwan.get_global_position())
 		
 		if Globals.GameMode == Globals.GameModes.TALK:
 			if Globals.DialogueBox.is_expanding_background_panel or Globals.DialogueBox.is_shrinking_background_panel:
@@ -62,13 +61,7 @@ func _process(_delta):
 					while inkCommand and "command" in inkCommand:
 						inkCommand = Globals.DialogueBox.proceed()
 					
-	#		if Globals.Elevator && Globals.Elevator.focus_camera_on_elevator == true:
-	#			Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
-				#var followingVector = find_current_speaker_position()
-				#Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
-				
 		elif Globals.GameMode == Globals.GameModes.WALK:
-			
 			if !Globals.DevTools.typing_knot_name:
 				check_input_character_movement()
 			
@@ -97,6 +90,7 @@ func _process(_delta):
 			if Globals.Elevator && Globals.Elevator.focus_camera_on_elevator == true:
 				Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
 
+
 func check_input_character_movement():
 	var directionVector = Vector2(0,0)
 
@@ -114,14 +108,16 @@ func check_input_character_movement():
 		
 	Globals.PartyObject.move_leader_by_vector(directionVector)
 
+
 func reset_game():
 	#Reset overworld tree and dialoguebox
 	Globals.GameCanvas.reload()
 	Globals.DialogueBox.reset_story()
 	Globals.GameState = Globals.GameStates.START
 	Globals.StartScreen.set_visible(true)
-#	Globals.DialogueBox.get_tree().reload_current_scene()
-	print("GAME RESET")
+	
+	if Globals.GameCanvas.testing_enabled:
+		print("GAME RESET")
 
 
 func set_closest_object(objectName):

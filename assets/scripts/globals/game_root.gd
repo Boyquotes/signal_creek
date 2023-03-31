@@ -1,4 +1,6 @@
+class_name GameRoot
 extends Node2D
+
 # Gamecanvas is the Root of the main scene
 # Initializes all global variables
 # Is responsible for updating the viewport material for pixel perfect camera

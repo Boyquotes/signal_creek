@@ -34,6 +34,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://assets/scripts/environment/elevator_doors_floorlight.gd"
 }, {
+"base": "Node2D",
+"class": "GameRoot",
+"language": "GDScript",
+"path": "res://assets/scripts/globals/game_root.gd"
+}, {
+"base": "Node",
+"class": "InputDriver",
+"language": "GDScript",
+"path": "res://assets/scripts/globals/input_driver.gd"
+}, {
 "base": "Area2D",
 "class": "Interactive",
 "language": "GDScript",
@@ -68,6 +78,16 @@ _global_script_classes=[ {
 "class": "Shiftable",
 "language": "GDScript",
 "path": "res://assets/scripts/environment/shiftable.gd"
+}, {
+"base": "Node2D",
+"class": "SpeechBubble",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/speech_bubble.gd"
+}, {
+"base": "Area2D",
+"class": "TutorialTrigger",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/tutorial_trigger.gd"
 } ]
 _global_script_class_icons={
 "CameraManager": "",
@@ -75,13 +95,17 @@ _global_script_class_icons={
 "Doortal": "",
 "ElevatorArea": "",
 "ElevatorDoorsFloorlight": "",
+"GameRoot": "",
+"InputDriver": "",
 "Interactive": "",
 "LocationTrigger": "",
 "PartyManager": "",
 "PlaneManager": "",
 "RoomVars": "",
 "RouteLights": "",
-"Shiftable": ""
+"Shiftable": "",
+"SpeechBubble": "",
+"TutorialTrigger": ""
 }
 
 [application]

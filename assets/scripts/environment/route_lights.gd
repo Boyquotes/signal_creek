@@ -9,17 +9,6 @@ export var light_timer := 0.5
 export (NodePath) var anim_player
 export (NodePath) var elevator_doortal
 
-onready var nickLight0 = $Nick0;
-onready var nickLight1 = $Nick1;
-onready var nickLight2 = $Nick2;
-
-onready var nourLight0 = $Nour0;
-onready var nourLight1 = $Nour1;
-onready var nourLight2 = $Nour2;
-
-onready var suwanLight0 = $Suwan0;
-onready var suwanLight1= $Suwan1;
-onready var suwanLight2 = $Suwan2;
 
 var first_light_turned_on = false;
 
@@ -36,6 +25,7 @@ func turn_on_light(light_name: String) -> void:
 
 func turn_off_light(light_name: String) -> void:
 	get_node(light_name).visible = true
+
 
 # Teleport party to the elevator position for light tutorial conversation
 func activate_light_tutorial() -> void:

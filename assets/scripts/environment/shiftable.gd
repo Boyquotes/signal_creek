@@ -1,6 +1,7 @@
 tool
 class_name Shiftable
 extends Node2D
+
 # Generic for a shiftable object
 # (object that has different attributes in the dream world and real world)
 # Knows Dream & Real spritesheets
@@ -46,32 +47,32 @@ func _ready():
 		if (get_node_or_null("ActiveArea") != null) and $Sprite.get_material():
 			$Sprite.material.set_shader_param("color", Color.transparent)
 
+
 func _process(_delta):
 	if Engine.editor_hint:
 		_set_hint_attributes()
 
 
 # Set self's sprite's sprite sheet
-func set_sheet(sheetId):
+func set_sheet(sheetId: Texture):
 	$Sprite.set_texture(sheetId)
 
 
 # Set self's global position
-func set_pos(posId):
+func set_pos(posId: Vector2):
 	self.set_global_position(posId)
 
 
 # Move hint sprite to the real world position (for editor usage only)
-func _set_hint_attributes():
+func _set_hint_attributes() -> void:
 	$Hint.region_rect = $Sprite.region_rect
 	$Hint.set_position(Vector2(real_world_x_position, real_world_y_position))
 	$Hint.set_texture(realsheet)
 	$Hint.set_position($Sprite.get_position())
-	#$Hint.offset.y = ($Sprite.region_rect.size.y / -2) - $Sprite.transform.get_origin().x
 
 
 # Activate color of outline shader
-func _on_ActiveArea_can_interact():
+func _on_ActiveArea_can_interact() -> void:
 	# IN CASE OF LEADER SWITCHING
 	#$Sprite.material.set_shader_param("color", Globals.ColorManager.current_color)
 	if $Sprite.get_material():
@@ -79,6 +80,6 @@ func _on_ActiveArea_can_interact():
 
 
 # Deactivate color of outline shader
-func _on_ActiveArea_cannot_interact():
+func _on_ActiveArea_cannot_interact() -> void:
 	if $Sprite.get_material():
 		$Sprite.material.set_shader_param("color", Color.transparent)
