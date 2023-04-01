@@ -9,8 +9,8 @@ extends Node
 export var _shifting_enabled = false
 export (TileSet) var dreamset = preload("res://assets/sprites/tilesets/tileset_abstract_dream.tres")
 export (TileSet) var realset
-export var dream_gradient = preload("res://assets/shaders/gradient_dream.tres")
-export var real_gradient = preload("res://assets/shaders/gradient_real.tres")
+export var dream_gradient = preload("res://assets/materials/gradients/gradient_dream.tres")
+export var real_gradient = preload("res://assets/materials/gradients/gradient_real.tres")
 
 onready var _ground_node = $Ground
 onready var _walls_node = $Overworld/Walls

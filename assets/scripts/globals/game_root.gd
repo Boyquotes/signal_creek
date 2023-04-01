@@ -1,3 +1,4 @@
+# AUTOLOAD GameRoot
 extends Node2D
 
 # GameRoot is the Root of the main scene
@@ -62,7 +63,6 @@ func play_loading_screen() -> void:
 	loadingscreen.set_visible(true)
 	loadingscreen_animation.play("Loading")
 	yield(get_tree().create_timer(1.5), "timeout")
-	print("reached")
 	loadingscreen.set_visible(false)
 	
 	if Globals.GameState == Globals.GameStates.GAME:
@@ -83,10 +83,12 @@ func set_camera_pos(newCameraPos: Vector2, camera: CameraManager) -> void:
 	camera.set_camera_actual_position(newCameraPos)
 
 
+# Tell the camera to move to global position
 func set_camera_following_vector(newCameraPos: Vector2) -> void:
 	_following_vector = newCameraPos
 
 
+# Triggered by reset game button
 func reload() -> void:
 	Globals.reload()
 	RoomEngine.reload()

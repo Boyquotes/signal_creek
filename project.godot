@@ -29,6 +29,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://assets/scripts/ui/dialogue_box.gd"
 }, {
+"base": "Control",
+"class": "DialogueBoxEntry",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/dialoguebox_entry.gd"
+}, {
+"base": "RichTextLabel",
+"class": "DialogueBoxEntryChoice",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/dialoguebox_entrychoices_choice.gd"
+}, {
 "base": "Area2D",
 "class": "Doortal",
 "language": "GDScript",
@@ -63,6 +73,11 @@ _global_script_classes=[ {
 "class": "PartyManager",
 "language": "GDScript",
 "path": "res://assets/scripts/character/party.gd"
+}, {
+"base": "Control",
+"class": "PauseMenu",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/pause_menu.gd"
 }, {
 "base": "Node",
 "class": "PlaneManager",
@@ -99,6 +114,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://assets/scripts/character/speech_bubble.gd"
 }, {
+"base": "Panel",
+"class": "StartScreen",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/start_screen.gd"
+}, {
 "base": "Area2D",
 "class": "TutorialTrigger",
 "language": "GDScript",
@@ -109,6 +129,8 @@ _global_script_class_icons={
 "CharacterNavigator": "",
 "ColorManager": "",
 "DialogueBox": "",
+"DialogueBoxEntry": "",
+"DialogueBoxEntryChoice": "",
 "Doortal": "",
 "ElevatorArea": "",
 "ElevatorDoorsFloorlight": "",
@@ -116,6 +138,7 @@ _global_script_class_icons={
 "Interactive": "",
 "LocationTrigger": "",
 "PartyManager": "",
+"PauseMenu": "",
 "PlaneManager": "",
 "RoomVars": "",
 "RouteLights": "",
@@ -123,6 +146,7 @@ _global_script_class_icons={
 "Shiftable": "",
 "SoundManager": "",
 "SpeechBubble": "",
+"StartScreen": "",
 "TutorialTrigger": ""
 }
 

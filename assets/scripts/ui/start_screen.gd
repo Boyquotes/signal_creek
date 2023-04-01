@@ -1,21 +1,19 @@
+class_name StartScreen
 extends Panel
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+# Start Screen. This is a really simple script. figure it out bro
 
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	Globals.StartScreen = self
 
 
-func _on_StartButton_pressed():
+func _on_StartButton_pressed() -> void:
 	start_game()
-	pass # Replace with function body.
 
-func start_game():
+
+func start_game() -> void:
 	self.set_visible(false)
 	Globals.GameState = Globals.GameStates.GAME
 	Globals.SoundManager.set_mute_audio(false)

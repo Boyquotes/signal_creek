@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/sprites/objects/sheet_elevator.png" type="Texture" id=3]
 [ext_resource path="res://assets/prefabs/doortal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/scripts/environment/elevator_area.gd" type="Script" id=5]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=6]
+[ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=6]
 [ext_resource path="res://assets/scripts/environment/route_lights.gd" type="Script" id=7]
 [ext_resource path="res://assets/textures/lights/glow_64.png" type="Texture" id=8]
 

@@ -1,3 +1,4 @@
+class_name PauseMenu
 extends Control
 
 var panel_opening_speed := 0.25
@@ -26,21 +27,7 @@ func _process(_delta):
 		shrink_background_panel()
 
 
-func toggle_visible():
-	if self.visible:
-		is_expanding_background_panel = false
-		
-		var bgPanelDefaultPos = background_panel_node.get_position()
-		background_panel_max_height = background_panel_node.get_size().y
-		background_panel_node.set_position(Vector2(bgPanelDefaultPos.x, -background_panel_max_height))
-		self.set_visible(false)
-		return
-	
-	is_expanding_background_panel = true
-	self.set_visible(true)
-
-
-func _on_Resolution_item_selected(index):
+func _on_Resolution_item_selected(index: int) -> void:
 	if index == 0:
 		OS.window_size = Vector2(960, 540)
 		Globals.PartyCamera.rescale_camera(6)
@@ -58,29 +45,6 @@ func _on_Resolution_item_selected(index):
 		
 	elif index == 3:
 		OS.window_fullscreen = true
-
-
-func expand_background_panel():
-	var panelPosition = background_panel_node.get_position()
-	
-	if panelPosition.y >= -panel_opening_speed:
-		background_panel_node.set_position(Vector2(panelPosition.x, 0))
-		is_expanding_background_panel = false
-	
-	else:
-		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
-
-
-func shrink_background_panel():
-	var panelPosition = background_panel_node.get_position()
-	
-	if panelPosition.y <= -background_panel_max_height + panel_opening_speed:
-		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
-		is_shrinking_background_panel = false
-		background_panel_node.set_visible(false)
-		
-	else:
-		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
 
 
 func _on_Reset_pressed():
@@ -115,3 +79,40 @@ func _on_Exit_pressed():
 
 func _on_MenuButton_toggled(_toggleMode):
 	toggle_visible()
+
+
+func expand_background_panel() -> void:
+	var panelPosition = background_panel_node.get_position()
+	
+	if panelPosition.y >= -panel_opening_speed:
+		background_panel_node.set_position(Vector2(panelPosition.x, 0))
+		is_expanding_background_panel = false
+	
+	else:
+		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
+
+
+func shrink_background_panel() -> void:
+	var panelPosition = background_panel_node.get_position()
+	
+	if panelPosition.y <= -background_panel_max_height + panel_opening_speed:
+		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
+		is_shrinking_background_panel = false
+		background_panel_node.set_visible(false)
+		
+	else:
+		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
+
+
+func toggle_visible() -> void:
+	if self.visible:
+		is_expanding_background_panel = false
+		
+		var bgPanelDefaultPos = background_panel_node.get_position()
+		background_panel_max_height = background_panel_node.get_size().y
+		background_panel_node.set_position(Vector2(bgPanelDefaultPos.x, -background_panel_max_height))
+		self.set_visible(false)
+		return
+	
+	is_expanding_background_panel = true
+	self.set_visible(true)
