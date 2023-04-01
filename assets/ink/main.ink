@@ -22,6 +22,9 @@ INCLUDE hallway/pretzelstand.ink
 INCLUDE hallway/victorias.ink
 INCLUDE hallway/womensclothing.ink
 INCLUDE hallway/vapestand.ink
+INCLUDE hallway/beautystand.ink
+INCLUDE hallway/weirdtree.ink
+INCLUDE hallway/fountain.ink
 
 INCLUDE topicspot/consoles.ink
 INCLUDE topicspot/coolshirt.ink
