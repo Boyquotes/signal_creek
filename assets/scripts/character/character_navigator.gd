@@ -41,6 +41,10 @@ func _ready():
 	_navtimer.set_one_shot(true)
 
 
+func get_class():
+	return "CharacterNavigator"
+
+
 func timer_timeout() -> void:
 	pass
 

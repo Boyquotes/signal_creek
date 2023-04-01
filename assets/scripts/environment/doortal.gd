@@ -31,6 +31,10 @@ func _on_Doortal_body_entered(body) -> void:
 			entrance_timer.start()
 
 
+func _on_Doortal_body_exited(body):
+	pass # Replace with function body.
+
+
 # After timer, change rooms
 func entrance_timer_timeout() -> void:
 	Globals.GameRoot.emit_signal("doorway_entered", RoomEngine.Rooms[room_index], exit_position)
