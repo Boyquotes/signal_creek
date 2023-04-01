@@ -7,7 +7,8 @@ var background_panel_max_height
 
 onready var background_panel_node = $Panel
 
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready():
 	Globals.PauseMenu = self
 	self.set_visible(false)
@@ -25,10 +26,6 @@ func _process(_delta):
 		shrink_background_panel()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 func toggle_visible():
 	if self.visible:
 		is_expanding_background_panel = false
@@ -36,12 +33,10 @@ func toggle_visible():
 		var bgPanelDefaultPos = background_panel_node.get_position()
 		background_panel_max_height = background_panel_node.get_size().y
 		background_panel_node.set_position(Vector2(bgPanelDefaultPos.x, -background_panel_max_height))
-#		is_shrinking_background_panel = true
 		self.set_visible(false)
 		return
 	
 	is_expanding_background_panel = true
-#	is_shrinking_background_panel = false
 	self.set_visible(true)
 
 
@@ -63,6 +58,7 @@ func _on_Resolution_item_selected(index):
 		
 	elif index == 3:
 		OS.window_fullscreen = true
+
 
 func expand_background_panel():
 	var panelPosition = background_panel_node.get_position()
@@ -117,5 +113,5 @@ func _on_Exit_pressed():
 	pass # Replace with function body.
 
 
-func _on_MenuButton_toggled(button_pressed):
+func _on_MenuButton_toggled(_toggleMode):
 	toggle_visible()

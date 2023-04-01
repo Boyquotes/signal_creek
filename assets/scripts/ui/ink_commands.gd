@@ -189,7 +189,7 @@ func parse_commands(currentLine):
 		
 	# AUDIO_FADEIN or AUDIO_FADEOUT
 	elif "&AUDIO" in currentLine:
-		var command = currentLine.split("_")[1].strip_escapes().to_lower()
+		var _command = currentLine.split("_")[1].strip_escapes().to_lower()
 		
 		if "FADEIN" in currentLine:
 			Globals.SoundManager.increasing_music_volume = true

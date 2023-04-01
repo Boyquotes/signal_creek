@@ -385,7 +385,6 @@ func find_current_speaker_position():
 		
 	var currentSpeakerNode = Globals.Nour
 	Globals.SpeechBubble.set_visible(true)
-	var speechBubbleOffset
 
 	# Match the string of the current speaker's name to their Object in game
 	match currentSpeaker:

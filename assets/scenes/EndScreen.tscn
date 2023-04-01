@@ -1,9 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/scenes/Start Screen.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/ui/start_screen.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe_32.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold_32.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=4]
+
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 1 )

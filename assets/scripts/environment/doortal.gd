@@ -31,7 +31,7 @@ func _on_Doortal_body_entered(body) -> void:
 			entrance_timer.start()
 
 
-func _on_Doortal_body_exited(body):
+func _on_Doortal_body_exited(_body):
 	pass # Replace with function body.
 
 

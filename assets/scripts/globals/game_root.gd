@@ -37,7 +37,6 @@ func _ready():
 	RoomEngine.CurrentRoom = $ViewportContainer/Viewport/Room
 	RoomEngine.starter = RoomEngine.CurrentRoom
 	RoomEngine.PlaneManager = $ViewportContainer/Viewport/Room/PlaneManager
-	print('reached')
 	
 	if testing_enabled:
 		RoomEngine.Rooms[1].set_party_starting_position(testing_start_pos)
