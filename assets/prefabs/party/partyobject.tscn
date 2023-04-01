@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_suwan_past.png" type="Texture" id=14]
 [ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_nick_past.png" type="Texture" id=15]
 [ext_resource path="res://assets/sprites/talking_bubble.png" type="Texture" id=16]
-[ext_resource path="res://assets/scripts/environment/speech_bubble.gd" type="Script" id=17]
+[ext_resource path="res://assets/scripts/character/speech_bubble.gd" type="Script" id=17]
 
 [node name="PARTY" type="YSort"]
 script = ExtResource( 11 )

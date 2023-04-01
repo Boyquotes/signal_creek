@@ -1,3 +1,4 @@
+# AUTOLOAD Globals
 extends Node
 #Global variables & enums - Autoload along with RoomEngine and DialogueEngine
 
@@ -10,7 +11,7 @@ enum GameStates { START, GAME, END }
 
 #declare global game variables
 
-var GameCanvas = null
+var GameRoot = null
 var DevTools = null
 var PauseMenu = null
 var StartScreen = null
@@ -19,7 +20,7 @@ var GameMode = GameModes.WALK
 var CurrentWorld = Worlds.DREAM
 var GameState = GameStates.START
 
-var UpdateController = null
+var InputDriver = null
 var GameWorldEnvironment = null
 var GameOverlay = null
 
@@ -57,20 +58,15 @@ func get_world_inkname() -> String:
 	print("ERR: tried to get CurrentWorld ink name, but wasn't DREAM or REAL!")
 	return "ERR"
 
-#global static functions
-static func delete_children(node):
-	for n in node.get_children():
-		node.remove_child(n)
-		n.queue_free()
 
 func reload():
-#	GameCanvas = null
+#	GameRoot = null
 #	DevTools = null
 
 	GameMode = GameModes.WALK
 	CurrentWorld = Worlds.DREAM
 
-#	UpdateController = null
+#	InputDriver = null
 #	GameWorldEnvironment = null
 #	GameOverlay = null
 

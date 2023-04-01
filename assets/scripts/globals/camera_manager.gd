@@ -14,7 +14,7 @@ export var lerpSpeed : int
 export(Vector2) var room_bounds_min
 export(Vector2) var room_bounds_max
 
-# scale camera proportionally
+# Scale camera proportionally
 export var window_scale : int = 6
 
 onready var game_size := Vector2((OS.window_size / window_scale).x, (OS.window_size / window_scale).y)
@@ -29,22 +29,21 @@ func _ready():
 
 
 # Returns a "subpixel position"
-# Used by pixel-perfect shader in GameCanvas
+# Used by pixel-perfect shader in GameRoot
 func pixel_perfect(delta, following: Vector2) -> Vector2:
-	var camera_room_position = Vector2(0, 0)
+	var cameraRoomPosition = Vector2(0, 0)
+	
 	#take room bounds into account only when walking
 	if Globals.GameMode == Globals.GameModes.WALK:
-		camera_room_position = Vector2(clamp(following.x, camera_bounds_min.x, camera_bounds_max.x), clamp(following.y, camera_bounds_min.y, camera_bounds_max.y))
+		cameraRoomPosition = Vector2(clamp(following.x, camera_bounds_min.x, camera_bounds_max.x), clamp(following.y, camera_bounds_min.y, camera_bounds_max.y))
 	
 	else:
-		camera_room_position = Vector2(following.x, clamp(following.y, camera_bounds_min.y, camera_bounds_max.y))
+		cameraRoomPosition = Vector2(following.x, clamp(following.y, camera_bounds_min.y, camera_bounds_max.y))
 	
-	camera_actual_position = lerp(camera_actual_position, camera_room_position, lerpSpeed * delta)
+	camera_actual_position = lerp(camera_actual_position, cameraRoomPosition, lerpSpeed * delta)
+	self.global_position = camera_actual_position.round()
 	
-	var cam_subpixel_pos = camera_actual_position.round() - camera_actual_position
-	global_position = camera_actual_position.round()
-	
-	return cam_subpixel_pos
+	return camera_actual_position.round() - camera_actual_position
 
 
 # Adjust camera bounds based on window scale

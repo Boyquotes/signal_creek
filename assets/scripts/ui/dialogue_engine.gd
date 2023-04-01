@@ -1,4 +1,6 @@
+# AUTOLOAD DialogueEngine
 extends Node
+
 # Functions to create DialogueBox entry prefabs
 # Autoload with Globals and RoomEngine
 

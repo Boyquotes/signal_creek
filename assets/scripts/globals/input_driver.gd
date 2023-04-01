@@ -75,7 +75,7 @@ func _process(_delta):
 						_closest_object.call_deferred("_check_if_can_interact")
 						
 			_camera_normal_position = Globals.PartyObject.get_leader().get_global_position()
-			Globals.GameCanvas.set_camera_following_vector(_camera_normal_position)
+			Globals.GameRoot.set_camera_following_vector(_camera_normal_position)
 				
 			if _can_interact:
 				if Input.is_action_just_pressed("interact"):
@@ -88,7 +88,7 @@ func _process(_delta):
 						Globals.DialogueBox.background_panel_node.set_visible(true)
 				
 			if Globals.Elevator && Globals.Elevator.focus_camera_on_elevator == true:
-				Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
+				Globals.GameRoot.set_camera_following_vector(_elevator_focus_position)
 
 
 func check_input_character_movement():
@@ -109,26 +109,28 @@ func check_input_character_movement():
 	Globals.PartyObject.move_leader_by_vector(directionVector)
 
 
-func reset_game():
-	#Reset overworld tree and dialoguebox
-	Globals.GameCanvas.reload()
+#Reset overworld tree and dialoguebox
+func reset_game() -> void:
+	Globals.GameRoot.reload()
 	Globals.DialogueBox.reset_story()
 	Globals.GameState = Globals.GameStates.START
 	Globals.StartScreen.set_visible(true)
 	
-	if Globals.GameCanvas.testing_enabled:
+	if Globals.GameRoot.testing_enabled:
 		print("GAME RESET")
 
 
-func set_closest_object(objectName):
+# Closest Interactive object available for interaction
+func set_closest_object(objectName: Interactive) -> void:
 	_closest_object = objectName
 
 
-func set_can_interact(condition):
+# Whether player can interact with objects
+func set_can_interact(condition: bool) -> void:
 	_can_interact = condition
 
 
-func _on_StartButton_pressed():
+func _on_StartButton_pressed() -> void:
 	Globals.StartScreen.set_visible(false)
 	Globals.GameState = Globals.GameStates.GAME
 	Globals.SoundManager.set_mute_audio(false)

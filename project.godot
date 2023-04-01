@@ -19,6 +19,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://assets/scripts/character/character_navigator.gd"
 }, {
+"base": "Control",
+"class": "ColorManager",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/color_manager.gd"
+}, {
+"base": "Control",
+"class": "DialogueBox",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/dialogue_box.gd"
+}, {
 "base": "Area2D",
 "class": "Doortal",
 "language": "GDScript",
@@ -33,11 +43,6 @@ _global_script_classes=[ {
 "class": "ElevatorDoorsFloorlight",
 "language": "GDScript",
 "path": "res://assets/scripts/environment/elevator_doors_floorlight.gd"
-}, {
-"base": "Node2D",
-"class": "GameRoot",
-"language": "GDScript",
-"path": "res://assets/scripts/globals/game_root.gd"
 }, {
 "base": "Node",
 "class": "InputDriver",
@@ -74,15 +79,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://assets/scripts/environment/route_lights.gd"
 }, {
+"base": "Node",
+"class": "ScreenOverlay",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/screen_overlay.gd"
+}, {
 "base": "Node2D",
 "class": "Shiftable",
 "language": "GDScript",
 "path": "res://assets/scripts/environment/shiftable.gd"
 }, {
-"base": "Node2D",
+"base": "Node",
+"class": "SoundManager",
+"language": "GDScript",
+"path": "res://assets/scripts/globals/sound_manager.gd"
+}, {
+"base": "Reference",
 "class": "SpeechBubble",
 "language": "GDScript",
-"path": "res://assets/scripts/environment/speech_bubble.gd"
+"path": "res://assets/scripts/character/speech_bubble.gd"
 }, {
 "base": "Area2D",
 "class": "TutorialTrigger",
@@ -92,10 +107,11 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "CameraManager": "",
 "CharacterNavigator": "",
+"ColorManager": "",
+"DialogueBox": "",
 "Doortal": "",
 "ElevatorArea": "",
 "ElevatorDoorsFloorlight": "",
-"GameRoot": "",
 "InputDriver": "",
 "Interactive": "",
 "LocationTrigger": "",
@@ -103,7 +119,9 @@ _global_script_class_icons={
 "PlaneManager": "",
 "RoomVars": "",
 "RouteLights": "",
+"ScreenOverlay": "",
 "Shiftable": "",
+"SoundManager": "",
 "SpeechBubble": "",
 "TutorialTrigger": ""
 }
@@ -126,9 +144,10 @@ default_bus_layout=""
 
 [autoload]
 
+StaticFunctions="*res://assets/scripts/globals/static_functions.gd"
 Globals="*res://assets/scripts/globals/global_vars.gd"
-DialogueEngine="*res://assets/scripts/ui/dialogue_engine.gd"
 RoomEngine="*res://assets/scripts/globals/room_engine.gd"
+DialogueEngine="*res://assets/scripts/ui/dialogue_engine.gd"
 InkCommands="*res://assets/scripts/ui/ink_commands.gd"
 
 [debug]

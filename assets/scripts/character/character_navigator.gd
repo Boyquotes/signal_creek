@@ -23,7 +23,7 @@ var _current_emote = _current_idle_sprite
 var walk_speed = default_walk_speed
 var direction_vector := Vector2(0,0)
 var done_following = false
-var following_vector_queue # Vector2 positions to move towards
+var following_vector_queue = [Vector2(0, 0)] # Vector2 positions to move towards
 
 onready var _animation_player = $AnimationPlayer
 onready var following_node
@@ -165,7 +165,7 @@ func animate_character(directionVector: Vector2) -> void:
 func pathfind_to(target : Node2D) -> void:
 	angle_towards = target.get_global_position() - self.get_global_position() #instead of target global position, do the last item on target's positional queue
 	
-	if target == Globals.Nour or target == Globals.Nick and self != Globals.Nour and Globals.GameMode == Globals.GameModes.WALK:
+	if target.get_class() == "CharacterNavigator" and self != Globals.Nour and Globals.GameMode == Globals.GameModes.WALK:
 		angle_towards = target.following_vector_queue.front() - self.get_global_position()
 	
 	if(angle_towards.length() < _pathfind_stop_approaching_dist):

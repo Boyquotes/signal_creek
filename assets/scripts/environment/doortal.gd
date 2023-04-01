@@ -27,10 +27,10 @@ func _on_Doortal_body_entered(body) -> void:
 		
 		if body.direction_vector == entrance_direction:
 			Globals.GameOverlay.start_fade_out()
-			Globals.GameCanvas.loadingscreen_animation.play("Off")
+			Globals.GameRoot.loadingscreen_animation.play("Off")
 			entrance_timer.start()
 
 
 # After timer, change rooms
 func entrance_timer_timeout() -> void:
-	Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[room_index], exit_position)
+	Globals.GameRoot.emit_signal("doorway_entered", RoomEngine.Rooms[room_index], exit_position)

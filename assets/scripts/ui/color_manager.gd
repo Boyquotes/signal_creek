@@ -1,5 +1,8 @@
+class_name ColorManager
 extends Control
+
 # Color Manager stores character names and their corresponding colors
+# Also stores portraits
 
 export var characterColors : Dictionary = {
 	"the party": Color(1, 1, 1),
@@ -27,13 +30,13 @@ var current_color = "the party"
 var current_portrait = "nour"
 
 
+
 func _ready():
 	pass
-#	set_current_color("nick")
 
 
 # asks for string, sets current_color from dictionary
-func set_current_color(characterName):
+func set_current_color(characterName: String) -> void:
 	current_color = characterColors.get(characterName.to_lower().trim_suffix(":"))
 	if characterPortraits.get(characterName.to_lower().trim_suffix(":")):
 		current_portrait = characterPortraits.get(characterName.to_lower().trim_suffix(":"))
@@ -43,18 +46,19 @@ func set_current_color(characterName):
 		
 	else:
 		current_portrait = characterPortraits.get("placeholder")
-		
 
 
-# returns a color code
-func get_current_color():
+# Get color currently being used for new dialogue entries
+func get_current_color() -> Color:
 	return current_color
 
 
-func get_current_portrait():
+# Get portrait currently being used for new dialogue entries
+func get_current_portrait() -> Texture:
 	return current_portrait
 
 
-func set_character_portrait(characterName, portraitName):
-	var portraitToUse = portraitLibrary.get(portraitName)
+# Set expression portrait that is assigned to a character
+func set_character_portrait(characterName: String, expressionName: String) -> void:
+	var portraitToUse = portraitLibrary.get(expressionName)
 	characterPortraits[characterName] = portraitToUse

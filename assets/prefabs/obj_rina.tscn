@@ -1,10 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
-[ext_resource path="res://assets/scripts/environment/rinas_brain.gd" type="Script" id=2]
+[ext_resource path="res://assets/scripts/character/rinas_brain.gd" type="Script" id=2]
 [ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/shaders/material_pixelate_in.tres" type="Material" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_dream.png" type="Texture" id=5]
+
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 5, 3.5 )

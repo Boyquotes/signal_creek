@@ -29,17 +29,17 @@ func turn_off_light(light_name: String) -> void:
 
 # Teleport party to the elevator position for light tutorial conversation
 func activate_light_tutorial() -> void:
-	yield(Globals.GameCanvas.get_tree().create_timer(1.0), "timeout")
+	yield(Globals.GameRoot.get_tree().create_timer(1.0), "timeout")
 	
 	# If teleporting to elevator while in hallway
 	if RoomEngine.CurrentRoomIndex == 1:
 		RoomEngine.CurrentRoom.move_party_to_position(Globals.PartyObject, Vector2(472, 304))
-		Globals.GameCanvas.set_camera_following_vector(Vector2(472, 304))
-		Globals.GameCanvas.play_loading_screen()
+		Globals.GameRoot.set_camera_following_vector(Vector2(472, 304))
+		Globals.GameRoot.play_loading_screen()
 	
 	# If teleporting to elevator from a different room
 	else:
-		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[1], Vector2(472, 304))
+		Globals.GameRoot.emit_signal("doorway_entered", RoomEngine.Rooms[1], Vector2(472, 304))
 		
 	Globals.Elevator.focus_camera_on_elevator = true
 

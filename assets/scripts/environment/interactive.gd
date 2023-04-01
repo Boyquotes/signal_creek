@@ -39,28 +39,36 @@ func _on_InteractArea_body_exited(body) -> void:
 		_check_if_can_interact()
 
 
+func _on_ActiveArea_can_interact() -> void:
+	pass
+
+
+func _on_ActiveArea_cannot_interact() -> void:
+	pass
+
+
 # Events to trigger when the player can interact with the objects
 func _set_can_interact_true() -> void:
-	Globals.UpdateController.set_can_interact(true)
-	Globals.UpdateController.set_closest_object(self)
+	Globals.InputDriver.set_can_interact(true)
+	Globals.InputDriver.set_closest_object(self)
 	emit_signal("can_interact")
 	
-	if Globals.GameCanvas.testing_enabled:
+	if Globals.GameRoot.testing_enabled:
 		print(Globals.PartyObject.get_leader().get_name() + " Can Interact: " + _get_object_name())
 
 
 # IN CASE OF LEADER SWITCHING
 # check if player can interact with object
-# communicate with updatecontroller
+# communicate with InputDriver
 func _check_if_can_interact() -> void:
 	if _check_if_leader_in_area():
 		_set_can_interact_true()
 		return
 	
-	Globals.UpdateController.set_can_interact(false)
+	Globals.InputDriver.set_can_interact(false)
 	emit_signal("cannot_interact")
 	
-	if Globals.GameCanvas.testing_enabled:
+	if Globals.GameRoot.testing_enabled:
 		print("Cannot Interact: " + _get_object_name())
 
 
@@ -101,9 +109,4 @@ func _get_object_name() -> String:
 	return rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_")
 
 
-func _on_ActiveArea_can_interact() -> void:
-	pass
 
-
-func _on_ActiveArea_cannot_interact() -> void:
-	pass

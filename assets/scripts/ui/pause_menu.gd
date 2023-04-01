@@ -88,19 +88,19 @@ func shrink_background_panel():
 
 
 func _on_Reset_pressed():
-	Globals.UpdateController.reset_game()
+	Globals.InputDriver.reset_game()
 
 
 func _on_MusicVolumeSlider_value_changed(value):
-	Globals.SoundManager.set_stream_volume(Globals.SoundManager.musicPlayer, value)
+	Globals.SoundManager.set_stream_volume(Globals.SoundManager.music_player, value)
 
 
 func _on_SFXVolumeSlider_value_changed(value):
-	Globals.SoundManager.set_stream_volume(Globals.SoundManager.soundPlayer, value)
+	Globals.SoundManager.set_stream_volume(Globals.SoundManager.sound_player, value)
 
 
 func _on_UIVolumeSlider_value_changed(value):
-	Globals.SoundManager.set_stream_volume(Globals.SoundManager.uiSoundPlayer, value)
+	Globals.SoundManager.set_stream_volume(Globals.SoundManager.ui_sound_player, value)
 
 
 func _on_MuteAudio_toggled(button_pressed):

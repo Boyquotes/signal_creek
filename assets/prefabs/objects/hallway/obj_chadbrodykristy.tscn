@@ -1,8 +1,9 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/scripts/environment/chadbrodykristy_brains.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/character/chadbrodykristy_brains.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
 [ext_resource path="res://assets/alpha/sprites_alpha/characters/placeholders/sheet_chadbrodykristy.png" type="Texture" id=4]
+
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;

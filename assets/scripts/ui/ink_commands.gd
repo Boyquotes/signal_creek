@@ -1,3 +1,4 @@
+# AUTOLOAD InkCommands
 extends Node
 
 # Parse function requests from ink writing
@@ -136,7 +137,7 @@ func parse_commands(currentLine):
 		vectorPos = vectorPos.split(",")
 		vectorPos = Vector2(vectorPos[0], vectorPos[1])
 		
-		Globals.GameCanvas.set_camera_following_vector(vectorPos)
+		Globals.GameRoot.set_camera_following_vector(vectorPos)
 		
 	# Turn on all the route lights at once
 	elif "&ALLON" in currentLine:
@@ -164,7 +165,7 @@ func parse_commands(currentLine):
 	# Change volume of music
 	elif "&VOLUME" in currentLine:
 		var volumeLevel = float(currentLine.split("_")[1].strip_escapes())
-		Globals.SoundManager.set_stream_volume(Globals.SoundManager.musicPlayer, volumeLevel)
+		Globals.SoundManager.set_stream_volume(Globals.SoundManager.music_player, volumeLevel)
 		
 	# expects &SHLORP_CBK_Chad_out
 	elif "&SHLORP_CBK" in currentLine:
@@ -192,7 +193,7 @@ func parse_commands(currentLine):
 		
 		if "FADEIN" in currentLine:
 			Globals.SoundManager.increasing_music_volume = true
-			Globals.SoundManager.musicPlayer.set_stream_paused(false)
+			Globals.SoundManager.music_player.set_stream_paused(false)
 			
 		elif "FADEOUT" in currentLine:
 			Globals.SoundManager.decreasing_music_volume = true

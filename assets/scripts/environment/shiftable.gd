@@ -53,16 +53,6 @@ func _process(_delta):
 		_set_hint_attributes()
 
 
-# Set self's sprite's sprite sheet
-func set_sheet(sheetId: Texture):
-	$Sprite.set_texture(sheetId)
-
-
-# Set self's global position
-func set_pos(posId: Vector2):
-	self.set_global_position(posId)
-
-
 # Move hint sprite to the real world position (for editor usage only)
 func _set_hint_attributes() -> void:
 	$Hint.region_rect = $Sprite.region_rect
@@ -83,3 +73,13 @@ func _on_ActiveArea_can_interact() -> void:
 func _on_ActiveArea_cannot_interact() -> void:
 	if $Sprite.get_material():
 		$Sprite.material.set_shader_param("color", Color.transparent)
+
+
+# Set self's sprite's sprite sheet
+func set_sheet(sheetId: Texture):
+	$Sprite.set_texture(sheetId)
+
+
+# Set self's global position
+func set_pos(posId: Vector2):
+	self.set_global_position(posId)
