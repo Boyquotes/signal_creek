@@ -14,3 +14,19 @@
         - else:
             -> weirdtree1
     }
+    
+    = weirdtree_end
+    
+    -> END
+    
+    = weirdtree2
+    
+    -> END
+    
+    = weirdtree1_repeat
+    
+    -> END
+    
+    = weirdtree1
+    
+    -> END

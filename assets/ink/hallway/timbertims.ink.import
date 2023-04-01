@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/timbertims.ink-d2ba516730f4e52cace2e1a69782ff09.res"
+
+[deps]
+
+source_file="res://assets/ink/hallway/timbertims.ink"
+dest_files=[ "res://.import/timbertims.ink-d2ba516730f4e52cace2e1a69782ff09.res" ]
+
+[params]
+
+is_master_file=false
+compress=false
