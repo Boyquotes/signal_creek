@@ -41,6 +41,14 @@ var Chad = null
 var Brody = null
 var Kristy = null
 var Manager = null
+var DukeDelicious = null
+var FatherFuji = null
+var GrandDuchessGranny = null
+var PrincessPinkLady = null
+var PrincePendragon = null
+var EmperorEvercrisp = null
+var EarlEarligold = null
+
 var SpeechBubble = null
 
 var Elevator = null

@@ -23,10 +23,6 @@ func parse_commands(currentLine):
 		if Globals.Rina:
 			Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
 		
-	# Make rina shlorp out with the shader
-	elif "&SHLORP_RINA" in currentLine:
-		Globals.Rina.rina_shlorp_out()
-		
 	# Snap character to position
 	elif "&POS" in currentLine: #move nick to vector2
 		var charName = currentLine.split("_")[1].strip_escapes()
@@ -168,19 +164,33 @@ func parse_commands(currentLine):
 		Globals.SoundManager.set_stream_volume(Globals.SoundManager.music_player, volumeLevel)
 		
 	# expects &SHLORP_CBK_Chad_out
-	elif "&SHLORP_CBK" in currentLine:
+	elif "&SHLORP" in currentLine:
 		var characterName = currentLine.split("_")[2].strip_escapes()
 		var inOrOut = currentLine.split("_")[3].strip_escapes()
 		
 		var characterNode = Globals.Chad
 		
 		match characterName:
+			"Rina":
+				characterNode = Globals.Rina
 			"Chad":
 				characterNode = Globals.Chad
 			"Brody":
 				characterNode = Globals.Brody
 			"Kristy":
 				characterNode = Globals.Kristy
+			"DukeDelicious":
+				characterNode = Globals.DukeDelicious
+			"FatherFuji":
+				characterNode = Globals.FatherFuji
+			"GrandDuchessGranny":
+				characterNode = Globals.GrandDuchessGranny
+			"PrincePendragon":
+				characterNode = Globals.PrincePendragon
+			"EmperorEvercrisp":
+				characterNode = Globals.EmperorEvercrisp
+			"EarlEarligold":
+				characterNode = Globals.EarlEarligold
 		
 		if "out" in inOrOut:
 			characterNode.shlorp_out()
