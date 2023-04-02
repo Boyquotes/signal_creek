@@ -172,11 +172,21 @@ func parse_commands(currentLine):
 		var characterName = currentLine.split("_")[2].strip_escapes()
 		var inOrOut = currentLine.split("_")[3].strip_escapes()
 		
+		var characterNode = Globals.Chad
+		
+		match characterName:
+			"Chad":
+				characterNode = Globals.Chad
+			"Brody":
+				characterNode = Globals.Brody
+			"Kristy":
+				characterNode = Globals.Kristy
+		
 		if "out" in inOrOut:
-			Globals.ChadBrodyKristy.cbk_shlorp_out(characterName)
+			characterNode.shlorp_out()
 			
 		else: 
-			Globals.ChadBrodyKristy.cbk_shlorp_in(characterName)
+			characterNode.shlorp_in()
 			
 	elif "&PAUSE" in currentLine:
 		var pauseTime = float(currentLine.split("_")[1].strip_escapes())

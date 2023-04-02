@@ -9,10 +9,20 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "NPCBehavior",
+"class": "Brody",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_brody.gd"
+}, {
 "base": "Camera2D",
 "class": "CameraManager",
 "language": "GDScript",
 "path": "res://assets/scripts/globals/camera_manager.gd"
+}, {
+"base": "NPCBehavior",
+"class": "Chad",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_chad.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "CharacterNavigator",
@@ -64,10 +74,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://assets/scripts/environment/interactive.gd"
 }, {
+"base": "NPCBehavior",
+"class": "Kristy",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_kristy.gd"
+}, {
 "base": "Area2D",
 "class": "LocationTrigger",
 "language": "GDScript",
 "path": "res://assets/scripts/environment/location_trigger.gd"
+}, {
+"base": "Interactive",
+"class": "NPCBehavior",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_behavior.gd"
 }, {
 "base": "YSort",
 "class": "PartyManager",
@@ -109,7 +129,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://assets/scripts/globals/sound_manager.gd"
 }, {
-"base": "Reference",
+"base": "Node2D",
 "class": "SpeechBubble",
 "language": "GDScript",
 "path": "res://assets/scripts/character/speech_bubble.gd"
@@ -125,7 +145,9 @@ _global_script_classes=[ {
 "path": "res://assets/scripts/environment/tutorial_trigger.gd"
 } ]
 _global_script_class_icons={
+"Brody": "",
 "CameraManager": "",
+"Chad": "",
 "CharacterNavigator": "",
 "ColorManager": "",
 "DialogueBox": "",
@@ -136,7 +158,9 @@ _global_script_class_icons={
 "ElevatorDoorsFloorlight": "",
 "InputDriver": "",
 "Interactive": "",
+"Kristy": "",
 "LocationTrigger": "",
+"NPCBehavior": "",
 "PartyManager": "",
 "PauseMenu": "",
 "PlaneManager": "",

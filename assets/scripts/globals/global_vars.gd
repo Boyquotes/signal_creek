@@ -60,22 +60,8 @@ func get_world_inkname() -> String:
 
 
 func reload():
-#	GameRoot = null
-#	DevTools = null
-
 	GameMode = GameModes.WALK
 	CurrentWorld = Worlds.DREAM
-
-#	InputDriver = null
-#	GameWorldEnvironment = null
-#	GameOverlay = null
-
-#	SoundManager = null
-
-#	DialogueBox = null
-	CornerPortrait = null
-#	ColorManager = null
-
 	PartyCamera = null
 	PartyObject = null
 	Nick = null

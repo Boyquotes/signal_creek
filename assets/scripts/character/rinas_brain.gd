@@ -77,6 +77,7 @@ func move_rina(newPosition):
 		place_rina_in_new_room()
 		rina_shlorp_in()
 
+
 # call this only when the player is actually in the room
 func place_rina_in_new_room():
 	if !Globals.Rina:
@@ -119,9 +120,6 @@ func rina_shlorp():
 			rina_sprite.material.set_shader_param("time", 1.57)
 			
 			return
-			
-		
-		
 
 
 # disappear into the void (visually)

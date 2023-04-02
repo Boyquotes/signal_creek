@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://assets/scripts/character/chadbrodykristy_brains.gd" type="Script" id=1]
-[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
+[ext_resource path="res://assets/scripts/character/npc_brody.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/character/npc_chad.gd" type="Script" id=2]
+[ext_resource path="res://assets/scripts/character/npc_kristy.gd" type="Script" id=3]
 [ext_resource path="res://assets/alpha/sprites_alpha/characters/placeholders/sheet_chadbrodykristy.png" type="Texture" id=4]
-
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -26,15 +26,15 @@ void fragment()
 		COLOR = vec4(0.0,0.0,0.0,0.0);
 }"
 
-[sub_resource type="ShaderMaterial" id=24]
+[sub_resource type="ShaderMaterial" id=28]
 shader = SubResource( 1 )
 shader_param/time = 1.57
 
-[sub_resource type="ShaderMaterial" id=25]
+[sub_resource type="ShaderMaterial" id=29]
 shader = SubResource( 1 )
 shader_param/time = 1.57
 
-[sub_resource type="ShaderMaterial" id=26]
+[sub_resource type="ShaderMaterial" id=30]
 shader = SubResource( 1 )
 shader_param/time = 1.57
 
@@ -44,34 +44,35 @@ extents = Vector2( 21.5, 6 )
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 25, 11.25 )
 
+[sub_resource type="RectangleShape2D" id=27]
+
 [node name="ChadBrodyKristy" type="RigidBody2D"]
 mode = 1
-script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Chad" type="Sprite" parent="."]
+[node name="ChadSprite" type="Sprite" parent="."]
 light_mask = 4
-material = SubResource( 24 )
+material = SubResource( 28 )
 position = Vector2( 20, -1 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -14 )
 region_enabled = true
 region_rect = Rect2( 43, 13, 17, 29 )
 
-[node name="Brody" type="Sprite" parent="."]
+[node name="BrodySprite" type="Sprite" parent="."]
 light_mask = 4
-material = SubResource( 25 )
+material = SubResource( 29 )
 position = Vector2( 2, -7 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -15 )
 region_enabled = true
 region_rect = Rect2( 25, 5, 18, 31 )
 
-[node name="Kristy" type="Sprite" parent="."]
+[node name="KristySprite" type="Sprite" parent="."]
 light_mask = 4
-material = SubResource( 26 )
+material = SubResource( 30 )
 position = Vector2( -16, 0 )
 texture = ExtResource( 4 )
 offset = Vector2( -1, -16 )
@@ -93,14 +94,44 @@ position = Vector2( 0.5, -6 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
+_shlorping_target_path = NodePath("../BrodySprite")
+_knot_name = "chadbrodykristy"
+_final_knot_name = "chadbrodykristy3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 position = Vector2( 0, -0.25 )
 shape = SubResource( 22 )
+
+[node name="Chad" type="Area2D" parent="."]
+position = Vector2( 20, 0 )
+monitoring = false
+script = ExtResource( 2 )
+_shlorping_target_path = NodePath("../ChadSprite")
+_knot_name = "chadbrodykristy"
+_final_knot_name = "chadbrodykristy3"
+_override_set_monitoring = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chad"]
+shape = SubResource( 27 )
+disabled = true
+
+[node name="Kristy" type="Area2D" parent="."]
+position = Vector2( -15, 0 )
+monitoring = false
+script = ExtResource( 3 )
+_disable_interactivity = true
+_shlorping_target_path = NodePath("../KristySprite")
+_knot_name = "chadbrodykristy"
+_final_knot_name = "chadbrodykristy3"
+_override_set_monitoring = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kristy"]
+shape = SubResource( 27 )
+disabled = true
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]

@@ -9,7 +9,6 @@
 [ext_resource path="res://assets/scripts/environment/route_lights.gd" type="Script" id=7]
 [ext_resource path="res://assets/textures/lights/glow_64.png" type="Texture" id=8]
 
-
 [sub_resource type="Animation" id=24]
 resource_name = "ElevatorClose"
 length = 0.6
@@ -56,6 +55,7 @@ modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
 position = Vector2( 0, -72 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 11, 7, 106, 147 )
 
@@ -74,9 +74,7 @@ elevator_doortal = NodePath("../Doortal")
 [node name="SheetElevatorlights" type="Light2D" parent="RouteLights"]
 position = Vector2( 0, -58 )
 texture = ExtResource( 2 )
-energy = 3.87
-mode = 2
-range_height = 2048.0
+energy = 0.8
 range_item_cull_mask = 15
 shadow_item_cull_mask = 7
 
