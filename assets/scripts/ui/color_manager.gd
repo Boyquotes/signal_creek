@@ -8,17 +8,38 @@ export var characterColors : Dictionary = {
 	"the party": Color(1, 1, 1),
 	"nour": Color(.78, .38, .38),
 	"nick": Color(.88, .78, .38),
-	"ms suwan": Color(.38, .67, 1)
+	"ms. suwan": Color(.38, .67, 1),
+	"rina": Color(1, 1, 1),
+	"chad": Color(1, 1, 1),
+	"brody": Color(1, 1, 1),
+	"kristy": Color(1, 1, 1),
+	"manager": Color(1, 1, 1),
+	"duke delicious": Color(1, 1, 1),
+	"father fuji": Color(1, 1, 1),
+	"grand duchess granny": Color(1, 1, 1),
+	"princess pink lady": Color(1, 1, 1),
+	"prince pendragon": Color(1, 1, 1),
+	"emperor evercrisp": Color(1, 1, 1),
+	"earl earligold": Color(1, 1, 1),
+	
 }
 
 export var characterPortraits : Dictionary = {
 	"nour": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"nick": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"ms. suwan": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"rina": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"chad": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"brody": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"kristy": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"manager": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"duke delicious": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"father fuji": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"grand duchess granny": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"princess pink lady": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"prince pendragon": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"emperor evercrisp": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"earl earligold": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png")
 }
 

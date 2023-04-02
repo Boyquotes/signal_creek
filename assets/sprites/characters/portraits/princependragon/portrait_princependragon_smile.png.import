@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portrait_rina_neutral.png-2e99cb86aa6623246d2b1646b57c666c.stex"
+path="res://.import/portrait_princependragon_smile.png-706d431b0511392640fdebda4523c79e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/portraits/portrait_rina_neutral.png"
-dest_files=[ "res://.import/portrait_rina_neutral.png-2e99cb86aa6623246d2b1646b57c666c.stex" ]
+source_file="res://assets/sprites/characters/portraits/princependragon/portrait_princependragon_smile.png"
+dest_files=[ "res://.import/portrait_princependragon_smile.png-706d431b0511392640fdebda4523c79e.stex" ]
 
 [params]
 

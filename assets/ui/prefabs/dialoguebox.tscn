@@ -1,20 +1,21 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
-[ext_resource path="res://assets/sprites/characters/portraits/portrait_mssuwan_neutral.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/portraits/ms suwan/portrait_mssuwan_neutral.png" type="Texture" id=3]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
-[ext_resource path="res://assets/sprites/characters/portraits/portrait_nick_neutral.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/characters/portraits/nick/portrait_nick_neutral.png" type="Texture" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/sprites/characters/portraits/portrait_nour_neutral.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/characters/portraits/nour/portrait_nour_neutral.png" type="Texture" id=8]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=9]
 [ext_resource path="res://assets/scripts/ui/color_manager.gd" type="Script" id=10]
 [ext_resource path="res://assets/sprites/characters/portraits/portrait_placeholder.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/characters/portraits/portrait_rina_neutral.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/characters/portraits/rina/portrait_rina_neutral.png" type="Texture" id=12]
 [ext_resource path="res://addons/SmoothScroll/SmoothScrollContainer.gd" type="Script" id=13]
 [ext_resource path="res://assets/ui/images/downarrow.png" type="Texture" id=14]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe_12.tres" type="DynamicFont" id=15]
+[ext_resource path="res://assets/sprites/characters/portraits/princependragon/portrait_princependragon_smile.png" type="Texture" id=16]
 
 [sub_resource type="Animation" id=3]
 resource_name = "CanProceed"
@@ -195,25 +196,39 @@ margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 10 )
 characterColors = {
-"???": Color( 1, 1, 1, 1 ),
-"brody": Color( 0.462745, 0.6, 0.741176, 1 ),
-"chad": Color( 0.647059, 0.85098, 0.345098, 1 ),
-"clerk": Color( 0.8, 0.403922, 1, 1 ),
-"kannika": Color( 0.380392, 0.670588, 1, 1 ),
-"kid amogus": Color( 1, 0.52549, 0.858824, 1 ),
-"kristy": Color( 1, 0.52549, 0.858824, 1 ),
-"ms suwan": Color( 0.380392, 0.670588, 1, 1 ),
-"ms. suwan": Color( 0.380392, 0.670588, 1, 1 ),
+"brody": Color( 0.678431, 0.792157, 1, 1 ),
+"chad": Color( 0.380392, 1, 0.435294, 1 ),
+"duke delicious": Color( 0.407843, 0.505882, 1, 1 ),
+"earl earligold": Color( 1, 0.85098, 0.478431, 1 ),
+"emperor evercrisp": Color( 0.701961, 0.239216, 1, 1 ),
+"father fuji": Color( 1, 0.843137, 0.45098, 1 ),
+"grand duchess granny": Color( 0.835294, 1, 0.278431, 1 ),
+"kristy": Color( 0.788235, 0.34902, 1, 1 ),
+"manager": Color( 1, 0.407843, 0.407843, 1 ),
+"ms. suwan": Color( 0.38, 0.67, 1, 1 ),
 "nick": Color( 0.88, 0.78, 0.38, 1 ),
 "nour": Color( 0.78, 0.38, 0.38, 1 ),
-"rina": Color( 1, 0.439216, 0.67451, 1 ),
+"prince pendragon": Color( 1, 0.282353, 0.52549, 1 ),
+"princess pink lady": Color( 1, 0.756863, 1, 1 ),
+"rina": Color( 0.980392, 0.654902, 1, 1 ),
 "the party": Color( 1, 1, 1, 1 )
 }
 characterPortraits = {
+"brody": ExtResource( 11 ),
+"chad": ExtResource( 11 ),
+"duke delicious": ExtResource( 11 ),
+"earl earligold": ExtResource( 11 ),
+"emperor evercrisp": ExtResource( 11 ),
+"father fuji": ExtResource( 11 ),
+"grand duchess granny": ExtResource( 11 ),
+"kristy": ExtResource( 11 ),
+"manager": ExtResource( 11 ),
 "ms. suwan": ExtResource( 3 ),
 "nick": ExtResource( 5 ),
 "nour": ExtResource( 8 ),
 "placeholder": ExtResource( 11 ),
+"prince pendragon": ExtResource( 16 ),
+"princess pink lady": ExtResource( 11 ),
 "rina": ExtResource( 12 )
 }
 portraitLibrary = {

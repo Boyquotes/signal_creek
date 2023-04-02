@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portrait_nick_neutral.png-34216e0937f8e886b9b0cf59833a5f12.stex"
+path="res://.import/portrait_mssuwan_neutral.png-fed331b7a399350f8d9d49d15b13dfe1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/portraits/portrait_nick_neutral.png"
-dest_files=[ "res://.import/portrait_nick_neutral.png-34216e0937f8e886b9b0cf59833a5f12.stex" ]
+source_file="res://assets/sprites/characters/portraits/ms suwan/portrait_mssuwan_neutral.png"
+dest_files=[ "res://.import/portrait_mssuwan_neutral.png-fed331b7a399350f8d9d49d15b13dfe1.stex" ]
 
 [params]
 
