@@ -45,6 +45,7 @@ func set_current_color(characterName: String) -> void:
 			Globals.SoundManager.set_typewriter_sound(characterName.to_lower().trim_suffix(":"))
 		
 	else:
+		current_color = Color.white
 		current_portrait = characterPortraits.get("placeholder")
 
 
