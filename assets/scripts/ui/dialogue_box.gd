@@ -404,6 +404,24 @@ func find_current_speaker_position():
 			currentSpeakerNode = Globals.Rina
 		"manager":
 			currentSpeakerNode = Globals.Manager
+		"chad":
+			currentSpeakerNode = Globals.Chad
+		"brody":
+			currentSpeakerNode = Globals.Brody
+		"kristy":
+			currentSpeakerNode = Globals.Kristy
+		"duke delicious":
+			currentSpeakerNode = Globals.DukeDelicious
+		"father fuji":
+			currentSpeakerNode = Globals.FatherFuji
+		"grand duchess granny":
+			currentSpeakerNode = Globals.GrandDuchessGranny
+		"prince pendragon":
+			currentSpeakerNode = Globals.PrincePendragon
+		"emperor evercrisp":
+			currentSpeakerNode = Globals.EmperorEvercrisp
+		"earl earligold":
+			currentSpeakerNode = Globals.EarlEarligold
 		"???":
 			Globals.SpeechBubble.set_visible(false)
 		
