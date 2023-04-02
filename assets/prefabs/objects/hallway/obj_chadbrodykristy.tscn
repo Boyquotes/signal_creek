@@ -41,10 +41,10 @@ shader_param/time = 1.57
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 21.5, 6 )
 
+[sub_resource type="RectangleShape2D" id=27]
+
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 25, 11.25 )
-
-[sub_resource type="RectangleShape2D" id=27]
 
 [node name="ChadBrodyKristy" type="RigidBody2D"]
 mode = 1
@@ -64,7 +64,7 @@ region_rect = Rect2( 43, 13, 17, 29 )
 [node name="BrodySprite" type="Sprite" parent="."]
 light_mask = 4
 material = SubResource( 29 )
-position = Vector2( 2, -7 )
+position = Vector2( 0, -7 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -15 )
 region_enabled = true
@@ -93,24 +93,12 @@ region_rect = Rect2( 3, 4, 58, 39 )
 position = Vector2( 0.5, -6 )
 shape = SubResource( 23 )
 
-[node name="ActiveArea" type="Area2D" parent="."]
-script = ExtResource( 1 )
-__meta__ = {
-"_editor_description_": ""
-}
-_shlorping_target_path = NodePath("../BrodySprite")
-_knot_name = "chadbrodykristy"
-_final_knot_name = "chadbrodykristy3"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -0.25 )
-shape = SubResource( 22 )
-
 [node name="Chad" type="Area2D" parent="."]
 position = Vector2( 20, 0 )
 monitoring = false
 script = ExtResource( 2 )
 _shlorping_target_path = NodePath("../ChadSprite")
+_physical_collider_path = NodePath("../CollisionShape2D")
 _knot_name = "chadbrodykristy"
 _final_knot_name = "chadbrodykristy3"
 _override_set_monitoring = true
@@ -119,12 +107,27 @@ _override_set_monitoring = true
 shape = SubResource( 27 )
 disabled = true
 
+[node name="ActiveArea" type="Area2D" parent="."]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+_shlorping_target_path = NodePath("../BrodySprite")
+_physical_collider_path = NodePath("../CollisionShape2D")
+_knot_name = "chadbrodykristy"
+_final_knot_name = "chadbrodykristy3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
+position = Vector2( 0, -0.25 )
+shape = SubResource( 22 )
+
 [node name="Kristy" type="Area2D" parent="."]
 position = Vector2( -15, 0 )
 monitoring = false
 script = ExtResource( 3 )
 _disable_interactivity = true
 _shlorping_target_path = NodePath("../KristySprite")
+_physical_collider_path = NodePath("../CollisionShape2D")
 _knot_name = "chadbrodykristy"
 _final_knot_name = "chadbrodykristy3"
 _override_set_monitoring = true
