@@ -1,9 +1,11 @@
 == hotwheels ==
-
-{- hotwheels1: -> hotwheels_visited }
-
-    -> hotwheels1
+{
+    - hotwheels1:
+        -> hotwheels_visited
     
+    - else:
+        -> hotwheels1
+}
 == hotwheels1 ==
     
     //Should have an initial interaction in the dream world pointing out how new this looks, with Ms. Suwan vividly remembering being given Mattel cars as a child as gifts from local toy markets. She has a uneasy feeling about these toys and the type of media she was “given” to play rather than chosen by herself. Nick can speak up about how he thinks his friends would think the car is really cool, and they can have a conversation about it.

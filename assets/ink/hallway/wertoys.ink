@@ -1,4 +1,3 @@
-->wertoys2
 == wertoys ==
 
     It's the old toy store, <i>We R Toys</i>.
