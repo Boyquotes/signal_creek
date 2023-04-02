@@ -1,5 +1,7 @@
+class_name ScreenOverlay
 extends Node
-# GameOverlay is for screen-wide shaders (underneath the UI)
+
+# ScreenOverlay is for screen-wide shaders (underneath the UI)
 # Applied to a Panel Node
 # Modifies Panel's materials
 # Affects the appearance of everything behind it in the Scene hierarchy
@@ -24,7 +26,7 @@ var _is_fading_out = false
 var _overlay_material
 
 
-# initialize timer for shifting shader
+
 func _ready():
 	_shake_timer = Timer.new()
 	add_child(_shake_timer)
@@ -48,18 +50,14 @@ func _ready():
 
 
 func _process(_delta):
-#	if _is_shifting:
-#		_overlay_material.set_shader_param("spread", shift_offset * _shift_timer.get_time_left())
 	if _is_fading_in:
 		set_fade(fade_timer_interval - _fade_in_timer.get_time_left())
 		
 	elif _is_fading_out:
 		set_fade(_fade_out_timer.get_time_left())
-
+		
 	if _is_shaking:
 		var randomvector = Vector2(rand_range(-shake_magnitude, shake_magnitude), rand_range(-shake_magnitude, shake_magnitude))
-#		var randomvector2 = Vector2(rand_range(-shake_magnitude, shake_magnitude), rand_range(-shake_magnitude, shake_magnitude))
-#		var randomvector3 = Vector2(rand_range(-shake_magnitude, shake_magnitude), rand_range(-shake_magnitude, shake_magnitude))
 		screen_shake(randomvector, randomvector, randomvector, rand_range(0, 1))
 		shake_magnitude *= 2
 		
@@ -67,58 +65,59 @@ func _process(_delta):
 			shake_magnitude = shake_min_magnitude
 
 
-func set_fade(darkness):
+func set_fade(darkness: float) -> void:
 	self.modulate = Color(darkness, darkness, darkness, 1.0)
 
 
-func screen_shake(rdisp, gdisp, bdisp, _darkness):
-	#_set_shader(shift_shader)
+func screen_shake(rdisp: Vector2, gdisp: Vector2, bdisp: Vector2, _darkness: float) -> void:
 	_overlay_material.set_shader_param("r_displacement", rdisp)
 	_overlay_material.set_shader_param("g_displacement", gdisp)
 	_overlay_material.set_shader_param("b_displacement", bdisp)
-	
-	#_overlay_material.set_shader_param("darkness", darkness)
 
-func set_to_black():
+
+func set_to_black() -> void:
 	self.modulate = Color(0.0, 0.0, 0.0)
 
-func start_fade_in():
+
+func start_fade_in() -> void:
 	_is_fading_in = true
 	_is_shaking = false
-	screen_shake(0.0, 0.0, 0.0, 1.0)
+	screen_shake(Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), 1.0)
 	self.modulate = Color(0.0, 0.0, 0.0)
 	_fade_in_timer.start()
 
 
-func start_fade_out():
+func start_fade_out() -> void:
 	_is_fading_out = true
 	_is_shaking = false
-	screen_shake(0.0, 0.0, 0.0, 1.0)
+	screen_shake(Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), 1.0)
 	self.modulate = Color(1.0, 1.0, 1.0)
 	_fade_out_timer.start()
 
 
-func start_shaking(timed):
+func start_shaking(timed: bool) -> void:
 	_is_shaking = true
+	
 	if timed:
 		_shake_timer.start()
 
-func _fade_in_timer_timeout():
+
+func _fade_in_timer_timeout() -> void:
 	set_fade(1.0)
 	_is_fading_in = false
 
 
-func _fade_out_timer_timeout():
+func _fade_out_timer_timeout() -> void:
 	set_fade(0.0)
 	_is_fading_out = false
 
 
-
-func _shake_timer_timeout():
-	screen_shake(0.0, 0.0, 0.0, 1.0)
+func _shake_timer_timeout() -> void:
+	screen_shake(Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), 1.0)
 	_is_shaking = false
 
-func reload():
+
+func reload() -> void:
 	_shake_timer = Timer.new()
 	add_child(_shake_timer)
 	_shake_timer.wait_time = shake_timer_interval

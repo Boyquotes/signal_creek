@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/sprites/tilesets/tileset_hallway_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
-[ext_resource path="res://assets/shaders/shader_outline.gdshader" type="Shader" id=4]
+[ext_resource path="res://assets/materials/shaders/shader_outline.gdshader" type="Shader" id=4]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_sofaside.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_bobatea.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_mannequins.tscn" type="PackedScene" id=7]
@@ -45,6 +45,7 @@
 [ext_resource path="res://assets/textures/lights/elevatorlight.png" type="Texture" id=44]
 [ext_resource path="res://assets/scripts/environment/tutorial_trigger.gd" type="Script" id=45]
 [ext_resource path="res://assets/textures/lights/glow_64.png" type="Texture" id=46]
+
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 24, 8 )
@@ -100,7 +101,7 @@ tile_data = PoolIntArray( -1769489, 7, 0, -1769488, 7, 0, -1769487, 7, 0, -17694
 position = Vector2( 444, 288 )
 
 [node name="NickOuterButtonPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 509, 276 )
+position = Vector2( 496, 280 )
 
 [node name="NourOutElevatorPos" type="Node2D" parent="PlaneManager"]
 position = Vector2( 472, 304 )
@@ -112,13 +113,14 @@ position = Vector2( 500, 295 )
 position = Vector2( 519, 295 )
 
 [node name="Doortal_TopicSpot" type="Area2D" parent="PlaneManager"]
-position = Vector2( 952, -360 )
+position = Vector2( 953, -371 )
 script = ExtResource( 19 )
 __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
 }
 room_index = 2
-exit_position = Vector2( 232, 256 )
+exit_position = Vector2( 232, 248 )
+entrance_direction = Vector2( 0, -1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal_TopicSpot"]
 shape = SubResource( 2 )
@@ -142,15 +144,15 @@ _knot_name = "first_light"
 shape = SubResource( 22 )
 
 [node name="Doortal_Bandn" type="Area2D" parent="PlaneManager"]
-position = Vector2( 464, 712 )
+position = Vector2( 376, 688 )
 script = ExtResource( 19 )
 __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
 }
-exit_position = Vector2( 232, 256 )
+exit_position = Vector2( 240, 120 )
+entrance_direction = Vector2( 0, -1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal_Bandn"]
-position = Vector2( -88, -24 )
 shape = SubResource( 2 )
 
 [node name="Lights" type="Node2D" parent="PlaneManager"]

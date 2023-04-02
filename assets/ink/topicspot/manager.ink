@@ -30,7 +30,7 @@
         
         NOUR: "And the trees don't look right."
         
-        NOUR: "<i>You</i> don't look right.
+        NOUR: "<i>You</i> don't look right."
         
         MANAGER: "Hey! ;-; That isn't cool."
         

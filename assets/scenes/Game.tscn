@@ -1,14 +1,14 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/scenes/rooms/room_abstract.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/scripts/globals/game_canvas.gd" type="Script" id=2]
+[ext_resource path="res://assets/scripts/globals/game_root.gd" type="Script" id=2]
 [ext_resource path="res://assets/scenes/UserInterface.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/scripts/globals/sound_manager.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/sheet_loadinganimation.png" type="Texture" id=5]
-[ext_resource path="res://assets/shaders/camera_overlay.tres" type="Material" id=9]
-[ext_resource path="res://assets/scripts/globals/game_overlay.gd" type="Script" id=10]
-[ext_resource path="res://assets/shaders/gradient_dream.tres" type="Texture" id=12]
-[ext_resource path="res://assets/scripts/globals/update_controller.gd" type="Script" id=13]
+[ext_resource path="res://assets/materials/camera_overlay.tres" type="Material" id=9]
+[ext_resource path="res://assets/scripts/ui/screen_overlay.gd" type="Script" id=10]
+[ext_resource path="res://assets/materials/gradients/gradient_dream.tres" type="Texture" id=12]
+[ext_resource path="res://assets/scripts/globals/input_driver.gd" type="Script" id=13]
 [ext_resource path="res://assets/sounds/music/Signal_Creek_BN_v1.mp3" type="AudioStream" id=14]
 [ext_resource path="res://assets/sounds/music/LM_SignCreek_Grunge_v1.mp3" type="AudioStream" id=15]
 [ext_resource path="res://assets/sounds/music/Signal_Creek_Cafe_v1.mp3" type="AudioStream" id=16]
@@ -17,9 +17,14 @@
 background_mode = 4
 tonemap_mode = 2
 glow_enabled = true
-glow_levels/2 = true
-glow_bloom = 0.02
+glow_levels/1 = true
+glow_levels/3 = false
+glow_levels/5 = false
+glow_blend_mode = 0
+glow_hdr_threshold = 0.2
+glow_high_quality = true
 adjustment_enabled = true
+adjustment_brightness = 0.8
 adjustment_color_correction = ExtResource( 12 )
 
 [sub_resource type="Shader" id=1]
@@ -98,7 +103,7 @@ gui_disable_input = true
 
 [node name="Room" parent="ViewportContainer/Viewport" instance=ExtResource( 1 )]
 
-[node name="GameOverlay" type="Panel" parent="."]
+[node name="ScreenOverlay" type="Panel" parent="."]
 material = ExtResource( 9 )
 margin_right = 960.0
 margin_bottom = 540.0
@@ -138,7 +143,6 @@ anims/Loading = SubResource( 5 )
 anims/Off = SubResource( 6 )
 
 [node name="SoundManager" type="Node" parent="."]
-process_priority = 1
 script = ExtResource( 4 )
 music_bandn = ExtResource( 14 )
 music_hallway = ExtResource( 16 )

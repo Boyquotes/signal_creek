@@ -1,4 +1,6 @@
+class_name InputDriver
 extends Node
+
 # MAIN DRIVER of the game based on player input
 
 export var _elevator_focus_position : Vector2 = Vector2(344, 168)
@@ -9,19 +11,18 @@ var _can_interact = false
 var _camera_normal_position = null
 var _elevator_tutorial = false
 
+
+
 func _ready():
-	
 	pass
 
 
 func _process(_delta):
 	if Globals.GameState == Globals.GameStates.START:
-		
 		if Input.is_action_just_pressed("interact"):
 			Globals.StartScreen.start_game()
 		
 	elif Globals.GameState == Globals.GameStates.GAME:
-		
 		if Input.is_action_just_pressed("open_menu"):
 			Globals.PauseMenu.toggle_visible()
 			
@@ -29,8 +30,6 @@ func _process(_delta):
 			reset_game()
 		
 		Globals.PartyObject.move_followers_by_pathfind()
-
-		#print(Globals.Suwan.get_global_position())
 		
 		if Globals.GameMode == Globals.GameModes.TALK:
 			if Globals.DialogueBox.is_expanding_background_panel or Globals.DialogueBox.is_shrinking_background_panel:
@@ -56,22 +55,13 @@ func _process(_delta):
 					Globals.DialogueBox.typewriter_effect(true)
 				
 				elif !Globals.DialogueBox.fastforward or Globals.DialogueBox._ink_player.get_HasChoices() or !Globals.DialogueBox._ink_player.get_CanContinue():
-					
-					if !Globals.PartyObject.get_following_done():
-						pass
 						
 					var inkCommand = Globals.DialogueBox.proceed()
 					
 					while inkCommand and "command" in inkCommand:
 						inkCommand = Globals.DialogueBox.proceed()
 					
-	#		if Globals.Elevator && Globals.Elevator.focus_on_elevator == true:
-	#			Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
-				#var followingVector = find_current_speaker_position()
-				#Globals.GameCanvas.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
-				
 		elif Globals.GameMode == Globals.GameModes.WALK:
-			
 			if !Globals.DevTools.typing_knot_name:
 				check_input_character_movement()
 			
@@ -85,7 +75,7 @@ func _process(_delta):
 						_closest_object.call_deferred("_check_if_can_interact")
 						
 			_camera_normal_position = Globals.PartyObject.get_leader().get_global_position()
-			Globals.GameCanvas.set_camera_following_vector(_camera_normal_position)
+			Globals.GameRoot.set_camera_following_vector(_camera_normal_position)
 				
 			if _can_interact:
 				if Input.is_action_just_pressed("interact"):
@@ -97,8 +87,9 @@ func _process(_delta):
 						Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
 						Globals.DialogueBox.background_panel_node.set_visible(true)
 				
-			if Globals.Elevator && Globals.Elevator.focus_on_elevator == true:
-				Globals.GameCanvas.set_camera_following_vector(_elevator_focus_position)
+			if Globals.Elevator && Globals.Elevator.focus_camera_on_elevator == true:
+				Globals.GameRoot.set_camera_following_vector(_elevator_focus_position)
+
 
 func check_input_character_movement():
 	var directionVector = Vector2(0,0)
@@ -117,25 +108,29 @@ func check_input_character_movement():
 		
 	Globals.PartyObject.move_leader_by_vector(directionVector)
 
-func reset_game():
-	#Reset overworld tree and dialoguebox
-	Globals.GameCanvas.reload()
+
+#Reset overworld tree and dialoguebox
+func reset_game() -> void:
+	Globals.GameRoot.reload()
 	Globals.DialogueBox.reset_story()
 	Globals.GameState = Globals.GameStates.START
 	Globals.StartScreen.set_visible(true)
-#	Globals.DialogueBox.get_tree().reload_current_scene()
-	print("GAME RESET")
+	
+	if Globals.GameRoot.testing_enabled:
+		print("GAME RESET")
 
 
-func set_closest_object(objectName):
+# Closest Interactive object available for interaction
+func set_closest_object(objectName: Interactive) -> void:
 	_closest_object = objectName
 
 
-func set_can_interact(condition):
+# Whether player can interact with objects
+func set_can_interact(condition: bool) -> void:
 	_can_interact = condition
 
 
-func _on_StartButton_pressed():
+func _on_StartButton_pressed() -> void:
 	Globals.StartScreen.set_visible(false)
 	Globals.GameState = Globals.GameStates.GAME
 	Globals.SoundManager.set_mute_audio(false)

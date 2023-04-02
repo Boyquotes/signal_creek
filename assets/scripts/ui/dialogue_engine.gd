@@ -1,4 +1,6 @@
+# AUTOLOAD DialogueEngine
 extends Node
+
 # Functions to create DialogueBox entry prefabs
 # Autoload with Globals and RoomEngine
 
@@ -7,9 +9,9 @@ func _ready():
 	pass
 
 
-# use newText to make a new NORMAL entryAsset
-# return newly created entryAsset
-func create_entry(newText, entryAsset, entryParagraph):
+
+# Use newText to make a new NORMAL entryAsset
+func create_entry(newText: String, entryAsset: PackedScene, entryParagraph: PackedScene) -> DialogueBoxEntry:
 	var newEntry = entryAsset.instance()
 	
 	var newParagraph = entryParagraph.instance()
@@ -20,8 +22,7 @@ func create_entry(newText, entryAsset, entryParagraph):
 
 
 # use newText to make an entryParagraph and put it in a new DIALOGUE entryAsset
-# return newly created entryAsset
-func create_entry_dialogue(newText, entryAsset, entryParagraph):
+func create_entry_dialogue(newText: String, entryAsset: PackedScene, entryParagraph: PackedScene) -> DialogueBoxEntry:
 	var newEntry = entryAsset.instance()
 	var dialogueLine = newText.split(":", false)
 	var newDialogue = dialogueLine[1].strip_escapes().trim_prefix(' ')
@@ -41,8 +42,7 @@ func create_entry_dialogue(newText, entryAsset, entryParagraph):
 
 # Use newChoices and currentSpeaker to create a CHOICE entryAsset
 # Create all the choiceAssets it needs
-# Return newly created entryAsset
-func create_entry_choices(newChoices, currentSpeaker, entryAsset, choiceAsset):
+func create_entry_choices(newChoices: Array, currentSpeaker: String, entryAsset: PackedScene, choiceAsset: PackedScene) -> DialogueBoxEntry:
 	var newEntry = entryAsset.instance()
 	newEntry.remove_placeholders()
 	

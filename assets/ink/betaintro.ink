@@ -5,29 +5,32 @@
     
     NICK: “QUICK, IN HERE! There's no way she'll find us here!"
     
-    &POS_SUWAN_160,248
+    &SPEED_NICK_120.0
+    &SPEED_NOUR_100.0
     &FOLLOW_NICK_NickElevatorPos
+    &FOLLOW_SUWAN_SuwanStartingPos
+    &POS_SUWAN_160,248
     &FOLLOW_NOUR_NourStartingPos
     
-    &FOLLOW_SUWAN_SuwanStartingPos
-    
     &PAUSE_0.5
+    
+    &EMOTE_NICK_DownIdle
     
     NICK: "If we hide here, she'll give up chasing us down—”
     
-    
-    
-    &EMOTE_NICK_DownIdle
     &FOLLOW_NOUR_NourElevatorPos
     &EMOTE_NICK_LeftIdle
     
-    &PAUSE_0.5
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_RightIdle
     
     NOUR: “In the BROKEN ELEVATOR?”
     
     &SOUND_InquisitiveSound
-   
-    &EMOTE_NOUR_RightIdle
+
+    &SPEED_NICK_72.0
+    &SPEED_NOUR_72.0
     
     // &PORTRAIT_nour_placeholder
     
@@ -46,7 +49,6 @@
     
             NICK: "And I'm NOT stupid—"
             
-            &FOLLOW_SUWAN_NOUR
             
         * [Urge him to stay quiet]
             NOUR: "Shhh! Shut up!"
@@ -55,22 +57,30 @@
     
             NOUR: "If you make so much noise, she's going to notice us—"
             
-            &FOLLOW_SUWAN_NOUR
+            
     
     //MS SUWAN ENTERS THE ELEVATOR
     //HER SPRITE IS BLACK
     
     - ???: "Stop right there."
     
+    &FOLLOW_SUWAN_SuwanElevatorPos
+    
     &EMOTE_NOUR_DownIdle
+    
+    // &VOLUME_-120.0
     
     &EMOTE_NICK_LookAround
     
-    &PAUSE_0.5
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_DownIdle
+    
+    &EMOTE_NOUR_RightIdle
     
     NICK: "Aw, shoot! The scary old lady caught up!"
     
-    &EMOTE_NICK_DownIdle
+
     
     ???: "What did you just call me—"
     
@@ -109,8 +119,6 @@
     
     MS. SUWAN: "Save your excuses. I'm going to report you both to the authorities this instance—"
     
-    &EMOTE_SUWAN_DownIdle
-    
     &EMOTE_NICK_ButtonPress
     
     ELEVATOR BUTTONS BEEP BOOP SFX
@@ -121,13 +129,17 @@
     
     MS. SUWAN: "She's right. This elevator is broken. It's not going anywhere—"
     
-    &FOLLOW_SUWAN_SuwanBackup
-    
     &ELEVATOR_CLOSE
     
     ELEVATOR DOOR CLOSES. WHIRRING AND BEEPING...PORTAL IS ACTIVATED
     
     &SHAKE
+    
+    &FOLLOW_SUWAN_SuwanBackup
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_DownIdle
     
     NOUR: "What the—WHAT ARE YOU DOING?!"
     
@@ -137,11 +149,11 @@
     
     &EMOTE_NOUR_LookAround
     
+    &PAUSE_1.0
+    
     NOUR: "WITH the person we're running from?!"
     
     &EMOTE_NICK_LookAround
-    
-    &FOLLOW_SUWAN_NOUR
     
     MS. SUWAN: "Quiet down, you punk kids! This elevator shouldn't be working at all—"
     
@@ -151,9 +163,11 @@
     
     &BLACK
     
-    &FOLLOW_NICK_NOUR
-    
     NOUR: "I don't know but BRACE YOURSELVES—!"
+    
+    // &FOLLOW_NICK_NOUR
+    
+    // &FOLLOW_SUWAN_NICK
     
     &FOLLOW_NOUR_stop
     

@@ -1,6 +1,29 @@
-== partyposter ==
+    == partyposter ==
 
     Nick dashes up to the wall.
+    
+    {
+        - partyposter2:
+            -> partypostervisited
+        - else:
+            -> partyposter1
+
+    }
+    
+    == partypostervisited ==
+    
+    NICK: "Party hasn't happened yet, we could still go..."
+    
+    NOUR: "No, Nick."
+    
+    MS. SUWAN: "No, Nick."
+    
+    'NO, NICK is now displayed in fun bubbly font on the poster!'
+    
+    -> END
+    
+    
+    == partyposter1 ==
     
     NICK: "Oh, wow. Are these posters for a party or something? Whoa, free food and drinks...! Hey, we should all go together!"
     
@@ -16,14 +39,16 @@
     
     NICK: "I'm just saying! It could be fun! I mean, you can never go wrong with free pizza and soda."
     
-    MS. SUWAN: "You have no idea what could be in the food here. We can't rule out shared drug hallucinations just yet. Besides, I would rather not socialize with the other people in this mall unless they intend to help us leave."
+    MS. SUWAN: "You have no idea what could be in the food here. We can't rule out shared drug hallucinations just yet. Besides, I would rather not socialize with others in the mall unless they can help us leave."
     
     NOUR: "Hold on, there's something weird about this thing..."
     
-    * [ Take a closer look. ] -> partyposter2
-    * [ Leave the poster alone. ] -> partyposterend
+    + [ Take a closer look. ] -> partyposter2
+    + [ Leave the poster alone. ] -> partyposterend 
     
+
     == partyposter2 ==
+    
     
     Underneath the basic date, time, and location of the party, there are more words written in fun bubbly font. Oddly, they seem to ripple and change before Nour's eyes...
     
@@ -45,10 +70,10 @@
     
     NICK: "You gotta be kidding me. This mall is rated PG?!"
 
-    + -> END
+    -> END
     
     == partyposterend ==
     
-    NOUR: "Doubt there's anything useful on this, anyway."
+    NOUR: "There's probably nothing useful on it, anyway."
     
     -> END
