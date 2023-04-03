@@ -64,7 +64,7 @@
     //MS SUWAN ENTERS THE ELEVATOR
     //HER SPRITE IS BLACK
     
-    - ???: "Stop right there."
+    - MS. SUWAN: "Stop right there."
     
     &FOLLOW_SUWAN_SuwanElevatorPos
     
@@ -82,7 +82,7 @@
     
     NICK: "Aw, shoot! The scary old lady caught up!"
     
-    ???: "What did you just call me—"
+    MS. SUWAN: "What did you just call me—"
     
     &EMOTE_NOUR_RightIdle
     
@@ -92,11 +92,11 @@
     
     &EMOTE_NOUR_DownIdle
     
-    ???: "You're both trespassing. That could-"
+    MS. SUWAN: "You're both trespassing. That could-"
     
-    ???: "Wait."
+    MS. SUWAN: "Wait."
     
-    ???: "Nour?!"
+    MS. SUWAN: "Nour?!"
     
     NOUR: "Uhh... Hi, Ms. Suwan."
     
@@ -133,7 +133,7 @@
     
     NICK: "C'mon, c'mon, c'mon!"
     
-    NOUR: "Seriously, Nick?! Pushing those aren't going to work!"
+    NOUR: "Seriously, Nick?! Pushing those isn't going to work!"
     
     MS. SUWAN: "She's right. This elevator is broken. It's not going anywhere—"
     
