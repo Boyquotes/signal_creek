@@ -6,17 +6,20 @@ export (NodePath) var _physical_collider_path : NodePath
 export var _knot_name := "Abstract"
 export var _final_knot_name := "Abstract"
 export var _override_set_monitoring : bool
+export var visibility := true
 
 var _shlorping_in = false
 var _shlorping_out = false
-
+var _physical_collider
 
 onready var _shlorping_target : Sprite = get_node(_shlorping_target_path)
-onready var _physical_collider : CollisionShape2D = get_node(_physical_collider_path)
+
 
 
 
 func _ready():
+	if _physical_collider_path:
+		_physical_collider = get_node(_physical_collider_path)
 	set_monitoring_ready()
 
 
@@ -41,15 +44,21 @@ func set_monitoring_ready():
 	if Globals.DialogueBox._ink_player.VisitCountAtPathString(_final_knot_name) > 0:
 		self.set_monitoring(false)
 		_shlorping_target.set_visible(false)
-		_physical_collider.set_deferred("disabled", true)
+		
+		if _physical_collider:
+			_physical_collider.set_deferred("disabled", true)
 		return
 	
 	if not _override_set_monitoring:
 		self.set_monitoring(true)
-		_physical_collider.set_deferred("disabled", false)
+		
+		if _physical_collider:
+			_physical_collider.set_deferred("disabled", false)
 	
-	_shlorping_target.set_visible(true)
-	_physical_collider.set_deferred("disabled", false)
+	_shlorping_target.set_visible(visibility)
+	
+	if _physical_collider:
+		_physical_collider.set_deferred("disabled", false)
 
 
 # Appear from the void (visually)
@@ -57,6 +66,7 @@ func shlorp_in():
 	_shlorping_target.set_visible(true)
 	_shlorping_target.material.set_shader_param("time", 0.0)
 	_shlorping_in = true
+	visibility = true
 	if not _override_set_monitoring:
 		self.set_monitoring(false)
 
@@ -66,6 +76,7 @@ func shlorp_out() -> void:
 	print(_shlorping_target)
 	print("shlorping out")
 	_shlorping_out = true
+	visibility = false
 
 
 func shlorp():
@@ -77,7 +88,9 @@ func shlorp():
 			_shlorping_target.set_visible(false)
 			_shlorping_out = false
 			_shlorping_target.material.set_shader_param("time", 0)
-			_physical_collider.set_deferred("disabled", true)
+			
+			if _physical_collider:
+				_physical_collider.set_deferred("disabled", true)
 			
 			return
 			
@@ -86,7 +99,9 @@ func shlorp():
 		if timeValue > 1.56:
 			_shlorping_in = false
 			_shlorping_target.material.set_shader_param("time", 1.57)
-			_physical_collider.set_deferred("disabled", false)
+			
+			if _physical_collider:
+				_physical_collider.set_deferred("disabled", false)
 			
 			return
 

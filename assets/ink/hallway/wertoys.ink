@@ -38,9 +38,9 @@
     
     NOUR: "What the... Hello?"
     
-    ???: "Down here."
+    &SHLORP_APPLE_PrincePendragon_in
     
-    (PRINCE PENDRAGON APPLE EMERGES FROM THE DARKNESS)
+    ???: "Down here."
     
     PRINCE PENDRAGON: "I am the fallen Prince... Prince Pendragon."
     
@@ -164,7 +164,7 @@
     
     PRINCE PENDRAGON: "I must return to space! Perhaps... it is <i>I</i> who will bring peace to the fruits!"
     
-    PRINCE PENDRAGON SHLORPS OUT
+    &SHLORP_APPLE_PrincePendragon_out
     
     NICK: "..."
     
