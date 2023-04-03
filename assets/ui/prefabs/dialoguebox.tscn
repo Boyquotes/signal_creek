@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/sprites/characters/portraits/nick/portrait_nick_neutral.png" type="Texture" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/sprites/characters/portraits/nour/nour_neutral.tres" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/characters/portraits/nour/portrait_nourneutral.tres" type="Texture" id=8]
 [ext_resource path="res://assets/ui/themes/theme_dialogueBox.tres" type="Theme" id=9]
 [ext_resource path="res://assets/scripts/ui/color_manager.gd" type="Script" id=10]
 [ext_resource path="res://assets/sprites/characters/portraits/portrait_placeholder.png" type="Texture" id=11]
@@ -230,11 +230,4 @@ characterPortraits = {
 "prince pendragon": ExtResource( 16 ),
 "princess pink lady": ExtResource( 11 ),
 "rina": ExtResource( 12 )
-}
-portraitLibrary = {
-"ms. suwan_neutral": ExtResource( 3 ),
-"nick_netural": ExtResource( 5 ),
-"nour_neutral": ExtResource( 8 ),
-"placeholder": ExtResource( 11 ),
-"rina_netural": ExtResource( 12 )
 }

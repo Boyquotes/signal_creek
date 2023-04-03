@@ -25,6 +25,8 @@
     
     &EMOTE_NOUR_RightIdle
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: “In the BROKEN ELEVATOR?”
     
     &SOUND_InquisitiveSound
@@ -32,10 +34,13 @@
     &SPEED_NICK_72.0
     &SPEED_NOUR_72.0
     
+    &PORTRAIT_nour_nournervous
+    
     // &PORTRAIT_nour_placeholder
     
     NICK: "Uh..."
         * [Try to escape]
+            
             NOUR: "We need to get out of here!"
     
             NICK: "No way! She'll never catch us here—"
@@ -43,6 +48,7 @@
             &FOLLOW_SUWAN_NOUR
             
         * [Give him a piece of your mind]
+            
             NOUR: "God. This is what I get for listening to a stupid kid!"
     
             NICK: "Hey! You listening to me is technically YOUR FAULT AND NOT MINE! I didn't force you to follow me in here."
@@ -51,6 +57,7 @@
             
             
         * [Urge him to stay quiet]
+            
             NOUR: "Shhh! Shut up!"
     
             NICK: "NO! <i>YOU</i> SHUT UP!"
@@ -80,11 +87,11 @@
     
     NICK: "Aw, shoot! The scary old lady caught up!"
     
-
-    
     ???: "What did you just call me—"
     
     &EMOTE_NOUR_RightIdle
+    
+    &PORTRAIT_nour_nourannoyed
     
     NOUR: "Stop talking!"
     
@@ -111,6 +118,8 @@
     
     ???: "Whatever you kids are doing, it's illegal. You can't be here."
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: "I don't know about him, but I'll be out as fast as possible!" 
     
     NOUR: "I'm only here to take photos. I study journalism, so I wanted to capture this abandoned mall's last moments—"
@@ -124,6 +133,8 @@
     ELEVATOR BUTTONS BEEP BOOP SFX
     
     NICK: "C'mon, c'mon, c'mon!"
+    
+    &PORTRAIT_nour_nourannoyed
     
     NOUR: "Really? Pushing those aren't going to work!"
     
@@ -140,6 +151,8 @@
     &PAUSE_1.0
     
     &EMOTE_SUWAN_DownIdle
+    
+    &PORTRAIT_nour_nournervous
     
     NOUR: "What the—WHAT ARE YOU DOING?!"
     
@@ -179,6 +192,7 @@
     
     &ELEVATOR_OPEN
     
+    &PORTRAIT_nour_nourneutral
     
     -> END
 
@@ -187,6 +201,9 @@
 //location: Past Level - Hallway
 
 == betaintro_hallway ==
+
+    &PORTRAIT_nour_nourannoyed
+    
     NOUR: "Ugh...I feel sick."
     
     &EMOTE_NICK_LookAround

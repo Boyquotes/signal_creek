@@ -43,9 +43,12 @@ export var characterPortraits : Dictionary = {
 	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png")
 }
 
-export var portraitLibrary : Dictionary = {
-	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
-}
+
+# get all character name folders
+# get all tres files in folders
+# get names of each tres file without the extension
+# add names to dictionary as keys; add files as values
+export var portraitLibrary : Dictionary = {}
 
 var current_color = "the party"
 var current_portrait = "nour"
@@ -53,7 +56,61 @@ var current_portrait = "nour"
 
 
 func _ready():
-	pass
+	var portraitDirContents = get_dir_contents("res://assets/sprites/characters/portraits/", "tres")
+	var portraitKeys = []
+	# CONVERT LIST OF FILE PATHS TO KEYS
+	for filePath in portraitDirContents:
+		var splitFilePath = filePath.split("/")
+		var keyName = splitFilePath[splitFilePath.size() - 1].trim_prefix("portrait_").trim_suffix(".tres")
+		portraitKeys.push_back(keyName)
+	
+	var i = 0
+	for key in portraitKeys:
+		portraitLibrary[portraitKeys[i]] = load(portraitDirContents[i])
+		i += 1
+
+
+func get_dir_contents(rootPath: String, fileExtensionToAdd: String) -> Array:
+	var files = []
+	var directories = []
+	var dir = Directory.new()
+
+	if dir.open(rootPath) == OK:
+		var dirList = dir.list_dir_begin(false, false)
+		_add_dir_contents(dir, files, directories, fileExtensionToAdd)
+	else:
+		push_error("An error occurred when trying to access the path.")
+
+	if fileExtensionToAdd == "directories":
+		return directories
+	
+	return files
+
+
+func _add_dir_contents(dir: Directory, files: Array, directories: Array, fileExtensionToAdd: String):
+	var file_name = dir.get_next()
+
+	while (file_name != ""):
+		var path = dir.get_current_dir() + "/" + file_name
+
+		if dir.current_is_dir():
+#			print("Found directory: %s" % path)
+			var subDir = Directory.new()
+			subDir.open(path)
+			subDir.list_dir_begin(true, false)
+			
+			if fileExtensionToAdd == "folders":
+				directories.append(path)
+				
+			_add_dir_contents(subDir, files, directories, fileExtensionToAdd)
+		else:
+#			print("Found file: %s" % path)
+			if path.split(".").size() > 0 and fileExtensionToAdd in path.split(".")[1]:
+				files.append(path)
+
+		file_name = dir.get_next()
+
+	dir.list_dir_end()
 
 
 # asks for string, sets current_color from dictionary
@@ -84,3 +141,4 @@ func get_current_portrait() -> Texture:
 func set_character_portrait(characterName: String, expressionName: String) -> void:
 	var portraitToUse = portraitLibrary.get(expressionName)
 	characterPortraits[characterName] = portraitToUse
+

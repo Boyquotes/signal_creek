@@ -49,6 +49,7 @@ func create_entry_choices(newChoices: Array, currentSpeaker: String, entryAsset:
 	Globals.ColorManager.set_current_color(currentSpeaker)
 	
 	newEntry.set_nametag(currentSpeaker, Globals.ColorManager.get_current_color())
+	newEntry.set_portrait(Globals.ColorManager.get_current_portrait())
 	
 	for option in newChoices: #iterate through choices, add nodes as children
 		var newDivert = choiceAsset.instance()
