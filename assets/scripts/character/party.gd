@@ -1,30 +1,25 @@
+class_name PartyManager
 extends YSort
+
 # Derived from original script by Jaden @cep450 !!!
 
-# Party Manager Script
-# Stores all 3 character objects
-# Determines which character is the "leader" (being controlled)
-# The other 2 follow
+# Party Manager Script: parent of 3 CharacterNavigator objects
+# Determines which character is the "leader" (being controlled by the player), the other two follow
 # LEADER IS ALWAYS NOUR; leader switching is not used currently
 
 
-export var dream_character_sheet : Texture
-export var real_character_sheet : Texture
-export(Array, Texture) var dream_portraits = []
-export(Array, Texture) var real_portraits = []
 export(Array, Texture) var dream_character_sheets = []
 export(Array, Texture) var real_character_sheets = []
 
 var force_nour_movement = false
-
 var partyMembers = [
-	Globals.Characters.NICK,
 	Globals.Characters.NOUR,
+	Globals.Characters.NICK,
 	Globals.Characters.SUWAN
 ]
 
 # Keeps track of current leader
-var leaderIndex = 1 setget update_leader_to
+var leaderIndex = 0 setget update_leader_to
 
 onready var characterObjects = [
 	self.get_child(0),
@@ -35,8 +30,8 @@ onready var characterObjects = [
 
 
 func _ready():
-	Globals.Nick = characterObjects[0]
-	Globals.Nour = characterObjects[1]
+	Globals.Nour = characterObjects[0]
+	Globals.Nick = characterObjects[1]
 	Globals.Suwan = characterObjects[2]
 	
 	Globals.Nick.following_node = Globals.Nour
@@ -44,112 +39,73 @@ func _ready():
 
 
 # Control leader movement; others follow
-func move_leader_by_vector(directionVector):
+func move_leader_by_vector(directionVector: Vector2) -> void:
 	characterObjects[leaderIndex].move_character_by_vector(directionVector)
-	
-	#move_followers_by_pathfind()
 
 
 # move following party members toward the node they are following
-func move_followers_by_pathfind():
+func move_followers_by_pathfind() -> void:
 	var follower1 = characterObjects[wrapi(leaderIndex + 1, 0,3)]
 	var follower2 = characterObjects[wrapi(leaderIndex - 1, 0,3)]
 	
-	if Globals.GameMode == Globals.GameModes.WALK:
-		Globals.Nick.pathfind_to(Globals.Nour)
-		Globals.Suwan.pathfind_to(Globals.Nick)
-	
-	else:
-		follower1.pathfind_to(follower1.following_node)
-		follower2.pathfind_to(follower2.following_node)
+	follower1.pathfind_to(follower1.following_node)
+	follower2.pathfind_to(follower2.following_node)
 
 
-func force_move_leader():
+# Make leader move to position, regardless of player input
+func force_move_leader() -> void:
 	characterObjects[leaderIndex].pathfind_to(characterObjects[leaderIndex].following_node)
 
 
-# Change CornerPortrait in the ui
-func change_portrait(_sprite):
-	# IN CASE OF LEADER SWITCHING
-	#Globals.CornerPortrait.set_character(sprite, get_leader_inkname())
-	
-	# TODO: if we have a Real World Moment
-	# change this so that it updates the Name - Sprite mapping for each character portrait
-	pass
-
-
-func change_assets_world(currentPlane):
+# Change sprite assets to match dream or real world
+func change_assets_world(currentPlane) -> void:
 	if currentPlane == Globals.Worlds.DREAM:
-		change_party_sprites(dream_character_sheets)
+		change_party_sprites(false)
 		
 	else:
-		change_party_sprites(real_character_sheet)
+		change_party_sprites(true)
 		
 	# IN CASE OF LEADER SWITCHING
 	update_leader_to(leaderIndex)
 
 
-func change_party_sprites(sheets):
-	
-	var i = 0
+# Used in plane-shifting; update character's walking sprite sheet
+func change_party_sprites(isInRealWorld: bool) -> void:
+	if isInRealWorld:
+		return# Once we use the shifting mechanic again, this will become relevant.
+		
+	# In the dream world
 	for character in characterObjects:
-		# will be an array index when they are animated
-		character.set_sprite(sheets[i])
-		i += 1
+		character.set_sprite(character.walking_spritesheet)
 
 
-func get_character_objects():
+# Return array of children of self
+func get_character_objects() -> Array:
 	return self.characterObjects
 	
 
 # BELOW: IN CASE OF LEADER SWITCHING
 
 # Update leader based on index
-func change_leader():
+func change_leader() -> void:
 	leaderIndex = wrapi(leaderIndex + 1, 0,3)
 	update_leader_to(leaderIndex)
 
 
 # called automatically whenever leaderIndex is changed, thanks to setget.
 # changes the index variable, updates UI, any other logic anywhere else using signals.
-func update_leader_to(newIndex):
+func update_leader_to(newIndex: int) -> void:
 	leaderIndex = newIndex
 	Globals.PartyCamera.camera_following = characterObjects[leaderIndex]
-	Globals.ColorManager.set_current_color(characterObjects[leaderIndex].inkname)
-	
-	if Globals.CurrentWorld == Globals.Worlds.DREAM:
-		change_portrait(dream_portraits[leaderIndex])
-		
-	else:
-		change_portrait(real_portraits[leaderIndex])
+	Globals.ColorManager.set_current_color(characterObjects[leaderIndex].get_name())
 
 
-func get_leader():
+# Return currently controlled character in the party
+func get_leader() -> Node2D:
 	return characterObjects[leaderIndex]
 
 
-func get_leader_inkname():
-	return get_leader().inkname
-
-
-func get_leader_index():
+# Return the index of the currently controlled character in the party array
+func get_leader_index() -> int:
 	return leaderIndex
 
-
-# see if all characters have reached their desired destination
-# TODO: make this work; fr now it does nothing to suwan bc she breaks the beginning of the game.
-func get_following_done():
-	for character in characterObjects:
-		if !character.done_following:
-#			print(character.inkname + " not done following")
-			if character.inkname == "NOUR" and force_nour_movement:
-				return false
-				
-			elif character.inkname == "NICK": #Ms suwan fucks up the beginning idk why
-				return false
-			
-		else:
-#			print(character.inkname + " done following")
-			pass
-			
-	return true

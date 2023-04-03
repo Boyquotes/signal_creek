@@ -1,46 +1,144 @@
+class_name ColorManager
 extends Control
+
 # Color Manager stores character names and their corresponding colors
+# Also stores portraits
 
 export var characterColors : Dictionary = {
 	"the party": Color(1, 1, 1),
 	"nour": Color(.78, .38, .38),
 	"nick": Color(.88, .78, .38),
-	"ms suwan": Color(.38, .67, 1)
+	"ms. suwan": Color(.38, .67, 1),
+	"rina": Color(1, 1, 1),
+	"chad": Color(1, 1, 1),
+	"brody": Color(1, 1, 1),
+	"kristy": Color(1, 1, 1),
+	"manager": Color(1, 1, 1),
+	"duke delicious": Color(1, 1, 1),
+	"father fuji": Color(1, 1, 1),
+	"grand duchess granny": Color(1, 1, 1),
+	"princess pink lady": Color(1, 1, 1),
+	"prince pendragon": Color(1, 1, 1),
+	"emperor evercrisp": Color(1, 1, 1),
+	"earl earligold": Color(1, 1, 1),
+	
 }
 
 export var characterPortraits : Dictionary = {
 	"nour": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"nick": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"ms. suwan": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"rina": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"chad": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"brody": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"kristy": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"manager": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"duke delicious": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"father fuji": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"grand duchess granny": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"princess pink lady": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"prince pendragon": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"emperor evercrisp": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"earl earligold": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png")
 }
+
+
+# get all character name folders
+# get all tres files in folders
+# get names of each tres file without the extension
+# add names to dictionary as keys; add files as values
+export var portraitLibrary : Dictionary = {}
 
 var current_color = "the party"
 var current_portrait = "nour"
 
 
+
 func _ready():
-	set_current_color("nick")
+	var portraitDirContents = get_dir_contents("res://assets/sprites/characters/portraits/", "tres")
+	var portraitKeys = []
+	# CONVERT LIST OF FILE PATHS TO KEYS
+	for filePath in portraitDirContents:
+		var splitFilePath = filePath.split("/")
+		var keyName = splitFilePath[splitFilePath.size() - 1].trim_prefix("portrait_").trim_suffix(".tres")
+		portraitKeys.push_back(keyName)
+	
+	var i = 0
+	for key in portraitKeys:
+		portraitLibrary[portraitKeys[i]] = load(portraitDirContents[i])
+		i += 1
+
+
+func get_dir_contents(rootPath: String, fileExtensionToAdd: String) -> Array:
+	var files = []
+	var directories = []
+	var dir = Directory.new()
+
+	if dir.open(rootPath) == OK:
+		var dirList = dir.list_dir_begin(false, false)
+		_add_dir_contents(dir, files, directories, fileExtensionToAdd)
+	else:
+		push_error("An error occurred when trying to access the path.")
+
+	if fileExtensionToAdd == "directories":
+		return directories
+	
+	return files
+
+
+func _add_dir_contents(dir: Directory, files: Array, directories: Array, fileExtensionToAdd: String):
+	var file_name = dir.get_next()
+
+	while (file_name != ""):
+		var path = dir.get_current_dir() + "/" + file_name
+
+		if dir.current_is_dir():
+#			print("Found directory: %s" % path)
+			var subDir = Directory.new()
+			subDir.open(path)
+			subDir.list_dir_begin(true, false)
+			
+			if fileExtensionToAdd == "folders":
+				directories.append(path)
+				
+			_add_dir_contents(subDir, files, directories, fileExtensionToAdd)
+		else:
+#			print("Found file: %s" % path)
+			if path.split(".").size() > 0 and fileExtensionToAdd in path.split(".")[1]:
+				files.append(path)
+
+		file_name = dir.get_next()
+
+	dir.list_dir_end()
 
 
 # asks for string, sets current_color from dictionary
-func set_current_color(characterName):
+func set_current_color(characterName: String) -> void:
 	current_color = characterColors.get(characterName.to_lower().trim_suffix(":"))
 	if characterPortraits.get(characterName.to_lower().trim_suffix(":")):
 		current_portrait = characterPortraits.get(characterName.to_lower().trim_suffix(":"))
-	
+		
+		if Globals.SoundManager:
+			Globals.SoundManager.set_typewriter_sound(characterName.to_lower().trim_suffix(":"))
+		
 	else:
-		if characterName == "???":
-			current_portrait = characterPortraits.get("ms. suwan")
-			
-		else:
-			current_portrait = characterPortraits.get("placeholder")
+		current_color = Color.white
+		current_portrait = characterPortraits.get("placeholder")
 
 
-# returns a color code
-func get_current_color():
+# Get color currently being used for new dialogue entries
+func get_current_color() -> Color:
 	return current_color
 
 
-func get_current_portrait():
+# Get portrait currently being used for new dialogue entries
+func get_current_portrait() -> Texture:
 	return current_portrait
+
+
+# Set expression portrait that is assigned to a character
+func set_character_portrait(characterName: String, expressionName: String) -> void:
+	var portraitToUse = portraitLibrary.get(expressionName)
+	characterPortraits[characterName] = portraitToUse
+

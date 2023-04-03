@@ -1,77 +1,79 @@
-== partyposter ==
+    == partyposter ==
 
+    Nick dashes up to the wall.
+    
     {
-        - currentWorld == "dream" && partyposter_real:
-            -> partyposter_realvisited
-            
-        - currentWorld == "dream":
-            -> partyposter_dream
-            
-        - currentWorld == "real" && partyposter_dream:
-            -> partyposter_dreamvisited
-        
+        - partyposter2:
+            -> partypostervisited
         - else:
-            -> partyposter_real
+            -> partyposter1
+
     }
-//---------------- DREAM WORLD ----------------
-
-== partyposter_dream ==
-
-    NICK: Oh, wow. Are these posters for a party or something? Whoa, free food and drinks...! Hey, we should all go together!
     
-    NOUR: Ah, I'm not much of a party person...
+    == partypostervisited ==
     
-    NICK: Huh? Why not?
+    NICK: "Party hasn't happened yet, we could still go..."
     
-    NOUR: Just not my thing. I went to a couple in college, and you know, been to one, been to 'em all.
+    NOUR: "No, Nick."
     
-    NICK: Oh... I've always had fun in the parties that my school throws. I mean, free pizza and soda, right? Ms. Suwan, what about you? Were you a big partier?
+    MS. SUWAN: "No, Nick."
     
-    MS SUWAN: Not particularly.
-    
-    +   { phonecases_dream } -> phoneconvo
-    
-    + -> END
-
-
-== partyposter_realvisited ==
-
-    NICK: Back to the party again... you still think we can go?
+    'NO, NICK is now displayed in fun bubbly font on the poster!'
     
     -> END
+    
+    
+    == partyposter1 ==
+    
+    NICK: "Oh, wow. Are these posters for a party or something? Whoa, free food and drinks...! Hey, we should all go together!"
+    
+    MS. SUWAN: "I think going to a party should be the last of our priorities right now. I'd rather spend as little time here as possible."
+    
+    NICK: "Well... okay, yeah, you're right, but --"
+    
+    NOUR: "No, yeah, Nick's right. We should totally go to this definitely normal party happening in this totally super normal mall."
+    
+    NICK: "That... was sarcasm... right..."
+    
+    NOUR: "Just a little."
+    
+    NICK: "I'm just saying! It could be fun! I mean, you can never go wrong with free pizza and soda."
+    
+    MS. SUWAN: "You have no idea what could be in the food here. We can't rule out shared drug hallucinations just yet. Besides, I would rather not socialize with others in the mall unless they can help us leave."
+    
+    NOUR: "Hold on, there's something weird about this thing..."
+    
+    + [ Take a closer look. ] -> partyposter2
+    + [ Leave the poster alone. ] -> partyposterend 
+    
 
+    == partyposter2 ==
+    
+    
+    Underneath the basic date, time, and location of the party, there are more words written in fun bubbly font. Oddly, they seem to ripple and change before Nour's eyes...
+    
+    NOUR: "What the hell...?"
+    
+    'WHAT THE HELL' is now emblazoned in fun bubbly font on the poster!
+    
+    MS. SUWAN: "It seems to be displaying whatever was last said. This is... I don't like this."
+    
+    'I DON'T LIKE THIS' is now emblazoned in fun bubbly font on the poster!
+    
+    NICK: "...that is so freaky! Wait, I wonder if I can..."
+    
+    NOUR: "Whatever you're thinking, don't try it."
+    
+    NICK: "FUUUUCK!"
+    
+    'F@&?! is now displayed in fun bubbly font on the poster!'
+    
+    NICK: "You gotta be kidding me. This mall is rated PG?!"
 
-== phoneconvo ==
-
-    NICK: Ms. Suwan, are you sure you don't wanna go to the party?
+    -> END
     
-    MS SUWAN: I'll go on one condition.
+    == partyposterend ==
     
-    NICK: What is it?
-    
-    MS SUWAN: You let me buy something for you.
-    
-    NICK: Oh... uh... I'll... I'll think about it.
+    NOUR: "There's probably nothing useful on it, anyway."
     
     -> END
-
-//---------------- REAL WORLD ----------------
-
-== partyposter_real ==
-
-    NICK: What is this for? I can hardly even read it... lame.
-    
-    MS SUWAN: It seems like it was originally for a party of sorts...
-    
-    NOUR: Ha. The date says sometime three years ago.
-
-    -> END
-
-
-== partyposter_dreamvisited ==
-
-    NICK: Oh, what happened to the poster? It's all... torn and worn out. I can't even read the details anymore... Does this mean the party's cancelled...? What a bummer.
-    
-    -> END
-
-

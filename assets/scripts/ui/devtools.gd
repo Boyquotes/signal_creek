@@ -25,22 +25,22 @@ func _process(_delta):
 
 
 func _on_Reset_pressed():
-	Globals.UpdateController.reset_game()
+	Globals.InputDriver.reset_game()
 
 
 func _on_Hallway_pressed():
 	if RoomEngine.CurrentRoom != RoomEngine.Rooms[1]:
-		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[1], RoomEngine.Rooms[1].party_teleport_position)
+		Globals.GameRoot.emit_signal("doorway_entered", RoomEngine.Rooms[1], RoomEngine.Rooms[1].party_teleport_position)
 
 
 func _on_TopicSpot_pressed():
 	if RoomEngine.CurrentRoom != RoomEngine.Rooms[2]:
-		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[2], RoomEngine.Rooms[2].party_teleport_position)
+		Globals.GameRoot.emit_signal("doorway_entered", RoomEngine.Rooms[2], RoomEngine.Rooms[2].party_teleport_position)
 
 
 func _on_BandN_pressed():
 	if RoomEngine.CurrentRoom != RoomEngine.Rooms[0]:
-		Globals.GameCanvas.emit_signal("doorway_entered", RoomEngine.Rooms[0], RoomEngine.Rooms[0].party_teleport_position)
+		Globals.GameRoot.emit_signal("doorway_entered", RoomEngine.Rooms[0], RoomEngine.Rooms[0].party_teleport_position)
 
 
 func _on_Open_At_Knot_pressed():
@@ -63,6 +63,7 @@ func _start_in_devmode():
 
 func _on_MuteAudio_toggled(_button_pressed):
 #	Globals.SoundManager.set_mute_audio(_button_pressed)
+	Globals.SoundManager.set_music_pause_mode(_button_pressed)
 	pass # Replace with function body.
 
 

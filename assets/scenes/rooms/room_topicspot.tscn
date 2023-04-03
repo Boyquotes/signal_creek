@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_topicspot_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=2]
@@ -14,7 +14,6 @@
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_coolshirt.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_clothesrack2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_shelf.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/prefabs/objects/topicspot/obj_chair.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_shelfside.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=17]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_clothesrack.tscn" type="PackedScene" id=18]
@@ -64,7 +63,7 @@ __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
 }
 room_index = 1
-exit_position = Vector2( -8, 64 )
+exit_position = Vector2( 952, -336 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal"]
 position = Vector2( 0, -4 )
@@ -208,9 +207,6 @@ position = Vector2( 231, 224 )
 
 [node name="ClothesRack 2" parent="PlaneManager/Overworld" instance=ExtResource( 13 )]
 position = Vector2( 232, 187 )
-
-[node name="Chair" parent="PlaneManager/Overworld" instance=ExtResource( 15 )]
-position = Vector2( 234, -34 )
 
 [node name="Table" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 position = Vector2( 234, -48 )

@@ -35,7 +35,7 @@
         
         MS. SUWAN: "You're going to have to take tests for the rest of your life. Get used to it."
         
-        NICK: "You're really testing my patience, ma'am."
+        NICK: "You're really <i>testing</i> my patience, ma'am."
         
         -> noursuggestion
         
@@ -44,7 +44,9 @@
     
         -> nickargument
     
-    * "I see... <i>Get Ready for LSATs</i>."[]Nour looks over at Ms. Suwan.
+    * "There's also... <i>Get Ready for LSATs</i>."
+    
+        Nour looks over at Ms. Suwan.
     
         MS. SUWAN: "I didn't have that particular book, though I did use study aids."
         
@@ -104,7 +106,9 @@
     
         * "I still had to practice, I wasn't born with the ability to take pictures.["] It's okay to put time into something before you're good at it."
         
-        * "How do you know I'm good at it?["] For all you know, I could suck at taking pictures. It doesn't matter, because I actually put the time into it, and at least I <i>know</i> things."
+        * "How do you know I'm good at it?["] For all you know, I could suck at taking pictures."
+        
+            NOUR: "It doesn't matter, because I actually put the time into it, and at least I <i>know</i> things."
     
     - MS. SUWAN: "Stop expecting things to just be placed in your lap."
     
@@ -169,8 +173,11 @@
         * "All you need to do is return the bracelet..."
     
     - Nick shakes his head.
-&LIGHT_Nick1
--> light_on
-    // -> END
+    
+    &LIGHT_Nick1
+    
+    BEEP ELEVATOR LIGHT SFX
+    
+    -> light_on
     
     

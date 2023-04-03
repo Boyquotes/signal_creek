@@ -1,6 +1,7 @@
 VAR currentPartyChar = "nick"
 VAR currentWorld = "dream"
 
+INCLUDE bandn/static_bandn.ink
 INCLUDE bandn/bookstack.ink
 INCLUDE bandn/dragonplush.ink
 INCLUDE bandn/hotwheels.ink
@@ -11,7 +12,10 @@ INCLUDE bandn/polaroid.ink
 INCLUDE bandn/priceofsalt.ink
 INCLUDE bandn/bookshelf.ink
 INCLUDE bandn/musicstand.ink
+INCLUDE bandn/aplequestguide.ink
+INCLUDE bandn/skeletondisplay.ink
 
+INCLUDE hallway/static_hallway.ink
 INCLUDE hallway/bobatea.ink
 INCLUDE hallway/cafetables.ink
 INCLUDE hallway/litter.ink
@@ -22,7 +26,13 @@ INCLUDE hallway/pretzelstand.ink
 INCLUDE hallway/victorias.ink
 INCLUDE hallway/womensclothing.ink
 INCLUDE hallway/vapestand.ink
+INCLUDE hallway/beautystand.ink
+INCLUDE hallway/weirdtree.ink
+INCLUDE hallway/fountain.ink
+INCLUDE hallway/timbertims.ink
+INCLUDE hallway/wertoys.ink
 
+INCLUDE topicspot/static_topicspot.ink
 INCLUDE topicspot/consoles.ink
 INCLUDE topicspot/coolshirt.ink
 INCLUDE topicspot/graphictees.ink
@@ -33,14 +43,10 @@ INCLUDE topicspot/pinbuttons.ink
 INCLUDE topicspot/sailormoonposters.ink
 INCLUDE topicspot/wallofvideogames.ink
 INCLUDE topicspot/spraycans.ink
+INCLUDE topicspot/jewelrystand.ink
 
 INCLUDE betaintro.ink
-INCLUDE hallway/static_hallway.ink
-INCLUDE topicspot/static_topicspot.ink
-INCLUDE bandn/static_bandn.ink
-
-
-
+INCLUDE bandn/comicstand.ink
 
 
 
@@ -58,13 +64,18 @@ INCLUDE bandn/static_bandn.ink
     
 == first_light ==
 
+    SFX ELEVATOR LIGHT CHIME PLAYS
+
+    NOUR: "What was that noise?"
+    
+    MS. SUWAN: "It sounded like...an elevator chime."
+    
+    NICK: "Quick! Let's go back to the elevator and check it out!"
+    
+    &FDEOUT
     &FIRSTLIGHT
-    
-    &BLACK
-    
-    ...
-    
-    &FDEIN
+    &PAUSE_1.0
+    // &FDEIN
     
     &EMOTE_NICK_UpIdle
     
@@ -72,11 +83,27 @@ INCLUDE bandn/static_bandn.ink
     
     &EMOTE_NOUR_UpIdle
     
-    NICK: "Oh shit bro did that light turn on?"
+    NICK: "Woah, look at that! One of the weird elevator lights turned <b>on</b>!"
     
-    NOUR: "What does it mean man..."
+    NOUR: "I could've sworn this elevator was broken."
     
-    MS. SUWAN: "This is deep, not everyone will understand."
+    NICK: "It definitely still looks broken..."
+    
+    MS. SUWAN: "This is becoming stranger and stranger. What made it light up in the first place?"
+    
+    NICK: "I dunno, but we must've done <i>something</i> to make the elevator work again!"
+    
+    NICK: "WAIT..."
+    
+    NICK: "The mall...is LISTENING. It knows what we're doing!"
+    
+    MS. SUWAN: "That's creepy."
+    
+    NICK: "No, it's cool! The mall is our friend!"
+    
+    NOUR: "Whatever we did, it must've been the right thing."
+    
+    NOUR: "We should keep an eye on this elevator and its lights."
     
     -> END
     
@@ -87,6 +114,10 @@ INCLUDE bandn/static_bandn.ink
             -> first_light
     }
     
-    Another light turned on bro.
+    SFX ELEVATOR LIGHT CHIME PLAYS
+    
+    //would be cool if this text was in a different color. 
+    
+    Another light turned on.
     
     -> END
