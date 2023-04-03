@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portrait_mssuwan_neutral.png-40dc8c9e8b7682f3f0ca2b1d8cc1c80d.stex"
+path="res://.import/portrait_nourneutral.png-1d4aee0832edfa953cee280c7672de1d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/portraits/portrait_mssuwan_neutral.png"
-dest_files=[ "res://.import/portrait_mssuwan_neutral.png-40dc8c9e8b7682f3f0ca2b1d8cc1c80d.stex" ]
+source_file="res://assets/sprites/characters/portraits/nour/portrait_nourneutral.png"
+dest_files=[ "res://.import/portrait_nourneutral.png-1d4aee0832edfa953cee280c7672de1d.stex" ]
 
 [params]
 

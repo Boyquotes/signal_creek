@@ -121,6 +121,8 @@
     
     - The can is opened, and an apple squeezes out!
     
+    &SHLORP_APPLE_DukeDelicious_in
+    
     ???: "FREEDOM..."
     
     NICK: "...!"
@@ -149,7 +151,7 @@
     
     DUKE DELICIOUS: "Now, I shall rejoin my liege, but humans! Charge forth and SEARCH FOR THE PRINCE!"
     
-    DUKE DELICIOUS SCHLORPS OUT OF THE OVERWORLD
+    &SHLORP_APPLE_DukeDelicious_out
     
     NOUR: "Well, you heard what he said. Shall we?"
     

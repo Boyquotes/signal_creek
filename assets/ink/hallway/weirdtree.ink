@@ -151,6 +151,8 @@
 
     THEN SFX of apple dropping of a tree and getting CAUGHT
     
+    &SHLORP_APPLE_GrandDuchessGranny_in
+    
     NICK: "Woah! What the—"
     
     ???: "KEKEKE!"
@@ -251,7 +253,7 @@
     
     GRAND DUCHESS GRANNY: "<i>GOODBYE, PRECIOUS ONES! VISIT GRANNY SOMETIME, YES?</i>"
     
-    GRAND DUCHESS GRANNY SMITH SCHLORPS OUT
+    &SHLORP_APPLE_GrandDuchessGranny_out
     
     Nick touches his cheek. 
     

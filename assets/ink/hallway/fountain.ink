@@ -134,7 +134,7 @@
     
     FATHER FUJI: "May the Mother Tree guide thee..."
     
-    FATHER FUJI SCHLORPS OUT OF THE OVERWORLD
+    &SHLORP_APPLE_DukeDelicious_out
     
     NOUR: "Well, that made zero sense to me."
     
