@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/sprites/tilesets/tileset_hallway_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
-[ext_resource path="res://assets/shaders/shader_outline.gdshader" type="Shader" id=4]
+[ext_resource path="res://assets/materials/shaders/shader_outline.gdshader" type="Shader" id=4]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_sofaside.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_bobatea.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_mannequins.tscn" type="PackedScene" id=7]
@@ -45,6 +45,7 @@
 [ext_resource path="res://assets/textures/lights/elevatorlight.png" type="Texture" id=44]
 [ext_resource path="res://assets/scripts/environment/tutorial_trigger.gd" type="Script" id=45]
 [ext_resource path="res://assets/textures/lights/glow_64.png" type="Texture" id=46]
+
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 24, 8 )

@@ -176,7 +176,7 @@
     
         NICK: "Heh, yeah it kinda is. Weirdly enough, it taught me a lot about life."
     
-    NOUR: "You know, you've got a lot in common with Prince Pendragon."
+    - NOUR: "You know, you've got a lot in common with Prince Pendragon."
     
     NOUR: "I'll just, uhh... leave it at that."
     

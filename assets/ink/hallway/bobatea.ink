@@ -39,7 +39,6 @@
             NOUR: "Are you sure?"
             
             NICK: "Yeah. If I accept something from someone, I'd wanna repay them."
-            //CHECK SPRAYCAN FOR CONSISTENCY
         
         + [Leave the vending machine]
     

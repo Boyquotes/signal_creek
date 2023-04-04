@@ -13,7 +13,7 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_hotwheels.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_poster4.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_priceofsalt.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/shaders/shader_outline.gdshader" type="Shader" id=14]
+[ext_resource path="res://assets/materials/shaders/shader_outline.gdshader" type="Shader" id=14]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_polaroid.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_poster2.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_skeletondisplay.tscn" type="PackedScene" id=17]
@@ -29,6 +29,7 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_table.tscn" type="PackedScene" id=27]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_table2.tscn" type="PackedScene" id=30]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_displaystand.tscn" type="PackedScene" id=33]
+
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 32, 4 )

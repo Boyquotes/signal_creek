@@ -25,7 +25,7 @@ extents = Vector2( 9, 5.5 )
 
 [node name="NOUR" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
-inkname = "NOUR"
+walking_spritesheet = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 2
