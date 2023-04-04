@@ -26,8 +26,12 @@ NOUR: "Even I've heard of how good it is."
 
 NICK: "It makes grown men cry!"
 
-* [ Look at another game. ] -> wallofvg_1
-* [ Leave. ] -> END
+* [ "What game is this over here?" ] -> wallofvg_1
+* [ "Probably shouldn't spend much more time here." ] -> wallofvg_nicksad
+
+== wallofvg_nicksad ==
+
+NICK: "Oh... yeah, I guess there's no point in looking at games we can't even play..."
 
 -> END
 
@@ -35,13 +39,13 @@ NICK: "It makes grown men cry!"
 
 NICK: "Whoa, they're still making Call of Duty games?!"
 
-SUWAN: "I still recall when the first one was released... that stirred quite a controversy."
+MS. SUWAN: "I still recall when the first one was released... that stirred quite a controversy."
 
 NICK: "Wow... You're so old..."
 
-SUWAN: "I prefer the term 'wise'."
+MS. SUWAN: "I prefer the term 'wise'."
 
-NOUR: "Why do we need eleven of those, anyway?"
+NOUR: "Why do we need like eleven of those, anyway?"
 
 NICK: "Well, it's just cool! You get to shoot big guns and run around and drive tanks and stuff! And they keep making the guns and tanks feel better and better to shoot!"
 
@@ -56,13 +60,13 @@ NICK: "..."
 
 NOUR: "Come on... Not a word? Not even about the Residential Villain series? I heard this series is pretty huge. Look, even Ms. Suwan's heard of these."
 
-SUWAN: "I <i>suppose</i> I've even played one. Once or twice."
+MS. SUWAN: "I <i>suppose</i> I've even played one. Once or twice."
 
 NICK: "..."
 
 He looks disinterested, frowning a little more than before.
 
-<i> Right, looking at the prices on these things... sixty bucks a game? </i>
+NOUR: <i> Right, looking at the prices on these things... sixty bucks a game? </i>
 <i> I'm surprised anyone could get into these. Guess I better keep looking. </i>
 
 -> END
@@ -70,7 +74,7 @@ He looks disinterested, frowning a little more than before.
 === wallofvg2 ===
 //After he visited Console and started talking again.
 
-NOUR: "So how many of these have you played? Or are you just a die-hard Fantasy Game fan?"
+NOUR: "So how many of these have you played? Or are you just a die-hard Aple Quest fan?"
 
 NICK: "Haha... not many, actually. This is all the big new triple-A stuff. It's kind of all a little too..."
 
