@@ -40,6 +40,7 @@ export var characterPortraits : Dictionary = {
 	"prince pendragon": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"emperor evercrisp": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"earl earligold": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"???": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png")
 }
 

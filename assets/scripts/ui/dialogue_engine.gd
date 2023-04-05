@@ -13,6 +13,7 @@ func _ready():
 # Use newText to make a new NORMAL entryAsset
 func create_entry(newText: String, entryAsset: PackedScene, entryParagraph: PackedScene) -> DialogueBoxEntry:
 	var newEntry = entryAsset.instance()
+	newText = newText.replacen('/', '')
 	
 	var newParagraph = entryParagraph.instance()
 	newParagraph.bbcode_text = newText
@@ -24,7 +25,7 @@ func create_entry(newText: String, entryAsset: PackedScene, entryParagraph: Pack
 # use newText to make an entryParagraph and put it in a new DIALOGUE entryAsset
 func create_entry_dialogue(newText: String, entryAsset: PackedScene, entryParagraph: PackedScene) -> DialogueBoxEntry:
 	var newEntry = entryAsset.instance()
-	var dialogueLine = newText.split(":", false)
+	var dialogueLine = newText.split(":", false, 1)
 	var newDialogue = dialogueLine[1].strip_escapes().trim_prefix(' ')
 	
 	Globals.ColorManager.set_current_color(dialogueLine[0])

@@ -201,7 +201,7 @@ func check_entry_type(entryText: String) -> void:
 		display_choices(chooserName)
 		set_camera_position_to_speaker()
 		
-	elif ":" in entryText: #if line contains a name, parse name and dialogue after
+	elif ":" in entryText and !"/" in entryText.split(":")[0]: #if line contains a name, parse name and dialogue after
 		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_paragraph)
 		current_speaker = entryText.split(":")[0]
 		_vertical_layout_node.add_child(newDialogue)
