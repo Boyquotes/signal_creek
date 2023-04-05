@@ -34,9 +34,11 @@
     
     &FOLLOW_SUWAN_SuwanOutElevatorPos
     
-    NICK: “Isn't this the top floor of the mall?”
+    NICK: "Whoa, this is crazy..! Are you seeing what I'm seeing?"
     
-    NOUR: "Yeah, but it feels... something feels off."
+    NOUR: "This... this is one of the floors of the mall, isn't it? The top floor?"
+    
+    NOUR: "But it feels... something feels off."
     
     &EMOTE_NICK_UpIdle
     
@@ -46,9 +48,9 @@
     
     &FOLLOW_SUWAN_SuwanPhonePos
     
-    MS. SUWAN: "This floor should have been shut down <i>months</i> ago."
+    MS. SUWAN: "This floor should have been shut down <i>months</i> ago. There shouldn't even be electricity."
     
-    MS. SUWAN: "I must call one of my higher-ups about this."
+    MS. SUWAN: "I have to call one of my higher-ups about this."
     
     MS SUWAN BEEP BOOPS HER PHONE
     
@@ -106,7 +108,7 @@
     
     &EMOTE_NICK_UpIdle
     
-    NICK: "And... those funny lights are off now."
+    NICK: "And... those weird lights are off now."
     
     &EMOTE_NICK_RightIdle
     
@@ -147,7 +149,7 @@
     
     &EMOTE_NOUR_UpIdle
     
-    NOUR: "The elevator is closed though, and it doesn't look like the doors will budge either."
+    NOUR: "The elevator is closed, though, and it doesn't look like the doors will budge either."
     
     &EMOTE_SUWAN_UpIdle
     
