@@ -37,7 +37,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 6, 3.5 )
+extents = Vector2( 5, 3.5 )
 
 [node name="NICK" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 4
