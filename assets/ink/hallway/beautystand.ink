@@ -3,17 +3,20 @@
     It's an Beauty Booth used for makeovers. A feminine apple stares into the souls of those who gaze back at her. 
 
     {
-        - beautystand2:
+        - beautystand_find_pinklady:
             -> beautystand_end
-        - consoles3:
-            -> beautystand2
-        - beautystand1:
-            -> beautystand1_repeat
+            
+        - consoles_start_aplequest:
+            -> beautystand_find_pinklady
+            
+        - beautystand_before_aplequest:
+            -> beautystand_before_aplequest_repeat
+            
         - else:
-            -> beautystand1 
+            -> beautystand_before_aplequest 
     }
     
-=== beautystand1 ===
+=== beautystand_before_aplequest ===
     NOUR: "Anybody care for a makeover?"
     
     NICK: "Sounds like money I could use somewhere else."
@@ -27,14 +30,14 @@
     NOUR: "That's a good point."
         -> END
 
-=== beautystand1_repeat ===
+=== beautystand_before_aplequest_repeat ===
 
     NOUR: <i>We've already looked at the beauty booth before.</i>
 
     NOUR: <i>But seeing that apple lady (?) somehow makes me feel better.</i>
      -> END
 
-=== beautystand2 ===
+=== beautystand_find_pinklady ===
     NOUR: "..."
     
     MS. SUWAN: "Are we here because there's literally an apple on the booth—"
@@ -65,29 +68,30 @@
             NOUR: "Maybe it needs some encouragement. I can go first?"
             
             NOUR: "Hi, um..."
+            
                 ** ["Nice weather we're having?"]
                 ** ["You look really nice today?]
                 ** ["How are you feeling today?]
             
-            NOUR: "Now you go, Ms. Suwan."
-            
-            MS. SUWAN: "..."
-            
-            MS. SUWAN: "Hello."
-            
-            NOUR: "That's it?!"
-            
-            NOUR: "C'mon, Nick. Anybody could beat Ms. Suwan. Now's your chance!"
-            
-            MS. SUWAN: "Excuse me—"
-            
-            NICK: "Emperor Evercrisp has sent us."
-            
-            NOUR: "True! Good work, Nick!"
-            
-            MS. SUWAN: "We are talking to a <i>wall</i>."
-            
-            MS. SUWAN: "Have we finally all gone insane?"
+                - NOUR: "Now you go, Ms. Suwan."
+                
+                MS. SUWAN: "..."
+                
+                MS. SUWAN: "Hello."
+                
+                NOUR: "That's it?!"
+                
+                NOUR: "C'mon, Nick. Anybody could beat Ms. Suwan. Now's your chance!"
+                
+                MS. SUWAN: "Excuse me—"
+                
+                NICK: "Emperor Evercrisp has sent us."
+                
+                NOUR: "True! Good work, Nick!"
+                
+                MS. SUWAN: "We are talking to a <i>wall</i>."
+                
+                MS. SUWAN: "Have we finally all gone insane?"
         
         * [Stare back at the apple]
             NOUR: "...staring back at the apple."
@@ -124,11 +128,7 @@
                     NOUR: "<b>...</b>"
                     
                     NICK: "<b>...</b>"
-            
-            - MS. SUWAN: "Careful not to hurt yourselves..."
-                
-                ** [KEEP STARING!]
-            
+                    
             - NOUR: "..."
             
             NICK: "..."
@@ -163,20 +163,21 @@
             Nick shrugs.
             
             NOUR: <i>What should I give him?</i>
-                * [Give him red lipstick]
+            
+                ** [Give him red lipstick]
                     NOUR: "Use this red lipstick."
                     
-                * [Give him black eyeliner]
+                ** [Give him black eyeliner]
                     NOUR: "Use this black eyeliner."
                     
-                * [Give him pink blush]
+                ** [Give him pink blush]
                     NOUR: "Use this pink blush."
             
-            - Nick stares at it and then grabs it. He starts to use it on the poster.
-            
-            NOUR: "Nice! I'll help you out too..."
-            
-            MS. SUWAN: "I don't see how this is going to do anything—"
+                - Nick stares at it and then grabs it. He starts to use it on the poster.
+                
+                NOUR: "Nice! I'll help you out too..."
+                
+                MS. SUWAN: "I don't see how this is going to do anything—"
         
     - ???: "Hee hee!"
 
@@ -188,7 +189,7 @@
     
     ???: "You three are so silly, hee hee!"
     
-    PRINCESS PINK LADY REVEALS HERSELF FROM BEHIND THE BOOTH/SCHLORPS IN
+    &SHLORP_POOP_PrincessPinkLady_in
     
     ???: "I wasn't planning on showing myself to you all, but I couldn't contain myself!"
     
@@ -232,7 +233,7 @@
     
     PRINCESS PINK LADY: "Now, I bid you all adieu–send my love to the apple of my eye, the prince!"
     
-    PRINCESS PINK LADY SCHLORPS OUT OF THE OVERWORLD
+    &SHLORP_POOP_PrincessPinkLady_out
     
     MS. SUWAN: "Perhaps I shouldn't have been so hasty to look down on your rather...unconventional tactics."
 
@@ -249,6 +250,7 @@
     NOUR: <i>We should go find the rest of the apples...</i>
 
         -> END
+    
 === beautystand_end ===
 
     NOUR: <i>I think we've explored everything we could here.</i>

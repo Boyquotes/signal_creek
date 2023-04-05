@@ -38,7 +38,7 @@
         
         Ms. Suwan picks up the photograph and places it on top of the glass case.
         
-        MS. SUWAN: "We'll come back to this later. But you're going to have to face up to what happened."
+        MS. SUWAN: "We'll come back to this later. But you're going to have to face up to whatever happened."
         
         NOUR: "Hmph. I don't see why when I didn't do anything wrong, but whatever. Let's go."
         

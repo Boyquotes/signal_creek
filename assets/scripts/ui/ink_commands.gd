@@ -187,6 +187,8 @@ func parse_commands(currentLine):
 				characterNode = Globals.GrandDuchessGranny
 			"PrincePendragon":
 				characterNode = Globals.PrincePendragon
+			"PrincessPinkLady":
+				characterNode = Globals.PrincessPinkLady
 			"EmperorEvercrisp":
 				characterNode = Globals.EmperorEvercrisp
 			"EarlEarligold":

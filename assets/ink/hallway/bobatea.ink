@@ -3,17 +3,20 @@
     The vending machine is full of coffee, sparkling water, and diet sodas. The last row in the vending machine is a row of Specialty Drinks—japanese sodas and canned boba. 
     
     {
-        - bobatea2:
+        - bobatea_find_dukedelicious:
             -> bobatea_end
-        - consoles3:
-            -> bobatea2
-        - bobatea1:
-            -> bobatea1_repeat
+            
+        - consoles_start_aplequest:
+            -> bobatea_find_dukedelicious
+            
+        - bobatea_beforeaplequest:
+            -> bobatea_beforeaplequest_repeat
+            
         - else:
-            -> bobatea1
+            -> bobatea_beforeaplequest
     }
 
-=== bobatea1 ===
+=== bobatea_beforeaplequest ===
     Nick's nose scrunches up.
     
     NICK: "Bleh! Most of these suck."
@@ -46,12 +49,12 @@
     
         -> END
 
-=== bobatea1_repeat ===
+=== bobatea_beforeaplequest_repeat ===
     NOUR: <i>We've already looked at all the drinks here.</i>
         
         -> END
 
-=== bobatea2 ===
+=== bobatea_find_dukedelicious ===
     NOUR: <i>We've already looked at all the drinks here.</i>
 
     NOUR: <i>...Wait a minute. What's that weird drink at the very end of the vending machine?</i>
@@ -121,6 +124,8 @@
     
     - The can is opened, and an apple squeezes out!
     
+    &SHLORP_APPLE_DukeDelicious_in
+    
     ???: "FREEDOM..."
     
     NICK: "...!"
@@ -149,7 +154,7 @@
     
     DUKE DELICIOUS: "Now, I shall rejoin my liege, but humans! Charge forth and SEARCH FOR THE PRINCE!"
     
-    DUKE DELICIOUS SCHLORPS OUT OF THE OVERWORLD
+    &SHLORP_APPLE_DukeDelicious_out
     
     NOUR: "Well, you heard what he said. Shall we?"
     

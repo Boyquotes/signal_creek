@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portrait_nourneutral.png-1d4aee0832edfa953cee280c7672de1d.stex"
+path="res://.import/tile_elevator_real.png-2849faa9fd03df6e66eb5ddaabd462cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/portraits/nour/portrait_nourneutral.png"
-dest_files=[ "res://.import/portrait_nourneutral.png-1d4aee0832edfa953cee280c7672de1d.stex" ]
+source_file="res://assets/sprites/tilesets/tile_elevator_real.png"
+dest_files=[ "res://.import/tile_elevator_real.png-2849faa9fd03df6e66eb5ddaabd462cb.stex" ]
 
 [params]
 
