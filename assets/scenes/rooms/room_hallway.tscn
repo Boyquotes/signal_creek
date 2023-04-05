@@ -457,7 +457,7 @@ position = Vector2( 265, 145 )
 position = Vector2( 793, 303 )
 
 [node name="Victorias" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
-position = Vector2( -23, 49 )
+position = Vector2( -24, 49 )
 
 [node name="WeRToys" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
 position = Vector2( 680, -368 )
