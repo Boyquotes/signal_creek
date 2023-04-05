@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_bandn_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -27,7 +27,6 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_sofa.tscn" type="PackedScene" id=25]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_chair1.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_table.tscn" type="PackedScene" id=27]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_aplequestguide.tscn" type="PackedScene" id=28]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_table2.tscn" type="PackedScene" id=30]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_displaystand.tscn" type="PackedScene" id=33]
 
@@ -434,18 +433,18 @@ tile_data = PoolIntArray( -1966075, 0, 196611, -1966074, 0, 327684, -1966073, 0,
 
 [node name="BookshelfBack5" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
 material = SubResource( 72 )
-position = Vector2( 299, -342 )
+position = Vector2( 284, -343 )
 
 [node name="BookshelfBack4" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
 material = SubResource( 73 )
-position = Vector2( 193, -343 )
+position = Vector2( 196, -343 )
 
 [node name="Poster4" parent="PlaneManager/Overworld" instance=ExtResource( 12 )]
 position = Vector2( -31, -352 )
 z_as_relative = false
 
 [node name="Poster3" parent="PlaneManager/Overworld" instance=ExtResource( 6 )]
-position = Vector2( 245, -414 )
+position = Vector2( 240, -414 )
 
 [node name="Poster2" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
 position = Vector2( 410, -352 )
@@ -465,51 +464,51 @@ position = Vector2( 465, -155 )
 
 [node name="BookStack" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
 material = SubResource( 16 )
-position = Vector2( 186, -409 )
+position = Vector2( 179, -408 )
 
 [node name="BookStack2" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
 material = SubResource( 16 )
-position = Vector2( 305, -409 )
+position = Vector2( 301, -407 )
 
 [node name="DisplayStand" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
 material = SubResource( 17 )
-position = Vector2( 196, -210 )
+position = Vector2( 191, -210 )
 
 [node name="Kindle" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
 material = SubResource( 33 )
-position = Vector2( 187, -209 )
+position = Vector2( 182, -209 )
 
 [node name="Kindle2" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
 material = SubResource( 33 )
-position = Vector2( 206, -209 )
+position = Vector2( 201, -209 )
 
 [node name="PriceOfSalt" parent="PlaneManager/Overworld" instance=ExtResource( 13 )]
 material = SubResource( 25 )
-position = Vector2( 120, -373 )
+position = Vector2( 115, -372 )
 
 [node name="PriceOfSalt2" parent="PlaneManager/Overworld" instance=ExtResource( 13 )]
 material = SubResource( 25 )
-position = Vector2( 372, -374 )
+position = Vector2( 363, -373 )
 
 [node name="Table2" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
 material = SubResource( 28 )
-position = Vector2( 244, -245 )
+position = Vector2( 240, -245 )
 
 [node name="Polaroid" parent="PlaneManager/Overworld" instance=ExtResource( 15 )]
 material = SubResource( 34 )
-position = Vector2( 245, -244 )
+position = Vector2( 241, -244 )
 
 [node name="DisplayStand2" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
 material = SubResource( 31 )
-position = Vector2( 293, -210 )
+position = Vector2( 288, -210 )
 
 [node name="Kindle3" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
 material = SubResource( 33 )
-position = Vector2( 283, -210 )
+position = Vector2( 278, -210 )
 
 [node name="Kindle4" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
 material = SubResource( 33 )
-position = Vector2( 302, -210 )
+position = Vector2( 297, -210 )
 
 [node name="ComicStand" parent="PlaneManager/Overworld" instance=ExtResource( 4 )]
 position = Vector2( 524, -332 )
@@ -528,14 +527,14 @@ position = Vector2( 467, -290 )
 
 [node name="Table" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
 material = SubResource( 29 )
-position = Vector2( 246, -292 )
+position = Vector2( 242, -292 )
 
 [node name="Table3" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
 material = SubResource( 29 )
-position = Vector2( 293, -292 )
+position = Vector2( 289, -292 )
 
 [node name="SkeletonDisplay" parent="PlaneManager/Overworld" instance=ExtResource( 17 )]
-position = Vector2( -65, -216 )
+position = Vector2( 108, -230 )
 
 [node name="TrinketShelf" parent="PlaneManager/Overworld" instance=ExtResource( 19 )]
 material = SubResource( 39 )
@@ -543,7 +542,7 @@ position = Vector2( 464, -337 )
 
 [node name="TrinketShelf2" parent="PlaneManager/Overworld" instance=ExtResource( 19 )]
 material = SubResource( 40 )
-position = Vector2( 68, -339 )
+position = Vector2( 64, -339 )
 
 [node name="MusicStand" parent="PlaneManager/Overworld" instance=ExtResource( 20 )]
 position = Vector2( 57, 8 )
@@ -566,11 +565,11 @@ position = Vector2( 402, -153 )
 
 [node name="Table4" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
 material = SubResource( 29 )
-position = Vector2( 197, -292 )
+position = Vector2( 193, -292 )
 
 [node name="OldNovel" parent="PlaneManager/Overworld" instance=ExtResource( 7 )]
 material = SubResource( 44 )
-position = Vector2( 193, -287 )
+position = Vector2( 189, -287 )
 
 [node name="BookShelf2" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
 material = SubResource( 61 )
@@ -593,17 +592,17 @@ material = SubResource( 49 )
 position = Vector2( -64, -262 )
 
 [node name="DisplayStand4" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
-position = Vector2( 349, 30 )
+position = Vector2( 344, 30 )
 
 [node name="DisplayStand3" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
 material = SubResource( 50 )
-position = Vector2( 142, 30 )
+position = Vector2( 136, 30 )
 
 [node name="MusicStand3" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
-position = Vector2( 43, -149 )
+position = Vector2( 37, -148 )
 
 [node name="MusicStand2" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
-position = Vector2( -39, -149 )
+position = Vector2( -36, -148 )
 
 [node name="Table9" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
 material = SubResource( 52 )
@@ -615,7 +614,7 @@ position = Vector2( 1, -334 )
 
 [node name="BookStack11" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
 material = SubResource( 58 )
-position = Vector2( 59, -53 )
+position = Vector2( 65, -53 )
 
 [node name="TrinketShelf4" parent="PlaneManager/Overworld" instance=ExtResource( 19 )]
 material = SubResource( 66 )
@@ -623,29 +622,26 @@ position = Vector2( 391, -50 )
 
 [node name="TrinketShelf3" parent="PlaneManager/Overworld" instance=ExtResource( 19 )]
 material = SubResource( 67 )
-position = Vector2( 461, -50 )
+position = Vector2( 457, -50 )
 
 [node name="BookshelfBack2" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
 material = SubResource( 64 )
-position = Vector2( 245, 15 )
+position = Vector2( 242, 15 )
 
 [node name="Table8" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
-position = Vector2( 246, 74 )
+position = Vector2( 240, 74 )
 
 [node name="BookshelfSide5" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 material = SubResource( 70 )
-position = Vector2( -2, -20 )
+position = Vector2( -6, -20 )
 
 [node name="BookshelfSide6" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 material = SubResource( 71 )
-position = Vector2( -2, 60 )
-
-[node name="AbstractObject" parent="PlaneManager/Overworld" instance=ExtResource( 28 )]
-position = Vector2( 104, 56 )
+position = Vector2( -6, 60 )
 
 [node name="BookShelf" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
 material = SubResource( 65 )
-position = Vector2( 245, 31 )
+position = Vector2( 242, 31 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
 [connection signal="body_exited" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_exited"]

@@ -430,7 +430,7 @@ position = Vector2( 64, 656 )
 position = Vector2( 560, 789 )
 
 [node name="TopicSpot" parent="PlaneManager/Overworld" instance=ExtResource( 11 )]
-position = Vector2( 953, -368 )
+position = Vector2( 952, -367 )
 
 [node name="Fountain" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
 position = Vector2( 974, -223 )
@@ -460,7 +460,7 @@ position = Vector2( 793, 303 )
 position = Vector2( -23, 49 )
 
 [node name="WeRToys" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
-position = Vector2( 681, -368 )
+position = Vector2( 680, -368 )
 
 [node name="BandNSign" parent="PlaneManager/Overworld" instance=ExtResource( 12 )]
 position = Vector2( 511, 484 )
@@ -497,7 +497,7 @@ position = Vector2( 576, 488 )
 position = Vector2( 268, 699 )
 
 [node name="WomensClothing" parent="PlaneManager/Overworld" instance=ExtResource( 15 )]
-position = Vector2( 199, 49 )
+position = Vector2( 200, 49 )
 
 [node name="Stool" parent="PlaneManager/Overworld" instance=ExtResource( 34 )]
 position = Vector2( 533, 803 )
