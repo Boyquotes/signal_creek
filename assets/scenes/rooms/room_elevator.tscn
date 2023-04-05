@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/scripts/environment/elevator_doors_floorlight.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24, 8 )
+extents = Vector2( 32, 28 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "ClosedIdle"
@@ -102,6 +102,7 @@ room_index = 1
 exit_position = Vector2( 474, 284 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doortal"]
+position = Vector2( 0, 36 )
 shape = SubResource( 1 )
 
 [node name="PlaneManager" type="Node2D" parent="."]
