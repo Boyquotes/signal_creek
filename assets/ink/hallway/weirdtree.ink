@@ -240,15 +240,17 @@
     
     NOUR: "Of course. Thank you!"
     
-    GRAND DUCHESS GRANNY: "Yes, yes, yes—now let me see that young man's face once more! Come here!"
+    GRAND DUCHESS GRANNY: "Yes, yes, yes—now let me see that young man's face once more! Look up here!"
     
     NICK: "..."
     
     GRAND DUCHESS GRANNY: "Silence suits you NOT, seedling! Promise this old granny smith that you will open your heart again to the earth!"
     
-    Nick nods his head, and Grand Duchess Granny Smith gives him a fat kiss on the cheek. 
+    Nick nods his head, and Grand Duchess Granny Smith blows him a fat kiss! 
     
-    NICK: "Eek!"
+    SFX GROSS WET KISSY
+    
+    NICK: "Ew!"
     
     GRAND DUCHESS GRANNY: "KEKEKE!"
     

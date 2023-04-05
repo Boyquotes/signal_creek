@@ -1,24 +1,23 @@
 == consoles ==
 
 {
-    - consoles_end:
-        -> consoles_end2
-    - nourplaysaplequest:
+    - consoles_afternickroute:
         -> consoles_end
-    //we are toys apple done ->nourplaysfantasygame
-    //check - every apple found, emperor tells how many are left
+    - nourplaysaplequest:
+        -> consoles_afternickroute
+    - wertoys_find_prince:
+        -> nourplaysaplequest
     - aplequestguide_after_bookshelf_fightstarts:
         -> consoles_start_aplequest
-//    - noursuggestion:
-//        -> nourplaysfantasygame
-    - consoles && consoles2:
+    - consoles_before_start && consoles_before_aplequest:
         -> consoles_visited
-    - consoles:
-        -> consoles2
-    // - else: 
-    //     -> consoles
+    - consoles_before_start:
+        -> consoles_before_aplequest
+    - else: 
+        -> consoles_before_start
 }
 
+=== consoles_before_start ===
     A start screen for a retro game called <i>Aple Quest</i> plays. Nick seems to be excited.
     
     NICK: "<i>Aple Quest</i>? Here? In its pristine, original condition?"
@@ -57,7 +56,7 @@
 
     -> END
 
-== consoles2 ==
+== consoles_before_aplequest ==
 
     The soft 8-bit boops of <i>Aple Quest</i> play, but Nick only stares at the screen. 
     
@@ -167,7 +166,7 @@
             
             NOUR: "Eh...I don't know..."
             
-            Nick fidgets. He glances at Emperor Gala eagerly. 
+            Nick fidgets. He glances at Emperor Evercrisp eagerly. 
             
             NOUR: "...You know what? Why not. We have an expert on our side anyway."
             
@@ -189,7 +188,13 @@
     
     EMPEROR EVERCRISP: "Their last coordinates were all within the hallways of the mall."
     
-    EMPEROR EVERCRISP: "HOHO! See you later, friends."
+    EMPEROR EVERCRISP: "I will give you the sacred APLE BLESSING that will allow you to teleport all <i>five</i> apples back to me."
+    
+    EMPEROR EVERCRISP: "Once they have consented to leave, they shall disappear and return!"
+    
+    NOUR: "That sounds simple enough."
+    
+    EMPEROR EVERCRISP: "HO HO! EXCELLENT! I wish you luck, my human friends."
     
     &SHLORP_poop_EmperorEvercrisp_out
     
@@ -200,6 +205,8 @@
     Nick shrugs, but he's already itching to leave.
     
     NOUR: <i>Still silent, but at least he's communicating again.</i>
+        
+    //check - every apple found, emperor tells how many are left
     
     //EMPEROR EVERCRISP: "If you require a count of how many of my Aple council brethren you have located, come back to consult me!"
     
@@ -420,7 +427,7 @@
         -> light_on
 // -> END
 
-=== consoles_end ===
+=== consoles_afternickroute ===
 
     The bow-user character from the last game played stands idle on the screen.
     
@@ -438,7 +445,7 @@
     
         -> END
 
-=== consoles_end2 ===
+=== consoles_end ===
 
     NOUR: <i>I've already looked at this. Maybe I should try looking at something or talking to someone else.</i>
 
