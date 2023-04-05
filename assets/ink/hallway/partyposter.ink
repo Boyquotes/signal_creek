@@ -27,19 +27,19 @@
     
     NICK: "Oh, wow. Are these posters for a party or something? Whoa, free food and drinks...! Hey, we should all go together!"
     
-    MS. SUWAN: "I think going to a party should be the last of our priorities right now. I'd rather spend as little time here as possible."
+    MS. SUWAN: "I think going to a party should be the last of our priorities right now. I'd rather spend as little time in this mall as possible."
     
-    NICK: "Well... okay, yeah, you're right, but --"
+    NICK: "Well... okay, you're right, but --"
     
-    NOUR: "No, yeah, Nick's right. We should totally go to this definitely normal party happening in this totally super normal mall."
+    NOUR: "No, Nick's right. We should totally go to this definitely normal party happening in this totally super normal mall."
     
-    NICK: "That... was sarcasm... right..."
+    NICK: "That... was sarcasm... right...?"
     
-    NOUR: "Just a little."
+    NOUR: "Yep."
     
     NICK: "I'm just saying! It could be fun! I mean, you can never go wrong with free pizza and soda."
     
-    MS. SUWAN: "You have no idea what could be in the food here. We can't rule out shared drug hallucinations just yet. Besides, I would rather not socialize with others in the mall unless they can help us leave."
+    MS. SUWAN: "You have no idea what could be in the food here. We can't rule out shared drug hallucinations just yet. Besides, I would rather not speak to anybody who won't help us leave."
     
     NOUR: "Hold on, there's something weird about this thing..."
     
@@ -56,11 +56,11 @@
     
     'WHAT THE HELL' is now emblazoned in fun bubbly font on the poster!
     
-    MS. SUWAN: "It seems to be displaying whatever was last said. This is... I don't like this."
+    MS. SUWAN: "It seems to be displaying whatever was last said. This is... extremely strange."
     
-    'I DON'T LIKE THIS' is now emblazoned in fun bubbly font on the poster!
+    'THIS IS EXTREMELY STRANGE' is now emblazoned in fun bubbly font on the poster!
     
-    NICK: "...that is so freaky! Wait, I wonder if I can..."
+    NICK: "Whoa, that is so freaky! Wait, I wonder if I can..."
     
     NOUR: "Whatever you're thinking, don't try it."
     

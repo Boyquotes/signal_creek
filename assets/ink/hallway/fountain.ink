@@ -3,17 +3,20 @@
     It's a fountain with some pennies and other stuff inside. 
     
     {
-        - fountain2:
+        - fountain_findfather:
             -> fountain_end
-        - consoles3: 
-            -> fountain2
-        - fountain1:
-            -> fountain1_repeat
+            
+        - consoles_start_aplequest: 
+            -> fountain_findfather
+            
+        - fountain_before_aplequest:
+            -> fountain_before_aplequest_repeat
+            
         - else:
-            -> fountain1
+            -> fountain_before_aplequest
     }
 
-=== fountain1 ===
+=== fountain_before_aplequest ===
     NOUR: "Got a penny to make a wish?"
     
     NICK: "Nope. Who even carries around pennies anymore?"
@@ -31,13 +34,13 @@
     NOUR: "That's a little depressing...but very true."
         -> END
 
-=== fountain1_repeat ===
+=== fountain_before_aplequest_repeat ===
     NOUR: <i>I've checked this already.</i> 
 
     NOUR: <i>There's something curious in the water...but I should stay focused on finding a way out.</i>
         -> END
 
-=== fountain2 ===
+=== fountain_findfather ===
     NOUR: "Hey...is there something bobbing up and down in the water?"
     
     MS. SUWAN: "It's just trash and debris."
@@ -51,6 +54,8 @@
         * [Fish it out of the fountain]
 
     - NOUR: "...Hey!"
+    
+    &SHLORP_POOP_FatherFuji_in
     
     ???: "Greetings."
     
@@ -134,7 +139,7 @@
     
     FATHER FUJI: "May the Mother Tree guide thee..."
     
-    &SHLORP_APPLE_DukeDelicious_out
+    &SHLORP_APPLE_FatherFuji_out
     
     NOUR: "Well, that made zero sense to me."
     

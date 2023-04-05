@@ -3,15 +3,14 @@
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=1]
 [ext_resource path="res://assets/prefabs/location_trigger.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
-[ext_resource path="res://assets/sprites/tilesets/tileset_abstract_dream.tres" type="TileSet" id=4]
+[ext_resource path="res://assets/sprites/tilesets/tileset_elevator_real.tres" type="TileSet" id=4]
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=5]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=6]
 [ext_resource path="res://assets/textures/lights/elevatorlight.png" type="Texture" id=7]
 [ext_resource path="res://assets/scripts/environment/elevator_doors_floorlight.gd" type="Script" id=8]
 
-
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24, 8 )
+extents = Vector2( 32, 28 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "ClosedIdle"
@@ -77,7 +76,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 1 ), Vector2( 1, 1 ) ]
 }
 
-[node name="Room2" type="Node2D"]
+[node name="Room" type="Node2D"]
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
@@ -103,6 +102,7 @@ room_index = 1
 exit_position = Vector2( 474, 284 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doortal"]
+position = Vector2( 0, 36 )
 shape = SubResource( 1 )
 
 [node name="PlaneManager" type="Node2D" parent="."]
@@ -151,11 +151,20 @@ __meta__ = {
 }
 
 [node name="BigLight" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 160, 56 )
-scale = Vector2( 3.625, 2.5 )
+position = Vector2( 160, 120 )
 texture = ExtResource( 5 )
+texture_scale = 2.02
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
-energy = 0.9
+energy = 0.89
+range_item_cull_mask = 7
+
+[node name="CeilingLight" type="Light2D" parent="PlaneManager/Lights"]
+position = Vector2( 160, 50.3139 )
+rotation = 3.14159
+scale = Vector2( 1.3, 0.096621 )
+texture = ExtResource( 7 )
+color = Color( 0.933333, 0.858824, 0.709804, 1 )
+energy = 0.57
 range_item_cull_mask = 7
 
 [node name="ElevatorLight" type="Light2D" parent="PlaneManager/Lights"]

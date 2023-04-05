@@ -215,7 +215,7 @@
             
             //IF THE LAST KNOTS IN BOTH ROUTES ARE VISITED:
             {
-                - nicktalksaboutfantasygame && chadbrodykristy3:
+                - nourplaysaplequest && chadbrodykristy3:
                     -> rina_help
             }
             
@@ -235,7 +235,7 @@
                 - rina_topicspot:
                     -> rina_topicspot.neverknow
                     
-                - nicktalksaboutfantasygame:
+                - nourplaysaplequest:
                     -> rina_topicspot
             }
             

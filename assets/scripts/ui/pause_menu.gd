@@ -116,3 +116,6 @@ func toggle_visible() -> void:
 	
 	is_expanding_background_panel = true
 	self.set_visible(true)
+
+func get_music_pause_mode() -> bool:
+	return $Panel/PauseMenu/VBoxContainer/MuteAudio.is_pressed()
