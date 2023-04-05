@@ -69,6 +69,7 @@ func play_loading_screen() -> void:
 		Globals.SoundManager.set_music_pause_mode(false)
 		
 	Globals.SoundManager.play_music_by_index(RoomEngine.CurrentRoomIndex)
+	Globals.SoundManager.set_music_pause_mode(Globals.PauseMenu.get_music_pause_mode())
 	Globals.GameOverlay.start_fade_in()
 
 
