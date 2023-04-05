@@ -71,7 +71,9 @@
     
 == escalator ==
 
-    It's an out-of-order escalator. The mystical vines are blocking passage.
+    The escalator is out of order. 
+    
+    It's covered in strange vines that seem to twist and turn with Nour's movements, blocking off any passage.
     
     -> END
     

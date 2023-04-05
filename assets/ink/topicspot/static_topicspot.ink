@@ -45,6 +45,9 @@
 
     There's a bunch of trinkets here. They all seem to be familiar shapes, and yet nobody can quite place what they're meant to be.
     
+    Nothing in particular catches Nour's eye.
+>>>>>>> Stashed changes
+    
     -> END
     
 == trinketside ==
