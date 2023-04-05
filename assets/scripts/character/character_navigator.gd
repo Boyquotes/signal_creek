@@ -24,6 +24,7 @@ var walk_speed = default_walk_speed
 var direction_vector := Vector2(0,0)
 var done_following = false
 var following_vector_queue = [Vector2(0, 0)] # Vector2 positions to move towards
+var colliding_with_leader := false
 
 onready var _animation_player = $AnimationPlayer
 onready var following_node
