@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_bandn_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -27,9 +27,9 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_sofa.tscn" type="PackedScene" id=25]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_chair1.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_table.tscn" type="PackedScene" id=27]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_aplequestguide.tscn" type="PackedScene" id=28]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_table2.tscn" type="PackedScene" id=30]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_displaystand.tscn" type="PackedScene" id=33]
-
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 32, 4 )
@@ -641,6 +641,9 @@ position = Vector2( -2, -20 )
 [node name="BookshelfSide6" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 material = SubResource( 71 )
 position = Vector2( -2, 60 )
+
+[node name="AbstractObject" parent="PlaneManager/Overworld" instance=ExtResource( 28 )]
+position = Vector2( 104, 56 )
 
 [node name="BookShelf" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
 material = SubResource( 65 )

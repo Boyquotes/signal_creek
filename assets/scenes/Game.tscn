@@ -24,7 +24,7 @@ glow_blend_mode = 0
 glow_hdr_threshold = 0.2
 glow_high_quality = true
 adjustment_enabled = true
-adjustment_brightness = 0.8
+adjustment_brightness = 0.9
 adjustment_color_correction = ExtResource( 12 )
 
 [sub_resource type="Shader" id=1]
@@ -77,7 +77,6 @@ tracks/0/keys = {
 [node name="Game" type="Node2D"]
 process_priority = 1
 script = ExtResource( 2 )
-testing_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )

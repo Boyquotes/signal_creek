@@ -3,17 +3,20 @@
     It's a really, really weird tree. It's extremely clear that this tree is not like other trees. 
     
     {
-        - weirdtree2:
+        - weirdtree_findgranny:
             -> weirdtree_end //end of ink that should be replaced with the main ink end
-        - consoles3:
-            -> weirdtree2
-        - weirdtree1:
-            -> weirdtree1_repeat
+            
+        - consoles_start_aplequest:
+            -> weirdtree_findgranny
+            
+        - weirdtree_before_aplequest:
+            -> weirdtree_before_aplequest_repeat
+            
         - else:
-            -> weirdtree1
+            -> weirdtree_before_aplequest
     }
     
-=== weirdtree1 ===
+=== weirdtree_before_aplequest ===
 
     NOUR: "This tree looks kinda..."
     
@@ -55,14 +58,14 @@
     
         -> END
 
-=== weirdtree1_repeat ===
+=== weirdtree_before_aplequest_repeat ===
     
     MS. SUWAN: "Don't even think about it."
 
     NOUR: <i>Maybe I can come back to this later...</i>
         -> END
 
-=== weirdtree2 ===
+=== weirdtree_findgranny ===
 
     NOUR: "You know what I'm thinking?"
 

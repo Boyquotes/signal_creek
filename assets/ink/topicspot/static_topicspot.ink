@@ -19,6 +19,8 @@
 // == jewelrystand ==
 
 //     It's a jewelry stand. Max has to write stuff here, so if you're reading this, tell him to write it.
+
+== fishgun ==
     
     It's a toy gun from a weird video game called "Fishgun".
     
