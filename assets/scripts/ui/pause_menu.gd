@@ -1,3 +1,4 @@
+class_name PauseMenu
 extends Control
 
 var panel_opening_speed := 0.25
@@ -7,7 +8,8 @@ var background_panel_max_height
 
 onready var background_panel_node = $Panel
 
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready():
 	Globals.PauseMenu = self
 	self.set_visible(false)
@@ -25,27 +27,7 @@ func _process(_delta):
 		shrink_background_panel()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-func toggle_visible():
-	if self.visible:
-		is_expanding_background_panel = false
-		
-		var bgPanelDefaultPos = background_panel_node.get_position()
-		background_panel_max_height = background_panel_node.get_size().y
-		background_panel_node.set_position(Vector2(bgPanelDefaultPos.x, -background_panel_max_height))
-#		is_shrinking_background_panel = true
-		self.set_visible(false)
-		return
-	
-	is_expanding_background_panel = true
-#	is_shrinking_background_panel = false
-	self.set_visible(true)
-
-
-func _on_Resolution_item_selected(index):
+func _on_Resolution_item_selected(index: int) -> void:
 	if index == 0:
 		OS.window_size = Vector2(960, 540)
 		Globals.PartyCamera.rescale_camera(6)
@@ -64,43 +46,21 @@ func _on_Resolution_item_selected(index):
 	elif index == 3:
 		OS.window_fullscreen = true
 
-func expand_background_panel():
-	var panelPosition = background_panel_node.get_position()
-	
-	if panelPosition.y >= -panel_opening_speed:
-		background_panel_node.set_position(Vector2(panelPosition.x, 0))
-		is_expanding_background_panel = false
-	
-	else:
-		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
-
-
-func shrink_background_panel():
-	var panelPosition = background_panel_node.get_position()
-	
-	if panelPosition.y <= -background_panel_max_height + panel_opening_speed:
-		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
-		is_shrinking_background_panel = false
-		background_panel_node.set_visible(false)
-		
-	else:
-		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
-
 
 func _on_Reset_pressed():
-	Globals.UpdateController.reset_game()
+	Globals.InputDriver.reset_game()
 
 
 func _on_MusicVolumeSlider_value_changed(value):
-	Globals.SoundManager.set_stream_volume(Globals.SoundManager.musicPlayer, value)
+	Globals.SoundManager.set_stream_volume(Globals.SoundManager.music_player, value)
 
 
 func _on_SFXVolumeSlider_value_changed(value):
-	Globals.SoundManager.set_stream_volume(Globals.SoundManager.soundPlayer, value)
+	Globals.SoundManager.set_stream_volume(Globals.SoundManager.sound_player, value)
 
 
 func _on_UIVolumeSlider_value_changed(value):
-	Globals.SoundManager.set_stream_volume(Globals.SoundManager.uiSoundPlayer, value)
+	Globals.SoundManager.set_stream_volume(Globals.SoundManager.ui_sound_player, value)
 
 
 func _on_MuteAudio_toggled(button_pressed):
@@ -117,5 +77,45 @@ func _on_Exit_pressed():
 	pass # Replace with function body.
 
 
-func _on_MenuButton_toggled(button_pressed):
+func _on_MenuButton_toggled(_toggleMode):
 	toggle_visible()
+
+
+func expand_background_panel() -> void:
+	var panelPosition = background_panel_node.get_position()
+	
+	if panelPosition.y >= -panel_opening_speed:
+		background_panel_node.set_position(Vector2(panelPosition.x, 0))
+		is_expanding_background_panel = false
+	
+	else:
+		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
+
+
+func shrink_background_panel() -> void:
+	var panelPosition = background_panel_node.get_position()
+	
+	if panelPosition.y <= -background_panel_max_height + panel_opening_speed:
+		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
+		is_shrinking_background_panel = false
+		background_panel_node.set_visible(false)
+		
+	else:
+		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
+
+
+func toggle_visible() -> void:
+	if self.visible:
+		is_expanding_background_panel = false
+		
+		var bgPanelDefaultPos = background_panel_node.get_position()
+		background_panel_max_height = background_panel_node.get_size().y
+		background_panel_node.set_position(Vector2(bgPanelDefaultPos.x, -background_panel_max_height))
+		self.set_visible(false)
+		return
+	
+	is_expanding_background_panel = true
+	self.set_visible(true)
+
+func get_music_pause_mode() -> bool:
+	return $Panel/PauseMenu/VBoxContainer/MuteAudio.is_pressed()

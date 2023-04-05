@@ -12,5 +12,4 @@
     
     MS. SUWAN: "I can see the appeal."
     
-        
         -> END

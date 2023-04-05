@@ -3,12 +3,12 @@
 {
     - consoles_end:
         -> consoles_end2
-    - nourplaysfantasygame:
+    - nourplaysaplequest:
         -> consoles_end
     //we are toys apple done ->nourplaysfantasygame
     //check - every apple found, emperor tells how many are left
-    - aplequestguide1:
-        -> consoles3
+    - aplequestguide_after_bookshelf_fightstarts:
+        -> consoles_start_aplequest
 //    - noursuggestion:
 //        -> nourplaysfantasygame
     - consoles && consoles2:
@@ -86,7 +86,7 @@
 
         -> END
 
-=== consoles3 ===
+=== consoles_start_aplequest ===
     NOUR: "Look, Nick. It's the game we were reading about before."
     
     NICK: "..."
@@ -96,6 +96,8 @@
     Nick turns his head away, silent.
     
     MS. SUWAN: "Give it up, Nour. He's throwing a tantrum—"
+    
+    &SHLORP_poop_EmperorEvercrisp_in
     
     ???: "NEVER GIVE UP!!!"
     
@@ -187,6 +189,10 @@
     
     EMPEROR EVERCRISP: "Their last coordinates were all within the hallways of the mall."
     
+    EMPEROR EVERCRISP: "HOHO! See you later, friends."
+    
+    &SHLORP_poop_EmperorEvercrisp_out
+    
     NOUR: "Got it. Four apples, one prince, all in the hallway."
     
     NOUR: "Ready for an adventure, Nick?"
@@ -211,9 +217,12 @@
     
         -> END
 
-== nourplaysfantasygame ==
+== nourplaysaplequest ==
 
     NOUR: "Are you ready for the Secret Ending?"
+    
+    //Nick is kinda interested, but he hates that he got vulnerable in front of nour and suwan while talking to the prince, so hes tsundere.
+    //Back to resisting showing interest... bc he has a complex over that yk so like
 
     Nick remains silent and turned away from the console. 
     
@@ -230,10 +239,8 @@
     Nick leans closer but still says nothing. 
     
         * "Have something to say?"
-            -> nicktalksaboutfantasygame
         
         * "Having fun watching?" 
-            -> nicktalksaboutfantasygame
         
         * "Want to join me?"
     
@@ -244,9 +251,6 @@
     NICK: "No, yeah, it's fine. Can I... can I watch?"
     
     Nour moves over slightly to give Nick the space to watch, nodding with a slight smile. 
-        -> nicktalksaboutfantasygame
-
-== nicktalksaboutfantasygame ==
 
     NICK: "..."
     

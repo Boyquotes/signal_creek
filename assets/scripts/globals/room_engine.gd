@@ -1,6 +1,9 @@
+# AUTOLOAD RoomEngine
 extends Node
+
 # Room Engine
-# responsible for functions that change the room the player is currently in
+# Moves player and party between rooms
+# Can access all rooms
 
 const room_BandN = preload("res://assets/scenes/rooms/room_bandn.tscn")
 const room_hallway = preload("res://assets/scenes/rooms/room_hallway.tscn")
@@ -13,12 +16,14 @@ var defaultStartingPos = null
 onready var PlaneManager = null
 onready var CurrentRoom = null
 onready var CurrentRoomIndex = defaultRoomIndex
+
 onready var starter
 onready var bandn = null
 onready var hallway = null
 onready var topicspot = null
 onready var elevator = null
 onready var Rooms = null
+
 
 
 func _ready():
@@ -28,11 +33,10 @@ func _ready():
 	elevator = room_elevator.instance()
 	
 	Rooms = [bandn, hallway, topicspot, elevator, starter]
-	#defaultStartingPos = Rooms[defaultRoomIndex].get_party_starting_position()
 
 
 # Remove previousRoom from viewport, add newRoom to viewport
-func change_current_room(previousRoom, newRoom, viewport):
+func change_current_room(previousRoom, newRoom, viewport: Viewport) -> void:
 	viewport.add_child(newRoom)
 	viewport.remove_child(previousRoom)
 	CurrentRoom = newRoom
@@ -45,27 +49,23 @@ func change_current_room(previousRoom, newRoom, viewport):
 
 
 # Move partyObject from previousRoom to newRoom
-func move_party_to_new_room(partyObject, previousRoom, newRoom):
+func move_party_to_new_room(partyObject: PartyManager, previousRoom, newRoom) -> void:
 	previousRoom.remove_party(partyObject)
 	newRoom.place_party(partyObject)
-	
-
-	
-	
-#	Globals.GameCanvas.set_camera_pos(partyObject.get_leader().get_global_position(), Globals.PartyCamera)
-#	Globals.GameOverlay.start_fade_in()
 	
 	if Globals.Rina and newRoom == Rooms[Globals.Rina.next_room_index]:
 		Globals.Rina.place_rina_in_new_room()
 		print("rina moved")
 
 
-# move objectNode from previousRoom to newRoom
-func move_object_to_new_room(objectNode, previousRoom, newRoom):
+# Move objectNode from previousRoom to newRoom
+func move_object_to_new_room(objectNode, previousRoom, newRoom) -> void:
 	previousRoom.remove_object(objectNode)
 	newRoom.place_object(objectNode)
 
-func reload():
+
+# Replace rooms with new instances
+func reload() -> void:
 	bandn = room_BandN.instance()
 	hallway = room_hallway.instance()
 	topicspot = room_topicSpot.instance()

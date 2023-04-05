@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/objects/sheet_elevatorlights.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/objects/sheet_elevator.png" type="Texture" id=3]
+[ext_resource path="res://assets/prefabs/doortal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/scripts/environment/elevator_area.gd" type="Script" id=5]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=6]
-[ext_resource path="res://assets/scripts/environment/RouteLights.gd" type="Script" id=7]
+[ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=6]
+[ext_resource path="res://assets/scripts/environment/route_lights.gd" type="Script" id=7]
 [ext_resource path="res://assets/textures/lights/glow_64.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=24]
@@ -58,17 +59,22 @@ texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 11, 7, 106, 147 )
 
+[node name="Doortal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 32, 136 )
+room_index = 3
+exit_position = Vector2( 160, 136 )
+entrance_direction = Vector2( 0, -1 )
+
 [node name="RouteLights" type="Node2D" parent="."]
 position = Vector2( 0, -3 )
 script = ExtResource( 7 )
 anim_player = NodePath("../AnimationPlayer")
+elevator_doortal = NodePath("../Doortal")
 
 [node name="SheetElevatorlights" type="Light2D" parent="RouteLights"]
 position = Vector2( 0, -58 )
 texture = ExtResource( 2 )
-energy = 3.87
-mode = 2
-range_height = 2048.0
+energy = 0.8
 range_item_cull_mask = 15
 shadow_item_cull_mask = 7
 

@@ -1,4 +1,6 @@
+class_name DialogueBoxEntry
 extends Control
+
 # DialogueBox Entries (Dialogue and Choice)
 # Dialogue is normal text with a name attached to it
 # Choice also has a list of choices inside it
@@ -13,20 +15,21 @@ export(NodePath) var name_separator
 export(NodePath) var portrait
 export var nametag_space_from_separator := 72.0
 
+
+
 func _ready():
 	pass
 
 
 # Remove all children of object (they're placeholders)
-func remove_placeholders():
-	#contentbox
+func remove_placeholders() -> void:
 	var placeholders = get_node(content_box).get_children()
 	for placeholder in placeholders:
 		get_node(content_box).remove_child(placeholder)
 
 
 # Set color and text contents of name to newName and newColor
-func set_nametag(newName, newColor):
+func set_nametag(newName: String, newColor: Color) -> void:
 	var name_tag = get_node(nametag)
 	name_tag.bbcode_text = '[b]' + newName + '[/b]'
 	
@@ -37,30 +40,31 @@ func set_nametag(newName, newColor):
 	get_node(name_separator).size_flags_stretch_ratio = parentSize - nameStringSize - nametag_space_from_separator
 	
 	name_tag.set("custom_colors/default_color", newColor)
-#	get_node(name_separator).set("border_color", newColor)
 	var newlinestyle = get_node(name_separator).get_stylebox("separator").duplicate()
-#	print(newlinestyle)
+	
 	get_node(name_separator).add_stylebox_override("separator", newlinestyle)
 	get_node(name_separator).get_stylebox("separator").set("color", newColor)
 
+
 # add paragraph child to dialogue entry
-func set_dialogue(dialoguetext):
-	# contentbox
+func set_dialogue(dialoguetext: RichTextLabel) -> void:
 	get_node(content_box).add_child(dialoguetext)
 
 
 # add paragraph child to normal entry
-func set_text(dialoguetext):
+func set_text(dialoguetext: RichTextLabel) -> void:
 	get_node(content_box).add_child(dialoguetext)
 
-func get_text_normal():
+
+func get_text_normal() -> Control:
 	return get_node(content_box).get_children()[0]
 
-func get_dialogue_text():
+
+func get_dialogue_text() -> Control:
 	return get_node(content_box).get_children()[0]
 
 
-# functions specifically if self is a choicebox
+# BELOW: Functions for if self is a choicebox
 
 # Add new choice as a child of choice entry (self)
 func add_choice_child(newNode):

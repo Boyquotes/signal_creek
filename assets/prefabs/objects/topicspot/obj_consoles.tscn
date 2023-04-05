@@ -1,15 +1,45 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_topic_dream.png" type="Texture" id=4]
+[ext_resource path="res://assets/scripts/character/npc_emperorevercrisp.gd" type="Script" id=5]
+[ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 26.5, 6.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 33.5, 32.5 )
+
+[sub_resource type="Shader" id=26]
+code = "shader_type canvas_item;
+
+uniform float time:hint_range(0.0, 1.57, 0.001) = 1.57;
+
+float rand(vec2 co){
+    return fract(sin(dot(co.xy ,vec2(12.9898,96.233))) * 43758.5453);
+}
+
+void fragment()
+{
+	vec2 texture_resolution = 1.0 / TEXTURE_PIXEL_SIZE;
+	vec2 within_texture_pixel=floor(UV * texture_resolution);
+	vec4 color= texture(TEXTURE,UV);
+	
+	if(sin(time) > rand(within_texture_pixel))
+		COLOR = color;
+	else
+		COLOR = vec4(0.0,0.0,0.0,0.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=29]
+shader = SubResource( 26 )
+shader_param/time = 0.0
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 21, 17 )
 
 [node name="Consoles" type="RigidBody2D" groups=["shiftable"]]
 position = Vector2( 0, -10 )
@@ -50,7 +80,47 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 shape = SubResource( 22 )
 
+[node name="EmperorEvercrisp" type="Node2D" parent="."]
+position = Vector2( 8, -24 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="EmperorEvercrisp"]
+light_mask = 4
+material = SubResource( 29 )
+position = Vector2( 0.545455, -8 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 367, 575, 13, 14 )
+
+[node name="Hint" type="Sprite" parent="EmperorEvercrisp"]
+visible = false
+modulate = Color( 1, 1, 1, 0.313726 )
+show_behind_parent = true
+light_mask = 4
+position = Vector2( 0.545455, -8 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 367, 575, 13, 14 )
+
+[node name="ActiveArea" type="Area2D" parent="EmperorEvercrisp"]
+monitoring = false
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+_disable_interactivity = true
+_shlorping_target_path = NodePath("../Sprite")
+_final_knot_name = "consoles3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EmperorEvercrisp/ActiveArea"]
+shape = SubResource( 28 )
+disabled = true
+
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
 [connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
 [connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]
+[connection signal="body_entered" from="EmperorEvercrisp/ActiveArea" to="EmperorEvercrisp/ActiveArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="EmperorEvercrisp/ActiveArea" to="EmperorEvercrisp/ActiveArea" method="_on_InteractArea_body_exited"]

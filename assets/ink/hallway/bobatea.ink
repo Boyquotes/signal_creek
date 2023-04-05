@@ -3,17 +3,20 @@
     The vending machine is full of coffee, sparkling water, and diet sodas. The last row in the vending machine is a row of Specialty Drinks—japanese sodas and canned boba. 
     
     {
-        - bobatea2:
+        - bobatea_find_dukedelicious:
             -> bobatea_end
-        - consoles3:
-            -> bobatea2
-        - bobatea1:
-            -> bobatea1_repeat
+            
+        - consoles_start_aplequest:
+            -> bobatea_find_dukedelicious
+            
+        - bobatea_beforeaplequest:
+            -> bobatea_beforeaplequest_repeat
+            
         - else:
-            -> bobatea1
+            -> bobatea_beforeaplequest
     }
 
-=== bobatea1 ===
+=== bobatea_beforeaplequest ===
     Nick's nose scrunches up.
     
     NICK: "Bleh! Most of these suck."
@@ -24,7 +27,7 @@
     
     NICK: "These all stink except for the boba!"
     
-    NOUR: "But Nick, that stuff's canned. Wouldn't you rather get fresh boba from an actual shop?"
+    NOUR: "Wouldn't you rather get fresh boba from an actual shop?"
     
     NICK: "Mmm...well..."
     
@@ -46,15 +49,15 @@
     
         -> END
 
-=== bobatea1_repeat ===
+=== bobatea_beforeaplequest_repeat ===
     NOUR: <i>We've already looked at all the drinks here.</i>
         
         -> END
 
-=== bobatea2 ===
+=== bobatea_find_dukedelicious ===
     NOUR: <i>We've already looked at all the drinks here.</i>
 
-    NOUR: <i>...Wait a minute. What's that weird drink at the very end of the vending machine></i>
+    NOUR: <i>...Wait a minute. What's that weird drink at the very end of the vending machine?</i>
     
     MS. SUWAN: "There's something...wriggling? Inside that canned boba."
 
@@ -70,9 +73,7 @@
     
     MS. SUWAN: "It'd be a waste to get rid of the boba for the sake of an apple."
     
-    Nick shakes his head. 
-    
-    NICK: "Can't repay you. So I don't want it."
+    Nick shakes his head 'no'.
     
         * [Offer to split the price]
         
@@ -87,11 +88,13 @@
         
     - NOUR: "Would you be more comfortable if we all split the price of the drink?"
     
-    NICK: "...Just 50 cents each?"
+    NICK: "...50 cents each?"
         
     MS. SUWAN: "Exactly."
     
-    NICK: "You should have some too, then. To make it fair."
+    Nick sighs and mumbles.
+    
+    NICK: "...You have some too. Make it fair."
     
     NOUR: "We will."
     
@@ -121,39 +124,47 @@
     
     - The can is opened, and an apple squeezes out!
     
+    &SHLORP_APPLE_DukeDelicious_in
+    
     ???: "FREEDOM..."
     
-    NICK: "Woah...!"
+    NICK: "...!"
     
     ???: "SWEET, SWEET FREEDOM!"
     
-    ???: "THIS BOBA PRISON SHALL NO LONGER CONTAIN ME!"
+    ???: "THIS CYLINDRICAL METAL PRISON SHALL NO LONGER CONTAIN ME!"
         
     NOUR: "Um, hello. We're on behalf of Emperor Evercrisp to rescue you."
     
     ???: "Ah...yes. Thank you! HAR HAR!"
     
-    ???: "It seems I, <i>ROYAL GUARD GALA</i>, have failed to find my prince."
+    NOUR: "What's your name?"
     
-    ROYAL GUARD GALA: "I hope that you may continue the search and bear the fruits of success, HAR HAR!"
+    ???: "It is I, <i>DUKE DELICIOUS</i>!"
     
-    ROYAL GUARD GALA: "As a small reward, let me tell you something special that may help you on your multi-plane journey, Dream Walkers!"
+    DUKE DELICIOUS: "But my friends call me Red."
     
-    ROYAL GUARD GALA: "[insert epic lore drop here]"
+    DUKE DELICIOUS: "Alas, I have failed to find my prince. I hope that you may continue in my stead and bear the fruits of success, HAR HAR!"
+    
+    DUKE DELICIOUS: "As a small reward, let me tell you something special that may help you on your multi-plane journey, Dream Walkers!"
+    
+    DUKE DELICIOUS: "[insert epic lore drop here]"
     
     NOUR: "Huh. Interesting..."
     
-    ROYAL GUARD GALA: "Let us charge forth and CONTINUE THE SEARCH!"
+    DUKE DELICIOUS: "Now, I shall rejoin my liege, but humans! Charge forth and SEARCH FOR THE PRINCE!"
+    
+    &SHLORP_APPLE_DukeDelicious_out
     
     NOUR: "Well, you heard what he said. Shall we?"
     
-    Ms. Suwan nods, and Nick drinks the boba. 
+    Ms. Suwan nods, and Nick drinks the canned boba. 
     
     NOUR: "How's that tasting, Nick?"
     
     NICK: "Bad."
     
-    Nick drinks more of it.
+    Nick gulps more of it down.
     
     NOUR: "...Sure it is. Make sure to save some for the rest of us."
     

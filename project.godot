@@ -9,20 +9,135 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "NPCBehavior",
+"class": "Brody",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_brody.gd"
+}, {
+"base": "Camera2D",
+"class": "CameraManager",
+"language": "GDScript",
+"path": "res://assets/scripts/globals/camera_manager.gd"
+}, {
+"base": "NPCBehavior",
+"class": "Chad",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_chad.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "CharacterNavigator",
 "language": "GDScript",
 "path": "res://assets/scripts/character/character_navigator.gd"
+}, {
+"base": "Control",
+"class": "ColorManager",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/color_manager.gd"
+}, {
+"base": "Control",
+"class": "DialogueBox",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/dialogue_box.gd"
+}, {
+"base": "Control",
+"class": "DialogueBoxEntry",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/dialoguebox_entry.gd"
+}, {
+"base": "RichTextLabel",
+"class": "DialogueBoxEntryChoice",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/dialoguebox_entrychoices_choice.gd"
 }, {
 "base": "Area2D",
 "class": "Doortal",
 "language": "GDScript",
 "path": "res://assets/scripts/environment/doortal.gd"
 }, {
+"base": "NPCBehavior",
+"class": "DukeDelicious",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_dukedelicious.gd"
+}, {
+"base": "NPCBehavior",
+"class": "EarlEarligold",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_earlearligold.gd"
+}, {
+"base": "Interactive",
+"class": "ElevatorArea",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/elevator_area.gd"
+}, {
+"base": "Light2D",
+"class": "ElevatorDoorsFloorlight",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/elevator_doors_floorlight.gd"
+}, {
+"base": "NPCBehavior",
+"class": "EmperorEvercrisp",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_emperorevercrisp.gd"
+}, {
+"base": "NPCBehavior",
+"class": "FatherFuji",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_fatherfuji.gd"
+}, {
+"base": "NPCBehavior",
+"class": "GrandDuchessGranny",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_grandduchessgranny.gd"
+}, {
+"base": "Node",
+"class": "InputDriver",
+"language": "GDScript",
+"path": "res://assets/scripts/globals/input_driver.gd"
+}, {
 "base": "Area2D",
 "class": "Interactive",
 "language": "GDScript",
 "path": "res://assets/scripts/environment/interactive.gd"
+}, {
+"base": "NPCBehavior",
+"class": "Kristy",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_kristy.gd"
+}, {
+"base": "Area2D",
+"class": "LocationTrigger",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/location_trigger.gd"
+}, {
+"base": "Interactive",
+"class": "NPCBehavior",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_behavior.gd"
+}, {
+"base": "YSort",
+"class": "PartyManager",
+"language": "GDScript",
+"path": "res://assets/scripts/character/party.gd"
+}, {
+"base": "Control",
+"class": "PauseMenu",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/pause_menu.gd"
+}, {
+"base": "Node",
+"class": "PlaneManager",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/plane_manager.gd"
+}, {
+"base": "NPCBehavior",
+"class": "PrincePendragon",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_princependragon.gd"
+}, {
+"base": "NPCBehavior",
+"class": "PrincessPinkLady",
+"language": "GDScript",
+"path": "res://assets/scripts/character/npc_princesspinklady.gd"
 }, {
 "base": "Node2D",
 "class": "RoomVars",
@@ -30,16 +145,75 @@ _global_script_classes=[ {
 "path": "res://assets/scripts/environment/room_vars.gd"
 }, {
 "base": "Node2D",
+"class": "RouteLights",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/route_lights.gd"
+}, {
+"base": "Node",
+"class": "ScreenOverlay",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/screen_overlay.gd"
+}, {
+"base": "Node2D",
 "class": "Shiftable",
 "language": "GDScript",
 "path": "res://assets/scripts/environment/shiftable.gd"
+}, {
+"base": "Node",
+"class": "SoundManager",
+"language": "GDScript",
+"path": "res://assets/scripts/globals/sound_manager.gd"
+}, {
+"base": "Node2D",
+"class": "SpeechBubble",
+"language": "GDScript",
+"path": "res://assets/scripts/character/speech_bubble.gd"
+}, {
+"base": "Panel",
+"class": "StartScreen",
+"language": "GDScript",
+"path": "res://assets/scripts/ui/start_screen.gd"
+}, {
+"base": "Area2D",
+"class": "TutorialTrigger",
+"language": "GDScript",
+"path": "res://assets/scripts/environment/tutorial_trigger.gd"
 } ]
 _global_script_class_icons={
+"Brody": "",
+"CameraManager": "",
+"Chad": "",
 "CharacterNavigator": "",
+"ColorManager": "",
+"DialogueBox": "",
+"DialogueBoxEntry": "",
+"DialogueBoxEntryChoice": "",
 "Doortal": "",
+"DukeDelicious": "",
+"EarlEarligold": "",
+"ElevatorArea": "",
+"ElevatorDoorsFloorlight": "",
+"EmperorEvercrisp": "",
+"FatherFuji": "",
+"GrandDuchessGranny": "",
+"InputDriver": "",
 "Interactive": "",
+"Kristy": "",
+"LocationTrigger": "",
+"NPCBehavior": "",
+"PartyManager": "",
+"PauseMenu": "",
+"PlaneManager": "",
+"PrincePendragon": "",
+"PrincessPinkLady": "",
 "RoomVars": "",
-"Shiftable": ""
+"RouteLights": "",
+"ScreenOverlay": "",
+"Shiftable": "",
+"SoundManager": "",
+"SpeechBubble": "",
+"StartScreen": "",
+"TutorialTrigger": ""
 }
 
 [application]
@@ -60,9 +234,10 @@ default_bus_layout=""
 
 [autoload]
 
+StaticFunctions="*res://assets/scripts/globals/static_functions.gd"
 Globals="*res://assets/scripts/globals/global_vars.gd"
-DialogueEngine="*res://assets/scripts/ui/dialogue_engine.gd"
 RoomEngine="*res://assets/scripts/globals/room_engine.gd"
+DialogueEngine="*res://assets/scripts/ui/dialogue_engine.gd"
 InkCommands="*res://assets/scripts/ui/ink_commands.gd"
 
 [debug]
@@ -93,10 +268,10 @@ enabled=PoolStringArray( "res://addons/paulloz.ink/plugin.cfg" )
 
 [global]
 
-build=false
 marshall=false
 variables=false
 dependencies=false
+build=false
 
 [importer_defaults]
 
