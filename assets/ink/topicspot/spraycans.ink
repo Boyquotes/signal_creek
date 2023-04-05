@@ -3,21 +3,23 @@
 It's a bunch of spray cans. 
 
 {
-    - spraycans2:
+    - spraycans_afternickroute:
         -> spraycans_end
-    - nourplaysfantasygame:
-        -> spraycans2
-    - noursuggestion:
-        -> nicknotinterested
-    - spraycans1:
-        -> spraycans1_repeat
+        
+    - nourplaysaplequest:
+        -> spraycans_afternickroute
+    // - noursuggestion:
+    //     -> nicknotinterested
+    - spraycans_start:
+        -> spraycans_start_repeat
+        
     - else:
-        -> spraycans1
+        -> spraycans_start
 }
 
 -> END
 
-=== spraycans1 ===
+=== spraycans_start ===
     
     NICK: "Hey, Nour, Ms.Suwan! You think you could buy me one of these? I'll pay you back later." 
     
@@ -68,7 +70,7 @@ It's a bunch of spray cans.
         -> light_on
 // -> END
 
-=== spraycans1_repeat ===
+=== spraycans_start_repeat ===
 
     NICK: "Bringing me back here isn't really helping your point about 'cooler hobbies' or whatever."
     
@@ -78,19 +80,19 @@ It's a bunch of spray cans.
     
         -> END
 
-=== nicknotinterested ===
+// === nicknotinterested ===
 
-    - Nick's gaze seems to linger on the spray cans, but then quickly glances away, bouncing on the balls of his feet.
+//     - Nick's gaze seems to linger on the spray cans, but then quickly glances away, bouncing on the balls of his feet.
     
-    NOUR: <i>Still not talking, huh?</i>
+//     NOUR: <i>Still not talking, huh?</i>
     
-    NOUR: <i>I need to find something fun AND safe for him to speak again...</i>
+//     NOUR: <i>I need to find something fun AND safe for him to speak again...</i>
     
-    NOUR: <i>Maybe there's something else in this place I could take a look at.</i>
+//     NOUR: <i>Maybe there's something else in this place I could take a look at.</i>
         
-        -> END
+//         -> END
 
-=== spraycans2 ===
+=== spraycans_afternickroute ===
     NOUR: "You know, when you're an adult, you can make decisions for yourself to purchase whatever you want."
     
     NOUR: "We just hope they're decisions that benefit you, not harm you."

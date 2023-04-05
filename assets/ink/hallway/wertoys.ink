@@ -3,18 +3,21 @@
     It's the old toy store, <i>We R Toys</i>.
 
     {
-        - wertoys2:
+        - wertoys_find_prince:
             -> wertoys_end
-        - consoles3 && beautystand2 && bobatea2 && fountain2 && weirdtree2:
-            -> wertoys2
-        - wertoys1:
-            -> wertoys1_repeat
+            
+        - consoles_start_aplequest && beautystand_find_pinklady && bobatea_find_dukedelicious && fountain_findfather && weirdtree_findgranny:
+            -> wertoys_find_prince
+            
+        - wertoys_before_aplequest:
+            -> wertoys_before_aplequest_repeat
+            
         - else:
-            -> wertoys1
+            -> wertoys_before_aplequest
     }
     
 
-== wertoys1 ==
+== wertoys_before_aplequest ==
 
     NOUR: "I remember coming here as a kid. Always fought with my parents about what kind of toys are normal for me to get as a young girl."
     
@@ -30,7 +33,7 @@
     
     -> END
 
-== wertoys2 == 
+== wertoys_find_prince == 
     
     NOUR: "..."
     
@@ -38,9 +41,9 @@
     
     NOUR: "What the... Hello?"
     
-    ???: "Down here."
+    &SHLORP_APPLE_PrincePendragon_in
     
-    (PRINCE PENDRAGON APPLE EMERGES FROM THE DARKNESS)
+    ???: "Down here."
     
     PRINCE PENDRAGON: "I am the fallen Prince... Prince Pendragon."
     
@@ -164,7 +167,7 @@
     
     PRINCE PENDRAGON: "I must return to space! Perhaps... it is <i>I</i> who will bring peace to the fruits!"
     
-    PRINCE PENDRAGON SHLORPS OUT
+    &SHLORP_APPLE_PrincePendragon_out
     
     NICK: "..."
     
@@ -184,13 +187,17 @@
     
     NICK: "Thanks."
     
-    NICK: "Hey, wanna play Aple Quest with me?"
+    // NICK: "Hey, wanna play Aple Quest with me?"
     
-    NOUR: "Let's do it."
+    NOUR: <i>Now that Nick is excited about the secret ending, maybe he'll be willing to talk over a game of Aple Quest.</i>
+    
+    NOUR: "Wanna play Aple Quest?"
+    
+    NICK: "..."
     
     -> END
 
-=== wertoys1_repeat ===
+=== wertoys_before_aplequest_repeat ===
 
     With the lack of toys inside, it can hardly be called a toy store anymore.
     
