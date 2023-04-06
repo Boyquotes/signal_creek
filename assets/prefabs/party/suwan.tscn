@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_suwan_past.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 5, 3.5 )
+extents = Vector2( 5, 4.5 )
 
 [node name="SUWAN" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 4

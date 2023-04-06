@@ -141,5 +141,7 @@ func get_current_portrait() -> Texture:
 # Set expression portrait that is assigned to a character
 func set_character_portrait(characterName: String, expressionName: String) -> void:
 	var portraitToUse = portraitLibrary.get(expressionName)
-	characterPortraits[characterName] = portraitToUse
+	
+	if portraitToUse:
+		characterPortraits[characterName] = portraitToUse
 

@@ -37,7 +37,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 5, 3.5 )
+extents = Vector2( 5, 4 )
 
 [node name="NICK" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 4
@@ -62,5 +62,5 @@ anims/ButtonPress = SubResource( 21 )
 anims/LookAround = SubResource( 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -3.5 )
+position = Vector2( 0, -3 )
 shape = SubResource( 6 )
