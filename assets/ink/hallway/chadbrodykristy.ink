@@ -20,11 +20,29 @@
 
 == chadbrodykristy1==
 
-// STAGING: START FURTHER BACK
+    NOUR: "Hello... Would you guys know anything about-"
+    
+    &FOLLOW_NICK_NickCBKStart
+    
+    &FOLLOW_SUWAN_SuwanCBKStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NICK_UpIdle
+    
+    &PORTRAIT_nick_nickworried
 
     NICK: "Hey, are these people real? How'd they even get in here?"
     
     &PORTRAIT_ms. suwan_suwannervous
+    
+    &FOLLOW_NOUR_NourCBKStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_RightIdle
     
     NOUR: <i>Maybe they know a way out of here.</i>
     
@@ -35,10 +53,14 @@
                 ** "Fair enough. Ms. Suwan what do you think?"
     
         * "Ms. Suwan, can you ask them for help?"
-    //MS. SUWAN not MS.SUWAN for character tag 
+
     - MS. SUWAN: "..."
     
     NOUR: "...Ms. Suwan? Are you listening?"
+    
+    &PORTRAIT_nick_nickangry
+    
+    &EMOTE_nick_LeftIdle
 
     NICK: "Hey, lady!!!"
     
@@ -60,6 +82,8 @@
     
     - NOUR: <i>If... they're even real?</i>
     
+    &PORTRAIT_nick_nickworried
+    
     NICK: "What kind of repair guy could fix a magical elevator?"
     
     &PORTRAIT_ms. suwan_suwannervous
@@ -72,11 +96,17 @@
     
     &PORTRAIT_nour_nourannoyed
 
-    NOUR: "Fine. I'll talk to them."
+    NOUR: "Fine. I'll ask them again."
     
     //NOUR WALKS CLOSER
     
+    &FOLLOW_NOUR_SuwanCBKTalk
+    
     &PORTRAIT_nour_nourneutral
+    
+    &PAUSE_0.7
+    
+    &EMOTE_NOUR_UpIdle
     
     NOUR: "Look, we're sorry to bother you, but we really need help right now."
     
@@ -97,6 +127,12 @@
     &PORTRAIT_???_chadannoyed
     
     ???: "Strangers?"
+    
+    &FOLLOW_NOUR_NourCBKStart
+    
+    &PAUSE_0.175
+    
+    &EMOTE_NOUR_UpIdle
     
     &PORTRAIT_ms. suwan_suwannervous
     
@@ -128,9 +164,11 @@
     
     &PORTRAIT_nour_nourneutral
     
+    &EMOTE_NOUR_RightIdle
+    
     NOUR: "Ms. Suwan? Are you... okay?"
     
-    &PORTRAIT_ms. suwan_suwandoom
+    &PORTRAIT_ms. suwan_suwanshadow
     
     MS. SUWAN: "..."
     
@@ -139,6 +177,8 @@
     BRODY: "Once she finds her words, she'll spin us some new excuse for what she did."
     
     NOUR: "Ms. Suwan, do you—"
+    
+    &PORTRAIT_ms. suwan_suwanshadow
     
     MS. SUWAN: "We're leaving."
     
@@ -163,6 +203,12 @@
     MS. SUWAN: "I have nothing to say. Let us go."
     
     NICK: "I'm still thinking about the rock shows that you <i>supposedly</i> went to..."
+    
+    &FOLLOW_NOUR_stop
+    
+    &PORTRAIT_nour_nourpondering
+    &PORTRAIT_ms. suwan_suwanneutral
+    &PORTRAIT_nick_nicknetural
 
     -> chadbrodykristy1_repeat
             
@@ -180,15 +226,39 @@
     
     NOUR: "You can't keep avoiding this. It'll eat you up inside."
     
+    &FOLLOW_NICK_NickCBKStart
+    
+    &FOLLOW_SUWAN_SuwanCBKStart
+    
+    &FOLLOW_NOUR_NourCBKStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &PORTRAIT_suwan_suwanannoyed
+    
     MS. SUWAN: "...I suppose."
 
-    //ms suwan walks closer
+    &FOLLOW_SUWAN_SuwanCBKTalk
+    
+    &PAUSE_1.5
+    
+    &PORTRAIT_ms. suwan_suwanannoyed
+    
+    &EMOTE_NOUR_UpIdle
     
     BRODY: "You <i>finally</i> decide to speak to us!"
     
     MS. SUWAN: "...How are you here?"
     
     KRISTY: "Why did you abandon us, Niki? You know, we really missed you."
+    
+    &PORTRAIT_ms. suwan_suwannervous
     
     MS. SUWAN: "I didn't abandon you, I had-"
     
@@ -224,11 +294,19 @@
     
     MS. SUWAN: "..."
     
+    &EMOTE_SUWAN_DownIdle
+    
+    &FOLLOW_SUWAN_SuwanCBKStart
+    
     &PORTRAIT_ms. suwan_suwanannoyed
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_NICK_LeftIdle
     
     MS. SUWAN: "I want to leave. Now."
     
-
+    &PORTRAIT_nour_nournervous
     
     * "Don't you want to apologize?"
     
@@ -236,7 +314,9 @@
     
     - MS. SUWAN: "I <i>said</i> I want to leave."
     
-    &PORTRAIT_nick_nickrealization
+    &PORTRAIT_nick_nickworried
+    
+    &PORTRAIT_nour_nourneutral
     
     NICK: "...Hold on, you guys studied at a Cafe? You know, there's one <i>here</i>."
     
@@ -247,6 +327,14 @@
     NOUR: <i>Ms. Suwan could've saved her friendships if she had done things differently.</i>
     
     NOUR: <i>She's pretty dismissive about the Cafe... Nick might be onto something.</i>
+    
+    &PORTRAIT_ms. suwan_suwanneutral
+    &PORTRAIT_nick_nicknetural
+    &PORTRAIT_nour_nourneutral 
+    
+    &FOLLOW_NOUR_stop
+    &FOLLOW_SUWAN_NICK
+    &FOLLOW_NICK_NOUR
 
     &LIGHT_Suwan0
     
@@ -257,6 +345,8 @@
 
     NOUR: <i>Seems like I'm not the only one with bittersweet memories attached to the mall Cafe.</i>
     
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: <i>Clearly, Ms. Suwan was supposed to study there with these three.</i>
     
     NOUR: <i>Maybe she'll open up to us about it if we go.</i>
@@ -266,20 +356,38 @@
 === chadbrodykristy3 ===
     
     NOUR: "We're back. Go ahead, Ms. Suwan."
+    
+    &FOLLOW_NICK_NickCBKStart
+    
+    &FOLLOW_SUWAN_SuwanCBKStart
+    
+    &FOLLOW_NOUR_NourCBKStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_NICK_UpIdle
 
-    //ms. suwan walks closer.
+    &FOLLOW_SUWAN_SuwanCBKTalk
     
     &PORTRAIT_ms. suwan_suwannervous
     
+    &PAUSE_1.5
+    
     MS. SUWAN: "..."
     
-    &PORTRAIT_ms. suwan_suwandoom
+    &PORTRAIT_ms. suwan_suwanshadow
     
     KANNIKA: "I-I didn't mean to push you all away. I needed to get ahead, and..."
     
     KANNIKA: "..."
     
     KANNIKA: "...I'm done with excuses. I'm sorry for being a terrible friend."
+    
+    &PORTRAIT_suwan_suwanneutral
     
     KANNIKA: "You were wonderful friends, and I was too focused on my career to see that."
     
@@ -298,6 +406,12 @@
     KANNIKA: "This is a long overdue <i>thank you</i>."
     
     <i>Ms. Suwan shows them the album. Chad, Brody, and Kristy stare... and then smile sadly at her.</i>
+    
+    &PORTRAIT_chad_chadsad
+    
+    &PORTRAIT_brody_brodysad
+    
+    &PORTRAIT_kristy_kristysad
     
     BRODY: "We just wanted to be there for you so you didn't burn yourself out."
     
@@ -323,7 +437,11 @@
     
     BRODY: "But I'm not fully convinced that you've changed..."
     
+    &PORTRAIT_brody_brodyannoyed
+    
     BRODY: "Look, you're exactly the person you always wanted to be. Good for you."
+    
+    &PORTRAIT_ms. suwan_suwansad
     
     KANNIKA: "Brody... what I said back then—"
     
@@ -347,6 +465,8 @@
     
     &SHLORP_CBK_Chad_out
     
+    &PORTRAIT_ms. suwan_suwannervous
+    
     KANNIKA: "..."
     
     NOUR: "Are you okay?"
@@ -355,13 +475,21 @@
     
     NOUR: "I'm sorry it turned out that way."//possible space for gather
     
+    &PORTRAIT_ms. suwan_suwanshadow
+    
     MS. SUWAN: "...I did not expect anything to change miraculously."
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: "Maybe if we could find them again, we could change how—"
+    
+    &PORTRAIT_ms. suwan_suwansad
     
     MS. SUWAN: "I've spent so much time fighting my regrets, but now that I have faced my past... I can lay it to rest."
     
     NOUR: "But don't you think you could be happier if it had gone better?"
+    
+    &PORTRAIT_ms. suwan_suwanneutral
     
     MS. SUWAN: "We are unable to change the past. We can only face it, and choose to accept it."
     
@@ -373,13 +501,15 @@
     
     MS. SUWAN: "Look forward, and worry about the things you <i>can</i> change."
     
+    &PORTRAIT_nour_nournetural
+    
     NOUR: "..."
     
     NOUR: <i>...She seems to be more at peace, even though she can't change her past.</i>
     
     &LIGHT_Suwan2
     
-    LIGHT ON BEEP BOOP
+    &FOLLOW_NOUR_stop
     
     An elevator <i>ding</i> is heard from the hallway.
     
@@ -390,6 +520,8 @@
     &MOV_RINA_HALLWAY
     
     MS. SUWAN: "Nour, your old friend is here."
+    
+    &PORTRAIT_nour_nourneutral
     
     MS. SUWAN: "If I could face the mistakes I made with Chad, Brody, and Kristy... I believe you are prepared to do the same with her."
     
