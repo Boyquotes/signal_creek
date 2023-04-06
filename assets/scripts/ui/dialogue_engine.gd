@@ -64,3 +64,5 @@ func create_entry_choices(newChoices: Array, currentSpeaker: String, entryAsset:
 		newEntry.add_choice_child(newDivert)
 		
 	return newEntry
+
+

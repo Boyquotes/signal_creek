@@ -248,6 +248,7 @@ func shrink_background_panel() -> void:
 		background_panel_node.set_visible(false)
 		#RESET DIALOGUE BOX
 		clear_and_reset_ui()
+		Globals.ColorManager.set_party_portraits_to_neutral()
 		
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))

@@ -1,6 +1,3 @@
--> weirdtree_findgranny
-
-
 === weirdtree ===
 
     It's a really weird tree. It's extremely clear that this tree is not like the others. 

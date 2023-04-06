@@ -21,7 +21,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 5, 4 )
+extents = Vector2( 5, 3.5 )
 
 [node name="NOUR" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
