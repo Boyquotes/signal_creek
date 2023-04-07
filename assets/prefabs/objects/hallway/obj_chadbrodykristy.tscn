@@ -1,43 +1,61 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/scripts/character/npc_brody.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/character/npc_chad.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/character/npc_kristy.gd" type="Script" id=3]
 [ext_resource path="res://assets/alpha/sprites_alpha/characters/placeholders/sheet_chadbrodykristy.png" type="Texture" id=4]
-[ext_resource path="res://assets/materials/material_sussy.tres" type="Material" id=5]
-
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
-
-uniform float time:hint_range(0.0, 1.57, 0.001) = 1.57;
-
-float rand(vec2 co){
-    return fract(sin(dot(co.xy ,vec2(12.9898,96.233))) * 43758.5453);
-}
-
-void fragment()
-{
-	vec2 texture_resolution = 1.0 / TEXTURE_PIXEL_SIZE;
-	vec2 within_texture_pixel=floor(UV * texture_resolution);
-	vec4 color= texture(TEXTURE,UV);
-	
-	if(sin(time) > rand(within_texture_pixel))
-		COLOR = color;
-	else
-		COLOR = vec4(0.0,0.0,0.0,0.0);
-}"
+[ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp.tres" type="Shader" id=5]
 
 [sub_resource type="ShaderMaterial" id=28]
-shader = SubResource( 1 )
+resource_local_to_scene = true
+shader = ExtResource( 5 )
 shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.5
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
 
 [sub_resource type="ShaderMaterial" id=29]
-shader = SubResource( 1 )
+resource_local_to_scene = true
+shader = ExtResource( 5 )
 shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.5
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
 
 [sub_resource type="ShaderMaterial" id=30]
-shader = SubResource( 1 )
+resource_local_to_scene = true
+shader = ExtResource( 5 )
 shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.5
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 21.5, 6 )
@@ -74,33 +92,6 @@ region_rect = Rect2( 25, 5, 18, 31 )
 [node name="KristySprite" type="Sprite" parent="."]
 light_mask = 4
 material = SubResource( 30 )
-position = Vector2( -16, 0 )
-texture = ExtResource( 4 )
-offset = Vector2( -1, -16 )
-region_enabled = true
-region_rect = Rect2( 4, 11, 21, 32 )
-
-[node name="ChadSprite2" type="Sprite" parent="."]
-light_mask = 4
-material = ExtResource( 5 )
-position = Vector2( 20, -1 )
-texture = ExtResource( 4 )
-offset = Vector2( 0, -14 )
-region_enabled = true
-region_rect = Rect2( 43, 13, 17, 29 )
-
-[node name="BrodySprite2" type="Sprite" parent="."]
-light_mask = 4
-material = ExtResource( 5 )
-position = Vector2( 0, -7 )
-texture = ExtResource( 4 )
-offset = Vector2( 0, -15 )
-region_enabled = true
-region_rect = Rect2( 25, 5, 18, 31 )
-
-[node name="KristySprite2" type="Sprite" parent="."]
-light_mask = 4
-material = ExtResource( 5 )
 position = Vector2( -16, 0 )
 texture = ExtResource( 4 )
 offset = Vector2( -1, -16 )
