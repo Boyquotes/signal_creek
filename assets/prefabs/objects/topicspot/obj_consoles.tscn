@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/sprites/objects/sheet_topic_dream.png" type="Texture" id=4]
 [ext_resource path="res://assets/scripts/character/npc_emperorevercrisp.gd" type="Script" id=5]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=6]
+[ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=7]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 26.5, 6.5 )
@@ -13,30 +14,26 @@ extents = Vector2( 26.5, 6.5 )
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 33.5, 32.5 )
 
-[sub_resource type="Shader" id=26]
-code = "shader_type canvas_item;
-
-uniform float time:hint_range(0.0, 1.57, 0.001) = 1.57;
-
-float rand(vec2 co){
-    return fract(sin(dot(co.xy ,vec2(12.9898,96.233))) * 43758.5453);
-}
-
-void fragment()
-{
-	vec2 texture_resolution = 1.0 / TEXTURE_PIXEL_SIZE;
-	vec2 within_texture_pixel=floor(UV * texture_resolution);
-	vec4 color= texture(TEXTURE,UV);
-	
-	if(sin(time) > rand(within_texture_pixel))
-		COLOR = color;
-	else
-		COLOR = vec4(0.0,0.0,0.0,0.0);
-}"
-
 [sub_resource type="ShaderMaterial" id=29]
-shader = SubResource( 26 )
-shader_param/time = 0.0
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/progress = 1.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.089
+shader_param/color_shlorp = Color( 0, 1.02, 1.2, 1 )
+shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.5
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
 
 [sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 21, 17 )

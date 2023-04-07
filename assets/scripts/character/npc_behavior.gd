@@ -64,7 +64,7 @@ func set_monitoring_ready():
 # Appear from the void (visually)
 func shlorp_in():
 	_shlorping_target.set_visible(true)
-	_shlorping_target.material.set_shader_param("time", 0.0)
+	_shlorping_target.material.set_shader_param("progress", 1.0)
 	_shlorping_in = true
 	visibility = true
 	if not _override_set_monitoring:
@@ -80,14 +80,14 @@ func shlorp_out() -> void:
 
 
 func shlorp():
-	var timeValue = _shlorping_target.material.get_shader_param("time")
+	var timeValue = _shlorping_target.material.get_shader_param("progress")
 	
 	if _shlorping_out:
-		_shlorping_target.material.set_shader_param("time", timeValue - .05)
-		if timeValue < .05:
+		_shlorping_target.material.set_shader_param("progress", timeValue + .05)
+		if timeValue > .95:
 			_shlorping_target.set_visible(false)
 			_shlorping_out = false
-			_shlorping_target.material.set_shader_param("time", 0)
+			_shlorping_target.material.set_shader_param("progress", 1.0)
 			
 			if _physical_collider:
 				_physical_collider.set_deferred("disabled", true)
@@ -95,10 +95,10 @@ func shlorp():
 			return
 			
 	elif _shlorping_in:
-		_shlorping_target.material.set_shader_param("time", timeValue + .05)
-		if timeValue > 1.56:
+		_shlorping_target.material.set_shader_param("progress", timeValue - .05)
+		if timeValue < 0.05:
 			_shlorping_in = false
-			_shlorping_target.material.set_shader_param("time", 1.57)
+			_shlorping_target.material.set_shader_param("progress", 0)
 			
 			if _physical_collider:
 				_physical_collider.set_deferred("disabled", false)
