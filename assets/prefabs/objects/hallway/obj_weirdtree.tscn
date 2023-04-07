@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
+[ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/scripts/character/npc_grandduchessgranny.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/materials/material_sussy.tres" type="Material" id=6]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -48,6 +50,15 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
+material = ExtResource( 3 )
+position = Vector2( -1, -76 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 391, 516, 63, 161 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+light_mask = 4
+material = ExtResource( 6 )
 position = Vector2( -1, -76 )
 texture = ExtResource( 5 )
 region_enabled = true
@@ -59,7 +70,6 @@ modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
 position = Vector2( -1, -76 )
-texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 391, 516, 63, 161 )
 
@@ -106,10 +116,10 @@ disabled = true
 position = Vector2( 0, -20 )
 shape = SubResource( 23 )
 
-[node name="Interactive" type="Area2D" parent="."]
+[node name="ActiveArea" type="Area2D" parent="."]
 script = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactive"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 position = Vector2( 0, -13 )
 shape = SubResource( 25 )
 
@@ -117,3 +127,7 @@ shape = SubResource( 25 )
 [connection signal="body_exited" from="GrandDuchessGranny/ActiveArea" to="GrandDuchessGranny/ActiveArea" method="_on_InteractArea_body_exited"]
 [connection signal="can_interact" from="GrandDuchessGranny/ActiveArea" to="GrandDuchessGranny" method="_on_ActiveArea_can_interact"]
 [connection signal="cannot_interact" from="GrandDuchessGranny/ActiveArea" to="GrandDuchessGranny" method="_on_ActiveArea_cannot_interact"]
+[connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
+[connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]

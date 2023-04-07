@@ -30,8 +30,8 @@ func create_entry_dialogue(newText: String, entryAsset: PackedScene, entryParagr
 	
 	Globals.ColorManager.set_current_color(dialogueLine[0])
 	
-	newEntry.set_nametag(dialogueLine[0], Globals.ColorManager.get_current_color())
-	newEntry.set_portrait(Globals.ColorManager.get_current_portrait())
+	var isSussyPortrait = newEntry.set_nametag(dialogueLine[0], Globals.ColorManager.get_current_color())
+	newEntry.set_portrait(Globals.ColorManager.get_current_portrait(), isSussyPortrait)
 	newEntry.remove_placeholders()
 	
 	var newParagraph = entryParagraph.instance()
@@ -49,8 +49,8 @@ func create_entry_choices(newChoices: Array, currentSpeaker: String, entryAsset:
 	
 	Globals.ColorManager.set_current_color(currentSpeaker)
 	
-	newEntry.set_nametag(currentSpeaker, Globals.ColorManager.get_current_color())
-	newEntry.set_portrait(Globals.ColorManager.get_current_portrait())
+	var isSussyPortrait = newEntry.set_nametag(currentSpeaker, Globals.ColorManager.get_current_color())
+	newEntry.set_portrait(Globals.ColorManager.get_current_portrait(), isSussyPortrait)
 	
 	for option in newChoices: #iterate through choices, add nodes as children
 		var newDivert = choiceAsset.instance()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/character/rinas_brain.gd" type="Script" id=2]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/materials/material_pixelate_in.tres" type="Material" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_old.png" type="Texture" id=5]
+[ext_resource path="res://assets/materials/material_sussy.tres" type="Material" id=6]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 5, 3.5 )
@@ -23,6 +24,14 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 4 )
+position = Vector2( 0, -17 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 50, 23, 24, 34 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+light_mask = 4
+material = ExtResource( 6 )
 position = Vector2( 0, -17 )
 texture = ExtResource( 5 )
 region_enabled = true
