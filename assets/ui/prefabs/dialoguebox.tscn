@@ -1,10 +1,10 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
 [ext_resource path="res://assets/sprites/characters/portraits/ms suwan/portrait_mssuwan_neutral.png" type="Texture" id=3]
 [ext_resource path="res://addons/paulloz.ink/InkPlayer.cs" type="Script" id=4]
-[ext_resource path="res://assets/sprites/characters/portraits/nick/portrait_nick_neutral.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/characters/portraits/nick/portrait_nickneutral.tres" type="Texture" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrychoices.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox_entrydialogue.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/sprites/characters/portraits/nour/portrait_nourneutral.tres" type="Texture" id=8]
@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/ui/images/downarrow.png" type="Texture" id=14]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe_12.tres" type="DynamicFont" id=15]
 [ext_resource path="res://assets/sprites/characters/portraits/princependragon/portrait_princependragonneutral.tres" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/characters/portraits/princependragon/portrait_princependragonsad.tres" type="Texture" id=17]
 
 [sub_resource type="Animation" id=3]
 resource_name = "CanProceed"
@@ -196,6 +197,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 10 )
 characterColors = {
+"???": Color( 1, 1, 1, 1 ),
 "brody": Color( 0.678431, 0.792157, 1, 1 ),
 "chad": Color( 0.380392, 1, 0.435294, 1 ),
 "duke delicious": Color( 0.407843, 0.505882, 1, 1 ),
@@ -214,6 +216,7 @@ characterColors = {
 "the party": Color( 1, 1, 1, 1 )
 }
 characterPortraits = {
+"???": ExtResource( 17 ),
 "brody": ExtResource( 11 ),
 "chad": ExtResource( 11 ),
 "duke delicious": ExtResource( 11 ),

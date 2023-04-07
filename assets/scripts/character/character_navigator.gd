@@ -191,6 +191,12 @@ func set_sprite(sprite: Texture) -> void:
 # Set the node that self is positionally following
 # If self is following another CharacterNavigator, use default stop_approaching and move_away distances
 func set_following_node(nodeToFollow: Node2D) -> void:
+	if nodeToFollow:
+		following_node = nodeToFollow
+		
+	else:
+		return
+	
 	if nodeToFollow.get_class() == "CharacterNavigator":
 		_pathfind_stop_approaching_dist = _pathfind_stop_approaching_dist_default
 		_pathfind_move_away_dist = _pathfind_move_away_dist_default
@@ -199,8 +205,7 @@ func set_following_node(nodeToFollow: Node2D) -> void:
 		_pathfind_stop_approaching_dist = 2
 		_pathfind_move_away_dist = 0
 		
-	if nodeToFollow:
-		following_node = nodeToFollow
+
 
 
 # immediately move self to specified global position

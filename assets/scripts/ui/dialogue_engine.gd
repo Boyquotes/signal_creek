@@ -13,6 +13,7 @@ func _ready():
 # Use newText to make a new NORMAL entryAsset
 func create_entry(newText: String, entryAsset: PackedScene, entryParagraph: PackedScene) -> DialogueBoxEntry:
 	var newEntry = entryAsset.instance()
+	newText = newText.replacen('/', '')
 	
 	var newParagraph = entryParagraph.instance()
 	newParagraph.bbcode_text = newText
@@ -24,13 +25,13 @@ func create_entry(newText: String, entryAsset: PackedScene, entryParagraph: Pack
 # use newText to make an entryParagraph and put it in a new DIALOGUE entryAsset
 func create_entry_dialogue(newText: String, entryAsset: PackedScene, entryParagraph: PackedScene) -> DialogueBoxEntry:
 	var newEntry = entryAsset.instance()
-	var dialogueLine = newText.split(":", false)
+	var dialogueLine = newText.split(":", false, 1)
 	var newDialogue = dialogueLine[1].strip_escapes().trim_prefix(' ')
 	
 	Globals.ColorManager.set_current_color(dialogueLine[0])
 	
-	newEntry.set_nametag(dialogueLine[0], Globals.ColorManager.get_current_color())
-	newEntry.set_portrait(Globals.ColorManager.get_current_portrait())
+	var isSussyPortrait = newEntry.set_nametag(dialogueLine[0], Globals.ColorManager.get_current_color())
+	newEntry.set_portrait(Globals.ColorManager.get_current_portrait(), isSussyPortrait)
 	newEntry.remove_placeholders()
 	
 	var newParagraph = entryParagraph.instance()
@@ -48,8 +49,8 @@ func create_entry_choices(newChoices: Array, currentSpeaker: String, entryAsset:
 	
 	Globals.ColorManager.set_current_color(currentSpeaker)
 	
-	newEntry.set_nametag(currentSpeaker, Globals.ColorManager.get_current_color())
-	newEntry.set_portrait(Globals.ColorManager.get_current_portrait())
+	var isSussyPortrait = newEntry.set_nametag(currentSpeaker, Globals.ColorManager.get_current_color())
+	newEntry.set_portrait(Globals.ColorManager.get_current_portrait(), isSussyPortrait)
 	
 	for option in newChoices: #iterate through choices, add nodes as children
 		var newDivert = choiceAsset.instance()
@@ -63,3 +64,5 @@ func create_entry_choices(newChoices: Array, currentSpeaker: String, entryAsset:
 		newEntry.add_choice_child(newDivert)
 		
 	return newEntry
+
+

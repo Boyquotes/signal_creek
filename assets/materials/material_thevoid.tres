@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://assets/materials/shaders/shader_thevoid.tres" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/r_displacement = Vector2( 2, -2 )
+shader_param/g_displacement = Vector2( -2, 2 )
+shader_param/b_displacement = Vector2( -2, 2 )
+shader_param/intensity = 8.0
+shader_param/time_intensity = 1.0
