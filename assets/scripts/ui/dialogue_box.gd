@@ -103,7 +103,11 @@ func open_at_knot(pathstring: String) -> void:
 	
 	current_speaker = Globals.PartyObject.get_leader().get_name()
 	
-	proceed()
+	var inkCommand = proceed()
+	
+	while inkCommand and "command" in inkCommand:
+		inkCommand = proceed()
+	
 	set_camera_position_to_speaker()
 	
 	is_expanding_background_panel = true
@@ -139,6 +143,7 @@ func free_old_choicebox() -> void:
 
 # Proceeding to the next string that ink should return
 func proceed() -> String:
+	
 	if pause:
 		_down_arrow_animate.play("Idle")
 		return

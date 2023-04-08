@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/computerdesk.ink-a28111576bfbff34e02ba19e668f267f.res"
+
+[deps]
+
+source_file="res://assets/ink/bandn/computerdesk.ink"
+dest_files=[ "res://.import/computerdesk.ink-a28111576bfbff34e02ba19e668f267f.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

@@ -47,19 +47,22 @@ func _process(_delta):
 					
 				if Input.is_action_just_pressed("interact"):
 					Globals.DialogueBox.select_current_choice()
-	#				Globals.DialogueBox.free_old_choicebox()
-					Globals.DialogueBox.proceed()
+					
+					var inkCommand = Globals.DialogueBox.proceed()
+					
+					while inkCommand and "command" in inkCommand:
+						inkCommand = Globals.DialogueBox.proceed()
 					
 			elif Input.is_action_just_pressed("interact"):
 				if Globals.DialogueBox.is_typing:
 					Globals.DialogueBox.typewriter_effect(true)
 				
 				elif !Globals.DialogueBox.fastforward or Globals.DialogueBox._ink_player.get_HasChoices() or !Globals.DialogueBox._ink_player.get_CanContinue():
-						
 					var inkCommand = Globals.DialogueBox.proceed()
 					
 					while inkCommand and "command" in inkCommand:
 						inkCommand = Globals.DialogueBox.proceed()
+						
 					
 		elif Globals.GameMode == Globals.GameModes.WALK:
 			if !Globals.DevTools.typing_knot_name:

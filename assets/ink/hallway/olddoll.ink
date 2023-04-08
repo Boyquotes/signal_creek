@@ -11,6 +11,8 @@
     
 == olddoll_first ==
 
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: "Hmm, what's this? Some kind of old doll?"
     
     &PORTRAIT_ms. suwan_suwannervous
@@ -41,7 +43,7 @@
     
     MS. SUWAN: "..."
     
-    MS. SUWAN: "Very well.
+    MS. SUWAN: "Very well."
     
     -> END
 
