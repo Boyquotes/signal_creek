@@ -194,11 +194,13 @@
     
     GRAND DUCHESS GRANNY: "EVERCRISP! That mushy, sentimental fruit... Thank you for your hard work, seedlings."
     
-    GRAND DUCHESS GRANNY: "As a reward, I will tell you:"
+    Nick nods his head, and Grand Duchess Granny Smith blows him a fat kiss! 
     
-    GRAND DUCHESS GRANNY: "[epic lore drop]"
+    SFX GROSS WET KISSY
     
-    GRAND DUCHESS GRANNY: "But I've rambled far long enough, KEKEKE!"
+    NICK: "Ew!"
+    
+    GRAND DUCHESS GRANNY: "KEKEKE!"
     
     GRAND DUCHESS GRANNY: "Send me away to the Emperor, dearies!"
     

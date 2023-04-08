@@ -59,126 +59,150 @@
     NOUR: "We could try..."
     
         * [Talk to the apple]
-            NOUR: "...talking to the apple."
-            
-            Nick laughs but quickly clamps his hand over his mouth.
-            
-            NOUR: <i>I have no idea if this will work, but at least Nick seems to be enjoying himself.</i>
-            
-            NOUR: "Maybe it needs some encouragement. I can go first?"
-            
-            NOUR: "Hi, um..."
-            
-                ** ["Nice weather we're having?"]
-                ** ["You look really nice today?]
-                ** ["How are you feeling today?]
-            
-                - NOUR: "Now you go, Ms. Suwan."
-                
-                MS. SUWAN: "..."
-                
-                MS. SUWAN: "Hello."
-                
-                NOUR: "That's it?!"
-                
-                NOUR: "C'mon, Nick. Anybody could beat Ms. Suwan. Now's your chance!"
-                
-                MS. SUWAN: "Excuse me—"
-                
-                NICK: "Emperor Evercrisp has sent us."
-                
-                NOUR: "True! Good work, Nick!"
-                
-                MS. SUWAN: "We are talking to a <i>wall</i>."
-                
-                MS. SUWAN: "Have we finally all gone insane?"
+            -> talktoapple
         
         * [Stare back at the apple]
-            NOUR: "...staring back at the apple."
-            
-            Nick laughs but quickly clamps his hand over his mouth.
-            
-            NOUR: <i>I have no idea if this will work, but at least Nick seems to be enjoying himself.</i>
-            
-            NOUR: "I mean, if this apple on the booth is the apple we need to find, maybe we should beat it in a staring contest?"
-            
-            MS. SUWAN: "What? That's a poster for crying out loud."
-            
-            NOUR: "This place is plenty weird—maybe finding the other weird thing requires a weird tactic!"
-            
-            MS. SUWAN: "I'm not doing that."
-            
-            NOUR: "Fine. Nick, you need to help me stare at the apple."
-            
-            NOUR: "We need all the manpower we got since <i>someone</i> won't join."
-            
-            Nick raises his eyebrow at the suggestion but moves closer to the apple on the booth.
-            
-            NOUR: "..."
-            
-            NICK: "..."
-            
-                ** [Keep staring]
-                    NOUR: "..."
-                    
-                    NICK: "..."
-                    
-                    MS. SUWAN: "Are you two seriously doing this?"
-                ** [Stare harder]
-                    NOUR: "<b>...</b>"
-                    
-                    NICK: "<b>...</b>"
-                    
-            - NOUR: "..."
-            
-            NICK: "..."
-            
-            MS. SUWAN: "..."
+            -> stareatapple
         
         * [Give the apple a makeover]
-            NOUR: "...giving the apple a makeover."
-            
-            Nick laughs but quickly clamps his hand over his mouth.
-            
-            NOUR: <i>I have no idea if this will work, but at least Nick seems to be enjoying himself.</i>
-            
-            NOUR: "Maybe this apple on the booth is the apple we need to find, but maybe it won't come out unless it's really dolled-up."
-            
-            NOUR: "This <i>is</i> a beauty booth, after all."
-            
-            MS. SUWAN: "What? This is a poster for crying out loud."
-            
-            NOUR: "This place is plenty weird—maybe finding the other weird thing requires a weird tactic!"
+            -> giveapplemakeover
 
-            NOUR: "We are also literally dealing with talking, sentient fruit."
+=== talktoapple ===
+    
+    NOUR: "...talking to the apple."
             
-            MS. SUWAN: "..."
+    Nick laughs but quickly clamps his hand over his mouth.
             
-            MS. SUWAN: "Knock yourselves out, then."
+    NOUR: <i>I have no idea if this will work, but at least Nick seems to be enjoying himself.</i>
             
-            NOUR: "There looks like there's some makeup in this booth. I'll grab some now."
+    NOUR: "Maybe it needs some encouragement. I can go first?"
             
-            NOUR: "Nick, could you help me give this apple a makeover?"
+    NOUR: "Hi, um..."
             
-            Nick shrugs.
+        ** ["Nice weather we're having?"]
+        ** ["You look really nice today?]
+        ** ["How are you feeling today?]
             
-            NOUR: <i>What should I give him?</i>
-            
-                ** [Give him red lipstick]
-                    NOUR: "Use this red lipstick."
-                    
-                ** [Give him black eyeliner]
-                    NOUR: "Use this black eyeliner."
-                    
-                ** [Give him pink blush]
-                    NOUR: "Use this pink blush."
-            
-                - Nick stares at it and then grabs it. He starts to use it on the poster.
+    - NOUR: "Now you go, Ms. Suwan."
                 
-                NOUR: "Nice! I'll help you out too..."
+    MS. SUWAN: "..."
                 
-                MS. SUWAN: "I don't see how this is going to do anything—"
-        
+    MS. SUWAN: "Hello."
+                
+    NOUR: "That's it?!"
+                
+    NOUR: "C'mon, Nick. Anybody could beat Ms. Suwan. Now's your chance!"
+                
+    MS. SUWAN: "Excuse me—"
+                
+    NICK: "Emperor Evercrisp has sent us."
+                
+    NOUR: "True! Good work, Nick!"
+                
+    MS. SUWAN: "We are talking to a <i>wall</i>."
+                
+    MS. SUWAN: "Have we finally all gone insane?"
+    
+    -> pinkladyreveal
+=== stareatapple ===
+            
+    NOUR: "...staring back at the apple."
+            
+    Nick laughs but quickly clamps his hand over his mouth.
+            
+    NOUR: <i>I have no idea if this will work, but at least Nick seems to be enjoying himself.</i>
+            
+    NOUR: "I mean, if this apple on the booth is the apple we need to find, maybe we should beat it in a staring contest?"
+            
+    MS. SUWAN: "What? That's a poster for crying out loud."
+            
+    NOUR: "This place is plenty weird—maybe finding the other weird thing requires a weird tactic!"
+            
+    MS. SUWAN: "I'm not doing that."
+            
+    NOUR: "Fine. Nick, you need to help me stare at the apple."
+            
+    NOUR: "We need all the manpower we got since <i>someone</i> won't join."
+            
+    Nick raises his eyebrow at the suggestion but moves closer to the apple on the booth.
+            
+    NOUR: "..."
+            
+    NICK: "..."
+            
+        ** [Keep staring]
+            NOUR: "..."
+                    
+            NICK: "..."
+                    
+            MS. SUWAN: "Are you two seriously doing this?"
+                    
+                *** [Stare HARDER]
+                    NOUR: "..."
+                        
+                    NICK: "..."
+                        
+                    MS. SUWAN: "Don't hurt yourselves, please."
+                        
+                        **** [STARE LIKE YOUR LIFE DEPENDS ON IT]
+                            
+                            NOUR: "..."
+                            
+                            NICK: "..."
+                            
+                            MS. SUWAN: "..."
+                            
+                            -> pinkladyreveal
+                            
+=== giveapplemakeover ===
+
+    NOUR: "...giving the apple a makeover."
+            
+    Nick laughs but quickly clamps his hand over his mouth.
+            
+    NOUR: <i>I have no idea if this will work, but at least Nick seems to be enjoying himself.</i>
+            
+    NOUR: "Maybe this apple on the booth is the apple we need to find, but maybe it won't come out unless it's really dolled-up."
+            
+    NOUR: "This <i>is</i> a beauty booth, after all."
+            
+    MS. SUWAN: "What? This is a poster for crying out loud."
+            
+    NOUR: "This place is plenty weird—maybe finding the other weird thing requires a weird tactic!"
+
+    NOUR: "We are also literally dealing with talking, sentient fruit."
+            
+    MS. SUWAN: "..."
+            
+    MS. SUWAN: "Knock yourselves out, then."
+            
+    NOUR: "There looks like there's some makeup in this booth. I'll grab some now."
+            
+    NOUR: "Nick, could you help me give this apple a makeover?"
+            
+    Nick shrugs.
+            
+    NOUR: <i>What should I give him?</i>
+            
+        * [Give him red lipstick]
+            NOUR: "Use this red lipstick."
+                    
+        * [Give him black eyeliner]
+            NOUR: "Use this black eyeliner."
+                    
+        * [Give him pink blush]
+            NOUR: "Use this pink blush."
+            
+    - Nick stares at it and then grabs it. He starts to use it on the poster.
+                
+    NOUR: "Nice! I'll help you out too..."
+                
+    MS. SUWAN: "I don't see how this is going to do anything—"
+    
+    -> pinkladyreveal
+
+=== pinkladyreveal ===
+
     - ???: "Hee hee!"
 
     NOUR: "Did you hear that?"
