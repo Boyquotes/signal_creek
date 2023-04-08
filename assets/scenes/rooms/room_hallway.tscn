@@ -77,7 +77,7 @@ room_bounds_max = Vector2( 1200, 944 )
 room_index = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.619608, 0.470588, 0.705882, 1 )
+color = Color( 0.545098, 0.321569, 0.560784, 1 )
 __meta__ = {
 "_edit_lock_": true
 }
