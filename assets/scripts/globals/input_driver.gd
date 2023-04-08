@@ -136,4 +136,3 @@ func set_can_interact(condition: bool) -> void:
 func _on_StartButton_pressed() -> void:
 	Globals.StartScreen.set_visible(false)
 	Globals.GameState = Globals.GameStates.GAME
-	Globals.SoundManager.set_mute_audio(false)

@@ -50,7 +50,7 @@ material = ExtResource( 3 )
 position = Vector2( -1, -76 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 391, 516, 63, 161 )
+region_rect = Rect2( 390, 515, 65, 163 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
@@ -60,7 +60,7 @@ light_mask = 4
 position = Vector2( -1, -76 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 391, 516, 63, 161 )
+region_rect = Rect2( 390, 515, 65, 163 )
 
 [node name="GrandDuchessGranny" type="Node2D" parent="."]
 position = Vector2( -11, -101 )

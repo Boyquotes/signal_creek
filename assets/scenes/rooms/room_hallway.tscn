@@ -134,6 +134,18 @@ position = Vector2( 977, 376 )
 [node name="SuwanCBKTalk" type="Node2D" parent="PlaneManager"]
 position = Vector2( 1009, 360 )
 
+[node name="NourFollowTreePos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 784, -280 )
+
+[node name="NourTreeStartPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 784, -262 )
+
+[node name="NickTreeStartPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 744, -329 )
+
+[node name="SuwanTreeStartPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 752, -280 )
+
 [node name="Doortal_TopicSpot" type="Area2D" parent="PlaneManager"]
 position = Vector2( 953, -371 )
 script = ExtResource( 19 )

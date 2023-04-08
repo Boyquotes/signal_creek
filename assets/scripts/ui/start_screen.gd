@@ -16,4 +16,4 @@ func _on_StartButton_pressed() -> void:
 func start_game() -> void:
 	self.set_visible(false)
 	Globals.GameState = Globals.GameStates.GAME
-	Globals.SoundManager.set_mute_audio(false)
+

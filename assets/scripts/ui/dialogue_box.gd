@@ -451,8 +451,11 @@ func set_camera_position_to_speaker():
 		Globals.GameRoot.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 		return
 		
+	
+		# Should be a mid point between current speaker position and current position
 	followingVector = find_current_speaker_position()
-	Globals.GameRoot.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
+
+	Globals.GameRoot.set_camera_following_vector(Vector2(lerp(Globals.GameRoot._following_vector.x, followingVector.x, 0.5) + camera_offset_dialogue, lerp(Globals.GameRoot._following_vector.y, followingVector.y, 0.5)))
 	
 
 
