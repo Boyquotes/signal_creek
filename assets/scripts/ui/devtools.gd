@@ -61,12 +61,6 @@ func _start_in_devmode():
 	$VBoxContainer/MuteAudio.set_pressed(true)
 
 
-func _on_MuteAudio_toggled(_button_pressed):
-#	Globals.SoundManager.set_mute_audio(_button_pressed)
-	Globals.SoundManager.set_music_pause_mode(_button_pressed)
-	pass # Replace with function body.
-
-
 func _on_LineEdit_focus_entered():
 	typing_knot_name = true
 

@@ -47,6 +47,8 @@ INCLUDE topicspot/jewelrystand.ink
 
 INCLUDE betaintro.ink
 INCLUDE bandn/comicstand.ink
+INCLUDE bandn/computerdesk.ink
+
 
 
 

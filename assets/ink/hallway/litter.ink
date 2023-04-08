@@ -1,6 +1,8 @@
 == litter ==
 
-    {!litter_first: -> litter_first }
+    Wrappers from candy bars and crumbled flyers are strewn about.
+
+    { -!litter_first: -> litter_first }
     
     &PORTRAIT_ms. suwan_suwanannoyed
     
@@ -12,8 +14,6 @@
     
 == litter_first ==
 
-    Wrappers from candy bars and crumbled flyers are strewn about.
-    
     &PORTRAIT_nour_nourannoyed
     
     NOUR: "Man, <i>some</i> people... The trash can is <i>right</i> over there."
@@ -23,6 +23,8 @@
     MS. SUWAN: "Kid... <i>what</i> are you planning?"
     
     NICK: "Trust me. I've <i>got</i> this."
+    
+    &PORTRAIT_ms. suwan_suwanannoyed
     
     MS. SUWAN: "<i>Nick</i>."
     

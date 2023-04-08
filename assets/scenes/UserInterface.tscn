@@ -275,70 +275,63 @@ fit_content_height = true
 [node name="Hallway" type="Button" parent="DevTools/VBoxContainer"]
 margin_top = 46.0
 margin_right = 180.0
-margin_bottom = 79.0
+margin_bottom = 89.0
 size_flags_vertical = 3
 text = "Hallway"
 
 [node name="TopicSpot" type="Button" parent="DevTools/VBoxContainer"]
-margin_top = 83.0
+margin_top = 93.0
 margin_right = 180.0
-margin_bottom = 116.0
+margin_bottom = 136.0
 size_flags_vertical = 3
 text = "TopicSpot"
 
 [node name="BandN" type="Button" parent="DevTools/VBoxContainer"]
-margin_top = 120.0
+margin_top = 140.0
 margin_right = 180.0
-margin_bottom = 153.0
+margin_bottom = 183.0
 size_flags_vertical = 3
 text = "BandN"
 
 [node name="HSeparator3" type="HSeparator" parent="DevTools/VBoxContainer"]
-margin_top = 157.0
+margin_top = 187.0
 margin_right = 180.0
-margin_bottom = 161.0
+margin_bottom = 191.0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="DevTools/VBoxContainer"]
-margin_top = 165.0
+margin_top = 195.0
 margin_right = 180.0
-margin_bottom = 180.0
+margin_bottom = 210.0
 bbcode_enabled = true
 bbcode_text = "[b][center]Dialogue[/center][/b]"
 text = "Dialogue"
 fit_content_height = true
 
 [node name="FastForwardDialogue" type="CheckButton" parent="DevTools/VBoxContainer"]
-margin_top = 184.0
+margin_top = 214.0
 margin_right = 180.0
-margin_bottom = 224.0
+margin_bottom = 257.0
 size_flags_vertical = 3
 text = "Fast Forward"
 
 [node name="Open At Knot" type="Button" parent="DevTools/VBoxContainer"]
-margin_top = 228.0
+margin_top = 261.0
 margin_right = 180.0
-margin_bottom = 261.0
+margin_bottom = 305.0
 size_flags_vertical = 3
 text = "Open At Knot"
 
 [node name="LineEdit" type="LineEdit" parent="DevTools/VBoxContainer"]
-margin_top = 265.0
+margin_top = 309.0
 margin_right = 180.0
-margin_bottom = 289.0
+margin_bottom = 333.0
 placeholder_text = "type knot name here"
 caret_blink = true
 
 [node name="HSeparator2" type="HSeparator" parent="DevTools/VBoxContainer"]
-margin_top = 293.0
-margin_right = 180.0
-margin_bottom = 297.0
-
-[node name="MuteAudio" type="CheckButton" parent="DevTools/VBoxContainer"]
-margin_top = 301.0
+margin_top = 337.0
 margin_right = 180.0
 margin_bottom = 341.0
-size_flags_vertical = 3
-text = "Mute Audio"
 
 [connection signal="value_changed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/MusicVolume/MusicVolumeSlider" to="ReferenceRect/PauseMenu" method="_on_MusicVolumeSlider_value_changed"]
 [connection signal="value_changed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/SFXVolume/SFXVolumeSlider" to="ReferenceRect/PauseMenu" method="_on_SFXVolumeSlider_value_changed"]
@@ -356,4 +349,3 @@ text = "Mute Audio"
 [connection signal="pressed" from="DevTools/VBoxContainer/Open At Knot" to="DevTools" method="_on_Open_At_Knot_pressed"]
 [connection signal="focus_entered" from="DevTools/VBoxContainer/LineEdit" to="DevTools" method="_on_LineEdit_focus_entered"]
 [connection signal="focus_exited" from="DevTools/VBoxContainer/LineEdit" to="DevTools" method="_on_LineEdit_focus_exited"]
-[connection signal="toggled" from="DevTools/VBoxContainer/MuteAudio" to="DevTools" method="_on_MuteAudio_toggled"]

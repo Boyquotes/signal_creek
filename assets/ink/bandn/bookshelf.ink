@@ -72,7 +72,7 @@
         
         NICK: "Not interested."
     
-    * "Hey...there's <i>The Making of Aple Quest: The Classic RPG Series</i>!"
+    * "Hey...there's <i>The Making of Aple Quest - The Classic RPG Series</i>!"
         
         NOUR: "Isn't this the game you wanted to see before? The one in TopicSpot's game console?"
         
