@@ -9,7 +9,7 @@ extends Control
 
 # Entry Prefab Types
 export var print_information = false
-export var camera_offset_dialogue = 50.0
+export var camera_offset_dialogue = 40.0
 export var typewriter_speed : int = 1
 export var scroll_increment : float = 0.75
 export var panel_opening_speed : float = 0.25
@@ -452,10 +452,10 @@ func set_camera_position_to_speaker():
 		return
 		
 	
-		# Should be a mid point between current speaker position and current position
-	followingVector = find_current_speaker_position()
-
-	Globals.GameRoot.set_camera_following_vector(Vector2(lerp(Globals.GameRoot._following_vector.x, followingVector.x, 0.5) + camera_offset_dialogue, lerp(Globals.GameRoot._following_vector.y, followingVector.y, 0.5)))
+	# Mid point between nour and current speaker
+	followingVector = find_current_speaker_position().linear_interpolate(Globals.Nour.get_global_position(), 0.75)
+	
+	Globals.GameRoot.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y - camera_offset_dialogue/2))
 	
 
 
