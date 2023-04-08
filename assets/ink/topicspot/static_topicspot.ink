@@ -1,8 +1,8 @@
 == clothesrack ==
 
-    It's a rack for hanging clothes. This one has strange shirts.
+    It's a rack of strange shirts. The text is barely legible. 
     
-    Some shirts have three sleeves, others have indecipherable text.
+    Some of them have three sleeves...? 
     
     Others are shaped so oddly that they don't even look wearable.
     
@@ -10,9 +10,9 @@
     
 == clothesrack2 ==
 
-    It's a rack for hanging clothes. This one has strange skirts, jeans, and leggings.
+    It's a rack full of strange skirts, jeans, and leggings.
     
-    What kind of person would need five-legged pants?
+    ... What kind of person would need five-legged pants?
     
     -> END
     
@@ -24,26 +24,34 @@
     
     It's a toy gun from a weird video game called "Fishgun".
     
-    The slogan on the tag says... "IT'S A FISH... AND A GUN!"
+    The slogan on the tag says:
+    
+    "IT'S A FISH... AND A GUN!"
+    
+    ... Maybe it's best not question the artistry.
     
     -> END
     
 == kirbyposter ==
 
-    It's a poster of Kirby, the best pink orb.
+    It's a poster of the loveable, squishable, and omnipotent pink orb, <i>Kirbo</i>.
     
     -> END
     
 == shirtwall ==
 
-    It's a wall of T-Shirts.
+    It's a wall of punk and goth t-shirts, sprinkled with anime references. 
+    
+    Classic TopicSpot.  
     
     -> END
     
     
 == trinkets ==
 
-    There's a bunch of trinkets here. They all seem to be familiar shapes, and yet nobody can quite place what they're meant to be.
+    It's a collection of trinkets. 
+    
+    They're familiar shapes, yet it's hard to tell what they're supposed to actually be.
     
     -> END
     
