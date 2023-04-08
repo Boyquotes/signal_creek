@@ -29,7 +29,7 @@ func remove_placeholders() -> void:
 
 
 # Set color and text contents of name to newName and newColor
-func set_nametag(newName: String, newColor: Color) -> void:
+func set_nametag(newName: String, newColor: Color) -> bool:
 	var name_tag = get_node(nametag)
 	name_tag.bbcode_text = '[b]' + newName + '[/b]'
 	
@@ -44,6 +44,12 @@ func set_nametag(newName: String, newColor: Color) -> void:
 	
 	get_node(name_separator).add_stylebox_override("separator", newlinestyle)
 	get_node(name_separator).get_stylebox("separator").set("color", newColor)
+	
+	# Check if we should make the portrait have the sussy shader
+	if !"NOUR" in newName and !"NICK" in newName and !"SUWAN" in newName:
+		return true
+		
+	return false
 
 
 # add paragraph child to dialogue entry
@@ -78,7 +84,10 @@ func get_choices():
 
 
 # Source texture - preloaded asset
-func set_portrait(sourceTexture):
+func set_portrait(sourceTexture, isSussy: bool):
 	#portraitnode
 	get_node(portrait).set_texture(sourceTexture)
+	
+	if isSussy:
+		get_node(portrait).material.set_shader_param("sussy", isSussy)
 	

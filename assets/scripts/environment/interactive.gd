@@ -108,5 +108,3 @@ func _get_object_name() -> String:
 	
 	return rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_")
 
-
-

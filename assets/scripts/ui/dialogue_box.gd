@@ -201,7 +201,7 @@ func check_entry_type(entryText: String) -> void:
 		display_choices(chooserName)
 		set_camera_position_to_speaker()
 		
-	elif ":" in entryText: #if line contains a name, parse name and dialogue after
+	elif ":" in entryText and !"/" in entryText.split(":")[0]: #if line contains a name, parse name and dialogue after
 		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_paragraph)
 		current_speaker = entryText.split(":")[0]
 		_vertical_layout_node.add_child(newDialogue)
@@ -248,6 +248,7 @@ func shrink_background_panel() -> void:
 		background_panel_node.set_visible(false)
 		#RESET DIALOGUE BOX
 		clear_and_reset_ui()
+		Globals.ColorManager.set_party_portraits_to_neutral()
 		
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
@@ -384,7 +385,12 @@ func find_current_speaker_position():
 		print("Current Speaker: " + currentSpeaker + "\n")
 		
 	var currentSpeakerNode = Globals.Nour
-	Globals.SpeechBubble.set_visible(true)
+	
+	if '"' in _ink_player.get_CurrentText() and !'"..."' in _ink_player.get_CurrentText():
+		Globals.SpeechBubble.set_visible(true)
+		
+	else:
+		Globals.SpeechBubble.set_visible(false)
 
 	# Match the string of the current speaker's name to their Object in game
 	match currentSpeaker:

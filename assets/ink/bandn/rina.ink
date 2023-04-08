@@ -34,9 +34,11 @@
     
     &FOLLOW_SUWAN_SuwanOutElevatorPos
     
-    NICK: “Isn't this the top floor of the mall?”
+    NICK: "Whoa, this is crazy..! Are you seeing what I'm seeing?"
     
-    NOUR: "Yeah, but it feels... something feels off."
+    NOUR: "This... this is one of the floors of the mall, isn't it? The top floor?"
+    
+    NOUR: "But it feels... something feels off."
     
     &EMOTE_NICK_UpIdle
     
@@ -46,9 +48,9 @@
     
     &FOLLOW_SUWAN_SuwanPhonePos
     
-    MS. SUWAN: "This floor should have been shut down <i>months</i> ago."
+    MS. SUWAN: "This floor should have been shut down <i>months</i> ago. There shouldn't even be electricity."
     
-    MS. SUWAN: "I must call one of my higher-ups about this."
+    MS. SUWAN: "I have to call one of my higher-ups about this."
     
     MS SUWAN BEEP BOOPS HER PHONE
     
@@ -62,7 +64,7 @@
     
     &MOV_RINA_START
     
-    RINA: ...
+    RINA: "..."
     
     A petite girl with olive skin and dyed strawberry hair appears before the group.
     
@@ -74,9 +76,9 @@
     
     &EMOTE_NOUR_UpIdle
     
-    NOUR: ... (SHOCKED)
+    NOUR: "..." (SHOCKED)
     
-    MS. SUWAN: "You're not supposed to be here, young lady."
+    MS. SUWAN: "You're not supposed to be here either, young lady."
     
     NICK: "Hey, did you miss the part where she magically appeared in front of us?"
     
@@ -85,14 +87,16 @@
     NOUR: <i>...Rina?</i> (SHOCKED)
     
     NICK: "Hey, uh... Nour? Do you know her?"
-    
-        * ["Yeah, I did."]
         
-        * ["She was from my high school."]
+        * ["Yeah. She was from my high school."]
+        
+        * ["I <i>knew</i> her."]
+        
+        * ["Does it matter?"]
     
-    - NOUR: ...
+    - NOUR: "..."
     
-    RINA: ...
+    RINA: "..."
     
     NICK: "Hello? Random girl that Nour recognizes? Do you see us?"
 
@@ -100,24 +104,24 @@
     
     &MOV_RINA_BANDN
     
-    NOUR: ... (NERVOUS)
+    NOUR: "..." (NERVOUS)
     
     NICK: "Guess she didn't wanna talk, huh."
     
     &EMOTE_NICK_UpIdle
     
-    NICK: "And... those funny lights are off now."
+    NICK: "And... those weird lights are off now."
     
     &EMOTE_NICK_RightIdle
     
     MS. SUWAN: "We must be hallucinating. That’s the only explanation I can think of to describe… whatever it is that we’re seeing."
     
         * [Agree with her]
-            NOUR: "Maybe we hit our heads somewhere...or a potential gas leak?"
+            NOUR: "Maybe we hit our heads somewhere... or a potential gas leak?"
             
             MS. SUWAN: "That would also be somewhat realistic. I want to agree, but..."
             
-            MS. SUWAN: "This place would've been closed off much more securely if there was any immediate danger. It would've been reported to me, too."
+            MS. SUWAN: "This place would've been closed off much more securely if there was any danger. It would've been reported to me, too."
             
             NICK: "I don't remember us knocking our heads either!"
             
@@ -130,14 +134,14 @@
             
             NICK: "DRUGS?! What kind of drug would make up something like THIS?"
             
-            NICK: "...do you have anymore?"
+            NICK: "... Do you have anymore?"
             
             MS. SUWAN: "Enough of your nonsense, please."
     
         * [Convince her it's real]
-            NOUR: "I don't know. If this floor really was torn down, I don't think we can explain anything around us with logic. Or at least, the logic of our reality."
+            NOUR: "If this floor was torn down, I don't think we could explain anything of this with logic."
             
-            NOUR: "Wherever we are...it's definitely not the demolition site from before."
+            NOUR: "Wherever we are... it's definitely not the demolition site from before."
             
             NICK: "That's so cool! It's like we warped through some kind of elevator-shaped portal!"
             
@@ -147,7 +151,7 @@
     
     &EMOTE_NOUR_UpIdle
     
-    NOUR: "The elevator is closed though, and it doesn't look like the doors will budge either."
+    NOUR: "The elevator is closed, though, and it doesn't look like the doors will budge either."
     
     &EMOTE_SUWAN_UpIdle
     
@@ -219,13 +223,21 @@
                     -> rina_help
             }
             
-            NOUR: "Friends are supposed to help each other. You didn't help me that day."
+            NOUR: "Friends are supposed to be there for each other, <i>especially</i> during hard times."
+            
+            NOUR: "But you weren't there for me at all on <i>that</i> day."
             
             Rina glances down at Nick, and up to Ms. Suwan.
             
             She returns her attention to Nour.
             
-            RINA: "I think you should focus on helping the people you're with. Based on what they're saying, it seems like <i>they</i> need you right now."
+            RINA: "You're still thinking about what happened? ...Interesting."
+            
+            RINA: "You aren't ready for this—not yet. <i>They</i> need you right now."
+            
+            RINA: "Come back when you've helped the others first."
+            
+            RINA: "Maybe then you'll know how to help yourself."
         
 
         + [Confront Rina for what she did.]
@@ -239,11 +251,17 @@
                     -> rina_topicspot
             }
             
-            NOUR: "I don't think I have the guts to confront you yet..."
+            NOUR: "I..."
             
-            NICK: "I kinda get it. Why even try if you know it'll backfire?"
+            NOUR: "I can't. I'm not ready yet."
             
-            NOUR: <i>Nick is speaking as if he has no confidence in his beliefs. Or in himself.</i>
+            NOUR: "I don't know how to confront what you did to me."
+            
+            NICK: "I get that—why even try things if you know it'll never work out?"
+            
+            NICK: "Giving up on stuff you know you could never succeed in just saves you the disappointment."
+            
+            NOUR: <i>That felt really personal to Nick. What made him lack self-esteem?</i>
             
             NOUR: <i>I wonder if I can encourage him to be more confident in himself?</i>
         
@@ -259,11 +277,21 @@
                     -> rina_hallway
             }
             
-            NOUR: "I'm still too angry at you to let go..."
+            NOUR: "I..."
             
-            MS. SUWAN: "Makes sense. You know you were right back then, why would you want to look back?"
+            NOUR: "I can't. What happened made me so, so angry. I'm <i>still</i> angry."
             
-            NOUR: <i>Ms. Suwan seems to be avoiding her past... But that doesn't seem healthy. I don't think I should listen to her.</i>
+            NOUR: "I don't know how to let go."
+            
+            MS. SUWAN: "Then <i>don't</i>."
+            
+            MS. SUWAN: "Why dwell on the past? You were right back then, and you're still right now."
+            
+            MS. SUWAN: "Don't waste your time thinking about it. Forget it entirely."
+            
+            NOUR: <i>Ms. Suwan seems to be avoiding her past... But that doesn't seem healthy.</i>
+            
+            NOUR: <i>I'm not sure if I should listen to her.</i>
             
             NOUR: <i>But maybe... I can help her look into her past more?<i>
             
@@ -277,7 +305,7 @@
             
             Rina's eyes glaze over.
             
-            NOUR: <i>I don't feel prepared to explore every possible outcome of this conversation.</i>
+            NOUR: <i>I'm not ready to go through all the ways I could talk to her again about what happened.</i>
             
             NOUR: <i>I'll just try to help Nick and Ms. Suwan first.</i>
             
@@ -328,33 +356,39 @@
             
             RINA: "We don't speak for years, and this is how you greet me?"
             
+            RINA: "Well, then. I see how it is."
+            
             RINA: "Hello to you, too, Yousra."
             
         * "I guess this is what I get for coming back to <i>our</i> mall.["] I was really hoping I wouldn't run into you.
     
-            RINA: "Hey, Yousra! Nice to see you after all these years. You know, I'm allowed to exist at this mall. You don't own it."
+            RINA: "Hey, Yousra! Nice to see you after all these years." 
+            
+            RINA: "You know, I'm allowed to exist at this mall. It's not like you own it."
             
     -   * "Yousra?["] Nobody calls me that anymore. I go by Nour now."
         
             RINA: "Oh, okay."
             
-            RINA: "This is a good start. At least you're talking to me again."
+            RINA: "... At least you're talking to me again."
             
-            RINA: "So... what happened back then? We were having lunch with our friends..."
+            RINA: "That's a good start."
             
-            RINA: "We started talking about gay marriage being legalized..."
+            RINA: "So... are we gonna talk about what happened back then? That lunch with our friends..."
+            
+            RINA: "We started talking about, well, you know ...gay marriage being legalized..."
             
             RINA: "What am I forgetting?"
             
                 ** "You were quiet[."], while the others kept going on about how being gay is gross and weird."
                 
-                    RINA: "Well, sure I was quiet. But that doesn't mean I agreed with them."
+                    RINA: "That doesn't mean I agreed with them."
                     
-                    RINA: "I didn't tell them that <i>you're</i> gay!"
+                    RINA: "I didn't even tell them that <i>you're</i> gay!"
                     
-                ** "I had just come out to you, only a few days prior."
+                ** "I had <i>just</i> come out to you."
                 
-                    RINA: "Yeah, you did just come out to me. But I didn't tell anyone!"
+                    RINA: "True, but I didn't tell anyone!"
                 
     -   RINA: "I didn't tell your secret to <i>anyone</i>. Isn't that what you wanted?"
         
@@ -368,37 +402,45 @@
                 
             RINA: "What did you want <i>me</i> to do about it? Make everyone suddenly unlearn what our middle-eastern parents taught us about queerness?"
                         
-                ** "I wanted you to be an ally[."], to say that you support queer people, or at least that we're supposed to love all of god's creations, or whatever."
+                ** "I wanted you to be an ally[."], to say that you support queer people, or at least that we're supposed to love all of god's creations."
                 
-                    RINA: "If I told them I'm an ally, they would think I'm gross."
+                    NOUR: "Even that would've been better than <i>nothing</i>!"
+                
+                    RINA: "If I told them I'm an ally, they would think I'm supporting something that's <i>haram</i>!"
                     
-                    NOUR: "They would think <i>you're</i> gross?"
+                    NOUR: "You're worried about <i>yourself</i>? In front of the person that's <i>actually</i> gay?"
                     
                     
-                ** "I wanted you to disagree with them[."], and argue that they're just brainwashed by their parents."
+                ** "I wanted you to disagree with them[."] and argue that they're just brainwashed by their parents."
                 
                     RINA: "Yeah, but if I disagreed with them right there, they would be suspicious of <i>me</i>."
                     
-                    NOUR: "They would be suspicious of <i>you</i>?"
+                    NOUR: "You're worried about protecting <i>yourself</i>? In front of the person that's <i>actually</i> in danger?"
                 
                 
-    -   * "Well, imagine how I feel.["] I'm the one whose rights were actually being debated."
+    -   * "Well, imagine how I feel!["] I'm the one whose basic rights were being debated."
             
-        * "You can still choose to be 'normal' at the end of the day.["] I can't change how I am."
+        * "You can still choose to be 'normal' at the end of the day.["] But I can't change how I am."
         
     -   RINA: "I know that. But I <i>said</i> that I'm sorry. You know I wouldn't throw away ten years of friendship."
     
         RINA: "But you know what would've happened if I said something then?"
         
-        RINA: "They would've told their siblings, and their cousins. And then people's parents would find out."
+        RINA: "They would've told their siblings, and their cousins..."
+        
+        RINA: "And then people's parents would find out."
         
         RINA: "And all our parents know each other, so they'd <i>all</i> know."
         
         RINA: "Then my parents would get mad, too." (TEARING UP)
         
-        RINA: "I told you, I didn't feel any different about you after you came out... It's not like you could help it."
+        RINA: "I can't help that people talk! I was just looking out for the <i>both</i> of us!"
         
-        RINA: "<i>You</i> were the one who didn't want to hear it. I didn't even get a chance to make it up to you."
+        RINA: "I told you, I didn't feel any different about you after you came out..."
+        
+        RINA: "It's not like you could help it. I know that."
+        
+        RINA: "But <i>you</i> were the one who didn't want to hear it. I didn't even get a chance to make it up to you."
  
             * "It's too late. The damage is done.["] I knew if my best friend couldn't stand up for me, it would be a long time before anyone would."
             
@@ -415,35 +457,44 @@
 
 == rina_topicspot ==
 
-    NOUR: "Why would I want to keep being friends with someone who is too much of a coward to stand up for me?"
+    NOUR: "Why would I want to keep being friends with a coward who couldn't stand up for me?"
     
-    RINA: "Listen, you can call me a coward. It's fine. But don't you get where I'm coming from?"
+    RINA: "You can call me a coward. It's fine. But don't you get where I'm coming from?"
     
         * "You're not the victim here.["] You just watched from the sidelines and enabled our 'friends' to say all of that stuff about people like me."
         
-            RINA: "I know I'm not the victim, but you have to admit... They would have hated <i>both</i> of us if I said something."
+            RINA: "I know I'm not the victim, but you have to admit..."
+            
+            RINA: "They would have hated <i>both</i> of us if I said something."
         
         * "I get that you don't have principles.["] You don't believe in anything enough to fight for it."
     
-            RINA: "I <i>do</i> believe that queer people deserve respect. But I had to play it smart, I knew they would hate <i>both</i> of us if I said something."
+            RINA: "I <i>do</i> believe that queer people deserve respect. But I had to play it smart."
+            RINA: "I knew they would hate <i>both</i> of us if I said something."
         
     -   RINA: "You know, I'm not the bad guy here. I'm not the one who said what they said."
         
             * "You might as well have.["] Being complacent is the same thing as agreeing."
             
-            * "I know...["] You just stayed neutral. Not the best response, not the worst response."
+            * "I know...["] You just stayed neutral. Not the best or the worst response."
             
-    -   RINA: "You're speaking up now, because you wish I did back then. Right?"
+    -   RINA: "You're speaking up now because you wish I had back then. Right?"
         
         RINA: "But I'm not the person you really want to confront. You want our homophobic friends to know their place."
         
         RINA: "I was just collateral, and you closed yourself to any possiblity for me to support you."
         
+        RINA: "We were both afraid and inexperienced. But I could've learned."
+        
+        RINA: "Did you have so little faith in me?"
+        
             -> neverknow
     
     = neverknow
     
-        RINA: "Nour, <i>neither</i> of us had the guts to say anything back then. You'll never know what would have happened if I spoke up."
+        RINA: "Nour, <i>neither</i> of us had the guts to say anything back then."
+        
+        RINA: "You'll never know what would have happened if I spoke up."
         
         { - !neverknowlight:
                 -> neverknowlight
@@ -500,7 +551,7 @@
     
         RINA: "That's all you want? For me to admit that I was wrong?"
         
-        RINA: "Fine, I was wrong. I admit it. And I wish I didn't hurt you"
+        RINA: "Fine, I was wrong. I admit it. And I wish I didn't hurt you."
         
         -> toolate
         

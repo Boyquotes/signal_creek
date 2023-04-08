@@ -75,35 +75,52 @@ func place_rina_in_new_room():
 
 
 func shlorp():
-	var timeValue = _shlorping_target.material.get_shader_param("time")
+	var timeValue = _shlorping_target.material.get_shader_param("progress")
 	
 	if _shlorping_out:
-		_shlorping_target.material.set_shader_param("time", timeValue - .05)
-		if timeValue < .05:
+		_shlorping_target.material.set_shader_param("progress", timeValue + .05)
+		if timeValue > .95:
+			_shlorping_target.set_visible(false)
 			_shlorping_out = false
-			_shlorping_target.material.set_shader_param("time", 0)
-			self.set_monitoring(false)
-			_physical_collider.set_deferred("disabled", true)
+			_shlorping_target.material.set_shader_param("progress", 1.0)
+			
+			if _physical_collider:
+				_physical_collider.set_deferred("disabled", true)
 			
 			if current_room_index == next_room_index:
 				self.get_parent().set_global_position(rina_positions.get(current_position))
-				_shlorping_in = true
+#				_shlorping_in = true
+				shlorp_in()
 				
 			return
 			
 			
 	elif _shlorping_in:
-		_shlorping_target.material.set_shader_param("time", timeValue + .05)
-		if timeValue > 1.56:
+		_shlorping_target.material.set_shader_param("progress", timeValue - .05)
+		if timeValue < 0.05:
 			_shlorping_in = false
-			_shlorping_target.material.set_shader_param("time", 1.57)
-			self.set_monitoring(true)
-			_physical_collider.set_deferred("disabled", false)
+			_shlorping_target.material.set_shader_param("progress", 0)
+			
+			if _physical_collider:
+				_physical_collider.set_deferred("disabled", false)
 			
 			return
 
 
-# disappear into the void (visually)
-func shlorp_out():
-	_shlorping_out = true
-
+## Appear from the void (visually)
+#func shlorp_in():
+#	_shlorping_target.set_visible(true)
+#	print("shlorping in")
+#	_shlorping_target.material.set_shader_param("progress", 1.0)
+#	_shlorping_in = true
+#	visibility = true
+#	if not _override_set_monitoring:
+#		self.set_monitoring(false)
+#
+#
+## Disappear into the void (visually)
+#func shlorp_out() -> void:
+#	print(_shlorping_target)
+#	print("shlorping out")
+#	_shlorping_out = true
+##	visibility = false
