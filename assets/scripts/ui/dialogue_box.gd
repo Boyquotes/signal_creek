@@ -385,7 +385,12 @@ func find_current_speaker_position():
 		print("Current Speaker: " + currentSpeaker + "\n")
 		
 	var currentSpeakerNode = Globals.Nour
-	Globals.SpeechBubble.set_visible(true)
+	
+	if '"' in _ink_player.get_CurrentText() and !'"..."' in _ink_player.get_CurrentText():
+		Globals.SpeechBubble.set_visible(true)
+		
+	else:
+		Globals.SpeechBubble.set_visible(false)
 
 	# Match the string of the current speaker's name to their Object in game
 	match currentSpeaker:
