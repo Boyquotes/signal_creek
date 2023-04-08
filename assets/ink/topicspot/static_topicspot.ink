@@ -53,6 +53,9 @@
     
     They're familiar shapes, yet it's hard to tell what they're supposed to actually be.
     
+    Nothing in particular catches Nour's eye.
+>>>>>>> Stashed changes
+    
     -> END
     
 == trinketside ==

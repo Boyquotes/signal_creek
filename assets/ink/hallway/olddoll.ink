@@ -1,34 +1,48 @@
 
 == olddoll ==
 
-    A porcelain doll lays on the shining floor. Ms Suwan slowly walks around it, observing its following eyes. She wants to pick it up, hold it, and observe it further.
+    { - !olddoll_first: -> olddoll_first }
     
-    NOUR: I hate these kinds of dolls. It's eyes keep following me even when I move around its so creepy.
+    NOUR: "This old doll, again."
+
+    MS. SUWAN: "Let us keep moving."
     
-    MS SUWAN: I always wanted a doll like this when I was a kid. They were very popular where I grew up and almost all of my friends had them. 
+    -> END
+    
+== olddoll_first ==
+
+    NOUR: "Hmm, what's this? Some kind of old doll?"
+    
+    &PORTRAIT_ms. suwan_suwannervous
+    
+    MS. SUWAN: "..."
+    
+    //STRETCH GOAL: MS. SUWAN WALKS AROUND THE DOLL
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "Those <i>creepy</i> eyes... They keep following me around."
+    
+    &PORTRAIT_ms. suwan_suwanneutral
+    
+    MS. SUWAN: "...I wanted a doll like this as a child."
         
     NICK: "Why didn't you have one?"
     
-    MS SUWAN: My mother did not allow me to have one.
-        
-    She continues to stare longingly at the doll. She was it to be hers but she can't bring herself to allow that pleasure.
-
-     &Ms. Suwan picks up the doll.
-  
-    Ms Suwan's fingertips lightly touch the glossy figurine. As she tries to grip her plam around the doll...
+    MS. SUWAN: "My mother. She did not allow it."
     
-    NICK: Come on, I wanna go to TopicSpot!
+    MS. SUWAN: "..."
     
-    Ms Suwan drops the doll, surprisingly unbroken.
-    -> END
-
-
-== olddoll_revisit==
-
-    The doll lays on the floor once again...
+    &PORTRAIT_nick_nickangry
+   
+    NICK: "Come on, I wanna go to TopicSpot!"
+    
+    &PORTRAIT_nick_nickneutral
+    
+    MS. SUWAN: "..."
+    
+    MS. SUWAN: "Very well.
     
     -> END
-
-
 
 

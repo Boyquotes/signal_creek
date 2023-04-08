@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_topicspot_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_consoles.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_graphictees.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_coolshirt.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/prefabs/objects/topicspot/obj_clothesrack2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_shelf.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_shelfside.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=17]
@@ -131,10 +130,10 @@ __meta__ = {
 }
 
 [node name="Table2" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-position = Vector2( 97, 150 )
+position = Vector2( 170, 85 )
 
 [node name="PinButtons" parent="PlaneManager/Overworld" instance=ExtResource( 7 )]
-position = Vector2( 97, 151 )
+position = Vector2( 170, 87 )
 
 [node name="Trinkets2" parent="PlaneManager/Overworld" instance=ExtResource( 26 )]
 position = Vector2( 69, 109 )
@@ -161,10 +160,10 @@ position = Vector2( 383, 151 )
 position = Vector2( 353, 97 )
 
 [node name="Shelf" parent="PlaneManager/Overworld" instance=ExtResource( 14 )]
-position = Vector2( 72, 211 )
+position = Vector2( 75, 210 )
 
 [node name="Shelf2" parent="PlaneManager/Overworld" instance=ExtResource( 14 )]
-position = Vector2( 121, 211 )
+position = Vector2( 132, 211 )
 
 [node name="ShelfSide" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
 position = Vector2( 406, 133 )
@@ -173,7 +172,7 @@ position = Vector2( 406, 133 )
 position = Vector2( 406, 223 )
 
 [node name="PhoneCases2" parent="PlaneManager/Overworld" instance=ExtResource( 6 )]
-position = Vector2( 192, 77 )
+position = Vector2( 72, 152 )
 
 [node name="StoreManager" parent="PlaneManager/Overworld" instance=ExtResource( 4 )]
 position = Vector2( 234, 140 )
@@ -182,7 +181,7 @@ position = Vector2( 234, 140 )
 position = Vector2( 162, 14 )
 
 [node name="Table3" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-position = Vector2( 192, 74 )
+position = Vector2( 74, 149 )
 
 [node name="KirbyPoster" parent="PlaneManager/Overworld" instance=ExtResource( 20 )]
 position = Vector2( 293, -63 )
@@ -194,19 +193,13 @@ position = Vector2( 293, 97 )
 position = Vector2( 311, 44 )
 
 [node name="JewelryStand" parent="PlaneManager/Overworld" instance=ExtResource( 19 )]
-position = Vector2( 349, 221 )
+position = Vector2( 351, 225 )
 
 [node name="GraphicTees" parent="PlaneManager/Overworld" instance=ExtResource( 11 )]
 position = Vector2( 288, 225 )
 
 [node name="CoolShirt" parent="PlaneManager/Overworld" instance=ExtResource( 12 )]
 position = Vector2( 176, 225 )
-
-[node name="Clothes Rack" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
-position = Vector2( 231, 224 )
-
-[node name="ClothesRack 2" parent="PlaneManager/Overworld" instance=ExtResource( 13 )]
-position = Vector2( 232, 187 )
 
 [node name="Table" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 position = Vector2( 234, -48 )
@@ -215,9 +208,9 @@ position = Vector2( 234, -48 )
 position = Vector2( 236, -48 )
 
 [node name="Clothes Rack2" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
-position = Vector2( 80, 242 )
+position = Vector2( 78, 256 )
 
 [node name="Clothes Rack3" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
-position = Vector2( 116, 242 )
+position = Vector2( 118, 256 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]

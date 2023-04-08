@@ -121,3 +121,10 @@ INCLUDE bandn/comicstand.ink
     Another light turned on.
     
     -> END
+    
+    
+== explored_everything
+
+    NOUR: <i>I think we've explored everything we could here.</i>
+    
+    -> END

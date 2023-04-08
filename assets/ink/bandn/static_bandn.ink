@@ -45,6 +45,8 @@
     
     ... The majority of them are comics and passionate romance books. Such taste!
     
+    Looking closely, it seems to have a faint imprint of words on it's dark screen, but even squinting Nour can't quite tell what is on it.
+    
     -> END
     
 == notebooks ==
@@ -81,7 +83,7 @@
     
 == shelfwithtrinkets ==
     
-    It's a collection of trinkets. 
+    There's a bunch of trinkets here. They all seem to be familiar shapes, and yet nobody can quite place what they're meant to be.
     
     It looks like some sort of weird... dog? 
     
