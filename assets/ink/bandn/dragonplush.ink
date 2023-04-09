@@ -2,54 +2,77 @@
 
     It's a large bright green plush dragon, big enough to hug.
     
-    {
-        - dragonplush1:
-            -> dragonplushvisited
-        - else:
-            -> dragonplush1
-
-    }
+    &PORTRAIT_nour_nourrealization
+    
+    {- !dragonplush1: -> dragonplush1 }
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: <i>Plush the Magic Dragon... a fragment of my childhood.</i>
+    
+    -> END
     
 
 == dragonplush1 ==
     
-    
-    NOUR: "Puff the Magic Dragon...?"
+    NOUR: "Puff the Magic Dragon!?"
     
     NICK: "Who? What?"
     
-    NOUR: "You never read the books that he's from? Or heard the lullaby growing up?"
+    &PORTRAIT_nour_noursmile
     
-    NICK: "Um... no...? What's it about?"
+    NOUR: "<i>Puff The Magic Dragon, oh he lived by the sea!~</i>"
     
-    NOUR: "Oh, it's actually pretty good. It's a story about this kid, Jackie, and his imaginary dragon friend coming to life..."
+    NOUR: "You know the lullaby?"
     
-    NOUR: "They lived in a village by the sea, and he had to keep her secret while she helped him fix all of these peoples' different problems..."
+    NICK: "Nope. Never heard of it."
     
-    NOUR: "My favorite was the story about Puff and Jackie helping this kid deal with the death of his older sister. It was... actually pretty dark for a children's book, now that I think about it."
+    &PORTRAIT_nour_nourneutral
     
-    MS. SUWAN: "That reminds me of a story from my own childhood. A kid and a dragon helping people together, though it was all in Thai."
+    NOUR: "Sami and I grew up on the show. Baba sang the song to us every night."
     
-    NICK: "Cool! I just played a game about dragons. You feed it and make it really strong and it sweeps the bosses for you!"
+    &PORTRAIT_nick_nickbigsmile
     
-    MS SUWAN: "Sounds a bit different from our dragon stories."
+    NICK: "Heh... Wonder why Sami never told <i>me</i> about it..."
     
-    NOUR: "Pfft, yeah. If only we had a dragon that'd help us get out of here."
+    &PORTRAIT_nick_nickworried
     
-    -> END
-
-== dragonplushvisited ==
+    NICK: "What's it about?"
     
-    NOUR: "Puff the magic dragon, lived by the sea... ~"
+    &PORTRAIT_nour_noursmile
     
-    NOUR: <i>Man, haven't thought about that song in years. I'm getting deja vu just from looking at that thing.</i>
+    NOUR: "It's a story about this kid, Jackie, whose imaginary dragon friend comes to life."
     
-    NOUR: <i>I didn't think it was anything special, but... Baba used to sing that song to me almost every night. I never stopped asking for it, not until I was in high school.</i>
+    NOUR: "He had to keep her a secret, while she helped him fix peoples' problems..."
     
-    NOUR: <i>It's hard to imagine that there was a time when I wasn't afraid to ask baba for things. That I didn't have to worry about what I said around him, or what he thought of me.</i>
+    NOUR: "In my favorite episode, they helped a kid who lost his older sister."
     
-    NOUR: <i>I wanted him to be proud of me. At the time it seemed like such a simple thing to do.</i>
+    &PORTRAIT_nour_nourneutral
     
-    NOUR: <i>Now it feels impossible...</i>
+    NOUR: "...It was actually pretty dark for a children's book, now that I think about it."
+    
+    &PORTRAIT_nick_nickworried
+    
+    NICK: "..."
+    
+    * "I never stopped asking Baba to sing that song to me...["] at least, not until high school."
+    
+        NOUR: "I used to be unafraid to ask baba for things."
+        
+        &PORTRAIT_nour_noursad
+        
+        NOUR: "Because I knew he wouldn't judge me."
+        
+    * "It's a little embarrassing, how old I was when I stopped watching."
+    
+        NOUR: "...I think part of me was hanging on to that innocence."
+        
+        &PORTRAIT_nour_noursad
+        
+        NOUR: "Back when I didn't feel like I had to hide anything."
+    
+    - NICK: "...I get it."
+    
+    NICK: "Man, If only <i>we</i> had a dragon that'd help us get out of here."
     
     -> END

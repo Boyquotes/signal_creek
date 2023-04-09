@@ -40,6 +40,7 @@ export var characterPortraits : Dictionary = {
 	"prince pendragon": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"emperor evercrisp": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"earl earligold": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
+	"???": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png"),
 	"placeholder": preload("res://assets/sprites/characters/portraits/portrait_placeholder.png")
 }
 
@@ -76,7 +77,7 @@ func get_dir_contents(rootPath: String, fileExtensionToAdd: String) -> Array:
 	var dir = Directory.new()
 
 	if dir.open(rootPath) == OK:
-		var dirList = dir.list_dir_begin(false, false)
+		var _dirList = dir.list_dir_begin(false, false)
 		_add_dir_contents(dir, files, directories, fileExtensionToAdd)
 	else:
 		push_error("An error occurred when trying to access the path.")
@@ -140,5 +141,12 @@ func get_current_portrait() -> Texture:
 # Set expression portrait that is assigned to a character
 func set_character_portrait(characterName: String, expressionName: String) -> void:
 	var portraitToUse = portraitLibrary.get(expressionName)
-	characterPortraits[characterName] = portraitToUse
+	
+	if portraitToUse:
+		characterPortraits[characterName] = portraitToUse
 
+
+func set_party_portraits_to_neutral():
+	set_character_portrait("nour", "nourneutral")
+	set_character_portrait("nick", "nickneutral")
+	set_character_portrait("ms. suwan", "suwanneutral")

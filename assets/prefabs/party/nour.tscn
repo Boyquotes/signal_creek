@@ -43,5 +43,5 @@ __meta__ = {
 anims/LookAround = SubResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -3.5 )
+position = Vector2( 0, -3 )
 shape = SubResource( 6 )

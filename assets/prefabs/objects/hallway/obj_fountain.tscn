@@ -1,41 +1,17 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/scripts/character/npc_fatherfuji.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/materials/water.tres" type="Material" id=6]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 32, 28 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 40, 34.5 )
-
-[sub_resource type="Shader" id=26]
-code = "shader_type canvas_item;
-
-uniform float time:hint_range(0.0, 1.57, 0.001) = 1.57;
-
-float rand(vec2 co){
-    return fract(sin(dot(co.xy ,vec2(12.9898,96.233))) * 43758.5453);
-}
-
-void fragment()
-{
-	vec2 texture_resolution = 1.0 / TEXTURE_PIXEL_SIZE;
-	vec2 within_texture_pixel=floor(UV * texture_resolution);
-	vec4 color= texture(TEXTURE,UV);
-	
-	if(sin(time) > rand(within_texture_pixel))
-		COLOR = color;
-	else
-		COLOR = vec4(0.0,0.0,0.0,0.0);
-}"
-
-[sub_resource type="ShaderMaterial" id=24]
-shader = SubResource( 26 )
-shader_param/time = 1.57
 
 [sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 21, 17 )
@@ -54,6 +30,14 @@ position = Vector2( 0, -32 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 48, 240, 64, 64 )
+
+[node name="Wadder" type="Sprite" parent="."]
+light_mask = 4
+material = ExtResource( 6 )
+position = Vector2( 0, -34 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 58, 254, 44, 31 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
@@ -87,7 +71,6 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="FatherFuji"]
 light_mask = 4
-material = SubResource( 24 )
 position = Vector2( 0.545455, -8 )
 texture = ExtResource( 5 )
 region_enabled = true
@@ -114,6 +97,7 @@ _shlorping_target_path = NodePath("../Sprite")
 _final_knot_name = "fountain2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FatherFuji/ActiveArea"]
+position = Vector2( 0, -16 )
 shape = SubResource( 25 )
 disabled = true
 

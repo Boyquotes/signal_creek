@@ -1,6 +1,6 @@
 == bookstack ==
 
-    It's a shelf filled with stacks of books.
+    It's a shelf filled with books.
     
         
     {
@@ -21,13 +21,17 @@
     
     NOUR: "Clues...?"
     
-    NICK: "Yeah, like... when you pull on a book and the whole shelf like swings out and like there's like a hidden exit behind it!"
+    NICK: "Yeah, like..."
     
-    MS. SUWAN: "I strongly doubt this."
+    NICK: "When you pull on a book and the whole shelf like swings out to reveal a hidden exit behind it!"
     
-    NICK: He begins to methodically tug on every book.
+    MS. SUWAN: "You watch too many movies."
     
-    NICK: "Trust me guys. I'll find it."
+    MS. SUWAN: "Also, this is a commercial bookstore—not some mysterious billionaire's private library."
+    
+    Nick eagerly tugs on every book.
+    
+    NICK: "Trust me guys. I'll find it!"
     
     NOUR: "All right, Nick, you go ahead and do that..."
     

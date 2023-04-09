@@ -47,6 +47,8 @@ INCLUDE topicspot/jewelrystand.ink
 
 INCLUDE betaintro.ink
 INCLUDE bandn/comicstand.ink
+INCLUDE bandn/computerdesk.ink
+
 
 
 
@@ -119,5 +121,12 @@ INCLUDE bandn/comicstand.ink
     //would be cool if this text was in a different color. 
     
     Another light turned on.
+    
+    -> END
+    
+    
+== explored_everything
+
+    NOUR: <i>I think we've explored everything we could here.</i>
     
     -> END

@@ -9,7 +9,7 @@ extends Control
 
 # Entry Prefab Types
 export var print_information = false
-export var camera_offset_dialogue = 50.0
+export var camera_offset_dialogue = 40.0
 export var typewriter_speed : int = 1
 export var scroll_increment : float = 0.75
 export var panel_opening_speed : float = 0.25
@@ -103,7 +103,11 @@ func open_at_knot(pathstring: String) -> void:
 	
 	current_speaker = Globals.PartyObject.get_leader().get_name()
 	
-	proceed()
+	var inkCommand = proceed()
+	
+	while inkCommand and "command" in inkCommand:
+		inkCommand = proceed()
+	
 	set_camera_position_to_speaker()
 	
 	is_expanding_background_panel = true
@@ -139,6 +143,7 @@ func free_old_choicebox() -> void:
 
 # Proceeding to the next string that ink should return
 func proceed() -> String:
+	
 	if pause:
 		_down_arrow_animate.play("Idle")
 		return
@@ -201,7 +206,7 @@ func check_entry_type(entryText: String) -> void:
 		display_choices(chooserName)
 		set_camera_position_to_speaker()
 		
-	elif ":" in entryText: #if line contains a name, parse name and dialogue after
+	elif ":" in entryText and !"/" in entryText.split(":")[0]: #if line contains a name, parse name and dialogue after
 		var newDialogue = DialogueEngine.create_entry_dialogue(entryText, _entry_prefab_dialogue, _entry_prefab_paragraph)
 		current_speaker = entryText.split(":")[0]
 		_vertical_layout_node.add_child(newDialogue)
@@ -248,6 +253,7 @@ func shrink_background_panel() -> void:
 		background_panel_node.set_visible(false)
 		#RESET DIALOGUE BOX
 		clear_and_reset_ui()
+		Globals.ColorManager.set_party_portraits_to_neutral()
 		
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
@@ -384,7 +390,12 @@ func find_current_speaker_position():
 		print("Current Speaker: " + currentSpeaker + "\n")
 		
 	var currentSpeakerNode = Globals.Nour
-	Globals.SpeechBubble.set_visible(true)
+	
+	if '"' in _ink_player.get_CurrentText() and !'"..."' in _ink_player.get_CurrentText():
+		Globals.SpeechBubble.set_visible(true)
+		
+	else:
+		Globals.SpeechBubble.set_visible(false)
 
 	# Match the string of the current speaker's name to their Object in game
 	match currentSpeaker:
@@ -440,8 +451,11 @@ func set_camera_position_to_speaker():
 		Globals.GameRoot.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 		return
 		
-	followingVector = find_current_speaker_position()
-	Globals.GameRoot.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
+	
+	# Mid point between nour and current speaker
+	followingVector = find_current_speaker_position().linear_interpolate(Globals.Nour.get_global_position(), 0.75)
+	
+	Globals.GameRoot.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y - camera_offset_dialogue/2))
 	
 
 

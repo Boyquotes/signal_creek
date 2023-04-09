@@ -61,7 +61,7 @@
     
     NOUR: "Yeah, man. All your apple friends are talking about you."
     
-    PRINCE PENDRAGON: "Ah, of course. The other apples speak of nothing but their dissapointment, I presume?"
+    PRINCE PENDRAGON: "Ah, of course. The other apples speak of nothing but their disapointment, I presume?"
     
     NOUR: "Actually, the opposite."
     

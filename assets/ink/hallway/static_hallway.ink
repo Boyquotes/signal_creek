@@ -58,7 +58,7 @@
 
 == directionsign ==
 
-    It's a mall directory, with a map of the current floor.
+    It's a mall directory with a map of the current floor.
     
     -> END
     
@@ -71,15 +71,15 @@
     
 == escalator ==
 
-    The escalator is out of order. 
+    It's a broken escalator. The path is blocked.
     
-    It's covered in strange vines that seem to twist and turn with Nour's movements, blocking off any passage.
+    ... Does <i>anything</i> work in this mall? 
     
     -> END
     
 == mannequins ==
 
-    It's two store mannequins, a man and a woman.
+    It's two store mannequins: a man and a woman.
     
     -> END
     

@@ -1,10 +1,10 @@
 === weirdtree ===
 
-    It's a really, really weird tree. It's extremely clear that this tree is not like other trees. 
+    It's a really weird tree. It's extremely clear that this tree is not like the others. 
     
     {
         - weirdtree_findgranny:
-            -> weirdtree_end //end of ink that should be replaced with the main ink end
+            -> explored_everything
             
         - consoles_start_aplequest:
             -> weirdtree_findgranny
@@ -18,257 +18,267 @@
     
 === weirdtree_before_aplequest ===
 
-    NOUR: "This tree looks kinda..."
+    &PORTRAIT_nour_nourpondering
+
+    NOUR: "This tree looks strange... Do you think there's something <i>in</i> it?"
     
-    MS. SUWAN: "It looks <i>wrong</i>."
+    NICK: "Dunno, but it looks WACK! It's all pink and wobbly... What if I just-"
     
-    NICK: "It looks WACK!"
+    //FOLLOW_NICK_NickTreePos
     
-    NOUR: "The other trees looked mostly normal though, so what's wrong with this one?"
+    &PAUSE_1.0
     
-    NICK: "And why is it MOVING LIKE THAT?"
+    &PORTRAIT_ms. suwan_suwanannoyed
     
-    NICK: "Do you think there's something...in it...?"
+    MS. SUWAN: "Do <i>not</i> climb the tree."
     
-    NOUR: "I sure hope not."
+    NICK: "But what if there's something super duper cool up there?"
     
-    NICK: "Maybe we could find <i>out</i>—"
+    MS. SUWAN: "No. We have better things to do."
     
-    MS. SUWAN: "Do not climb the tree."
-    
-    NICK: "I never said that!"
-    
-    NICK: "Though that would be so EPIC."
-    
-    NICK: "What if there's something super duper cool up there?"
-    
-    MS. SUWAN: "No."
-    
-    NICK: "We could do less, uh, involved exploration stuff instead!"
-    
-    NICK: "We could throw ROCKS or SHAKE the—"
-    
-    MS. SUWAN: "Let's not bother the tree, please. We have better things to do."
+    &PORTRAIT_nick_nickannoyed
     
     NICK: "Ugh, fine. You're no fun."
     
-    MS. SUWAN: "I was aiming for safe, not fun."
-    
-    NOUR: <i>I guess we'll never unlock the mystery of this very strange tree...</i>
-    
-        -> END
+    -> END
 
 === weirdtree_before_aplequest_repeat ===
     
     MS. SUWAN: "Don't even think about it."
 
+    NICK: "..."
+
     NOUR: <i>Maybe I can come back to this later...</i>
-        -> END
+    
+    -> END
 
 === weirdtree_findgranny ===
 
-    NOUR: "You know what I'm thinking?"
+    &FOLLOW_NOUR_NourTreeStartPos
+    
+    &FOLLOW_SUWAN_SuwanTreeStartPos
+    
+    &FOLLOW_NICK_NickTreeStartPos
 
-    MS. SUWAN: "An apple in a tree. Very original."
+    &PORTRAIT_nour_noursmile
     
-    NOUR: "Who knows...there might actually be something up there."
+    NOUR: "...You know what I'm thinking?"
     
-    NOUR: "But I'm not an expert at this kind of stuff."
+    &PAUSE_0.05
     
-    NOUR: "I could always take suggestions from the crowd..."
+    &EMOTE_NOUR_UpIdle
     
-    Nick looks at his feet and doesn't respond. 
+    &EMOTE_NICK_RightIdle
     
-    NOUR: <i>Not talking...maybe I should try to motivate him a little more.</i>
+    &EMOTE_SUWAN_UpIdle
     
-    NOUR: "We could try cutting down the tree. That could solve a lot of problems."
+    &PORTRAIT_ms. suwan_suwanannoyed
+
+    MS. SUWAN: "An apple... in a tree...?"
+    
+    &PORTRAIT_nick_nickshadow
+    
+    NICK: "..."
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "We could try cutting down the tree."
     
     MS. SUWAN: "With what tools? This is a joke, right?"
     
+    &PORTRAIT_nour_noursmile
+    
     NOUR: "No. I'm serious about this. We should go find an axe."
     
-    Nick looks up with a confused expression. 
+    &PORTRAIT_nick_nickworried //he should look confused
     
-    MS. SUWAN: "You look like you want to say something, Nick."
+    NICK: <i>Sigh...</i>
     
-    Nick sighs, but it's clear that cutting down the tree is a bad idea—even to him.
+    &PORTRAIT_nour_noursmile
     
     NOUR: "Should we try something else?"
     
-    Nick hesitates...and then nods his head.
+    NICK: Nick nods his head.
     
-    NOUR: <i>Seems like he's responding well to my silly mistakes. Maybe I could push this further...</i>
+    &PORTRAIT_nour_nourpondering
     
     NOUR: "To check for an apple up in the tree, we could..."
     
-        * [Shake the tree]
-            NOUR: "Let's shake the tree so that something could drop out."
-            
-            Nick shrugs, but doesn't protest.
-            
-            NOUR: "Alright...I hope I do this right."
-            
-            SOMETHING like fade to black and sfx OR animation but idk
-            
-            NOUR: "...Nothing."
-            
-            MS. SUWAN: "You shook it much too lightly—of course nothing came out."
-            
-            NOUR: "I don't think I can shake a tree harder than that."
-            
-            NOUR: "What do you think we should do, Nick?"
+        * (shake) "Shake the tree?"
         
-        * [Throw rocks at the tree]
-            NOUR: "Maybe if I throw something, another thing could drop out."
-            
-            Nick shrugs, but doesn't protest.
-            
-            NOUR: "Alright...I hope I do this right."
-            
-            SOMETHING like fade to black and sfx OR animation but idk
-            
-            MS. SUWAN: "You <i>barely</i> grazed the tree, Nour."
-            
-            NOUR: "Oh, really? I thought my shot was pretty good for someone who isn't good at this."
-            
-            NOUR: "Right, Nick?"
+        * (throw) "Throw rocks at the tree?"
         
-        * [Climb the tree]
-            NOUR: "I could climb this tree and check for something up there."
+        * (climb) "Climb the tree?"
+        
+    - NICK: Nick shrugs, but doesn't protest.
             
-            Nick shrugs, but doesn't protest.
-            
-            NOUR: "Alright...I hope I do this right."
-            
-            SOMETHING like fade to black and sfx OR animation but idk
-            
-            MS. SUWAN: "Nour, you <i>barely</i> went up the tree."
-            
-            NOUR: "I'm not the best at climbing trees, but I thought I got pretty far?"
-
-    - Nick makes a face and lets out a frustrated sigh.
+    NOUR: "Alright... Here goes."
     
+    &FOLLOW_NOUR_NourFollowTreePos
+    
+    &PAUSE_0.5
+    
+    &FDEOUT
+    
+    "..."
+    
+    <i>Rustle rustle...</i> //ALSO SFX
+    
+    
+    {shake: 
+    
+        MS. SUWAN: "You shook it far too lightly."
+        
+    }
+    
+    {throw:
+    
+        MS. SUWAN: "You <i>barely</i> grazed the tree, Nour."
+        
+    }
+    
+    {climb:
+    
+        MS. SUWAN: "Nour, you <i>barely</i> went up the tree."
+        
+    }
+
     NICK: "...I'll do it."
     
-    SOMETHING like fade to black and sfx 
-
-    THEN SFX of apple dropping of a tree and getting CAUGHT
+    ...
+    
+    //RUSTLING SFX
+    
+    <i>Rustle rustle...</i>
     
     &SHLORP_APPLE_GrandDuchessGranny_in
     
+    &FDEIN
+    
     NICK: "Woah! What the—"
+    
+    &PORTRAIT_???_grannysmile
+    
+    &PORTRAIT_grand duchess granny_grannysmile
     
     ???: "KEKEKE!"
     
-    MS. SUWAN: "Is that one of those—"
+    MS. SUWAN: "Is that one of those—" 
     
-    ???: "Thank the Mother Tree someone saved me from this very WEIRD tree!"
+    ???: "Thank the Mother Tree! Someone has awoken me from my slumber at last!"
     
-    NOUR: "Nick, you did it!"
+    &PORTRAIT_nick_nickbigsmile
     
-    Nick smiles proudly.
+    NICK: "...!"
     
-    ???: "This old applady's eyes aren't so good, so let me see you, my savior...ah, yes!"
+    ???: "Ah, yes! What a handsome smile!"
     
-    ???: "What a handsome smile! I, <i>GRAND DUCHESS GRANNY SMITH</i>, can tell that you are indeed a SWEETIEPIE!"
+    GRAND DUCHESS GRANNY: "I, <i>GRAND DUCHESS GRANNY SMITH</i>, can tell with my old applady eyes... that you are indeed a SWEETIEPIE!"
     
-    NICK: "Um...well...thanks?"
+    &PORTRAIT_nick_nickangry
     
-    GRAND DUCHESS GRANNY: "No frowning, young man! I've been watching you all from atop this tree."
+    NICK: "Um... thanks?"
     
-    GRAND DUCHESS GRANNY: "And I have to say...what is wrong with young folks these days?"
+    &PORTRAIT_grand duchess granny_grannyangry
     
-    GRAND DUCHESS GRANNY: "Lacking CONFIDENCE? Lacking RESOLVE? Lacking POSITIVE SELF-ESTEEM?" 
+    GRAND DUCHESS GRANNY: "No frowning, young man! You young folks these days..."
     
-    GRAND DUCHESS GRANNY: "TO that I say, <i>PATOOEY</i>!"
+    NICK: "..."
     
-    NICK: "How...how did you—"
+    GRAND DUCHESS GRANNY: "Lacking CONFIDENCE? Lacking RESOLVE? Lacking SELF-ESTEEM?" 
     
-    GRAND DUCHESS GRANNY: "How come you with your fresh, young eyes are blinder than MINE?"
+    GRAND DUCHESS GRANNY: "To that, I say... <i>PATOOEY!</i>"
     
-    GRAND DUCHESS GRANNY: "The Mother Tree nurtures all living creatures. Plant your roots firmly and reach for the sky!"
+    NICK: "How... how'd you—"
     
-    GRAND DUCHESS GRANNY: "A sweet seedling like you has all the means to blossom, but only if you step into the sun!"
+    &PORTRAIT_grand duchess granny_grannyneutral
     
-    GRAND DUCHESS GRANNY: "OH, life is short—take it from me! You can't waste time doubting, hesitating, and putting yourself down."
+    GRAND DUCHESS GRANNY: "The Mother Tree nurtures all. A sweet seedling like you has the means to blossom..."
+    
+    GRAND DUCHESS GRANNY: "But only if <i>YOU</i> step into the sun! Plant your roots firmly, and reach for the sky!"
+    
+    &PORTRAIT_nick_nickworried
+    
+    NICK: "..."
+    
+    &PORTRAIT_grand duchess granny_grannyangry
     
     GRAND DUCHESS GRANNY: "<i>UNDERSTOOD, YOUNG HUMAN BOY?</i>"
     
     NICK: "I-I, I mean, uh, YES?"
     
-    GRAND DUCHESS GRANNY: "KEKEKE! <i>Very</i> good. And same goes for you two seedlings!"
+    &PORTRAIT_grand duchess granny_grannysmile
     
-    NOUR: "Um, yes ma'am!"
+    GRAND DUCHESS GRANNY: "KEKEKE! <i>Very</i> good. And same goes for you two seedlings!"
     
     MS. SUWAN: "Seedling? I'm not nearly as young as these two."
     
-    GRAND DUCHESS GRANNY: "<i>YOU DARE SPEAK OF AGE IN MY PRESENCE?</i>"
+    &PORTRAIT_grand duchess granny_grannyangry
     
-    MS. SUWAN: "I didn't mean—"
+    GRAND DUCHESS GRANNY: "AGE has nothing to do with the tangled roots in your hearts!"
     
-    GRAND DUCHESS GRANNY: "AGE has nothing to do with the tangled roots in all of your hearts!"
+    &PORTRAIT_grand duchess granny_grannyneutral
     
-    GRAND DUCHESS GRANNY: "Everyone is here to resolve something—the Mother tree connects us here for a reason."
+    GRAND DUCHESS GRANNY: "The Mother Tree connects us for a reason."
     
-    GRAND DUCHESS GRANNY: "I will pray to the Mother Tree that your time spent here Between the Planes will unravel the past that haunts you."
+    GRAND DUCHESS GRANNY: "I pray that your time spent Between the Planes will unravel your haunted past."
     
-    MS. SUWAN: "...Understood."
+    &PORTRAIT_grand duchess granny_grannysmile
     
-    GRAND DUCHESS GRANNY: "KEKEKE! Scrumptious!"
+    GRAND DUCHESS GRANNY: "KEKEKE! Now... what was I doing in here?"
     
-    GRAND DUCHESS GRANNY: "Now...what was I doing again in this tree?"
+    NOUR: "I believe you were searching for the Prince?"
     
-    NOUR: "I believe you and the other council members were searching for the prince?"
+    &PORTRAIT_grand duchess granny_grannyangry
     
-    GRAND DUCHESS GRANNY: "Ah, the prince...another precious seedling."
+    GRAND DUCHESS GRANNY: "Ah, the Prince... ANOTHER IDIOT BOY who doesn't KNOW HIS WORTH!"
+ 
+    NOUR: "...We've been sent by the Emperor to retrieve eveyone in the Prince's search council."
     
-    GRAND DUCHESS GRANNY: "HE'S ALSO ANOTHER IDIOT APPLE BOY WITH NO SELF-ESTEEM!"
+    &PORTRAIT_grand duchess granny_grannyneutral
     
-    GRAND DUCHESS GRANNY: "When everyone knows he is so much more than he believes he is..."
+    GRAND DUCHESS GRANNY: "EVERCRISP! That mushy, sentimental fruit..."
     
-    GRAND DUCHESS GRANNY: "Probably sulking somewhere in this strange place!"
+    &PORTRAIT_grand duchess granny_grannysmile
     
-    NOUR: "We were sent to search for all the members, send them back to the emperor, and find the prince."
+    GRAND DUCHESS GRANNY: "Thank you for your hard work, seedlings."
     
-    GRAND DUCHESS GRANNY: "EVERCRISP! That mushy sentimental fruit at least did one thing right."
+    &PORTRAIT_nick_neutral
     
-    GRAND DUCHESS GRANNY: "Thank you for your hardwork, seedlings...as a reward, let me tell you something the Mother Tree has told me!"
+    NICK: Nick nods his head. 
     
-    GRAND DUCHESS GRANNY: "[epic lore drop]"
+    &PORTRAIT_grand duchess granny_grannykiss
     
-    GRAND DUCHESS GRANNY: "But I've rambled far long enough, KEKEKE! Send me away to the Emperor, dearies!"
+    //SFX GROSS WET KISSY
     
-    NOUR: "Of course. Thank you!"
-    
-    GRAND DUCHESS GRANNY: "Yes, yes, yes—now let me see that young man's face once more! Come here!"
-    
-    NICK: "..."
-    
-    GRAND DUCHESS GRANNY: "Silence suits you NOT, seedling! Promise this old granny smith that you will open your heart again to the earth!"
-    
-    Nick nods his head, and Grand Duchess Granny Smith gives him a fat kiss on the cheek. 
+    GRAND DUCHESS GRANNY: Grand Duchess Granny Smith blows him a fat kiss! 
     
     NICK: "Eek!"
     
+    &PORTRAIT_grand duchess granny_grannysmile
+    
     GRAND DUCHESS GRANNY: "KEKEKE!"
     
-    NICK: "Goodbye..."
+    GRAND DUCHESS GRANNY: "Send me away to the Emperor, dearies!"
     
-    GRAND DUCHESS GRANNY: "<i>GOODBYE, PRECIOUS ONES! VISIT GRANNY SOMETIME, YES?</i>"
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: "Sure thing."
+    
+    GRAND DUCHESS GRANNY: "KEKEKE! GOODBYE, PRECIOUS ONES! <i>VISIT GRANNY SOMETIME, YES?</i>"
     
     &SHLORP_APPLE_GrandDuchessGranny_out
     
-    Nick touches his cheek. 
+    &PAUSE_0.75
+    
+    NICK: Nick touches his cheek. 
     
     NOUR: "Good work getting her out of there. I would've never been able to do that without you."
     
-    Nick stays silent, but he nods his head again.
+    NICK: Nick stays silent, but he nods his head again.
     
     NOUR: <i>He's responding more and more with each apple we find. We should continue.</i>
     
-        -> END
-
-=== weirdtree_end ===
-    NOUR: <i>I think we've explored everything we could here.</i>
-        
-        -> END
+    &FOLLOW_NOUR_stop
+    
+    -> END
