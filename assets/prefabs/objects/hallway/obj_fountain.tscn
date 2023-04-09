@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/scripts/character/npc_fatherfuji.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 [ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=6]
+[ext_resource path="res://assets/textures/lights/glow_square_16.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 32, 28 )
@@ -36,6 +37,35 @@ shader_param/sus_speed = 5.0
 
 [sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 21, 17 )
+
+[sub_resource type="Shader" id=27]
+code = "// chromatic aberration
+//---------------------------------
+
+shader_type canvas_item;
+
+uniform vec2 displacement = vec2(2.0, 1.0);
+uniform float wave_intensity = 10.0;
+uniform float water_speed = 4.0;
+
+float random (vec2 uv) {
+    return sin(TIME) * fract(sin(dot(uv.xy,
+        vec2(12.9898,78.233))) * 43758.5453123);
+}
+
+void fragment()
+{
+	vec2 disp = displacement * random(UV) * sin(UV.y * wave_intensity + TIME);
+	vec4 water = texture(SCREEN_TEXTURE, SCREEN_UV + vec2(SCREEN_PIXEL_SIZE * disp), 1.0);
+	
+	COLOR = water;
+}"
+
+[sub_resource type="ShaderMaterial" id=28]
+shader = SubResource( 27 )
+shader_param/displacement = Vector2( 2, 0 )
+shader_param/wave_intensity = 10.0
+shader_param/water_speed = 4.0
 
 [node name="Fountain" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -113,6 +143,12 @@ _final_knot_name = "fountain2"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FatherFuji/ActiveArea"]
 shape = SubResource( 25 )
 disabled = true
+
+[node name="GlowSquare16" type="Sprite" parent="."]
+material = SubResource( 28 )
+position = Vector2( -0.500002, -34 )
+scale = Vector2( 1.875, 1.33333 )
+texture = ExtResource( 7 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]

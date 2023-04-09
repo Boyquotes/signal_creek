@@ -230,7 +230,7 @@ range_item_cull_mask = 14
 
 [node name="Light2D21" type="Light2D" parent="PlaneManager/Lights"]
 light_mask = 7
-position = Vector2( 440, 149 )
+position = Vector2( 440, 150 )
 texture = ExtResource( 51 )
 texture_scale = 2.0
 color = Color( 1, 0.945098, 0.666667, 1 )
@@ -254,7 +254,7 @@ range_item_cull_mask = 10
 
 [node name="Light2D23" type="Light2D" parent="PlaneManager/Lights"]
 light_mask = 7
-position = Vector2( 440, 212 )
+position = Vector2( 440, 213 )
 texture = ExtResource( 51 )
 texture_scale = 2.0
 color = Color( 1, 0.945098, 0.666667, 1 )
