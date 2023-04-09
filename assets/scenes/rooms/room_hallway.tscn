@@ -519,7 +519,7 @@ energy = 0.67
 range_height = 2048.0
 range_z_min = 0
 range_z_max = 0
-range_item_cull_mask = 4
+range_item_cull_mask = 12
 
 [node name="Light2D16" type="Light2D" parent="PlaneManager/Lights"]
 position = Vector2( 376, 712 )
@@ -531,7 +531,7 @@ energy = 0.67
 range_height = 2048.0
 range_z_min = 0
 range_z_max = 0
-range_item_cull_mask = 4
+range_item_cull_mask = 12
 
 [node name="Overworld" type="YSort" parent="PlaneManager"]
 __meta__ = {
