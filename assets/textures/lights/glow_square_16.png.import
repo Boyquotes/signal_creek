@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/elevatorlight.png-b5b29d6e517d441506c1ae1fc3b4343d.stex"
+path="res://.import/glow_square_16.png-2615f4cf73e4fa6c12824a9d29f403a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/lights/elevatorlight.png"
-dest_files=[ "res://.import/elevatorlight.png-b5b29d6e517d441506c1ae1fc3b4343d.stex" ]
+source_file="res://assets/textures/lights/glow_square_16.png"
+dest_files=[ "res://.import/glow_square_16.png-2615f4cf73e4fa6c12824a9d29f403a0.stex" ]
 
 [params]
 
