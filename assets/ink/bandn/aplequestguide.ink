@@ -3,19 +3,23 @@
 A tutorial guide to an old fantasy videogame called <i>"Aple Quest: The Space Prince Returns"</i>. 
 
 {
-    - nourplaysfantasygame:
+    - nourplaysaplequest:
         -> aplequestguide_end
-    - consoles3:
-        -> aplequestguide2
-    - aplequestguide1:
+        
+    - consoles_start_aplequest:
+        -> aplequestguide_after_start_aplequest
+        
+    - aplequestguide_after_bookshelf_fightstarts:
         -> aplequestguide1_repeat
-    - noursuggestion:
-        -> aplequestguide1
+        
+    - nour_suggests_hobbies:
+        -> aplequestguide_after_bookshelf_fightstarts
+        
     - else:
         -> END
 }
 
-=== aplequestguide1 ===
+=== aplequestguide_after_bookshelf_fightstarts ===
 
     NOUR: "Hey, look what I found! Isn't this the game we saw before at TopicSpot?"
     
@@ -152,7 +156,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest: The Space Pr
     
     Nick averts Nour's gaze, visibly restraining himself.
     
-    * ["Why do these books make you so upset?"]
+    * ["Why does studying make you so upset?"]
     
         NOUR: "Why do-"
     
@@ -231,7 +235,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest: The Space Pr
 === aplequestguide1_repeat ===
     NOUR: <i>How can I get Nick to talk again?</i>
     
-    NOUR: <i>These books only made him more upset, so I should find a different thing to prove he's smart.</i>
+    NOUR: <i>Everything in the bookstore made him more upset, so I should find a different thing to prove he's smart.</i>
     
     NOUR: <i>...He did know an awful lot about that videogame, even if we just read about it.</i>
     
@@ -239,10 +243,10 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest: The Space Pr
     
         -> END
         
-=== aplequestguide2 ===
+=== aplequestguide_after_start_aplequest ===
     NOUR: <i>Nick said this was useless before. I should try searching the hallway myself and not rely on this guide.</i>
     
-    NOUR: <i>If I ever need to keep track of how many apples I've found so far, I can always talk to Emperor Gala back at the TopicSpot consoles.</i>
+    NOUR: <i>If I ever need to keep track of how many apples I've found so far, I can always talk to Emperor Evercrisp back at the TopicSpot consoles.</i>
     
         -> END
 

@@ -1,6 +1,7 @@
 VAR currentPartyChar = "nick"
 VAR currentWorld = "dream"
 
+INCLUDE bandn/static_bandn.ink
 INCLUDE bandn/bookstack.ink
 INCLUDE bandn/dragonplush.ink
 INCLUDE bandn/hotwheels.ink
@@ -11,7 +12,10 @@ INCLUDE bandn/polaroid.ink
 INCLUDE bandn/priceofsalt.ink
 INCLUDE bandn/bookshelf.ink
 INCLUDE bandn/musicstand.ink
+INCLUDE bandn/aplequestguide.ink
+INCLUDE bandn/skeletondisplay.ink
 
+INCLUDE hallway/static_hallway.ink
 INCLUDE hallway/bobatea.ink
 INCLUDE hallway/cafetables.ink
 INCLUDE hallway/litter.ink
@@ -22,7 +26,13 @@ INCLUDE hallway/pretzelstand.ink
 INCLUDE hallway/victorias.ink
 INCLUDE hallway/womensclothing.ink
 INCLUDE hallway/vapestand.ink
+INCLUDE hallway/beautystand.ink
+INCLUDE hallway/weirdtree.ink
+INCLUDE hallway/fountain.ink
+INCLUDE hallway/timbertims.ink
+INCLUDE hallway/wertoys.ink
 
+INCLUDE topicspot/static_topicspot.ink
 INCLUDE topicspot/consoles.ink
 INCLUDE topicspot/coolshirt.ink
 INCLUDE topicspot/graphictees.ink
@@ -33,14 +43,12 @@ INCLUDE topicspot/pinbuttons.ink
 INCLUDE topicspot/sailormoonposters.ink
 INCLUDE topicspot/wallofvideogames.ink
 INCLUDE topicspot/spraycans.ink
-
-INCLUDE betaintro.ink
-INCLUDE hallway/static_hallway.ink
-INCLUDE topicspot/static_topicspot.ink
-INCLUDE bandn/static_bandn.ink
 INCLUDE topicspot/jewelrystand.ink
 
-INCLUDE bandn/aplequestguide.ink
+INCLUDE betaintro.ink
+INCLUDE bandn/comicstand.ink
+INCLUDE bandn/computerdesk.ink
+
 
 
 
@@ -113,5 +121,12 @@ INCLUDE bandn/aplequestguide.ink
     //would be cool if this text was in a different color. 
     
     Another light turned on.
+    
+    -> END
+    
+    
+== explored_everything
+
+    NOUR: <i>I think we've explored everything we could here.</i>
     
     -> END

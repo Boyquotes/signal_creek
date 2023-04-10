@@ -21,11 +21,11 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 9, 5.5 )
+extents = Vector2( 5, 3.5 )
 
 [node name="NOUR" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
-inkname = "NOUR"
+walking_spritesheet = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 2
@@ -43,5 +43,5 @@ __meta__ = {
 anims/LookAround = SubResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -5.5 )
+position = Vector2( 0, -3 )
 shape = SubResource( 6 )

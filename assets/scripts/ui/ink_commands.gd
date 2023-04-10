@@ -1,3 +1,4 @@
+# AUTOLOAD InkCommands
 extends Node
 
 # Parse function requests from ink writing
@@ -21,10 +22,6 @@ func parse_commands(currentLine):
 	elif "&MOV_RINA" in currentLine:
 		if Globals.Rina:
 			Globals.Rina.move_rina(currentLine.split("_")[2].strip_escapes())
-		
-	# Make rina shlorp out with the shader
-	elif "&SHLORP_RINA" in currentLine:
-		Globals.Rina.rina_shlorp_out()
 		
 	# Snap character to position
 	elif "&POS" in currentLine: #move nick to vector2
@@ -136,7 +133,7 @@ func parse_commands(currentLine):
 		vectorPos = vectorPos.split(",")
 		vectorPos = Vector2(vectorPos[0], vectorPos[1])
 		
-		Globals.GameCanvas.set_camera_following_vector(vectorPos)
+		Globals.GameRoot.set_camera_following_vector(vectorPos)
 		
 	# Turn on all the route lights at once
 	elif "&ALLON" in currentLine:
@@ -164,18 +161,44 @@ func parse_commands(currentLine):
 	# Change volume of music
 	elif "&VOLUME" in currentLine:
 		var volumeLevel = float(currentLine.split("_")[1].strip_escapes())
-		Globals.SoundManager.set_stream_volume(Globals.SoundManager.musicPlayer, volumeLevel)
+		Globals.SoundManager.set_stream_volume(Globals.SoundManager.music_player, volumeLevel)
 		
 	# expects &SHLORP_CBK_Chad_out
-	elif "&SHLORP_CBK" in currentLine:
+	elif "&SHLORP" in currentLine:
 		var characterName = currentLine.split("_")[2].strip_escapes()
 		var inOrOut = currentLine.split("_")[3].strip_escapes()
 		
+		var characterNode = Globals.Chad
+		
+		match characterName:
+			"Rina":
+				characterNode = Globals.Rina
+			"Chad":
+				characterNode = Globals.Chad
+			"Brody":
+				characterNode = Globals.Brody
+			"Kristy":
+				characterNode = Globals.Kristy
+			"DukeDelicious":
+				characterNode = Globals.DukeDelicious
+			"FatherFuji":
+				characterNode = Globals.FatherFuji
+			"GrandDuchessGranny":
+				characterNode = Globals.GrandDuchessGranny
+			"PrincePendragon":
+				characterNode = Globals.PrincePendragon
+			"PrincessPinkLady":
+				characterNode = Globals.PrincessPinkLady
+			"EmperorEvercrisp":
+				characterNode = Globals.EmperorEvercrisp
+			"EarlEarligold":
+				characterNode = Globals.EarlEarligold
+		
 		if "out" in inOrOut:
-			Globals.ChadBrodyKristy.cbk_shlorp_out(characterName)
+			characterNode.shlorp_out()
 			
 		else: 
-			Globals.ChadBrodyKristy.cbk_shlorp_in(characterName)
+			characterNode.shlorp_in()
 			
 	elif "&PAUSE" in currentLine:
 		var pauseTime = float(currentLine.split("_")[1].strip_escapes())
@@ -188,11 +211,11 @@ func parse_commands(currentLine):
 		
 	# AUDIO_FADEIN or AUDIO_FADEOUT
 	elif "&AUDIO" in currentLine:
-		var command = currentLine.split("_")[1].strip_escapes().to_lower()
+		var _command = currentLine.split("_")[1].strip_escapes().to_lower()
 		
 		if "FADEIN" in currentLine:
 			Globals.SoundManager.increasing_music_volume = true
-			Globals.SoundManager.musicPlayer.set_stream_paused(false)
+			Globals.SoundManager.music_player.set_stream_paused(false)
 			
 		elif "FADEOUT" in currentLine:
 			Globals.SoundManager.decreasing_music_volume = true

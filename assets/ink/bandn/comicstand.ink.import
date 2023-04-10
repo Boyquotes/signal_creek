@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+path="res://.import/comicstand.ink-fe425fae08cd4b73a3fcd2f2e987c23a.res"
+
+[deps]
+
+source_file="res://assets/ink/bandn/comicstand.ink"
+dest_files=[ "res://.import/comicstand.ink-fe425fae08cd4b73a3fcd2f2e987c23a.res" ]
+
+[params]
+
+is_master_file=false
+compress=false

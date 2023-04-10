@@ -1,15 +1,20 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/scripts/character/npc_fatherfuji.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/materials/water.tres" type="Material" id=6]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 32, 28 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 13, 12.1875 )
+extents = Vector2( 40, 34.5 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 21, 17 )
 
 [node name="Fountain" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -21,37 +26,84 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -40 )
+position = Vector2( 0, -32 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 48, 240, 64, 64 )
 
+[node name="Wadder" type="Sprite" parent="."]
+light_mask = 4
+material = ExtResource( 6 )
+position = Vector2( 0, -34 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 58, 254, 44, 31 )
+
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-position = Vector2( 0, -40 )
+position = Vector2( 0, -32 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 48, 240, 64, 64 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -28 )
+position = Vector2( 0, -20 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
-visible = false
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
-_disable_interactivity = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -4 )
+position = Vector2( 0, -18.5 )
 shape = SubResource( 22 )
+
+[node name="FatherFuji" type="Node2D" parent="."]
+position = Vector2( 8, -24 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="FatherFuji"]
+light_mask = 4
+position = Vector2( 0.545455, -8 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 367, 575, 13, 14 )
+
+[node name="Hint" type="Sprite" parent="FatherFuji"]
+visible = false
+modulate = Color( 1, 1, 1, 0.313726 )
+show_behind_parent = true
+light_mask = 4
+position = Vector2( 0.545455, -8 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 367, 575, 13, 14 )
+
+[node name="ActiveArea" type="Area2D" parent="FatherFuji"]
+monitoring = false
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+_disable_interactivity = true
+_shlorping_target_path = NodePath("../Sprite")
+_final_knot_name = "fountain2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FatherFuji/ActiveArea"]
+position = Vector2( 0, -16 )
+shape = SubResource( 25 )
+disabled = true
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
 [connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
 [connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]
+[connection signal="body_entered" from="FatherFuji/ActiveArea" to="FatherFuji/ActiveArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="FatherFuji/ActiveArea" to="FatherFuji/ActiveArea" method="_on_InteractArea_body_exited"]

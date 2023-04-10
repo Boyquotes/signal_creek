@@ -1,0 +1,56 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "// chromatic aberration
+//---------------------------------
+
+shader_type canvas_item;
+
+uniform vec2 r_displacement = vec2(1.0, 1.0);
+uniform vec2 g_displacement = vec2(0, 0);
+uniform vec2 b_displacement = vec2(0, 0);
+
+uniform float intensity = 0.0;
+uniform float time_intensity = 0.0;
+uniform float sus_duration = 0.01;
+uniform float sus_speed = 5.0;
+
+float rand(float n){return fract(sin(n) * 43758.5453123);}
+
+float noise(float p){
+	float fl = floor(p);
+  float fc = fract(p);
+	return mix(rand(fl), rand(fl + 1.0), fc);
+}
+
+float random_time (vec2 uv) {
+    return smoothstep(time_intensity - sus_duration, time_intensity, sin(noise(TIME) * sus_speed))* fract(sin(dot(uv.xy,
+        vec2(3.9898,78.233))) * 4.5453123);
+}
+
+void fragment()
+{
+	
+	vec2 texture_resolution = 1.0 / TEXTURE_PIXEL_SIZE;
+	vec2 within_texture_pixel = floor(UV * texture_resolution);
+	vec4 color = texture(TEXTURE, UV);
+	
+	vec2 rdisp = r_displacement * random_time(SCREEN_UV) - 0.5 * intensity;
+	vec2 gdisp = g_displacement * random_time(SCREEN_UV) - 0.5 * intensity;
+	vec2 bdisp = b_displacement * random_time(SCREEN_UV) - 0.5 * intensity;
+	
+	float r = texture(TEXTURE, UV + vec2(TEXTURE_PIXEL_SIZE * rdisp), 0.0).r;
+	float g = texture(TEXTURE, UV + vec2(TEXTURE_PIXEL_SIZE * gdisp), 0.0).g;
+	float b = texture(TEXTURE, UV + vec2(TEXTURE_PIXEL_SIZE * bdisp), 0.0).b;
+
+	float transparency = 1.0;
+	
+	if (color.w < 0.15) {
+		transparency = 0.0;
+	}
+	
+	color = vec4(r, g, b, transparency);
+	
+	COLOR = color;
+
+}"

@@ -32,6 +32,8 @@
     &SPEED_NICK_72.0
     &SPEED_NOUR_72.0
     
+    &PORTRAIT_nour_nournervous
+    
     // &PORTRAIT_nour_placeholder
     
     NICK: "Uh..."
@@ -62,7 +64,7 @@
     //MS SUWAN ENTERS THE ELEVATOR
     //HER SPRITE IS BLACK
     
-    - ???: "Stop right there."
+    - MS. SUWAN: "Stop right there."
     
     &FOLLOW_SUWAN_SuwanElevatorPos
     
@@ -80,21 +82,21 @@
     
     NICK: "Aw, shoot! The scary old lady caught up!"
     
-
-    
-    ???: "What did you just call me—"
+    MS. SUWAN: "What did you just call me—"
     
     &EMOTE_NOUR_RightIdle
+    
+    &PORTRAIT_nour_nourannoyed
     
     NOUR: "Stop talking!"
     
     &EMOTE_NOUR_DownIdle
     
-    ???: "You're both trespassing. That could-"
+    MS. SUWAN: "You're both trespassing. That could-"
     
-    ???: "Wait."
+    MS. SUWAN: "Wait."
     
-    ???: "Nour?!"
+    MS. SUWAN: "Nour?!"
     
     NOUR: "Uhh... Hi, Ms. Suwan."
     
@@ -131,7 +133,7 @@
     
     NICK: "C'mon, c'mon, c'mon!"
     
-    NOUR: "Seriously, Nick?! Pushing those aren't going to work!"
+    NOUR: "Seriously, Nick?! Pushing those isn't going to work!"
     
     MS. SUWAN: "She's right. This elevator is broken. It's not going anywhere—"
     
@@ -146,6 +148,8 @@
     &PAUSE_1.0
     
     &EMOTE_SUWAN_DownIdle
+    
+    &PORTRAIT_nour_nournervous
     
     NOUR: "What the—WHAT ARE YOU DOING?!"
     
@@ -185,6 +189,7 @@
     
     &ELEVATOR_OPEN
     
+    &PORTRAIT_nour_nourneutral
     
     -> END
 
@@ -193,6 +198,9 @@
 //location: Past Level - Hallway
 
 == betaintro_hallway ==
+
+    &PORTRAIT_nour_nourannoyed
+    
     NOUR: "Ugh...I feel sick."
     
     &EMOTE_NICK_LookAround

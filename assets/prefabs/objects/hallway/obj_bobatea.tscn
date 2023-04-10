@@ -1,15 +1,41 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/scripts/character/npc_dukedelicious.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=6]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 16, 11 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 30, 23 )
+
+[sub_resource type="ShaderMaterial" id=26]
+resource_local_to_scene = true
+shader = ExtResource( 6 )
+shader_param/progress = 1.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.089
+shader_param/color_shlorp = Color( 0, 1.02, 1.2, 1 )
+shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.5
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 21, 17 )
 
 [node name="BobaTea" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -27,6 +53,7 @@ region_enabled = true
 region_rect = Rect2( 79, 15, 34, 58 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
@@ -49,7 +76,45 @@ __meta__ = {
 position = Vector2( 0, -4 )
 shape = SubResource( 22 )
 
+[node name="DukeDelicious" type="Node2D" parent="."]
+position = Vector2( -6, -17 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="DukeDelicious"]
+light_mask = 4
+material = SubResource( 26 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 367, 575, 13, 14 )
+
+[node name="Hint" type="Sprite" parent="DukeDelicious"]
+visible = false
+modulate = Color( 1, 1, 1, 0.313726 )
+show_behind_parent = true
+light_mask = 4
+position = Vector2( 0.545455, -8 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 367, 575, 13, 14 )
+
+[node name="ActiveArea" type="Area2D" parent="DukeDelicious"]
+monitoring = false
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+_shlorping_target_path = NodePath("../Sprite")
+_final_knot_name = "bobatea2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DukeDelicious/ActiveArea"]
+shape = SubResource( 25 )
+disabled = true
+
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
 [connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
 [connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]
+[connection signal="body_entered" from="DukeDelicious/ActiveArea" to="DukeDelicious/ActiveArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="DukeDelicious/ActiveArea" to="DukeDelicious/ActiveArea" method="_on_InteractArea_body_exited"]
