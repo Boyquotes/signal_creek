@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 14.5, 25.5 )
+extents = Vector2( 26, 9.5 )
 
 [node name="Sofa" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -16,9 +17,9 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 position = Vector2( 0, -32 )
-texture = ExtResource( 4 )
+texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 213, 6, 31, 67 )
+region_rect = Rect2( 293, 128, 55, 22 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
@@ -29,8 +30,8 @@ position = Vector2( 0, -32 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -35.0226 )
 region_enabled = true
-region_rect = Rect2( 213, 6, 31, 67 )
+region_rect = Rect2( 293, 128, 55, 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -25.5 )
+position = Vector2( -1, -31.5 )
 shape = SubResource( 23 )

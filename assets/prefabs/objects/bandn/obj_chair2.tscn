@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=4]
-
+[ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 12.5, 7.5 )
@@ -24,19 +24,20 @@ __meta__ = {
 light_mask = 4
 material = ExtResource( 3 )
 position = Vector2( 0, -7 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 296.217, 87.2311, 24.5009, 28.4954 )
+region_rect = Rect2( 360, 96, 32, 29 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+position = Vector2( 0, -7 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -14.2477 )
 region_enabled = true
-region_rect = Rect2( 296.217, 87.2311, 24.5009, 28.4954 )
+region_rect = Rect2( 360, 96, 32, 29 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, -0.5 )
