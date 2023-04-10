@@ -18,6 +18,8 @@
     
 === weirdtree_before_aplequest ===
 
+    &PORTRAIT_nour_nourpondering
+
     NOUR: "This tree looks strange... Do you think there's something <i>in</i> it?"
     
     NICK: "Dunno, but it looks WACK! It's all pink and wobbly... What if I just-"
@@ -26,11 +28,15 @@
     
     &PAUSE_1.0
     
+    &PORTRAIT_ms. suwan_suwanannoyed
+    
     MS. SUWAN: "Do <i>not</i> climb the tree."
     
     NICK: "But what if there's something super duper cool up there?"
     
     MS. SUWAN: "No. We have better things to do."
+    
+    &PORTRAIT_nick_nickannoyed
     
     NICK: "Ugh, fine. You're no fun."
     
@@ -48,7 +54,23 @@
 
 === weirdtree_findgranny ===
 
+    &FOLLOW_NOUR_NourTreeStartPos
+    
+    &FOLLOW_SUWAN_SuwanTreeStartPos
+    
+    &FOLLOW_NICK_NickTreeStartPos
+
+    &PORTRAIT_nour_noursmile
+    
     NOUR: "...You know what I'm thinking?"
+    
+    &PAUSE_0.05
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_RightIdle
+    
+    &EMOTE_SUWAN_UpIdle
     
     &PORTRAIT_ms. suwan_suwanannoyed
 
@@ -58,9 +80,13 @@
     
     NICK: "..."
     
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: "We could try cutting down the tree."
     
     MS. SUWAN: "With what tools? This is a joke, right?"
+    
+    &PORTRAIT_nour_noursmile
     
     NOUR: "No. I'm serious about this. We should go find an axe."
     
@@ -72,7 +98,7 @@
     
     NOUR: "Should we try something else?"
     
-    Nick nods his head.
+    NICK: Nick nods his head.
     
     &PORTRAIT_nour_nourpondering
     
@@ -84,21 +110,20 @@
         
         * (climb) "Climb the tree?"
         
-    - Nick shrugs, but doesn't protest.
+    - NICK: Nick shrugs, but doesn't protest.
             
     NOUR: "Alright... Here goes."
     
-    //&FOLLOW_NOUR_NourTreePos
+    &FOLLOW_NOUR_NourFollowTreePos
     
-    // FADEOUT
+    &PAUSE_0.5
     
-    &PAUSE_1.5
+    &FDEOUT
     
     "..."
     
     <i>Rustle rustle...</i> //ALSO SFX
     
-    &PAUSE_1.5
     
     {shake: 
     
@@ -122,23 +147,23 @@
     
     ...
     
-    &PAUSE_1.0
-    
     //RUSTLING SFX
     
     <i>Rustle rustle...</i>
     
     &SHLORP_APPLE_GrandDuchessGranny_in
     
-    //Fade in
+    &FDEIN
     
     NICK: "Woah! What the—"
     
     &PORTRAIT_???_grannysmile
     
+    &PORTRAIT_grand duchess granny_grannysmile
+    
     ???: "KEKEKE!"
     
-    MS. SUWAN: "Is that one of those—"
+    MS. SUWAN: "Is that one of those—" 
     
     ???: "Thank the Mother Tree! Someone has awoken me from my slumber at last!"
     
@@ -154,15 +179,19 @@
     
     NICK: "Um... thanks?"
     
+    &PORTRAIT_grand duchess granny_grannyangry
+    
     GRAND DUCHESS GRANNY: "No frowning, young man! You young folks these days..."
     
     NICK: "..."
     
-    GRAND DUCHESS GRANNY: "Lacking CONFIDENCE? Lacking RESOLVE? Lacking POSITIVE SELF-ESTEEM?" 
+    GRAND DUCHESS GRANNY: "Lacking CONFIDENCE? Lacking RESOLVE? Lacking SELF-ESTEEM?" 
     
-    GRAND DUCHESS GRANNY: "<i>PATOOEY!</i>"
+    GRAND DUCHESS GRANNY: "To that, I say... <i>PATOOEY!</i>"
     
-    NICK: "How...how'd you—"
+    NICK: "How... how'd you—"
+    
+    &PORTRAIT_grand duchess granny_grannyneutral
     
     GRAND DUCHESS GRANNY: "The Mother Tree nurtures all. A sweet seedling like you has the means to blossom..."
     
@@ -172,58 +201,84 @@
     
     NICK: "..."
     
+    &PORTRAIT_grand duchess granny_grannyangry
+    
     GRAND DUCHESS GRANNY: "<i>UNDERSTOOD, YOUNG HUMAN BOY?</i>"
     
     NICK: "I-I, I mean, uh, YES?"
+    
+    &PORTRAIT_grand duchess granny_grannysmile
     
     GRAND DUCHESS GRANNY: "KEKEKE! <i>Very</i> good. And same goes for you two seedlings!"
     
     MS. SUWAN: "Seedling? I'm not nearly as young as these two."
     
-    GRAND DUCHESS GRANNY: "AGE has nothing to do with the tangled roots in your hearts! The Mother Tree connects us for a reason."
+    &PORTRAIT_grand duchess granny_grannyangry
     
-    GRAND DUCHESS GRANNY: "I will pray to her that your time spent Between the Planes will unravel your haunted past."
+    GRAND DUCHESS GRANNY: "AGE has nothing to do with the tangled roots in your hearts!"
+    
+    &PORTRAIT_grand duchess granny_grannyneutral
+    
+    GRAND DUCHESS GRANNY: "The Mother Tree connects us for a reason."
+    
+    GRAND DUCHESS GRANNY: "I pray that your time spent Between the Planes will unravel your haunted past."
+    
+    &PORTRAIT_grand duchess granny_grannysmile
     
     GRAND DUCHESS GRANNY: "KEKEKE! Now... what was I doing in here?"
     
     NOUR: "I believe you were searching for the Prince?"
     
-    GRAND DUCHESS GRANNY: "Ah, the Prince... ANOTHER IDIOT APPLE BOY who is worth SO MUCH MORE than he thinks!"
+    &PORTRAIT_grand duchess granny_grannyangry
+    
+    GRAND DUCHESS GRANNY: "Ah, the Prince... ANOTHER IDIOT BOY who doesn't KNOW HIS WORTH!"
  
     NOUR: "...We've been sent by the Emperor to retrieve eveyone in the Prince's search council."
     
-    GRAND DUCHESS GRANNY: "EVERCRISP! That mushy, sentimental fruit... Thank you for your hard work, seedlings."
+    &PORTRAIT_grand duchess granny_grannyneutral
     
-    Nick nods his head, and Grand Duchess Granny Smith blows him a fat kiss! 
+    GRAND DUCHESS GRANNY: "EVERCRISP! That mushy, sentimental fruit..."
     
-    SFX GROSS WET KISSY
+    &PORTRAIT_grand duchess granny_grannysmile
     
-    NICK: "Ew!"
+    GRAND DUCHESS GRANNY: "Thank you for your hard work, seedlings."
+    
+    &PORTRAIT_nick_neutral
+    
+    NICK: Nick nods his head. 
+    
+    &PORTRAIT_grand duchess granny_grannykiss
+    
+    //SFX GROSS WET KISSY
+    
+    GRAND DUCHESS GRANNY: Grand Duchess Granny Smith blows him a fat kiss! 
+    
+    NICK: "Eek!"
+    
+    &PORTRAIT_grand duchess granny_grannysmile
     
     GRAND DUCHESS GRANNY: "KEKEKE!"
     
     GRAND DUCHESS GRANNY: "Send me away to the Emperor, dearies!"
     
+    &PORTRAIT_nour_noursmile
+    
     NOUR: "Sure thing."
     
-    GRAND DUCHESS GRANNY: "And let me see that young man's face once more... Come here!"
-    
-    Nick nods his head. Grand Duchess Granny Smith gives him a fat kiss on the cheek.
-    
-    &PORTRAIT_nick_nickworried
-    
-    NICK: "...Eek!"
-    
-    GRAND DUCHESS GRANNY: "KEKEKE! GOODBYE, PRECIOUS ONES! VISIT GRANNY SOMETIME, YES?</i>"
+    GRAND DUCHESS GRANNY: "KEKEKE! GOODBYE, PRECIOUS ONES! <i>VISIT GRANNY SOMETIME, YES?</i>"
     
     &SHLORP_APPLE_GrandDuchessGranny_out
     
-    Nick touches his cheek. 
+    &PAUSE_0.75
+    
+    NICK: Nick touches his cheek. 
     
     NOUR: "Good work getting her out of there. I would've never been able to do that without you."
     
-    Nick stays silent, but he nods his head again.
+    NICK: Nick stays silent, but he nods his head again.
     
     NOUR: <i>He's responding more and more with each apple we find. We should continue.</i>
+    
+    &FOLLOW_NOUR_stop
     
     -> END

@@ -1,26 +1,32 @@
-==vapestand==
+== vapestand ==
 
-    { - vapestand_first: -> explored_everything }
+    It's a vape stand, with various flavors on sale.
 
-    -> vapestand_first
+    { - !vapestand_first: -> vapestand_first }
+
+    -> explored_everything
 
 === vapestand_first ===
 
-    It's a vape stand, with several different flavors on sale.
+    &PORTRAIT_nick_nickworried
 
     NICK: "<i>Must be 18+ to purchase...</i>"
     
-    NICK: "This <i>sucks</i>! This might be the ONLY time I wish I were an adult."
+    &PORTRAIT_nick_nickangry
+    
+    NICK: "This <i>sucks</i>! It might be the ONLY time I wish I were an adult."
+    
+    &PORTRAIT_nick_nickrealization
     
     NICK: "Hey, Nour... You're above 18. Could you—"
+    
+    &PORTRAIT_nour_nourannoyed
     
     * "I don't think I trust you with these."
     
         &PORTRAIT_nick_nickworried
     
         NICK: "Dude, I'm chill. I swear."
-        
-        &PORTRAIT_nour_nourannoyed
         
         NOUR: "No way."
         
@@ -58,7 +64,9 @@
         
         &PORTRAIT_nick_nickannoyed
     
-    - NICK: "...Fine, whatever. I don't need this crap."
+    - &PORTRAIT_nick_nickangry
+    
+    NICK: "...Fine, whatever. I don't need this crap."
     
     -> END
     

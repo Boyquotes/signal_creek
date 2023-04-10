@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/scripts/ui/devtools.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/themes/theme_devtools.tres" type="Theme" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold.tres" type="DynamicFont" id=8]
 [ext_resource path="res://assets/scenes/StartScreen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/scenes/EndScreen.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/scenes/Map.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/ui/icons/map_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=12]
+[ext_resource path="res://assets/ui/icons/settings_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=13]
 
 [node name="UserInterface" type="Control"]
 margin_right = 960.0
@@ -36,11 +39,15 @@ margin_top = -270.0
 margin_right = 480.0
 margin_bottom = 270.0
 
+[node name="Map" parent="ReferenceRect" instance=ExtResource( 11 )]
+visible = false
+
 [node name="PauseMenu" type="Control" parent="ReferenceRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 5 )
 script = ExtResource( 7 )
+map_node = NodePath("../Map")
 
 [node name="ColorRect" type="ColorRect" parent="ReferenceRect/PauseMenu"]
 anchor_right = 1.0
@@ -227,7 +234,18 @@ margin_bottom = 48.0
 theme = ExtResource( 5 )
 custom_fonts/font = ExtResource( 8 )
 toggle_mode = true
-text = "MENU"
+icon = ExtResource( 13 )
+icon_align = 1
+
+[node name="MapButton" type="Button" parent="ReferenceRect"]
+margin_left = 85.0
+margin_top = 9.0
+margin_right = 154.0
+margin_bottom = 57.0
+theme = ExtResource( 5 )
+custom_fonts/font = ExtResource( 8 )
+toggle_mode = true
+icon = ExtResource( 12 )
 icon_align = 1
 
 [node name="Interact_Indicator" parent="." instance=ExtResource( 3 )]
@@ -237,6 +255,7 @@ visible = false
 visible = false
 
 [node name="DevTools" type="PanelContainer" parent="."]
+visible = false
 anchor_bottom = 1.0
 margin_right = 196.0
 margin_bottom = -183.0
@@ -275,70 +294,63 @@ fit_content_height = true
 [node name="Hallway" type="Button" parent="DevTools/VBoxContainer"]
 margin_top = 46.0
 margin_right = 180.0
-margin_bottom = 79.0
+margin_bottom = 89.0
 size_flags_vertical = 3
 text = "Hallway"
 
 [node name="TopicSpot" type="Button" parent="DevTools/VBoxContainer"]
-margin_top = 83.0
+margin_top = 93.0
 margin_right = 180.0
-margin_bottom = 116.0
+margin_bottom = 136.0
 size_flags_vertical = 3
 text = "TopicSpot"
 
 [node name="BandN" type="Button" parent="DevTools/VBoxContainer"]
-margin_top = 120.0
+margin_top = 140.0
 margin_right = 180.0
-margin_bottom = 153.0
+margin_bottom = 183.0
 size_flags_vertical = 3
 text = "BandN"
 
 [node name="HSeparator3" type="HSeparator" parent="DevTools/VBoxContainer"]
-margin_top = 157.0
+margin_top = 187.0
 margin_right = 180.0
-margin_bottom = 161.0
+margin_bottom = 191.0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="DevTools/VBoxContainer"]
-margin_top = 165.0
+margin_top = 195.0
 margin_right = 180.0
-margin_bottom = 180.0
+margin_bottom = 210.0
 bbcode_enabled = true
 bbcode_text = "[b][center]Dialogue[/center][/b]"
 text = "Dialogue"
 fit_content_height = true
 
 [node name="FastForwardDialogue" type="CheckButton" parent="DevTools/VBoxContainer"]
-margin_top = 184.0
+margin_top = 214.0
 margin_right = 180.0
-margin_bottom = 224.0
+margin_bottom = 257.0
 size_flags_vertical = 3
 text = "Fast Forward"
 
 [node name="Open At Knot" type="Button" parent="DevTools/VBoxContainer"]
-margin_top = 228.0
+margin_top = 261.0
 margin_right = 180.0
-margin_bottom = 261.0
+margin_bottom = 305.0
 size_flags_vertical = 3
 text = "Open At Knot"
 
 [node name="LineEdit" type="LineEdit" parent="DevTools/VBoxContainer"]
-margin_top = 265.0
+margin_top = 309.0
 margin_right = 180.0
-margin_bottom = 289.0
+margin_bottom = 333.0
 placeholder_text = "type knot name here"
 caret_blink = true
 
 [node name="HSeparator2" type="HSeparator" parent="DevTools/VBoxContainer"]
-margin_top = 293.0
-margin_right = 180.0
-margin_bottom = 297.0
-
-[node name="MuteAudio" type="CheckButton" parent="DevTools/VBoxContainer"]
-margin_top = 301.0
+margin_top = 337.0
 margin_right = 180.0
 margin_bottom = 341.0
-size_flags_vertical = 3
-text = "Mute Audio"
 
 [connection signal="value_changed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/MusicVolume/MusicVolumeSlider" to="ReferenceRect/PauseMenu" method="_on_MusicVolumeSlider_value_changed"]
 [connection signal="value_changed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/SFXVolume/SFXVolumeSlider" to="ReferenceRect/PauseMenu" method="_on_SFXVolumeSlider_value_changed"]
@@ -349,6 +361,7 @@ text = "Mute Audio"
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Exit" to="ReferenceRect/PauseMenu" method="_on_Exit_pressed"]
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Reset" to="ReferenceRect/PauseMenu" method="_on_Reset_pressed"]
 [connection signal="toggled" from="ReferenceRect/MenuButton" to="ReferenceRect/PauseMenu" method="_on_MenuButton_toggled"]
+[connection signal="toggled" from="ReferenceRect/MapButton" to="ReferenceRect/PauseMenu" method="_on_MapButton_toggled"]
 [connection signal="pressed" from="DevTools/VBoxContainer/Hallway" to="DevTools" method="_on_Hallway_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/TopicSpot" to="DevTools" method="_on_TopicSpot_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/BandN" to="DevTools" method="_on_BandN_pressed"]
@@ -356,4 +369,3 @@ text = "Mute Audio"
 [connection signal="pressed" from="DevTools/VBoxContainer/Open At Knot" to="DevTools" method="_on_Open_At_Knot_pressed"]
 [connection signal="focus_entered" from="DevTools/VBoxContainer/LineEdit" to="DevTools" method="_on_LineEdit_focus_entered"]
 [connection signal="focus_exited" from="DevTools/VBoxContainer/LineEdit" to="DevTools" method="_on_LineEdit_focus_exited"]
-[connection signal="toggled" from="DevTools/VBoxContainer/MuteAudio" to="DevTools" method="_on_MuteAudio_toggled"]

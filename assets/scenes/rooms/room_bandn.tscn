@@ -408,7 +408,7 @@ room_bounds_max = Vector2( 760, 312 )
 party_teleport_position = Vector2( 240, -56 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.470588, 0.431373, 0.423529, 1 )
+color = Color( 0.509804, 0.337255, 0.388235, 1 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -443,15 +443,23 @@ __meta__ = {
 [node name="BigLight" type="Light2D" parent="PlaneManager/Lights"]
 position = Vector2( 212.4, 113.4 )
 texture = ExtResource( 10 )
-texture_scale = 4.85
+texture_scale = 3.83
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.85
 range_item_cull_mask = 7
 
 [node name="BigLight5" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 209.4, -312.6 )
+position = Vector2( 237, -270 )
 texture = ExtResource( 10 )
-texture_scale = 4.85
+texture_scale = 3.83
+color = Color( 0.933333, 0.858824, 0.709804, 1 )
+energy = 0.85
+range_item_cull_mask = 7
+
+[node name="BigLight8" type="Light2D" parent="PlaneManager/Lights"]
+position = Vector2( 232, -414 )
+texture = ExtResource( 10 )
+texture_scale = 3.83
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.85
 range_item_cull_mask = 7
@@ -459,15 +467,15 @@ range_item_cull_mask = 7
 [node name="BigLight6" type="Light2D" parent="PlaneManager/Lights"]
 position = Vector2( 434.4, -313.6 )
 texture = ExtResource( 10 )
-texture_scale = 4.85
+texture_scale = 3.83
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.85
 range_item_cull_mask = 7
 
 [node name="BigLight7" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( -34.6, -311.6 )
+position = Vector2( 8, -168 )
 texture = ExtResource( 10 )
-texture_scale = 4.85
+texture_scale = 2.81
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.85
 range_item_cull_mask = 7
@@ -475,23 +483,23 @@ range_item_cull_mask = 7
 [node name="BigLight4" type="Light2D" parent="PlaneManager/Lights"]
 position = Vector2( 271, -120 )
 texture = ExtResource( 10 )
-texture_scale = 4.85
+texture_scale = 2.78
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.85
 range_item_cull_mask = 7
 
 [node name="BigLight2" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( -5.60001, 33.4 )
+position = Vector2( 62, 0 )
 texture = ExtResource( 10 )
-texture_scale = 4.85
+texture_scale = 1.8
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.85
 range_item_cull_mask = 7
 
 [node name="BigLight3" type="Light2D" parent="PlaneManager/Lights"]
-position = Vector2( 426.4, 34.4 )
+position = Vector2( 433, -72 )
 texture = ExtResource( 10 )
-texture_scale = 4.85
+texture_scale = 2.56
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.85
 range_item_cull_mask = 7

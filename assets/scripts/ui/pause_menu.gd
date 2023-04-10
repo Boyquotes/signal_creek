@@ -1,13 +1,17 @@
 class_name PauseMenu
 extends Control
 
+
+export (NodePath) var map_node : NodePath
+
+
 var panel_opening_speed := 0.25
 var is_expanding_background_panel := false
 var is_shrinking_background_panel := false
 var background_panel_max_height
 
 onready var background_panel_node = $Panel
-
+onready var map_object = get_node(map_node)
 
 
 func _ready():
@@ -117,5 +121,14 @@ func toggle_visible() -> void:
 	is_expanding_background_panel = true
 	self.set_visible(true)
 
+
 func get_music_pause_mode() -> bool:
 	return $Panel/PauseMenu/VBoxContainer/MuteAudio.is_pressed()
+
+
+func _on_MapButton_toggled(button_pressed) -> void:
+	if map_object.visible:
+		map_object.set_visible(false)
+		return
+		
+	map_object.set_visible(true)

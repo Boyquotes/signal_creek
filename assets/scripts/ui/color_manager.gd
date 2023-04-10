@@ -77,7 +77,7 @@ func get_dir_contents(rootPath: String, fileExtensionToAdd: String) -> Array:
 	var dir = Directory.new()
 
 	if dir.open(rootPath) == OK:
-		var dirList = dir.list_dir_begin(false, false)
+		var _dirList = dir.list_dir_begin(false, false)
 		_add_dir_contents(dir, files, directories, fileExtensionToAdd)
 	else:
 		push_error("An error occurred when trying to access the path.")
