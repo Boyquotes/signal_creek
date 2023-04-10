@@ -68,6 +68,10 @@
     
     * "Someone has to be messing with us." 
     
+        MS. SUWAN: "Maybe its that other girl we saw in the mall? Or one of the other people?"
+        
+        NOUR: "... Maybe."
+    
         -> END
     
     MS. SUWAN: "Hm... well, I will have to report this to my higher ups, then. Maybe all of this is someone's secret hide out..." (SQUINTING)
