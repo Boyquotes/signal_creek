@@ -38,7 +38,6 @@ margin_right = 480.0
 margin_bottom = 270.0
 
 [node name="Map" parent="ReferenceRect" instance=ExtResource( 11 )]
-visible = false
 
 [node name="PauseMenu" type="Control" parent="ReferenceRect"]
 anchor_right = 1.0
