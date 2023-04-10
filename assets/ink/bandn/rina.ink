@@ -137,7 +137,7 @@
             
             NICK: "I don't remember us hitting our heads anywhere, either!"
             
-            NOUR: "Well you don't really <i>remember<i/> passing out."
+            NOUR: "Well you don't really <i>remember</i> passing out."
             
             NICK: "... alright, fair." 
             
