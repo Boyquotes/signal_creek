@@ -56,7 +56,7 @@
     
     NICK: "Uhhh... Labelled as <i>what</i>, now?"
     
-    NICK: "Also, did um, did you just say <i>oowoo</i> out loud?"
+    NICK: "Also, did, uh... Did you just say <i>oowoo</i> out loud?"
     
     MANAGER: "No, I did not! UWU"
     
@@ -80,7 +80,7 @@
         
         NICK: "Sheesh, fine."
     
-    - MANAGER: "Alright! Well, let me know if you need help finding anything. XD"
+    - MANAGER: "Well, let me know if you need help finding anything. XD"
     
     NICK: "Whoa, you just did it again... seriously, how are you doing that?"
     

@@ -4,7 +4,7 @@
     
     Some of them have three sleeves...? 
     
-    Others are shaped so oddly that they don't even look wearable.
+    Others are shaped so oddly they don't even look wearable.
     
     -> END
     
@@ -54,7 +54,6 @@
     They're familiar shapes, yet it's hard to tell what they're supposed to actually be.
     
     Nothing in particular catches Nour's eye.
->>>>>>> Stashed changes
     
     -> END
     
