@@ -284,7 +284,7 @@ shader_param/width = 1.0
 shader_param/pattern = 0
 shader_param/inside = false
 
-[sub_resource type="ShaderMaterial" id=58]
+[sub_resource type="ShaderMaterial" id=77]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -292,7 +292,7 @@ shader_param/width = 1.0
 shader_param/pattern = 0
 shader_param/inside = false
 
-[sub_resource type="ShaderMaterial" id=77]
+[sub_resource type="ShaderMaterial" id=58]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -309,6 +309,14 @@ shader_param/pattern = 0
 shader_param/inside = false
 
 [sub_resource type="ShaderMaterial" id=70]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=86]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -341,14 +349,6 @@ shader_param/pattern = 0
 shader_param/inside = false
 
 [sub_resource type="ShaderMaterial" id=71]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=86]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -697,13 +697,13 @@ scale = Vector2( 0.718, 1 )
 material = SubResource( 54 )
 position = Vector2( -19, -291 )
 
+[node name="Chair3" parent="PlaneManager/Overworld" instance=ExtResource( 34 )]
+material = SubResource( 77 )
+position = Vector2( -21, -330 )
+
 [node name="BookStack11" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
 material = SubResource( 58 )
 position = Vector2( 65, -53 )
-
-[node name="Chair2" parent="PlaneManager/Overworld/BookStack11" instance=ExtResource( 34 )]
-material = SubResource( 77 )
-position = Vector2( -86, -277 )
 
 [node name="BookshelfBack2" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
 material = SubResource( 64 )
@@ -712,6 +712,11 @@ position = Vector2( 235, -17 )
 [node name="BookshelfSide5" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 material = SubResource( 70 )
 position = Vector2( -6, -20 )
+
+[node name="Pens" parent="PlaneManager/Overworld" instance=ExtResource( 38 )]
+material = SubResource( 86 )
+position = Vector2( 22, -221 )
+scale = Vector2( 1.406, 1.312 )
 
 [node name="Computer" parent="PlaneManager/Overworld" instance=ExtResource( 35 )]
 material = SubResource( 78 )
@@ -729,17 +734,14 @@ position = Vector2( -52, -130 )
 material = SubResource( 71 )
 position = Vector2( -5, 62 )
 
+[node name="Pens2" parent="PlaneManager/Overworld" instance=ExtResource( 38 )]
+material = SubResource( 86 )
+position = Vector2( -29.0003, -189 )
+scale = Vector2( 1.406, 1.312 )
+
 [node name="ComicStand3" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
 position = Vector2( 349, 52 )
 scale = Vector2( 1.406, 1.312 )
-
-[node name="Pens" parent="PlaneManager/Overworld/ComicStand3" instance=ExtResource( 38 )]
-material = SubResource( 86 )
-position = Vector2( -288.051, -183.689 )
-
-[node name="Pens2" parent="PlaneManager/Overworld/ComicStand3" instance=ExtResource( 38 )]
-material = SubResource( 86 )
-position = Vector2( -268.848, -183.689 )
 
 [node name="BookShelf" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
 material = SubResource( 65 )
@@ -753,13 +755,13 @@ position = Vector2( 390, -56 )
 material = SubResource( 82 )
 position = Vector2( -18, -8 )
 
+[node name="Kiosk" parent="PlaneManager/Overworld" instance=ExtResource( 37 )]
+position = Vector2( 244, -194 )
+scale = Vector2( 1.312, 1.392 )
+
 [node name="Shelf4" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
 material = SubResource( 81 )
 position = Vector2( 460, -56 )
-
-[node name="SkeletonDisplay" parent="PlaneManager/Overworld/Shelf4" instance=ExtResource( 37 )]
-position = Vector2( -215, -162 )
-scale = Vector2( 1.312, 1.392 )
 
 [node name="Kindle" parent="." instance=ExtResource( 21 )]
 material = SubResource( 83 )

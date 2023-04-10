@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
@@ -22,7 +23,7 @@ __meta__ = {
 light_mask = 4
 material = ExtResource( 3 )
 position = Vector2( 1, -40 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 186.688, 127.02, 59.2095, 19.0177 )
 
