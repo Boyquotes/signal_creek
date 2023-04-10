@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/scripts/ui/devtools.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/themes/theme_devtools.tres" type="Theme" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold.tres" type="DynamicFont" id=8]
 [ext_resource path="res://assets/scenes/StartScreen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/scenes/EndScreen.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/scenes/Map.tscn" type="PackedScene" id=11]
 
 [node name="UserInterface" type="Control"]
 margin_right = 960.0
@@ -229,6 +230,9 @@ custom_fonts/font = ExtResource( 8 )
 toggle_mode = true
 text = "MENU"
 icon_align = 1
+
+[node name="Map" parent="ReferenceRect" instance=ExtResource( 11 )]
+visible = false
 
 [node name="Interact_Indicator" parent="." instance=ExtResource( 3 )]
 visible = false
