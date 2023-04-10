@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/stairs_FILL0_wght400_GRAD0_opsz48.png-eb77b16df342e13ac319e35de6aa3aea.stex"
+path="res://.import/table_bar_FILL0_wght400_GRAD0_opsz48.png-f3e9cd5ac2cea095d8243f0c0094a7ed.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/icons/stairs_FILL0_wght400_GRAD0_opsz48.png"
-dest_files=[ "res://.import/stairs_FILL0_wght400_GRAD0_opsz48.png-eb77b16df342e13ac319e35de6aa3aea.stex" ]
+source_file="res://assets/ui/icons/table_bar_FILL0_wght400_GRAD0_opsz48.png"
+dest_files=[ "res://.import/table_bar_FILL0_wght400_GRAD0_opsz48.png-f3e9cd5ac2cea095d8243f0c0094a7ed.stex" ]
 
 [params]
 

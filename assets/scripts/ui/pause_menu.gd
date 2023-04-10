@@ -120,3 +120,7 @@ func toggle_visible() -> void:
 
 func get_music_pause_mode() -> bool:
 	return $Panel/PauseMenu/VBoxContainer/MuteAudio.is_pressed()
+
+
+func _on_MapButton_toggled(button_pressed):
+	pass # Replace with function body.
