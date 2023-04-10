@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 21, 10 )
+extents = Vector2( 20, 22 )
 
 [node name="DisplayStand" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -18,7 +18,7 @@ light_mask = 4
 position = Vector2( 0, -15 )
 texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 9, 152, 44, 31.2038 )
+region_rect = Rect2( 41, 211, 56, 66 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
@@ -29,8 +29,8 @@ position = Vector2( 0, -15 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -16.6254 )
 region_enabled = true
-region_rect = Rect2( 9, 152, 44, 31.2038 )
+region_rect = Rect2( 41, 211, 56, 66 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -10 )
+position = Vector2( 0, -16 )
 shape = SubResource( 23 )

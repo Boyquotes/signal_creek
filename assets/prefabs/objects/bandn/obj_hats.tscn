@@ -5,7 +5,6 @@
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=4]
 
-
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 29.5, 13 )
 
@@ -26,7 +25,7 @@ material = ExtResource( 3 )
 position = Vector2( 0, -24 )
 texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 15, 184, 58, 49 )
+region_rect = Rect2( 136.332, 234.315, 36.5866, 47.544 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
@@ -37,7 +36,7 @@ position = Vector2( 0, -24 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -24.4337 )
 region_enabled = true
-region_rect = Rect2( 15, 184, 58, 49 )
+region_rect = Rect2( 136.332, 234.315, 36.5866, 47.544 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, -12 )
