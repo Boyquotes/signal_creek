@@ -359,7 +359,7 @@ margin_bottom = 341.0
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Exit" to="ReferenceRect/PauseMenu" method="_on_Exit_pressed"]
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Reset" to="ReferenceRect/PauseMenu" method="_on_Reset_pressed"]
 [connection signal="toggled" from="ReferenceRect/MenuButton" to="ReferenceRect/PauseMenu" method="_on_MenuButton_toggled"]
-[connection signal="toggled" from="ReferenceRect/MapButton" to="ReferenceRect/PauseMenu" method="_on_MenuButton_toggled"]
+[connection signal="toggled" from="ReferenceRect/MapButton" to="ReferenceRect/PauseMenu" method="_on_MapButton_toggled"]
 [connection signal="pressed" from="DevTools/VBoxContainer/Hallway" to="DevTools" method="_on_Hallway_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/TopicSpot" to="DevTools" method="_on_TopicSpot_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/BandN" to="DevTools" method="_on_BandN_pressed"]
