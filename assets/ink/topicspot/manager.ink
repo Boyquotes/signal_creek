@@ -16,28 +16,34 @@
 
 == manager_wayout ==
     
-    * [Ask him for a way out of here.]
+    * ["Do you know a way to get out of here?"]
     
         NOUR: "I think the elevator is stuck. Is there another way off of this floor?"
         
-        MANAGER: "The elevator will work when it's your time to go. But that's not yet, silly!"
+        MANAGER: "Someone should be fixing that soon. You could take the escalator instead~!"
+        
+        NOUR: "I don't think that's working either."
+        
+        MANAGER: "Well, then you can hang out here with me while you wait!"
         
         -> manager_wayout
     
-    * [Ask him why everything's so weird.]
+    * ["Why does everything look so strange?"]
     
-        NOUR: "Something feels off in this mall. People are appearing and disappearing, there's a funny elevator..."
+        NOUR: "Things are all topsy-turvy. People are appearing and disappearing, the elevator's acting all weird..."
         
         NOUR: "And the trees don't look right."
         
         NOUR: "<i>You</i> don't look right."
         
-        MANAGER: "Hey! ;-; That isn't cool."
+        MANAGER: "Hey! ;-; That isn't very nice."
+        
+        MANAGER: "Everything looks fine to me. Maybe you should get your eyes checked."
         
         -> manager_wayout
-        
+         
     + -> 
-        NOUR: "Uh, never mind. Seems like you can't help us get out of here. Thanks anyways."
+        NOUR: "Uh, y'know what, never mind. Seems like you can't help us get out of here. Thanks anyways."
     
         -> END
 
@@ -46,7 +52,7 @@
     
     MANAGER: "Welcome to TopicSpot! UWU"
     
-    MANAGER: "We have an epic sale going on right now, you're just in luck. Everything labelled as *-1??/.. is 90% off!"
+    MANAGER: "You're in luck, we have an epic sale going on right now! Everything labelled as *-1??/.. is 90% off!"
     
     NICK: "Uhhh... Labelled as <i>what</i>, now?"
     
@@ -54,23 +60,23 @@
     
     MANAGER: "No, I did not! UWU"
     
-    NICK: "Yeah, you just did it again? How the heck?"
+    NICK: "Yeah you did, you just did it again! How the heck?"
     
     MS. SUWAN: "I don't think this conversation is a productive use of our time."
     
-    * [Strike a conversation with the manager.]
+    * ["Why are you saying those... symbols?"]
     
         NOUR: "You said... asterisk, hyphen, one, question mark, question mark, slash."
         
-        NOUR: "But with the actual symbols, not their names. How are we even comprehending this right now?"
+        NOUR: "But with the actual symbols, not their names. How are we even understanding this right now?"
         
-        MANAGER: "I was born with it! I'm special like that owo"
+        MANAGER: "That's just how I learned to talk! I'm special like that owo"
         
         NOUR: "Sure... alright. Forget I asked."
     
-    * [Leave this guy alone.]
+    * ["I think we should go."]
     
-        NOUR: "Forget it, man. Let's just pretend he's normal."
+        NOUR: "Forget it, Nick. Let's just pretend he's normal, we've gotta move on."
         
         NICK: "Sheesh, fine."
     
