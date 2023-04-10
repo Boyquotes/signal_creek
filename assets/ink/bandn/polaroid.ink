@@ -131,7 +131,7 @@
         
             NOUR: "Yes you <i>are</i>. You're not even out of highschool."
         
-            MS. SUWAN: "<i>Children.<i/> <i>Quiet</i>. Nick, stop asking Nour questions. She doesn't want to talk about it."
+            MS. SUWAN: "<i>Children.</i> <i>Quiet</i>. Nick, stop asking Nour questions. She doesn't want to talk about it."
         
             NICK: "Come <i>on</i>." (POUTING) 
         
