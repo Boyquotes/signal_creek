@@ -59,25 +59,37 @@
     
 == poster1 ==
 
-    It's a poster. Everyone knows this is the first one.
+    //if this is the FISH poster?
+    
+    It's a poster with a fish and the word "swim" on it. 
+    
+    ... Did someone need to be reminded that fish do, in fact, swim?
     
     -> END
     
 == poster2 ==
 
-    It's a poster. Everyone knows this is the second one.
+    It's a poster with a cat wearing thick-rimmed glasses. 
+    
+    Like the poster says, this is indeed the pinnacle of "chill". 
     
     -> END
     
 == poster3 ==
 
-    It's a poster. Everyone knows this is the third one.
+    It's a poster with a bald eagle and the word "pride" on it. 
+    
+    The eagle doesn't evoke much nationalism in anyone...
     
     -> END
     
 == poster4 ==
 
-    It's a poster. Everyone knows this is the fourth one.
+    //if this is the COOL poster
+
+    It's a poster with the word "cool" on it and...
+    
+    A dog? A monkey? Some cookies? Regardless, it is very cool.
     
     -> END
     
