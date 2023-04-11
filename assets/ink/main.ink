@@ -70,7 +70,7 @@ INCLUDE bandn/computerdesk.ink
 
     NOUR: "What was that noise?"
     
-    MS. SUWAN: "It sounded like...an elevator chime."
+    MS. SUWAN: "It sounded like... an elevator chime."
     
     NICK: "Quick! Let's go back to the elevator and check it out!"
     
@@ -85,11 +85,11 @@ INCLUDE bandn/computerdesk.ink
     
     &EMOTE_NOUR_UpIdle
     
-    NICK: "Woah, look at that! One of the weird elevator lights turned <b>on</b>!"
+    NICK: "Woah, look at that! One of the weird lights turned <b>on</b>!"
     
-    NOUR: "I could've sworn this elevator was broken."
+    NOUR: "I could've sworn the elevator broke when it brought us here."
     
-    NICK: "It definitely still looks broken..."
+    NICK: "I mean, it definitely still <i>looks</i> broken..."
     
     MS. SUWAN: "This is becoming stranger and stranger. What made it light up in the first place?"
     
@@ -97,15 +97,17 @@ INCLUDE bandn/computerdesk.ink
     
     NICK: "WAIT..."
     
-    NICK: "The mall...is LISTENING. It knows what we're doing!"
+    NICK: "The mall... must be LISTENING. It knows what we're doing!"
     
-    MS. SUWAN: "That's creepy."
+    MS. SUWAN: "Again with the weird magical conclusions."
     
-    NICK: "No, it's cool! The mall is our friend!"
+    MS. SUWAN: "This place is strange, but I happen to doubt it achieved <i>sentience.</i>"
     
-    NOUR: "Whatever we did, it must've been the right thing."
+    NICK: "But think about it, that would be so cool! The mall is our friend!"
     
-    NOUR: "We should keep an eye on this elevator and its lights."
+    NOUR: "Well, whatever's happened, we must've done something right."
+    
+    NOUR: "We should keep an eye on this elevator and the lights as we keep exploring."
     
     -> END
     
