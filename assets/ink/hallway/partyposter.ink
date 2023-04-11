@@ -41,6 +41,10 @@
     
     MS. SUWAN: "You have no idea what could be in the food here. We can't rule out shared drug hallucinations just yet. Besides, I would rather not speak to anybody who won't help us leave."
     
+    MS. SUWAN: "Besides, we don't have much reason to socialize with any other people in this place, unless they're able to help us leave."
+    
+    NICK: "That seems kinda cold."
+    
     NOUR: "Hold on, there's something weird about this thing..."
     
     + [ Take a closer look. ] -> partyposter2
@@ -54,7 +58,7 @@
     
     NOUR: "What the hell...?"
     
-    'WHAT THE HELL' is now emblazoned in fun bubbly font on the poster!
+    'WHAT THE HELL' is now emblazoned on the poster!
     
     MS. SUWAN: "It seems to be displaying whatever was last said. This is... extremely strange."
     
@@ -62,11 +66,13 @@
     
     NICK: "Whoa, that is so freaky! Wait, I wonder if I can..."
     
-    NOUR: "Whatever you're thinking, don't try it."
+    NOUR: "Don't you try it."
     
     NICK: "FUUUUCK!"
     
-    'F@&?! is now displayed in fun bubbly font on the poster!'
+    'F@&%?$! is now displayed on the poster!'
+    
+    NOUR: "<i>Sigh.</i> I knew it."
     
     NICK: "You gotta be kidding me. This mall is rated PG?!"
 

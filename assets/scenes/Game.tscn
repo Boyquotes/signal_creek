@@ -77,7 +77,6 @@ tracks/0/keys = {
 [node name="Game" type="Node2D"]
 process_priority = 1
 script = ExtResource( 2 )
-testing_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )
@@ -158,6 +157,7 @@ autoplay = true
 
 [node name="Music" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 14 )
+volume_db = -10.0
 
 [node name="UISounds" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 14 )

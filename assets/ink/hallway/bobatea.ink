@@ -134,9 +134,9 @@
     
     ???: "THIS CYLINDRICAL METAL PRISON SHALL NO LONGER CONTAIN ME!"
         
-    NOUR: "Um, hello. We're on behalf of Emperor Evercrisp to rescue you."
+    NOUR: "Um, hello. We're here on behalf of Emperor Evercrisp to rescue you."
     
-    ???: "Ah...yes. Thank you! HAR HAR!"
+    ???: "Ah... yes. Thank you! HAR HAR!"
     
     NOUR: "What's your name?"
     

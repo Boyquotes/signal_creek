@@ -3,17 +3,15 @@
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=4]
-
+[ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 12.5, 7.5 )
+extents = Vector2( 41, 27 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 14, 16 )
+extents = Vector2( 45, 35.5 )
 
-[node name="Chair2" type="RigidBody2D" groups=["shiftable"]]
-material = ExtResource( 3 )
+[node name="Cashier" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
 script = ExtResource( 1 )
 __meta__ = {
@@ -23,23 +21,24 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -7 )
+position = Vector2( 0, -32 )
 texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 296.217, 87.2311, 24.5009, 28.4954 )
+region_rect = Rect2( 14, 10, 84, 64 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
+position = Vector2( 0, -32 )
 texture = ExtResource( 4 )
-offset = Vector2( 0, -14.2477 )
+offset = Vector2( 0, -18.8393 )
 region_enabled = true
-region_rect = Rect2( 296.217, 87.2311, 24.5009, 28.4954 )
+region_rect = Rect2( 14, 10, 84, 64 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -0.5 )
+position = Vector2( 0, -28 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -49,7 +48,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -7 )
+position = Vector2( 0, -31.5 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
