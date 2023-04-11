@@ -1,14 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=2]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 28, 14.75 )
 
-[node name="VBookshelf" type="RigidBody2D" groups=["shiftable"]]
+[node name="Bookshelfbooks2" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
 script = ExtResource( 1 )
 __meta__ = {
@@ -29,7 +28,7 @@ modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
 position = Vector2( 0, -30 )
-texture = ExtResource( 5 )
+texture = ExtResource( 2 )
 offset = Vector2( 0, -31.8694 )
 region_enabled = true
 region_rect = Rect2( 368.71, 249.023, 57.0602, 32.7242 )

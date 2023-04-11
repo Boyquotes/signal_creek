@@ -157,6 +157,7 @@ autoplay = true
 
 [node name="Music" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 14 )
+volume_db = -10.0
 
 [node name="UISounds" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 14 )

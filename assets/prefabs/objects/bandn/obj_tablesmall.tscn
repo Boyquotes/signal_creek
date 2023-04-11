@@ -1,13 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 33.5, 11.5 )
+extents = Vector2( 15.5, 10 )
 
-[node name="Table2" type="RigidBody2D" groups=["shiftable"]]
+[node name="TableSmall" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
 script = ExtResource( 1 )
 __meta__ = {
@@ -16,22 +15,22 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
-position = Vector2( 0, -15 )
+position = Vector2( 0, -12 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 345, 181, 71, 33 )
+region_rect = Rect2( 357, 56, 31, 24 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-position = Vector2( 0, -15 )
-texture = ExtResource( 4 )
-offset = Vector2( 0, -15.8861 )
+position = Vector2( 0, -12 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -13.191 )
 region_enabled = true
-region_rect = Rect2( 345, 181, 71, 33 )
+region_rect = Rect2( 357, 56, 31, 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.5, -14.5 )
+position = Vector2( -0.5, -10 )
 shape = SubResource( 23 )
