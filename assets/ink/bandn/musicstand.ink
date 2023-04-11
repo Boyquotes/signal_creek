@@ -29,19 +29,21 @@
     
     MS. SUWAN: "... Yes, why?"
     
+    // NOUR WALKS FORWARD AND TAKES RECORD FROM THE MUSIC STAND, THEN TURNS AROUND TOWARDS MS SUWAN, HOLDING IT UP.
+    
     Nour raises the record of <i>Actually, I Do Mind</i> up to show Ms. Suwan. 
     
     NOUR: "Have you heard of this album, then? I used to listen to Paradise all the time when I was younger. They're a rock band, aren't they?"
     
     MS. SUWAN: "... Yes, actually I have. I remember that one. Good album."
     
-    NICK: "You listen to rock?"
+    NICK: "You listen to rock?" // (SHOCKED)
     
     MS. SUWAN: "Yes. Well... used to."
     
-    NOUR: "Oh...that's, wow!"
+    NOUR: "Oh...that's, wow!" // (SHOCKED)
     
-    MS. SUWAN: "Why are you looking at me like that?"
+    MS. SUWAN: "Why are you looking at me like that?" // (FROWNING)
     
     NOUR: "Uh, well..."
         
@@ -62,7 +64,7 @@
             
             MS. SUWAN: "You were going to say that I don't seem like the type, right?"
     
-            NOUR: "Um...yeah. Sorry."
+            NOUR: "Um...yeah. Sorry." // (EMBARASSED)
             
             MS. SUWAN: "Well, I don't anymore, so you aren't entirely incorrect. It was a distraction, so I stopped."
             
@@ -72,17 +74,17 @@
     
     MS. SUWAN: "Right. During school, me and my friends used to..."
     
-    MS. SUWAN: "..."
+    MS. SUWAN: "..." // (FROWNING)
         * [Ask if she's ok]
             NOUR: "Are you ok?"
             
             MS. SUWAN: "I'm fine. Paradise just reminds me of hard times. That's all."
             
-            NICK: "Kind of ironic, given the name lol."
+            NICK: "Kind of ironic, given the name lol." // (HAPPY)
             
-            MS. SUWAN: "..." (ANGRY)
+            MS. SUWAN: "..." // (ANGRY)
             
-            NICK: "... Sorry." (POUTING)
+            NICK: "... Sorry." // (POUTING)
 
         * [Ask about law school]
             NOUR: "You went to Seton Hall University, right?"
@@ -104,13 +106,13 @@
     
     MS. SUWAN: "We used to host study sessions and play Paradise while we studied."
     
-    MS. SUWAN: "I think I owe Paradise my first real friendships."
+    MS. SUWAN: "I think I owe Paradise my first real friendships." // (SAD)
     
-    NICK: "Rocking out led to your friendships? That's so cool..."
+    NICK: "Rocking out led to your friendships? That's so cool..." // (EXCITED)
     
     MS. SUWAN: "But that was a different time. Things change."
     
-    NICK: "How 'bout we rock out right now then? For old time's sake?"
+    NICK: "How 'bout we rock out right now then? For old time's sake?" // (EXCITED)
     
     MS. SUWAN: "I don't think that would be a good use of our time right now."
     
@@ -124,13 +126,17 @@
             
             MS. SUWAN: "That's true."
             
-            NICK: "I've never heard anything on a record before! Can I hear it? Please?"
+            NICK: "I've never heard anything on a record before! Can I hear it? Please?" // (EXCITED)
 
     - Ms. Suwan sighs and steps back.
+    
+    // MS SUWAN STEPS BACK SLIGHTLY FROM THE MUSIC STAND
     
     MS. SUWAN: "Fine. Go ahead."
     
     NOUR: "Time to put on a classic...<i>Sounds like Old Angst</i>!" 
+    
+    // NOUR PUTS THE RECORD INTO THE PLAYER AND STEPS BACK SLIGHTLY FROM THE MUSIC STAND TO JOIN MS SUWAN.
     
     The record enters the player, and the music begins to fill the store.
     
@@ -144,9 +150,9 @@
     
     NICK: "What happened?"
     
-    NOUR: "Nick!"
+    NOUR: "Nick!" // (SHOCKED)
     
-    NICK: "What? I wanna know!"
+    NICK: "What? I wanna know!" // (ANGRY)
 
     MS. SUWAN: "Studying and listening to music doubled the time it took me to complete my assignments."
     
@@ -155,23 +161,23 @@
     MS. SUWAN: "Once, they got upset at me for not going to a concert with them. I chose not to fail my finals over the concert in the end."
     
     MS. SUWAN: "They didn't care about my situation, so I stopped caring about them." 
-    MS. SUWAN: "... I stopped hanging out with them, they started going to concerts without me, and the rest is history."
+    MS. SUWAN: "... I stopped hanging out with them, they started going to concerts without me, and the rest is history." // (SAD)
     
-    NICK: "That really sucks."
+    NICK: "That really sucks." // (SAD)
     
     MS. SUWAN: "There's nothing I can do about it anymore. I haven't talked to them since that fight."
     
-    NOUR: "Have you <i>thought</i> about them since?"
+    NOUR: "Have you <i>thought</i> about them since that fight?"
     
     MS. SUWAN: "..."
     
-    MS. SUWAN: "Can you turn that off? It's starting to give me a migraine."
+    MS. SUWAN: "Can you turn that off? It's starting to give me a migraine." // (ANGRY)
     
     NOUR: <i>She's avoiding all of her problems again. Just when I thought we were getting somewhere...</i>
     
     NOUR: <i>If we could just have her make amends, maybe those three could help us get out of here!</i>
 
-    MS. SUWAN: "Nour. Turn the music off. Now."
+    MS. SUWAN: "Nour. Turn the music off. Now." // (ANGRY)
     
         * [Turn the music off]
         
@@ -181,7 +187,7 @@
             
             MS. SUWAN: "Namely, out of here."
             
-            NOUR: "You not talking about it is hurting us more! You won't talk to the people who could maybe help us get out of here!"
+            NOUR: "You not talking about it is hurting us more! You won't talk to the people who could maybe help us get out of here!" // (ANGRY)
             
             MS. SUWAN: "They don't know anything. Leave it alone, Nour."
             
@@ -189,36 +195,36 @@
         
         * [Don't turn the music off]
             
-            MS. SUWAN: "...Nour. Did you hear what I just said?"
+            MS. SUWAN: "...Nour. Did you hear what I just said?" // (ANGRY)
             
             //post beta, we can have this option perhaps
                 ** [Confront of her]
                 
-                    NOUR: "Yeah, and I'm choosing to ignore you!"
+                    NOUR: "Yeah, and I'm choosing to ignore you!" // (ANGRY)
                 
-                    MS. SUWAN: "..." (SHOCKED)
+                    MS. SUWAN: "..." // (SHOCKED)
                 
-                    MS. SUWAN: "Nour, I am the <i>adult</i> here, and part of the <i>law</i>. You <i>will</i> listen to me."
+                    MS. SUWAN: "Nour, I am the <i>adult</i> here, and part of the <i>law</i>. You <i>will</i> listen to me." // (ANGRY)
                 
-                    NOUR: "Except you're the one acting immature right now!
+                    NOUR: "Except you're the one acting immature right now!" // (ANGRY)
                 
                 ** [Turn the music up louder]
                     
                     //CODE HERE - MAKE MUSIC VOLUME LOUDER
                     
-                    MS. SUWAN: "This is extremely immature of you."
+                    MS. SUWAN: "This is extremely immature of you." // (ANGRY)
                     
-                    NOUR: "I can't hear you over this <i>great music</i> that's supposed to <i>bring people together</i>."
+                    NOUR: "I can't hear you over this <i>great music</i> that's supposed to <i>bring people together</i>." // (ANGRY)
     
-    - NOUR: "You can't keep avoiding your friends then coming back here and being all sad about it!"
+    - NOUR: "You can't keep avoiding your friends then coming back here and being all sad about it!" // (ANGRY)
     
-    MS. SUWAN: "Excuse me?" (SHOCKED)
+    MS. SUWAN: "Excuse me?" // (SHOCKED)
     
-    NOUR: "You keep talking about how hard you worked for everything in your life! You haven't backed down from anything!"
+    NOUR: "You keep talking about how hard you worked for everything in your life! You haven't backed down from anything!" // (ANGRY)
     
-    NOUR: "How could you, of all people, be afraid of a <i>conversation</i>?"
+    NOUR: "How could you, of all people, be afraid of a <i>conversation</i>?" // (ANGRY)
     
-    MS. SUWAN: "You don't know what it's like to look back at your past and know there's nothing you can do to change it because it is decades behind you."
+    MS. SUWAN: "You don't know what it's like to look back at your past and know there's nothing you can do to change it because it is decades behind you." // (ANGRY)
     
     MS. SUWAN: "Sometimes the best thing you can do is forget about it and move on."
     
@@ -228,13 +234,13 @@
     
     NOUR: "Did you forget about it? Did you move on?"
     
-    MS. SUWAN: "..."
+    MS. SUWAN: "..." // (SAD)
     
     NOUR: "Sometimes you need to confront your past—even if you know there's nothing you can do to change it."
     
-    NOUR: "I promise you, carrying this with you and bottling it up will only hurt you more. Hurt <i>us</i> more."
+    NOUR: "I promise you, carrying this with you and bottling it up will only hurt you more. Hurt <i>us</i> more // (SAD)
     
-    MS. SUWAN: "I..."
+    MS. SUWAN: "I..." // (SAD)
     
         * "I'll be right by your side."
         
@@ -246,27 +252,24 @@
     
     MS. SUWAN: "...Fine. I'll talk to them."
     
-    NOUR: <i>I finally managed to convince her to confront them. I should go find Chad, Brody, and Kristy now.</i>
+    NOUR: <i>I finally managed to convince her to confront them. We should go find Chad, Brody, and Kristy again.</i>
 
     -> END
 
 //figure out how to implement intervals for when other items are not collected
 ==musicstand1_repeat==
-    // MS. SUWAN: "If I listen to that again, I'm seriously going to get a headache."
-    
-    // NOUR: "I won't turn it on..."
     
     NOUR: <i>It'd be nice to get her to re-accept her old hobby, but I don't think she's quite ready yet.</i>
     
-    NOUR: <i>I can come back to this later. For now, I should go to Chad, Brody, and Kristy, before Ms. Suwan changes her mind about talking to them.</i>
+    NOUR: <i>I can come back to this later. For now, we should go to Chad, Brody, and Kristy, before Ms. Suwan changes her mind about talking to them.</i>
     -> DONE
 
 ==musicstand2==
     MS. SUWAN: "..."
     
-    MS. SUWAN: "Why are we here again?"
+    MS. SUWAN: "Why are we here again?" // (ANGRY)
     
-    NOUR: "You know, I used to listen to Paradise with my ex-friend, too. Sometimes it hurts to listen to, which is why I hadn't played it in so long."
+    NOUR: "You know, I used to listen to Paradise with my ex-friend, too. Sometimes it hurts to listen to, which is why I hadn't played it in so long." // (SAD)
     
     MS. SUWAN: "..."
     
@@ -286,17 +289,18 @@
             
             NOUR: "What matters is that you can free yourself of the guilt by acknowledging that you aren't perfect. It's ok to forgive yourself."
     
-    // - NOUR: "And I thought about what you said earlier. You're right. There are things you can't fix, and you should worry about the one's you can."
-    
     - NOUR: "You can't change what happened, but that doesn't mean you should avoid it entirely."
     
     NOUR: "Plus, you have the opportunity to do that anyway, thanks to this weird mall. I don't think any of this is real, the stakes are... relatively low, right?"
     
     MS. SUWAN: "I suppose you're right about that."
     
-    NOUR: "... Why don't you take an album with you? You're not a stressed out student anymore. You could let yourself rock out once in a while."
+    NOUR: "... Why don't you take an album with you? You're not a stressed out student anymore. You could rock out once in a while."
     
     MS. SUWAN: "...Alright. Which one should I take?"
+    
+    // NOUR STEPS FORWARD TOWARDS THE MUSIC STAND AND TAKES ONE OF THE ALBUMS, THEN TURNS BACK AROUND AND GOES TOWARDS MS SUWAN, STOPPING IN FRONT OF HER AND GIVING HER THE ALBUM.
+    
         * [<i>Actually, I Do Mind</i>]
             Nour gives Ms. Suwan <i>Actually, I Do Mind</i>. 
             
@@ -305,12 +309,14 @@
             
         * [<i>Out Birth</i>]
             Nour gives Ms. Suwan <i>Out Birth</i>. 
+            
+// MS SUWAN REACHES OUT AND TAKES THE ALBUM.
     
     - MS. SUWAN: "Thank you, Nour."
     
     MS. SUWAN: "I want to take this album and go apologize to them all."
     
-    MS. SUWAN: "I don't know if they'll accept my apology, but I have to try."
+    MS. SUWAN: "I don't know if they'll accept my apology, but I have to try." // (SAD)
     
     NOUR: <i>It looks like Ms. Suwan is ready to apologize to Chad, Brody and Kristy. We should go to them now.</i>
         &LIGHT_Suwan1
@@ -318,19 +324,16 @@
     // -> END
 
 === musicstand2_repeat ===
-    // MS. SUWAN: "I want to apologize to Chad, Kristy, and Brody. Properly, this time."
-    
-    // NOUR: "Alright. Let's go to them now."
 
     NOUR: <i>Ms. Suwan's ready to apologize to Chad, Brody and Kristy. We should go to them now.</i>
 -> END
 
 === musicstand4 ===
-    NOUR: "I wish I could've gone to a Paradise concert. It must've been so cool to hear them live." 
+    NOUR: "I wish I could've gone to a Paradise concert. It must've been so cool to hear them live." // (SAD)
     
     MS. SUWAN: "It was. Nothing like the digital recordings—the energy isn't the same."
     
-    MS. SUWAN: "I should've gone to more concerts."
+    MS. SUWAN: "I should've gone to more concerts." // (SAD)
         * [Tell her it's not too late]
             NOUR: "It's not too late. If you discover newer rock artists, you could go to their concerts."
             

@@ -19,7 +19,7 @@
 === beautystand_before_aplequest ===
     NOUR: "Anybody care for a makeover?"
     
-    NICK: "Sounds like money I could use somewhere else."
+    NICK: "Sounds like money I could use somewhere else." (FROWNING)
     
     NICK: "Like, towards a new game or something..."
     
@@ -34,7 +34,7 @@
 
     NOUR: <i>We've already looked at the beauty booth before.</i>
 
-    NOUR: <i>But seeing that apple lady (?) somehow makes me feel better.</i>
+    NOUR: <i>But seeing that apple lady (?) somehow makes me feel better.</i> (SMILE)
      -> END
 
 === beautystand_find_pinklady ===
@@ -54,7 +54,7 @@
     
     NOUR: "Um. What do you think, Nick?"
     
-    Nick remains silent, but his eyebrows are furrowed in concentration. 
+    Nick remains silent, but his eyebrows are furrowed in concentration. (FROWN)
     
     NOUR: "We could try..."
     
@@ -72,10 +72,14 @@
     NOUR: "...talking to the apple."
             
     Nick laughs but quickly clamps his hand over his mouth.
+    
+    // ANIMATION FOR NICK'S HANDS OVER MOUTH
             
     NOUR: <i>I have no idea if this will work, but at least Nick seems to be enjoying himself.</i>
             
     NOUR: "Maybe it needs some encouragement. I can go first?"
+    
+    // NOUR APPROACHES THE BOOTH
             
     NOUR: "Hi, um..."
             
@@ -86,6 +90,8 @@
     - NOUR: "Now you go, Ms. Suwan."
                 
     MS. SUWAN: "..."
+    
+    // MS. SUWAN APPROACHES THE BOOTH
                 
     MS. SUWAN: "Hello."
                 
@@ -94,12 +100,14 @@
     NOUR: "C'mon, Nick. Anybody could beat Ms. Suwan. Now's your chance!"
                 
     MS. SUWAN: "Excuse me—"
+    
+    // NICK APPROACHES THE BOOTH
                 
     NICK: "Emperor Evercrisp has sent us."
                 
-    NOUR: "True! Good work, Nick!"
+    NOUR: "True! Good work, Nick!" (SMILING)
                 
-    MS. SUWAN: "We are talking to a <i>wall</i>."
+    MS. SUWAN: "We are talking to a <i>wall</i>." (FROWNING)
                 
     MS. SUWAN: "Have we all finally gone insane?"
     
@@ -109,6 +117,8 @@
     NOUR: "...staring back at the apple."
             
     Nick laughs but quickly clamps his hand over his mouth.
+    
+    // ANIMATION FOR NICK'S HANDS OVER MOUTH
             
     NOUR: <i>I have no idea if this will work, but at least Nick seems to be enjoying himself.</i>
             
@@ -125,6 +135,9 @@
     NOUR: "We need all the manpower we got since <i>someone</i> won't join."
             
     Nick raises his eyebrow at the suggestion but moves closer to the apple on the booth.
+    
+    // NICK MOVES TOWARDS THE BOOTH, FACING IT
+    // NOUR FOLLOWS AND THEN STANDS NEXT TO HIM, FACING THE BOOTH
             
     NOUR: "..."
             
@@ -150,6 +163,8 @@
                             
                             NICK: "..."
                             
+                            // MS. SUWAN APPROACHES TO STAND IN FRONT OF THE BOOTH.
+                            
                             MS. SUWAN: "..."
                             
                             -> pinkladyreveal
@@ -159,6 +174,8 @@
     NOUR: "...giving the apple a makeover."
             
     Nick laughs but quickly clamps his hand over his mouth.
+    
+    // ANIMATION FOR NICK'S HANDS OVER MOUTH
             
     NOUR: <i>I have no idea if this will work, but at least Nick seems to be enjoying himself.</i>
             
@@ -181,8 +198,12 @@
     NOUR: "Nick, could you help me give this apple a makeover?"
             
     Nick shrugs.
+    
+    // NICK SHRUGGING ANIMATION
             
     NOUR: <i>What should I give him?</i>
+    
+    // NOUR GIVING HIM ITEMS ANIMATIONS
             
         * [Give him red lipstick]
             NOUR: "Use this red lipstick."
@@ -194,8 +215,12 @@
             NOUR: "Use this pink blush."
             
     - Nick stares at it and then grabs it. He starts to use it on the poster.
+    
+    // NICK GRABBING ANIMATION, THEN TURNS TO USE IT ON THE POSTER
                 
     NOUR: "Nice! I'll help you out too..."
+    
+    // NOUR JOINS IN USING THE MAKEUP ON THE POSTER
                 
     MS. SUWAN: "I don't see how this is going to help anything—"
     
@@ -205,11 +230,11 @@
 
     - ???: "Hee hee!"
 
-    NOUR: "Did you hear that?"
+    NOUR: "Did you hear that?" (SHOCKED)
     
-    MS. SUWAN: "Where did it come from?"
+    MS. SUWAN: "Where did it come from?" (SHOCKED)
     
-    NICK: "...!"
+    NICK: "...!" (SHOCKED)
     
     ???: "You three are so silly, hee hee!"
     
@@ -221,7 +246,7 @@
     
     ???: "And I can tell you all mean no harm. I don't think you <i>could</i> harm me, even if you tried!"
     
-    MS. SUWAN: "Are you telling me that <i>seriously</i> worked?"
+    MS. SUWAN: "Are you telling me that <i>seriously</i> worked?" (SHOCKED)
     
     ???: "Oh, ye of little faith! If you look down on all the different kinds of problem-solving, serious <i>or</i> not, you lock more doors than open them!"
     
@@ -235,7 +260,7 @@
 
     PRINCESS PINK LADY: "Oh, he must still be sulking over his father sending him down here."
     
-    PRINCESS PINK LADY: "He took it quite to heart and must be hiding. How much his confidence must've suffered!"
+    PRINCESS PINK LADY: "He took it quite to heart and must be hiding. How much his confidence must've suffered!" (SAD)
     
     PRINCESS PINK LADY: "When you find him, please tell him that he is smarter and better than he thinks he is, hee hee!"
     
@@ -267,7 +292,7 @@
     
     NOUR: "I didn't understand <i>anything</i>..."
     
-    Nick shrugs, though he can't hide the small smile on his face, swelling with pride.
+    Nick shrugs, though he can't hide the small smile on his face, swelling with pride. (SMILING)
     
     NOUR: <i>Looks like the princess really helped him feel better.</i>
     
