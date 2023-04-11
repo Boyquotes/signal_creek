@@ -1,27 +1,45 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_bandn_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_sofaback.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=5]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_comicstand.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_bestsellers.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_oldnovel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelf.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_dragonplush.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=10]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_hotwheels.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_poster4.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_priceofsalt.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/materials/shaders/shader_outline.gdshader" type="Shader" id=14]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_polaroid.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_poster2.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_skeletondisplay.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_poster1.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_shelfwithtrinkets.tscn" type="PackedScene" id=19]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_musicstand.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_kindle.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_poster3.tscn" type="PackedScene" id=22]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfside.tscn" type="PackedScene" id=23]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfback.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_hats.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_displayshelf.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_tablesmall.tscn" type="PackedScene" id=27]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_comics.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_comicstand.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfbooks2.tscn" type="PackedScene" id=29]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_tablewide.tscn" type="PackedScene" id=30]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfbooks.tscn" type="PackedScene" id=31]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_wallshelf.tscn" type="PackedScene" id=32]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_displaystand.tscn" type="PackedScene" id=33]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_chairfront.tscn" type="PackedScene" id=34]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_computercart.tscn" type="PackedScene" id=35]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_shelfwithtrinkets2.tscn" type="PackedScene" id=36]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_cashier.tscn" type="PackedScene" id=37]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_pens.tscn" type="PackedScene" id=38]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_notebooks.tscn" type="PackedScene" id=39]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_booksfront.tscn" type="PackedScene" id=40]
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 32, 4 )
@@ -82,6 +100,78 @@ shader_param/width = 1.0
 shader_param/pattern = 0
 shader_param/inside = false
 
+[sub_resource type="ShaderMaterial" id=20]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=21]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=22]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=23]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=24]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=25]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=26]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=27]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=28]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
 [node name="Room" type="Node2D"]
 script = ExtResource( 2 )
 __meta__ = {
@@ -122,7 +212,6 @@ exit_position = Vector2( 376, 720 )
 shape = SubResource( 12 )
 
 [node name="Lights" type="Node2D" parent="PlaneManager"]
-visible = false
 __meta__ = {
 "_edit_lock_": true
 }
@@ -252,7 +341,7 @@ position = Vector2( 240, -18 )
 position = Vector2( 294, -318 )
 
 [node name="TableSmall2" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
-position = Vector2( 330, -318 )
+position = Vector2( 336, -318 )
 
 [node name="TableSmall3" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
 position = Vector2( 169, -318 )
@@ -260,11 +349,14 @@ position = Vector2( 169, -318 )
 [node name="TableSmall4" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
 position = Vector2( -17, -310 )
 
+[node name="TableSmall5" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
+position = Vector2( 419, -151 )
+
 [node name="Table" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
-position = Vector2( -45, -203 )
+position = Vector2( -45, -210 )
 
 [node name="Table2" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
-position = Vector2( -45, -250 )
+position = Vector2( -45, -257 )
 
 [node name="Table3" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
 position = Vector2( 240, 58 )
@@ -311,14 +403,59 @@ position = Vector2( 8, -159 )
 material = SubResource( 17 )
 position = Vector2( 70, -160 )
 
+[node name="Bookshelfbooks2" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 304, -398 )
+
+[node name="Bookshelfbooks3" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 168, -398 )
+
+[node name="Bookshelfbooks" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
+position = Vector2( 154, -398 )
+
+[node name="Bookshelfbooks4" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 476, -279 )
+
+[node name="Bookshelfbooks5" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
+position = Vector2( 462, -279 )
+
+[node name="Bookshelfbooks6" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 476, -200 )
+
+[node name="Bookshelfbooks7" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
+position = Vector2( 462, -200 )
+
+[node name="Bookshelfbooks8" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 239, -1 )
+
+[node name="Bookshelfbooks9" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
+position = Vector2( 225, -1 )
+
+[node name="Bookshelfbooks10" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 56, -46 )
+
+[node name="Bookshelfbooks11" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
+position = Vector2( 42, -46 )
+
+[node name="DisplayShelf" parent="PlaneManager/Overworld" instance=ExtResource( 26 )]
+position = Vector2( 423, -25 )
+
+[node name="BooksFront" parent="PlaneManager/Overworld" instance=ExtResource( 40 )]
+position = Vector2( 344, 90 )
+
 [node name="MusicStand" parent="PlaneManager/Overworld" instance=ExtResource( 20 )]
 position = Vector2( 63, 3 )
 
-[node name="ComicStand" parent="PlaneManager/Overworld" instance=ExtResource( 6 )]
-position = Vector2( 519, -334 )
+[node name="DisplayStand" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
+position = Vector2( 523, -334 )
 
-[node name="Comics" parent="PlaneManager/Overworld" instance=ExtResource( 28 )]
-position = Vector2( 519, -332 )
+[node name="DisplayStand2" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
+position = Vector2( 344, 89 )
+
+[node name="DisplayStand3" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
+position = Vector2( 380, -225 )
+
+[node name="ComicStand" parent="PlaneManager/Overworld" instance=ExtResource( 28 )]
+position = Vector2( 523, -332 )
 
 [node name="WallShelf" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
 material = SubResource( 18 )
@@ -332,12 +469,79 @@ position = Vector2( 458, -350 )
 material = SubResource( 18 )
 position = Vector2( 60, -351 )
 
+[node name="WallShelf3" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
+material = SubResource( 18 )
+position = Vector2( 391, -63 )
+
+[node name="WallShelf4" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
+material = SubResource( 18 )
+position = Vector2( 458, -63 )
+
 [node name="TrinketShelf2" parent="PlaneManager/Overworld" instance=ExtResource( 19 )]
 material = SubResource( 19 )
 position = Vector2( 60, -350 )
 
 [node name="SkeletonDisplay" parent="PlaneManager/Overworld" instance=ExtResource( 17 )]
 position = Vector2( 81, -220 )
+
+[node name="Polaroid" parent="PlaneManager/Overworld" instance=ExtResource( 15 )]
+material = SubResource( 20 )
+position = Vector2( 336, -317 )
+
+[node name="OldNovel" parent="PlaneManager/Overworld" instance=ExtResource( 7 )]
+material = SubResource( 21 )
+position = Vector2( 169, -317 )
+
+[node name="DragonPlush" parent="PlaneManager/Overworld" instance=ExtResource( 9 )]
+material = SubResource( 22 )
+position = Vector2( 419, -150 )
+
+[node name="HotWheels" parent="PlaneManager/Overworld" instance=ExtResource( 11 )]
+material = SubResource( 23 )
+position = Vector2( 294, -317 )
+
+[node name="Notebooks" parent="PlaneManager/Overworld" instance=ExtResource( 39 )]
+material = SubResource( 24 )
+position = Vector2( -45, -256 )
+
+[node name="Pens" parent="PlaneManager/Overworld" instance=ExtResource( 38 )]
+material = SubResource( 25 )
+position = Vector2( -60, -209 )
+
+[node name="Pens2" parent="PlaneManager/Overworld" instance=ExtResource( 38 )]
+material = SubResource( 25 )
+position = Vector2( -33, -209 )
+
+[node name="BestSellers" parent="PlaneManager/Overworld" instance=ExtResource( 6 )]
+position = Vector2( 240, 59 )
+
+[node name="Hats" parent="PlaneManager/Overworld" instance=ExtResource( 25 )]
+material = SubResource( 26 )
+position = Vector2( 471, 27 )
+
+[node name="Kindle" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
+material = SubResource( 27 )
+position = Vector2( 371, -224 )
+
+[node name="Kindle2" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
+material = SubResource( 27 )
+position = Vector2( 389, -224 )
+
+[node name="Poster1" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
+position = Vector2( 3, -351 )
+
+[node name="Poster2" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
+position = Vector2( 407, -351 )
+
+[node name="Poster3" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
+position = Vector2( 240, -415 )
+
+[node name="Poster4" parent="PlaneManager/Overworld" instance=ExtResource( 12 )]
+position = Vector2( -49, -351 )
+
+[node name="TrinketShelf3" parent="PlaneManager/Overworld" instance=ExtResource( 36 )]
+material = SubResource( 28 )
+position = Vector2( 375, -61 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
 [connection signal="body_exited" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_exited"]
