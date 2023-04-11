@@ -1,8 +1,6 @@
 == musicstand ==
 
     It's a music stand. Different vintage records are stacked on top of it. 
-    
-    Nothing catches Nour's interest.
 
 {
     - musicstand4:
@@ -24,8 +22,6 @@
 
 ==musicstand1==
 //better onboarding from CBK
-
-    It's a music stand. Different vintage records are stacked on top of it. 
     
     One record in particular catches Nour's attention. 
     
@@ -218,7 +214,9 @@
     
     MS. SUWAN: "Excuse me?" (SHOCKED)
     
-    NOUR: "You keep talking about how hard you worked for everything in your life! You haven't backed down from anything! How could you, of all people, be afraid of a <i>conversation</i>?"
+    NOUR: "You keep talking about how hard you worked for everything in your life! You haven't backed down from anything!"
+    
+    NOUR: "How could you, of all people, be afraid of a <i>conversation</i>?"
     
     MS. SUWAN: "You don't know what it's like to look back at your past and know there's nothing you can do to change it because it is decades behind you."
     
