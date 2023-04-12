@@ -122,6 +122,14 @@ func toggle_visible() -> void:
 	self.set_visible(true)
 
 
+func toggle_map() -> void:
+	if map_object.visible:
+		map_object.set_visible(false)
+		return
+		
+	map_object.set_visible(true)
+
+
 func get_music_pause_mode() -> bool:
 	return $Panel/PauseMenu/VBoxContainer/MuteAudio.is_pressed()
 

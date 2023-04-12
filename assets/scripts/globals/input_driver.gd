@@ -17,14 +17,17 @@ func _ready():
 
 
 func _process(_delta):
+	if Input.is_action_just_pressed("open_menu"):
+		Globals.PauseMenu.toggle_visible()
+		
+	if Input.is_action_just_pressed("toggle_map"):
+		Globals.PauseMenu.toggle_map()
+		
 	if Globals.GameState == Globals.GameStates.START:
 		if Input.is_action_just_pressed("interact"):
 			Globals.StartScreen.start_game()
 		
 	elif Globals.GameState == Globals.GameStates.GAME:
-		if Input.is_action_just_pressed("open_menu"):
-			Globals.PauseMenu.toggle_visible()
-			
 		if Input.is_action_just_pressed("reset"):
 			reset_game()
 		
