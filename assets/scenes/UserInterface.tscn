@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/scripts/ui/devtools.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/themes/theme_devtools.tres" type="Theme" id=2]
@@ -7,12 +7,19 @@
 [ext_resource path="res://assets/ui/themes/theme_pausemenu.tres" type="Theme" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/scripts/ui/pause_menu.gd" type="Script" id=7]
-[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold.tres" type="DynamicFont" id=8]
 [ext_resource path="res://assets/scenes/StartScreen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/scenes/EndScreen.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/scenes/Map.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/ui/icons/map_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=12]
 [ext_resource path="res://assets/ui/icons/settings_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=13]
+[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=14]
+[ext_resource path="res://assets/ui/icons/forum_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=15]
+[ext_resource path="res://assets/ui/icons/directions_walk_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=16]
+[ext_resource path="res://assets/ui/icons/keyboard_arrow_down_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=17]
+[ext_resource path="res://assets/ui/icons/keyboard_arrow_up_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=18]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0745098, 0.0784314, 0.121569, 0.705882 )
 
 [node name="UserInterface" type="Control"]
 margin_right = 960.0
@@ -22,6 +29,135 @@ margin_bottom = 540.0
 margin_right = 960.0
 margin_bottom = 540.0
 border_color = Color( 1, 1, 1, 1 )
+
+[node name="Panel" type="Panel" parent="ReferenceRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -41.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Tutorial" type="HBoxContainer" parent="ReferenceRect/Panel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 8.0
+margin_top = -14.5
+margin_right = 535.0
+margin_bottom = 14.5
+
+[node name="Talk3" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
+margin_right = 30.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ReferenceRect/Panel/Tutorial"]
+margin_left = 34.0
+margin_top = 4.0
+margin_right = 95.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/normal_font = ExtResource( 14 )
+text = "1"
+fit_content_height = true
+
+[node name="Talk4" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
+margin_left = 99.0
+margin_right = 129.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 6
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="ReferenceRect/Panel/Tutorial"]
+margin_left = 133.0
+margin_top = 4.0
+margin_right = 194.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/normal_font = ExtResource( 14 )
+text = "2"
+fit_content_height = true
+
+[node name="Talk2" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
+margin_left = 198.0
+margin_right = 229.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 6
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ReferenceRect/Panel/Tutorial"]
+margin_left = 233.0
+margin_top = 4.0
+margin_right = 293.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/normal_font = ExtResource( 14 )
+text = "WASD"
+fit_content_height = true
+
+[node name="Talk" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
+margin_left = 297.0
+margin_right = 328.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 6
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ReferenceRect/Panel/Tutorial"]
+margin_left = 332.0
+margin_top = 4.0
+margin_right = 393.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/normal_font = ExtResource( 14 )
+text = "SPACE"
+fit_content_height = true
+
+[node name="Talk5" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
+margin_left = 397.0
+margin_right = 427.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 6
+
+[node name="Talk6" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
+margin_left = 431.0
+margin_right = 462.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource( 17 )
+expand = true
+stretch_mode = 6
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="ReferenceRect/Panel/Tutorial"]
+margin_left = 466.0
+margin_top = 4.0
+margin_right = 527.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/normal_font = ExtResource( 14 )
+text = "CHOICE"
+fit_content_height = true
 
 [node name="DialogueBox" parent="ReferenceRect" instance=ExtResource( 6 )]
 camera_offset_dialogue = 64.0
@@ -100,9 +236,10 @@ margin_left = 169.0
 margin_right = 334.0
 margin_bottom = 18.0
 size_flags_horizontal = 3
-min_value = -16.0
+min_value = -80.0
 max_value = 3.5
 step = 0.5
+value = -10.0
 allow_lesser = true
 ticks_on_borders = true
 
@@ -125,7 +262,7 @@ margin_left = 169.0
 margin_right = 334.0
 margin_bottom = 18.0
 size_flags_horizontal = 3
-min_value = -16.0
+min_value = -80.0
 max_value = 3.5
 
 [node name="UIVolume" type="HBoxContainer" parent="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer"]
@@ -147,7 +284,7 @@ margin_left = 169.0
 margin_right = 334.0
 margin_bottom = 18.0
 size_flags_horizontal = 3
-min_value = -16.0
+min_value = -80.0
 max_value = 3.5
 
 [node name="MuteAudio" type="CheckBox" parent="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer"]
@@ -225,28 +362,6 @@ focus_mode = 1
 size_flags_vertical = 3
 enabled_focus_mode = 1
 text = "Reset Game"
-
-[node name="MenuButton" type="Button" parent="ReferenceRect"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 77.0
-margin_bottom = 48.0
-theme = ExtResource( 5 )
-custom_fonts/font = ExtResource( 8 )
-toggle_mode = true
-icon = ExtResource( 13 )
-icon_align = 1
-
-[node name="MapButton" type="Button" parent="ReferenceRect"]
-margin_left = 85.0
-margin_top = 9.0
-margin_right = 154.0
-margin_bottom = 57.0
-theme = ExtResource( 5 )
-custom_fonts/font = ExtResource( 8 )
-toggle_mode = true
-icon = ExtResource( 12 )
-icon_align = 1
 
 [node name="Interact_Indicator" parent="." instance=ExtResource( 3 )]
 visible = false
@@ -360,8 +475,6 @@ margin_bottom = 341.0
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Save" to="ReferenceRect/PauseMenu" method="_on_Save_pressed"]
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Exit" to="ReferenceRect/PauseMenu" method="_on_Exit_pressed"]
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Reset" to="ReferenceRect/PauseMenu" method="_on_Reset_pressed"]
-[connection signal="toggled" from="ReferenceRect/MenuButton" to="ReferenceRect/PauseMenu" method="_on_MenuButton_toggled"]
-[connection signal="toggled" from="ReferenceRect/MapButton" to="ReferenceRect/PauseMenu" method="_on_MapButton_toggled"]
 [connection signal="pressed" from="DevTools/VBoxContainer/Hallway" to="DevTools" method="_on_Hallway_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/TopicSpot" to="DevTools" method="_on_TopicSpot_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/BandN" to="DevTools" method="_on_BandN_pressed"]

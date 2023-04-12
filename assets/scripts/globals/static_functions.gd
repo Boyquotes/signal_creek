@@ -14,3 +14,7 @@ static func delete_children(node):
 	for n in node.get_children():
 		node.remove_child(n)
 		n.queue_free()
+
+
+#static func inverse_lerp(a: Vector2, b: Vector2, v: Vector2) -> float:
+#	return (v - a) / (b - a)

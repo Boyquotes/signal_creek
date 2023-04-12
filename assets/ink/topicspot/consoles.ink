@@ -56,6 +56,8 @@
     
     NICK: "I'm fine. Let's just go already."
     
+        &PORTRAIT_nour_noursad
+    
     NOUR: "Whatever you say..."
     
     NOUR: <i>Weird. He seemed like he wanted to talk about this game, but I guess something about it is bothering him.</i>
@@ -68,7 +70,11 @@
 
     The soft 8-bit boops of <i>Aple Quest</i> play, but Nick only stares at the screen. 
     
+        &PORTRAIT_nour_nournervous
+    
     NOUR: <i>Why isn't he saying anything? Maybe I have to start first...</i>
+    
+        &PORTRAIT_nour_noursmile
     
     NOUR: "You know a lot about this game, right Nick?"
     
@@ -82,14 +88,15 @@
     
     NICK: "I meant to say no! Just get off my case already, okay?"
     
-    
     MS. SUWAN: "No need to be defensive. It wasn't a personal attack."
     
         &PORTRAIT_nick_nickworried
     
     NICK: "Whatever..."
     
-    Nick huffs and turns away from the game. 
+    Nick huffs and turns away from the game.
+    
+        &PORTRAIT_nour_nourneutral
     
     NOUR: <i>Nick doesn't seem to want to talk about this yet. I'll come back here later when he's ready.</i>
     
@@ -101,11 +108,16 @@
         -> END
 
 === consoles_start_aplequest ===
+
+        &PORTRAIT_nour_noursmile
+        
     NOUR: "Look, Nick. It's the game we were reading about before."
     
         &PORTRAIT_nick_nickworried
     
     NICK: "..."
+    
+        &PORTRAIT_nour_nournervous
     
     NOUR: "Do you want to try playing it?"
     
@@ -117,6 +129,8 @@
     
     ???: "NEVER GIVE UP!!!"
     
+        &PORTRAIT_nour_nournervous
+    
     NOUR: "What the—!"
     
     The console screen glitches, and the game starts by itself...
@@ -125,9 +139,13 @@
     
     MS. SUWAN: "Nour, what did you press?"
     
+        &PORTRAIT_nour_nourannoyed
+    
     NOUR: "I didn't press anything!"
     
     ???: "Do not panic, for I am a friend—<b>EMINENT EMPEROR EVERCRISP APLE</b>, leader of the Aples!"
+    
+        &PORTRAIT_nour_nournervous
     
     NOUR: "The game character is... speaking... to us?"
     
@@ -137,6 +155,8 @@
     
     EMPEROR EVERCRISP: "For Those Who Walk Between Planes, reality and all its variants—past, present, and future—exist all at once!"
     
+        &PORTRAIT_nour_nourpondering
+    
     NOUR: "Those who walk between... what?"
     
     EMPEROR EVERCRISP: Our <i>Prince</b> went to Earth in search of the missing <b>four</b> members to restore order, but we've lost all communication with him."
@@ -144,6 +164,8 @@
     EMPEROR EVERCRISP: "Please, Dream Walkers! Return the prince and all the members here, and I shall reward you handsomely!"
     
     MS. SUWAN: "Dream Walkers?"
+    
+        &PORTRAIT_nour_nourpondering
     
     NOUR: "If we return with everyone, you'll reward us with what, exactly?"
     
@@ -154,17 +176,25 @@
     EMPEROR EVERCRISP: "Does this not entice you? HMM?"
     
         * ["Yeah."]
+        
+                &PORTRAIT_nour_noursmile
+                
             NOUR: "We have a big fan of yours over here, actually. I think he'd love to get a Secret Ending, right?"
             
                 &PORTRAIT_nick_nickworried
             
             NICK: "..."
             
+                &PORTRAIT_nour_nourneutral
+            
             NOUR: "Um, that was a silent agreement."
             
             EMPEROR EVERCRISP: "HO HO! EXCELLENT, MARVELOUS, SPECTACULAR!!!"
         
         * ["Not really..."]
+        
+                &PORTRAIT_nour_nourannoyed
+                
             NOUR: "Um, not really."
             
             EMPEROR EVERCRISP: "HO HO! EXCELLENT—"
@@ -173,7 +203,11 @@
             
             EMPEROR EVERCRISP: "Does a Secret Ending not motivate you enough?"
             
+                &PORTRAIT_nour_nourpondering
+            
             NOUR: "Mmm...nope. I don't really know anything about <i>Aple Quest</i>."
+            
+                &PORTRAIT_nour_nourneutral
             
             NOUR: "I also don't know you. You could be a dangerous, uh, apple for all we know." 
             
@@ -183,13 +217,19 @@
             
             EMPEROR EVERCRISP: "IT'S SPACE <i>AND</i> APPLE THEMED!"
             
+                &PORTRAIT_nour_nourpondering
+            
             NOUR: "Eh...I don't know..."
             
-            Nick fidgets. He glances at Emperor Evercrisp eagerly. 
+            Nick fidgets. He glances at Emperor Evercrisp eagerly.
+            
+                &PORTRAIT_nour_nourrealization
             
             NOUR: "...You know what? Why not. We have an expert on our side anyway."
             
             EMPEROR EVERCRISP: "PHEW! You humans drive a hard bargain, ho ho!"
+            
+                &PORTRAIT_nour_nourneutral
             
             NOUR: "Oh, and I think we'll pass on the cereal. The ending's enough."
             
@@ -203,6 +243,8 @@
     
     EMPEROR EVERCRISP: "But yes, please. I miss my son very much..."
     
+        &PORTRAIT_nour_nourpondering
+    
     NOUR: "Do you know where you last saw them all?"
     
     EMPEROR EVERCRISP: "Their last coordinates were all within the hallways of the mall."
@@ -210,6 +252,8 @@
     EMPEROR EVERCRISP: "I will give you the sacred APLE BLESSING that will allow you to teleport all <i>five</i> apples back to me."
     
     EMPEROR EVERCRISP: "Once they have consented to leave, they shall disappear and return!"
+    
+        &PORTRAIT_nour_nourneutral
     
     NOUR: "That sounds simple enough."
     
@@ -219,9 +263,13 @@
     
     NOUR: "Got it. Four apples, one prince, all in the hallway."
     
+        &PORTRAIT_nour_noursmile
+    
     NOUR: "Ready for an adventure, Nick?"
     
     Nick shrugs, but he's already itching to leave.
+    
+        &PORTRAIT_nour_nourneutral
     
     NOUR: <i>Still silent, but at least he's communicating again.</i>
         
@@ -231,6 +279,8 @@
     
     //EMPEROR EVERCRISP: "I shall tell you your APLE PROGRESS!"
     
+        &PORTRAIT_nour_noursmile
+    
     NOUR: "Sounds good. Guess we should head out to the hallway and start looking."
     
     MS. SUWAN: "Do we really—"
@@ -239,11 +289,15 @@
     
     MS. SUWAN: "Very well. Let's go find these...apples."
     
+        &PORTRAIT_nour_noursmile
+    
     NOUR: "Never thought I'd hear something like that from you."
     
         -> END
 
 == nourplaysaplequest ==
+
+        &PORTRAIT_nour_noursmile
 
     NOUR: "Are you ready for the Secret Ending?"
     
@@ -256,7 +310,9 @@
     
         * [Pick up the controller and play]
     
-    - NOUR: "Even if you don't want to play, <i>I</i> still want to know what this ending is all about."
+    -     &PORTRAIT_nour_nourneutral
+    
+    NOUR: "Even if you don't want to play, <i>I</i> still want to know what this ending is all about."
     
     NICK: "..."
     
@@ -280,7 +336,9 @@
     
     NICK: "No, yeah, it's fine. Can I... can I watch?"
     
-    Nour moves over slightly to give Nick the space to watch, nodding with a slight smile. 
+        &PORTRAIT_nour_noursmile
+    
+    NOUR: "Go ahead."
     
         &PORTRAIT_nick_nickshocked
 
@@ -292,13 +350,19 @@
     
     NICK: "You won't get a lot of use out of your character's strength unless you use, like, a sword or something."
     
+        &PORTRAIT_nour_nournervous
+    
     NOUR: "I didn't know, thanks. I guess I'll switch over to another weapon."
     
         &PORTRAIT_nick_nickworried
         
     Nick nods quietly, content.
+    
+        &PORTRAIT_nour_noursmile
         
     NOUR: "Oh... but I like the bow. It looks nice."
+    
+        &PORTRAIT_nick_nickworried
         
     Nick purses his lips but doesn't seem frustrated. He seems to be thinking.
             
@@ -307,6 +371,8 @@
     NICK: "You can try and change your stats a bit later, but for early game, you could just restart and make a new character to match the play style you like?"
             
     NICK: "If you like the bow, you should have a good time playing it from the beginning. Or else this run might really suck."
+    
+        &PORTRAIT_nour_noursmile
             
     NOUR: "...I think I'll do that, then."
     
@@ -321,6 +387,8 @@
             &PORTRAIT_nick_nickshocked
     
     NICK: "WATCH OUT!" 
+    
+        &PORTRAIT_nour_nournervous
     
     NOUR: "SHOOT!"
     
@@ -343,6 +411,8 @@
     NICK "You see those red glowing orbs? Fire trap. It <i>blows</i>... <i>literally</i>."
     
     He laughs at his own joke. Ms. Suwan turns away, but there's a small smile creeping up her face.
+    
+        &PORTRAIT_nour_noursmile
     
     NOUR: "Nice pun."
     
@@ -403,6 +473,8 @@
     
     NOUR: "You're not dumb, Nick. You know so much about this game, probably far more than you've even let on in this short amount of time."
     
+        &PORTRAIT_nour_noursmile
+    
     NOUR: "Right, Ms. Suwan?"
     
     Nick glances at Ms. Suwan nervously. She clears her throat.
@@ -427,6 +499,8 @@
             
             NICK: "You mean that?"
             
+                &PORTRAIT_nour_noursmile
+            
             NOUR: "Yeah, I do."
             
                 &PORTRAIT_nick_nicktears
@@ -449,13 +523,21 @@
     
     - Nour looks over at Nick's wrist, and suddenly the realization seems to dawn on him. He looks at the bracelet.
     
+        &PORTRAIT_nour_nourneutral
+    
     NOUR: "You don't have to rebel against everything to try and regain some kind of control over your life."
     
+        &PORTRAIT_nour_nourneutral
+    
     NOUR: "You can focus as much as you can on school, and then if you do well, you can dedicate the rest of your life to games..."
+    
+        &PORTRAIT_nour_noursmile
     
     NOUR: "Playing them, making them, whatever you want."
     
     NICK: "... You can make games?"
+    
+        &PORTRAIT_nour_nourneutral
     
     NOUR: "Yeah! Who do you think made your favorite one?"
     

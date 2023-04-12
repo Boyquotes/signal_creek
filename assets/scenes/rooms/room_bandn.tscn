@@ -1,11 +1,11 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_bandn_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_comicstand.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_sofaback.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=5]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_poster3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_bestsellers.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_oldnovel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelf.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_dragonplush.tscn" type="PackedScene" id=9]
@@ -21,62 +21,48 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_shelfwithtrinkets.tscn" type="PackedScene" id=19]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_musicstand.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_kindle.tscn" type="PackedScene" id=21]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_books2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_poster3.tscn" type="PackedScene" id=22]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfside.tscn" type="PackedScene" id=23]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfback.tscn" type="PackedScene" id=24]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_sofa.tscn" type="PackedScene" id=25]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_chair1.tscn" type="PackedScene" id=26]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_table.tscn" type="PackedScene" id=27]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_comics.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_hats.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_displayshelf.tscn" type="PackedScene" id=26]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_tablesmall.tscn" type="PackedScene" id=27]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_comicstand.tscn" type="PackedScene" id=28]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfbooks2.tscn" type="PackedScene" id=29]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_table2.tscn" type="PackedScene" id=30]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_tablewide.tscn" type="PackedScene" id=30]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfbooks.tscn" type="PackedScene" id=31]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_shelf.tscn" type="PackedScene" id=32]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_wallshelf.tscn" type="PackedScene" id=32]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_displaystand.tscn" type="PackedScene" id=33]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_chair2.tscn" type="PackedScene" id=34]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_computercart.tscn" type="PackedScene" id=35]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_chairfront.tscn" type="PackedScene" id=34]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_computerdesk.tscn" type="PackedScene" id=35]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_shelfwithtrinkets2.tscn" type="PackedScene" id=36]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_cashier.tscn" type="PackedScene" id=37]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_pens.tscn" type="PackedScene" id=38]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_notebooks.tscn" type="PackedScene" id=39]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_books3.tscn" type="PackedScene" id=40]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_booksfront.tscn" type="PackedScene" id=40]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_cashier2.tscn" type="PackedScene" id=41]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_aplequestguide.tscn" type="PackedScene" id=42]
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 32, 4 )
 
-[sub_resource type="ShaderMaterial" id=85]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=72]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=73]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=60]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
 [sub_resource type="ShaderMaterial" id=13]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=14]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=15]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -92,7 +78,63 @@ shader_param/width = 1.0
 shader_param/pattern = 0
 shader_param/inside = false
 
-[sub_resource type="ShaderMaterial" id=33]
+[sub_resource type="ShaderMaterial" id=17]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=18]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=19]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=20]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=21]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=22]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=23]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=24]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -108,7 +150,15 @@ shader_param/width = 1.0
 shader_param/pattern = 0
 shader_param/inside = false
 
-[sub_resource type="ShaderMaterial" id=34]
+[sub_resource type="ShaderMaterial" id=26]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=27]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -117,278 +167,6 @@ shader_param/pattern = 0
 shader_param/inside = false
 
 [sub_resource type="ShaderMaterial" id=28]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=31]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=59]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=38]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=29]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=75]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=39]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=76]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=40]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=41]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=42]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=43]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=44]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=61]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=46]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=47]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=48]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=49]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=50]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=52]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=54]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=77]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=58]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=64]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=70]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=86]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=78]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=79]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=80]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=71]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=65]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=81]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=82]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=83]
-resource_local_to_scene = true
-shader = ExtResource( 14 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-
-[sub_resource type="ShaderMaterial" id=84]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -514,276 +292,264 @@ cell_y_sort = true
 format = 1
 tile_data = PoolIntArray( -1966075, 0, 196611, -1966074, 0, 327684, -1966073, 0, 196612, -1966072, 0, 327684, -1966071, 0, 196612, -1966070, 0, 327684, -1966069, 0, 196612, -1966068, 0, 327684, -1966067, 0, 327684, -1966066, 0, 327684, -1966065, 0, 196612, -1966064, 0, 196612, -1966063, 0, 327684, -1966062, 0, 327684, -1966061, 0, 196612, -1966060, 0, 196612, -1966059, 0, 196612, -1966058, 0, 327684, -1966057, 0, 196612, -1966056, 0, 196613, -1900539, 0, 262149, -1900520, 0, 262147, -1835003, 0, 262149, -1834984, 0, 262149, -1769467, 0, 262149, -1769466, 1, 0, -1769465, 1, 0, -1769464, 1, 0, -1769463, 1, 0, -1769462, 1, 0, -1769461, 1, 0, -1769460, 1, 0, -1769459, 1, 0, -1769458, 1, 0, -1769457, 1, 0, -1769456, 1, 0, -1769455, 1, 0, -1769454, 1, 0, -1769453, 1, 0, -1769452, 1, 0, -1769451, 1, 0, -1769450, 1, 0, -1769449, 1, 0, -1769448, 0, 262147, -1638406, 0, 196611, -1638405, 0, 196612, -1638404, 0, 196612, -1638403, 0, 327684, -1638402, 0, 196612, -1638401, 0, 327684, -1703936, 0, 327684, -1703935, 0, 196612, -1703934, 0, 196612, -1703933, 0, 196612, -1703932, 0, 327684, -1703931, 0, 327685, -1703912, 0, 327683, -1703911, 0, 196612, -1703910, 0, 327684, -1703909, 0, 327684, -1703908, 0, 196612, -1703907, 0, 196612, -1703906, 0, 327684, -1703905, 0, 196612, -1703904, 0, 196612, -1703903, 0, 196612, -1703902, 0, 196612, -1703901, 0, 196613, -1572870, 0, 262147, -1638365, 0, 262147, -1507334, 0, 262147, -1572829, 0, 262149, -1441798, 0, 262147, -1441797, 1, 0, -1441796, 1, 0, -1441795, 1, 0, -1441794, 1, 0, -1441793, 1, 0, -1507328, 1, 0, -1507327, 1, 0, -1507326, 1, 0, -1507325, 1, 0, -1507324, 1, 0, -1507323, 3, 0, -1507304, 2, 0, -1507303, 1, 0, -1507302, 1, 0, -1507301, 1, 0, -1507300, 1, 0, -1507299, 1, 0, -1507298, 1, 0, -1507297, 1, 0, -1507296, 1, 0, -1507295, 1, 0, -1507294, 1, 0, -1507293, 0, 262147, -1376262, 0, 262147, -1441757, 0, 262149, -1310726, 0, 262149, -1376221, 0, 262147, -1245190, 0, 262147, -1310685, 0, 262149, -1179654, 0, 262149, -1245180, 0, 0, -1245179, 0, 2, -1245149, 0, 262149, -1114118, 0, 262149, -1179644, 0, 131072, -1179643, 0, 131074, -1179613, 0, 262147, -1048582, 0, 262149, -1114077, 0, 262147, -983046, 0, 262147, -1048541, 0, 262149, -917510, 0, 262147, -983036, 2, 0, -983035, 3, 0, -983005, 0, 262149, -851974, 0, 262149, -917469, 0, 262147, -786438, 0, 262149, -851933, 0, 262147, -720902, 0, 458753, -786397, 0, 458753, -524299, 7, 0, -524294, 4, 0, -524289, 7, 0, -589824, 7, 0, -589823, 7, 0, -589822, 7, 0, -589821, 7, 0, -589820, 7, 0, -589789, 4, 0, -458754, 0, 196611, -458753, 0, 196612, -524288, 0, 196612, -524287, 0, 196612, -524286, 0, 196612, -524285, 0, 327684, -524284, 0, 327684, -524283, 0, 327684, -524282, 0, 196612, -524281, 0, 327684, -524280, 0, 196613, -524267, 0, 196611, -524266, 0, 327684, -524265, 0, 327684, -524264, 0, 196612, -524263, 0, 196612, -524262, 0, 196612, -524261, 0, 196612, -524260, 0, 327684, -524259, 0, 196612, -524258, 0, 196612, -524257, 0, 196613, -393218, 0, 262149, -393217, 7, 0, -458752, 7, 0, -458751, 7, 0, -458750, 7, 0, -458749, 7, 0, -458748, 7, 0, -458744, 0, 262147, -458731, 0, 262149, -458721, 0, 262149, -327682, 0, 262147, -327681, 7, 0, -393216, 7, 0, -393215, 7, 0, -393214, 7, 0, -393213, 7, 0, -393212, 7, 0, -393208, 0, 262149, -393195, 0, 262147, -393185, 0, 262149, -262146, 0, 262149, -262145, 2, 0, -327680, 1, 0, -327679, 1, 0, -327678, 1, 0, -327677, 1, 0, -327676, 1, 0, -327675, 1, 0, -327674, 1, 0, -327673, 1, 0, -327672, 0, 262149, -327659, 0, 262149, -327658, 1, 0, -327657, 1, 0, -327656, 1, 0, -327655, 1, 0, -327654, 1, 0, -327653, 1, 0, -327652, 1, 0, -327651, 1, 0, -327650, 1, 0, -327649, 0, 262147, -196610, 0, 262147, -262144, 7, 0, -262136, 0, 262149, -262123, 0, 262149, -262113, 0, 262147, -131075, 7, 0, -131074, 0, 262149, -196600, 0, 458753, -196587, 0, 458753, -196577, 0, 262147, -65539, 7, 0, -65538, 0, 262149, -131041, 0, 262149, -2, 0, 262147, -65505, 0, 262147, 65534, 0, 458753, 8, 4, 0, 21, 4, 0, 31, 0, 458753, 262142, 4, 0, 196624, 7, 0, 196639, 4, 0 )
 
-[node name="Notebooks" parent="PlaneManager/Overworld" instance=ExtResource( 39 )]
-material = SubResource( 85 )
-position = Vector2( -54, -222 )
+[node name="Cashier" parent="PlaneManager/Overworld" instance=ExtResource( 37 )]
+position = Vector2( 240, -140 )
 
-[node name="ComicStand4" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
-position = Vector2( 237, 17 )
-
-[node name="BookshelfBack5" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
-material = SubResource( 72 )
-position = Vector2( 301, -348 )
-
-[node name="BookshelfBack4" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
-material = SubResource( 73 )
-position = Vector2( 178, -347 )
-
-[node name="Poster4" parent="PlaneManager/Overworld" instance=ExtResource( 12 )]
-position = Vector2( -50, -343 )
-z_as_relative = false
-
-[node name="Poster3" parent="PlaneManager/Overworld" instance=ExtResource( 6 )]
-position = Vector2( 239, -411 )
-
-[node name="Poster2" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
-position = Vector2( 410, -352 )
-z_as_relative = false
-
-[node name="Poster1" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
-position = Vector2( -3, -351 )
-z_as_relative = false
-
-[node name="BookshelfSide4" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-material = SubResource( 60 )
-position = Vector2( 551, -170 )
-
-[node name="BookshelfBack" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
-material = SubResource( 13 )
-position = Vector2( 465, -155 )
-
-[node name="ComicStand2" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
-position = Vector2( 57, -49 )
-
-[node name="BookStack" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 16 )
-position = Vector2( 177, -407 )
-
-[node name="ComicStand" parent="PlaneManager/Overworld/BookStack" instance=ExtResource( 31 )]
-position = Vector2( -3, 4 )
-
-[node name="BookStack2" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 16 )
-position = Vector2( 301, -407 )
-
-[node name="ComicStand" parent="PlaneManager/Overworld/BookStack2" instance=ExtResource( 29 )]
-position = Vector2( -5, 8 )
-
-[node name="Kindle" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
-material = SubResource( 33 )
-position = Vector2( 372, -214 )
-
-[node name="Kindle2" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
-material = SubResource( 33 )
-position = Vector2( 390, -214 )
-
-[node name="PriceOfSalt" parent="PlaneManager/Overworld" instance=ExtResource( 13 )]
-material = SubResource( 25 )
-position = Vector2( 115, -372 )
-
-[node name="PriceOfSalt2" parent="PlaneManager/Overworld" instance=ExtResource( 13 )]
-material = SubResource( 25 )
-position = Vector2( 363, -373 )
-
-[node name="Polaroid" parent="PlaneManager/Overworld" instance=ExtResource( 15 )]
-material = SubResource( 34 )
-position = Vector2( 321, -321 )
-
-[node name="Table2" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
-material = SubResource( 28 )
-position = Vector2( 321, -323 )
-scale = Vector2( 0.534, 0.884 )
-
-[node name="DisplayStand2" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
-material = SubResource( 31 )
-position = Vector2( 380, -232 )
-
-[node name="Kindle3" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
-material = SubResource( 33 )
-position = Vector2( 372, -228 )
-
-[node name="Kindle4" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
-material = SubResource( 33 )
-position = Vector2( 390, -227 )
-
-[node name="ComicStand" parent="PlaneManager/Overworld" instance=ExtResource( 4 )]
-position = Vector2( 524, -332 )
-
-[node name="ComicStand" parent="PlaneManager/Overworld/ComicStand" instance=ExtResource( 28 )]
-position = Vector2( 1, 10 )
-scale = Vector2( 1.212, 1.418 )
-
-[node name="BookshelfSide3" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-material = SubResource( 59 )
-position = Vector2( 551, -262 )
-
-[node name="BookStack7" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 38 )
-position = Vector2( 467, -290 )
-
-[node name="Table" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
-material = SubResource( 29 )
-position = Vector2( 178, -324 )
-
-[node name="Table3" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
-material = SubResource( 29 )
-position = Vector2( 278, -324 )
-
-[node name="SkeletonDisplay" parent="PlaneManager/Overworld" instance=ExtResource( 17 )]
-position = Vector2( 80, -217 )
-
-[node name="Shelf" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
-material = SubResource( 75 )
-position = Vector2( 462, -342 )
-
-[node name="TrinketShelf" parent="PlaneManager/Overworld/Shelf" instance=ExtResource( 19 )]
-material = SubResource( 39 )
-position = Vector2( 0, -10 )
-
-[node name="Shelf2" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
-material = SubResource( 76 )
-position = Vector2( 56, -344 )
-
-[node name="TrinketShelf2" parent="PlaneManager/Overworld/Shelf2" instance=ExtResource( 19 )]
-material = SubResource( 40 )
-position = Vector2( 1, -10 )
-
-[node name="MusicStand" parent="PlaneManager/Overworld" instance=ExtResource( 20 )]
-position = Vector2( 59, -3 )
-
-[node name="Table5" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
-material = SubResource( 41 )
-position = Vector2( -41, -188 )
-
-[node name="HotWheels" parent="PlaneManager/Overworld" instance=ExtResource( 11 )]
-material = SubResource( 42 )
-position = Vector2( 277, -315 )
-
-[node name="Table6" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
-material = SubResource( 41 )
-position = Vector2( 402, -154 )
-scale = Vector2( 0.564, 0.918 )
-
-[node name="DragonPlush" parent="PlaneManager/Overworld" instance=ExtResource( 9 )]
-material = SubResource( 43 )
-position = Vector2( 402, -152 )
-
-[node name="OldNovel" parent="PlaneManager/Overworld" instance=ExtResource( 7 )]
-material = SubResource( 44 )
-position = Vector2( 177, -322 )
-
-[node name="BookShelf2" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 61 )
-position = Vector2( 466, -213 )
-
-[node name="BookshelfBack3" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
-material = SubResource( 46 )
-position = Vector2( 466, -228 )
-
-[node name="Chair2" parent="PlaneManager/Overworld" instance=ExtResource( 26 )]
-material = SubResource( 47 )
-position = Vector2( -64, -323 )
-
-[node name="Chair" parent="PlaneManager/Overworld" instance=ExtResource( 26 )]
-material = SubResource( 48 )
-position = Vector2( -63, -285 )
-
-[node name="Sofa" parent="PlaneManager/Overworld" instance=ExtResource( 25 )]
-material = SubResource( 49 )
-position = Vector2( -20, -240 )
-
-[node name="DisplayStand3" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
-material = SubResource( 50 )
-position = Vector2( 347, 32 )
-
-[node name="Table9" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
-material = SubResource( 52 )
-position = Vector2( -53, -223 )
-scale = Vector2( 0.718, 1 )
-
-[node name="Table7" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
-material = SubResource( 54 )
-position = Vector2( -19, -291 )
-
-[node name="Chair3" parent="PlaneManager/Overworld" instance=ExtResource( 34 )]
-material = SubResource( 77 )
-position = Vector2( -21, -330 )
-
-[node name="BookStack11" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 58 )
-position = Vector2( 65, -53 )
-
-[node name="BookshelfBack2" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
-material = SubResource( 64 )
-position = Vector2( 235, -17 )
-
-[node name="BookshelfSide5" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-material = SubResource( 70 )
-position = Vector2( -6, -20 )
-
-[node name="Pens" parent="PlaneManager/Overworld" instance=ExtResource( 38 )]
-material = SubResource( 86 )
-position = Vector2( 22, -221 )
-scale = Vector2( 1.406, 1.312 )
-
-[node name="Computer" parent="PlaneManager/Overworld" instance=ExtResource( 35 )]
-material = SubResource( 78 )
-position = Vector2( 71, -130 )
-
-[node name="Computer3" parent="PlaneManager/Overworld" instance=ExtResource( 35 )]
-material = SubResource( 79 )
-position = Vector2( 9, -129 )
-
-[node name="Computer2" parent="PlaneManager/Overworld" instance=ExtResource( 35 )]
-material = SubResource( 80 )
-position = Vector2( -52, -130 )
-
-[node name="BookshelfSide6" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-material = SubResource( 71 )
-position = Vector2( -5, 62 )
-
-[node name="Pens2" parent="PlaneManager/Overworld" instance=ExtResource( 38 )]
-material = SubResource( 86 )
-position = Vector2( -29.0003, -189 )
-scale = Vector2( 1.406, 1.312 )
-
-[node name="ComicStand3" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
-position = Vector2( 349, 52 )
-scale = Vector2( 1.406, 1.312 )
+[node name="Cashier2" parent="PlaneManager/Overworld" instance=ExtResource( 41 )]
+position = Vector2( 240, -226 )
 
 [node name="BookShelf" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 65 )
-position = Vector2( 234, 8 )
+material = SubResource( 13 )
+position = Vector2( 169, -400 )
 
-[node name="Shelf3" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
-material = SubResource( 81 )
-position = Vector2( 390, -56 )
+[node name="BookShelf2" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
+material = SubResource( 13 )
+position = Vector2( 312, -400 )
 
-[node name="TrinketShelf" parent="PlaneManager/Overworld/Shelf3" instance=ExtResource( 36 )]
-material = SubResource( 82 )
-position = Vector2( -18, -8 )
+[node name="BookShelf3" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
+material = SubResource( 13 )
+position = Vector2( 477, -281 )
 
-[node name="Kiosk" parent="PlaneManager/Overworld" instance=ExtResource( 37 )]
-position = Vector2( 244, -194 )
-scale = Vector2( 1.312, 1.392 )
+[node name="BookShelf4" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
+material = SubResource( 13 )
+position = Vector2( 477, -202 )
 
-[node name="Shelf4" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
-material = SubResource( 81 )
-position = Vector2( 460, -56 )
+[node name="BookShelf5" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
+material = SubResource( 13 )
+position = Vector2( 57, -48 )
 
-[node name="Kindle" parent="." instance=ExtResource( 21 )]
-material = SubResource( 83 )
-position = Vector2( 372, -197 )
+[node name="BookShelf6" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
+material = SubResource( 13 )
+position = Vector2( 240, -3 )
 
-[node name="Kindle2" parent="." instance=ExtResource( 21 )]
-material = SubResource( 84 )
-position = Vector2( 390, -197 )
+[node name="BookshelfBack" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
+material = SubResource( 14 )
+position = Vector2( 169, -336 )
 
-[node name="Table2" parent="." instance=ExtResource( 30 )]
-position = Vector2( 231, 58 )
+[node name="BookshelfBack3" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
+material = SubResource( 14 )
+position = Vector2( 477, -218 )
 
-[node name="ComicStand5" parent="Table2" instance=ExtResource( 40 )]
-position = Vector2( 0, 19 )
+[node name="BookshelfBack4" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
+material = SubResource( 14 )
+position = Vector2( 477, -132 )
+
+[node name="BookshelfBack2" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
+material = SubResource( 14 )
+position = Vector2( 315, -336 )
+
+[node name="BookshelfBack5" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
+material = SubResource( 14 )
+position = Vector2( 240, -18 )
+
+[node name="TableSmall" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
+position = Vector2( 294, -318 )
+
+[node name="TableSmall2" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
+position = Vector2( 336, -318 )
+
+[node name="TableSmall3" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
+position = Vector2( 169, -318 )
+
+[node name="TableSmall4" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
+position = Vector2( -17, -310 )
+
+[node name="TableSmall5" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
+position = Vector2( 419, -151 )
+
+[node name="Table" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
+position = Vector2( -45, -210 )
+
+[node name="Table2" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
+position = Vector2( -45, -257 )
+
+[node name="Table3" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
+position = Vector2( 240, 58 )
+
+[node name="SofaBack" parent="PlaneManager/Overworld" instance=ExtResource( 4 )]
+position = Vector2( -17, -281 )
+
+[node name="ChairFront" parent="PlaneManager/Overworld" instance=ExtResource( 34 )]
+position = Vector2( -17, -339 )
+
+[node name="PriceOfSalt" parent="PlaneManager/Overworld" instance=ExtResource( 13 )]
+material = SubResource( 15 )
+position = Vector2( 112, -370 )
+
+[node name="PriceOfSalt2" parent="PlaneManager/Overworld" instance=ExtResource( 13 )]
+material = SubResource( 15 )
+position = Vector2( 369, -370 )
+
+[node name="BookshelfSide" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
+material = SubResource( 16 )
+position = Vector2( 553, -151 )
+
+[node name="BookshelfSide2" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
+material = SubResource( 16 )
+position = Vector2( 553, -257 )
+
+[node name="BookshelfSide3" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
+material = SubResource( 16 )
+position = Vector2( -8, 64 )
+
+[node name="BookshelfSide4" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
+material = SubResource( 16 )
+position = Vector2( -8, -16 )
+
+[node name="ComputerDesk" parent="PlaneManager/Overworld" instance=ExtResource( 35 )]
+material = SubResource( 17 )
+position = Vector2( -52, -159 )
+
+[node name="ComputerDesk2" parent="PlaneManager/Overworld" instance=ExtResource( 35 )]
+material = SubResource( 17 )
+position = Vector2( 8, -159 )
+
+[node name="ComputerDesk3" parent="PlaneManager/Overworld" instance=ExtResource( 35 )]
+material = SubResource( 17 )
+position = Vector2( 70, -160 )
+
+[node name="Bookshelfbooks2" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 304, -398 )
+
+[node name="Bookshelfbooks3" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 168, -398 )
+
+[node name="Bookshelfbooks" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
+position = Vector2( 154, -398 )
+
+[node name="Bookshelfbooks4" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 476, -279 )
+
+[node name="Bookshelfbooks5" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
+position = Vector2( 462, -279 )
+
+[node name="Bookshelfbooks6" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 476, -200 )
+
+[node name="Bookshelfbooks7" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
+position = Vector2( 462, -200 )
+
+[node name="Bookshelfbooks8" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 239, -1 )
+
+[node name="Bookshelfbooks9" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
+position = Vector2( 225, -1 )
+
+[node name="Bookshelfbooks10" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 56, -46 )
+
+[node name="Bookshelfbooks11" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
+position = Vector2( 42, -46 )
+
+[node name="DisplayShelf" parent="PlaneManager/Overworld" instance=ExtResource( 26 )]
+position = Vector2( 423, -25 )
+
+[node name="BooksFront" parent="PlaneManager/Overworld" instance=ExtResource( 40 )]
+position = Vector2( 344, 90 )
+
+[node name="MusicStand" parent="PlaneManager/Overworld" instance=ExtResource( 20 )]
+position = Vector2( 63, 3 )
+
+[node name="DisplayStand" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
+position = Vector2( 523, -334 )
+
+[node name="DisplayStand2" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
+position = Vector2( 344, 89 )
+
+[node name="DisplayStand3" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
+position = Vector2( 380, -225 )
+
+[node name="ComicStand" parent="PlaneManager/Overworld" instance=ExtResource( 28 )]
+position = Vector2( 523, -332 )
+
+[node name="WallShelf" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
+material = SubResource( 18 )
+position = Vector2( 458, -351 )
+
+[node name="TrinketShelf" parent="PlaneManager/Overworld" instance=ExtResource( 19 )]
+material = SubResource( 19 )
+position = Vector2( 458, -350 )
+
+[node name="WallShelf2" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
+material = SubResource( 18 )
+position = Vector2( 60, -351 )
+
+[node name="WallShelf3" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
+material = SubResource( 18 )
+position = Vector2( 391, -63 )
+
+[node name="WallShelf4" parent="PlaneManager/Overworld" instance=ExtResource( 32 )]
+material = SubResource( 18 )
+position = Vector2( 458, -63 )
+
+[node name="TrinketShelf2" parent="PlaneManager/Overworld" instance=ExtResource( 19 )]
+material = SubResource( 19 )
+position = Vector2( 60, -350 )
+
+[node name="SkeletonDisplay" parent="PlaneManager/Overworld" instance=ExtResource( 17 )]
+position = Vector2( 81, -220 )
+
+[node name="Polaroid" parent="PlaneManager/Overworld" instance=ExtResource( 15 )]
+material = SubResource( 20 )
+position = Vector2( 336, -317 )
+
+[node name="OldNovel" parent="PlaneManager/Overworld" instance=ExtResource( 7 )]
+material = SubResource( 21 )
+position = Vector2( 169, -317 )
+
+[node name="DragonPlush" parent="PlaneManager/Overworld" instance=ExtResource( 9 )]
+material = SubResource( 22 )
+position = Vector2( 419, -150 )
+
+[node name="HotWheels" parent="PlaneManager/Overworld" instance=ExtResource( 11 )]
+material = SubResource( 23 )
+position = Vector2( 294, -317 )
+
+[node name="Notebooks" parent="PlaneManager/Overworld" instance=ExtResource( 39 )]
+material = SubResource( 24 )
+position = Vector2( -45, -256 )
+
+[node name="Pens" parent="PlaneManager/Overworld" instance=ExtResource( 38 )]
+material = SubResource( 25 )
+position = Vector2( -60, -209 )
+
+[node name="Pens2" parent="PlaneManager/Overworld" instance=ExtResource( 38 )]
+material = SubResource( 25 )
+position = Vector2( -33, -209 )
+
+[node name="BestSellers" parent="PlaneManager/Overworld" instance=ExtResource( 6 )]
+position = Vector2( 240, 59 )
+
+[node name="Hats" parent="PlaneManager/Overworld" instance=ExtResource( 25 )]
+material = SubResource( 26 )
+position = Vector2( 471, 27 )
+
+[node name="Kindle" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
+material = SubResource( 27 )
+position = Vector2( 371, -224 )
+
+[node name="Kindle2" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
+material = SubResource( 27 )
+position = Vector2( 389, -224 )
+
+[node name="Poster1" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
+position = Vector2( 3, -351 )
+
+[node name="Poster2" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
+position = Vector2( 407, -351 )
+
+[node name="Poster3" parent="PlaneManager/Overworld" instance=ExtResource( 22 )]
+position = Vector2( 240, -415 )
+
+[node name="Poster4" parent="PlaneManager/Overworld" instance=ExtResource( 12 )]
+position = Vector2( -49, -351 )
+
+[node name="TrinketShelf3" parent="PlaneManager/Overworld" instance=ExtResource( 36 )]
+material = SubResource( 28 )
+position = Vector2( 375, -61 )
+
+[node name="ApleQuestGuide" parent="PlaneManager/Overworld" instance=ExtResource( 42 )]
+position = Vector2( 175, -253 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
 [connection signal="body_exited" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_exited"]

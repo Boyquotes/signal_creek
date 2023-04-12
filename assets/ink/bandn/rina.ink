@@ -50,6 +50,18 @@
     
     MS. SUWAN: "This floor should have been shut down <i>months</i> ago. There shouldn't even be electricity."
     
+    NOUR: "We're in a place that shouldn't exist!?"
+    
+    NICK: "Maybe we're in some kind of liminal space of the universe!"
+    
+    MS. SUWAN: "... Pardon?"
+    
+    NICK: "Y’know, liminal spaces? Weird alternate dimensions where everything feels off."
+    
+    NICK: "A place where space and time aren’t acting as they should."
+    
+    MS. SUWAN: "..." 
+    
     MS. SUWAN: "I have to call one of my higher-ups about this."
     
     MS SUWAN BEEP BOOPS HER PHONE
@@ -78,15 +90,15 @@
     
     NOUR: "..." (SHOCKED)
     
-    MS. SUWAN: "You're not supposed to be here either, young lady."
+    MS. SUWAN: "You're not supposed to be here, young lady."
     
-    NICK: "Hey, did you miss the part where she magically appeared in front of us?"
+    NICK: "Hey, did you miss the part where she <i>magically appeared in front of us!</i>?"
     
-    MS. SUWAN: "Magic? Stop messing around, kid."
+    MS. SUWAN: "Magic? Stop messing around, boy."
     
     NOUR: <i>...Rina?</i> (SHOCKED)
     
-    NICK: "Hey, uh... Nour? Do you know her?"
+    NICK: "Hey, uh... Nour? You know her?"
         
         * ["Yeah. She was from my high school."]
         
@@ -119,22 +131,26 @@
         * [Agree with her]
             NOUR: "Maybe we hit our heads somewhere... or a potential gas leak?"
             
-            MS. SUWAN: "That would also be somewhat realistic. I want to agree, but..."
+            MS. SUWAN: "That <i>would</i> be somewhat realistic. I want to agree, but..."
             
-            MS. SUWAN: "This place would've been closed off much more securely if there was any danger. It would've been reported to me, too."
+            MS. SUWAN: "This place would have been closed off <i>much</i> more securely if there was any danger. It would've been reported to me, too."
             
-            NICK: "I don't remember us knocking our heads either!"
+            NICK: "I don't remember us hitting our heads anywhere, either!"
+            
+            NOUR: "Well you don't really <i>remember</i> passing out."
+            
+            NICK: "... alright, fair." 
             
         * [Lighten the mood]
             NOUR: "Maybe this is all just a dream..."
             
-            NICK: "Haha! Maybe none of us are even real. Ooo!"
+            NICK: "Haha! Maybe none of us are even real. Ooo~!"
             
             NOUR: "Or drugs? This could be a really, really weird trip!"
             
             NICK: "DRUGS?! What kind of drug would make up something like THIS?"
             
-            NICK: "... Do you have anymore?"
+            NICK: "... Do you have any more?"
             
             MS. SUWAN: "Enough of your nonsense, please."
     
@@ -145,7 +161,11 @@
             
             NICK: "That's so cool! It's like we warped through some kind of elevator-shaped portal!"
             
-            MS. SUWAN: "I'm not buying any of this. There is no such thing as a magical elevator or whatever laminated space."
+            MS. SUWAN: "I'm not buying any of this. There is no such thing as a magical elevator or laminated spaces."
+            
+            NICK: "<i>Liminal<i> spaces."
+            
+            Ms. SUWAN: "..."
 
     - MS. SUWAN: "This is absurd. We need to go back."
     
@@ -165,7 +185,7 @@
     
     &EMOTE_NICK_ButtonPress
     
-    NICK: "Hey, the buttons for this elevator are missing!"
+    NICK: "Hey, the buttons for the elevator are missing!"
     
     // &EMOTE_NICK_UpIdle
     
@@ -177,9 +197,9 @@
     
     &EMOTE_NICK_DownIdle
     
-    NICK: "While we're at it, I wanna see if they still have games in the TopicSpot."
+    NICK: "Well... while we're at it, since we're already here, I wanna see if they still have games in the TopicSpot!"
     
-    MS. SUWAN: "<i>That's</i> what you are choosing to think about right now?"
+    MS. SUWAN: "<i>That's</i> what you are worried about right now?"
     
     NOUR: "It's a start. Who knows, maybe we'll be able to ask someone for help there."
     
