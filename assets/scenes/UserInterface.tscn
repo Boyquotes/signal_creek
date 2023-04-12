@@ -100,9 +100,10 @@ margin_left = 169.0
 margin_right = 334.0
 margin_bottom = 18.0
 size_flags_horizontal = 3
-min_value = -16.0
+min_value = -80.0
 max_value = 3.5
 step = 0.5
+value = -10.0
 allow_lesser = true
 ticks_on_borders = true
 
@@ -125,7 +126,7 @@ margin_left = 169.0
 margin_right = 334.0
 margin_bottom = 18.0
 size_flags_horizontal = 3
-min_value = -16.0
+min_value = -80.0
 max_value = 3.5
 
 [node name="UIVolume" type="HBoxContainer" parent="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer"]
@@ -147,7 +148,7 @@ margin_left = 169.0
 margin_right = 334.0
 margin_bottom = 18.0
 size_flags_horizontal = 3
-min_value = -16.0
+min_value = -80.0
 max_value = 3.5
 
 [node name="MuteAudio" type="CheckBox" parent="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer"]

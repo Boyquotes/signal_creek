@@ -3,13 +3,13 @@
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 6, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 8, 7.5 )
+extents = Vector2( 6, 7.5 )
 
 [node name="Kindle" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 3 )
@@ -22,35 +22,32 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -20 )
-scale = Vector2( 1.04, 1 )
-texture = ExtResource( 4 )
+position = Vector2( 0, -42 )
+texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 57, 163, 14, 17 )
+region_rect = Rect2( 263, 132, 14, 17 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-position = Vector2( 0, -20 )
-texture = ExtResource( 4 )
+position = Vector2( 0, -42 )
+texture = ExtResource( 5 )
 offset = Vector2( 0, -8.48501 )
 region_enabled = true
-region_rect = Rect2( 57, 163, 14, 17 )
+region_rect = Rect2( 263, 132, 14, 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
-position = Vector2( 0, 1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, 0.5 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

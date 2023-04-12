@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=1]
+[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 25, 7.5 )
 
-[node name="Sofa" type="RigidBody2D" groups=["shiftable"]]
+[node name="SofaBack" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -16,7 +16,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 position = Vector2( 0, -10 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 295, 129, 50, 21 )
 
@@ -26,7 +26,7 @@ modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
 position = Vector2( 0, -10 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 offset = Vector2( 0, -35.0226 )
 region_enabled = true
 region_rect = Rect2( 295, 129, 50, 21 )
