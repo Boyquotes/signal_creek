@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/map_FILL0_wght400_GRAD0_opsz48.png-5314b1d361f6ee581b7b8c1e3c09f864.stex"
+path="res://.import/keyboard_arrow_down_FILL0_wght400_GRAD0_opsz48.png-01876086850fa9ebe1cad4453f6772e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/icons/map_FILL0_wght400_GRAD0_opsz48.png"
-dest_files=[ "res://.import/map_FILL0_wght400_GRAD0_opsz48.png-5314b1d361f6ee581b7b8c1e3c09f864.stex" ]
+source_file="res://assets/ui/icons/keyboard_arrow_down_FILL0_wght400_GRAD0_opsz48.png"
+dest_files=[ "res://.import/keyboard_arrow_down_FILL0_wght400_GRAD0_opsz48.png-01876086850fa9ebe1cad4453f6772e7.stex" ]
 
 [params]
 

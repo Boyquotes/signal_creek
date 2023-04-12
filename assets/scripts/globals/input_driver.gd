@@ -17,14 +17,14 @@ func _ready():
 
 
 func _process(_delta):
+	if Input.is_action_just_pressed("open_menu"):
+		Globals.PauseMenu.toggle_visible()
+		
 	if Globals.GameState == Globals.GameStates.START:
 		if Input.is_action_just_pressed("interact"):
 			Globals.StartScreen.start_game()
 		
 	elif Globals.GameState == Globals.GameStates.GAME:
-		if Input.is_action_just_pressed("open_menu"):
-			Globals.PauseMenu.toggle_visible()
-			
 		if Input.is_action_just_pressed("reset"):
 			reset_game()
 		
@@ -64,6 +64,9 @@ func _process(_delta):
 						
 					
 		elif Globals.GameMode == Globals.GameModes.WALK:
+			if Input.is_action_just_pressed("toggle_map"):
+				Globals.FloorMap.toggle_map()
+		
 			if !Globals.DevTools.typing_knot_name:
 				check_input_character_movement()
 			
