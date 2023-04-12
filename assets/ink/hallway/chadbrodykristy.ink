@@ -19,12 +19,14 @@
 }
 
 == chadbrodykristy1==
-
-    NOUR: "Hello... Would you guys know anything about-"
     
     &FOLLOW_NICK_NickCBKStart
     
     &FOLLOW_SUWAN_SuwanCBKStart
+    
+    NOUR: "Hello... Would you guys know anything about-"
+    
+
     
     &PAUSE_1.0
     
@@ -50,17 +52,19 @@
             
             NICK: "They'll probably listen more to someone who's older."
             
-                ** "Fair enough. Ms. Suwan what do you think?"
+                ** "Fair enough. Ms. Suwan, what do you think?"
     
         * "Ms. Suwan, can you ask them for help?"
 
     - MS. SUWAN: "..."
     
+    &PORTRAIT_nour_nourannoyed
+    
     NOUR: "...Ms. Suwan? Are you listening?"
     
     &PORTRAIT_nick_nickangry
     
-    &EMOTE_nick_LeftIdle
+    &EMOTE_NICK_LeftIdle
 
     NICK: "Hey, lady!!!"
     
@@ -69,6 +73,8 @@
     &PORTRAIT_ms. suwan_suwanannoyed
     
     MS. SUWAN: "No need to shout. What's going on?"
+    
+    &PORTRAIT_nour_nourneutral
     
     NOUR: "Can you ask these people what's going on?"
     
@@ -80,7 +86,9 @@
         
         * "It wouldn't hurt to ask these people[..."], they're right here."
     
-    - NOUR: <i>If... they're even real?</i>
+    - &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>If... they're even real?</i>
     
     &PORTRAIT_nick_nickworried
     
@@ -98,8 +106,6 @@
 
     NOUR: "Fine. I'll ask them again."
     
-    //NOUR WALKS CLOSER
-    
     &FOLLOW_NOUR_SuwanCBKTalk
     
     &PORTRAIT_nour_nourneutral
@@ -112,7 +118,7 @@
     
     ...
     
-    &PORTRAIT_nour_nourpondering
+    &PORTRAIT_nour_nournervous
     
     NOUR: <i>They're just staring blankly at Ms. Suwan. Something really weird is going on...</i>
     
@@ -122,7 +128,7 @@
     
     &PORTRAIT_ms. suwan_suwanannoyed
     
-    MS. SUWAN: "Give it up. We don't need help from strangers."
+    MS. SUWAN: "No use. We do <i>not</i> need help from strangers."
     
     &PORTRAIT_???_chadannoyed
     
@@ -141,8 +147,6 @@
     &PORTRAIT_???_brodyannoyed
     
     ???: "Looks like Chad, Kristy, and Brody got demoted to strangers. What a surprise."
-    
-    &PORTRAIT_nour_nournervous
     
     NOUR: "What the—"
     
@@ -190,13 +194,15 @@
     
     MS. SUWAN: "Word of advice? The only person you can trust is yourself."
     
-    MS. SUWAN: "I'm figuring this out alone."
+    MS. SUWAN: "I will handle this <i>alone</i>."
     
     &PORTRAIT_ms. suwan_suwanneutral
     
-    MS. SUWAN: "There's a bookstore on this floor— the B&N."
+    MS. SUWAN: "There is a bookstore on this floor— the B&N."
     
     MS. SUWAN: "They must have a way to contact the outside."
+    
+    &PORTRAIT_nour_nourannoyed
 
     NOUR: "Are you sure you can't ask them anything?"
     
@@ -214,6 +220,8 @@
             
 === chadbrodykristy1_repeat ===
             
+    &PORTRAIT_nour_nourrealization
+    
     NOUR: <i>Ms. Suwan went to rock shows with these people...</i>
     
     &PORTRAIT_nour_nourpondering
@@ -224,15 +232,15 @@
 
 == chadbrodykristy2 ==
     
-    NOUR: "You can't keep avoiding this. It'll eat you up inside."
-    
     &FOLLOW_NICK_NickCBKStart
     
     &FOLLOW_SUWAN_SuwanCBKStart
     
     &FOLLOW_NOUR_NourCBKStart
     
-    &PAUSE_1.0
+    NOUR: "You can't keep avoiding this. It'll eat you up inside."
+    
+    &PAUSE_0.2
     
     &EMOTE_NICK_UpIdle
     
@@ -246,7 +254,7 @@
 
     &FOLLOW_SUWAN_SuwanCBKTalk
     
-    &PAUSE_1.5
+    &PAUSE_0.5
     
     &PORTRAIT_ms. suwan_suwanannoyed
     
@@ -270,7 +278,7 @@
     
     KRISTY: "Sure, we went to shows. You were invited to <i>all of them</i>."
     
-    KRISTY: "We also spent countless hours studying at the Cafe, where we <i>also</i> invited you."
+    KRISTY: "<i>And</i> we spent countless hours studying at the Cafe, where we <i>also</i> invited you."
     
     KRISTY: "You said you'd go. And then, you stopped showing up."
     
@@ -306,7 +314,7 @@
     
     MS. SUWAN: "I want to leave. Now."
     
-    &PORTRAIT_nour_nournervous
+    &PORTRAIT_nour_noursad
     
     * "Don't you want to apologize?"
     
@@ -327,10 +335,6 @@
     NOUR: <i>Ms. Suwan could've saved her friendships if she had done things differently.</i>
     
     NOUR: <i>She's pretty dismissive about the Cafe... Nick might be onto something.</i>
-    
-    &PORTRAIT_ms. suwan_suwanneutral
-    &PORTRAIT_nick_nicknetural
-    &PORTRAIT_nour_nourneutral 
     
     &FOLLOW_NOUR_stop
     &FOLLOW_SUWAN_NICK
@@ -355,19 +359,19 @@
 
 === chadbrodykristy3 ===
     
-    NOUR: "We're back. Go ahead, Ms. Suwan."
-    
     &FOLLOW_NICK_NickCBKStart
     
     &FOLLOW_SUWAN_SuwanCBKStart
     
     &FOLLOW_NOUR_NourCBKStart
     
-    &PAUSE_1.0
+    NOUR: "We're back. Go ahead, Ms. Suwan."
+    
+    &PAUSE_0.3
     
     &EMOTE_SUWAN_UpIdle
     
-    &EMOTE_NOUR_RightIdle
+    &EMOTE_NOUR_UpIdle
     
     &EMOTE_NICK_UpIdle
 
@@ -375,7 +379,7 @@
     
     &PORTRAIT_ms. suwan_suwannervous
     
-    &PAUSE_1.5
+    &PAUSE_0.5
     
     MS. SUWAN: "..."
     
@@ -385,27 +389,37 @@
     
     KANNIKA: "..."
     
-    KANNIKA: "...I'm done with excuses. I'm sorry for being a terrible friend."
+    KANNIKA: "...I am done with excuses. I am sorry for being a terrible friend."
     
     &PORTRAIT_suwan_suwanneutral
     
     KANNIKA: "You were wonderful friends, and I was too focused on my career to see that."
     
-    KANNIKA: "I remember the one time I could not sleep, because I was stressing over finals."
+    KANNIKA: "In retrospect, it was obvious how much you all cared for me."
     
-    KANNIKA: "You invited me to a show. Reluctantly, I agreed to go."
+    KANNIKA: "Remember that one time I could not sleep, because I was stressing over finals?"
+    
+    KANNIKA: "You all invited me to a show."
+    
+    KANNIKA: "Reluctantly, I agreed to go."
     
     KANNIKA: "...And for a few hours, I was... at peace."
     
-    KANNIKA: "We were packed like sardines, in a room that smelled of cigarettes and alcohol."
+    KANNIKA: "We were packed like sardines in a small room."
     
-    KANNIKA: "We were together, shouting the words to our favorite songs with fifty strangers."
+    KANNIKA: "There was that stench of cigarettes and alcohol."
     
-    KANNIKA: "It was a life I chose to turn away from."
+    KANNIKA: "We were together."
     
-    KANNIKA: "This is a long overdue <i>thank you</i>."
+    KANNIKA: "We were shouting the words to our favorite songs alongside fifty strangers."
     
-    <i>Ms. Suwan shows them the album. Chad, Brody, and Kristy stare... and then smile sadly at her.</i>
+    KANNIKA: "That kind of bliss... Was a life I chose to turn away from."
+    
+    KANNIKA: "I hope you can... Take this album... as a long overdue <i>thank you</i>."
+    
+    <i>Ms. Suwan shows them the album in her hands. Chad, Brody, and Kristy stare...</i>
+    
+    <i>...And then smile sadly at her.</i>
     
     &PORTRAIT_chad_chadsad
     
@@ -419,17 +433,25 @@
     
     KRISTY: "Why do you think we went to those shows right before our exams?"
     
-    CHAD: "We wanted to make sure you got a chance to loosen up after cramming for weeks straight."
+    CHAD: "We wanted to make sure you got a chance to relax after cramming for <i>weeks</i>."
     
     KANNIKA: "I... failed to realize that."
     
     KANNIKA: "And what I said to you after..."
     
-    KRISTY: "It hurt a lot, but it's okay, Niki. You're doing well, and that's all that matters to us."
+    KRISTY: "It hurt a lot. But it's okay, Niki."
+    
+    KRISTY: "You're doing well, and that's all that matters to us."
     
     KANNIKA: "Kristy, I am so sorry about everything-"
     
+    &PAUSE_0.5
+    
     &SHLORP_CBK_Kristy_out
+    
+    &PAUSE_0.5
+    
+    &PORTRAIT_nour_nournervous
     
     NOUR: "Where did she—"
     
@@ -445,13 +467,19 @@
     
     KANNIKA: "Brody... what I said back then—"
     
+    &PAUSE_0.5
+    
     &SHLORP_CBK_Brody_out
+    
+    &PAUSE_0.5
     
     CHAD: "You were always locked up in your room, studying. We were worried."
     
     KANNIKA: "I know. It was wrong of me to blame you for <i>my</i> anxiety."
     
-    CHAD: "The Kannika we knew wouldn't have been able to admit that. Looks like you're changing."
+    CHAD: "The Kannika we knew wouldn't have been able to admit that."
+    
+    CHAD: "Looks like you're changing."
     
     KANNIKA: "Take the album, Chad. <i>Please</i>. It would mean the world."
     
@@ -463,11 +491,23 @@
     
     KANNIKA: "...Okay."
     
+    &PAUSE_0.5
+    
     &SHLORP_CBK_Chad_out
+    
+    &PAUSE_0.5
     
     &PORTRAIT_ms. suwan_suwannervous
     
     KANNIKA: "..."
+    
+    &PORTRAIT_nour_noursad
+    
+    &EMOTE_SUWAN_DownIdle
+    
+    &EMOTE_NICK_LeftIdle
+    
+    &PAUSE_0.5
     
     NOUR: "Are you okay?"
     
@@ -485,23 +525,25 @@
     
     &PORTRAIT_ms. suwan_suwansad
     
-    MS. SUWAN: "I've spent so much time fighting my regrets, but now that I have faced my past... I can lay it to rest."
+    MS. SUWAN: "I have spent so much time fighting my regrets."
+    
+    MS. SUWAN: "But now that I have faced my past... I can lay it to rest."
     
     NOUR: "But don't you think you could be happier if it had gone better?"
     
     &PORTRAIT_ms. suwan_suwanneutral
     
-    MS. SUWAN: "We are unable to change the past. We can only face it, and choose to accept it."
+    MS. SUWAN: "We are unable to change the past. We can only choose to accept it."
     
     MS. SUWAN: "With acceptance, maybe... we can grow."
     
-    MS. SUWAN: "This... hallucination has helped me realize that."
+    MS. SUWAN: "This... <i>hallucination</i> has helped me realize that."
     
-    MS. SUWAN: "There are some things you just can't fix, and that's okay."
+    MS. SUWAN: "There are some things you cannot fix, and that is okay."
     
     MS. SUWAN: "Look forward, and worry about the things you <i>can</i> change."
     
-    &PORTRAIT_nour_nournetural
+    &PORTRAIT_nour_noursad
     
     NOUR: "..."
     
@@ -513,9 +555,11 @@
     
     An elevator <i>ding</i> is heard from the hallway.
     
-    &PORTRAIT_nour_nournervous
+    &PORTRAIT_nour_nourneutral
     
     NOUR: "..."
+    
+    &PAUSE_1.5
     
     &MOV_RINA_HALLWAY
     
@@ -523,6 +567,12 @@
     
     &PORTRAIT_nour_nourneutral
     
-    MS. SUWAN: "If I could face the mistakes I made with Chad, Brody, and Kristy... I believe you are prepared to do the same with her."
+    MS. SUWAN: "If I could face the mistakes I made with Chad, Brody, and Kristy..."
+    
+    MS. SUWAN: "I believe you are prepared to do the same with her."
+    
+    &FOLLOW_NOUR_stop
+    &FOLLOW_SUWAN_NICK
+    &FOLLOW_NICK_NOUR
     
         -> light_on

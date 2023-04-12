@@ -1,4 +1,4 @@
-=== weirdtree ===
+ === weirdtree ===
 
     It's a really weird tree. It's extremely clear that this tree is not like the others. 
     
@@ -173,7 +173,9 @@
     
     ???: "Ah, yes! What a handsome smile!"
     
-    GRAND DUCHESS GRANNY: "I, <i>GRAND DUCHESS GRANNY SMITH</i>, can tell with my old applady eyes... that you are indeed a SWEETIEPIE!"
+    GRAND DUCHESS GRANNY: "I, <i>GRAND DUCHESS GRANNY SMITH</i>, can tell with my old applady eyes..."
+    
+    GRAND DUCHESS GRANNY: "...That you are indeed a SWEETIEPIE!"
     
     &PORTRAIT_nick_nickangry
     
@@ -251,7 +253,7 @@
     
     //SFX GROSS WET KISSY
     
-    GRAND DUCHESS GRANNY: Grand Duchess Granny Smith blows him a fat kiss! 
+    GRAND DUCHESS GRANNY: Grand Duchess Granny Smith blows Nick a fat kiss! 
     
     NICK: "Eek!"
     
@@ -273,7 +275,9 @@
     
     NICK: Nick touches his cheek. 
     
-    NOUR: "Good work getting her out of there. I would've never been able to do that without you."
+    NOUR: "Good work getting her out of there!"
+    
+    NOUR: "I would've never been able to do that without you."
     
     NICK: Nick stays silent, but he nods his head again.
     
