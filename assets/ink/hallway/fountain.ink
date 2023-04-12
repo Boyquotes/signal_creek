@@ -23,15 +23,13 @@
     
     NOUR: "Good point."
     
-    MS. SUWAN: "Your wishes won't come true if you do something like this."
+    MS. SUWAN: "Putting your faith in silly things like wishes is just a waste of valuable time."
     
     MS. SUWAN: "You need to do good work, know the right people, and be at the right place and the right time."
     
-    MS. SUWAN: "...However, a little luck and randomness goes a long way."
-    
     NICK: "So, like, everything is impossible? God..."
     
-    NOUR: "That's a little depressing...but very true."
+    NOUR: "That's a little depressing...but also true."
         -> END
 
 === fountain_before_aplequest_repeat ===
