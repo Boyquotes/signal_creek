@@ -30,7 +30,11 @@ border_color = Color( 0.345098, 0.278431, 0.247059, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 16 )
-map_pin = NodePath("Panel/Map Pin/Pin")
+map_pin = NodePath("Panel/Pin")
+map_walkable_top_left = Vector2( 156, 80 )
+map_walkable_bottom_right = Vector2( 548, 400 )
+bandn_pin_pos = Vector2( 324, 324 )
+topicspot_pin_pos = Vector2( 506, 56 )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -377,17 +381,18 @@ text = "99 ................................ B & N
 112 .................................. ???
 113 ........ Louis George Cafe"
 
+[node name="Pin" type="TextureRect" parent="Panel"]
+margin_left = 206.0
+margin_top = 276.0
+margin_right = 236.0
+margin_bottom = 306.0
+rect_pivot_offset = Vector2( 15, 27 )
+texture = ExtResource( 17 )
+expand = true
+stretch_mode = 5
+
 [node name="Map Pin" type="Control" parent="Panel"]
 margin_left = 16.0
 margin_top = 58.0
 margin_right = 418.0
 margin_bottom = 464.0
-
-[node name="Pin" type="TextureRect" parent="Panel/Map Pin"]
-margin_left = 190.0
-margin_top = 218.0
-margin_right = 220.0
-margin_bottom = 248.0
-texture = ExtResource( 17 )
-expand = true
-stretch_mode = 5
