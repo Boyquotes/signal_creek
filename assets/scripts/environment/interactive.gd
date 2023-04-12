@@ -28,33 +28,15 @@ func _ready():
 # IN CASE OF LEADER SWITCHING
 # When a body enters self, check if player can interact
 func _on_InteractArea_body_entered(body) -> void:
-	if body == Globals.PartyObject.get_leader() and !_disable_interactivity:
-		_check_if_can_interact()
+	if body == Globals.Nour and !_disable_interactivity:
+		Globals.InputDriver.set_closest_object(self)
+		emit_signal("can_interact")
 
 
 # When a body exits self, check if player can interact
 func _on_InteractArea_body_exited(body) -> void:
-	if Globals.PartyObject and body == Globals.PartyObject.get_leader():
+	if Globals.PartyObject and body == Globals.Nour:
 		emit_signal("cannot_interact")
-		_check_if_can_interact()
-
-
-func _on_ActiveArea_can_interact() -> void:
-	pass
-
-
-func _on_ActiveArea_cannot_interact() -> void:
-	pass
-
-
-# Events to trigger when the player can interact with the objects
-func _set_can_interact_true() -> void:
-	Globals.InputDriver.set_can_interact(true)
-	Globals.InputDriver.set_closest_object(self)
-	emit_signal("can_interact")
-	
-	if Globals.GameRoot.testing_enabled:
-		print(Globals.PartyObject.get_leader().get_name() + " Can Interact: " + _get_object_name())
 
 
 # IN CASE OF LEADER SWITCHING
@@ -62,7 +44,7 @@ func _set_can_interact_true() -> void:
 # communicate with InputDriver
 func _check_if_can_interact() -> void:
 	if _check_if_leader_in_area():
-		_set_can_interact_true()
+		emit_signal("can_interact")
 		return
 	
 	Globals.InputDriver.set_can_interact(false)
