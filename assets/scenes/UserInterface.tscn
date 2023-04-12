@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/scripts/ui/devtools.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/themes/theme_devtools.tres" type="Theme" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://assets/ui/themes/theme_pausemenu.tres" type="Theme" id=5]
 [ext_resource path="res://assets/ui/prefabs/dialoguebox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/scripts/ui/pause_menu.gd" type="Script" id=7]
-[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold.tres" type="DynamicFont" id=8]
 [ext_resource path="res://assets/scenes/StartScreen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/scenes/EndScreen.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/scenes/Map.tscn" type="PackedScene" id=11]
@@ -364,30 +363,6 @@ size_flags_vertical = 3
 enabled_focus_mode = 1
 text = "Reset Game"
 
-[node name="MenuButton" type="Button" parent="ReferenceRect"]
-visible = false
-margin_left = 8.0
-margin_top = 481.0
-margin_right = 56.0
-margin_bottom = 529.0
-theme = ExtResource( 5 )
-custom_fonts/font = ExtResource( 8 )
-toggle_mode = true
-icon = ExtResource( 13 )
-icon_align = 1
-
-[node name="MapButton" type="Button" parent="ReferenceRect"]
-visible = false
-margin_left = 64.0
-margin_top = 481.0
-margin_right = 112.0
-margin_bottom = 529.0
-theme = ExtResource( 5 )
-custom_fonts/font = ExtResource( 8 )
-toggle_mode = true
-icon = ExtResource( 12 )
-icon_align = 1
-
 [node name="Interact_Indicator" parent="." instance=ExtResource( 3 )]
 visible = false
 
@@ -500,8 +475,6 @@ margin_bottom = 341.0
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Save" to="ReferenceRect/PauseMenu" method="_on_Save_pressed"]
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Exit" to="ReferenceRect/PauseMenu" method="_on_Exit_pressed"]
 [connection signal="pressed" from="ReferenceRect/PauseMenu/Panel/PauseMenu/VBoxContainer/Reset" to="ReferenceRect/PauseMenu" method="_on_Reset_pressed"]
-[connection signal="toggled" from="ReferenceRect/MenuButton" to="ReferenceRect/PauseMenu" method="_on_MenuButton_toggled"]
-[connection signal="toggled" from="ReferenceRect/MapButton" to="ReferenceRect/PauseMenu" method="_on_MapButton_toggled"]
 [connection signal="pressed" from="DevTools/VBoxContainer/Hallway" to="DevTools" method="_on_Hallway_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/TopicSpot" to="DevTools" method="_on_TopicSpot_pressed"]
 [connection signal="pressed" from="DevTools/VBoxContainer/BandN" to="DevTools" method="_on_BandN_pressed"]

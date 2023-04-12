@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/ui/icons/elevator_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=1]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://assets/ui/icons/water_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=13]
 [ext_resource path="res://assets/ui/icons/bandn.png" type="Texture" id=14]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold_32.tres" type="DynamicFont" id=15]
+[ext_resource path="res://assets/scripts/ui/map_manager.gd" type="Script" id=16]
+[ext_resource path="res://assets/ui/icons/location_on_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=17]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.996078, 0.94902, 0.768627, 1 )
@@ -27,6 +29,8 @@ border_color = Color( 0.345098, 0.278431, 0.247059, 1 )
 [node name="Map" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 16 )
+map_pin = NodePath("Panel/Map Pin/Pin")
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -372,3 +376,18 @@ text = "99 ................................ B & N
 111 ................................... ???
 112 .................................. ???
 113 ........ Louis George Cafe"
+
+[node name="Map Pin" type="Control" parent="Panel"]
+margin_left = 16.0
+margin_top = 58.0
+margin_right = 418.0
+margin_bottom = 464.0
+
+[node name="Pin" type="TextureRect" parent="Panel/Map Pin"]
+margin_left = 190.0
+margin_top = 218.0
+margin_right = 220.0
+margin_bottom = 248.0
+texture = ExtResource( 17 )
+expand = true
+stretch_mode = 5

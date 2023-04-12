@@ -77,6 +77,7 @@ tracks/0/keys = {
 [node name="Game" type="Node2D"]
 process_priority = 1
 script = ExtResource( 2 )
+testing_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )
@@ -91,7 +92,7 @@ rect_min_size = Vector2( 322, 182 )
 rect_scale = Vector2( 3, 3 )
 stretch = true
 script = ExtResource( 13 )
-_elevator_focus_position = Vector2( 472, 216 )
+_elevator_focus_position = Vector2( 472, 232 )
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
 size = Vector2( 322, 182 )
