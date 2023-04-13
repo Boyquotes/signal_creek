@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
@@ -17,6 +17,9 @@
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe_12.tres" type="DynamicFont" id=15]
 [ext_resource path="res://assets/sprites/characters/portraits/princependragon/portrait_princependragonneutral.tres" type="Texture" id=16]
 [ext_resource path="res://assets/sprites/characters/portraits/princependragon/portrait_princependragonsad.tres" type="Texture" id=17]
+[ext_resource path="res://assets/sprites/characters/portraits/grandduchessgranny/portrait_grannyneutral.tres" type="Texture" id=18]
+[ext_resource path="res://assets/sprites/characters/portraits/chadbrodykristy/portrait_kristyneutral.tres" type="Texture" id=19]
+[ext_resource path="res://assets/sprites/characters/portraits/manager/portrait_manager_managerneutral.tres" type="Texture" id=20]
 
 [sub_resource type="Animation" id=3]
 resource_name = "CanProceed"
@@ -223,9 +226,9 @@ characterPortraits = {
 "earl earligold": ExtResource( 11 ),
 "emperor evercrisp": ExtResource( 11 ),
 "father fuji": ExtResource( 11 ),
-"grand duchess granny": ExtResource( 11 ),
-"kristy": ExtResource( 11 ),
-"manager": ExtResource( 11 ),
+"grand duchess granny": ExtResource( 18 ),
+"kristy": ExtResource( 19 ),
+"manager": ExtResource( 20 ),
 "ms. suwan": ExtResource( 3 ),
 "nick": ExtResource( 5 ),
 "nour": ExtResource( 8 ),
