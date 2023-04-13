@@ -247,7 +247,15 @@
     
     &PORTRAIT_nick_neutral
     
-    NICK: Nick nods his head. 
+    NICK: Nick nods his head.
+    
+    GRAND DUCHES GRANNY: "AH, yes! And one last thing..."
+    
+    GRAND DUCHESS GRANNY: "A parting gift! Some old wisdom from Granny..."
+    
+    GRAND DUCHESS GRANNY: [Epic lore drop]
+    
+    GRAND DUCHESS GRANNY: "...And a kiss from Granny! KEKEKE!"
     
     &PORTRAIT_grand duchess granny_grannykiss
     

@@ -13,7 +13,7 @@
         - aplequestguide && nourplaysaplequest:
             -> bookshelf_afternickroute
             
-        - aplequestguide:
+        - aplequestguide_after_bookshelf_fightstarts:
             -> bookshelf_afterfight
             
         - nour_suggests_hobbies && consoles:
@@ -66,9 +66,13 @@
     
         NOUR: "This would be a pretty fun hobby, right?"
         
-            ** "Are you interested?["] It might be cool to try learning something new. That's what got me into photography."
+            ** "Are you interested?"
+            
+                NOUR: "It might be cool to try learning something new. That's what got me into photography."
         
-            ** "People who can draw are pretty cool.["] You might end up liking it. That was my experience with photography."
+            ** "People who can draw are pretty cool."
+            
+                NOUR: "You might end up liking it. That was my experience with photography."
     
             - NICK: "I don't know. I'm not really good at art and stuff."
         
@@ -108,13 +112,17 @@
         
         NICK: "I think I'd rather die than read something like that."
     
-        MS. SUWAN: "Remain open-minded. I had no idea I would enjoy law until I came across good study aids."
+        MS. SUWAN: "It would be best for you to remain open-minded."
         
-        MS. SUWAN: "Taking that extra step ensures that you excel at what you do. This could be something."
+        MS. SUWAN: "I had no idea I would enjoy law until I came across good study aids."
         
-        NICK: "But I don't want to force myself to like something I don't yet. That's not how you pick up interests."
+        MS. SUWAN: "Taking that extra step ensures that you excel at what you do."
         
-        NICK: "...And either way I wouldn't understand it, no matter how hard I tried."
+        MS. SUWAN: "This could be something."
+        
+        NICK: "I don't wanna force myself to like something. That's not how you pick up interests."
+        
+        NICK: "...And either way, I wouldn't understand it, no matter how hard I tried."
     
     - NOUR: "What about..."
     
@@ -224,7 +232,8 @@
 === bookshelf_afterfight ===
 
     NOUR: <i>I don't think I need to see anything else here.</i>
-        -> END
+    
+    -> END
     
 === bookshelf_afternickroute ===
 
@@ -252,7 +261,7 @@
     
     MS. SUWAN: "No. But I could learn."
     
-The two of them share a smile.
+    The two of them share a smile.
 
     -> bookshelf_end
 

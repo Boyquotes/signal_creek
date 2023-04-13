@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
@@ -6,12 +6,33 @@
 [ext_resource path="res://assets/scripts/character/npc_fatherfuji.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 [ext_resource path="res://assets/materials/water.tres" type="Material" id=6]
+[ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=7]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 32, 28 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 40, 34.5 )
+
+[sub_resource type="ShaderMaterial" id=26]
+shader = ExtResource( 7 )
+shader_param/progress = null
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = null
+shader_param/color_shlorp = Color( 0, 1.02, 1.2, 1 )
+shader_param/time = 1.0
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = false
+shader_param/r_displacement = Vector2( 1, 1 )
+shader_param/g_displacement = Vector2( 0, 0 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.0
+shader_param/time_intensity = 0.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
 
 [sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 21, 17 )
@@ -71,6 +92,7 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="FatherFuji"]
 light_mask = 4
+material = SubResource( 26 )
 position = Vector2( 0.545455, -8 )
 texture = ExtResource( 5 )
 region_enabled = true

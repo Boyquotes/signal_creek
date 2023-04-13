@@ -12,7 +12,7 @@
         - spraycans_start:
             -> spraycans_start_repeat
             
-        - else:
+        - consoles:
             -> spraycans_start
     }
     

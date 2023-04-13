@@ -20,7 +20,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
         -> END
 }
 
-=== aplequestguide_after_bookshelf_fightstarts ===
+== aplequestguide_after_bookshelf_fightstarts ==
 
     &PORTRAIT_nour_noursmile
 
@@ -64,13 +64,15 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
             
             NICK: "Wait, did you just say Edition 1?"
             
-            NICK: "This is one of those vintage game guides! They're impossible to find because they only released prints in their cereal boxes!"
+            NICK: "This is one of those vintage game guides!"
+            
+            NICK: "They're impossible to find, because they only released prints in their cereal boxes!"
             
             NOUR: "There was <i>Aple Quest</i> cereal?"
             
             NICK: "Yeah! <i>Aple Space-Os, the nutrionally balanced UFOs!</i>" 
             
-            NICK: "The food venture for <i>Aple Quest</i> was a sad part of their history and was discontinued."
+            NICK: "The food venture for <i>Aple Quest</i> was a flop. It was discontinued."
             
             MS. SUWAN: "You're telling me we're reading a guide that was written as a cereal freebie?"
             
@@ -78,15 +80,23 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
         
         * "It looks like they mispelled apple. They wrote 'Aple' instead."
         
-            NICK: "That's intentional. The characters aren't just regular old <i>apples</i>—they're sentient fruit aliens."
+            NICK: "That's intentional."
             
-            MS. SUWAN: "Regardless, I can't imagine what kind of person would name their product <i>Aple Quest</i>."
+            NICK: "The characters aren't just regular old <i>apples</i>—they're sentient fruit aliens."
             
-            NICK: "Okay. First of all, it's actually a fantastic series with a really good story, and innovative mechanics for its time."
+            MS. SUWAN: "Regardless, I cannot imagine what person would name something <i>Aple Quest</i>."
             
-            NICK: "Second, APLE is actually an acronym that stands for <i>Apple Prince Leaves Earth</i>, which is the whole basis of the game."
+            NICK: "Okay... First of all, it's actually a fantastic series with a really good story."
             
-            NICK: "And third, the 'a' is pronounced like the word 'say', not 'sat'. It's A-ple, not AH-ple."
+            NICK: "And the game mechanics are innovative for its time."
+            
+            NICK: "Second, APLE is actually an acrony."
+            
+            NICK: "It stands for <i>Apple Prince Leaves Earth</i>. That's the whole basis of the game."
+            
+            NICK: "And third, the 'a' is pronounced like the word 'say', not 'sat'."
+            
+            NICK: "It's A-ple, not AH-ple."
     
     - NOUR: "Huh... looks like you know a lot about this game after all."
     
@@ -100,11 +110,13 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     NICK: "Or not. I don't care that much."
     
+    &PORTRAIT_nour_nourneutral
+    
     NOUR: "I'll choose a page for us to read."
     
         * "Let's look at the first page."
         
-        * "Let's look somewhere in the middle"
+        * "Let's look somewhere in the middle."
         
         * "Let's see the end section."
     
@@ -172,9 +184,9 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     NICK: "NO! I'm so TIRED of people saying I'm lazy."
     
-    NICK: "I'm tired of people comparing me to themselves, or their friends, or their relatives."
+    NICK: "I'm tired of people comparing me to themselves and other people."
     
-    NICK: "Like, I get it. I'm not <i>perfect</i> but that doesn't make mean I'm not trying my best.
+    NICK: "Like, I get it. I'm not <i>perfect</i>, but that doesn't mean I'm not trying my best."
     
     &PORTRAIT_nour_noursad
     
@@ -208,7 +220,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     NICK: "YOU!"
     
-    On his wrist is <b>an unfamiliar black bracelet with metallic studs</b> that shine under the lights.
+    On his wrist is <b>an unfamiliar black bracelet with metallic studs</b> that shine under the light.
     
     &PORTRAIT_nour_nourannoyed
     
@@ -226,7 +238,9 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
         
         * "..."
     
-    - Nick quickly retracts his hand, hiding it behind his back.
+    - &PORTRAIT_nick_nicknervous 
+    
+    NICK: Nick quickly retracts his hand, hiding it behind his back.
     
     MS. SUWAN: "You want to talk about maturity while wearing a bracelet that you <i>stole</i>."
     
@@ -234,7 +248,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     NOUR: "Lay off him for a sec."
     
-        * "Nick, be honest. did you steal that bracelet?"
+        * "Nick, be honest. Did you steal that bracelet?"
         
         * "Why did you steal the bracelet, Nick?"
     
@@ -244,11 +258,15 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
         
         * "All you need to do is return the bracelet..."
     
-    - NICK: Nick shakes his head.
+    -  &PORTRAIT_nick_nickworried
+    
+    NICK: Nick shakes his head.
 
     &PORTRAIT_nour_noursad
 
-    NOUR: "C'mon, Nick. We're not judging you we just want to understand why you're acting like this."
+    NOUR: "C'mon, Nick. We're not judging you."
+    
+    NOUR: "We just want to understand why you're acting like this."
     
     NICK: Nick remains silent.
     
@@ -260,7 +278,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     NOUR: <i>I can't believe he's acting out this way.</i>
     
-    NOUR: <i>I know the idea school and the future is a hard thing to grapple with...</i>
+    NOUR: <i>I know that school and the future are hard things to grapple with...</i>
     
     NOUR: <i>...But this feels a bit too personal.</i>
     
