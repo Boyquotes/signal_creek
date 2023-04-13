@@ -88,7 +88,7 @@
     
     NICK: "Aw, shoot! The scary old lady caught up!"
     
-    MS. SUWAN: "What did you just call me—"
+    MS. SUWAN: "What did you just call me?"
     
     &EMOTE_NOUR_RightIdle
     

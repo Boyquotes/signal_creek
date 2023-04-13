@@ -1,15 +1,14 @@
-=== spraycans ===
+== spraycans ==
 
     It's a bunch of spray cans. 
     
     {
         - spraycans_afternickroute:
-            -> spraycans_end
+            -> explored_everything
             
         - nourplaysaplequest:
             -> spraycans_afternickroute
-        // - noursuggestion:
-        //     -> nicknotinterested
+            
         - spraycans_start:
             -> spraycans_start_repeat
             
@@ -19,9 +18,9 @@
     
     -> END
 
-=== spraycans_start ===
+== spraycans_start ==
     
-    NICK: "Hey, guys! Think you could buy me one of these?"
+    NICK: "...Ooh! Hey, guys! Think you could buy me one of these?"
     
     NICK: "I'll pay you back later." 
     
@@ -83,36 +82,29 @@
     
     NOUR: <i>I should lead Nick somewhere that would inspire new interests.</i>
     
-    NOUR: <i>Now where could that be in a big mall like this?</i>
-    
     &LIGHT_Nick0
     
     -> light_on
 // -> END
 
-=== spraycans_start_repeat ===
+== spraycans_start_repeat ==
 
-    NICK: "Bringing me back here isn't really helping your point about 'cooler hobbies' or whatever."
+    NICK: "Bringing me back here isn't really helping your point about 'better hobbies' or whatever."
     
-    NOUR: "Ok, smart guy. I'll find something to prove my point."
+    NOUR: "Okay, smart guy. I'll find something to prove my point."
     
-    NOUR: <i>It might be better for me to find something to teach him a fun hobby. Maybe we could read up on one somewhere?</i>
+    NOUR: <i>Earlier, Nick said something about how he doesn't feel like he has a bright future.</i>
     
-        -> END
+    NOUR: <i>It sounds like he doesn't have much confidence in his prospects.</i>
+    
+    NOUR: <i>I should help him find a hobby. Something that would give him purpose.</i>
+    
+    NOUR: <i>We could go somewhere with books, and read up about new things.</i>
+    
+    -> END
 
-// === nicknotinterested ===
+== spraycans_afternickroute ==
 
-//     - Nick's gaze seems to linger on the spray cans, but then quickly glances away, bouncing on the balls of his feet.
-    
-//     NOUR: <i>Still not talking, huh?</i>
-    
-//     NOUR: <i>I need to find something fun AND safe for him to speak again...</i>
-    
-//     NOUR: <i>Maybe there's something else in this place I could take a look at.</i>
-        
-//         -> END
-
-=== spraycans_afternickroute ===
     NOUR: "You know, when you're an adult, you can make decisions for yourself to purchase whatever you want."
     
     NOUR: "We just hope they're decisions that benefit you, not harm you."
@@ -135,11 +127,5 @@
     
     NICK: "Haha, I can't wait!"
     
-        -> END
-
-=== spraycans_end ===
-
-    NOUR: <i>I think we've explored everything we could here.</i>
-        
         -> END
 

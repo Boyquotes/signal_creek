@@ -110,7 +110,11 @@ INCLUDE bandn/computerdesk.ink
     
     NOUR: <i>...and it's up to us to move on.</i>
     
-    NOUR: <i>When we were talking earlier, did {firstLightCharacter} just reveal something {firstLightPronoun} hung up on?</i>
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: <i>When we were talking earlier, did {firstLightCharacter} reveal something {firstLightPronoun} hung up on?</i>
+    
+    &PORTRAIT_nour_nourneutral
     
     NOUR: "We should keep an eye on this elevator and the lights as we keep exploring."
     
