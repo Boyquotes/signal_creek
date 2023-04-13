@@ -3,8 +3,6 @@
     //location: elevator
     //NICK AND NOUR RUN INTO THE ELEVATOR
     
-    NICK: “QUICK, IN HERE! There's no way she'll find us here!"
-    
     &SPEED_NICK_120.0
     &SPEED_NOUR_100.0
     &FOLLOW_NICK_NickElevatorPos
@@ -12,18 +10,22 @@
     &POS_SUWAN_160,248
     &FOLLOW_NOUR_NourStartingPos
     
+    &PORTRAIT_nick_nickangry
+    
+    NICK: “HURRY UP, NOUR! There's no way she'll find us if we hide in here!"
+    
     &PAUSE_0.5
     
     &EMOTE_NICK_DownIdle
     
-    NICK: "If we hide here, she'll give up chasing us down—”
-    
     &FOLLOW_NOUR_NourElevatorPos
     &EMOTE_NICK_LeftIdle
     
-    &PAUSE_1.0
+    &PAUSE_0.5
     
     &EMOTE_NOUR_RightIdle
+    
+    &PORTRAIT_nour_nourannoyed
     
     NOUR: “In the BROKEN ELEVATOR?!”
     
@@ -36,49 +38,53 @@
     
     // &PORTRAIT_nour_placeholder
     
-    NICK: "Uh..."
-        * [Try to run]
-            NOUR: "This is so stupid, Nick, we have to get out of here!"
+    &PORTRAIT_nick_nicknervous
     
-            NICK: "No way! She'll never catch us here—"
+    NICK: "Uh..."
+    
+        * "We have to get out of here!"
+    
+            NICK: "No way! Then, she's gonna—"
             
             &FOLLOW_SUWAN_NOUR
             
-        * [Give him a piece of your mind]
-            NOUR: "Goddammit, Nick! This is what I get for listening to a stupid kid!"
+        * "This is what I get for listening to a stupid kid!"
+        
+            &PORTRAIT_nour_nourangry
+            
+            &PORTRAIT_nick_nickangry
     
-            NICK: "Hey! You listening to me is technically YOUR FAULT AND NOT MINE! I didn't FORCE you to follow me in here!"
+            NICK: "Hey! You listening to me is technically <i>YOUR</i> fault, not mine."
+            
+            NICK: "I didn't <i>FORCE</i> you to follow me in here!"
     
             NICK: "And I'm NOT stupid—"
             
             
-        * [Urge him to stay quiet]
-            NOUR: "Shhh! Shut up, Nick!"
+        * "Shhh! Shut up, Nick!"
     
-            NICK: "NO! <i>YOU</i> SHUT UP!"
+            NICK: "NO, <i>YOU</i> SHUT UP!"
     
             NOUR: "If you keep making so much noise, she's going to <i>find us</i>, you idiot—"
             
             
-    
-    //MS SUWAN ENTERS THE ELEVATOR
-    //HER SPRITE IS BLACK
-    
     - MS. SUWAN: "Stop right there."
     
     &FOLLOW_SUWAN_SuwanElevatorPos
     
     &EMOTE_NOUR_DownIdle
     
-    // &VOLUME_-120.0
-    
-    &EMOTE_NICK_LookAround
+    // &VOLUME_-80.0
     
     &PAUSE_1.0
     
+    &EMOTE_NICK_LookAround
+    
     &EMOTE_NICK_DownIdle
     
-    &EMOTE_NOUR_RightIdle
+    &EMOTE_SUWAN_UpIdle
+    
+    &PORTRAIT_nick_nicknervous
     
     NICK: "Aw, shoot! The scary old lady caught up!"
     
@@ -92,46 +98,73 @@
     
     &EMOTE_NOUR_DownIdle
     
-    MS. SUWAN: "You're both trespassing. That could-"
+    MS. SUWAN: "Both of you are trespassing. That could-"
     
     MS. SUWAN: "Wait."
     
     MS. SUWAN: "Nour?!"
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: "Uhh... Hi, Ms. Suwan."
     
-    MS. SUWAN: "How <i>dare</i> you disobey me?! I told you, you were not to step foot in this building! It's unsafe <i>and</i> illegal."
+    MS. SUWAN: "How <i>dare</i> you disobey me?!"
     
-    MS. SUWAN: "Your trespassing could mean a lot of trouble for the both of you in the face of the law."
+    MS. SUWAN: "I told you that you were <i>not</i> to step foot in this building!"
+    
+    MS. SUWAN: "You know very well that it is unsafe."
+    
+    MS. SUWAN: "Not to mention, your trespassing could lead to <i>serious</i> trouble with the law."
+    
+    &PORTRAIT_nick_nickshocked
     
     NICK: “Well, what are YOU doing here in that case?”
-    
-    //HER SPRITE IS SHOWN NORMALLY
+
     MS. SUWAN: "I AM the law."
     
     &EMOTE_NICK_LookAround
     
-    NICK: "OH GOD—I'm so sorry! Please don't tell my Mom!"
+    &PORTRAIT_nick_nicknervous
     
-    MS. SUWAN: "I'm part of the legal team in charge of inspecting this demolition site. As <i>she</i> knows very well. How could you bring a CHILD here?!"
+    NICK: "OH GOD— I'm so sorry! Please don't tell my Mom!"
     
+    MS. SUWAN: "I am leading the legal team responsible for inspecting this demolition site."
     
+    MS. SUWAN: "As <i>Nour</i> knows very well."
+    
+    MS. SUWAN: "Nour, how could you bring a <i>CHILD</i> here?!"
     
     &EMOTE_NICK_DownIdle
     
-    NOUR: "I-I, it-- Look, it's none of your business, okay!" //EDIT
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: "I-I, it— Look, it's none of your business, okay!"
+    
+    &PORTRAIT_nour_nournervous
 
-    NOUR: "I told you -- if I came, it would just be to take some photos for my project! I'll take him and leave the second I'm finished, you <i>know</i> I will, I-"
+    NOUR: "I <i>told</i> you— if I came, it would just be to take some photos for my project!"
+    
+    NOUR: "I'll take him and leave the second I'm finished, you <i>know</i> I will, I-"
     
     &FOLLOW_NICK_NickButtonPressingPos
     
-    MS. SUWAN: "Save your excuses. Regardless of our previous professional relationship, Nour, I'm going to have to report you <i>both</i> to the authorities this instant—"
+    MS. SUWAN: "Save your excuses."
+    
+    MS. SUWAN: "Regardless of our professional relationship, Nour..."
+    
+    MS. SUWAN: "...I will have to report <i>both</i> of you to law enforcement."
     
     &EMOTE_NICK_ButtonPress
     
-    ELEVATOR BUTTONS BEEP BOOP SFX
+    &EMOTE_SUWAN_DownIdle
+    
+    Nick begins frantically pressing elevator buttons.
+    
+    //&SOUND_ElevatorButtons
     
     NICK: "C'mon, c'mon, c'mon!"
+    
+    &PORTRAIT_nour_nourannoyed
     
     NOUR: "Seriously, Nick?! Pushing those isn't going to work!"
     
@@ -139,7 +172,7 @@
     
     &ELEVATOR_CLOSE
     
-    ELEVATOR DOOR CLOSES. WHIRRING AND BEEPING...PORTAL IS ACTIVATED
+    //&SOUND_ElevatorDoorClose
     
     &SHAKE
     
@@ -153,6 +186,8 @@
     
     NOUR: "What the—WHAT ARE YOU DOING?!"
     
+    &PORTRAIT_nick_nickangry
+    
     NICK: "Nothing except SAVING OUR BUTTS!!!"
     
     &FOLLOW_NICK_NickRetreat
@@ -160,6 +195,8 @@
     &EMOTE_NOUR_LookAround
     
     &PAUSE_1.0
+    
+    &PORTRAIT_nour_nourangry
     
     NOUR: "WITH the person we're running from?!"
     
@@ -169,17 +206,23 @@
     
     &EMOTE_SUWAN_DownIdle
     
+    &PORTRAIT_nick_nicknervous
+    
     NICK: "Why isn't it STOPPING? WHAT'S GOING ON—"
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "I don't know but... BRACE YOURSELVES!"
     
     &BLACK
     
-    NOUR: "I don't know but BRACE YOURSELVES—!"
-    
-    // &FOLLOW_NICK_NOUR
-    
-    // &FOLLOW_SUWAN_NICK
+    &PAUSE_0.5
     
     &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
     
     &FDEIN
     
@@ -189,137 +232,4 @@
     
     &ELEVATOR_OPEN
     
-    &PORTRAIT_nour_nourneutral
-    
     -> END
-
-//TRANSITION
-//IN DREAM PLANE
-//location: Past Level - Hallway
-
-// == betaintro_hallway ==
-
-//    &PORTRAIT_nour_nourannoyed
-    
-//  NOUR: "Ugh...I feel sick."
-    
-//    &EMOTE_NICK_LookAround
-    
-//    NICK: “Woah, this is crazy...! Are you seeing what I’m seeing?!”
-    
-//    &EMOTE_NICK_DownIdle
-    
-//    NOUR: "This...this is one of the floors of the mall! The top floor!"
-    
-//    MS. SUWAN: "A floor that was torn down months ago..."
-    
-//    NOUR: "We're in a place that shouldn't exist?!"
-    
-//    NICK: "Maybe we’re in some kind of liminal space of the universe!"
-    
-//    &EMOTE_SUWAN_LeftIdle
-    
-//    MS. SUWAN: "…Pardon?"
-    
-//    &EMOTE_NICK_RightIdle
-    
-//    NICK: "Y’know, liminal spaces? Weird alternate dimensions where everything feels off."
-    
-//    NICK: "A place where space and time aren’t acting as they should."
-    
-//    MS. SUWAN: "We must be hallucinating. That’s the only explanation I can think of to describe… whatever it is that we’re seeing."
-    
-//        * [Agree with her]
-//            NOUR: "Maybe we hit our heads somewhere...or a gas leak? We talked about those happening in one of our interviews, right?"
-            
-//            MS. SUWAN: "The potential of them, yes. I want to agree, but..."
-            
-//            MS. SUWAN: "This place would've been closed off much more securely if there was any immediate danger. It would've been reported to me, too."
-            
-//            NICK: "I don't remember us knocking our heads, either!"
-            
-//        * [Lighten the mood]
-//            NOUR: "Maybe this is all just a dream..."
-            
-//            NICK: "Haha! Maybe none of us are even real. Ooo~!"
-            
-//            NOUR: "Or drugs? This could be a really, really weird trip!"
-            
-//            NICK: "DRUGS?! What kind of drug would make up something like THIS?"
-            
-//            NICK: "...Do you have any more of them?"
-            
-//            MS. SUWAN: "Enough of your nonsense."
-    
-//        * [Convince her it's real]
-//            NOUR: "I don't know. If this floor really was torn down, I don't think we can explain anything around us with logic. Or at least, the logic of our reality."
-            
-//            NOUR: "Wherever we are...it's definitely not the demolition site from before."
-            
-//            NICK: "That's so cool! It's like we warped through some kind of elevator-shaped portal!"
-            
-//            MS. SUWAN: "I'm not buying any of this. There is no such thing as a magical elevator or a <i>laminated space</i>."
-            
-//            NICK: "<i>Liminal</i>."
-            
-//            MS. SUWAN: "..."
-
-//    - MS. SUWAN: "This is absurd. We need to go back."
-    
-//    &EMOTE_NOUR_UpIdle
-    
-//    NOUR: "The elevator is closed though, and it doesn't look like the doors will budge either."
-    
-//    &EMOTE_SUWAN_UpIdle
-    
-//    NICK: "Then I'll just press the— Huh?!"
-    
-//    NICK: "Hey, the buttons for the elevator are missing!"
-    
-//    &EMOTE_NICK_UpIdle
-    
-//    &EMOTE_NOUR_UpIdle
-    
-//    NICK: "And why are there so many lights on this elevator? That's kinda whacky, haha!"
-    
-//    NOUR: "None of them are turned on, though. Weird...maybe it's broken."
-    
-//    NICK: "Yeah, this thing looks busted alright."
-    
-//    NOUR: "No use in waiting for an elevator that won't work. We should try to find a way out of here."
-    
-//    MS. SUWAN: "Finally, a good idea. Staying here any longer will surely mean trouble."
-    
-//    NICK: "Trouble...I like the sound of that!"
-    
-//    MS. SUWAN: "..."
-    
-//    MS. SUWAN: "I will choose to ignore that for now -- but I'm keeping a close eye on you, boy."
-    
-//    NICK: "..." (NERVOUS)
-    
-//    NICK: "Anyways... maybe if we find a way to make the elevator work again, we could go back down!"
-    
-//    &EMOTE_SUWAN_DownIdle
-    
-//    &EMOTE_NOUR_RightIdle
-    
-//    &EMOTE_NICK_RightIdle
-    
-//    MS. SUWAN: "It would make more sense to find another way out of here. I'm going to try calling someone..."
-    
-//    MS. SUWAN: "..."
-    
-//    MS. SUWAN: "Hmm. No service and no WiFi."
-    
-//    &EMOTE_NICK_DownIdle
-    
-//    &EMOTE_NOUR_DownIdle
-    
-//    NICK: "Aw, man. Same! I can't play any of my phone games..."
-    
-//    NOUR: "Well, we won't be able to leave this place just standing here."
-    
-//    NOUR: "Maybe if we explore some of the places on this floor we can find a way back."
-    
-//    ->END

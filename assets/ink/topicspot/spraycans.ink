@@ -1,79 +1,93 @@
 === spraycans ===
 
-It's a bunch of spray cans. 
-
-{
-    - spraycans_afternickroute:
-        -> spraycans_end
-        
-    - nourplaysaplequest:
-        -> spraycans_afternickroute
-    // - noursuggestion:
-    //     -> nicknotinterested
-    - spraycans_start:
-        -> spraycans_start_repeat
-        
-    - else:
-        -> spraycans_start
-}
-
--> END
+    It's a bunch of spray cans. 
+    
+    {
+        - spraycans_afternickroute:
+            -> spraycans_end
+            
+        - nourplaysaplequest:
+            -> spraycans_afternickroute
+        // - noursuggestion:
+        //     -> nicknotinterested
+        - spraycans_start:
+            -> spraycans_start_repeat
+            
+        - else:
+            -> spraycans_start
+    }
+    
+    -> END
 
 === spraycans_start ===
     
-    NICK: "Hey, Nour, Ms.Suwan! You think you could buy me one of these? I'll pay you back later." 
+    NICK: "Hey, guys! Think you could buy me one of these?"
     
-    NOUR: "The spray cans?"
+    NICK: "I'll pay you back later." 
     
-    NOUR: "I didn't know you liked to spray paint."
+    NOUR: "...I didn't know you like to spray paint."
     
-    NICK: "I don't..."
+    NICK: "Well, I don't know how..."
+    
+    &PORTRAIT_nour_nourannoyed
 
-    NOUR: "Oh...then why do you need the spray paint."
+    NOUR: "...Then what are you going to do with these?"
     
-    NICK: "It's like non of your business just lay off."
+    NICK: "It's like... <i>none</i> of your business. Just lay off."
     
-    MS. SUWAN: "You just want to huff the paint, don't you?"
+    MS. SUWAN: "You want to inhale it, then?"
     
-    NOUR: "Oh he wouldn't."
+    NOUR: "Oh, he wouldn't. No way."
     
-    MS. SUWAN: "There are many, many things I can only imagine going wrong with entrusting a kid with these."
+    MS. SUWAN: "There are <i>many</i> reasons why entrusting a child with these is a terrible idea."
     
-    NICK: "Who cares what I want to do with them? I just want to have a little fun, geez!"
+    NICK: "Who <i>cares</i> about that? I just want to have a little fun, geez!"
     
     NOUR: "NICK!"
     
-    NICK: "NOUR COME ON! It's just paint and like I said it's none of your business."
+    NICK: "<i>Please</i>...? I'll pay you back afterwards, promise!"
     
-    NOUR: "I'm going to have to agree with Ms. Suwan here. There's a reason why you have to be over 18 to purchase these."
+    NOUR: "I'm going to have to agree with Ms. Suwan here."
     
-    NICK: "Come on, <i>please</i>...? I'll pay you back afterwards, promise!"
+    NOUR: "There's a reason why you have to be over 18 to purchase these."
+
+    MS. SUWAN: "Nick, getting high is not a good path to take."
     
-    MS. SUWAN: "Nick, getting high doesn't make you look cool. It makes you look like a deadbeat addict."
+    NICK: "Sheesh, you sound like those <i>Say No To Drugs</i> assemblies we have in school."
     
-    NICK: "Sheesh, you sound like those <i>Say No To Drugs</i> assemblies we have in school every other month."
+    MS. SUWAN: "Good. That means I am saying what you need to hear."
     
-    MS. SUWAN: "Good. It means I'm saying the right things that you should listen to."
+    MS. SUWAN: "Substance abuse is addictive, and will only harm your future."
     
-    NICK: "Look, it's not a big deal! My friends do stuff like this all of the time and they're fine."
+    NICK: "But I have friends who do stuff like this all of the time, and they're fine!"
+
+    NICK: "It's not like I have a bright future, anyways. Might as well have some fun."
     
-    NICK: "And spray paint cans aren't technically, like, a real drug!"
+    NOUR: "Nick, there's plenty of other things you can do for fun."
     
-    NOUR: "Nick, there's plenty of other perfectly cool things to do out in the world that aren't as dangerous."
+    NOUR: "Things that <i>aren't</i> dangerous."
     
-    NICK: "Oh yeah? Name one thing." 
+    NICK: "Oh yeah? Name one thing."
     
-    NOUR: "You're on. Give me a bit, we can definitely find something in this mall that's cooler than this."
+    &PORTRAIT_nour_noursmile
     
-    NOUR: <i>Maybe I can introduce him to photography? That or reading, I enjoy both, so maybe he will too...</i>
+    NOUR: "You're on. Give me a bit, we can definitely find something fun to do in this mall."
     
-    NICK: "I hope that whatever you're planning to show me is EXTRA cool!"
+    &PORTRAIT_nour_nourpondering
     
-    NOUR: <i>I should lead Nick somewhere I can find a safe but fun hobby. Now where could that be in a big mall like this?</i>
+    NOUR: <i>Maybe I can introduce him to photography?</i>
     
-        &LIGHT_Nick0
+    NOUR: <i>That, or reading. I enjoy both, so maybe he will too...</i>
     
-        -> light_on
+    NICK: "I hope that whatever you're planning to show me is <i>SO</i> fun!"
+    
+    NOUR: <i>I should lead Nick somewhere that would inspire new interests.</i>
+    
+    NOUR: <i>Now where could that be in a big mall like this?</i>
+    
+    &LIGHT_Nick0
+    
+    -> light_on
 // -> END
 
 === spraycans_start_repeat ===

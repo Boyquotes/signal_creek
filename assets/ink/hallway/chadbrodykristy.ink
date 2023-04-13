@@ -26,8 +26,6 @@
     
     NOUR: "Hello... Would you guys know anything about-"
     
-
-    
     &PAUSE_1.0
     
     &EMOTE_SUWAN_UpIdle
@@ -226,7 +224,7 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: <i>I wonder if the music section in B&N has anything that would help her open up.</i>
+    NOUR: <i>I wonder if the music section in B&N has anything that would help her open up about her past.</i>
     
     -> END
 
@@ -341,6 +339,9 @@
     &FOLLOW_NICK_NOUR
 
     &LIGHT_Suwan0
+    
+    {$firstLightCharacter = "Ms. Suwan"}
+    {$firstLightPronoun = "she's"}
     
     -> light_on
 
