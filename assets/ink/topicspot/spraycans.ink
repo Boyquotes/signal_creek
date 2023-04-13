@@ -25,21 +25,27 @@ It's a bunch of spray cans.
     
     NOUR: "The spray cans?"
     
-    MS. SUWAN: "No. There are many, many things I can only imagine going wrong with entrusting a kid with these."
+    NOUR: "I didn't know you liked to spray paint."
     
-    NICK: "What's the big deal? It's just paint..."
+    NICK: "I don't..."
+
+    NOUR: "Oh...then why do you need the spray paint."
     
-    NOUR: "What do you want with spray paint cans anyways? Are you an artist?"
-    
-    NICK: "Um. Not really."
-    
-    NICK: "BUT I could be if you let me get some of them."
+    NICK: "It's like non of your business just lay off."
     
     MS. SUWAN: "You just want to huff the paint, don't you?"
     
+    NOUR: "Oh he wouldn't."
+    
+    MS. SUWAN: "There are many, many things I can only imagine going wrong with entrusting a kid with these."
+    
     NICK: "Who cares what I want to do with them? I just want to have a little fun, geez!"
     
-    NOUR: "I might have to agree with Ms. Suwan here. There's a reason why you have to be over 18 to purchase these."
+    NOUR: "NICK!"
+    
+    NICK: "NOUR COME ON! It's just paint and like I said it's none of your business."
+    
+    NOUR: "I'm going to have to agree with Ms. Suwan here. There's a reason why you have to be over 18 to purchase these."
     
     NICK: "Come on, <i>please</i>...? I'll pay you back afterwards, promise!"
     
@@ -49,11 +55,11 @@ It's a bunch of spray cans.
     
     MS. SUWAN: "Good. It means I'm saying the right things that you should listen to."
     
-    NICK: "Look, it's not a big deal! So many of my friends do stuff like this."
+    NICK: "Look, it's not a big deal! My friends do stuff like this all of the time and they're fine."
     
-    NICK: "And spray paint cans are technically, like, a real drug!"
+    NICK: "And spray paint cans aren't technically, like, a real drug!"
     
-    NOUR: "Nick, there's plenty of other perfectly cool things to do out in the world that won't get you addicted to drugs."
+    NOUR: "Nick, there's plenty of other perfectly cool things to do out in the world that aren't as dangerous."
     
     NICK: "Oh yeah? Name one thing." 
     

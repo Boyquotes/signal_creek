@@ -36,20 +36,26 @@
     
         NOUR: "My parents expected me to get the best possible exam scores. I guess if you're the only child, you have to be everything."
         
-        NICK: "Screw that. Tests are meaningless..."
+        NICK: "I don't really care about tests."
         
-        NICK: "Who's gonna care about how good I am at math when I'm thirty?"
+        NOUR: "Really?"
         
-        MS. SUWAN: "Your employers, your clients, the government..."
+        NICK: "I mean, yeah, who even cares if I know PEMDAS or the Pythagorean Theorem?"
         
-        MS. SUWAN: "You're going to have to take tests for the rest of your life. Get used to it."
+        MS SUWAN: "Your college admissions counselors."
         
-        NICK: "<i>Get used to it.</i> Well, what if I don't want to?"
+        NICK: "I'm not even thinking about college right now. I'm only 16."
         
-        MS. SUWAN: "You're not being given a choice here."
+        MS SUWAN: "You're already 16 Nick, this is the time you need to be applying yourself more if you want to get into a good college."
         
-        NICK: "...I hate this."
+        NICK: "But I want to have fun, you know, while I can."
         
+        MS SUWAN: "If you have fun now, you're gonna struggle later."
+        
+        NICK: "But I don't want to live that way."
+        
+        MS. SUWAN: "Well you're not being given a choice here."
+
         NOUR: <i>Things are getting a little bit heated. I should try to change the subject.</i>
     
     * "Look at this, Nick... <i>How to Draw Manga Characters</i>!"
@@ -62,13 +68,11 @@
     
         - NICK: "I don't know. I'm not really good at art and stuff."
         
-        MS. SUWAN: "This would make for a pretty impractical hobby."
-        
-        MS. SUWAN: "You should focus on something that could benefit your future more."
+        MS. SUWAN: "I think Nick should focus on finding a hobby that could benefit his future."
         
         NOUR: "Well, a hobby is something you <i>enjoy</i>, not necessarily—"
         
-        NICK: "This hobby needs talent <i>and</i> is useless?"
+        NICK: "This hobby needs talent <i>and</i> and doesn't benefit my future?"
         
         NICK: "Not interested."
     
@@ -96,9 +100,9 @@
         
         MS. SUWAN: "Taking that extra step ensures that you excel at what you do. This could be something."
         
-        NICK: "No way! I know myself better than anyone—this stuff's boring and lame."
+        NICK: "But I don't want to force myself to like something I don't yet. That's not how you pick up interests."
         
-        NICK: "...And I wouldn't understand it, no matter how hard I tried."
+        NICK: "...And either way I wouldn't understand it, no matter how hard I tried."
     
     - NOUR: "What about..."
     
@@ -128,11 +132,13 @@
     
     NICK: "Whatever happened to having a life?"
     
-    MS. SUWAN: "I hope you know that was incredibly rude."
+    MS. SUWAN: "That was incredibly rude Nick."
     
-    MS. SUWAN: "I have a life. It's <i>you</i> that doesn't have one because you keep avoiding any means to build one."
+    MS. SUWAN: "I do have a life. A life I worked tooth and nail to earn meanwhile someone else got it handed to them on a silver plate."
     
-    MS. SUWAN: "You can't stay a child forever, Nick."
+    MS SUWAN: "What you can't realize Nick is that it's a privilege to even get the opportunity to learn new things without constant worry about things outside of your control."
+    
+     NICK: "I just don't see why I need to waste all of my time and energy on learning right now. I'm suppose to be having fun before I have to start worrying about adult problems."
     
         * "Making the real world seem bleak won't help anyone.["] You can have fun practicing your skills, and it may even lead you somewhere in life."
         

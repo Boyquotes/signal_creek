@@ -1,3 +1,4 @@
+
 == aplequestguide ==
 
 A tutorial guide to an old fantasy videogame called <i>"Aple Quest: The Space Prince Returns"</i>. 
@@ -43,7 +44,6 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest: The Space Pr
             NICK: "Space exploration in America and the fear of the unknown, competition with rising nations—all of it inspired the game!"
             
             NICK: "Intergalactic political coups and unstable regimes are why the Aple Prince is stranded on Earth!"
-            
             MS. SUWAN: "...Interesting."
     
         * [Read the publishing page]
@@ -124,49 +124,52 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest: The Space Pr
     
     NICK: "The organization of this section <i>stinks</i>. None of it makes sense!"
     
-    NOUR: "Uh. Wow, Nick...you know a LOT about this game."
+    MS SUWAN: "Uh. Wow, Nick...you know a LOT about this game. Is this all you do in your free time?"
     
-    NICK: "Stupid, right?"
+    NICK: "I just really like this game."
     
-    NOUR: "That's not true. It takes a lot of smarts to learn all of—"
+    NOUR: "It seems really cool Nick, I'll definitely check it out when we get back."
     
-    NICK: "Bet the lawyer thinks it was a big waste of my time, too."
+    MS SUWAN: "Maybe you should spend a little less time playing kid games and focus more on your future now that you're 16." 
     
-    MS. SUWAN: "..."
+    NICK: "This isn't a little kid game it actually has a large following of all age groups."
     
-    NICK: "I can't help that I like to waste what little brains I got on stupid stuff."
+    MS SUWAN: "I just think kids these days get too caught up in video games and aren't contributing enough to things that will matter later on. That's all."
     
-    NICK: "I wasn't born the right kind of nerd."
+    NOUR: "But you obviously played games when you were Nick's age right?"
     
-    MS. SUWAN: "People aren't born and stuck one way forever, Nick. You need to start applying yourself more."
-
-    MS. SUWAN: "Stop expecting things to just be placed in your lap."
+    MS SUWAN: "When I was his age I was already working to help my family, I didn't have time to play games."
     
-    NICK: "People expect me to do everything! You <i>DON'T</i> know my story!"
+    NICK: "But that's you! You <i>DON'T</i> even know my story!"
     
-    NICK: "I'm so TIRED of people saying I'm lazy."
+    NOUR: "Nick let's calm down a little."
     
-    * "We're just trying to help..."
+    NICK: "NO I'm so TIRED of people saying I'm lazy or comparing me to themselves or their friends or their relatives."
     
-    * "You don't even want to look at one of these books?"
+    NICK: "Like I get it. I'm not <i>perfect</i> but that doesn't make mean I'm not trying my best.
     
-    * "Tell us your story, then. Tell us your side of things."
+    NOUR: 
+        * "No one is saying that"
     
-    - NICK: "I DON'T WANT YOUR HELP."
+        * "We're not judging you Nick."
+    
+        * "You're overreacting."
+    
+    - NICK: "I DON'T CARE IT'S WHAT YOU'RE THINKING!"
     
     Nick averts Nour's gaze, visibly restraining himself.
     
-    * ["Why does studying make you so upset?"]
+    * ["We're here for you"]
     
-        NOUR: "Why do-"
+        NOUR: "We're her-"
     
     * ["What do you want us to do for you?"]
     
         NOUR: "What do you-"
         
-    * ["I didn't mean to upset you..."]
+    * ["We didn't mean to upset you..."]
     
-        NOUR: "I didn't mean-"
+        NOUR: "We didn't mean-"
         
     - Nick throws up his middle finger.
     
@@ -180,7 +183,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest: The Space Pr
     
     NOUR: <i>Is that a price tag on the end of it?</i>
     
-    MS. SUWAN: "...Well, isn't that nice."
+    MS. SUWAN: "...Well, isn't this just nice."
     
         * "Ms. Suwan, do you recognize that bracelet?"
         
@@ -192,21 +195,23 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest: The Space Pr
     
     - Nick quickly retracts his hand, hiding it behind his back.
     
-    MS. SUWAN: "Suspicious. If you had gotten that bracelet through innocent means, why hide your hand now?"
+    MS. SUWAN: "Funny you want to talk about maturity when you're wearing a bracelet that you weren't wearing before."
     
-        * "Did you steal the bracelet, Nick?"
+    NOUR: "Lay off him for a sec."
+    
+        * "Nick, be honest, did you steal that bracelet?"
         
-        * "You should probably put that back, Nick."
+        * "Why did you steal the bracelet Nick?"
     
     - NICK: "I'm not talking to you two anymore. All you do is talk down to me."
     
-        * "Please, we just want you to do the right thing..."
+        * "We just want to know the truth..."
         
         * "All you need to do is return the bracelet..."
     
     - Nick shakes his head.
 
-    NOUR: "C'mon, Nick. We didn't mean it that way."
+    NOUR: "C'mon, Nick. We're not judging you we just want to understand why you're acting like this."
     
     Nick remains silent.
     
@@ -233,20 +238,20 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest: The Space Pr
     -> light_on
     
 === aplequestguide1_repeat ===
-    NOUR: <i>How can I get Nick to talk again?</i>
+    NOUR: <i>I need to get Nick to trust me again but how?</i>
     
-    NOUR: <i>Everything in the bookstore made him more upset, so I should find a different thing to prove he's smart.</i>
+    NOUR: <i>He won't even look at these books anymore.</i>
     
-    NOUR: <i>...He did know an awful lot about that videogame, even if we just read about it.</i>
+    NOUR: <i>...He did know an awful lot about that video game.</i>
     
-    NOUR: <i>Instead of reading about it, we could play it instead to help him realize he isn't dumb and is allowed to enjoy the things he likes.</i>
+    NOUR: <i> Maybe I could convince him to play the game with me. Maybe I could even get Suwan to join us. We really need to get along if we're gonna find a way out of here.</i>
     
         -> END
         
 === aplequestguide_after_start_aplequest ===
     NOUR: <i>Nick said this was useless before. I should try searching the hallway myself and not rely on this guide.</i>
     
-    NOUR: <i>If I ever need to keep track of how many apples I've found so far, I can always talk to Emperor Evercrisp back at the TopicSpot consoles.</i>
+    NOUR: <i>If I ever need to keep track of how many apples I've found so far, I can always talk to Emperor Gala back at the TopicSpot consoles.</i>
     
         -> END
 
