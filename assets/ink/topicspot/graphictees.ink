@@ -1,15 +1,31 @@
 == graphictees ==
+
+    {- !graphictees_convo: -> graphictees_convo}
     
-    The rack of tees are covered with graphic iconography and strong slogans, like pride flags in eye-catching patterns. One of them proudly calls to "legalize weed". Some of them are purposefully holey. Even so, they are all designed appealingly. 
+    The rack of tees are covered with iconic designs, from pride flags to words "legalize weed". 
     
-    MS. SUWAN: I can't see myself wearing any of these.
+    Some shirts are noticeably more holey than others. 
     
-    Even so, there's an amused glint in her eye as she continues to peruse the rack.
+    Perhaps this is... fashion?
     
-    MS. SUWAN: I suppose it all comes from my teenage years... That's when I developed a habit of choosing safety in dull clothes.
+        -> END
     
-    NICK: Y'know, I think they're kinda cool!
+=== graphictees_convo ===
     
-    MS. SUWAN: Cool, maybe. Bold, definitely.
+    Ms. Suwan studies all the shirts carefully. 
+    
+    MS. SUWAN: "I can't see myself wearing any of these."
+    
+    Ms. Suwan continues to pay an strange amount of attention to the shirts.
+    
+    MS. SUWAN: "Though, if I were younger... I suppose I could see something here taking up space in my closet." 
+    
+    NOUR: "Oh, really?"
+    
+    MS. SUWAN: "It was a time before I developed a habit of choosing safety in dull clothes."
+    
+    NICK: "Y'know, I think they're kinda cool! They make a <i>statement</i>."
+    
+    MS. SUWAN: "Definitely."
     
     -> END

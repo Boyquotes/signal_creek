@@ -31,25 +31,29 @@
     
     // NOUR WALKS FORWARD AND TAKES RECORD FROM THE MUSIC STAND, THEN TURNS AROUND TOWARDS MS SUWAN, HOLDING IT UP.
     
+    NOUR: "Have you heard of this album, then?"
+    
     Nour raises the record of <i>Actually, I Do Mind</i> up to show Ms. Suwan. 
     
-    NOUR: "Have you heard of this album, then? I used to listen to Paradise all the time when I was younger. They're a rock band, aren't they?"
+    NOUR: "I used to listen to Paradise all the time when I was younger."
     
-    MS. SUWAN: "... Yes, actually I have. I remember that one. Good album."
+    MS. SUWAN: "...Yes. I remember that one. Good album."
     
-    NICK: "You listen to rock?" // (SHOCKED)
+    NICK: "You listen to <i>rock</i>?" // (SHOCKED)
     
     MS. SUWAN: "Yes. Well... used to."
     
-    NOUR: "Oh...that's, wow!" // (SHOCKED)
+    &PORTRAIT_nour_nourshocked
+    
+    NOUR: "Oh... that's, wow!"
     
     MS. SUWAN: "Why are you looking at me like that?" // (FROWNING)
     
     NOUR: "Uh, well..."
         
-        * [Tell her it's unexpected]
+        * "I didn't expect you to listen to a rock band."
             
-            NOUR: "I'll be honest, I didn't expect you to listen to a rock band. You don't really seem like the type - no offense." 
+            NOUR: "You don't really seem like the type - no offense." 
             
             MS. SUWAN: "I was very different back then."
             
@@ -59,12 +63,11 @@
             
             NOUR: <i>She looks a little uncomfortable.</i>
         
-        * [Hide the surprise]
-            NOUR: "It's nothing. I wasn't going to say anything—"
-            
+        * "It's nothing. I wasn't going to say anything—"
+        
             MS. SUWAN: "You were going to say that I don't seem like the type, right?"
     
-            NOUR: "Um...yeah. Sorry." // (EMBARASSED)
+            NOUR: "Um... yeah. Sorry." // (EMBARASSED)
             
             MS. SUWAN: "Well, I don't anymore, so you aren't entirely incorrect. It was a distraction, so I stopped."
             

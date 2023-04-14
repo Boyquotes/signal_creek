@@ -24,17 +24,23 @@
     //they walk down 
     //elevator door CLOSES
     
-    NOUR: "Ugh... I feel sick."
-    
-    &ELEVATOR_SHUT
-    
     &FOLLOW_NICK_NickOutElevatorPos
     
     &FOLLOW_NOUR_NourOutElevatorPos
     
     &FOLLOW_SUWAN_SuwanOutElevatorPos
     
-    NICK: "Whoa, this is crazy..! Are you seeing what I'm seeing?"
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: "Ugh... I feel sick."
+    
+    &PAUSE_0.5
+    
+    &ELEVATOR_SHUT
+    
+    NICK: "Woah, this is crazy! Are you seeing what I'm seeing?"
+    
+    &PORTRAIT_nour_nourpondering
     
     NOUR: "This... this is one of the floors of the mall, isn't it? The top floor?"
     
@@ -48,7 +54,9 @@
     
     &FOLLOW_SUWAN_SuwanPhonePos
     
-    MS. SUWAN: "This floor should have been shut down <i>months</i> ago. There shouldn't even be electricity."
+    MS. SUWAN: "This floor was shut down <i>months</i> ago. There shouldn't even be electricity."
+    
+    &PORTRAIT_nour_nournervous
     
     NOUR: "We're in a place that shouldn't exist!?"
     
@@ -64,23 +72,27 @@
     
     MS. SUWAN: "I have to call one of my higher-ups about this."
     
-    MS SUWAN BEEP BOOPS HER PHONE
+    Ms. Suwan checks her phone in an attempt to find a connection.
     
-    MS. SUWAN: "Hmm. No signal and no WiFi." (CONCERN)
+    &PORTRAIT_ms. suwan_suwannervous
     
-    NICK BEEP BOOPS HIS PHONE
+    MS. SUWAN: "Hmm. No signal and no WiFi."
+    
+    Nick pulls out his phone, then frantically taps on the screen.
     
     &EMOTE_NICK_RightIdle
     
-    NICK: "Aw, man. Same! I can't play any of my phone games..." (POUTING)
+    &PORTRAIT_nick_nickshadow
+    
+    NICK: "Aw, man. Same! I can't play any of my phone games..."
     
     &MOV_RINA_START
     
-    RINA: "..."
-    
-    A petite girl with olive skin and dyed strawberry hair appears before the group.
+    RINA: A petite girl with olive skin and dyed strawberry hair appears before the group.
     
     Her entire body is still, like a mannequin. A lifelike, breathing mannequin.
+    
+    &PORTRAIT_nick_nicknervous
     
     NICK: "<i>WHAT THE-</i>"
     
@@ -88,15 +100,19 @@
     
     &EMOTE_NOUR_UpIdle
     
-    NOUR: "..." (SHOCKED)
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "..."
     
     MS. SUWAN: "You're not supposed to be here, young lady."
     
-    NICK: "Hey, did you miss the part where she <i>magically appeared in front of us!</i>?"
+    NICK: "Hey, did you miss the part where she <i>magically</i> appeared in front of us!?"
     
-    MS. SUWAN: "Magic? Stop messing around, boy."
+    MS. SUWAN: "Magic? Stop messing around, little boy."
     
-    NOUR: <i>...Rina?</i> (SHOCKED)
+    NOUR: <i>...Rina?</i>
+    
+    &PORTRAIT_nick_nickworried
     
     NICK: "Hey, uh... Nour? You know her?"
         
@@ -114,37 +130,58 @@
 
     &ALLOFF
     
+    &PAUSE_1.0
+    
+    RINA: "You have trapped yourselves in your pasts."
+    
+    RINA: "It's up to you to move on."
+    
+    &PAUSE_1.0
+    
     &MOV_RINA_BANDN
     
-    NOUR: "..." (NERVOUS)
+    NOUR: "..."
     
-    NICK: "Guess she didn't wanna talk, huh."
+    NICK: "Uh, where'd she go??"
+    
+    NICK: "And what the heck was she talking about?"
     
     &EMOTE_NICK_UpIdle
     
-    NICK: "And... those weird lights are off now."
+    NICK: "...Well, looks like she turned off those weird lights."
     
     &EMOTE_NICK_RightIdle
     
-    MS. SUWAN: "We must be hallucinating. That’s the only explanation I can think of to describe… whatever it is that we’re seeing."
+    MS. SUWAN: "We must be hallucinating. That’s the only explanation I can think of to describe…"
+    
+    MS. SUWAN: "...Whatever it is that we are seeing."
     
         * [Agree with her]
-            NOUR: "Maybe we hit our heads somewhere... or a potential gas leak?"
+            NOUR: "Maybe we hit our heads somewhere... Or a potential gas leak?"
             
             MS. SUWAN: "That <i>would</i> be somewhat realistic. I want to agree, but..."
             
-            MS. SUWAN: "This place would have been closed off <i>much</i> more securely if there was any danger. It would've been reported to me, too."
+            MS. SUWAN: "This place would have been closed off more securely if there were any danger."
+            
+            MS. SUWAN: "It would have been reported to me, as well."
             
             NICK: "I don't remember us hitting our heads anywhere, either!"
             
-            NOUR: "Well you don't really <i>remember</i> passing out."
+            &PORTRAIT_nour_nourannoyed
             
-            NICK: "... alright, fair." 
+            NOUR: "Well people don't really <i>remember</i> passing out."
+            
+            NICK: "...Alright, fair." 
             
         * [Lighten the mood]
+        
             NOUR: "Maybe this is all just a dream..."
             
+            &PORTRAIT_nick_nickbigsmile
+            
             NICK: "Haha! Maybe none of us are even real. Ooo~!"
+            
+            &PORTRAIT_nick_nickneutral
             
             NOUR: "Or drugs? This could be a really, really weird trip!"
             
@@ -171,7 +208,11 @@
     
     &EMOTE_NOUR_UpIdle
     
-    NOUR: "The elevator is closed, though, and it doesn't look like the doors will budge either."
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: "The elevator is closed, though."
+    
+    NOUR: "And it doesn't look like the doors will budge either."
     
     &EMOTE_SUWAN_UpIdle
     
@@ -179,39 +220,45 @@
     
     MS. SUWAN: "Then I'll just press the—"
     
-    
-    
-    // &EMOTE_SUWAN_UpIdle
-    
     &EMOTE_NICK_ButtonPress
+    
+    &PORTRAIT_nick_nickworried
     
     NICK: "Hey, the buttons for the elevator are missing!"
     
-    // &EMOTE_NICK_UpIdle
-    
-    // &EMOTE_NOUR_UpIdle
+    &PORTRAIT_nour_nourneutral
 
-
+    NOUR: "No use in waiting for an elevator that won't work."
     
-    NOUR: "No use in waiting for an elevator that won't work. We should try to find a way out of here."
+    NOUR: "We should try to find a way out of here."
     
     &EMOTE_NICK_DownIdle
     
-    NICK: "Well... while we're at it, since we're already here, I wanna see if they still have games in the TopicSpot!"
+    &PORTRAIT_nick_nickneutral
+    
+    NICK: "Well... while we're at it, and since we're already here..."
+    
+    NICK: "I wanna see if they still have games in the TopicSpot!"
     
     MS. SUWAN: "<i>That's</i> what you are worried about right now?"
     
     NOUR: "It's a start. Who knows, maybe we'll be able to ask someone for help there."
+    
+    Nour hesitates. Nick and Ms. Suwan look at her, expectedly.
+    
+    NOUR: <i>How was Rina even here...?</i>
+    
+    NOUR: <i>And she said we TRAPPED OURSELVES in the past?</i>
+    
+    NOUR: <i>What is there to move on from?</i>
+    
+    NOUR: <i>...Was that even really her?</i>
     
     &FOLLOW_NICK_NOUR
     
     &FOLLOW_SUWAN_NOUR
     
     &FOLLOW_NOUR_stop
-    
-    // ->END
-
-   
     
     -> END
     
