@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
@@ -20,6 +20,10 @@
 [ext_resource path="res://assets/sprites/characters/portraits/grandduchessgranny/portrait_grannyneutral.tres" type="Texture" id=18]
 [ext_resource path="res://assets/sprites/characters/portraits/chadbrodykristy/portrait_kristyneutral.tres" type="Texture" id=19]
 [ext_resource path="res://assets/sprites/characters/portraits/manager/portrait_manager_managerneutral.tres" type="Texture" id=20]
+[ext_resource path="res://assets/sprites/characters/portraits/earlearligold/portrait_earlearligoldneutral.tres" type="Texture" id=21]
+[ext_resource path="res://assets/sprites/characters/portraits/emperorevercrisp/portrait_emperorevercrispneutral.tres" type="Texture" id=22]
+[ext_resource path="res://assets/sprites/characters/portraits/dukedelicious/portrait_dukedeliciousneutral.tres" type="Texture" id=23]
+[ext_resource path="res://assets/sprites/characters/portraits/fatherfuji/portrait_fatherfujineutral.tres" type="Texture" id=24]
 
 [sub_resource type="Animation" id=3]
 resource_name = "CanProceed"
@@ -222,10 +226,10 @@ characterPortraits = {
 "???": ExtResource( 17 ),
 "brody": ExtResource( 11 ),
 "chad": ExtResource( 11 ),
-"duke delicious": ExtResource( 11 ),
-"earl earligold": ExtResource( 11 ),
-"emperor evercrisp": ExtResource( 11 ),
-"father fuji": ExtResource( 11 ),
+"duke delicious": ExtResource( 23 ),
+"earl earligold": ExtResource( 21 ),
+"emperor evercrisp": ExtResource( 22 ),
+"father fuji": ExtResource( 24 ),
 "grand duchess granny": ExtResource( 18 ),
 "kristy": ExtResource( 19 ),
 "manager": ExtResource( 20 ),
