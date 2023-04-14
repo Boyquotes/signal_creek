@@ -51,6 +51,8 @@
     
     NOUR: "...Uh-"
     
+    &PORTRAIT_prince pendragon_princependragonsad
+    
     PRINCE PENDRAGON: "<i>FALLEN</i>, I say! Fallen from the Mother Tree, fallen from the sky, fallen from grace..."
     
     PRINCE PENDRAGON: "...onto this floor."
@@ -187,6 +189,8 @@
     
     NICK: "Remember when you used your observation skills to figure out the Cornling's battle strategy?"
     
+    &PORTRAIT_prince pendragon_princependragonneutral
+    
     PRINCE PENDRAGON: "Ah, yes... I studied Cornlings for <i>months</i>..."
     
     NICK: "And you were able to help the Bean Boys get their town back from the Cornling army."
@@ -227,6 +231,8 @@
     
     PRINCE PENDRAGON: "How could I have forgotten... The very reason I fight?"
     
+    &PORTRAIT_prince pendragon_princependragonneutral
+    
     PRINCE PENDRAGON: "I can't afford to wallow in self-pity! The people need me."
     
     PRINCE PENDRAGON: "My... My <i>family</i> needs me!"
@@ -263,11 +269,15 @@
     
     PRINCE PENDRAGON: "I will never forget you, human! From my core, THANK YOU!"
     
+    &PORTRAIT_prince pendragon_princependragonneutral
+    
     PRINCE PENDRAGON: "And from one Prince to another..."
     
     PRINCE PENDRAGON: "I also hope you find your way and choose to believe in yourself!"
     
     NICK: "...!"
+    
+    &PORTRAIT_prince pendragon_princependragonsmile
     
     PRINCE PENDRAGON: "I am ready to be sent away now! FAREWELL! HOO HOO!!!"
     

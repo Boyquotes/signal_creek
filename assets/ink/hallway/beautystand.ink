@@ -39,7 +39,9 @@
 
     NOUR: <i>We've already looked at the beauty booth before.</i>
 
-    NOUR: <i>But seeing that apple lady (?) somehow makes me feel better.</i> (SMILE)
+    &PORTRAIT_nour_noursmile
+
+    NOUR: <i>But seeing that apple lady (?) somehow makes me feel better.</i>
      -> END
 
 == beautystand_find_pinklady ==
@@ -287,6 +289,8 @@
     PRINCESS PINK LADY: "He took it quite to heart and must be hiding. How much his confidence must've suffered!"
     
     PRINCESS PINK LADY: "When you find him, please tell him that he is smarter and better than he thinks he is, hee hee!"
+    
+    &PORTRAIT_nour_noursmile
     
     NOUR: "Will do, Princess."
     

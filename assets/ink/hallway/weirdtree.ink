@@ -249,7 +249,7 @@
     
     NICK: Nick nods his head.
     
-    GRAND DUCHES GRANNY: "AH, yes! And one last thing..."
+    GRAND DUCHESS GRANNY: "AH, yes! And one last thing..."
     
     GRAND DUCHESS GRANNY: "A parting gift! Some old wisdom from Granny..."
     

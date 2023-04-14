@@ -90,7 +90,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
             
             NICK: "And the game mechanics are innovative for its time."
             
-            NICK: "Second, APLE is actually an acrony."
+            NICK: "Second, APLE is actually an acronym."
             
             NICK: "It stands for <i>Apple Prince Leaves Earth</i>. That's the whole basis of the game."
             
@@ -302,7 +302,8 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     -> light_on
     
-=== aplequestguide1_repeat ===
+== aplequestguide1_repeat ==
+
     NOUR: <i>I need to get Nick to trust me again but how?</i>
     
     NOUR: <i>He won't even look at these books anymore.</i>
@@ -313,7 +314,8 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
         -> END
         
-=== aplequestguide_after_start_aplequest ===
+== aplequestguide_after_start_aplequest ==
+
     NOUR: <i>Nick said this was useless before. I should try searching the hallway myself and not rely on this guide.</i>
     
     NOUR: <i>If I ever need to keep track of how many apples I've found so far, I can always talk to Emperor Gala back at the TopicSpot consoles.</i>

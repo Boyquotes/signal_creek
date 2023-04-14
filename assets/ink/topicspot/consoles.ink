@@ -35,8 +35,6 @@
     NICK: "Man, I can't believe it's here in its original retro console!"
     
         * "You wanna give it a go?"
-        
-            NOUR: "You wanna give it a go?"
             
                 &PORTRAIT_nick_nickworried
             
@@ -136,7 +134,7 @@
     
     &SHLORP_poop_EmperorEvercrisp_in
     
-    &PORTRAIT_???_emperorevercrispsmile
+        &PORTRAIT_???_emperorevercrispsmile
     
     ???: "NEVER GIVE UP!!!"
     
@@ -213,8 +211,6 @@
         * "Not really..."
         
                 &PORTRAIT_nour_nourannoyed
-                
-            NOUR: "Um, not really."
             
             EMPEROR EVERCRISP: "HO HO! EXCELLENT—"
             
@@ -331,9 +327,11 @@
     
     NICK: Nick remains silent and turned away from the console. 
     
-        * Pick up the controller and play
+        * "I'm gonna play."
     
-    -     &PORTRAIT_nour_nourneutral
+    - Nour picks up the game controller.
+    
+    &PORTRAIT_nour_nourneutral
     
     NOUR: "Even if you don't want to play, <i>I</i> still want to know what this ending is all about."
     
@@ -571,7 +569,9 @@
             
             NICK: "I've always wanted to dedicate more time to it."
         
-        * "I'm sorry that it's been so hard for you... but acting out isn't going to make it better.["] If you keep doing this, then you'll never be able to truly get into the thing you love."
+        * "I'm sorry that it's been so hard for you... but acting out isn't going to make it better."
+        
+            NOUR: "If you keep doing this, then you'll never be able to truly get into the thing you love."
         
                 &PORTRAIT_nick_nicksad
         
@@ -626,6 +626,8 @@
     &MOV_RINA_TOPICSPOT
     
         &PORTRAIT_nick_nickshocked
+        
+    &PAUSE_0.5
     
     NICK: "AGH, she's here! What does she want now?"
     
