@@ -76,7 +76,9 @@
         
             NOUR: "... Maybe."
     
-    - MS. SUWAN: "Hm... well, I will have to report this to my higher ups, then. Maybe all of this is someone's secret hide out..." // (SQUINTING)
+    - MS. SUWAN: "Hm... well, I will have to report this to my higher ups, then."
+    
+    MS. SUWAN: "Maybe all of this is someone's secret hide out..." // (SQUINTING)
     
     NOUR: "What a comforting thought." // (NERVOUS)
     
@@ -94,7 +96,7 @@
     
         * "I don't want to talk about it."
         
-            MS. SUWAN: "... You're not giving me any reason to believe you aren't hiding something, young lady."
+            MS. SUWAN: "...You're not giving me any reason to believe you aren't hiding something, young lady."
         
             NOUR: "W-well then think whatever you want! I don't want to talk about it." // (ANGRY)
     
@@ -104,7 +106,7 @@
             
             // MS SUWAN WALKS FORWARD TOWARDS THE POLAROID CAMERA AND PUTS THE PHOTO DOWN
         
-            MS. SUWAN: "You're going to have to face up to whatever happened sooner or later."
+            MS. SUWAN: "You will have to face up to whatever happened sooner or later."
         
             NOUR: "Hmph. I don't see <i>why</i> when I didn't do anything wrong... Whatever. Let's go." // (ANGRY)
         
