@@ -14,6 +14,8 @@
     
     NICK: “HURRY UP, NOUR! There's no way she'll find us if we hide in here!"
     
+    &SOUND_poopman
+    
     &PAUSE_0.5
     
     &EMOTE_NICK_DownIdle
