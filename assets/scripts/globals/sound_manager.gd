@@ -62,8 +62,9 @@ func _process(_delta):
 
 
 func play_sound(audioName: String) -> void:
-	sound_player.stream = sound_effects.get(audioName)
-	sound_player.play()
+	if sound_effects.get(audioName) != null:
+		sound_player.stream = sound_effects.get(audioName)
+		sound_player.play()
 
 func play_sound_ui(audioName: String) -> void:
 	ui_sound_player.stream = sound_effects.get(audioName)
