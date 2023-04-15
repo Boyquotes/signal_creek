@@ -264,6 +264,8 @@
     
     NOUR: "Even if you know there's nothing you can do to change it."
     
+    &PORTRAIT_nour_nourneutral
+    
     NOUR: "I promise you, carrying this with you and bottling it up will only hurt you more."
     
     NOUR: "Hurt <i>us</i> more." // (SAD)
@@ -307,11 +309,11 @@
     
     MS. SUWAN: "Why are we here again?" // (ANGRY)
     
-    NOUR: "You know, I used to listen to Paradise with my ex-friend, too.</i>
+    NOUR: "You know, I used to listen to Paradise with my ex-friend, too."
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>Sometimes it hurts to listen to, which is why I hadn't played it in so long." // (SAD)
+    NOUR: "Sometimes it hurts to listen to, which is why I hadn't played it in so long." // (SAD)
     
     MS. SUWAN: "..."
     

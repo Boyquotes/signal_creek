@@ -269,7 +269,6 @@
     
     ???: "Oh, ye of little faith!"
     
-    
     ???: "If you look down on different kinds of problem-solving, serious <i>or</i> not, you lock more doors than you open!"
     
     NOUR: "We've been searching for missing apples on behalf of the Emperor."
@@ -284,7 +283,7 @@
 
     PRINCESS PINK LADY: "Oh, he must still be sulking over his father sending him down here."
     
-    &PORTRAIT_princess pink lady_pinkladysad
+    &PORTRAIT_princess pink lady_pinkladyneutral
     
     PRINCESS PINK LADY: "He took it quite to heart and must be hiding. How much his confidence must've suffered!"
     
@@ -299,6 +298,8 @@
     PRINCESS PINK LADY: "[insert epic lore drop here]"
     
     PRINCESS PINK LADY: "I must be on my way. Will you send me back now?"
+    
+    &PORTRAIT_princess pink lady_pinkladysmile
     
     NOUR: "Yes. Thank you for your help, though I don't know if I fully understood it..."
     

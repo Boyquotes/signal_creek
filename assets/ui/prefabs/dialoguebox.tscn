@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
@@ -24,6 +24,9 @@
 [ext_resource path="res://assets/sprites/characters/portraits/emperorevercrisp/portrait_emperorevercrispneutral.tres" type="Texture" id=22]
 [ext_resource path="res://assets/sprites/characters/portraits/dukedelicious/portrait_dukedeliciousneutral.tres" type="Texture" id=23]
 [ext_resource path="res://assets/sprites/characters/portraits/fatherfuji/portrait_fatherfujineutral.tres" type="Texture" id=24]
+[ext_resource path="res://assets/sprites/characters/portraits/chadbrodykristy/portrait_brodyneutral.tres" type="Texture" id=25]
+[ext_resource path="res://assets/sprites/characters/portraits/chadbrodykristy/portrait_chadneutral.tres" type="Texture" id=26]
+[ext_resource path="res://assets/sprites/characters/portraits/princesspinklady/portrait_pinkladyneutral.tres" type="Texture" id=27]
 
 [sub_resource type="Animation" id=3]
 resource_name = "CanProceed"
@@ -212,9 +215,10 @@ characterColors = {
 "emperor evercrisp": Color( 0.701961, 0.239216, 1, 1 ),
 "father fuji": Color( 1, 0.843137, 0.45098, 1 ),
 "grand duchess granny": Color( 0.835294, 1, 0.278431, 1 ),
+"kannika": Color( 0.380392, 0.670588, 1, 1 ),
 "kristy": Color( 0.788235, 0.34902, 1, 1 ),
 "manager": Color( 1, 0.407843, 0.407843, 1 ),
-"ms. suwan": Color( 0.38, 0.67, 1, 1 ),
+"ms. suwan": Color( 0.380392, 0.670588, 1, 1 ),
 "nick": Color( 0.88, 0.78, 0.38, 1 ),
 "nour": Color( 0.78, 0.38, 0.38, 1 ),
 "prince pendragon": Color( 1, 0.282353, 0.52549, 1 ),
@@ -224,13 +228,14 @@ characterColors = {
 }
 characterPortraits = {
 "???": ExtResource( 17 ),
-"brody": ExtResource( 11 ),
-"chad": ExtResource( 11 ),
+"brody": ExtResource( 25 ),
+"chad": ExtResource( 26 ),
 "duke delicious": ExtResource( 23 ),
 "earl earligold": ExtResource( 21 ),
 "emperor evercrisp": ExtResource( 22 ),
 "father fuji": ExtResource( 24 ),
 "grand duchess granny": ExtResource( 18 ),
+"kannika": ExtResource( 3 ),
 "kristy": ExtResource( 19 ),
 "manager": ExtResource( 20 ),
 "ms. suwan": ExtResource( 3 ),
@@ -238,6 +243,6 @@ characterPortraits = {
 "nour": ExtResource( 8 ),
 "placeholder": ExtResource( 11 ),
 "prince pendragon": ExtResource( 16 ),
-"princess pink lady": ExtResource( 11 ),
+"princess pink lady": ExtResource( 27 ),
 "rina": ExtResource( 12 )
 }

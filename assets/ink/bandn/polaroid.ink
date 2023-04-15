@@ -1,4 +1,6 @@
 == polaroid ==
+
+    A Polaroid One Step camera sits inside a glass case.
     
     { -!polaroid_first_visit:
         -> polaroid_first_visit
@@ -13,7 +15,7 @@
     
 == polaroid_first_visit ==
     
-    A Polaroid One Step camera sits inside a glass case. It's surrounded by a bunch of film photographs of two girls. 
+    It's surrounded by a bunch of film photographs of two girls. 
     
     One of them sits on the floor outside of the case. 
     
@@ -27,7 +29,9 @@
     
     NOUR: "... I'm not sure, but probably not <i>my</i> camera... that would be impossible... right?"
     
-    NICK: "Right. Entirely impossible... just like us being in a place that shouldn't exist."
+    NICK: "Right. Entirely impossible..."
+    
+    NICK: "Just like us being in a place that shouldn't exist."
     
     NOUR: "..." // (ANGRY)
     
@@ -44,7 +48,9 @@
     MS. SUWAN: "This is you, isn't it? Why are there photos of you in the mall here? "
     
         * "I don't know..." // (NERVOUS)
-            MS. SUWAN: "Are you sure? Did you put them here? Are you trying to prank us, young lady?" // (ANGRY)
+            MS. SUWAN: "Are you sure? Did you put them here?"
+            
+            MS. SUWAN: "Are you trying to prank us, young lady?" // (ANGRY)
         
             NOUR: "No! I really don't know, ma'am! I haven't been here before this is the first time, I swear!" // (SHOCKED)
         
@@ -76,7 +82,9 @@
     
     MS. SUWAN: "Ah. My apologies. I'm sure it's nothing, forgive me..."
     
-    MS. SUWAN: "... Who's that you're with, then? In the photos? I can't quite make out their face... it seems these are very worn."
+    MS. SUWAN: "... Who's that you're with, then? In the photos?"
+    
+    MS. SUWAN: "I can't quite make out their face... It seems these are very worn."
     
     NOUR: "Or its magic hiding them! Can I see?" // (HAPPY)
     
@@ -85,6 +93,7 @@
     MS. SUWAN: "No. Nour?" 
     
         * "I don't want to talk about it."
+        
             MS. SUWAN: "... You're not giving me any reason to believe you aren't hiding something, young lady."
         
             NOUR: "W-well then think whatever you want! I don't want to talk about it." // (ANGRY)
@@ -105,27 +114,29 @@
         
             NICK: "I think she did something she's not happy about." 
         
-            MS. SUWAN: "We've all done things that might have been in poor judgement, that doesn't mean we should hide it... But let's keep looking around for now, until she's ready to talk about it."
+            MS. SUWAN: "We've all done things that might have been in poor judgement, that doesn't mean we should hide it..."
+            
+            MS. SUWAN: "But let's keep looking around for now, until she's ready to talk about it."
         
             NOUR: "I can <i>hear</i> you, y'know." // (ANGRY)
         
             NICK: "No you can't! I'm whispering! It's rude to listen on to someone whispering!" // (ANGRY)
-        
-            &MOV_RINA_BANDN
-        
-            NOUR: <i>She's... here? Again?</i> // (SHOCKED)
-        
-            NOUR: <i>I better tell her to get out of our way.</i> // (ANGRY)
-        
-            -> END
+            
         * "... She's an old friend..."
+        
             NOUR: "I... cared about her, a lot. But we don't talk anymore. It doesn't matter." // (SAD)
         
-            NICK: "It does though! How did you meet her? Did you know her for a long time? What's her name? Why don't you talk anymore?" 
+            NICK: "It does though! How did you meet her?"
+            
+            NICK: "Did you know her for a long time? What's her name?"
+            
+            NICK: "Why don't you talk anymore?" 
         
             NOUR: "I'm answering none of those, and you're going to stop asking questions." // (ANGRY)
         
-            NICK: "Aww, but I wanna know! Why don't you wanna talk about her? What if I want to be her friend!"
+            NICK: "Aww, but I wanna know! Why don't you wanna talk about her?"
+            
+            NICK: "What if <i>I</i> want to be her friend!"
         
             NOUR: "What did I <i>just</i> say?" // (ANGRY)
         
@@ -137,7 +148,9 @@
         
             NOUR: "Yes you <i>are</i>. You're not even out of highschool." // (ANGRY)
         
-            MS. SUWAN: "<i>Children.</i> <i>Quiet</i>. Nick, stop asking Nour questions. She doesn't want to talk about it."
+            MS. SUWAN: "<i>Children.</i> <i>Quiet</i>."
+            
+            MS. SUWAN: "Nick, stop asking Nour questions. She doesn't want to talk about it."
         
             NICK: "Come <i>on</i>." // (POUTING) 
         
@@ -145,14 +158,22 @@
         
             NOUR: "..." // (ANGRY)
         
-            MS. SUWAN: "And Nour? We'll come back to this later. Whatever happened, you're going to have to face up to it at some point."
+            MS. SUWAN: "And Nour? We'll come back to this later."
+            
+            MS. SUWAN: "Whatever happened, you're going to have to face up to it at some point."
         
             NOUR: "I don't see why I should. It was long ago. Whatever. Let's just go." // (ANGRY)
-    
-            &MOV_RINA_BANDN
+            
+        - &MOV_RINA_BANDN
+            
+        &PAUSE_0.5
         
-            NOUR: <i>She's... here? Again?</i> // (SHOCKED)
+        &PORTRAIT_nour_nourshocked
         
-            NOUR: <i>I better tell her to get out of our way.</i> // (ANGRY)
+        NOUR: <i>She's... here? Again?</i> // (SHOCKED)
         
-            -> END
+        &PORTRAIT_nour_nourannoyed
+        
+        NOUR: <i>I better tell her to get out of our way.</i> // (ANGRY)
+        
+        -> END

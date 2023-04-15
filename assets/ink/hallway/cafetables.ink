@@ -222,7 +222,7 @@
         
         NOUR: "And just far enough from the cashier that you could actually hear the person you're with."
         
-        NOUR: "We never wanted to go home and do homework, so we would imagine staking it out here in the cafe.</i>
+        NOUR: "We never wanted to go home and do homework, so we would imagine staking it out here in the cafe."
         
         NOUR: "We would ration pastries and live off of our favorite lattes."
         

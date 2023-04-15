@@ -418,9 +418,9 @@
     
     KANNIKA: "I hope you can... Take this album... as a long overdue <i>thank you</i>."
     
-    <i>Ms. Suwan shows them the album in her hands. Chad, Brody, and Kristy stare...</i>
+    Ms. Suwan shows them the album in her hands. Chad, Brody, and Kristy stare...
     
-    <i>...And then smile sadly at her.</i>
+    ...And then smile sadly at her.
     
     &PORTRAIT_chad_chadsad
     

@@ -68,7 +68,7 @@ func shlorp_in():
 	_shlorping_in = true
 	visibility = true
 	if not _override_set_monitoring:
-		self.set_monitoring(false)
+		self.set_monitoring(true)
 
 
 # Disappear into the void (visually)
@@ -77,6 +77,8 @@ func shlorp_out() -> void:
 	print("shlorping out")
 	_shlorping_out = true
 	visibility = false
+	if not _override_set_monitoring:
+		self.set_monitoring(false)
 
 
 func shlorp():
