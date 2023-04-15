@@ -865,3 +865,46 @@
     
     -> END
 
+
+== rina_gotopolaroid ==
+
+    {- !first:
+        -> first
+        
+        - else:
+        
+            -> repeat
+        
+    }
+
+    = first
+    
+        &PORTRAIT_nour_noursad
+    
+        NOUR: "I'm being told that I'm ready to confront you, but..."
+        
+        NOUR: "I don't want to revisit this."
+        
+        RINA: "Are you sure?"
+        
+        RINA: "..."
+        
+        RINA: "Nour, don't you remember all the pictures we took together?"
+        
+        NOUR: "...What?"
+        
+        RINA: "Before you became a pro photographer."
+        
+        RINA: "When we were just two kids with a camera, capturing memories."
+        
+        NOUR: "..."
+        
+        NOUR: <i>A polaroid camera that my dad got from this mall.</i>
+    
+    = repeat
+        
+        NOUR: <i>Rina wants me to remember when we took pictures together.</i>
+        
+        NOUR: <i>
+    
+    -> END
