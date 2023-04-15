@@ -21,7 +21,7 @@
 
     MS. SUWAN: "It's been ransacked. Typical. Those who break into this mall are <i>children</i>."
 
-    NOUR: "I remember fighting with my parents about what kind of toys are normal for me to get as a young girl."
+    NOUR: "I remember fighting with my parents about what kind of toys are normal for girls."
     
     NICK: "Man, talk about a mood killer. What did the toy store do to you two?"
     
@@ -37,6 +37,8 @@
     
     NOUR: "..."
     
+    &PORTRAIT_???_princependragonsad
+    
     ???: "I feel... so... useless..."
     
     NOUR: "What the... Hello?"
@@ -49,19 +51,27 @@
     
     NOUR: "...Uh-"
     
+    &PORTRAIT_prince pendragon_princependragonsad
+    
     PRINCE PENDRAGON: "<i>FALLEN</i>, I say! Fallen from the Mother Tree, fallen from the sky, fallen from grace..."
     
     PRINCE PENDRAGON: "...onto this floor."
     
-    NOUR: "You're <i>the</i> prince?"
+    NOUR: "You're <i>the</i> Prince?"
     
-    Nick's eyes widen.
+    NICK: Nick's eyes widen.
+    
+    &PORTRAIT_prince pendragon_princependragonbashful
     
     PRINCE PENDRAGON: "You've heard of little ol' me?"
     
     NOUR: "We've heard many things about you from the council."
     
+    &PORTRAIT_prince pendragon_princependragonsad
+    
     PRINCE PENDRAGON: "The others speak of nothing but their disapointment in me, the <i>failure</i>, I presume?"
+    
+    &PORTRAIT_prince pendragon_princependragonneutral
     
     NOUR: "Actually, the opposite."
     
@@ -77,9 +87,11 @@
     
         PRINCE PENDRAGON: "I am... beloved?"
         
-    -   PRINCE PENDRAGON: "No, that cannot be true."
+    - &PORTRAIT_prince pendragon_princependragonsad   
     
-        MS. SUWAN: "Unfortunately, I am <i>somehow</i> able to corroborate."
+    PRINCE PENDRAGON: "No, that cannot be true."
+    
+    MS. SUWAN: "Unfortunately, I am <i>somehow</i> able to corroborate."
         
     PRINCE PENDRAGON: "You do not understand!"
     
@@ -99,9 +111,13 @@
     
     NOUR: "Uh... What?"
     
-    PRINCE PENDRAGON: "I'll never be brave, smart, or juicy enough. I am simply unfit to be a prince." (TEARING UP)
+    &PORTRAIT_prince pendragon_princependragontears
     
-    NICK: "..." (CONCERN)
+    PRINCE PENDRAGON: "I'll never be brave, smart, or juicy enough. I am simply unfit to be a prince."
+    
+    &PORTRAIT_nick_nicknervous
+    
+    NICK: "..."
     
     * "There's more to apples than juice and skin."
     
@@ -109,7 +125,7 @@
     
     * "Why did the Emperor really send you here?"
     
-    PRINCE PENDRAGON: "Like I told you... I am not fit to be prince."
+        PRINCE PENDRAGON: "Like I told you... I am not fit to be prince."
     
     - NOUR: "I'd have to disagree."
     
@@ -117,15 +133,25 @@
     
     NOUR: "Well, for one... You seem like a sweet apple."
     
+    &PORTRAIT_prince pendragon_princependragonbashful
+    
     PRINCE PENDRAGON: "Hoo hoo, you think so?"
+    
+    &PORTRAIT_nour_noursmile
     
     NOUR: "And nutritious..."
     
-    PRINCE PENDRAGON: "Human, I am not for consumption!" (SHOCKED)
+    &PORTRAIT_prince pendragon_princependragonneutral
     
-    PRINCE PENDRAGON: "But you flatter me..." (BLUSH)
+    PRINCE PENDRAGON: "Human, I am not for consumption!"
+    
+    &PORTRAIT_prince pendragon_princependragonbashful
+    
+    PRINCE PENDRAGON: "But you flatter me..."
     
     NOUR: "Just because you don't fit the mold of a typical apple, doesn't mean you're any less worthy."
+    
+    &PORTRAIT_prince pendragon_princependragontears
     
     NICK: "..."
     
@@ -133,7 +159,7 @@
     
         NOUR: "You have a lot to offer to the world."
         
-        PRINCE PENDRAGON: "What could I offer? I have nothing."(CRYING)
+        PRINCE PENDRAGON: "What could I offer? I have nothing."
     
     * "Don't compare yourself to others."
 
@@ -141,29 +167,45 @@
         
         PRINCE PENDRAGON: "It is hard not to... There are far better apples than I..."
     
-    - NICK: "No, that's not true, Prince!" (TEARING UP)
+    - &PORTRAIT_nick_nicksad 
     
-    NOUR: "...!" (SURPRISE)
+    NICK: "No, that's not true, Prince!"
     
-    NICK: "The only reason Emperor Evercrisp sent you to Earth was for your own protection. From the Fruit Wars!"
+    &PORTRAIT_nour_nourshocked
+    
+    NOUR: "...!"
+    
+    NICK: "The only reason Emperor Evercrisp sent you to Earth was for your own protection."
+    
+    NICK: "From the Fruit Wars!"
     
     NICK: "It wasn't about your worth."
     
+    &PORTRAIT_nick_nicknervous
+    
     NICK: "You're really smart, and good at picking up on things about people."
     
+    &PORTRAIT_nick_nickneutral
+    
     NICK: "Remember when you used your observation skills to figure out the Cornling's battle strategy?"
+    
+    &PORTRAIT_prince pendragon_princependragonneutral
     
     PRINCE PENDRAGON: "Ah, yes... I studied Cornlings for <i>months</i>..."
     
     NICK: "And you were able to help the Bean Boys get their town back from the Cornling army."
     
+    &PORTRAIT_prince pendragon_princependragonsmile
+    
     PRINCE PENDRAGON: "You know, I met the Prince of Corn... In fact, he and I became friends."
     
-    NICK: "No way! That wasn't even in Aple Quest!"
+    NICK: "No way! That wasn't even in Aple Quest! Oh man..."
     
-    NICK: "Oh, man... So the secret traitor of the Cornlings was the Prince of Corn this WHOLE TIME?"
+    NICK: "So the secret traitor of the Cornlings was the Prince of Corn this WHOLE TIME?"
     
     NICK: "You aren't a failure—you're a <i>hero</i>. It takes a lot of smarts and guts to do all that!"
+    
+    &PORTRAIT_prince pendragon_princependragonneutral
     
     PRINCE PENDRAGON: "I... I see. Perhaps I was focusing so much on my mistakes that I allowed it to cloud my mind."
     
@@ -171,11 +213,17 @@
     
     NICK: "That's right! We <i>aren't</i>! You shouldn't be the one to bring yourself down."
     
-    NICK: "And... I know what it's like to wanna give up on everything. Not feeling good enough for anyone."
+    NICK: "And... I know what it's like to wanna give up on everything."
     
-    NICK: "But the council, the Prince of Corn, and the emperor... They care about you!"
+    NICK: "Not feeling good enough for anyone."
     
-    NICK: "They need you to win the war, but they also wanted you to be safe! And now they're worried they can't find you!"
+    NICK: "But the council, the Prince of Corn, and the Emperor... They care about you!"
+    
+    NICK: "They need you to win the war, but they also wanted you to be safe!"
+    
+    NICK: "And now they're worried they can't find you!"
+    
+    &PORTRAIT_prince pendragon_princependragonsad
     
     PRINCE PENDRAGON: "I can't believe I did that to everyone..."
     
@@ -183,7 +231,11 @@
     
     PRINCE PENDRAGON: "How could I have forgotten... The very reason I fight?"
     
-    PRINCE PENDRAGON: "I can't afford to wallow in self-pity! The people need me. My... My <i>family</i> needs me!"
+    &PORTRAIT_prince pendragon_princependragonneutral
+    
+    PRINCE PENDRAGON: "I can't afford to wallow in self-pity! The people need me."
+    
+    PRINCE PENDRAGON: "My... My <i>family</i> needs me!"
     
     PRINCE PENDRAGON: "Thank you, young human. I see the wisdom in my father's decision to send me here."
     
@@ -193,7 +245,11 @@
     
     NICK: "You can do it!"
     
-    NICK: "As long as you remember the way of the Mother Tree: <i>By the power of pulp and seed—</i>"
+    NICK: "As long as you remember the way of the Mother Tree..."
+    
+    NICK: "<i>By the power of pulp and seed—</i>"
+    
+    &PORTRAIT_prince pendragon_princependragonsmile
     
     PRINCE PENDRAGON: "<i>I choose to believe in ME!</i>"
     
@@ -213,13 +269,21 @@
     
     PRINCE PENDRAGON: "I will never forget you, human! From my core, THANK YOU!"
     
-    PRINCE PENDRAGON: "And from one prince to another... I also hope you find your way and choose to believe in yourself!"
+    &PORTRAIT_prince pendragon_princependragonneutral
+    
+    PRINCE PENDRAGON: "And from one Prince to another..."
+    
+    PRINCE PENDRAGON: "I also hope you find your way and choose to believe in yourself!"
     
     NICK: "...!"
+    
+    &PORTRAIT_prince pendragon_princependragonsmile
     
     PRINCE PENDRAGON: "I am ready to be sent away now! FAREWELL! HOO HOO!!!"
     
     &SHLORP_APPLE_PrincePendragon_out
+    
+    &PAUSE_0.5
     
     NICK: "..."
     
@@ -246,6 +310,8 @@
     // NICK: "Hey, wanna play Aple Quest with me?"
     
     NOUR: <i>Now that Nick is excited about the secret ending, maybe he'll be willing to talk over a game of Aple Quest.</i>
+    
+    &PORTRAIT_nour_noursmile
     
     NOUR: "Wanna play Aple Quest?"
     

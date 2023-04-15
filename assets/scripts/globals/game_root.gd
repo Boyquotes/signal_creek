@@ -58,6 +58,7 @@ func _on_Game_doorway_entered(newRoom: RoomVars, partyPosition: Vector2) -> void
 
 
 func play_loading_screen() -> void:
+	Globals.SoundManager.play_music_by_index(RoomEngine.CurrentRoomIndex)
 	Globals.SoundManager.set_music_pause_mode(true)
 	
 	loadingscreen.set_visible(true)
@@ -65,11 +66,13 @@ func play_loading_screen() -> void:
 	yield(get_tree().create_timer(1.5), "timeout")
 	loadingscreen.set_visible(false)
 	
-	if Globals.GameState == Globals.GameStates.GAME:
-		Globals.SoundManager.set_music_pause_mode(false)
-		
-	Globals.SoundManager.play_music_by_index(RoomEngine.CurrentRoomIndex)
+	Globals.SoundManager.set_music_pause_mode(false)
+	
+	if testing_enabled:
+		Globals.PauseMenu.call_deferred("_on_MuteAudio_toggled", true)
+	
 	Globals.SoundManager.set_music_pause_mode(Globals.PauseMenu.get_music_pause_mode())
+		
 	Globals.GameOverlay.start_fade_in()
 
 

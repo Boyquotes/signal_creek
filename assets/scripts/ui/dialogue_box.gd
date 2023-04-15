@@ -9,7 +9,7 @@ extends Control
 
 # Entry Prefab Types
 export var print_information = false
-export var camera_offset_dialogue = 50.0
+export var camera_offset_dialogue = 40.0
 export var typewriter_speed : int = 1
 export var scroll_increment : float = 0.75
 export var panel_opening_speed : float = 0.25
@@ -103,7 +103,11 @@ func open_at_knot(pathstring: String) -> void:
 	
 	current_speaker = Globals.PartyObject.get_leader().get_name()
 	
-	proceed()
+	var inkCommand = proceed()
+	
+	while inkCommand and "command" in inkCommand:
+		inkCommand = proceed()
+	
 	set_camera_position_to_speaker()
 	
 	is_expanding_background_panel = true
@@ -139,6 +143,7 @@ func free_old_choicebox() -> void:
 
 # Proceeding to the next string that ink should return
 func proceed() -> String:
+	
 	if pause:
 		_down_arrow_animate.play("Idle")
 		return
@@ -277,6 +282,8 @@ func typewriter_effect(escape: bool) -> void:
 		_down_arrow_animate.play("CanProceed")
 		
 	_down_arrow_animate.play("Idle")
+	
+	#INSERT ERROR HANDLER HERE
 	
 	var currentVisibility = current_text_box.get_percent_visible()
 	var visibleCharacters = current_text_box.get_visible_characters()
@@ -446,8 +453,11 @@ func set_camera_position_to_speaker():
 		Globals.GameRoot.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
 		return
 		
-	followingVector = find_current_speaker_position()
-	Globals.GameRoot.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y))
+	
+	# Mid point between nour and current speaker
+	followingVector = find_current_speaker_position().linear_interpolate(Globals.Nour.get_global_position(), 0.75)
+	
+	Globals.GameRoot.set_camera_following_vector(Vector2(followingVector.x + camera_offset_dialogue, followingVector.y - camera_offset_dialogue/2))
 	
 
 

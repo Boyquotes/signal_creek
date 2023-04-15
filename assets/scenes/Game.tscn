@@ -91,7 +91,7 @@ rect_min_size = Vector2( 322, 182 )
 rect_scale = Vector2( 3, 3 )
 stretch = true
 script = ExtResource( 13 )
-_elevator_focus_position = Vector2( 472, 216 )
+_elevator_focus_position = Vector2( 472, 232 )
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
 size = Vector2( 322, 182 )
@@ -157,6 +157,7 @@ autoplay = true
 
 [node name="Music" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 14 )
+volume_db = -10.0
 
 [node name="UISounds" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 14 )

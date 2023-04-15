@@ -1,90 +1,101 @@
 // Ms Suwan and Nour focused conversation regarding old novel 
-//gives insight to Ms Suwans background in Thailand 
-//---------------- DREAM WORLD ----------------
+// gives insight to Ms Suwans background in China
+// NOTE- updated this convo; nour knows a lot ab politics, she doesn't need ms. suwan to tell her about CCP censorship.
+
+== oldnovel ==
+
+    It's the old novel, <i>Jane Eyre</i>.
 
     {
-        - oldnovel_first:
-            -> oldnovel_revisit
+        - !oldnovel_first:
+            -> oldnovel_first
             
-        - chadbrodykristy3:
+        - chadbrodykristy3 && !oldnovel_end:
             -> oldnovel_end
     }
+    
+    A controversial novel, for its opposition to filial piety.
+    
+    -> END
+    
 == oldnovel_first ==
 
-    Ms Suwan picks up an old novel laying on the bookshelf and turns it to a random page. The scent of the old book prickles her nose. She tries to read the first sentence of the paragraph but her mind wanders.
+    Ms. Suwan flips open the first page, and begins to read.
     
-    NOUR: Is that Jane Eyre? 
+    NOUR: <i>Her mind seems to be elsewhere.</i>
     
-    MS SUWAN: What?
+    NOUR: "That's uh... Jane Eyre. A classic."
     
-    MS SUWAN: Oh is it? Interesting. Do you know this book?
+    MS. SUWAN: "Interesting. You know this book?"
     
-    NOUR: 
-        * [I read that book my junior year of high school for AP Lit.] -> oldnovel_nouropenup 
-        * [I've heard of it somewhere] -> oldnovel_nouropenup
-        * [It's my favorite novel] -> oldnovel_nouropenup
-        
-    == oldnovel_nouropenup ==
+    * "Read it for AP Lit, junior year of high school."
     
-    NOUR: Yeah I read it a long time ago, it's really good!
+    * "Sure, I've heard of it."
     
-    MS SUWAN: Hm
+    * "It's one of my favorites."
     
-    NOUR: Do you know this book?
+    - MS. SUWAN: "...Hm."
     
-    MS SUWAN: What. Oh um not really.
+    NOUR: "Have you heard of it?"
     
-    NOUR: I don't know you seemed to have your eye on it for quite a bit.
+    MS. SUWAN: "Uncertain."
     
-    MS SUWAN: I never read it but there was a lot of talk about those kinds of books back home.  
+    NOUR: "You've had your eye on it for quite a while."
     
-    NOUR: What kind of talk?
+    MS. SUWAN: "Well, the name sounds familiar, but I know nothing of it."
     
-    MS SUWAN: Well when I was a kid, the government didn't let people read books that were seen as "socially corrupting" so I didn't even see it until I moved to the US and saw a copy being sold at a bookstore. 
+    MS. SUWAN: "I remember talks about certain <i>banned</i> novels, back in China. I was young."
     
-    NOUR: Oh I see...
+    NOUR: "What kind of talk?"
     
-    NOUR SAYS SHIT ABOUT POLITICS IN EGYPT
+    MS. SUWAN: "Opposition to Western ideology and its extreme individualism."
     
-    NOUR: But I didn't know about all of that stuff going on in China, like I went over a bit of it in school and stuff but I never knew the specifics so thank you for telling me about this.
+    MS. SUWAN: "Which this book promotes."
     
-    MS SUWAN: No problem kiddo.
-        
-    NOUR: So..may I ask why you never read the book?
-        
-    MS SUWAN: I don't know it just...
+    &PORTRAIT_nour_nourpondering
     
-    MS SUWAN: ...
+    NOUR: "You know, Egyptian and Chinese cultures have that in common."
     
-    MS: SUWAN: it wasn't right back and I don't feel like it would ever feel right for me now.
+    &PORTRAIT_nour_nourneutral
     
-    NOUR: Hm damn well I can't fully understand how that must feel like for you but I know enough about those kinds of situations to know that it's really hard to shake those feelings.
+    NOUR: "There's a natural aversion to Western ideas, and a... <i>Family First</i> kind of attitude."
     
-    MS SUWAN: Thank you for understanding Nour.
+    &PORTRAIT_nour_noursad
     
-    Ms Suwan puts the novel back to the shelf, trying to brush off the discontentness shes feeling.
+    NOUR: "Sometimes, it's valid. Mostly, it's not."
     
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: "So... may I ask why you never read the book?"
+    
+    MS. SUWAN: "I was not ready to embrace myself as an individual."
+    
+    MS. SUWAN: "...I cannot say things have changed."
+    
+    NOUR: "I don't completely understand what's going on..."
+    
+    NOUR: "But I know it can be hard to shake those feelings."
+    
+    MS. SUWAN: "I appreciate that, Nour."
+    
+    Ms. Suwan closes the cover, in an attempt to brush off her discontent.
     
     -> END
 
-
-//SUBSEQUENT DREAM KNOTS HERE
-
-==oldnovel_revisit == 
-    Just the same copies of Jane Eyre on the bookshelf.
--> END
+    
 //if you have finished Ms Suwan's storyline, she would come back and take the old novel to read
-==oldnovel_end ==
-    Ms Suwan once again picks up the novel of Jane Eyre but this time her 
+== oldnovel_end ==
     
-    MS SUWAN: I think I'm gonna grab a copy.
+    MS. SUWAN: "I think... it is finally time for me to read this novel."
     
-    NOUR: Really?
+    NOUR: "Really?"
     
-    MS SUWAN: Yeah I think it's time to read something other than contracts and case law.
+    MS. SUWAN: "I can afford to read things other than contracts and case law."
     
-    NOUR: Well I'm happy for you.
+    &PORTRAIT_nour_noursmile
     
-    Ms Suwan puts the book into her purse.
+    NOUR: "..."
     
--> END 
+    Ms. Suwan places a copy of <i>Jane Eyre</i> into her briefcase.
+    
+    -> END 
