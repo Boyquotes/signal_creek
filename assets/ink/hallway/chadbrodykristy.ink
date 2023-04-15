@@ -128,7 +128,7 @@
     
     MS. SUWAN: "No use. We do <i>not</i> need help from strangers."
     
-    &PORTRAIT_???_chadannoyed
+    &PORTRAIT_???_chadneutral
     
     ???: "Strangers?"
     
@@ -142,7 +142,7 @@
     
     MS. SUWAN: "!"
     
-    &PORTRAIT_???_brodyannoyed
+    &PORTRAIT_???_brodyneutral
     
     ???: "Looks like Chad, Kristy, and Brody got demoted to strangers. What a surprise."
     
@@ -340,8 +340,8 @@
 
     &LIGHT_Suwan0
     
-    {$firstLightCharacter = "Ms. Suwan"}
-    {$firstLightPronoun = "she's"}
+    {~firstLightCharacter = "Ms. Suwan"}
+    {~firstLightPronoun = "she's"}
     
     -> light_on
 
@@ -553,8 +553,7 @@
     &LIGHT_Suwan2
     
     &FOLLOW_NOUR_stop
-    
-    An elevator <i>ding</i> is heard from the hallway.
+
     
     &PORTRAIT_nour_nourneutral
     
@@ -564,9 +563,13 @@
     
     &MOV_RINA_HALLWAY
     
+    &EMOTE_SUWAN_UpIdle
+    
+    &PAUSE_0.15
+    
     MS. SUWAN: "Nour, your old friend is here."
     
-    &PORTRAIT_nour_nourneutral
+    &EMOTE_SUWAN_DownIdle
     
     MS. SUWAN: "If I could face the mistakes I made with Chad, Brody, and Kristy..."
     
