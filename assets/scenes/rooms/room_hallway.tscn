@@ -66,7 +66,7 @@ shader_param/width = 1.0
 shader_param/pattern = 0
 shader_param/inside = false
 
-[node name="Room2" type="Node2D"]
+[node name="Room" type="Node2D"]
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ],

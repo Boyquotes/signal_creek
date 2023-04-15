@@ -10,6 +10,9 @@
         - rina_bandn:
             -> rina_branches
             
+        -!rina_bandn && !polaroid:
+            -> rina_gotopolaroid
+            
         - polaroid:
             -> rina_bandn
     }
@@ -137,9 +140,9 @@
     RINA: "It's up to you to move on."
     
     &PAUSE_1.0
-    
-    &MOV_RINA_BANDN
-    
+
+    &MOV_RINA_VOID
+
     NOUR: "..."
     
     NICK: "Uh, where'd she go??"
@@ -156,8 +159,7 @@
     
     MS. SUWAN: "...Whatever it is that we are seeing."
     
-        * [Agree with her]
-            NOUR: "Maybe we hit our heads somewhere... Or a potential gas leak?"
+        * "Maybe we hit our heads somewhere... Or a potential gas leak?"
             
             MS. SUWAN: "That <i>would</i> be somewhat realistic. I want to agree, but..."
             
@@ -173,9 +175,7 @@
             
             NICK: "...Alright, fair." 
             
-        * [Lighten the mood]
-        
-            NOUR: "Maybe this is all just a dream..."
+        * "Maybe this is all just a dream..."
             
             &PORTRAIT_nick_nickbigsmile
             
@@ -191,8 +191,7 @@
             
             MS. SUWAN: "Enough of your nonsense, please."
     
-        * [Convince her it's real]
-            NOUR: "If this floor was torn down, I don't think we could explain anything of this with logic."
+        * "If this floor was torn down, I don't think we could explain anything of this with logic."
             
             NOUR: "Wherever we are... it's definitely not the demolition site from before."
             
@@ -388,11 +387,13 @@
 
     RINA: "You're almost ready to move on from the past... <i>Almost</i>."
     
-    SFX OF POWER GENERATOR STARTING UP
+    The sound of a power generator starting up can be heard from the hallway.
     
     RINA: "I fixed the elevator that you all broke."
     
-    NICK: "How the heck did you know how to do that?" (SURPRISED)
+    &PORTRAIT_nick_nickshocked
+    
+    NICK: "How the heck did you know how to do that?"
     
     MS. SUWAN: "You don't exactly seem old enough to know how to fix an elevator."
     
@@ -747,6 +748,8 @@
         
         MS. SUWAN: "What <i>really</i> happened?"
         
+        &PORTRAIT_nour_noursad
+        
         NOUR: "I remember what I told you, when I first came out..."
         
             ** "My family didn't help me feel comfortable."
@@ -765,7 +768,7 @@
                 
                 NOUR: "So I went to you, because you were always there for me, and made sure I was never alone."
     
-    -   NOUR: "And when I felt like <i>you</i> weren't looking out for me, I had nobody to go to." CONCERN
+    -   NOUR: "And when I felt like <i>you</i> weren't looking out for me, I had nobody to go to."
         
         //nick isn't as afraid of being a disappointment anymore
         NICK: "Why'd you <i>really</i> stop talking to Rina? Is it actually about her saying nothing?"
@@ -872,9 +875,7 @@
         -> first
         
         - else:
-        
             -> repeat
-        
     }
 
     = first
@@ -900,11 +901,13 @@
         NOUR: "..."
         
         NOUR: <i>A polaroid camera that my dad got from this mall.</i>
+        
+        -> END
     
     = repeat
         
         NOUR: <i>Rina wants me to remember when we took pictures together.</i>
         
-        NOUR: <i>
+        NOUR: <i>We used a polaroid camera that my dad got from this mall.</i>
     
-    -> END
+        -> END

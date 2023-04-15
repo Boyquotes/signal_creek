@@ -162,8 +162,6 @@
         PRINCE PENDRAGON: "What could I offer? I have nothing."
     
     * "Don't compare yourself to others."
-
-        NOUR: "And don't compare yourself to others."
         
         PRINCE PENDRAGON: "It is hard not to... There are far better apples than I..."
     

@@ -340,8 +340,8 @@
 
     &LIGHT_Suwan0
     
-    {~firstLightCharacter = "Ms. Suwan"}
-    {~firstLightPronoun = "she's"}
+    // {~firstLightCharacter = "Ms. Suwan"}
+    // {~firstLightPronoun = "she's"}
     
     -> light_on
 
