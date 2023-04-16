@@ -3,7 +3,7 @@ extends NPCBehavior
 export var rina_positions : Dictionary = {
 	"VOID": Vector2(-1000, -1000),
 	"START": Vector2(472, 280),
-	"BANDN": Vector2(146, -256),
+	"BANDN": Vector2(373, -327),
 	"TOPICSPOT": Vector2(284, -21),
 	"HALLWAY": Vector2(974, 333),
 	"END": Vector2(472, 280)
@@ -20,7 +20,6 @@ func _ready():
 	Globals.Rina = self
 	# SAVE SYSTEM: Keep track of rina's current state in ink
 	self.get_parent().set_global_position(rina_positions.get(current_position))
-	
 	set_monitoring_ready()
 
 
@@ -59,17 +58,20 @@ func move_rina(newPosition):
 	if RoomEngine.CurrentRoomIndex == current_room_index: # we are in the same room
 		shlorp_out()
 
-	elif RoomEngine.CurrentRoomIndex == newPositionRoomIndex:
-		place_rina_in_new_room()
+	if RoomEngine.CurrentRoomIndex == newPositionRoomIndex:
+		place_rina_in_new_room(RoomEngine.CurrentRoom)
 		shlorp_in()
 
 
 # call this only when the player is actually in the room
-func place_rina_in_new_room():
+func place_rina_in_new_room(newRoom):
+	print("moving rina")
 	if !Globals.Rina:
+		print("no rina found")
 		return
-	RoomEngine.move_object_to_new_room(self.get_parent(), RoomEngine.Rooms[current_room_index], RoomEngine.Rooms[next_room_index])
+	RoomEngine.move_object_to_new_room(self.get_parent(), RoomEngine.Rooms[current_room_index], newRoom)
 	self.get_parent().set_global_position(rina_positions.get(current_position))
+	print(rina_positions.get(current_position))
 	current_room_index = next_room_index
 	shlorp_in()
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portrait_rina_neutral.png-2be5de42ca8fe66cccb09b0075b6ccbc.stex"
+path="res://.import/sheet_portraits_manager.png-227f292ee1c663c6227ca9ffc2cd9526.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/portraits/rina/portrait_rina_neutral.png"
-dest_files=[ "res://.import/portrait_rina_neutral.png-2be5de42ca8fe66cccb09b0075b6ccbc.stex" ]
+source_file="res://assets/sprites/characters/portraits/manager/sheet_portraits_manager.png"
+dest_files=[ "res://.import/sheet_portraits_manager.png-227f292ee1c663c6227ca9ffc2cd9526.stex" ]
 
 [params]
 

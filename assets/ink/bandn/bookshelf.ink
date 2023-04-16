@@ -1,6 +1,8 @@
 == bookshelf ==
 
-    It's a tall bookshelf, stacked with all kinds of instructional guides, exam prep workbooks, and how-to books... for those interested in <i>cool</i> new hobbies!
+    It's a tall bookshelf, stacked with all kinds of books...
+    
+    Instructional guides, exam prep workbooks, and how-to books for those interested in <i>fun</i> new hobbies!
     
     {
         // - noursuggestion && nicktalksaboutfantasygame:
@@ -11,15 +13,17 @@
         - aplequestguide && nourplaysaplequest:
             -> bookshelf_afternickroute
             
-        - aplequestguide:
+        - aplequestguide_after_bookshelf_fightstarts:
             -> bookshelf_afterfight
             
-        - nour_suggests_hobbies:
+        - nour_suggests_hobbies && consoles:
             -> bookshelf_nour_suggests_hobbies_repeat
             
         - spraycans_start:
             -> nour_suggests_hobbies
     }
+    
+    -> END
 
 == bookshelfback == 
 
@@ -34,7 +38,7 @@
 
     * "Ugh... This makes me think about high school."
     
-        NOUR: "My parents expected me to get the best possible exam scores. I guess if you're the only child, you have to be everything."
+        NOUR: "My parents expected me to get the best possible exam scores."
         
         NICK: "I don't really care about tests."
         
@@ -42,19 +46,21 @@
         
         NICK: "I mean, yeah, who even cares if I know PEMDAS or the Pythagorean Theorem?"
         
-        MS SUWAN: "Your college admissions counselors."
+        MS. SUWAN: "Your college admissions counselors."
         
-        NICK: "I'm not even thinking about college right now. I'm only 16."
+        NICK: "I'm not even thinking about college right now. I'm only sixteen."
         
-        MS SUWAN: "You're already 16 Nick, this is the time you need to be applying yourself more if you want to get into a good college."
+        MS. SUWAN: "Sixteen is the time to start applying yourself more."
         
-        NICK: "But I want to have fun, you know, while I can."
+        MS. SUWAN: "If you want to get into a good college, that is."
         
-        MS SUWAN: "If you have fun now, you're gonna struggle later."
+        NICK: "Nah. I just wanna have fun while I can, y'know?"
+        
+        MS. SUWAN: "If you have fun now, you will struggle later."
         
         NICK: "But I don't want to live that way."
         
-        MS. SUWAN: "Well you're not being given a choice here."
+        MS. SUWAN: "Well, we are not given a choice."
 
         NOUR: <i>Things are getting a little bit heated. I should try to change the subject.</i>
     
@@ -62,47 +68,63 @@
     
         NOUR: "This would be a pretty fun hobby, right?"
         
-            * "Are you interested?["] It might be cool to try learning something new. That's what got me into photography."
+            ** "Are you interested?"
+            
+                NOUR: "It might be cool to try learning something new. That's what got me into photography."
         
-            * "People who can draw are pretty cool.["] You might end up liking it. That was my experience with photography."
+            ** "People who can draw are pretty cool."
+            
+                NOUR: "You might end up liking it. That was my experience with photography."
     
-        - NICK: "I don't know. I'm not really good at art and stuff."
+            - NICK: "I don't know. I'm not really good at art and stuff."
         
-        MS. SUWAN: "I think Nick should focus on finding a hobby that could benefit his future."
-        
-        NOUR: "Well, a hobby is something you <i>enjoy</i>, not necessarily—"
-        
-        NICK: "This hobby needs talent <i>and</i> and doesn't benefit my future?"
-        
-        NICK: "Not interested."
+            MS. SUWAN: "I think Nick should focus on finding a hobby that could benefit his future."
+            
+            NOUR: "Well, a hobby is something you <i>enjoy</i>, not necessarily—"
+            
+            NICK: "This hobby needs talent <i>and</i> doesn't benefit my future?"
+            
+            NICK: "Not interested."
     
     * "Hey...there's <i>The Making of Aple Quest - The Classic RPG Series</i>!"
         
-        NOUR: "Isn't this the game you wanted to see before? The one in TopicSpot's game console?"
+        NOUR: "Isn't this the game you wanted to see before?"
         
-        NOUR: "This could be an interesting hobby. You could become a game expert or make one yourself!"
+        NOUR: "The one in TopicSpot's game console?"
+        
+        NOUR: "This could be an interesting hobby."
+        
+        NOUR: "You could become a game designer!"
         
         NICK: "It's not that easy. I don't even know how to code."
         
-        NOUR: "You could learn and be an expert at this game then. It could be like studying history except it's something you like?"
+        NOUR: "You could learn to be an expert at this game, then."
+        
+        NOUR: "It could be like studying history, except it's something you like."
         
         NICK: "I don't want to study something that I like. That would ruin it."
         
-        NICK "...And I'd be no good at remembering or memorizing stuff like that. I'm not that smart."
+        NICK: "...And I'd be no good at memorizing stuff like that. I'm not that smart."
     
     * "There's also... <i>Intro to Persusasive Arguments</i>."
     
-        NOUR: "Seems like a pre-pre-LSAT kind of book. Good for beginners looking to learn more!"
+        NOUR: "Seems like a pre-pre-LSAT kind of book."
+        
+        NOUR: "Good for beginners looking to learn more!"
         
         NICK: "I think I'd rather die than read something like that."
     
-        MS. SUWAN: "You should give more things a try. I didn't know I would like law until I came across good study aids."
+        MS. SUWAN: "It would be best for you to remain open-minded."
         
-        MS. SUWAN: "Taking that extra step ensures that you excel at what you do. This could be something."
+        MS. SUWAN: "I had no idea I would enjoy law until I came across good study aids."
         
-        NICK: "But I don't want to force myself to like something I don't yet. That's not how you pick up interests."
+        MS. SUWAN: "Taking that extra step ensures that you excel at what you do."
         
-        NICK: "...And either way I wouldn't understand it, no matter how hard I tried."
+        MS. SUWAN: "This could be something."
+        
+        NICK: "I don't wanna force myself to like something. That's not how you pick up interests."
+        
+        NICK: "...And either way, I wouldn't understand it, no matter how hard I tried."
     
     - NOUR: "What about..."
     
@@ -114,13 +136,17 @@
         
     - NICK: "I literally <i>don't care</i>. I don't want to study anything."
     
-    MS. SUWAN: "You're going to end up a real slacker if you don't change that mindset of yours."
+    MS. SUWAN: "You will not get far in life if you cannot change your mindset."
     
         * "That's a bit harsh, Ms. Suwan..."
         
-            MS. SUWAN: "Listen, if this kid's parents aren't giving him the truth, someone has to. I had to learn the hard way."
+            MS. SUWAN: "Listen, if this kid's parents failed to give him the truth, someone has to."
+            
+            MS. SUWAN: "I had to learn the hard way."
         
-        * "Nick, people will think you're cool if you know how to do something. Isn't that what you want?"
+        * "Nick, people will think you're more capable if you know how to do something."
+        
+            NOUR: "Isn't that what you want?"
         
             NICK: "I don't have to know how to do something that requires me to <i>read</i> for fun."
             
@@ -130,46 +156,67 @@
         
     - NICK: "You're old and boring. Study <i>this</i>, responsiblility <i>that</i>—whatever."
     
-    NICK: "Whatever happened to having a life?"
+    NICK: "What happened to having a <i>life</i>?"
     
-    MS. SUWAN: "That was incredibly rude Nick."
+    MS. SUWAN: "That was incredibly rude."
     
-    MS. SUWAN: "I do have a life. A life I worked tooth and nail to earn meanwhile someone else got it handed to them on a silver plate."
+    MS. SUWAN: "I <i>have</i> a life."
     
-    MS SUWAN: "What you can't realize Nick is that it's a privilege to even get the opportunity to learn new things without constant worry about things outside of your control."
+    MS. SUWAN: "One I worked tooth and nail to earn."
     
-     NICK: "I just don't see why I need to waste all of my time and energy on learning right now. I'm suppose to be having fun before I have to start worrying about adult problems."
+    MS. SUWAN: "...While others got things handed to them on a silver plate."
     
-        * "Making the real world seem bleak won't help anyone.["] You can have fun practicing your skills, and it may even lead you somewhere in life."
+    MS. SUWAN: "It is a privilege to get the opportunity to learn."
+    
+    MS. SUWAN: "Especially without constantly worrying about factors outside of your control."
+    
+     NICK: "I just don't see why I need to waste all of my time."
+     
+     NICK: "I wanna have fun before I gotta start worrying about adult problems."
+    
+        * "Making the real world seem bleak won't help anyone."
         
-        * "You can have fun and work hard at the same time...["] Not everything has to be miserable. Not even work."
+            NOUR: "You can have fun practicing your skills, and it may even lead you somewhere in life."
+        
+        * "You can have fun and work hard at the same time..."
+        
+            NOUR: "Not everything has to be miserable. Not even work."
     
     - NOUR: "Look, whether I make money from photography or not, I'll always love doing it."
     
-    NICK: "Aren't you so lucky? You have something you're good at."
+    NICK: "Aren't <i>you</i> lucky? You have something you're good at."
     
-    NICK: "Well, guess what, Nour? Not everyone is good at something or smart."
+    NICK: "Well, guess what, Nour? Not everyone is smart or good at something."
     
-        * "I wasn't born with the ability to take pictures.["] You can only get better at something through practice."
+        * "I wasn't born with the ability to take pictures."
         
-        * "How do you know I'm good at it?["] For all you know, I could suck at taking pictures."
+            NOUR: "You can only get better at something through practice."
+        
+        * "How do you know I'm good at it?"
+        
+            NOUR: "For all you know, I could suck at taking pictures."
         
             NOUR: "The time I've put into what you think I'm 'naturally' good at isn't visible."
             
-    - NICK: "Nevermind. Neither of you guys would get it. 
+    - &PORTRAIT_nick_nickshadow
     
-    A dark expressions falls on Nick's face. 
+    NICK: "Never mind. Neither of you guys would get it. 
     
-    NICK: "Some of us are either born dumb, end up liking useless shit like <i>Aple Quest</i> games, or both."
+    NICK: "Some of us are either born dumb, or end up liking useless crap like <i>Aple Quest</i>."
     
-    NICK: "...I could never be like you two. Not now, and not ever."
+    NICK: "..Or both."
+    
+    NICK: "I could never be like you two. Not now, and not ever."
 
     NOUR: <i>He looks upset. It doesn't look like he's open to learning anything new.</i>
     
     NOUR: <i>But I still want to cheer him up.</i>
     
-    NOUR: <i>Maybe I've been approaching this all wrong. I could find something in this store that <b>already</b> makes him happy.<i>
-        -> END
+    NOUR: <i>Maybe I've been approaching this all wrong.</i>
+    
+    NOUR: <i>I could find something in this store that already makes him happy.</i>
+        
+    -> END
     
 === bookshelf_nour_suggests_hobbies_repeat ===
 
@@ -187,7 +234,8 @@
 === bookshelf_afterfight ===
 
     NOUR: <i>I don't think I need to see anything else here.</i>
-        -> END
+    
+    -> END
     
 === bookshelf_afternickroute ===
 
@@ -215,7 +263,7 @@
     
     MS. SUWAN: "No. But I could learn."
     
-The two of them share a smile.
+    The two of them share a smile.
 
     -> bookshelf_end
 

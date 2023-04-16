@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Untitled 8.png-c065cba770be6191a764883bfd72e69b.stex"
+path="res://.import/sheet_portraits_earlearligold.png-8c90620cfa101ec320eff96c20504eab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/portraits/rina/Untitled 8.png"
-dest_files=[ "res://.import/Untitled 8.png-c065cba770be6191a764883bfd72e69b.stex" ]
+source_file="res://assets/sprites/characters/portraits/earlearligold/sheet_portraits_earlearligold.png"
+dest_files=[ "res://.import/sheet_portraits_earlearligold.png-8c90620cfa101ec320eff96c20504eab.stex" ]
 
 [params]
 

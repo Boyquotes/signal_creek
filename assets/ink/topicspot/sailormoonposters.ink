@@ -1,15 +1,31 @@
 == sailormoonposters ==
 
-    NOUR: "Ha, it's the Marine Star Girls..."
+    A Marine Star Girls poster hangs on the wall. Nour can't help but smile.
+
+{
+    - !sailormoonposters_convo:
+        -> sailormoonposters_convo
+}
+
+    NOUR: "Maybe once we get out of here I should revisit Marine Star Girls." // SMILING
     
-    NICK: "Whoa, you know them? I would've figured they were... y'know, kinda too girly for you."
+    NOUR: "It's been a while." // SMILING
+
     
-    NOUR: "I mean... they're all girls, aren't they? Besides, don't you know them, too?"
+    -> END
+
+== sailormoonposters_convo ==
+
+NOUR: "Oh look! It's the Marine Star Girls..." // SMILING
     
-    NICK: "Yeah, you got me there. They're just iconic, though. Even, like, my dude friends kinda know them, even when they don't have sisters."
+    NICK: "Whoa, you know them? I figured they were... y'know, kinda too girly for you." // SURPRISED
+    
+    NOUR: "Hey! Don't you know them, too?"
+    
+    NICK: "... You know what, fair. They're pretty iconic, I guess."
+    
+    NICK: "Like, even my <i>dude</i> friends kinda know them, even though they don't have any sisters."
     
     NOUR: "It's cool that there's finally merch of these two. They were my favorite characters in the series."
-    
-    MS. SUWAN: "I can see the appeal."
-    
-        -> END
+
+-> END
