@@ -6,7 +6,7 @@
         - weirdtree_findgranny:
             -> explored_everything
             
-        - consoles_start_aplequest:
+        - consoles_start_aplequest && fountain_findfather:
             -> weirdtree_findgranny
             
         - weirdtree_before_aplequest:

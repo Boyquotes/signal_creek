@@ -112,13 +112,15 @@
     
     NOUR: "What do you think, Nick?"
     
-    NICK: Nick rolls his eyes.
+    NICK: Whatever.
+    
+    &PORTRAIT_nick_nickshadow
+    
+    NOUR: <i>How do I get him to care?...</i>
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>I wonder if he's really interested or not...</i>
-    
-    FATHER FUJI: "Now that you've heard this tale of woe, I must tell you another you go."
+    FATHER FUJI: "Now that you've heard this tale of woe, I will impart aple wisdom before you go."
     
     &PORTRAIT_nour_nourneutral
     
@@ -126,33 +128,63 @@
     
     FATHER FUJI: "A piece of information a Dream Walker ought to know."
     
-    NICK: "Nick perks up, but still pretends to be disinterested."
+    NICK: What kind of information? 
     
-        * "Sounds super duper important."
+    &PORTRAIT_nick_nickworried
+    
+    NICK: Actually you know what, I don't care so don't tell me.
+    
+    &PORTRAIT_nick_nickshadow
+    
+        * "Sounds pretty important."
+        
+            &PORTRAIT_nour_nourrealization
         
             NOUR: "Too bad I don't know much about this game for it to make sense!"
             
         * "Actually, we're pretty busy."
         
+            &PORTRAIT_nour_noursad
+            
             NOUR: "I think we'll pass on this very important piece of information."
             
             NICK: "...!"
             
-            NICK: Nick opens his mouth to say something, but then shuts it immediately. 
+            NICK: "Bu-!" 
             
-            NOUR: "Did you want to say something, Nick?"
+            &PORTRAIT_nick_nickshocked
             
-            NICK: Nick shrugs, but doesn't shake his head 'no'.
+            NOUR: "I thought you didn't care to play this game with us Nick."
             
-            MS. SUWAN: Ms. Suwan watches him closely.
+            &PORTRAIT_nour_nourpondering
+            
+            NICK: "You're right I don't care."
+            
+            &PORTRAIT_nick_nickshadow
             
             MS. SUWAN: "Maybe we should hear this out to the end."
     
     - Nick looks the other way, but walks closer to Father Fuji.
     
-    FATHER FUJI: "[insert epic lore drop here]"
+    FATHER FUJI: "While thy prince was both kept and fair"
     
-    Nick's eyes widen in awe. His eyes meet Ms. Suwan, and then his expression turns sour again. 
+    FATHER FUJI: "His companions oft did mock and stare"
+    
+    FATHER FUJI: "Forsooth they jested at his unwist gait,"
+
+    FATHER FUJI: "hoping this majesty's unripnes would abate."
+    
+    FATHER FUJI: "Though prince did strive to laugh it off,"
+    
+    FATHER FUJI: "And pretend that he was just as tough,"
+
+    FATHER FUJI: "But deep inside he felt so small and weak,"
+
+    FATHER FUJI: "Longing for a friend who wouldn't critique."
+
+    &PORTRAIT_nick_nickshocked
+    
+    FATHER FUJI: "Now my children..."
     
     FATHER FUJI: "May the Mother Tree guide thee..."
     
@@ -162,11 +194,16 @@
     
     NOUR: "Well, that made zero sense to me."
     
+    &PORTRAIT_nour_nourpondering
+    
     MS. SUWAN: "Agreed. Perhaps it was more apple nonsense."
+    
+    &PORTRAIT_suwan_suwanannoyed
     
     NOUR: "Guess we'll never figure all this <i>mysterious information</i> out. We're no experts."
     
-    NICK: "..." //frustrated expression?
+    NICK: "..." 
+    &PORTRAIT_nick_nickangry
     
     NOUR: "Oh well! Let's move on."
         -> END
