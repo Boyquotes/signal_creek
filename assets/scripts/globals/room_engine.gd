@@ -46,16 +46,15 @@ func change_current_room(previousRoom, newRoom, viewport: Viewport) -> void:
 	
 	PlaneManager = newRoom.get_plane_manager()
 	PlaneManager.set_correct_world()
+	
+	if Globals.Rina and newRoom == Rooms[Globals.Rina.next_room_index]:
+		Globals.Rina.place_rina_in_new_room(newRoom)
 
 
 # Move partyObject from previousRoom to newRoom
 func move_party_to_new_room(partyObject: PartyManager, previousRoom, newRoom) -> void:
 	previousRoom.remove_party(partyObject)
 	newRoom.place_party(partyObject)
-	
-	if Globals.Rina and newRoom == Rooms[Globals.Rina.next_room_index]:
-		Globals.Rina.place_rina_in_new_room()
-		print("rina moved")
 
 
 # Move objectNode from previousRoom to newRoom

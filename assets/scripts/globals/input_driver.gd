@@ -7,7 +7,6 @@ export var _elevator_focus_position : Vector2 = Vector2(344, 168)
 export var _leader_switching_enabled = false
 
 var _closest_object = null
-var _can_interact = false
 var _camera_normal_position = null
 var _elevator_tutorial = false
 
@@ -18,14 +17,14 @@ func _ready():
 
 
 func _process(_delta):
+	if Input.is_action_just_pressed("open_menu"):
+		Globals.PauseMenu.toggle_visible()
+		
 	if Globals.GameState == Globals.GameStates.START:
 		if Input.is_action_just_pressed("interact"):
 			Globals.StartScreen.start_game()
 		
 	elif Globals.GameState == Globals.GameStates.GAME:
-		if Input.is_action_just_pressed("open_menu"):
-			Globals.PauseMenu.toggle_visible()
-			
 		if Input.is_action_just_pressed("reset"):
 			reset_game()
 		
@@ -65,6 +64,9 @@ func _process(_delta):
 						
 					
 		elif Globals.GameMode == Globals.GameModes.WALK:
+			if Input.is_action_just_pressed("toggle_map"):
+				Globals.FloorMap.toggle_map()
+		
 			if !Globals.DevTools.typing_knot_name:
 				check_input_character_movement()
 			
@@ -72,23 +74,18 @@ func _process(_delta):
 			if _leader_switching_enabled:
 				if Input.is_action_just_pressed("party_leader_switch") and _leader_switching_enabled:
 					Globals.PartyObject.change_leader()
-	#
-				if _closest_object:
-					if _closest_object.get_overlapping_bodies().size() > 0:
-						_closest_object.call_deferred("_check_if_can_interact")
 						
 			_camera_normal_position = Globals.PartyObject.get_leader().get_global_position()
 			Globals.GameRoot.set_camera_following_vector(_camera_normal_position)
 				
-			if _can_interact:
-				if Input.is_action_just_pressed("interact"):
-					if Globals.GameMode == Globals.GameModes.WALK:
-						for character in Globals.PartyObject.characterObjects:
-							character.animate_idle()
-							
-						Globals.GameMode = Globals.GameModes.TALK
-						Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
-						Globals.DialogueBox.background_panel_node.set_visible(true)
+			if Input.is_action_just_pressed("interact") and Globals.Nour in _closest_object.get_overlapping_bodies():
+				if Globals.GameMode == Globals.GameModes.WALK:
+					for character in Globals.PartyObject.characterObjects:
+						character.animate_idle()
+						
+					Globals.GameMode = Globals.GameModes.TALK
+					Globals.DialogueBox.open_at_knot(_closest_object._get_object_name())
+					Globals.DialogueBox.background_panel_node.set_visible(true)
 				
 			if Globals.Elevator && Globals.Elevator.focus_camera_on_elevator == true:
 				Globals.GameRoot.set_camera_following_vector(_elevator_focus_position)
@@ -126,11 +123,6 @@ func reset_game() -> void:
 # Closest Interactive object available for interaction
 func set_closest_object(objectName: Interactive) -> void:
 	_closest_object = objectName
-
-
-# Whether player can interact with objects
-func set_can_interact(condition: bool) -> void:
-	_can_interact = condition
 
 
 func _on_StartButton_pressed() -> void:
