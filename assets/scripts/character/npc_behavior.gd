@@ -69,6 +69,13 @@ func shlorp_in():
 	_shlorping_target.material.set_shader_param("progress", 1.0)
 	_shlorping_in = true
 	visibility = true
+	
+	# For the position of the center, get the positoin of self relative to camera
+	var shlorPos =  Globals.PartyCamera.get_global_position() - self.get_global_position()
+	shlorPos *= 0.01
+	Globals.GameRoot.set_camera_following_vector(self.get_global_position()) #add the fuckin uhh camera offset
+	Globals.GameOverlay.play_shlorp_shockwave(Vector2(0.5, 0.5))
+	
 	if not _override_set_monitoring:
 		self.set_monitoring(true)
 
@@ -79,6 +86,10 @@ func shlorp_out() -> void:
 	print("shlorping out")
 	_shlorping_out = true
 	visibility = false
+	
+	Globals.GameRoot.set_camera_following_vector(self.get_global_position())
+	Globals.GameOverlay.play_shlorp_shockwave(Vector2(0.5, 0.5))
+	
 	if not _override_set_monitoring:
 		self.set_monitoring(false)
 
