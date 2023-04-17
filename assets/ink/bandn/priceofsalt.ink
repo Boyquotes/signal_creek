@@ -1,29 +1,77 @@
 == priceofsalt ==
 
-    Nour finds a massive stack of books. They're all copies of the same novel, titled The Price of Salt.
+    It's a stack of books. They're all copies of the same novel, titled <i>The Price of Salt</i>.
     
-    NOUR: Oh hey, nice to see they still have these here.
+    {!priceofsalt_convo: -> priceofsalt_convo}
     
-    NOUR: I used to hide one with a bookmark on one of the shelves so I'd always know where it was and where I left off when I'd come back to read it. I was so scared someone would buy it.
-    
-    NICK: Wait...!! Is that what you'd do when you'd leave me and Sami in the food court?!
-    
-    NOUR: ...Uhhhh...
-    
-    NOUR: ...Maybe.
-    
-    NICK: HAHA! I'm gonna tell Sami!!
-    
-    NOUR: I mean, go ahead? What's he gonna do about it anyways? The mall's closed!
-    
-    NOUR: Well. Usually.
-    
-    NICK: I'm still gonna tell him. We always wondered where you went. Why did you have to sneak away to read it?
-    
-    NOUR: It's, uh... It's a queer book. So I didn't want anyone to know I was reading it.
+    -> END
 
-    NOUR: I don't care anymore, though. Obviously, or I wouldn't be telling you.
+=== priceofsalt_convo ===
+
+    &PORTRAIT_nour_nourneutral
     
-    NICK: Huh. Gotta admit, very sneaky! Never would've guessed.
+    NOUR: "I remember this book. Never had the guts to purchase one or be seen with it."
+    
+    NOUR: "I used to hide one with a bookmark on one of the shelves so I'd always know where it was and where I left off when I'd come back to read it."
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "I was so scared someone would buy the one I was reading."
+
+    &PORTRAIT_nick_nickpondering 
+    
+    NICK: "Wait..."
+    
+    &PORTRAIT_nick_nickshocked
+    
+    NICK: "Is that what you'd do when you'd leave me and Sami in the food court?!"
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "Uhhh..."
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "... Maybe."
+    
+    &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "HAHA! I'm gonna tell Sami."
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: "I mean, go ahead? What's he gonna do about it anyways? The mall's closed!"
+
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: "Well. Usually."
+    
+    &PORTRAIT_nick_nickneutral
+    
+    NICK: "I'm still gonna tell him. We always wondered where you went, and he deserves the truth too!" 
+    
+    &PORTRAIT_nick_nickpondering 
+    
+    NICK: "Why did you have to sneak away to read it?
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "It's, uh... It's a queer book. So I didn't want anyone to know I was reading it."
+    
+    &PORTRAIT_nour_nourneutral
+
+    NOUR: "I don't care anymore, though. Obviously, or I wouldn't be telling you all this."
+    
+    &PORTRAIT_nick_nickneutral
+    
+    NICK: "Huh... You're pretty good at sneaking off, aren't ya?" 
+    
+    &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "If I were you, I would've gone to TopicSpot and played games... yet you used your powers for NERD stuff!"
+    
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: "Of couse you would think that."
     
     -> END
