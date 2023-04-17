@@ -71,9 +71,8 @@ func shlorp_in():
 	visibility = true
 	
 	# For the position of the center, get the positoin of self relative to camera
-	var shlorPos =  Globals.PartyCamera.get_global_position() - self.get_global_position()
-	shlorPos *= 0.01
-	Globals.GameRoot.set_camera_following_vector(self.get_global_position()) #add the fuckin uhh camera offset
+	var camPosWithOffset = Vector2(self.get_global_position().x + Globals.DialogueBox.camera_offset_dialogue, self.get_global_position().y)
+	Globals.GameRoot.set_camera_following_vector(camPosWithOffset) #add the fuckin uhh camera offset
 	Globals.GameOverlay.play_shlorp_shockwave(Vector2(0.5, 0.5))
 	
 	if not _override_set_monitoring:
@@ -87,8 +86,17 @@ func shlorp_out() -> void:
 	_shlorping_out = true
 	visibility = false
 	
-	Globals.GameRoot.set_camera_following_vector(self.get_global_position())
-	Globals.GameOverlay.play_shlorp_shockwave(Vector2(0.5, 0.5))
+	var camPosWithOffset = Vector2(self.get_global_position().x + Globals.DialogueBox.camera_offset_dialogue, self.get_global_position().y)
+	
+
+	if Globals.Elevator and Globals.Elevator.focus_camera_on_elevator:
+		Globals.GameOverlay.play_shlorp_shockwave(Vector2(0.25, 0.25))
+		
+	else:
+		Globals.GameRoot.set_camera_following_vector(camPosWithOffset) #add the fuckin uhh camera offset
+		Globals.GameOverlay.play_shlorp_shockwave(Vector2(0.5, 0.5))
+	
+	
 	
 	if not _override_set_monitoring:
 		self.set_monitoring(false)
