@@ -33,6 +33,7 @@ INCLUDE hallway/weirdtree.ink
 INCLUDE hallway/fountain.ink
 INCLUDE hallway/timbertims.ink
 INCLUDE hallway/wertoys.ink
+INCLUDE hallway/void.ink
 
 INCLUDE topicspot/static_topicspot.ink
 INCLUDE topicspot/consoles.ink
