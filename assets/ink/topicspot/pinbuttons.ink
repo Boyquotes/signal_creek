@@ -29,6 +29,8 @@
     
     Ms. Suwan looks thoughtful.
     
+    &PORTRAIT_nour_nourneutral
+    
         * "You seem to have something on your mind.["] I'm guessing you relate to that in a similar way that I do?"
         
             &PORTRAIT_ms. suwan_mssuwanneutral
@@ -116,13 +118,15 @@
     
     NOUR: "Cool. I, uh, mean... Sounds good."
     
-    &PORTRAIT_nick_nickneutral
+    &PORTRAIT_nick_nicksmallsmile
     
     NICK: "Ooh, they have <i>Aple Quest</i> pins, too!"
 
     &PORTRAIT_nour_nourpondering
     
     NOUR: "Didn't my brother get you one of those for your birthday?"
+    
+    &PORTRAIT_nick_nickbigsmile
     
     NICK: "Yep. Pins are the best!"
     
