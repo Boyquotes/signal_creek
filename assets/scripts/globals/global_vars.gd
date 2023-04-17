@@ -15,6 +15,7 @@ var GameRoot = null
 var DevTools = null
 var PauseMenu = null
 var StartScreen = null
+var FloorMap = null
 
 var GameMode = GameModes.WALK
 var CurrentWorld = Worlds.DREAM

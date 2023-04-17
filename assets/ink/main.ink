@@ -1,5 +1,7 @@
 VAR currentPartyChar = "nick"
 VAR currentWorld = "dream"
+VAR firstLightCharacter = "Nick"
+VAR firstLightPronoun = "he's"
 
 INCLUDE bandn/static_bandn.ink
 INCLUDE bandn/bookstack.ink
@@ -66,9 +68,7 @@ INCLUDE bandn/computerdesk.ink
     
 == first_light ==
 
-    SFX ELEVATOR LIGHT CHIME PLAYS
-
-    NOUR: "What was that noise?"
+    NOUR: "...What was that noise?"
     
     MS. SUWAN: "It sounded like... an elevator chime."
     
@@ -77,7 +77,6 @@ INCLUDE bandn/computerdesk.ink
     &FDEOUT
     &FIRSTLIGHT
     &PAUSE_1.0
-    // &FDEIN
     
     &EMOTE_NICK_UpIdle
     
@@ -85,19 +84,19 @@ INCLUDE bandn/computerdesk.ink
     
     &EMOTE_NOUR_UpIdle
     
-    NICK: "Woah, look at that! One of the weird lights turned <b>on</b>!"
-    
-    NOUR: "I could've sworn the elevator broke when it brought us here."
-    
-    NICK: "I mean, it definitely still <i>looks</i> broken..."
+    NICK: "Woah, look at that! One of the weird lights turned back on!"
     
     MS. SUWAN: "This is becoming stranger and stranger. What made it light up in the first place?"
     
-    NICK: "I dunno, but we must've done <i>something</i> to make the elevator work again!"
+    NICK: "I dunno, but we must've done <i>something</i> to make the elevator work again."
+    
+    NICK: "Was it that weird girl we saw earlier?"
+    
+    NOUR: <i>It couldn't have been Rina. I don't see her.</i>
     
     NICK: "WAIT..."
     
-    NICK: "The mall... must be LISTENING. It knows what we're doing!"
+    NICK: "The mall must be LISTENING. It knows what we're doing!"
     
     MS. SUWAN: "Again with the weird magical conclusions."
     
@@ -107,22 +106,30 @@ INCLUDE bandn/computerdesk.ink
     
     NOUR: "Well, whatever's happened, we must've done something right."
     
+    NOUR: <i>Rina said we trapped ourselves in our pasts...</i>
+    
+    NOUR: <i>...and it's up to us to move on.</i>
+    
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: <i>When we were talking earlier, did {firstLightCharacter} reveal something {firstLightPronoun} hung up on?</i>
+    
+    &PORTRAIT_nour_nourneutral
+    
     NOUR: "We should keep an eye on this elevator and the lights as we keep exploring."
     
     -> END
     
 == light_on ==
 
+    An elevator <i>ding</i> is heard from the hallway.
+
     {
         -!first_light:
             -> first_light
     }
     
-    SFX ELEVATOR LIGHT CHIME PLAYS
-    
-    //would be cool if this text was in a different color. 
-    
-    Another light turned on.
+    Sounds like another elevator light turned on.
     
     -> END
     

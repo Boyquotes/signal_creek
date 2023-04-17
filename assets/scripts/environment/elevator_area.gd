@@ -16,15 +16,10 @@ func _ready():
 # When a body enters self, check if player can interact
 func _on_InteractArea_body_entered(body) -> void:
 	if body == Globals.PartyObject.get_leader():
-		_check_if_can_interact()
-		
 		focus_camera_on_elevator = true
 
 
 # When a body exits self, check if player can interact
 func _on_InteractArea_body_exited(body) -> void:
-	if Globals.PartyObject and body == Globals.PartyObject.get_leader():
-		emit_signal("cannot_interact")
-		_check_if_can_interact()
-		
+	if Globals.PartyObject and body == Globals.PartyObject.get_leader():		
 		focus_camera_on_elevator = false
