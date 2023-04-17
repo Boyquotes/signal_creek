@@ -100,15 +100,8 @@ void fragment() {
 	vec4 normcolor = COLOR;
 	vec4 suscolor;
 	vec4 usingcolor;
-	
-	
-//	vec4 tex = texture(TEXTURE, UV);
-	
 
-	
-	
 	// sussy shader
-	
 	if (sussy){
 	
 		vec2 texture_resolution = 1.0 / TEXTURE_PIXEL_SIZE;
@@ -136,7 +129,6 @@ void fragment() {
 	}
 	
 	//OUTLINE
-	
 	if ((COLOR.a > 0.0) == inside && hasContraryNeighbour(uv, TEXTURE_PIXEL_SIZE, TEXTURE)) {
 		usingcolor.rgb = inside ? mix(usingcolor.rgb, color.rgb, color.a) : color.rgb;
 		usingcolor.a += (1.0 - COLOR.a) * color.a;
@@ -155,12 +147,4 @@ void fragment() {
 	usingcolor.a *= d2;
 	
 	COLOR = usingcolor;
-//
-//	vec2 texture_resolution = 1.0 / TEXTURE_PIXEL_SIZE;
-//	vec2 within_texture_pixel = floor(UV * texture_resolution);
-//
-//	if(sin(time) > random_vec2(within_texture_pixel))
-//		COLOR = usingcolor;
-//	else
-//		COLOR = vec4(0.0,0.0,0.0,0.0);
 }"
