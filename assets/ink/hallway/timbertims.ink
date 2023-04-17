@@ -32,11 +32,11 @@
     
     NICK: "SAME! I had mine for a month before I had to give it to my younger brother."
     
-    &PORTRAIT_mssuwan_mssuwanneutral
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "I recieved a pair as a gift once, although they aren't my style in the slightest."
     
-    &PORTRAIT_mssuwan_mssuwanpondering
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "I suppose that speaks to how successful the marketing was."
     
@@ -66,7 +66,7 @@
     
     NOUR: "What the f-"
     
-    &PORTRAIT_mssuwan_mssuwannervous
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "Can we help you?"
     
@@ -124,7 +124,7 @@
     
     NOUR: "Are you even listening to me anymore?"
     
-    &PORTRAIT_mssuwan_mssuwanangry
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "I believe this man is under the influence. We should leave him alone."
     
@@ -146,11 +146,11 @@
     
     NOUR: "Uh... okay, whatever that means."
     
-    &PORTRAIT_mssuwan_mssuwanneutral
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "Even if you're being honest, I was under the impression the Timbertims fad died out months ago."
     
-    &PORTRAIT_mssuwan_mssuwanpondering
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "I've hardly noticed anyone with this brand at all recently."
 
@@ -223,11 +223,11 @@
     
     NOUR: "I sure did."
     
-    &PORTRAIT_mssuwan_mssuwanpondering
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "I suppose that's how fads work."
     
-    &PORTRAIT_mssuwan_mssuwannervous
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "But I agree, it was strange. Especially considering how unpleasant those shoes are..."
     
@@ -239,7 +239,7 @@
     
     NICK: "Uh, she meant - <i>totally</i> pleasant!"
     
-    &PORTRAIT_mssuwan_mssuwanangry
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "I certainly did not."
     

@@ -22,11 +22,11 @@
     
     NOUR: "Maybe this place isn't in reality at all..."
     
-    &PORTRAIT_mssuwan_mssuwanannoyed
+    &PORTRAIT_ms. suwan_mssuwanannoyed
     
     MS. SUWAN: "I refuse to believe that."
     
-    &PORTRAIT_mssuwan_mssuwanpondering
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "But this is starting to make very little sense. Not that this place made any..."
     
@@ -38,7 +38,7 @@
     
     NICK: "AHHH! COSMIC HORRORS BEYOND HUMAN COMPREHENSION!!!"
     
-    &PORTRAIT_mssuwan_mssuwanneutral
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "Perhaps not a cosmic horror—it doesn't appear to be too dangerous."
     
@@ -50,7 +50,7 @@
     
     NOUR: "DON'T."
     
-    &PORTRAIT_mssuwan_mssuwannervous 
+    &PORTRAIT_ms. suwan_mssuwannervous 
     
     MS. SUWAN: "Please do not do that. <i>Please.</i>"
     

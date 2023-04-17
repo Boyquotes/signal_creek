@@ -2,7 +2,7 @@
 
     It's a stack of books. They're all copies of the same novel, titled <i>The Price of Salt</i>.
     
-    {!priceofsalt_convo: -> priceofsalt_convo}
+    {-!priceofsalt_convo: -> priceofsalt_convo}
     
     -> END
 

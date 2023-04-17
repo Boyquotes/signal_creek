@@ -3,7 +3,7 @@
     
     It's a display of buttons and pins of all kinds. Most are adorned with pop culture references, band insignia, and different pride flags. 
 
-    {!pinbuttons_convo: -> pinbuttons_convo}
+    {-!pinbuttons_convo: -> pinbuttons_convo}
     
     -> END
 
@@ -11,43 +11,53 @@
     
     Nour picks up a lesbian flag pin and flips it with her thumb.
     
-    &PORTRAIT_mssuwan_mssuwanrealization
+    &PORTRAIT_ms. suwan_mssuwanrealization
     
     MS. SUWAN: "I never thought flags like these would be sold in such large franchise stores."
     
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: "Honestly, my thirteen-year-old self would be just as surprised."
     
-    &PORTRAIT_nour_nourpondering
+    &PORTRAIT_nour_noursad
     
     NOUR: "She'd be surprised by a lot, but... especially this."
     
     MS. SUWAN: "Hm."
     
-    &PORTRAIT_mssuwan_mssuwanpondering
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     Ms. Suwan looks thoughtful.
     
         * "You seem to have something on your mind.["] I'm guessing you relate to that in a similar way that I do?"
         
-            &PORTRAIT_mssuwan_mssuwanneutral
+            &PORTRAIT_ms. suwan_mssuwanneutral
         
             MS. SUWAN: "I have my own reasons. None that I feel like sharing."
             
             &PORTRAIT_nour_nournervous
         
-            NOUR: "And I won't make you. But it can be helpful to talk things through, especially with someone who might understand."
+            NOUR: "And I won't make you. But it can be helpful to talk things through."
+            
+            NOUR: "Especially with someone who might understand."
             
             MS. SUWAN: "And what makes it seem as though I'd want to?"
             
-            &PORTRAIT_mssuwan_mssuwanannoyed
+            &PORTRAIT_ms. suwan_mssuwanannoyed
             
             MS. SUWAN: "You're a child. Our experiences are not the same."
+            
+            &PORTRAIT_nour_nournervous
         
             NOUR: "I'm not a child, but of course they're not."
             
+            &PORTRAIT_nour_noursad
+            
             NOUR: "No pressure. I was only wondering if it'd help you the way it helps me."
             
-            NOUR: "Sometimes you just need to talk things through. A good listener goes a long way, too."
+            &PORTRAIT_nour_noursad
+            
+            NOUR: "Sometimes you just need to talk things through. A good listener goes a long way."
             
             &PORTRAIT_nour_nourneutral
             
@@ -60,7 +70,7 @@
         
         * "Do you vibe with any of these?["] Maybe one of them speaks to you?"
             
-            &PORTRAIT_mssuwan_mssuwanneutral
+            &PORTRAIT_ms. suwan_mssuwanneutral
             
             MS. SUWAN: "... No."
             
@@ -78,7 +88,7 @@
             
             NOUR: "I could explain some of them, if you'd like?"
             
-            &PORTRAIT_mssuwan_mssuwanannoyed
+            &PORTRAIT_ms. suwan_mssuwanannoyed
             
             MS. SUWAN: "I'm not going to talk about it. Stop asking questions."
             
@@ -90,9 +100,9 @@
             
             Ms. Suwan looks at the pins again, and her expression softens.
     
-    - MS. SUWAN: "...Hm."
+    - MS. SUWAN: "... Hm."
     
-    &PORTRAIT_mssuwan_mssuwanneutral
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "There's a time and place for everything. This isn't it."
     
