@@ -78,9 +78,9 @@ void fragment() {
 		vec2 within_texture_pixel = floor(UV * texture_resolution);
 		suscolor = texture(TEXTURE, UV);
 		
-		vec2 rdisp = r_displacement * random_time(SCREEN_UV) - 0.5 * intensity;
-		vec2 gdisp = g_displacement * random_time(SCREEN_UV) - 0.5 * intensity;
-		vec2 bdisp = b_displacement * random_time(SCREEN_UV) - 0.5 * intensity;
+		vec2 rdisp = r_displacement * random_time(within_texture_pixel) - 0.5 * intensity;
+		vec2 gdisp = g_displacement * random_time(within_texture_pixel) - 0.5 * intensity;
+		vec2 bdisp = b_displacement * random_time(within_texture_pixel) - 0.5 * intensity;
 		
 		float r = texture(TEXTURE, UV + vec2(TEXTURE_PIXEL_SIZE * rdisp), 0.0).r;
 		float g = texture(TEXTURE, UV + vec2(TEXTURE_PIXEL_SIZE * gdisp), 0.0).g;
@@ -98,10 +98,6 @@ void fragment() {
 		usingcolor = normcolor
 	}
 	
-	
-	
-	
-
 	
 	if ((COLOR.a > 0.0) == inside && hasContraryNeighbour(uv, TEXTURE_PIXEL_SIZE, TEXTURE)) {
 		usingcolor.rgb = inside ? mix(usingcolor.rgb, color.rgb, color.a) : color.rgb;

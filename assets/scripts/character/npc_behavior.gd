@@ -63,6 +63,8 @@ func set_monitoring_ready():
 
 # Appear from the void (visually)
 func shlorp_in():
+	print(_shlorping_target)
+	print("shlorping in")
 	_shlorping_target.set_visible(true)
 	_shlorping_target.material.set_shader_param("progress", 1.0)
 	_shlorping_in = true

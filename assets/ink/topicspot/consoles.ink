@@ -10,6 +10,9 @@
     - wertoys_find_prince:
         -> nourplaysaplequest
         
+    - consoles_start_aplequest:
+        -> consoles_start_aplequest_repeat
+        
     - aplequestguide_after_bookshelf_fightstarts:
         -> consoles_start_aplequest
         
@@ -114,7 +117,15 @@
 
     -> END
 
-=== consoles_start_aplequest ===
+== consoles_start_aplequest_repeat ==
+
+    NOUR: <i>Emperor Evercrisp said we've gotta find the four Aple Council members, and then the Prince.</i>
+    
+    NOUR: <i>They should be hidden somewhere in the hallway.</i>
+    
+    -> END
+
+== consoles_start_aplequest ==
 
         &PORTRAIT_nour_noursmile
         
