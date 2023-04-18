@@ -70,12 +70,14 @@ script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
-_shlorping_target_path = NodePath("../Sprite")
+_shlorping_target_path = NodePath("../AnimationPlayer")
 _physical_collider_path = NodePath("../CollisionShape2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 position = Vector2( 0, -9.5 )
 shape = SubResource( 22 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]

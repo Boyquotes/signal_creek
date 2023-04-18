@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/scripts/character/npc_brody.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/character/npc_chad.gd" type="Script" id=2]
@@ -77,6 +77,93 @@ extents = Vector2( 21.5, 6 )
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 25, 11.25 )
 
+[sub_resource type="Animation" id=31]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ChadSprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BrodySprite:material:shader_param/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KristySprite:material:shader_param/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "ShlorpOutBrody"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BrodySprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "ShlorpOutChad"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ChadSprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "ShlorpOutKristy"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("KristySprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+
 [node name="ChadBrodyKristy" type="RigidBody2D"]
 mode = 1
 __meta__ = {
@@ -128,7 +215,8 @@ shape = SubResource( 23 )
 position = Vector2( 20, 0 )
 monitoring = false
 script = ExtResource( 2 )
-_shlorping_target_path = NodePath("../ChadSprite")
+_shlorping_target_path = NodePath("../AnimationPlayer")
+_shlorp_animation_name = "ShlorpOutChad"
 _physical_collider_path = NodePath("../CollisionShape2D")
 _knot_name = "chadbrodykristy"
 _final_knot_name = "chadbrodykristy3"
@@ -143,7 +231,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
-_shlorping_target_path = NodePath("../BrodySprite")
+_shlorping_target_path = NodePath("../AnimationPlayer")
+_shlorp_animation_name = "ShlorpOutBrody"
 _physical_collider_path = NodePath("../CollisionShape2D")
 _knot_name = "chadbrodykristy"
 _final_knot_name = "chadbrodykristy3"
@@ -157,7 +246,8 @@ position = Vector2( -15, 0 )
 monitoring = false
 script = ExtResource( 3 )
 _disable_interactivity = true
-_shlorping_target_path = NodePath("../KristySprite")
+_shlorping_target_path = NodePath("../AnimationPlayer")
+_shlorp_animation_name = "ShlorpOutKristy"
 _physical_collider_path = NodePath("../CollisionShape2D")
 _knot_name = "chadbrodykristy"
 _final_knot_name = "chadbrodykristy3"
@@ -166,6 +256,12 @@ _override_set_monitoring = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kristy"]
 shape = SubResource( 27 )
 disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 31 )
+anims/ShlorpOutBrody = SubResource( 32 )
+anims/ShlorpOutChad = SubResource( 33 )
+anims/ShlorpOutKristy = SubResource( 34 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
