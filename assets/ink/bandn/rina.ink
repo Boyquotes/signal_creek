@@ -141,7 +141,7 @@
     
     &PAUSE_1.0
 
-    &MOV_RINA_VOID
+    &SHLORP_POOP_Rina_out
 
     NOUR: "..."
     
