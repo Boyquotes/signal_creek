@@ -1,6 +1,6 @@
 == bookshelf ==
 
-    It's a tall bookshelf, stacked with all kinds of books...
+    It's a tall bookshelf filled with many informative books.
     
     Instructional guides, exam prep workbooks, and how-to books for those interested in <i>fun</i> new hobbies!
     
