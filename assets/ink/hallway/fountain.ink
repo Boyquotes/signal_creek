@@ -181,6 +181,8 @@
     FATHER FUJI: "But deep inside he felt so small and weak,"
 
     FATHER FUJI: "Longing for a friend who wouldn't critique."
+    
+    FATHER FUJI: [insert epic lore drop]
 
     &PORTRAIT_nick_nickshocked
     
