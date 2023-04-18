@@ -86,6 +86,9 @@ func shlorp_in():
 	
 	if _physical_collider:
 		_physical_collider.set_deferred("disabled", false)
+		
+	if not _override_set_monitoring:
+		self.set_monitoring(true)
 			
 	Globals.GameOverlay.play_shlorp_shockwave(StaticFunctions.get_pos_on_screen_reverse_lerp(self))
 	
