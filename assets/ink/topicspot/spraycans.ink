@@ -19,32 +19,54 @@
     -> END
 
 == spraycans_start ==
+
+    &PORTRAIT_nick_nicksmallsmile
     
-    NICK: "...Ooh! Hey, guys! Think you could buy me one of these?"
+    NICK: "... Ooh! Hey, guys! Think you could buy me one of these?"
     
     NICK: "I'll pay you back later." 
     
-    NOUR: "...I didn't know you like to spray paint."
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "... I didn't know you like to spray paint."
+    
+    &PORTRAIT_nick_nicknervous
     
     NICK: "Well, I don't know how..."
     
     &PORTRAIT_nour_nourannoyed
 
-    NOUR: "...Then what are you going to do with these?"
+    NOUR: "... Then what are you going to do with these?"
+    
+    &PORTRAIT_nick_nickannoyed
     
     NICK: "It's like... <i>none</i> of your business. Just lay off."
     
+    &PORTRAIT_ms. suwan_mssuwanannoyed
+    
     MS. SUWAN: "You want to inhale it, then?"
+    
+    &PORTRAIT_nour_nourannoyed
     
     NOUR: "Oh, he wouldn't. No way."
     
+    &PORTRAIT_ms. suwan_mssuwanannoyed
+    
     MS. SUWAN: "There are <i>many</i> reasons why entrusting a child with these is a terrible idea."
+    
+    &PORTRAIT_nick_nickangry
     
     NICK: "Who <i>cares</i> about that? I just want to have a little fun, geez!"
     
+    &PORTRAIT_nour_nourshocked
+    
     NOUR: "NICK!"
     
+    &PORTRAIT_nick_nickneutral
+    
     NICK: "<i>Please</i>...? I'll pay you back afterwards, promise!"
+    
+    &PORTRAIT_nour_mssuwanannoyed
     
     NOUR: "I'm going to have to agree with Ms. Suwan here."
     

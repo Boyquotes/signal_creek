@@ -1,8 +1,8 @@
 == timbertims ==
     
-    This storefront used to be <i>Timbertims</i>, a shoe store. It sold exclusively bright white toe shoes with red soles.
+    It's Timbertims, a store that exclusively sold bright white toe shoes with red soles.
     
-    Despite its off-putting decor, it was extremely popular—everyone in Signal Creek seems to have owned a pair of Timbertims at one point.
+    Despite its off-putting decor, everyone seems to have owned a pair of Timbertims at one point.
     
     {
         - timbertimsvisited:
@@ -42,7 +42,7 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Right... what was that slogan, again? That thing was a real earworm. Even if it made no sense."
+    NOUR: "Right... what was that slogan, again? That thing was a real earworm."
 
     &PORTRAIT_nick_nicksmallsmile
     
@@ -62,7 +62,7 @@
     
     NICK: "Whoa-!"
     
-    &PORTRAIT_nour_nourshocked
+    &PORTRAIT_nour_nournervous
     
     NOUR: "What the f-"
     
@@ -80,13 +80,14 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: <i>Looks like this guy's the Timbertims manager. But why is he even here if the store is closed...?</i>
+    NOUR: <i>Looks like this guy's the Timbertims manager.</i>
+    
+    NOUR: <i>But why is he even here if the store is closed...?</i>
     
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>Either way, I guess it might be worth it to speak to him.</i>
-    
-    NOUR:
+
         + [Be polite] -> timbertimspol
         + [Be suspicious] -> timbertimssus
     
@@ -98,15 +99,21 @@
 
     NOUR: "Excuse me, but do you know anything about how to get out of this mall?"
     
-    TIM: "Why, yes! I do. You need only put on a pair of Timbertims and you may go as you please~"
+    TIM: "Why, yes! I do."
+    
+    TIM: "Wear some Timbertims, and you may go as you please~"
     
     &PORTRAIT_nour_nourannoyed
     
-    NOUR: "... I don't exactly have time for new shoes right now. I just need to know how to leave."
+    NOUR: "... I don't exactly have time for new shoes right now."
+    
+    NOUR: "I just need to know how to leave."
     
     TIM: "Leaving is a good idea. I'm planning to leave soon, myself."
     
-    TIM: "Move to some new town, settle down, meet the love of my life, have a bunch of children who look just like me..."
+    TIM: "Move to some new town, settle down..."
+    
+    TIM: "Meet the love of my life, raise a family of timlings..."
     
     TIM: "My life is both successful yet lonely..."
     
@@ -116,7 +123,9 @@
     
     TIM: "Maybe open a <i>Timbertims</i> there too and sell them en masse..." 
     
-    TIM: "Or maybe I should leave my small business days behind... I've always wanted to be a politician."
+    TIM: "Or maybe I should leave my small business days behind..."
+    
+    TIM: "I've always wanted to be a politician."
     
     TIM: "Or a god!"
     
@@ -138,17 +147,21 @@
 
     &PORTRAIT_nour_nourneutral
 
-    NOUR: "Um, excuse me, but what are you even doing here? Hasn't your store been closed down for weeks?"
+    NOUR: "Um, excuse me, but what are you even doing here?"
     
-    TIM: "As long as somebody in the town of Signal Creek is wearing a pair of <i>Timbertims</i>, I can stay as long as I want."
+    NOUR: "Hasn't your store been closed down for weeks?"
+    
+    TIM: "As long as somebody in Signal Creek is wearing a pair of <i>Timbertims</i>..."
+    
+    TIM: "I can stay as long as I want."
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: "Uh... okay, whatever that means."
+    NOUR: "Uh... okay. Whatever that means."
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
-    MS. SUWAN: "Even if you're being honest, I was under the impression the Timbertims fad died out months ago."
+    MS. SUWAN: "I was under the impression the <i>Timbertims</i> fad died out months ago."
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
@@ -156,7 +169,7 @@
 
     &PORTRAIT_nick_nickneutral
     
-    NICK: "Oh... actually, my brother still wears Timbertims." 
+    NICK: "Oh... actually, my brother still wears <i>Timbertims</i>." 
 
     &PORTRAIT_nick_nicksad
     
@@ -164,19 +177,23 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "I mean - my mom's been planning on buying us new ones soon, but she hasn't had the time yet to take us shopping."
+    NICK: "I mean - my mom's been planning on buying us new ones soon. 
     
-    TIM: "Indeed, Nick's younger brother's little feetsies are the last sources of power..."
+    NICK: "She hasn't had the time yet to take us shopping."
+    
+    TIM: "Nick's brother's little feetsies are the last sources of power..."
     
     &PORTRAIT_nour_nournervous
     
     NOUR: "Can you please stop saying 'little feetsies'?"
     
-    TIM: "But if my savior is truly planning to exchange his Tims for some inferior shoes, I fear my time in Signal Creek is limited..."
+    TIM: "But if my savior exchanged his Tims for some inferior shoes..."
+    
+    TIM: "I fear my time in Signal Creek is limited..."
     
     MS. SUWAN: "On that topic, have you ever found a way to leave this mall?"
     
-    TIM: "A pair of </i>Timbertims</i> may show you the path to salvation!"
+    TIM: "A pair of <i>Timbertims</i> may show you the path to salvation!"
     
     TIM: "Salvation being an escape from this mall...?"
     
@@ -186,7 +203,9 @@
     
     TIM: "Leaving is a good idea. I'm planning to leave soon, myself."
     
-    TIM: "Move to some new town, settle down, meet the love of my life, have a bunch of children who look just like me..."
+    TIM: "Move to some new town, settle down..."
+    
+    TIM: "Meet the love of my life, raise a family of timlings..."
     
     TIM: "My life is both successful yet lonely..."
     
@@ -196,7 +215,9 @@
     
     TIM: "Maybe open a <i>Timbertims</i> there too and sell them en masse..." 
     
-    TIM: "Or maybe I should leave my small business days behind... I've always wanted to be a politician."
+    TIM: "Or maybe I should leave my small business days behind..."
+    
+    TIM: "I've always wanted to be a politician."
     
     TIM: "Or a god!"
     
@@ -206,7 +227,9 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: <i>Something tells me he isn't going to help us at all. Might as well leave him alone.</i>
+    NOUR: <i>Something tells me he isn't going to help us at all.</i>
+    
+    NOUR: <i>Might as well leave him alone.</i>
 
     TIM SHLORPS OUT
 
@@ -217,7 +240,9 @@
 
     &PORTRAIT_nick_nickpondering
 
-    NICK: "Isn't it weird how <i>everyone</i> was wearing Tims for like a week? Like, did anyone else notice that?"
+    NICK: "Isn't it weird how <i>everyone</i> was wearing Tims for like a week?"
+    
+    NICK: "Like, did anyone else notice that?"
     
     &PORTRAIT_nour_nourneutral
     
@@ -229,7 +254,9 @@
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "But I agree, it was strange. Especially considering how unpleasant those shoes are..."
+    MS. SUWAN: "But I agree—it was strange."
+    
+    MS. SUWAN: "Especially considering how unpleasant those shoes are..."
     
     TIM SHLORPS IN
     
