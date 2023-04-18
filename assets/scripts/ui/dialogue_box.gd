@@ -373,6 +373,7 @@ func clear_and_reset_ui():
 	if Globals.PartyObject:
 		for character in Globals.PartyObject.characterObjects:
 			character.reset_speed()
+			character.following_vector_queue = [character.get_global_position()] 
 			
 		Globals.SpeechBubble.set_visible(false)
 		
@@ -435,6 +436,8 @@ func find_current_speaker_position():
 			currentSpeakerNode = Globals.EmperorEvercrisp
 		"earl earligold":
 			currentSpeakerNode = Globals.EarlEarligold
+		"kannika":
+			currentSpeakerNode = Globals.Suwan
 		"???":
 			Globals.SpeechBubble.set_visible(false)
 		

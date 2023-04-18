@@ -18,3 +18,10 @@ static func delete_children(node):
 
 #static func inverse_lerp(a: Vector2, b: Vector2, v: Vector2) -> float:
 #	return (v - a) / (b - a)
+
+static func get_pos_on_screen_reverse_lerp(objectOnScreen: Node2D) -> Vector2:
+	var positionOnScreen = objectOnScreen.get_global_transform_with_canvas().get_origin()
+	var lerpX = inverse_lerp(0, 322, positionOnScreen.x)
+	var lerpY = inverse_lerp(0, 182, positionOnScreen.y)
+	
+	return Vector2(lerpX, 1 - lerpY + 0.1)

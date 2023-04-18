@@ -50,10 +50,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.8, 1.1, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 1.0, 0.0 ]
+"values": [ 1.0, 0.187, 0.0935, 0.0 ]
 }
 
 [sub_resource type="StyleBoxFlat" id=4]
@@ -93,7 +93,6 @@ tracks/0/keys = {
 [node name="Game" type="Node2D"]
 process_priority = 1
 script = ExtResource( 2 )
-testing_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )

@@ -15,13 +15,17 @@ var next_room_index = 3 # store the next room for whenever the player is actuall
 var _next_position
 
 
-
 func _ready():
 	Globals.Rina = self
 	# SAVE SYSTEM: Keep track of rina's current state in ink
 	self.get_parent().set_global_position(rina_positions.get(current_position))
 	set_monitoring_ready()
-
+	
+	if is_visible:
+		_shlorping_target.play("Visible")
+		
+	else:
+		_shlorping_target.play("NotVisible")
 
 # change states (starting knot name)
 # newPosition: String name of the new position, passed from Ink
@@ -71,28 +75,20 @@ func place_rina_in_new_room(newRoom):
 		return
 	RoomEngine.move_object_to_new_room(self.get_parent(), RoomEngine.Rooms[current_room_index], newRoom)
 	self.get_parent().set_global_position(rina_positions.get(current_position))
-	print(rina_positions.get(current_position))
+#	print(rina_positions.get(current_position))
 	current_room_index = next_room_index
 	shlorp_in()
 
 
-func shlorp_out():
-	_shlorping_target.play(_shlorp_animation_name)
+func shlorp_in():
+	_shlorping_target.play_backwards(_shlorp_animation_name)
+	is_visible = true
 	
 	if _physical_collider:
-		_physical_collider.set_deferred("disabled", true)
+		_physical_collider.set_deferred("disabled", false)
 			
+	Globals.GameOverlay.play_shlorp_shockwave(StaticFunctions.get_pos_on_screen_reverse_lerp(self))
 	
-	var camPosWithOffset = Vector2(self.get_global_position().x + Globals.DialogueBox.camera_offset_dialogue, self.get_global_position().y)
-	
-
-	if Globals.Elevator and Globals.Elevator.focus_camera_on_elevator:
-		Globals.GameOverlay.play_shlorp_shockwave(Vector2(0.25, 0.25))
-		
-	else:
-		Globals.GameRoot.set_camera_following_vector(camPosWithOffset) #add the fuckin uhh camera offset
-		Globals.GameOverlay.play_shlorp_shockwave(Vector2(0.5, 0.5))
-	
-#	if current_room_index == next_room_index:
-#		self.get_parent().set_global_position(rina_positions.get(current_position))
+	if current_room_index == next_room_index:
+		self.get_parent().set_global_position(rina_positions.get(current_position))
 #		shlorp_in()

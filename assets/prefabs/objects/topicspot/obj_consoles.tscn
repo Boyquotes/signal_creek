@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
@@ -9,10 +9,10 @@
 [ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=7]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 26.5, 6.5 )
+extents = Vector2( 24, 20 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 24, 14 )
+extents = Vector2( 24, 10 )
 
 [sub_resource type="ShaderMaterial" id=29]
 resource_local_to_scene = true
@@ -37,6 +37,21 @@ shader_param/sus_speed = 5.0
 
 [sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 21, 17 )
+
+[sub_resource type="Animation" id=33]
+resource_name = "NotVisible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
 [sub_resource type="Animation" id=31]
 length = 0.001
@@ -68,8 +83,23 @@ tracks/0/keys = {
 "values": [ 1.0, 0.0 ]
 }
 
+[sub_resource type="Animation" id=32]
+resource_name = "Visible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
 [node name="Consoles" type="RigidBody2D" groups=["shiftable"]]
-position = Vector2( 0, -10 )
+position = Vector2( 0, -3 )
 mode = 1
 script = ExtResource( 1 )
 __meta__ = {
@@ -96,6 +126,7 @@ region_enabled = true
 region_rect = Rect2( 21, 13, 50, 52 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -16 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -105,7 +136,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, 3 )
+position = Vector2( 0, -1 )
 shape = SubResource( 22 )
 
 [node name="EmperorEvercrisp" type="Node2D" parent="."]
@@ -150,8 +181,10 @@ shape = SubResource( 28 )
 disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="EmperorEvercrisp"]
+anims/NotVisible = SubResource( 33 )
 anims/RESET = SubResource( 31 )
 anims/Shlorp = SubResource( 30 )
+anims/Visible = SubResource( 32 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]

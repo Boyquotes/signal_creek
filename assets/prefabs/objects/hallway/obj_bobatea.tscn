@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
@@ -11,12 +11,12 @@
 extents = Vector2( 16, 11 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 16, 19.5 )
+extents = Vector2( 13, 19.5 )
 
 [sub_resource type="ShaderMaterial" id=26]
 resource_local_to_scene = true
 shader = ExtResource( 6 )
-shader_param/progress = 0.4
+shader_param/progress = 1.0
 shader_param/noise_desnity = 180.0
 shader_param/beam_size = 0.09
 shader_param/color_shlorp = Color( 0, 1.02, 1.2, 1 )
@@ -37,6 +37,21 @@ shader_param/sus_speed = 5.0
 [sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 21, 17 )
 
+[sub_resource type="Animation" id=28]
+resource_name = "NotVisible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
 [sub_resource type="Animation" id=27]
 resource_name = "Shlorp"
 length = 2.0
@@ -51,6 +66,21 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "Visible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
 }
 
 [node name="BobaTea" type="RigidBody2D" groups=["shiftable"]]
@@ -131,7 +161,9 @@ shape = SubResource( 25 )
 disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DukeDelicious"]
+anims/NotVisible = SubResource( 28 )
 anims/Shlorp = SubResource( 27 )
+anims/Visible = SubResource( 29 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]

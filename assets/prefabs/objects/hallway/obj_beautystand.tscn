@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
@@ -16,7 +16,7 @@ extents = Vector2( 31.5, 21.5938 )
 [sub_resource type="ShaderMaterial" id=32]
 resource_local_to_scene = true
 shader = ExtResource( 6 )
-shader_param/progress = 0.0
+shader_param/progress = 1.0
 shader_param/noise_desnity = 180.0
 shader_param/beam_size = 0.09
 shader_param/color_shlorp = Color( 0, 1.02, 1.2, 1 )
@@ -37,6 +37,21 @@ shader_param/sus_speed = 5.0
 [sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 21, 17 )
 
+[sub_resource type="Animation" id=33]
+resource_name = "NotVisible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
 [sub_resource type="Animation" id=31]
 resource_name = "Shlorp"
 tracks/0/type = "value"
@@ -50,6 +65,21 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "Visible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
 }
 
 [node name="BeautyStand" type="RigidBody2D" groups=["shiftable"]]
@@ -132,7 +162,9 @@ shape = SubResource( 29 )
 disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PrincessPinkLady"]
+anims/NotVisible = SubResource( 33 )
 anims/Shlorp = SubResource( 31 )
+anims/Visible = SubResource( 34 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]

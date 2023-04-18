@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/character/npc_earlearligold.gd" type="Script" id=2]
@@ -34,6 +34,15 @@ extents = Vector2( 5.25, 2 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 18, 13.5 )
+
+[sub_resource type="Animation" id=25]
+resource_name = "NotVisible"
+
+[sub_resource type="Animation" id=26]
+resource_name = "Shlorp"
+
+[sub_resource type="Animation" id=27]
+resource_name = "Visible"
 
 [node name="EarlEarligold" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -78,6 +87,9 @@ position = Vector2( 0, -9.5 )
 shape = SubResource( 22 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/NotVisible = SubResource( 25 )
+anims/Shlorp = SubResource( 26 )
+anims/Visible = SubResource( 27 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
