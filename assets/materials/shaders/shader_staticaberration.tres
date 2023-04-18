@@ -57,5 +57,5 @@ void fragment() {
 	//COLOR = vec4(r, g, b, 1.0) * darkness + (noise(UV) * 0.1);
 	
 	
-	COLOR = vec4(red.r, ori.g, blue.b, 1.0) * darkness + (noise(UV) * 0.1);
+	COLOR = vec4(red.r, ori.g, blue.b, 1.0) * darkness + (noise(UV) * 0.05);
 }"

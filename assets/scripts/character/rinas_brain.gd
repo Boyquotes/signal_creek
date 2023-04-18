@@ -60,7 +60,7 @@ func move_rina(newPosition):
 
 	if RoomEngine.CurrentRoomIndex == newPositionRoomIndex:
 		place_rina_in_new_room(RoomEngine.CurrentRoom)
-		shlorp_in()
+#		shlorp_in()
 
 
 # call this only when the player is actually in the room
@@ -93,6 +93,6 @@ func shlorp_out():
 		Globals.GameRoot.set_camera_following_vector(camPosWithOffset) #add the fuckin uhh camera offset
 		Globals.GameOverlay.play_shlorp_shockwave(Vector2(0.5, 0.5))
 	
-	if current_room_index == next_room_index:
-		self.get_parent().set_global_position(rina_positions.get(current_position))
-		shlorp_in()
+#	if current_room_index == next_room_index:
+#		self.get_parent().set_global_position(rina_positions.get(current_position))
+#		shlorp_in()
