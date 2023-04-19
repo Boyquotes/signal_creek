@@ -69,9 +69,15 @@ INCLUDE bandn/computerdesk.ink
     
 == first_light ==
 
-    NOUR: "...What was that noise?"
+    &PORTRAIT_nour_nourpondering
+
+    NOUR: "... What was that noise?"
+    
+    &PORTRAIT_ms. suwan_msswuanpondering
     
     MS. SUWAN: "It sounded like... an elevator chime."
+    
+    &PORTRAIT_nick_nickshocked
     
     NICK: "Quick! Let's go back to the elevator and check it out!"
     
@@ -87,29 +93,59 @@ INCLUDE bandn/computerdesk.ink
     
     NICK: "Woah, look at that! One of the weird lights turned back on!"
     
-    MS. SUWAN: "This is becoming stranger and stranger. What made it light up in the first place?"
+    &PORTRAIT_ms. suwan_mssuwanrealization
+    
+    MS. SUWAN: "This is becoming stranger and stranger..."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "What made it light up in the first place?"
+    
+    &PORTRAIT_nick_nickneutral
     
     NICK: "I dunno, but we must've done <i>something</i> to make the elevator work again."
     
+    &PORTRAIT_nick_nickworried
+    
+    NICK: "Er, maybe not work <i>completely</i> though."
+    
+    &PORTRAIT_nick_nickpondering
+    
     NICK: "Was it that weird girl we saw earlier?"
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: <i>It couldn't have been Rina. I don't see her.</i>
+    
+    &PORTRAIT_nick_nickshocked
     
     NICK: "WAIT..."
     
     NICK: "The mall must be LISTENING. It knows what we're doing!"
     
+    &PORTRAIT_ms. suwan_mssuwanannoyed
+    
     MS. SUWAN: "Again with the weird magical conclusions."
+    
+    &PORTRAIT_ms. suwan_msswuanpondering
     
     MS. SUWAN: "This place is strange, but I happen to doubt it achieved <i>sentience.</i>"
     
-    NICK: "But think about it, that would be so cool! The mall is our friend!"
+    &PORTRAIT_nick_nicksmallsmile
     
-    NOUR: "Well, whatever's happened, we must've done something right."
+    NICK: "But think it'd be so cool... The mall is our friend!"
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "Whatever's happened, we must've done something right."
+    
+    &PORTRAIT_nour_nournervous
     
     NOUR: <i>Rina said we trapped ourselves in our pasts...</i>
     
-    NOUR: <i>...and it's up to us to move on.</i>
+    &PORTRAIT_nour_noursad
+    
+    NOUR: <i>... and it's up to us to move on.</i>
     
     &PORTRAIT_nour_nourrealization
     
@@ -123,7 +159,7 @@ INCLUDE bandn/computerdesk.ink
     
 == light_on ==
 
-    An elevator <i>ding</i> is heard from the hallway.
+    An elevator ding is heard from the hallway.
 
     {
         -!first_light:
@@ -136,6 +172,8 @@ INCLUDE bandn/computerdesk.ink
     
     
 == explored_everything
+
+    &PORTRAIT_nour_nourneutral
 
     NOUR: <i>I think we've explored everything we could here.</i>
     
