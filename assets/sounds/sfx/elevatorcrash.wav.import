@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/elevatorcrash.wav-3abe21a6a942ab06ef2be058fb3e4b3d.sample"
+
+[deps]
+
+source_file="res://assets/sounds/sfx/elevatorcrash.wav"
+dest_files=[ "res://.import/elevatorcrash.wav-3abe21a6a942ab06ef2be058fb3e4b3d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

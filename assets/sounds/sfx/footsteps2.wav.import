@@ -12,7 +12,7 @@ dest_files=[ "res://.import/footsteps2.wav-67d954bb6b60c5a262fbbaad74043b8f.samp
 [params]
 
 force/8_bit=false
-force/mono=false
+force/mono=true
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
