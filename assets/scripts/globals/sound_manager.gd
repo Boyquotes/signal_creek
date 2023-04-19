@@ -6,7 +6,7 @@ extends Node
 export var music_bandn : AudioStreamMP3
 export var music_hallway : AudioStreamMP3
 export var music_topicspot : AudioStreamMP3
-export var music_elevator : AudioStreamMP3
+export var music_elevator : AudioStream
 export var music_starter : AudioStreamMP3
 export var smooth_change_volume_rate := 0.5
 

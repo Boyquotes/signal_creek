@@ -160,6 +160,8 @@ INCLUDE bandn/computerdesk.ink
 == light_on ==
 
     An elevator ding is heard from the hallway.
+    
+    &SOUND_spookychime
 
     {
         -!first_light:
