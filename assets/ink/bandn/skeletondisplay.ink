@@ -13,32 +13,48 @@
     
 == skeletondisplay1 ==
 
-    Nick picks up one of the skeleton's boney hands waves it towards Nour and Ms.Suwan.
+    Nick picks up one of the skeleton's boney hands and waves it towards Nour and Ms.Suwan.
     
     NICK: "Bone appetit!"
     
     Nour snorts despite attempting to suppress her laugh.
     
-    NOUR: "That barely even makes sense! Are you serving food, or something?" // LAUGHING
+        &PORTRAIT_nour_nourpondering
     
-    NICK: "Hey, you never know... Bone marrow's supposed to be like a delicacy in some countries. Like... France, probably // HAPPY
+    NOUR: "That barely even makes sense! Are you serving food, or something?"
     
-    MS. SUWAN: "I believe it's used for slow-cooked soups and pho broth in Asian countries." // SMILING
+        &PORTRAIT_nick_nicksmallsmile
     
-    NICK: "Whoa, for real? Have you had it before? Is it good?" // EXCITED
+    NICK: "Hey, you never know... Bone marrow's supposed to be like a delicacy in some countries."
     
-    MS. SUWAN: "It is quite good... though I'd rather not have this conversation looking at a human skeleton."// SMILING
+    NICK: "Like... in France, probably."
     
-    NICK: "Right, haha! My bad!" // HAPPY
+        &PORTRAIT_mssuwan_mssuwansmile
+    
+    MS. SUWAN: "I believe it's used for slow-cooked soups and pho broth in Asian countries."
+    
+        &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "Whoa, for real? Have you had it before? Is it good?"
+    
+    MS. SUWAN: "It is quite good..."
+    
+    MS. SUWANL "Though I'd rather not have this conversation looking at a human skeleton."
+    
+    NICK: "Right, haha! My bad!"
 
     -> END
 
 == skeletondisplayvisited ==
 
-    NICK: "Wait! I got it!" // EXCITED
+        &PORTRAIT_nick_nickbigsmile
+
+    NICK: "Wait! I got it!"
     
-    NICK: "BONE-jour!!!" // EXCITED
+    NICK: "BONE-jour!!!"
     
-    NOUR: "...let's move on." // SMILING
+        &PORTRAIT_nour_nourannoyed
+    
+    NOUR: "...let's move on."
     
     -> END
