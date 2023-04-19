@@ -20,6 +20,8 @@ var _current_idle_sprite := "DownIdle"
 var _animating_emote := false
 var _current_emote = _current_idle_sprite
 
+var footstep_audio_stream
+
 var walk_speed = default_walk_speed
 var direction_vector := Vector2(0,0)
 var done_following = false
@@ -30,7 +32,6 @@ onready var _animation_player = $AnimationPlayer
 onready var following_node
 
 onready var angle_towards = Vector2(0, 0)
-
 
 
 func _ready():
@@ -55,26 +56,31 @@ func timer_timeout() -> void:
 func animate_up() -> void:
 	_animation_player.play("Up")
 	_current_idle_sprite = "UpIdle"
+	Globals.SoundManager.set_footsteps_pause_mode(footstep_audio_stream, false)
 
 
 func animate_down() -> void:
 	_animation_player.play("Down")
 	_current_idle_sprite = "DownIdle"
+	Globals.SoundManager.set_footsteps_pause_mode(footstep_audio_stream, false)
 
 
 func animate_left() -> void:
 	_animation_player.play("Left")
 	_current_idle_sprite = "LeftIdle"
+	Globals.SoundManager.set_footsteps_pause_mode(footstep_audio_stream, false)
 
 
 func animate_right() -> void:
 	_animation_player.play("Right")
 	_current_idle_sprite = "RightIdle"
+	Globals.SoundManager.set_footsteps_pause_mode(footstep_audio_stream, false)
 
 
 func animate_idle() -> void:
 #	_animation_player.set_autoplay(false)
 	_animation_player.play(_current_idle_sprite);
+	Globals.SoundManager.set_footsteps_pause_mode(footstep_audio_stream, true)
 
 
 # Any animation beyond the walk cycle is called this way

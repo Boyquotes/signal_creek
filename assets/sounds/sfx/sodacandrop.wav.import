@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sodacandrop.wav-0fd89745515e297393219ed7f0a2e1a4.sample"
+
+[deps]
+
+source_file="res://assets/sounds/sfx/sodacandrop.wav"
+dest_files=[ "res://.import/sodacandrop.wav-0fd89745515e297393219ed7f0a2e1a4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

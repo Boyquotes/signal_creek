@@ -1,6 +1,6 @@
 == bookshelf ==
 
-    It's a tall bookshelf, stacked with all kinds of books...
+    It's a tall bookshelf filled with many informative books.
     
     Instructional guides, exam prep workbooks, and how-to books for those interested in <i>fun</i> new hobbies!
     
@@ -36,97 +36,206 @@
     
 == nour_suggests_hobbies ==
 
-    * "Ugh... This makes me think about high school."
-    
-        NOUR: "My parents expected me to get the best possible exam scores."
-        
-        NICK: "I don't really care about tests."
-        
-        NOUR: "Really?"
-        
-        NICK: "I mean, yeah, who even cares if I know PEMDAS or the Pythagorean Theorem?"
-        
-        MS. SUWAN: "Your college admissions counselors."
-        
-        NICK: "I'm not even thinking about college right now. I'm only sixteen."
-        
-        MS. SUWAN: "Sixteen is the time to start applying yourself more."
-        
-        MS. SUWAN: "If you want to get into a good college, that is."
-        
-        NICK: "Nah. I just wanna have fun while I can, y'know?"
-        
-        MS. SUWAN: "If you have fun now, you will struggle later."
-        
-        NICK: "But I don't want to live that way."
-        
-        MS. SUWAN: "Well, we are not given a choice."
+    &PORTRAIT_nour_nourneutral
 
-        NOUR: <i>Things are getting a little bit heated. I should try to change the subject.</i>
+    NOUR: "... This makes me think about high school."
     
-    * "Look at this, Nick... <i>How to Draw Manga Characters</i>!"
+    &PORTRAIT_nour_noursad
     
-        NOUR: "This would be a pretty fun hobby, right?"
+    NOUR: "My parents expected me to get the best possible exam scores."
         
-            ** "Are you interested?"
+    &PORTRAIT_nick_nicksad
+        
+    NICK: "I don't really care about tests."
+        
+    &PORTRAIT_nour_nournervous
+        
+    NOUR: "Really?"
+        
+    &PORTRAIT_nick_nickangry
+        
+    NICK: "I mean, yeah. Who even cares if I know PEMDAS or the Pythagorean Theorem?"
+        
+    &PORTRAIT_ms. suwan_mssuwanangry
+        
+    MS. SUWAN: "Your college admissions counselors."
+        
+    &PORTRAIT_nick_nicksad
+        
+    NICK: "I'm not even thinking about college right now. I'm only sixteen."
+        
+    &PORTRAIT_ms. suwan_mssuwanneutral
+        
+    MS. SUWAN: "Sixteen is the time to start applying yourself more."
+        
+    &PORTRAIT_ms. suwan_mssuwanpondering
+        
+    MS. SUWAN: "If you want to get into a good college, that is."
+        
+    &PORTRAIT_nick_nickneutral
+        
+    NICK: "Nah. I just wanna have fun while I can, y'know?"
+        
+    &PORTRAIT_ms. suwan_mssuwanangry
+        
+    MS. SUWAN: "If you have fun now, you will struggle later."
+        
+    &PORTRAIT_nick_nickangry
+        
+    NICK: "But I don't want to live that way."
+        
+    &PORTRAIT_ms. suwan_mssuwanannoyed
+        
+    MS. SUWAN: "Well, we are not given a choice."
+        
+    &PORTRAIT_nour_nournervous
+
+    NOUR: <i>Things are getting a little bit heated. I should try to change the subject.</i>
+        
+    &PORTRAIT_nour_noursmile
+    
+        * "Look at this, Nick... <i>How to Draw Manga Characters</i>!"
+            -> howtodrawmangachara
+        
+        * "Hey... there's <i>The Making of Aple Quest - The Classic RPG Series</i>!"
+            -> howtomakeaplequest
+        
+        * "There's also... <i>Intro to Persusasive Arguments</i>."
+        
+            -> howtomakearguments
+                
+=== howtodrawmangachara ===
+
+    NOUR: "This would be a pretty fun hobby, right?"
             
-                NOUR: "It might be cool to try learning something new. That's what got me into photography."
+        * "Are you interested?"
+                
+            &PORTRAIT_nour_nourrealization
+                
+            NOUR: "It might be cool to try learning something new."
+                    
+            &PORTRAIT_nour_noursmile
+                    
+            NOUR: "That's what got me into photography."
+                    
+
+        * "People who can draw are pretty cool."
+                
+            &PORTRAIT_nour_nourrealization
+                
+            NOUR: "You might end up liking it."
+                    
+            &PORTRAIT_nour_noursmile
+                    
+            NOUR: "That was my experience with photography."
         
-            ** "People who can draw are pretty cool."
+    - &PORTRAIT_nick_nicksad
+                
+    NICK: "I don't know. I'm not really good at art and stuff."
+                
+    &PORTRAIT_ms. suwan_mssuwanangry
             
-                NOUR: "You might end up liking it. That was my experience with photography."
+    MS. SUWAN: "I think Nick should focus on finding a hobby that could benefit his future."
+                
+    &PORTRAIT_nour_nourpondering
+                
+    NOUR: "Well, a hobby is something you <i>enjoy</i>, not necessarily—"
+                
+    &PORTRAIT_nick_nickangry
+                
+    NICK: "This hobby needs talent <i>and</i> doesn't benefit my future?"
+                
+    &PORTRAIT_nick_nicksad
+                
+    NICK: "Not interested."
     
-            - NICK: "I don't know. I'm not really good at art and stuff."
-        
-            MS. SUWAN: "I think Nick should focus on finding a hobby that could benefit his future."
+    -> nour_suggests_hobbies_cont   
+    
+=== howtomakeaplequest ===
+
+    &PORTRAIT_nour_nourpondering
             
-            NOUR: "Well, a hobby is something you <i>enjoy</i>, not necessarily—"
+    NOUR: "Isn't this the game you wanted to see before?"
             
-            NICK: "This hobby needs talent <i>and</i> doesn't benefit my future?"
+    NOUR: "The one in TopicSpot's game console?"
             
-            NICK: "Not interested."
+    &PORTRAIT_nour_nourrealization
+            
+    NOUR: "This could be an interesting hobby."
+            
+    &PORTRAIT_nour_noursmile
+            
+    NOUR: "You could become a game designer!"
+            
+    &PORTRAIT_nick_nicknervous
+            
+    NICK: "It's not that easy. I don't even know how to code."
+            
+    &PORTRAIT_nour_nourpondering
+            
+    NOUR: "You could learn to be an expert at this game, then."
+            
+    &PORTRAIT_nour_noursmile
+            
+    NOUR: "It could be like studying history, except it's something you like."
+            
+    &PORTRAIT_nick_nicksad
+            
+    NICK: "I don't want to study something that I like. That would ruin it."
+            
+    &PORTRAIT_nick_nickshadow
+            
+    NICK: "... And I'd be no good at memorizing stuff like that. I'm not that smart."
     
-    * "Hey...there's <i>The Making of Aple Quest - The Classic RPG Series</i>!"
+        -> nour_suggests_hobbies_cont
         
-        NOUR: "Isn't this the game you wanted to see before?"
+=== howtomakearguments ===
+
+    &PORTRAIT_nour_nourpondering
         
-        NOUR: "The one in TopicSpot's game console?"
+    NOUR: "Seems like a pre-pre-LSAT kind of book."
+            
+    &PORTRAIT_nour_noursmile
+            
+    NOUR: "Good for beginners looking to learn more!"
+            
+    &PORTRAIT_nick_nickangry
+            
+    NICK: "I think I'd rather die than read something like that."
+            
+    &PORTRAIT_ms. suwan_mssuwanneutral
         
-        NOUR: "This could be an interesting hobby."
-        
-        NOUR: "You could become a game designer!"
-        
-        NICK: "It's not that easy. I don't even know how to code."
-        
-        NOUR: "You could learn to be an expert at this game, then."
-        
-        NOUR: "It could be like studying history, except it's something you like."
-        
-        NICK: "I don't want to study something that I like. That would ruin it."
-        
-        NICK: "...And I'd be no good at memorizing stuff like that. I'm not that smart."
+    MS. SUWAN: "It would be best for you to remain open-minded."
+            
+    &PORTRAIT_ms. suwan_mssuwanpondering
+            
+    MS. SUWAN: "I had no idea I would enjoy law until I came across good study aids."
+            
+    &PORTRAIT_ms. suwan_mssuwanneutral
+            
+    MS. SUWAN: "Taking that extra step ensures that you excel at what you do."
+            
+    &PORTRAIT_ms. suwan_mssuwanpondering
+            
+    MS. SUWAN: "This could be something."
+            
+    &PORTRAIT_nick_nicksad
+            
+    NICK: "I don't wanna force myself to like something. That's not how you pick up interests."
+            
+    &PORTRAIT_nick_nickshadow
+            
+    NICK: "... And either way, I wouldn't understand it, no matter how hard I tried."
     
-    * "There's also... <i>Intro to Persusasive Arguments</i>."
+        -> nour_suggests_hobbies_cont
     
-        NOUR: "Seems like a pre-pre-LSAT kind of book."
-        
-        NOUR: "Good for beginners looking to learn more!"
-        
-        NICK: "I think I'd rather die than read something like that."
+=== nour_suggests_hobbies_cont ===
+
+    &PORTRAIT_nour_nournervous
     
-        MS. SUWAN: "It would be best for you to remain open-minded."
-        
-        MS. SUWAN: "I had no idea I would enjoy law until I came across good study aids."
-        
-        MS. SUWAN: "Taking that extra step ensures that you excel at what you do."
-        
-        MS. SUWAN: "This could be something."
-        
-        NICK: "I don't wanna force myself to like something. That's not how you pick up interests."
-        
-        NICK: "...And either way, I wouldn't understand it, no matter how hard I tried."
+    NOUR: "What about..."
     
-    - NOUR: "What about..."
+    &PORTRAIT_nour_nourpondering
     
         * "Art History Around the World?"
         
@@ -134,85 +243,155 @@
         
         * "JavaScript for Beginners?"
         
-    - NICK: "I literally <i>don't care</i>. I don't want to study anything."
+    - &PORTRAIT_nick_nickangry
+    
+    NICK: "I literally <i>don't care</i>. I don't want to study anything."
+    
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "You will not get far in life if you cannot change your mindset."
     
+    &PORTRAIT_nour_nourneutral
+    
         * "That's a bit harsh, Ms. Suwan..."
         
+            &PORTRAIT_ms. suwan_mssuwanangry
+        
             MS. SUWAN: "Listen, if this kid's parents failed to give him the truth, someone has to."
+            
+            &PORTRAIT_ms. suwan_mssuwansad
             
             MS. SUWAN: "I had to learn the hard way."
         
         * "Nick, people will think you're more capable if you know how to do something."
         
+            &PORTRAIT_nour_noursmile
+        
             NOUR: "Isn't that what you want?"
+            
+            &PORTRAIT_nick_nicksad
         
             NICK: "I don't have to know how to do something that requires me to <i>read</i> for fun."
             
+            &PORTRAIT_nick_nickshadow
+            
             NICK: "I just... I don't know, it's a waste of time."
+            
+            &PORTRAIT_ms. suwan_mssuwanangry
             
             MS. SUWAN: "As if you're not wasting your time now, being a delinquent teenager?"
         
-    - NICK: "You're old and boring. Study <i>this</i>, responsiblility <i>that</i>—whatever."
+    - &PORTRAIT_nick_nickangry
+    
+    NICK: "You're old and boring. Study <i>this</i>, responsiblility <i>that</i>—whatever."
     
     NICK: "What happened to having a <i>life</i>?"
     
+    &PORTRAIT_ms. suwan_mssuwanannoyed
+    
     MS. SUWAN: "That was incredibly rude."
+    
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "I <i>have</i> a life."
     
     MS. SUWAN: "One I worked tooth and nail to earn."
     
-    MS. SUWAN: "...While others got things handed to them on a silver plate."
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "... While others got things handed to them on a silver plate."
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "It is a privilege to get the opportunity to learn."
     
+    &PORTRAIT_ms. suwan_mssuwansad
+    
     MS. SUWAN: "Especially without constantly worrying about factors outside of your control."
     
-     NICK: "I just don't see why I need to waste all of my time."
+    &PORTRAIT_nick_nicksad
+    
+    NICK: "I just don't see why I need to waste all of my time."
+    
+    &PORTRAIT_nick_nickshadow
      
-     NICK: "I wanna have fun before I gotta start worrying about adult problems."
+    NICK: "I wanna have fun before I gotta start worrying about adult problems."
+    
+    &PORTRAIT_nour_noursad
     
         * "Making the real world seem bleak won't help anyone."
         
-            NOUR: "You can have fun practicing your skills, and it may even lead you somewhere in life."
+            &PORTRAIT_nour_noursmile
+        
+            NOUR: "You can have fun practicing your skills."
+            
+            &PORTRAIT_nour_nourpondering
+            
+            NOUR: "It may even lead you somewhere in life."
         
         * "You can have fun and work hard at the same time..."
         
+            &PORTRAIT_nour_noursad
+        
             NOUR: "Not everything has to be miserable. Not even work."
     
-    - NOUR: "Look, whether I make money from photography or not, I'll always love doing it."
+    - &PORTRAIT_nour_nourneutral
+    
+    NOUR: "Look, whether I make money from photography or not, I'll always love doing it."
+    
+    &PORTRAIT_nick_nickangry
     
     NICK: "Aren't <i>you</i> lucky? You have something you're good at."
     
     NICK: "Well, guess what, Nour? Not everyone is smart or good at something."
     
+    &PORTRAIT_nour_noursad
+    
         * "I wasn't born with the ability to take pictures."
-        
+            
+            &PORTRAIT_nour_nourneutral
+            
             NOUR: "You can only get better at something through practice."
         
         * "How do you know I'm good at it?"
         
+            &PORTRAIT_nour_nourneutral
+        
             NOUR: "For all you know, I could suck at taking pictures."
+            
+            &PORTRAIT_nour_noursad
         
             NOUR: "The time I've put into what you think I'm 'naturally' good at isn't visible."
             
-    - &PORTRAIT_nick_nickshadow
+    - &PORTRAIT_nick_nicksad
     
-    NICK: "Never mind. Neither of you guys would get it. 
+    NICK: "Never mind. Neither of you guys would get it."
+    
+    &PORTRAIT_nick_nickangry
     
     NICK: "Some of us are either born dumb, or end up liking useless crap like <i>Aple Quest</i>."
     
-    NICK: "..Or both."
+    &PORTRAIT_nick_nicksad
+    
+    NICK: "... Or both."
+    
+    &PORTRAIT_nick_nickshadow
     
     NICK: "I could never be like you two. Not now, and not ever."
+    
+    &PORTRAIT_nour_noursad
 
     NOUR: <i>He looks upset. It doesn't look like he's open to learning anything new.</i>
     
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: <i>But I still want to cheer him up.</i>
     
+    &PORTRAIT_nour_nourrealization
+    
     NOUR: <i>Maybe I've been approaching this all wrong.</i>
+    
+    &PORTRAIT_nour_nourneutral
     
     NOUR: <i>I could find something in this store that already makes him happy.</i>
         
@@ -220,18 +399,30 @@
     
 === bookshelf_nour_suggests_hobbies_repeat ===
 
+    &PORTRAIT_nour_nourpondering
+
     NOUR: <i>Talking about learning and studying made Nick more upset than anything.</i>
+    
+    &PORTRAIT_nour_noursad
     
     NOUR: <i>I don't know why quite yet, but I want to make him feel better.<i>
     
-    NOUR: <i>Maybe something less...studious. Like that videogame from earlier he wanted to see.<i>
+    &PORTRAIT_nour_nourrealization
     
-    NOUR: <i>What was it called again? It was fruit related...like Orange Odyssey?</i>
+    NOUR: <i>Maybe something less... studious. Like that videogame from earlier he wanted to see.<i>
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>What was it called again? It was fruit related... like Orange Odyssey?</i>
+    
+    &PORTRAIT_nour_nourneutral
     
     NOUR: <i>I'm sure if I look around this bookstore, I'm bound to find something related to it.</i>
         -> END
     
 === bookshelf_afterfight ===
+
+    &PORTRAIT_nour_nourneutral
 
     NOUR: <i>I don't think I need to see anything else here.</i>
     
@@ -239,35 +430,71 @@
     
 === bookshelf_afternickroute ===
 
+    &PORTRAIT_nick_nickneutral
+
     NICK: "Were you always good at lawyer-ing, Ms. Suwan?"
     
-    MS. SUWAN: "Arguing, yes. Law, on the other hand, I had to start from the bottom."
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    MS. SUWAN: "Arguing, yes. Law, on the other hand, no. I had to start from the bottom."
+    
+    &PORTRAIT_ms. suwan_pondering
     
     MS. SUWAN: "I was still learning English while I was becoming a lawyer."
     
+    &PORTRAIT_nick_nicksad
+    
     NICK: "Isn't there, like, a lot of reading and writing though? Wasn't it hard?"
+    
+    &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "Yes. Every failure told me to give up, but then I remembered how far I had come."
     
-    MS. SUWAN: "It's easy to lose track of how much progress you've made when you look much too far into the future."
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
-    NICK: "How far I've come...I never thought of it that way."
+    MS. SUWAN: "It's easy to lose track of how far you've come when you focus on the future."
+    
+    &PORTRAIT_nick_nickshocked
+    
+    NICK: "How far I've come... I never thought of it that way."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "Nick, you're still very young. You know what you like, and that's good."
     
-    MS. SUWAN: "It would just be a shame if we lost this world's greatest engineer or manga artist before he got the chance to even try because he didn't believe in himself."
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
-    NICK: "...Thanks, Ms. Suwan."
+    MS. SUWAN: "It would be a shame if we lost an important engineer or manga artist."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "Especially because he gave up before trying."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "Because he didn't <i>believe</i> in himself."
+    
+    &PORTRAIT_nick_nicksmallsmile
+    
+    NICK: "... Thanks, Ms. Suwan."
+    
+    &PORTRAIT_nick_nickpondering
     
     NICK: "Also, do you know what manga is?"
     
+    &PORTRAIT_ms. suwan_mssuwansmile
+    
     MS. SUWAN: "No. But I could learn."
     
-    The two of them share a smile.
+    &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "Haha! That's true..."
 
     -> bookshelf_end
 
 === bookshelf_end ===
+
+    &PORTRAIT_nour_nourneutral
 
     NOUR: <i>I think we've explored everything we could here.</i>
         

@@ -20,9 +20,9 @@ float random (vec2 uv) {
 
 void fragment()
 {
-	vec2 rdisp = r_displacement * random(SCREEN_UV) - 0.5 * intensity;
-	vec2 gdisp = g_displacement * random(SCREEN_UV) - 0.5 * intensity;
-	vec2 bdisp = b_displacement * random(SCREEN_UV) - 0.5 * intensity;
+	vec2 rdisp = r_displacement * random(UV) - 0.5 * intensity;
+	vec2 gdisp = g_displacement * random(UV) - 0.5 * intensity;
+	vec2 bdisp = b_displacement * random(UV) - 0.5 * intensity;
 	
 	float r = texture(SCREEN_TEXTURE, SCREEN_UV + vec2(SCREEN_PIXEL_SIZE * rdisp), 0.0).r;
 	float g = texture(SCREEN_TEXTURE, SCREEN_UV + vec2(SCREEN_PIXEL_SIZE * gdisp), 0.0).g;
