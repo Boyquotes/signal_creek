@@ -10,7 +10,11 @@
     
         // MS SUWAN, NOUR AND NICK STOP AND FACE THE BATHROOMS
         
+        &PORTRAIT_nour_nourannoyed
+        
         NOUR: "I never liked how the bathroom choice in this mall is binary..." // FROWNING
+        
+        &PORTRAIT_mssuwan_mssuwanannoyed
         
         MS. SUWAN: "Outdated construction."
         
@@ -32,9 +36,15 @@
             
             * "Personal reasoning?"
             
+                &PORTRAIT_mssuwan_mssuwanneutral
+            
                 MS. SUWAN: "It's in the past now."
                 
+                &PORTRAIT_nick_nickpondering
+                
                 NICK: "Sheesh, did this bathroom say something to you when you were in college?"
+                
+                &PORTRAIT_mssuwan_mssuwanannoyed
                 
                 MS. SUWAN: "..." // FROWNING
             
@@ -44,9 +54,15 @@
         
         - MS. SUWAN: "..."
         
+        &PORTRAIT_mssuwan_mssuwanneutral
+        
         MS. SUWAN: "I will say this: I agree with you that the gender binary is an outdated method of dividing restrooms."
         
+        &PORTRAIT_mssuwan_mssuwannervous
+        
         MS. SUWAN: "If there were always gender neutral restrooms, it would have saved me a lot of trouble in the past."
+        
+        &PORTRAIT_nour_nourneutral
         
         NOUR: "I understand."
         

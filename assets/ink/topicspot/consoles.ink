@@ -27,43 +27,57 @@
 }
 
 === consoles_before_start ===
-    A start screen for a retro game called <i>Aple Quest</i> plays. Nick seems to be excited.
+    A start screen for a retro game called Aple Quest plays. Nick seems to be excited.
     
-        &PORTRAIT_nick_nickbigsmile
+    &PORTRAIT_nick_nicksmallsmile
     
     NICK: "<i>Aple Quest</i>? Here? In brand-new condition?"
     
+    &PORTRAIT_nour_nourneutral
+    
     NOUR: "Looks like it still runs just fine."
+    
+    &PORTRAIT_nick_nickbigsmile
     
     NICK: "Man, I can't believe it's here in its original retro console!"
     
         * "You wanna give it a go?"
             
-                &PORTRAIT_nick_nickworried
+            &PORTRAIT_nick_nickbigsmile
             
             NICK: "I—!"
             
-            Nick falters.
+            &PORTRAIT_nick_nicknervous
             
             NICK: "Um... no. This stuff's for little kids, so..."
+            
+            &PORTRAIT_nick_nicksad
             
             NICK: "I probably shouldn't."
             
         * "We shouldn't waste time..."
+            
+            &PORTRAIT_nour_nourneutral
         
             NOUR: "We should look for something that could help us."
             
-                &PORTRAIT_nick_nicksad
+            &PORTRAIT_nick_nicknervous
             
-            Nick nods glumly. He looks at the game one more time, and then he sighs.
+            NICK: "Um... yeah. This stuff's for little kids, so..."
+            
+            &PORTRAIT_nick_nicksad
+            
+            NICK: "We should just move on."
     
-    - NOUR: "...Hey, are you alright?"
+    - &PORTRAIT_nour_nourpondering
     
-        &PORTRAIT_nick_nickshadow
+    NOUR: "...Hey, are you alright?"
+    
+    &PORTRAIT_nick_nickshadow
     
     NICK: "I'm fine. Let's just go already."
     
-        &PORTRAIT_nour_noursad
+    &PORTRAIT_nour_noursad
     
     NOUR: "Whatever you say..."
     

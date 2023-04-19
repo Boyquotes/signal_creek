@@ -1,10 +1,13 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://assets/scenes/rooms/room_abstract.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scripts/globals/game_root.gd" type="Script" id=2]
 [ext_resource path="res://assets/scenes/UserInterface.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/scripts/globals/sound_manager.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/sheet_loadinganimation.png" type="Texture" id=5]
+[ext_resource path="res://assets/materials/shaders/shader_sussy.tres" type="Shader" id=6]
+[ext_resource path="res://assets/sounds/sfx/footsteps2.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/sounds/ambient/SFXW001_indoor_roomtone_entrance hall.wav" type="AudioStream" id=8]
 [ext_resource path="res://assets/materials/camera_overlay.tres" type="Material" id=9]
 [ext_resource path="res://assets/scripts/ui/screen_overlay.gd" type="Script" id=10]
 [ext_resource path="res://assets/materials/gradients/gradient_dream.tres" type="Texture" id=12]
@@ -40,8 +43,34 @@ void vertex() {
 shader = SubResource( 1 )
 shader_param/cam_offset = Vector2( 0, 0 )
 
+[sub_resource type="Animation" id=7]
+resource_name = "ShlorpIn"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1.1, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.187, 0.0935, 0.0 ]
+}
+
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 6 )
+shader_param/r_displacement = Vector2( 0.25, 0.25 )
+shader_param/g_displacement = Vector2( 0, 0 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.0
+shader_param/time_intensity = 0.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
 
 [sub_resource type="Animation" id=5]
 resource_name = "Loading"
@@ -77,7 +106,6 @@ tracks/0/keys = {
 [node name="Game" type="Node2D"]
 process_priority = 1
 script = ExtResource( 2 )
-testing_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )
@@ -113,6 +141,9 @@ __meta__ = {
 "_editor_description_": "For screen-space shader"
 }
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScreenOverlay"]
+anims/ShlorpIn = SubResource( 7 )
+
 [node name="UserInterface" parent="." instance=ExtResource( 3 )]
 margin_right = 0.0
 margin_bottom = 0.0
@@ -134,6 +165,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="LoadingScreen"]
+light_mask = 16
+material = SubResource( 8 )
 position = Vector2( 808, 456 )
 scale = Vector2( 6, 6 )
 texture = ExtResource( 5 )
@@ -148,19 +181,40 @@ script = ExtResource( 4 )
 music_bandn = ExtResource( 14 )
 music_hallway = ExtResource( 16 )
 music_topicspot = ExtResource( 15 )
-music_elevator = ExtResource( 14 )
-music_starter = ExtResource( 14 )
+music_elevator = ExtResource( 8 )
+
+[node name="FootStepsNour" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource( 7 )
+volume_db = -5.0
+pitch_scale = 1.5
+autoplay = true
+bus = "Ambience"
+
+[node name="FootStepsNick" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource( 7 )
+volume_db = -10.0
+pitch_scale = 1.5
+autoplay = true
+bus = "Ambience"
+
+[node name="FootStepsSuwan" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource( 7 )
+volume_db = -10.0
+pitch_scale = 1.5
+autoplay = true
+bus = "Ambience"
 
 [node name="SoundEffects" type="AudioStreamPlayer" parent="SoundManager"]
-autoplay = true
+bus = "SoundEffects"
 
 [node name="Ambience" type="AudioStreamPlayer" parent="SoundManager"]
 
 [node name="Music" type="AudioStreamPlayer" parent="SoundManager"]
-stream = ExtResource( 14 )
 volume_db = -10.0
+bus = "Music"
 
 [node name="UISounds" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 14 )
+bus = "UISounds"
 
 [connection signal="doorway_entered" from="." to="." method="_on_Game_doorway_entered"]

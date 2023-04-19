@@ -53,10 +53,10 @@
 [ext_resource path="res://assets/textures/lights/topwindow.png" type="Texture" id=51]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 24, 8 )
+extents = Vector2( 31, 7 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 40, 25 )
+extents = Vector2( 40, 18 )
 
 [sub_resource type="ShaderMaterial" id=4]
 resource_local_to_scene = true
@@ -158,6 +158,7 @@ exit_position = Vector2( 232, 248 )
 entrance_direction = Vector2( 0, -1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal_TopicSpot"]
+position = Vector2( 0, -1 )
 shape = SubResource( 2 )
 
 [node name="LocationTrigger" parent="PlaneManager" instance=ExtResource( 42 )]
@@ -165,7 +166,7 @@ position = Vector2( 472, 280 )
 _knot_name = "rina_start"
 
 [node name="CollisionShape2D" parent="PlaneManager/LocationTrigger" index="0"]
-position = Vector2( 0, 15 )
+position = Vector2( 0, 6.5 )
 
 [node name="TutorialTrigger" type="Area2D" parent="PlaneManager"]
 position = Vector2( 472, 312 )
@@ -176,6 +177,7 @@ __meta__ = {
 _knot_name = "first_light"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/TutorialTrigger"]
+position = Vector2( 0, -7 )
 shape = SubResource( 22 )
 
 [node name="Doortal_Bandn" type="Area2D" parent="PlaneManager"]

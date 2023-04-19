@@ -57,7 +57,7 @@ var current_portrait = "nour"
 
 
 func _ready():
-	var portraitDirContents = get_dir_contents("res://assets/sprites/characters/portraits/", "tres")
+	var portraitDirContents = StaticFunctions.get_dir_contents("res://assets/sprites/characters/portraits/", "tres")
 	var portraitKeys = []
 	# CONVERT LIST OF FILE PATHS TO KEYS
 	for filePath in portraitDirContents:
@@ -71,47 +71,7 @@ func _ready():
 		i += 1
 
 
-func get_dir_contents(rootPath: String, fileExtensionToAdd: String) -> Array:
-	var files = []
-	var directories = []
-	var dir = Directory.new()
 
-	if dir.open(rootPath) == OK:
-		var _dirList = dir.list_dir_begin(false, false)
-		_add_dir_contents(dir, files, directories, fileExtensionToAdd)
-	else:
-		push_error("An error occurred when trying to access the path.")
-
-	if fileExtensionToAdd == "directories":
-		return directories
-	
-	return files
-
-
-func _add_dir_contents(dir: Directory, files: Array, directories: Array, fileExtensionToAdd: String):
-	var file_name = dir.get_next()
-
-	while (file_name != ""):
-		var path = dir.get_current_dir() + "/" + file_name
-
-		if dir.current_is_dir():
-#			print("Found directory: %s" % path)
-			var subDir = Directory.new()
-			subDir.open(path)
-			subDir.list_dir_begin(true, false)
-			
-			if fileExtensionToAdd == "folders":
-				directories.append(path)
-				
-			_add_dir_contents(subDir, files, directories, fileExtensionToAdd)
-		else:
-#			print("Found file: %s" % path)
-			if path.split(".").size() > 0 and fileExtensionToAdd in path.split(".")[1]:
-				files.append(path)
-
-		file_name = dir.get_next()
-
-	dir.list_dir_end()
 
 
 # asks for string, sets current_color from dictionary

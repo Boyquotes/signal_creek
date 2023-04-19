@@ -26,7 +26,6 @@ var _is_fading_out = false
 var _overlay_material
 
 
-
 func _ready():
 	_shake_timer = Timer.new()
 	add_child(_shake_timer)
@@ -77,6 +76,16 @@ func screen_shake(rdisp: Vector2, gdisp: Vector2, bdisp: Vector2, _darkness: flo
 
 func set_to_black() -> void:
 	self.modulate = Color(0.0, 0.0, 0.0)
+	
+func set_shlorp_radius(rad: float) -> void:
+	if _overlay_material:
+		_overlay_material.set_shader_param("radius", rad)
+
+
+func play_shlorp_shockwave(centerPos: Vector2) -> void:
+	_overlay_material.set_shader_param("center", centerPos)
+	$AnimationPlayer.play("ShlorpIn")
+	Globals.SoundManager.play_sound("shlorp")
 
 
 func start_fade_in() -> void:
