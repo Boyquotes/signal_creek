@@ -2,7 +2,9 @@
 
     It's a desk with a very old personal computer on it. This kind still takes floppy disks.
     
-    { -!computerdesk_first: -> computerdesk_first }
+    { 
+     - computerdesk_first: -> computerdesk_repeat
+    }
     
     There's no way this thing can contact anyone on the outside.
     
@@ -21,6 +23,8 @@
     NICK: "Does it even, like, <i>do stuff</i>?"
     
     NOUR: "There's no operating system loaded on it. Looks like it's missing a floppy disk."
+    
+    &PORTRAIT_nick_nickpondering
     
     NICK: "It's missing a <i>what</i>?"
     
@@ -42,10 +46,19 @@
     
     NICK: "Where do we get a <i>'floppy dip'</i>?"
     
+    &PORTRAIT_mssuwan_mssuwanannoyed
+    
     MS. SUWAN: "A floppy <i>disk</i>. I do not believe there are any here, which is strange."
+    
+    &PORTRAIT_nick_nickangry
     
     NICK: "<i>That's</i> the strangest thing here? You're weird."
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: "...This seems like a dead end. It won't help us get out of here."
     
+    ->END
+==computerdesk_repeat==
+    NOUR: <i> Stupid computer doesn't work, I should find another way to get out of here </i>
     -> END
