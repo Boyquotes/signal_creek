@@ -95,15 +95,15 @@ INCLUDE bandn/computerdesk.ink
     
     NOUR: <i>It couldn't have been Rina. I don't see her.</i>
     
-    NICK: "WAIT..."
+    NICK: "WAIT."
     
     NICK: "The mall must be LISTENING. It knows what we're doing!"
     
-    MS. SUWAN: "Again with the weird magical conclusions."
+    MS. SUWAN: "Again with the bizarre, magical conclusions."
     
     MS. SUWAN: "This place is strange, but I happen to doubt it achieved <i>sentience.</i>"
     
-    NICK: "But think about it, that would be so cool! The mall is our friend!"
+    NICK: "But think about it, that would be so cool! The mall could be our friend!"
     
     NOUR: "Well, whatever's happened, we must've done something right."
     
