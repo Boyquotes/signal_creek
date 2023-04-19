@@ -31,6 +31,10 @@
     
     NOUR: “In the BROKEN ELEVATOR?!”
     
+    &PORTRAIT_nour_nourangry
+    
+    NOUR: "Explain to me why this was a good idea."
+    
     &SOUND_InquisitiveSound
 
     &SPEED_NICK_72.0
@@ -96,15 +100,15 @@
     
     &PORTRAIT_nour_nourannoyed
     
-    NOUR: "Stop talking!"
+    NOUR: "Nick, stop talking!"
     
     &EMOTE_NOUR_DownIdle
     
     MS. SUWAN: "Both of you are trespassing. That could-"
     
-    MS. SUWAN: "Wait."
+    MS. SUWAN: "...Wait."
     
-    MS. SUWAN: "Nour?!"
+    MS. SUWAN: <i>"Nour?!"</i>
     
     &PORTRAIT_nour_nournervous
     
@@ -125,6 +129,7 @@
     MS. SUWAN: "I AM the law."
     
     &EMOTE_NICK_LookAround
+    &PORTRAIT_nick_nicktears
     
     &PORTRAIT_nick_nicknervous
     

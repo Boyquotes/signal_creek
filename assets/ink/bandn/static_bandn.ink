@@ -4,7 +4,7 @@
 
     It's a display stand for books.
     
-    This would be more engaging if the contents weren't outdated by over a decade.
+    It would be more engaging if the "new releases" weren't outdated by over a decade.
     
     -> END
     
@@ -20,9 +20,9 @@
 
     It's a Jungle Kindle filled with e-novels.
     
-    ... The majority of them are comics and passionate romance books. Such taste!
+    ...The majority of them are comics and passionate romance books. Such taste!
     
-    Looking closely, it seems to have a faint imprint of words on it's dark screen, but even squinting Nour can't quite tell what is on it.
+    Looking closely, it seems to have the faint imprint of words on it's dark screen, but even squinting, Nour can't quite tell what's on it.
     
     -> END
     
