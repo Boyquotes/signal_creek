@@ -187,6 +187,8 @@
     
     //&SOUND_ElevatorDoorClose
     
+    &PAUSE_0.3
+    
     &SOUND_elevatorup
     
     &SHAKE
