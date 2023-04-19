@@ -228,6 +228,10 @@ boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0.0745098, 0.0784314, 0.121569, 0.901961 )
 config/icon="res://assets/alpha/sprites_alpha/os/icon.png"
 
+[audio]
+
+default_bus_layout=""
+
 [autoload]
 
 StaticFunctions="*res://assets/scripts/globals/static_functions.gd"

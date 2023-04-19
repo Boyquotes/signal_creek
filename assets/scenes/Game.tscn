@@ -188,33 +188,27 @@ stream = ExtResource( 7 )
 volume_db = -5.0
 pitch_scale = 1.5
 autoplay = true
-bus = "Ambience"
 
 [node name="FootStepsNick" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 7 )
 volume_db = -10.0
 pitch_scale = 1.5
 autoplay = true
-bus = "Ambience"
 
 [node name="FootStepsSuwan" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 7 )
 volume_db = -10.0
 pitch_scale = 1.5
 autoplay = true
-bus = "Ambience"
 
 [node name="SoundEffects" type="AudioStreamPlayer" parent="SoundManager"]
-bus = "SoundEffects"
 
 [node name="Ambience" type="AudioStreamPlayer" parent="SoundManager"]
 
 [node name="Music" type="AudioStreamPlayer" parent="SoundManager"]
 volume_db = -10.0
-bus = "Music"
 
 [node name="UISounds" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 14 )
-bus = "UISounds"
 
 [connection signal="doorway_entered" from="." to="." method="_on_Game_doorway_entered"]
