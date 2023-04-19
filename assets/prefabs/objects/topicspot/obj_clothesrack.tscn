@@ -9,7 +9,7 @@
 extents = Vector2( 15.5, 4 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 13, 12.1875 )
+extents = Vector2( 13, 9.09375 )
 
 [sub_resource type="OccluderPolygon2D" id=24]
 polygon = PoolVector2Array( -15, 0, -15, -5, 15, -5, 15, 0 )
@@ -45,14 +45,13 @@ position = Vector2( 0.5, -4 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
-visible = false
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -4 )
+position = Vector2( 0, -7.09375 )
 shape = SubResource( 22 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]

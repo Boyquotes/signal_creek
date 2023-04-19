@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/newentry.wav-650c8e167ac72e70db31408b573b34db.sample"
+path="res://.import/clack.wav-cd20e474accd9fed26e1d3ca627c6faa.sample"
 
 [deps]
 
-source_file="res://assets/sounds/uisounds/newentry.wav"
-dest_files=[ "res://.import/newentry.wav-650c8e167ac72e70db31408b573b34db.sample" ]
+source_file="res://assets/sounds/sfx/clack.wav"
+dest_files=[ "res://.import/clack.wav-cd20e474accd9fed26e1d3ca627c6faa.sample" ]
 
 [params]
 

@@ -17,4 +17,8 @@ func _process(_delta):
 
 
 func set_following_node(nodeToFollow: Node2D) -> void:
+	if following_node == nodeToFollow:
+		return
+	$AnimationPlayer.play("Close")
+	yield(get_tree().create_timer(0.1), "timeout")
 	following_node = nodeToFollow
