@@ -14,8 +14,6 @@
     
     NICK: “HURRY UP, NOUR! There's no way she'll find us if we hide in here!"
     
-    &SOUND_poopman
-    
     &PAUSE_0.5
     
     &EMOTE_NICK_DownIdle
@@ -153,6 +151,8 @@
     
     NOUR: "I'll take him and leave the second I'm finished, you <i>know</i> I will, I-"
     
+    &SOUND_clack
+    
     &FOLLOW_NICK_NickButtonPressingPos
     
     MS. SUWAN: "Save your excuses."
@@ -165,9 +165,13 @@
     
     &EMOTE_SUWAN_DownIdle
     
+    &SOUND_clack
+    
     Nick begins frantically pressing elevator buttons.
     
     //&SOUND_ElevatorButtons
+    
+    &SOUND_clack
     
     NICK: "C'mon, c'mon, c'mon!"
     
@@ -177,9 +181,15 @@
     
     MS. SUWAN: "She's right. This elevator is broken. It's not going anywhere—"
     
+    &SOUND_clickydoor
+    
     &ELEVATOR_CLOSE
     
     //&SOUND_ElevatorDoorClose
+    
+    &PAUSE_0.3
+    
+    &SOUND_elevatorup
     
     &SHAKE
     
@@ -223,7 +233,9 @@
     
     &BLACK
     
-    &PAUSE_0.5
+    &SOUND_elevatorcrash
+    
+    &PAUSE_10.0
     
     &FOLLOW_NOUR_stop
     
@@ -236,6 +248,8 @@
     &EMOTE_NICK_DownIdle
     
     &EMOTE_NOUR_DownIdle
+    
+    &SOUND_clickydoor
     
     &ELEVATOR_OPEN
     
