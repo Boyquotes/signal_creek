@@ -10,23 +10,33 @@
     
         // MS SUWAN, NOUR AND NICK STOP AND FACE THE BATHROOMS
         
-        &PORTRAIT_nour_nourannoyed
+            &PORTRAIT_nour_nourannoyed
         
-        NOUR: "I never liked how the bathroom choice in this mall is binary..." // FROWNING
+        NOUR: "I never liked how the bathroom choice in this mall is binary..."
         
-        &PORTRAIT_mssuwan_mssuwanannoyed
+            &PORTRAIT_mssuwan_mssuwanannoyed
         
         MS. SUWAN: "Outdated construction."
         
         Ms. Suwan's shoulders tense up.
         
+                    &PORTRAIT_nour_nourneutral
+        
             * "Glad you agree. That is your job, after all."
+            
+                    &PORTRAIT_mssuwan_mssuwansad
             
                 MS. SUWAN: "It <i>is</i> my job, but I also have personal reasons."
             
             * "What makes it outdated?"
             
-                MS. SUWAN: "Generally, construction should follow accessibility guidelines. There should be a gender-neutral bathroom for handicapped individuals." // FROWNING
+                    &PORTRAIT_mssuwan_mssuwanangry
+            
+                MS. SUWAN: "Generally, construction should follow accessibility guidelines."
+                
+                MS. SUWAN: "There should be a gender-neutral bathroom for handicapped individuals."
+                
+                    &PORTRAIT_mssuwan_mssuwansad
                 
                 MS. SUWAN: "... but I also have my personal reasoning."
                 
@@ -36,17 +46,19 @@
             
             * "Personal reasoning?"
             
-                &PORTRAIT_mssuwan_mssuwanneutral
+                    &PORTRAIT_mssuwan_mssuwanneutral
             
                 MS. SUWAN: "It's in the past now."
                 
-                &PORTRAIT_nick_nickpondering
+                    &PORTRAIT_nick_nickpondering
                 
                 NICK: "Sheesh, did this bathroom say something to you when you were in college?"
                 
-                &PORTRAIT_mssuwan_mssuwanannoyed
+                    &PORTRAIT_mssuwan_mssuwanannoyed
                 
-                MS. SUWAN: "..." // FROWNING
+                MS. SUWAN: "..."
+                
+                &PORTRAIT_nour_nourneutral
             
             ** "I don't judge."
             
@@ -54,15 +66,17 @@
         
         - MS. SUWAN: "..."
         
-        &PORTRAIT_mssuwan_mssuwanneutral
+            &PORTRAIT_mssuwan_mssuwanneutral
         
-        MS. SUWAN: "I will say this: I agree with you that the gender binary is an outdated method of dividing restrooms."
+        MS. SUWAN: "I will say this: I agree with you."
         
-        &PORTRAIT_mssuwan_mssuwannervous
+        MS. SUWAN: "The gender binary is certainly an outdated method of dividing restrooms."
+        
+            &PORTRAIT_mssuwan_mssuwannervous
         
         MS. SUWAN: "If there were always gender neutral restrooms, it would have saved me a lot of trouble in the past."
         
-        &PORTRAIT_nour_nourneutral
+            &PORTRAIT_nour_nourneutral
         
         NOUR: "I understand."
         
