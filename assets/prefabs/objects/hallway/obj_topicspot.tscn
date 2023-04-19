@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/textures/lights/topicspot.png" type="Texture" id=2]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 88, 36 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 32, 7.5 )
 
 [node name="TopicSpot" type="RigidBody2D" groups=["shiftable"]]
 position = Vector2( 0, 1 )
@@ -43,3 +46,11 @@ position = Vector2( 0, -25 )
 texture = ExtResource( 2 )
 color = Color( 0.309804, 0.92549, 1, 1 )
 range_item_cull_mask = 8
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -56, -3.5 )
+shape = SubResource( 24 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( 56, -3 )
+shape = SubResource( 24 )

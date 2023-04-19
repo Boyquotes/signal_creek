@@ -1,35 +1,42 @@
 == jewelrystand ==
 
+    It's a display rack for jewelry. The edgy accessories give everyone nostalgic feelings.
     {
         - !jewelrystandconvo:
             -> jewelrystandconvo
     }
     
-    It's a display rack for jewelry. On the rack, edgy accessories that would appeal to a younger demographic. They give everyone nostalgic feelings.
-    
     {
         - spraycans:
-            NOUR: <i>There was a black leather bracelet before, but it's missing now.</i>
+            NOUR: <i>There's an empty spot on the rack. A black leather bracelet is missing...</i>
+            
+            MS. SUWAN: "..."
+            
+            NOUR: "Hmm..."
     }
     
     -> END
 
 == jewelrystandconvo ==
-
-    It's a display rack for jewelry. On the rack, edgy accessories that would appeal to a younger demographic.
     
-    Nour eyes two bracelets. The first one has black beads and a silver pentagram charm. The second is black leather with silver studs.
+    The first bracelet has black beads and a silver pentagram charm. The second is black leather with silver studs.
     
     NOUR: "I would have <i>loved</i> to be able to wear this kind of thing in high school."
     
-    MS. SUWAN: ... (soft smile)
+    MS. SUWAN: "..." (soft smile)
     
     NOUR: "You look like you would've liked this too, boss lady."
     
-    MS. SUWAN: "Well, college students are strange like that."
+    MS. SUWAN: "That's a bold assumption to make."
     
-    NICK: "Hah, I can't imagine what you were like in college. Were you always so stuck-up? Or, didya get all the crazy out of your system at parties?"
+    NOUR: "Doesn't everyone have some sort of phase like this?"
     
-    MS. SUWAN: "Don't push."
+    MS. SUWAN: "Well, you aren't wrong. Being young often entails exploring your identity in different ways."
+    
+    NICK: "Hah, I can't imagine what you were like that once!"
+    
+    NICK: "Were you always so stuck-up? Or, did ya get all the crazy out of your system at parties?"
+    
+    MS. SUWAN: "Don't push it."
     
     -> END

@@ -26,8 +26,6 @@
     
     NOUR: "Hello... Would you guys know anything about-"
     
-
-    
     &PAUSE_1.0
     
     &EMOTE_SUWAN_UpIdle
@@ -130,7 +128,7 @@
     
     MS. SUWAN: "No use. We do <i>not</i> need help from strangers."
     
-    &PORTRAIT_???_chadannoyed
+    &PORTRAIT_???_chadneutral
     
     ???: "Strangers?"
     
@@ -144,7 +142,7 @@
     
     MS. SUWAN: "!"
     
-    &PORTRAIT_???_brodyannoyed
+    &PORTRAIT_???_brodyneutral
     
     ???: "Looks like Chad, Kristy, and Brody got demoted to strangers. What a surprise."
     
@@ -226,7 +224,7 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: <i>I wonder if the music section in B&N has anything that would help her open up.</i>
+    NOUR: <i>I wonder if the music section in B&N has anything that would help her open up about her past.</i>
     
     -> END
 
@@ -342,6 +340,9 @@
 
     &LIGHT_Suwan0
     
+    // {~firstLightCharacter = "Ms. Suwan"}
+    // {~firstLightPronoun = "she's"}
+    
     -> light_on
 
 
@@ -417,9 +418,9 @@
     
     KANNIKA: "I hope you can... Take this album... as a long overdue <i>thank you</i>."
     
-    <i>Ms. Suwan shows them the album in her hands. Chad, Brody, and Kristy stare...</i>
+    Ms. Suwan shows them the album in her hands. Chad, Brody, and Kristy stare...
     
-    <i>...And then smile sadly at her.</i>
+    ...And then smile sadly at her.
     
     &PORTRAIT_chad_chadsad
     
@@ -552,8 +553,7 @@
     &LIGHT_Suwan2
     
     &FOLLOW_NOUR_stop
-    
-    An elevator <i>ding</i> is heard from the hallway.
+
     
     &PORTRAIT_nour_nourneutral
     
@@ -563,9 +563,13 @@
     
     &MOV_RINA_HALLWAY
     
+    &EMOTE_SUWAN_UpIdle
+    
+    &PAUSE_0.15
+    
     MS. SUWAN: "Nour, your old friend is here."
     
-    &PORTRAIT_nour_nourneutral
+    &EMOTE_SUWAN_DownIdle
     
     MS. SUWAN: "If I could face the mistakes I made with Chad, Brody, and Kristy..."
     

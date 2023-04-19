@@ -1,9 +1,9 @@
-=== cafetables === 
+== cafetables ==
 //note to self: do some gathers - choices that lead to the same conversation 
 
 {
     - cafetables3:
-        -> cafetables_end
+        -> explored_everything
         
     - chadbrodykristy2 && musicstand2 && chadbrodykristy3: 
         -> cafetables3
@@ -24,7 +24,8 @@
         -> cafetables1
 }
 
-=== cafetables1 ===
+== cafetables1 ==
+
     NOUR: "Didn't think I'd see this cafe here. It's even in good condition."
     
     &PORTRAIT_ms. suwan_suwansad
@@ -66,12 +67,20 @@
     NOUR: <i>Seems like we both have things we want to avoid.</i>
     
     NOUR: <i>Is that the right thing to do, though...?</i>
+    
     -> END
 
-=== cafetables2 ===
-    NOUR: "Didn't think I'd see this cafe here. It's even in good condition. Seems like anything is possible in this place..."
+== cafetables2 ==
+
+    NOUR: "Didn't think I'd see this cafe here. It's even in good condition."
     
-    MS. SUWAN: "Same chairs and tables, but somehow they look much newer than before the mall was condemned. Like how I remember they used to be."
+    NOUR: "Seems like anything is possible in this place..."
+    
+    MS. SUWAN: "Same chairs and tables."
+    
+    MS. SUWAN: "But somehow, they look much newer than before the mall was condemned."
+    
+    MS. SUWAN: "Just like how I remember them."
     
     &PORTRAIT_ms. suwan_suwanannoyed
     
@@ -87,7 +96,7 @@
     
     MS. SUWAN: "I don't want to talk about this or them anymore. It's a complete waste of time."
     
-    NICK: "Ms. Suwan...are you really ok?"
+    NICK: "Ms. Suwan... Are you really okay?"
     
     &PORTRAIT_ms. suwan_suwanshadow
     
@@ -97,22 +106,28 @@
     
     &PORTRAIT_nick_nickworried
     
-    NICK: "Ms. Suwan..?"
+    NICK: "Ms. Suwan...?"
     
     &PORTRAIT_ms. suwan_suwanshadow
     
     MS. SUWAN: "..."
     
-    NOUR: <i>For her to not even be able to hide that look on her face means that those three really did mean a lot to her.</i>
+    NOUR: <i>For her to not even be able to hide that look on her face...</i>
+    
+    NOUR: <i>That means those three really did mean a lot to her.</i>
     
     NOUR: <i>I definitely know how that feels... a friendship gone wrong.</i>
     
-    NOUR: <i>She can't keep avoiding this conversation, even if she thinks that's the easier thing to do. Even Nick noticed that she isn't ok.</i>
+    NOUR: <i>She can't keep avoiding this conversation, even if she thinks it's the easier choice.</i>
+    
+    NOUR: <i>Even Nick noticed that she isn't okay.</i>
     
     NOUR: <i>But how do I get her to talk about what happened?</i>
+    
     -> cafetables_getsuwantotalk
 
-=== cafetables2_5 ===
+== cafetables2_5 ==
+
     NOUR: "Did you come here with them? Those three from before? They seemed like, well... they cared about you."
     
     &PORTRAIT_ms. suwan_suwanannoyed
@@ -139,20 +154,27 @@
     
     NOUR: <i>I definitely know how that feels... a friendship gone wrong.</i>
     
-    NOUR: <i>She can't keep avoiding this conversation, even if she thinks that's the easier thing to do. Even Nick noticed that she isn't ok.</i>
+    NOUR: <i>She can't keep avoiding this conversation, even if she thinks that's the easier thing to do.</i>
     
-    NOUR: <i>But how do I get her to talk about what happened?</i>
+    NOUR: <i>Even Nick noticed that she isn't okay.</i>
+    
+    NOUR: <i>But... how do I get her to talk about what happened?</i>
+    
     ->cafetables_getsuwantotalk
 
-=== cafetables_getsuwantotalk ===
-    * ["We need to talk about what happened."]
+== cafetables_getsuwantotalk ==
+
+    * "We need to talk about what happened."
+    
         NOUR: "They used to be your friends, right?"
         
         &PORTRAIT_ms. suwan_suwanangry
         
         MS. SUWAN: "Are you serious? I said <i>leave</i> it."
         
-        NOUR: "Clearly you did something, but you could tell us the whole story. Both sides matter, and—"
+        NOUR: "Clearly you did something, but you could tell us the whole story."
+        
+        NOUR: "Both sides matter, and—"
         
         &PORTRAIT_ms. suwan_suwanangry
         
@@ -168,11 +190,15 @@
         
         &PORTRAIT_ms. suwan_suwanannoyed
         
-        MS. SUWAN: "You have some nerve, Nour. I've repeatedly told you to drop the subject, but clearly your meddling know no bounds."
+        MS. SUWAN: "You have some nerve, Nour. I've repeatedly told you to drop the subject."
+        
+        MS. SUWAN: "Clearly, your meddling know no bounds."
         
         &PORTRAIT_ms. suwan_suwanangry
         
-        MS. SUWAN: "The way I deal with things is <i>my</i> business. I don't need the opinions of someone who just watched me go through a humiliating ordeal."
+        MS. SUWAN: "The way I deal with things is <i>my</i> business."
+        
+        MS. SUWAN: "I don't need the opinions of someone who just watched me go through a humiliating ordeal."
         
         &PORTRAIT_ms. suwan_suwanangry
         
@@ -182,19 +208,23 @@
         
         NOUR: <i>Ugh, that went terribly. Being direct just made her even more hostile.</i>
         
-        NOUR: <i>And I do understand her! Way more than she thinks.</i>
+        NOUR: <i>And I DO understand her! Way more than she thinks.</i>
         
         NOUR: <i>Maybe I should try approaching this differently...</i>
             
             -> cafetables_getsuwantotalk
     
-    * ["I... think I can relate to what may've happened."]
+    * "I... think I can relate to what may've happened."
         
         NOUR: "I used to come here with an old friend. This was our favorite spot in the cafe."
         
-        NOUR: "Perfect amount of sun, non-rickety tables, and just far enough from the cashier so that you could actually hear the person you were with."
+        NOUR: "Perfect amount of sun, non-rickety tables..."
         
-        NOUR: "We never wanted to go home and do homework, so we would imagine staking it out here in the cafe. We would ration pastries and live off of our favorite lattes."
+        NOUR: "And just far enough from the cashier that you could actually hear the person you're with."
+        
+        NOUR: "We never wanted to go home and do homework, so we would imagine staking it out here in the cafe."
+        
+        NOUR: "We would ration pastries and live off of our favorite lattes."
         
         NICK: "So how did it go? Did you ever get to do it?"
         
@@ -208,9 +238,13 @@
         
         MS. SUWAN: "I didn't know that."
         
-        NOUR: "It's easier to avoid what happened, but ignoring the good memories hurts, too. Like this one here."
+        NOUR: "It's easier to avoid what happened, but ignoring the good memories hurts, too."
         
-        NOUR: "Losing that friendship messed me up for a long time. I got my homework done quicker, sure, but honestly speaking?"
+        NOUR: "Like this one here."
+        
+        NOUR: "Losing that friendship messed me up for a long time."
+        
+        NOUR: "I got my homework done quicker, sure. But honestly speaking?"
         
         &PORTRAIT_nour_noursad
         
@@ -230,7 +264,9 @@
         
         MS. SUWAN: "It was all time and energy I knew I could use for my career."
         
-        MS. SUWAN: "So, I made my decision. When they were gone, I had <i>everything</i>: 175 on my LSAT, a stacked resume, and a promising career."
+        MS. SUWAN: "So, I made my decision. When they were gone, I had <i>everything</i>..."
+        
+        MS. SUWAN: "175 on my LSAT, a stacked resume, and a promising career."
         
         NOUR: "Was it worth it?"
         
@@ -246,7 +282,9 @@
         
         MS. SUWAN: "That's easy. I—"
         
-        NICK: "NOT related to your lawyer stuff. FUN stuff. Like, what do you do after you come home from lawyer-ing?"
+        NICK: "NOT related to your lawyer stuff. FUN stuff."
+        
+        NICK: "Like, what do you do after you come home from lawyer-ing?"
         
         MS. SUWAN: "..."
         
@@ -262,14 +300,18 @@
         
         NOUR: <i>Seems like she was shaken up by Nick asking what she did for fun....</i>
         
-        NOUR: <i>Her past pain shouldn't hold her back from the things that used to make her happy. They still could.</i>
+        NOUR: <i>Her past pain shouldn't hold her back from the things that used to make her happy.</i>
         
-        NOUR: <i>She might not be ready to face her ex-friends, but maybe I could ease her into opening up to the idea.</i>
+        NOUR: <i>They still could.</i>
         
-        NOUR: <i>I should show her something that she used to love with her friends...because I think she's ready to hear it again.</i>
+        NOUR: <i>She might not be ready to face her ex-friends, but maybe I could open her up to the idea.</i>
+        
+        NOUR: <i>I should show her something that she used to love with her friends...</i>
+        
+        NOUR: <i>...Because I think she's ready to hear it again.</i>
             -> END
     
-    * ["So... Do you like going to cafes?"]
+    * "So... Do you like going to cafes?"
         
         MS. SUWAN: "No. It's more efficient and practical to make my own coffee."
         
@@ -293,23 +335,32 @@
         
         NOUR: <i>Maybe I should try approaching this differently...</i>
             
-            -> cafetables_getsuwantotalk
+        -> cafetables_getsuwantotalk
     
     // + [I have nothing to say] I'll try to get her to talk later.
         
     //     -> END
-=== cafetables2_5_repeat ===
-        NOUR: <i>I got through to her with an old memory of her friends. Maybe she's ready to revisit another old love of hers with a new perspective.</i>
-        
-        NOUR: <i>I wonder... Is she ready to listen to Paradise again? We should head back to B&N to find out.</i>
--> END
-=== cafetables3_5 ===
+== cafetables2_5_repeat ==
+
+    NOUR: <i>I got through to her with an old memory of her friends.</i>
+    
+    NOUR: <i>Maybe she's ready to revisit another old love of hers with a new perspective.</i>
+    
+    NOUR: <i>I wonder... Is she ready to listen to Paradise again?</i>
+    
+    NOUR: <i>We should head back to B&N to find out.</i>
+    
+    -> END
+
+== cafetables3_5 ==
     // MS. SUWAN: "Let's not stop here. I'm ready to talk to the three of them."
     
     NOUR: <i>I should go find Chad, Kristy, and Brody.</i>
+       
         -> END
 
-=== cafetables3 ===
+== cafetables3 ==
+
     MS. SUWAN: "Now thinking back, I had some good memories at this table too."
     
     NOUR: "Really?"
@@ -372,10 +423,4 @@
     
     NOUR: <i>I nod at her. I don't like the way she looks at me.</i>
     
-        -> cafetables_end
-
-=== cafetables_end ===
-
-    NOUR: <i>I think we've explored everything we could here.</i>
-        
-        -> END
+    -> explored_everything

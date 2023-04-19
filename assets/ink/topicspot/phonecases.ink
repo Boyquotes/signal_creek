@@ -1,42 +1,65 @@
 
-== phonecases_dream ==
+== phonecases ==
+
+    It's a variety of rainbow-colored phone cases. Many have cute little animals on them covered in glitter. 
     
-    The phone cases have cute little animals on them, most covered in glitter and in all colors of the rainbow. Nick seems completely enamoured by them.
-    NOUR: What's wrong Nick?
+    Nick seems completely enamoured by them.
+
+    {   
+        - phonecases_convo: phonecases_revisit
+        
+        - !phonecases_convo: phonecases_convo
+    }
     
-    NICK: Oh nothing.
+        -> END
     
-    NOUR: Fine.
+=== phonecases_convo ===
+
+    NOUR: "See something you like?"
     
-    NICK: Well you see.
+    NICK: "Well, I really like these cases, but I don't think any of them will fit my phone."
     
-    NICK: I really like these cases but I don't think any of them will fit my phone. These are all for the newer ones.
+    NICK: "These are all for the newer phone models."
     
-    NOUR: Well I'm sure you'll find a similar one that fits your phone.
+    NOUR: "I'm sure there's a case here that would fit your phone."
     
-    NICK: I don't know. They usually don't have ones for my phone cause it's too old.
+    NICK: "Doubt it. They usually don't have ones for my phone cause it's too old."
     
-    NOUR: How old is it?
+    NOUR: "How old <i>is</i> your phone?"
     
-    NICK: 3 years old.
+    NICK: "Um..."
     
-    NICK: "Oh! Look! A frog!"
+    NICK: "Five years old."
+    
+    MS. SUWAN: "You could still try to fit it on your phone."
+    
+    MS. SUWAN: "Technology sometimes regresses into former models. The cycle of trends always circles back."
+    
+    NOUR: "Yeah... Why don't you try to put a case on?"
+    
+    NICK: "I don't know. I don't wanna get my hopes up—"
+    
+    NICK: "IS THAT... A FROG?"
     
     He picks the frog phone case up and smiles, admiring the cute design.
     
     He quickly takes out his phone, takes off the current case and tries to slip his phone into the new one.
     
-    NICK: WAIT IT FITS. I CAN'T BELIEVE IT ACTUAlLY FITS!
+    NICK: "WAIT... IT FITS!"
     
-    Nick admires his phone in the phone case.
+    NICK: "I CAN'T BELIEVE IT ACTUAlLY FITS!"
     
-    NOUR: Ok come on Nick let's put the case back.
+    NOUR: "Maybe when you get out of here, you can find one just like this."
     
     No response.
     
-    NOUR: Nick I'm serious put it back, we got things to do.
+    NOUR: "Nick, are you gonna put it back?" 
     
-    NICK: Ugh fine.
+    Nick grips the phonecase tighter. Protectively.
+    
+    NOUR: "Nick, we got things to do. Taking stuff from this store is not one of them."
+    
+    NICK: "... Fine."
     
     Nick puts the case back and steps away from the case display.
     
@@ -44,19 +67,27 @@
 
 == phonecases_revisit ==
     
-    The phone cases have cute animals dancing on the plastic.
+    Nick fixates on the frog phone case.
     
-    Nick has his eyes fixated on them.
+    NICK: "Does it REALLY matter if I take it? For all we know, this place might not even be real."
     
-    NICK: But technically it doesn't REALLY matter if I just take one. There's no one coming here anyways so no one will realize it's gone.
+    NICK: "Besides, who's gonna miss this phone junk anyway?"
     
-    NICK: Plus no one has this stupid junk phone nowadays.
+    NICK: "This mall is so empty that nobody will realize it's gone..."
     
-    NOUR: Just leave it alone. You don't need it.
+    MS. SUWAN: "Just leave it alone. You don't need it."
     
-    NICK: Ugh fine.
+    NICK: "But!"
     
-    Nick puts the phone back in his pocket, eyes still drawn to the stack of cases.
+    NOUR: "You can get one when we leave this place, Nick."
+    
+    NICK: "I can't! It's too ex..."
+    
+    NOUR: <i>... Expensive?</i>
+    
+    NICK: "Nevermind. You guys wouldn't get it."
+
+    NOUR: <i>That felt a little bad, but it's better than condoning stealing...</i>
 
     -> END
 

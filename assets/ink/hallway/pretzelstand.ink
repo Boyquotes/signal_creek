@@ -2,20 +2,22 @@
 
     {- !pretzelstand_convo: -> pretzelstand_convo}
     
-    It's a Pretzo's pretzel stand. The cashier is strangely still. He doesn't seem real, and he <i>certainly</i> doesn't know a way out of here.
+    It's a Pretzo's pretzel stand. 
+    
+    The cashier is strangely still. He doesn't seem real, and he <i>certainly</i> doesn't know a way out of here.
     
     -> END
 
 
 == pretzelstand_convo ==
 
-    NOUR: "Ah, Pretzo's. The smell of this cart really brings me back."
+    NOUR: "Ah, <i>Pretzo's</i>. The smell of this cart really brings me back."
     
-    NOUR: "I always wanted the cinnamon sugar bites as a kid, but I was only allowed a pretzel."
+    NOUR: "I always wanted the cinnamon sugar bites as a kid, but I was only allowed a regular pretzel."
     
     NICK: "You shoulda tried those doughnut holes filled with sugary goo..."
     
-    NICK: "I got them one time, and ate them all in like, two minutes."
+    NICK: "I got them one time and ate them all in, like, two minutes!"
     
     MS. SUWAN: "I may have treated myself to a pretzel, once or twice."
     
@@ -23,21 +25,39 @@
     
     NOUR: "The pretzels are pretty good, too. It was moreso frustrating that I didn't have a choice."
     
-    * [Talk to the cashier.]
+    * ["Do you guys have cinnamon sugar bites?"]
     
-        NOUR: Uh... Hello? Do you guys have cinnamon sugar bites?
+        CASHIER: "..."
         
-        CASHIER: ...
+        NOUR: "Uh, the cinnamon sugar bites?"
     
-    ** [Ask if he knows a way out.]
+        CASHIER: "..."
         
-        NOUR: "Hey, the elevator is broken. Do you happen to know a way out of here?"
+        NOUR: "You know, the small round pretzels?"
     
-    ** [Ask him what's going on here.]
+    * ["Do you happen to know a way out of here?"]
     
-        NOUR: "Do you know why everything is so... <i>off</i> here? The trees don't look right, and people are behaving strangely."
+        CASHIER: "..."
         
-    - CASHIER: ...
+        NOUR: "Do you know a way to escape this mall?"
+    
+        CASHIER: "..."
+        
+        NOUR: "We're looking for a way out, but the elevator is broken."
+    
+    * ["Do you know why everything is so... <i>off</i> here?"]
+    
+        CASHIER: "..."
+        
+        NOUR: "Do you know what's going on in this place?"
+        
+        CASHIER: "..."
+    
+        NOUR: "There's a weird void below this floor, odd vegetation, people behaving... strangely..."
+        
+    - NOUR: "Uh... Hello?"
+        
+    CASHIER: "..."
     
     NOUR: <i>I guess that's a no. Whatever.</i>
         

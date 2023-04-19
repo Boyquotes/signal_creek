@@ -9,7 +9,7 @@
 extents = Vector2( 16, 11.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 20.25, 12.0234 )
+extents = Vector2( 16, 10.0234 )
 
 [node name="Trinkets" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -48,7 +48,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -4.02344 )
+position = Vector2( 0, -6.02342 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

@@ -121,7 +121,7 @@ func toggle_choice_selections(changeValue: int) -> void:
 	_current_choice_index = wrapi(_current_choice_index + changeValue, 0, _current_choice_strings.size())
 	_current_choice_entry_choices[_current_choice_index].set_highlighted(true)
 	
-	Globals.SoundManager.play_sound("ChoiceSelect")
+	Globals.SoundManager.play_sound("choiceselect")
 
 
 # Select the currently highlighted choice
@@ -283,6 +283,8 @@ func typewriter_effect(escape: bool) -> void:
 		
 	_down_arrow_animate.play("Idle")
 	
+	#INSERT ERROR HANDLER HERE
+	
 	var currentVisibility = current_text_box.get_percent_visible()
 	var visibleCharacters = current_text_box.get_visible_characters()
 	
@@ -292,7 +294,7 @@ func typewriter_effect(escape: bool) -> void:
 	
 	else:
 		current_text_box.set_visible_characters(visibleCharacters + typewriter_speed)
-		Globals.SoundManager.play_sound_ui("TypewriterSound")
+		Globals.SoundManager.play_sound_ui("typewriter")
 
 
 # Escape the typewriter effect and show all text
@@ -322,7 +324,7 @@ func display_choices(chooserName: String) -> void:
 	
 	_current_choice_entry = newChoiceEntry
 	
-	Globals.SoundManager.play_sound("NewChoiceEntry")
+	Globals.SoundManager.play_sound("choiceselect")
 
 
 # Parse json story state from ink player; print the stuff we care about
@@ -371,6 +373,7 @@ func clear_and_reset_ui():
 	if Globals.PartyObject:
 		for character in Globals.PartyObject.characterObjects:
 			character.reset_speed()
+			character.following_vector_queue = [character.get_global_position()] 
 			
 		Globals.SpeechBubble.set_visible(false)
 		
@@ -433,6 +436,8 @@ func find_current_speaker_position():
 			currentSpeakerNode = Globals.EmperorEvercrisp
 		"earl earligold":
 			currentSpeakerNode = Globals.EarlEarligold
+		"kannika":
+			currentSpeakerNode = Globals.Suwan
 		"???":
 			Globals.SpeechBubble.set_visible(false)
 		
