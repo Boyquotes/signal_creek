@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/scenes/rooms/room_abstract.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scripts/globals/game_root.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/scripts/globals/sound_manager.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/sheet_loadinganimation.png" type="Texture" id=5]
 [ext_resource path="res://assets/materials/shaders/shader_sussy.tres" type="Shader" id=6]
+[ext_resource path="res://assets/sounds/sfx/footsteps2.wav" type="AudioStream" id=7]
 [ext_resource path="res://assets/materials/camera_overlay.tres" type="Material" id=9]
 [ext_resource path="res://assets/scripts/ui/screen_overlay.gd" type="Script" id=10]
 [ext_resource path="res://assets/materials/gradients/gradient_dream.tres" type="Texture" id=12]
@@ -182,16 +183,38 @@ music_topicspot = ExtResource( 15 )
 music_elevator = ExtResource( 14 )
 music_starter = ExtResource( 14 )
 
-[node name="SoundEffects" type="AudioStreamPlayer" parent="SoundManager"]
+[node name="FootStepsNour" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource( 7 )
+pitch_scale = 2.0
 autoplay = true
+bus = "Ambience"
+
+[node name="FootStepsNick" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource( 7 )
+volume_db = -5.0
+pitch_scale = 2.0
+autoplay = true
+bus = "Ambience"
+
+[node name="FootStepsSuwan" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource( 7 )
+volume_db = -5.0
+pitch_scale = 2.0
+autoplay = true
+bus = "Ambience"
+
+[node name="SoundEffects" type="AudioStreamPlayer" parent="SoundManager"]
+bus = "SoundEffects"
 
 [node name="Ambience" type="AudioStreamPlayer" parent="SoundManager"]
 
 [node name="Music" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 14 )
 volume_db = -10.0
+bus = "Music"
 
 [node name="UISounds" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 14 )
+bus = "UISounds"
 
 [connection signal="doorway_entered" from="." to="." method="_on_Game_doorway_entered"]

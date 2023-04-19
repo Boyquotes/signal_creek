@@ -85,6 +85,7 @@ func set_shlorp_radius(rad: float) -> void:
 func play_shlorp_shockwave(centerPos: Vector2) -> void:
 	_overlay_material.set_shader_param("center", centerPos)
 	$AnimationPlayer.play("ShlorpIn")
+	Globals.SoundManager.play_sound("shlorpspeed")
 
 
 func start_fade_in() -> void:

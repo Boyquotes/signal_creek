@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/newchoiceentry.wav-7f130c180eb7e66bc32c791aceca3274.sample"
+path="res://.import/applefallsplat.wav-8ac1169add5d1bc4ac088048025642d7.sample"
 
 [deps]
 
-source_file="res://assets/sounds/uisounds/newchoiceentry.wav"
-dest_files=[ "res://.import/newchoiceentry.wav-7f130c180eb7e66bc32c791aceca3274.sample" ]
+source_file="res://assets/sounds/sfx/applefallsplat.wav"
+dest_files=[ "res://.import/applefallsplat.wav-8ac1169add5d1bc4ac088048025642d7.sample" ]
 
 [params]
 

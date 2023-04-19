@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/typewriter.wav-c19aac19138fa29e268abfdef2145a09.sample"
+path="res://.import/choiceselect.wav-ca03478aaf49c54f7699c65861b6cb73.sample"
 
 [deps]
 
-source_file="res://assets/sounds/uisounds/typewriter.wav"
-dest_files=[ "res://.import/typewriter.wav-c19aac19138fa29e268abfdef2145a09.sample" ]
+source_file="res://assets/sounds/sfx/choiceselect.wav"
+dest_files=[ "res://.import/choiceselect.wav-ca03478aaf49c54f7699c65861b6cb73.sample" ]
 
 [params]
 

@@ -121,7 +121,7 @@ func toggle_choice_selections(changeValue: int) -> void:
 	_current_choice_index = wrapi(_current_choice_index + changeValue, 0, _current_choice_strings.size())
 	_current_choice_entry_choices[_current_choice_index].set_highlighted(true)
 	
-	Globals.SoundManager.play_sound("ChoiceSelect")
+	Globals.SoundManager.play_sound("choiceselect")
 
 
 # Select the currently highlighted choice
@@ -294,7 +294,7 @@ func typewriter_effect(escape: bool) -> void:
 	
 	else:
 		current_text_box.set_visible_characters(visibleCharacters + typewriter_speed)
-		Globals.SoundManager.play_sound_ui("TypewriterSound")
+		Globals.SoundManager.play_sound_ui("typewriter")
 
 
 # Escape the typewriter effect and show all text
@@ -324,7 +324,7 @@ func display_choices(chooserName: String) -> void:
 	
 	_current_choice_entry = newChoiceEntry
 	
-	Globals.SoundManager.play_sound("NewChoiceEntry")
+	Globals.SoundManager.play_sound("choiceselect")
 
 
 # Parse json story state from ink player; print the stuff we care about
