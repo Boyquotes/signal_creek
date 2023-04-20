@@ -284,7 +284,9 @@ func typewriter_effect(escape: bool) -> void:
 	_down_arrow_animate.play("Idle")
 	
 	#INSERT ERROR HANDLER HERE
-	
+	if !current_text_box:
+		return
+		
 	var currentVisibility = current_text_box.get_percent_visible()
 	var visibleCharacters = current_text_box.get_visible_characters()
 	

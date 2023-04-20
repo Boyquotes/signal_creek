@@ -92,7 +92,7 @@ onready var suwan_footstep_player = $FootStepsSuwan
 func _ready():
 #	set_mute_audio(true)
 
-	print_new_sfx_dictionary()
+#	print_new_sfx_dictionary()
 		
 	Globals.Nour.footstep_audio_stream = nour_footstep_player
 	Globals.Nick.footstep_audio_stream = nick_footstep_player
