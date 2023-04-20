@@ -390,7 +390,7 @@ position = Vector2( 553, -257 )
 
 [node name="BookshelfSide3" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 material = SubResource( 16 )
-position = Vector2( -8, 64 )
+position = Vector2( -8, 56 )
 
 [node name="BookshelfSide4" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 material = SubResource( 16 )
