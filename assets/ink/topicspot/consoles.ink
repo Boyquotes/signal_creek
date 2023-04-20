@@ -69,9 +69,9 @@
             
             NICK: "We should just move on."
     
-    - &PORTRAIT_nour_nourpondering
+    - &PORTRAIT_nour_nournervous
     
-    NOUR: "...Hey, are you alright?"
+    NOUR: "... Hey, are you alright?"
     
     &PORTRAIT_nick_nickshadow
     
@@ -101,7 +101,7 @@
     
     NOUR: "You know a lot about this game, right Nick?"
     
-        &PORTRAIT_nick_nickworried
+        &PORTRAIT_nick_nicknervous
     
     NICK: "Yeah. I don't know. Not really."
     
@@ -163,7 +163,7 @@
         
     NOUR: "Look, Nick. It's the game we were reading about before."
     
-        &PORTRAIT_nick_nickworried
+        &PORTRAIT_nick_nicknervous
     
     NICK: "..."
     
@@ -277,7 +277,7 @@
             
             NOUR: "I think he'd love to get a Secret Ending, right?"
             
-                &PORTRAIT_nick_nickworried
+                &PORTRAIT_nick_nicknervous
             
             NICK: "..."
             
@@ -343,7 +343,7 @@
             
             EMPEROR EVERCRISP: "P-Please?"
             
-            &PORTRAIT_nick_nickworried
+            &PORTRAIT_nick_nicknervous
             
             NICK: "..."
             
@@ -367,15 +367,15 @@
             
             EMPEROR EVERCRISP: "VERY COOL!"
             
-            &PORTRAIT_emperor evercrisp_emperorevercrispsad
+            &PORTRAIT_emperor evercrisp_emperorevercrispsmile
             
-            EMPEROR EVERCRISP: "... because I don't know where I put that stuff, ho ho..."
+            EMPEROR EVERCRISP: "Because I don't know where I put that stuff, ho ho!"
             
     - &PORTRAIT_nour_nourpondering
     
     NOUR: "So all we have to do is find four apple... People... And then the Prince?"
     
-    &PORTRAIT_emperor evercrisp_emperorevercrispsmile
+    &PORTRAIT_emperor evercrisp_emperorevercrisppreach
     
     EMPEROR EVERCRISP: "If you want that sweet, sweet secret ending!"
     
@@ -387,7 +387,7 @@
     
     NOUR: "Do you know where you last saw them all?"
     
-    &PORTRAIT_emperor evercrisp_emperorevercrispsmile
+    &PORTRAIT_emperor evercrisp_emperorevercrispneutral
     
     EMPEROR EVERCRISP: "Their last coordinates were all within the hallways of the mall."
     
@@ -395,13 +395,13 @@
     
     EMPEROR EVERCRISP: "I will give you the sacred APLE BLESSING."
     
-    &PORTRAIT_emperor evercrisp_emperorevercrispneutral
+    &PORTRAIT_emperor evercrisp_emperorevercrispsmile
     
     EMPEROR EVERCRISP: "The blessing will allow you to teleport all <i>five</i> apples back to me."
     
-    &PORTRAIT_emperor evercrisp_emperorevercrisppreach
+    &PORTRAIT_emperor evercrisp_emperorevercrispneutral
     
-    EMPEROR EVERCRISP: "Once they have consented, they shall disappear and return!"
+    EMPEROR EVERCRISP: "Once they have consented, they shall disappear and return."
     
         &PORTRAIT_nour_nourneutral
     
@@ -466,7 +466,7 @@
     //Nick is kinda interested, but he hates that he got vulnerable in front of nour and suwan while talking to the prince, so hes tsundere.
     //Back to resisting showing interest... bc he has a complex over that yk so like
 
-    &PORTRAIT_nick_nickworried
+    &PORTRAIT_nick_nicknervous
     
     Nick remains silent and turned away from the console. 
     
@@ -590,61 +590,77 @@
     
     NICK: "WATCH OUT!" 
     
-        &PORTRAIT_nour_nournervous
+        &PORTRAIT_nour_nourrealization
     
     NOUR: "SHOOT!"
     
     The character barely dodges a hidden enemy. 
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: "...<i>NICK</i>, you SCARED me."
     
-            &PORTRAIT_nick_nickworried
-    
-    NICK: Nick pauses for a second and then grins sheepishly.
+    &PORTRAIT_nick_nicksad
     
     NICK: "Crap, sorry..."
     
-        &PORTRAIT_nick_nicknervous
+    &PORTRAIT_nick_nicknervous
     
     NICK: "You, uh... you almost stepped into a trap that would've insta kill you."
     
-        &PORTRAIT_nick_nickbigsmile
+    &PORTRAIT_nick_nicksmallsmile
     
     NICK: "You see those red glowing orbs? Fire trap. It <i>blows</i>... <i>literally</i>."
     
     He laughs at his own joke.
     
-    MS. SUWAN: Ms. Suwan turns away, but there's a small smile creeping up her face.
+    Ms. Suwan turns away, but there's a small smile creeping up her face.
     
         &PORTRAIT_nour_noursmile
     
     NOUR: "Nice pun."
     
-    NOUR: "You know, maybe I should stop playing. It's probably not fun to watch me die every five seconds."
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: "You know, maybe I should stop playing." 
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "It's probably not fun to watch me die every five seconds."
     
             &PORTRAIT_nick_nicknervous
     
     NICK: "No! It's fine. This is technically not <i>supposed</i> to be an easy game..."
     
-            &PORTRAIT_nick_nickneutral
+    &PORTRAIT_nick_nicksad
     
-    NICK: "I should just shut up and let you play. It's not like I'm being helpful by shouting in your ear."
+    NICK: "I should just shut up and let you play."
+    
+    &PORTRAIT_nick_nickshadow
+    
+    NICK: "It's not like I'm being helpful by shouting in your ear."
+    
+    &PORTRAIT_nour_noursad
     
         *"But you seem really knowledgeable about the game."
         
+            &PORTRAIT_nour_nourneutral
+        
             NOUR: "You know that's actually a good thing for a noob like me, right?"
             
-                &PORTRAIT_nick_nickneutral
+                &PORTRAIT_nick_nicksmallsmile
             
             NICK: "I might know a thing or two..."
         
             &PORTRAIT_nick_nickbigsmile
             
-            NICK: He blushes a little, kicking his foot and unable to hide a proud smile.
+            He blushes a little, kicking his foot and unable to hide a proud smile.
             
         *"No, don't shut up! I'm only surviving because of you!" 
             
-            NOUR: "If you don't keep telling me all your tips, I'm gonna die way more. That would be the worst."
+            NOUR: "If you don't keep telling me all your tips, I'm gonna die way more."
+            
+            NOUR: "That would be the worst. "
             
                 &PORTRAIT_nick_nickbigsmile
             
@@ -652,35 +668,49 @@
             
     - &PORTRAIT_nick_nickneutral
     
-    NICK: "Yeah, Fantasy Game... it's one of my favorites, if not <i>the</i> favorite game I have..."
+    NICK: "Yeah, <i>Aple Quest</i> is my favorite game..."
+    
+    &PORTRAIT_nick_nickangry
     
     NICK: "The only problem is that the tutorial is kind of garbage."
     
+    &PORTRAIT_nick_nicknervous
+    
     NICK: "It assumes the player already knows a bunch of stuff, which isn't true."
     
-    NOUR: "Do you play it a lot? Games are cool."
+    &PORTRAIT_nour_noursmile
     
     NOUR: "You can totally make gaming your fun hobby."
     
-        &PORTRAIT_nick_nickshadow
+    &PORTRAIT_nick_nickshadow
     
-    NICK: Nick's face suddenly falls, and he goes quiet for a moment, glaring at the ground.
+    NICK: "I don't... actually own the game."
     
-    NICK: "I don't... actually own the game. I watch a lot of videos about it and watch <i>others</i> play it, but..."
+    &PORTRAIT_nick_nicksad
+    
+    NICK: "I watch a lot of videos about it and watch <i>others</i> play it, but..."
+    
+    &PORTRAIT_nour_nourneutral
     
         * "..."
         
         * "It's alright, you can talk to me about it..."
     
-    - NICK: Nick seems to fumble for the correct words before shrugging, seemingly resigned. 
+    - Nick seems to fumble for the correct words before shrugging, seemingly resigned. 
     
-        &PORTRAIT_nick_nicksad
+    &PORTRAIT_nick_nickneutral
     
-    When he looks back up at Nour his eyes are glimmering—not quite crying but close to it.
+    NICK: "..."
+    
+    &PORTRAIT_nick_nicksad
     
     NICK: "My mom wouldn't let me get the game because my grades were crap." 
     
+    &PORTRAIT_nick_nickshadow
+    
     NICK: "She said I could get it if I fixed them, but it's..."
+    
+    &PORTRAIT_nick_nicktears
     
     NICK: "It's really <i>hard</i>. I'm too dumb to do anything right." 
     
@@ -692,33 +722,43 @@
     
     NOUR: "You know so much about this game, probably far more than you've let on."
     
-        &PORTRAIT_nour_noursmile
+    &PORTRAIT_nour_noursmile
     
-    NOUR: "Right, Ms. Suwan?"
+    NOUR: "You know that makes you smart, right?"
     
-    NICK: Nick glances at Ms. Suwan nervously. She clears her throat.
+    &PORTRAIT_nick_nickangry
     
-    MS. SUWAN: "Intelligence comes in many forms."
+    NICK: "But it's not the <i>same</i>!"
     
-    MS. SUWAN: "Society may value one above the rest, but it does not make the others less valuable."
+    &PORTRAIT_nick_nicksad
     
-        &PORTRAIT_nick_nickangry
+    NICK: "It's a dumb video game... not <i>math</i> or <i>science</i> or stuff like that."
     
-    NICK: "But it's not the <i>same</i>! It's a dumb video game... not <i>math</i> or <i>science</i> or stuff like that."
+    &PORTRAIT_nick_nicktears
     
-    NICK: "I don't have the time to focus on school, and even when I <i>do</i> it's so <i>hard</i>."
+    NICK: "I don't have the time to focus on school.
+    
+    &PORTRAIT_nick_nickshadow
+    
+    NICK: "Even when I <i>do</i> it's so <i>hard</i>."
+    
+    &PORTRAIT_nick_nicktears
     
     NICK: "It's like there's a... a brick wall just in front of <i>everything</i>."
     
+    &PORTRAIT_nour_nourneutral
+    
         * "But you love this game. You've dedicated so much time to it."
+            
+            &PORTRAIT_nour_nournervous
             
             NOUR: "You're not useless or dumb for liking something a lot."
             
+            &PORTRAIT_nour_nourneutral
+            
             NOUR: "Memorizing everything about anything takes a good amount of smarts."
             
-                &PORTRAIT_nick_nickshocked
-            
-            NICK: Nick's eyes widen.
+            &PORTRAIT_nick_nickshocked
             
             NICK: "You mean that?"
             
@@ -726,13 +766,15 @@
             
             NOUR: "Yeah, I do."
             
-                &PORTRAIT_nick_nicktears
-        
-            NICK: He curls his fist tightly.
+            &PORTRAIT_nick_nicksad
             
-            NICK: After a moment, tears start to leak out of his eyes, even as he tries to force them down.
+            NICK: "No one's ever..."
             
-            NICK: "No one's ever... <i>Everyone</i> thinks I'm dumb. I've been useless my entire life..."
+            &PORTRAIT_nick_nicktears
+            
+            NICK: "<i>Everyone</i> thinks I'm dumb. I've been useless my entire life..."
+            
+            &PORTRAIT_nick_nicksad
             
             NICK: "But yeah... I love this game. It means a lot to me."
             
@@ -740,45 +782,75 @@
         
         * "I'm sorry that it's been so hard for you... but acting out isn't going to make it better."
         
+            &PORTRAIT_nour_noursad
+        
             NOUR: "If you keep doing this, then you'll never be able to truly get into the thing you love."
         
-                &PORTRAIT_nick_nicksad
+            &PORTRAIT_nick_nicksad
         
             NICK: "So what should I do?"
             
+            &PORTRAIT_nick_nicktears
+            
             NICK: "It's not that easy. My life is a <i>mess</i>. I don't know what else to do."
     
-    - Nour looks over at Nick's wrist, and suddenly the realization seems to dawn on him.
+    - Nick looks at the bracelet.
     
-    He looks at the bracelet.
+    &PORTRAIT_nour_nourneutral
     
-        &PORTRAIT_nour_nourneutral
-    
-    NOUR: "You don't have to rebel against everything to try and regain some kind of control over your life."
-    
-        &PORTRAIT_nour_nourneutral
+    NOUR: "You don't have to rebel against everything to regain some kind of control over your life."
     
     NOUR: "You can focus as much as you can on school."
     
+    &PORTRAIT_nour_nourrealization
+    
     NOUR: "If you do well, you can dedicate the rest of your life to games..."
     
-        &PORTRAIT_nour_noursmile
+    &PORTRAIT_nour_noursmile
     
     NOUR: "Playing them, making them, whatever you want."
     
-    NICK: "...You can make games?"
+    &PORTRAIT_nour_noursad
     
-        &PORTRAIT_nour_nourneutral
+    NOUR: "Whatever you do, <i>never</i> feel like you aren't smart enough for it."
     
-    NOUR: "Yeah! Who do you think made your favorite one?"
+    &PORTRAIT_nour_noursmile
     
-        &PORTRAIT_nick_nickworried
+    NOUR: "Because you <i>are</i>."
     
-    NICK: Nick thinks for a moment, before looking over at Ms. Suwan, then at Nour.
+    &PORTRAIT_nour_noursad
     
-    NICK: He slowly slides the bracelet off, holding it out to Nour. 
+    NOUR: "Right, Ms. Suwan?"
     
-    NICK: "...Here. Can you put it back for me? I... I don't need it anymore."
+    Nick glances at Ms. Suwan nervously. She clears her throat.
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "Intelligence comes in many forms."
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    MS. SUWAN: "Society may value one above the rest, but it does not make the others less valuable."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "I... am guilty of doing this."
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    MS. SUWAN: "... I am very ashamed and sorry."
+    
+    Nick thinks for a moment, before looking over at Ms. Suwan, then at Nour.
+    
+    He slowly slides the bracelet off, holding it out to Nour. 
+    
+    &PORTRAIT_nick_nicknervous
+    
+    NICK: "...Here. Can you put it back for me?"
+    
+    &PORTRAIT_nick_nicksmallsmile
+    
+    NICK: "I... I don't need it anymore."
     
     &PORTRAIT_nour_noursmile
     
@@ -786,11 +858,11 @@
     
     NOUR: "Sure thing, Nick."
     
-        &PORTRAIT_nick_nickbigsmile
+    &PORTRAIT_nick_nickbigsmile
     
     NICK: "Okay, now back to the game."
     
-    NICK: "If I speedrun this thing fast enough, I bet I could reach that Secret Ending in no time!"
+    NICK: "If I speedrun this thing fast enough, I bet I could reach that Secret Ending!"
     
     &MOV_RINA_TOPICSPOT
     
@@ -804,9 +876,11 @@
     
     NOUR: "Uh-"
     
-        &PORTRAIT_nick_nickworried
+        &PORTRAIT_nick_nicknervous
     
-    NICK: "You know what, Nour... I think you should confront her about how she treated you."
+    NICK: "You know what, Nour..."
+    
+    NICK: "I think you should confront her about how she treated you."
     
         &PORTRAIT_nick_nickneutral
     
@@ -824,19 +898,27 @@
     
     NICK: "Next time, we should try to play a tank character!"
     
+    &PORTRAIT_nick_nicksmallsmile
+    
     NICK: "Defense is the best offense, right?"
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "It's the opposite, actually."
     
-        &PORTRAIT_nick_nickworried
+        &PORTRAIT_nick_nicknervous
     
     NICK: "Oh..."
     
+    &PORTRAIT_ms. suwan_mssuwansmile
+    
     MS. SUWAN: "But I'm not the expert, remember? That's you."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "So perhaps, defense <i>is</i> the best offense."
     
-        &PORTRAIT_nick_nickneutral
+    &PORTRAIT_nick_nickbigsmile
     
     NICK: "Maybe! I guess the only way to find out would be to play..."
     
