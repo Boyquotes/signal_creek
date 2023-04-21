@@ -11,17 +11,31 @@
 
 == pretzelstand_convo ==
 
+    &PORTRAIT_nour_noursmile
+    
     NOUR: "Ah, <i>Pretzo's</i>. The smell of this cart really brings me back."
+    
+    &PORTRAIT_nour_noursad
     
     NOUR: "I always wanted the cinnamon sugar bites as a kid, but I was only allowed a regular pretzel."
     
+    &PORTRAIT_nick_nicksmallsmile
+    
     NICK: "You shoulda tried those doughnut holes filled with sugary goo..."
+    
+    &PORTRAIT_nick_nickbigsmile
     
     NICK: "I got them one time and ate them all in, like, two minutes!"
     
+    &PORTRAIT_ms. suwan_suwansmile
+    
     MS. SUWAN: "I may have treated myself to a pretzel, once or twice."
     
+    &PORTRAIT_nick_nickangry
+    
     NICK: "When you could've chosen <i>anything</i> on the menu?"
+    
+    &PORTRAIT_nour_noursad
     
     NOUR: "The pretzels are pretty good, too. It was moreso frustrating that I didn't have a choice."
     
@@ -52,12 +66,18 @@
         NOUR: "Do you know what's going on in this place?"
         
         CASHIER: "..."
+        
+        &PORTRAIT_nour_nournervous
     
         NOUR: "There's a weird void below this floor, odd vegetation, people behaving... strangely..."
         
+    &PORTRAIT_nour_nourannoyed
+    
     - NOUR: "Uh... Hello?"
         
     CASHIER: "..."
+    
+    &PORTRAIT_nour_nourannoyed
     
     NOUR: <i>I guess that's a no. Whatever.</i>
         

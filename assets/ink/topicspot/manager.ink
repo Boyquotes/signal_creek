@@ -20,9 +20,15 @@
     
         NOUR: "I think the elevator is stuck. Is there another way off of this floor?"
         
+        &PORTRAIT_manager_manageruwu
+        
         MANAGER: "Someone should be fixing that soon. You could take the escalator instead~!"
         
+        &PORTRAIT_nour_nourannoyed
+        
         NOUR: "I don't think that's working either."
+        
+        &PORTRAIT_manager_manageruwu
         
         MANAGER: "Well, then you can hang out here with me while you wait!"
         
@@ -30,11 +36,19 @@
     
     * ["Why does everything look so strange?"]
     
+        &PORTRAIT_nour_nourannoyed
+        
         NOUR: "Things are all topsy-turvy. People are appearing and disappearing, the elevator's acting all weird..."
+        
+        &PORTRAIT_nour_nourannoyed
         
         NOUR: "And the trees don't look right."
         
+        &PORTRAIT_nour_nourannoyed
+        
         NOUR: "<i>You</i> don't look right."
+        
+        &PORTRAIT_manager_managerunu
         
         MANAGER: "Hey! ;-; That isn't very nice."
         
@@ -43,6 +57,9 @@
         -> manager_wayout
          
     + -> 
+    
+        &PORTRAIT_nour_nourannoyed
+        
         NOUR: "Uh, y'know what, never mind. Seems like you can't help us get out of here. Thanks anyways."
     
         -> END
@@ -50,15 +67,25 @@
 
 == manager_firstconvo ==
     
+    &PORTRAIT_manager_manageruwu
+    
     MANAGER: "Welcome to TopicSpot! UWU"
     
     MANAGER: "You're in luck, we have an epic sale going on right now! Everything labelled as *-1??/.. is 90% off!"
     
+    &PORTRAIT_nick_nickshocked
+    
     NICK: "Uhhh... Labelled as <i>what</i>, now?"
+    
+    &PORTRAIT_nick_nickangry
     
     NICK: "Also, did, uh... Did you just say <i>oowoo</i> out loud?"
     
+    &PORTRAIT_manager_manageruwu
+    
     MANAGER: "No, I did not! UWU"
+    
+    &PORTRAIT_nick_nickangry
     
     NICK: "Yeah you did, you just did it again! How the heck?"
     
@@ -68,19 +95,29 @@
     
         NOUR: "You said... asterisk, hyphen, one, question mark, question mark, slash."
         
+        &PORTRAIT_nour_nournervous
+         
         NOUR: "But with the actual symbols, not their names. How are we even understanding this right now?"
         
         MANAGER: "That's just how I learned to talk! I'm special like that owo"
+        
+        &PORTRAIT_nour_nourannoyed
         
         NOUR: "Sure... alright. Forget I asked."
     
     * ["I think we should go."]
     
+        &PORTRAIT_nour_nourannoyed
+        
         NOUR: "Forget it, Nick. Let's just pretend he's normal, we've gotta move on."
+        
+        &PORTRAIT_nick_nickangry
         
         NICK: "Sheesh, fine."
     
     - MANAGER: "Well, let me know if you need help finding anything. XD"
+    
+    &PORTRAIT_nick_nickshocked
     
     NICK: "Whoa, you just did it again... seriously, how are you doing that?"
     

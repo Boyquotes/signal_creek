@@ -25,11 +25,13 @@
     
     NOUR: "Those <i>creepy</i> eyes... They keep following me around."
     
-    &PORTRAIT_ms. suwan_suwanneutral
+    &PORTRAIT_ms. suwan_suwannerous
     
     MS. SUWAN: "...I wanted a doll like this as a child."
         
     NICK: "Why didn't you have one?"
+    
+    &PORTRAIT_ms. suwan_suwansad
     
     MS. SUWAN: "My mother. She did not allow it."
     
@@ -38,8 +40,6 @@
     &PORTRAIT_nick_nickangry
    
     NICK: "Come on, I wanna go to TopicSpot!"
-    
-    &PORTRAIT_nick_nickneutral
     
     MS. SUWAN: "..."
     
