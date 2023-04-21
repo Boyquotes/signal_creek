@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://assets/sprites/characters/portraits/chadbrodykristy/portrait_brodyneutral.tres" type="Texture" id=25]
 [ext_resource path="res://assets/sprites/characters/portraits/chadbrodykristy/portrait_chadneutral.tres" type="Texture" id=26]
 [ext_resource path="res://assets/sprites/characters/portraits/princesspinklady/portrait_pinkladyneutral.tres" type="Texture" id=27]
+[ext_resource path="res://assets/sprites/characters/portraits/ms suwan/portrait_mssuwanneutral.tres" type="Texture" id=28]
 
 [sub_resource type="Animation" id=3]
 resource_name = "CanProceed"
@@ -235,7 +236,7 @@ characterPortraits = {
 "emperor evercrisp": ExtResource( 22 ),
 "father fuji": ExtResource( 24 ),
 "grand duchess granny": ExtResource( 18 ),
-"kannika": ExtResource( 3 ),
+"kannika": ExtResource( 28 ),
 "kristy": ExtResource( 19 ),
 "manager": ExtResource( 20 ),
 "ms. suwan": ExtResource( 3 ),

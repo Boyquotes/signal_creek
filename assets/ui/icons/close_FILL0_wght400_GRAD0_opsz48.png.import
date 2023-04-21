@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/map_svg.png-0dbefc972670c76839e0619ca886ae0d.stex"
+path="res://.import/close_FILL0_wght400_GRAD0_opsz48.png-deae2edd6c60f3ea0eb1597d8339f132.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/map_svg.png"
-dest_files=[ "res://.import/map_svg.png-0dbefc972670c76839e0619ca886ae0d.stex" ]
+source_file="res://assets/ui/icons/close_FILL0_wght400_GRAD0_opsz48.png"
+dest_files=[ "res://.import/close_FILL0_wght400_GRAD0_opsz48.png-deae2edd6c60f3ea0eb1597d8339f132.stex" ]
 
 [params]
 
@@ -21,11 +21,11 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
-flags/anisotropic=true
+flags/mipmaps=false
+flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
-process/premult_alpha=false
+process/premult_alpha=true
 process/HDR_as_SRGB=false
 process/invert_color=false
 process/normal_map_invert_y=false

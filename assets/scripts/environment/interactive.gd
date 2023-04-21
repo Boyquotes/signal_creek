@@ -89,4 +89,3 @@ func _get_object_name() -> String:
 	var rawfilename = self.get_parent().filename
 	
 	return rawfilename.right(rawfilename.find_last("/") + 1).trim_suffix(".tscn").trim_prefix("obj_")
-

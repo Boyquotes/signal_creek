@@ -22,8 +22,49 @@ export var music_tracks : Dictionary = {
 	"ElevatorMusic": music_elevator
 }
 
-export var sound_effects : Dictionary = {
 
+# I hate this but it is what it is.
+export var sound_effects : Dictionary = {
+	"applefall": preload("res://assets/sounds/sfx/applefall.wav"),
+	"applefallsplat": preload("res://assets/sounds/sfx/applefallsplat.wav"),
+	"boomyelevator": preload("res://assets/sounds/sfx/boomyelevator.wav"),
+	"boomyelevator2": preload("res://assets/sounds/sfx/boomyelevator2.wav"),
+	"buttonpress": preload("res://assets/sounds/sfx/buttonpress.wav"),
+	"choiceselect": preload("res://assets/sounds/sfx/choiceselect.wav"),
+	"clack": preload("res://assets/sounds/sfx/clack.wav"),
+	"clickydoor": preload("res://assets/sounds/sfx/clickydoor.wav"),
+	"dialoguecloseorganic": preload("res://assets/sounds/sfx/dialoguecloseorganic.wav"),
+	"dialogueopenorganic": preload("res://assets/sounds/sfx/dialogueopenorganic.wav"),
+	"dukedeliciouslaugh": preload("res://assets/sounds/sfx/dukedeliciouslaugh.wav"),
+	"earlearligoldlaugh": preload("res://assets/sounds/sfx/earlearligoldlaugh.wav"),
+	"elevatorcrash": preload("res://assets/sounds/sfx/elevatorcrash.wav"),
+	"elevatorup": preload("res://assets/sounds/sfx/elevatorup.wav"),
+	"emperorevercrisplaugh": preload("res://assets/sounds/sfx/emperorevercrisplaugh.wav"),
+	"fatherfujilaugh": preload("res://assets/sounds/sfx/fatherfujilaugh.wav"),
+	"footsteps": preload("res://assets/sounds/sfx/footsteps.wav"),
+	"footsteps2": preload("res://assets/sounds/sfx/footsteps2.wav"),
+	"grandduchessgrannylaugh": preload("res://assets/sounds/sfx/grandduchessgrannylaugh.wav"),
+	"insertcoin": preload("res://assets/sounds/sfx/insertcoin.wav"),
+	"leavesrustling": preload("res://assets/sounds/sfx/leavesrustling.wav"),
+	"mellowchime": preload("res://assets/sounds/sfx/mellowchime.wav"),
+	"menucloseorganic": preload("res://assets/sounds/sfx/menucloseorganic.wav"),
+	"menunavorganic": preload("res://assets/sounds/sfx/menunavorganic.wav"),
+	"menuopenorganic": preload("res://assets/sounds/sfx/menuopenorganic.wav"),
+	"menuselectorganic": preload("res://assets/sounds/sfx/menuselectorganic.wav"),
+	"newchoiceentry": preload("res://assets/sounds/sfx/newchoiceentry.wav"),
+	"newentry": preload("res://assets/sounds/sfx/newentry.wav"),
+	"oneshotchime": preload("res://assets/sounds/sfx/oneshotchime.wav"),
+	"pinkladylaugh": preload("res://assets/sounds/sfx/pinkladylaugh.wav"),
+	"poopman": preload("res://assets/sounds/sfx/poopman.wav"),
+	"princependragonlaugh": preload("res://assets/sounds/sfx/princependragonlaugh.wav"),
+	"shlorp": preload("res://assets/sounds/sfx/shlorp.wav"),
+	"shlorpspeed": preload("res://assets/sounds/sfx/shlorpspeed.wav"),
+	"sodacandrop": preload("res://assets/sounds/sfx/sodacandrop.wav"),
+	"spookychime": preload("res://assets/sounds/sfx/spookychime.wav"),
+	"typewriter": preload("res://assets/sounds/sfx/typewriter.wav"),
+	"typewriter2": preload("res://assets/sounds/sfx/typewriter2.wav"),
+	"typewriter3": preload("res://assets/sounds/sfx/typewriter3.wav"),
+	"SFXW001_indoor_roomtone_entrance hall": preload("res://assets/sounds/ambient/SFXW001_indoor_roomtone_entrance hall.wav"),
 }
 
 export var character_voices : Dictionary = {
@@ -49,20 +90,9 @@ onready var suwan_footstep_player = $FootStepsSuwan
 
 
 func _ready():
-	set_mute_audio(true)
-	var soundEffectFolderContents = StaticFunctions.get_dir_contents("res://assets/sounds/sfx/", "wav")
-	var soundKeys = []
-	# CONVERT LIST OF FILE PATHS TO KEYS
-	for filePath in soundEffectFolderContents:
-		var splitFilePath = filePath.split("/")
-		var keyName = splitFilePath[splitFilePath.size() - 1].trim_suffix(".wav")
-		soundKeys.push_back(keyName)
-	
-	var i = 0
-	for key in soundKeys:
-		sound_effects[soundKeys[i]] = load(soundEffectFolderContents[i])
-		i += 1
-		
+#	set_mute_audio(true)
+
+#	print_new_sfx_dictionary()
 		
 	Globals.Nour.footstep_audio_stream = nour_footstep_player
 	Globals.Nick.footstep_audio_stream = nick_footstep_player
@@ -148,3 +178,31 @@ func smooth_increase_stream_volume(stream) -> void:
 	
 	increasing_music_volume = false
 	stream.set_volume_db(0.0)
+
+
+# For developer; make a new dictionary to put at the top.
+# Godot doesn't let you load audio resources at runtime
+func print_new_sfx_dictionary() -> void:
+	var soundEffectFolderContents = StaticFunctions.get_dir_contents("res://assets/sounds/sfx/", "wav")
+	var soundKeys = []
+	var soundKeyImports = []
+	# CONVERT LIST OF FILE PATHS TO KEYS
+
+#
+#	var soundEffectFolderContentsImport = StaticFunctions.get_dir_contents("res://assets/sounds/sfx/", "import")
+#	for filePath in soundEffectFolderContents:
+#		print("new sound added")
+#		var splitFilePath = filePath.split("/")
+##		splitFilePath = splitFilePath()
+#		var keyName = splitFilePath[splitFilePath.size() - 1].trim_suffix(".wav.import")
+#		soundKeyImports.push_back(keyName)
+	
+#	var i = 0
+#	for key in soundKeys:
+#		sound_effects[soundKeyImports[i]] = load(soundEffectFolderContentsImport[i].trim_suffix(".import"))
+#		i += 1
+	for filePath in soundEffectFolderContents:
+		var splitFilePath = filePath.split("/")
+		var keyName = splitFilePath[splitFilePath.size() - 1].trim_suffix(".wav")
+		soundKeys.push_back(keyName)
+		print('"' + keyName + '": preload("' + filePath + '"),')

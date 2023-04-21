@@ -208,7 +208,7 @@ __meta__ = {
 "_editor_description_": "Doortal \"door portal\""
 }
 room_index = 1
-exit_position = Vector2( 376, 720 )
+exit_position = Vector2( 185, 73 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Doortal"]
 shape = SubResource( 12 )
@@ -457,7 +457,7 @@ position = Vector2( 523, -334 )
 position = Vector2( 344, 89 )
 
 [node name="DisplayStand3" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
-position = Vector2( 380, -225 )
+position = Vector2( 384, -225 )
 
 [node name="ComicStand" parent="PlaneManager/Overworld" instance=ExtResource( 28 )]
 position = Vector2( 523, -332 )
@@ -526,11 +526,11 @@ position = Vector2( 471, 27 )
 
 [node name="Kindle" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
 material = SubResource( 27 )
-position = Vector2( 371, -224 )
+position = Vector2( 375, -224 )
 
 [node name="Kindle2" parent="PlaneManager/Overworld" instance=ExtResource( 21 )]
 material = SubResource( 27 )
-position = Vector2( 389, -224 )
+position = Vector2( 393, -224 )
 
 [node name="Poster1" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
 position = Vector2( 3, -351 )

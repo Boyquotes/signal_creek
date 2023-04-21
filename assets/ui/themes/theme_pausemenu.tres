@@ -1,8 +1,20 @@
-[gd_resource type="Theme" load_steps=12 format=2]
+[gd_resource type="Theme" load_steps=13 format=2]
 
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/ui/images/sliderhandle_hover.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/images/sliderhandle.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.28128, 0.2144, 0.32, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.784314, 0.721569, 0.803922, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.37797, 0.2881, 0.43, 1 )
@@ -63,6 +75,7 @@ anti_aliasing = false
 [resource]
 default_font = ExtResource( 1 )
 Button/constants/hseparation = 0
+Button/styles/focus = SubResource( 11 )
 Button/styles/hover = SubResource( 5 )
 Button/styles/normal = SubResource( 6 )
 Button/styles/pressed = SubResource( 7 )
