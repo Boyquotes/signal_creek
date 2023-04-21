@@ -18,9 +18,18 @@ func _ready():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("open_menu"):
+		if Globals.GameMode == Globals.GameModes.WALK:
+			Globals.GameMode = Globals.GameModes.PAUSE
+			
+		elif Globals.GameMode == Globals.GameModes.PAUSE:
+			Globals.GameMode = Globals.GameModes.WALK
+			
+		else:
+			return
+			
 		Globals.PauseMenu.toggle_visible()
 		
-	if Globals.GameState == Globals.GameStates.START:
+	if Globals.GameState == Globals.GameStates.START and Globals.GameMode != Globals.GameModes.PAUSE:
 		if Input.is_action_just_pressed("interact"):
 			Globals.StartScreen.start_game()
 		
