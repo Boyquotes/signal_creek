@@ -117,13 +117,17 @@
     
     NICK: "..."
     
-    &PORTRAIT_nour_nournervous
+    &PORTRAIT_nour_nourrealization
     
-    NOUR: <i>I have no idea if this will work...</i>
+    NOUR: "... !"
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: <i>But at least Nick seems to be enjoying himself.</i>
+    NOUR: <i>I'm so glad Nick seems to be enjoying himself.</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>Even though I have no idea if this will actually work...</i>
     
     &PORTRAIT_nour_nourpondering
             
@@ -197,13 +201,17 @@
     
     NICK: "..."
     
-    &PORTRAIT_nour_nournervous
+    &PORTRAIT_nour_nourrealization
     
-    NOUR: <i>I have no idea if this will work...</i>
+    NOUR: "... !"
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: <i>But at least Nick seems to be enjoying himself.</i>
+    NOUR: <i>I'm so glad Nick seems to be enjoying himself.</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>Even though I have no idea if this will actually work...</i>
     
     &PORTRAIT_nour_nourpondering
             
@@ -300,13 +308,17 @@
     
     NICK: "..."
     
-    &PORTRAIT_nour_nournervous
+    &PORTRAIT_nour_nourrealization
     
-    NOUR: <i>I have no idea if this will work...</i>
+    NOUR: "... !"
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: <i>But at least Nick seems to be enjoying himself.</i>
+    NOUR: <i>I'm so glad Nick seems to be enjoying himself.</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>Even though I have no idea if this will actually work...</i>
     
     &PORTRAIT_nour_nourneutral
     
@@ -408,7 +420,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "...!"
+    NICK: "... !"
     
     &PORTRAIT_???_pinkladysmile
     
@@ -528,7 +540,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "...?"
+    NICK: "... ?"
     
     &PORTRAIT_princess pink lady_pinkladyneutral
     
@@ -564,13 +576,33 @@
 
     NICK: "..."
     
-    &PORTRAIT_nour_nournervous
-
-    NOUR: "How is what she told us going to help?"
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: "... !"
+    
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: "I-I mean, yeah! Ms. Suwan's totally right."
+    
+    &PORTRAIT_nick_nicksmallsmile
+    
+    NICK: "..."
+    
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: <i>I can't believe Ms. Suwan admitted she was wrong.</i>
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Maybe this means she's ready to reflect further on herself...</i>
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: "I didn't understand <i>anything</i>..."
+    NOUR: "Anyway, glad we got to help her out, but what she told us..."
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "Prince of what? Go where? I didn't understand <i>anything</i>..."
     
     &PORTRAIT_nour_noursmile
     

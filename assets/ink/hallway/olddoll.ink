@@ -3,9 +3,17 @@
 
     { - !olddoll_first: -> olddoll_first }
     
+    &PORTRAIT_nour_nourneutral
+    
     NOUR: "This old doll, again."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
 
-    MS. SUWAN: "Let us keep moving."
+    MS. SUWAN: "..."
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    MS. SUWAN: "Let's keep moving."
     
     -> END
     
@@ -27,25 +35,39 @@
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "...I wanted a doll like this as a child."
+    MS. SUWAN: "... I wanted a doll like this as a child."
+    
+    &PORTRAIT_nick_nickpondering
         
     NICK: "Why didn't you have one?"
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "My mother. She did not allow it."
     
+    &PORTRAIT_ms. suwan_suwansad
+    
     MS. SUWAN: "..."
     
-    &PORTRAIT_nick_nickangry
+    // &PORTRAIT_nick_nickangry
    
-    NICK: "Come on, I wanna go to TopicSpot!"
+    // NICK: "Come on, I wanna go to TopicSpot!"
     
-    &PORTRAIT_ms. suwan_mssuwanneutral
+    // &PORTRAIT_nick_nickneutral
     
-    MS. SUWAN: "..."
+    // MS. SUWAN: "..."
     
-    MS. SUWAN: "Very well."
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
+    MS. SUWAN: "Let's not linger on this."
+    
+    &PORTRAIT_nick_nicksad
+    
+    NICK: "Oh, uh... Okay."
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: <i>Doesn't sound like this was a happy memory.</i>
     
     -> END
 
