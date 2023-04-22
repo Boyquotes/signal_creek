@@ -37,20 +37,20 @@ border_color = Color( 1, 1, 1, 1 )
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -52.0
+margin_top = -46.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="Tutorial" type="HBoxContainer" parent="ReferenceRect/Panel"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 8.0
-margin_top = -21.0
+margin_top = -17.0
 margin_right = 543.0
-margin_bottom = 19.0
+margin_bottom = 17.0
 
 [node name="Talk3" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
-margin_right = 26.0
-margin_bottom = 40.0
+margin_right = 28.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 texture = ExtResource( 12 )
@@ -58,9 +58,9 @@ expand = true
 stretch_mode = 6
 
 [node name="Talk7" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 30.0
-margin_right = 49.0
-margin_bottom = 40.0
+margin_left = 32.0
+margin_right = 52.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.35
 texture = ExtResource( 8 )
@@ -68,20 +68,21 @@ expand = true
 stretch_mode = 6
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 53.0
-margin_top = 10.0
-margin_right = 106.0
-margin_bottom = 30.0
+margin_left = 56.0
+margin_top = 7.0
+margin_right = 84.0
+margin_bottom = 27.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
+size_flags_stretch_ratio = 0.5
 custom_fonts/normal_font = ExtResource( 14 )
 text = "1"
 fit_content_height = true
 
 [node name="Talk4" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 110.0
-margin_right = 137.0
-margin_bottom = 40.0
+margin_left = 88.0
+margin_right = 116.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 texture = ExtResource( 13 )
@@ -89,9 +90,9 @@ expand = true
 stretch_mode = 6
 
 [node name="Talk8" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 141.0
-margin_right = 160.0
-margin_bottom = 40.0
+margin_left = 120.0
+margin_right = 140.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.35
 texture = ExtResource( 19 )
@@ -99,20 +100,21 @@ expand = true
 stretch_mode = 6
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 164.0
-margin_top = 10.0
-margin_right = 217.0
-margin_bottom = 30.0
+margin_left = 144.0
+margin_top = 7.0
+margin_right = 172.0
+margin_bottom = 27.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
+size_flags_stretch_ratio = 0.5
 custom_fonts/normal_font = ExtResource( 14 )
 text = "2"
 fit_content_height = true
 
 [node name="Talk2" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 221.0
-margin_right = 248.0
-margin_bottom = 40.0
+margin_left = 176.0
+margin_right = 204.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 texture = ExtResource( 16 )
@@ -120,10 +122,10 @@ expand = true
 stretch_mode = 6
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 252.0
-margin_top = 10.0
-margin_right = 305.0
-margin_bottom = 30.0
+margin_left = 208.0
+margin_top = 7.0
+margin_right = 265.0
+margin_bottom = 27.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 custom_fonts/normal_font = ExtResource( 14 )
@@ -131,9 +133,9 @@ text = "WASD"
 fit_content_height = true
 
 [node name="Talk" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 309.0
-margin_right = 336.0
-margin_bottom = 40.0
+margin_left = 269.0
+margin_right = 297.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 texture = ExtResource( 15 )
@@ -141,10 +143,10 @@ expand = true
 stretch_mode = 6
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 340.0
-margin_top = 10.0
-margin_right = 393.0
-margin_bottom = 30.0
+margin_left = 301.0
+margin_top = 7.0
+margin_right = 358.0
+margin_bottom = 27.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 custom_fonts/normal_font = ExtResource( 14 )
@@ -152,9 +154,9 @@ text = "SPACE"
 fit_content_height = true
 
 [node name="Talk9" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 397.0
-margin_right = 416.0
-margin_bottom = 40.0
+margin_left = 362.0
+margin_right = 381.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.35
 texture = ExtResource( 8 )
@@ -163,9 +165,9 @@ stretch_mode = 6
 flip_h = true
 
 [node name="Talk5" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 420.0
-margin_right = 446.0
-margin_bottom = 40.0
+margin_left = 385.0
+margin_right = 414.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 texture = ExtResource( 18 )
@@ -173,9 +175,9 @@ expand = true
 stretch_mode = 6
 
 [node name="Talk6" type="TextureRect" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 450.0
-margin_right = 477.0
-margin_bottom = 40.0
+margin_left = 418.0
+margin_right = 446.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 texture = ExtResource( 17 )
@@ -183,12 +185,13 @@ expand = true
 stretch_mode = 6
 
 [node name="RichTextLabel5" type="RichTextLabel" parent="ReferenceRect/Panel/Tutorial"]
-margin_left = 481.0
-margin_top = 10.0
+margin_left = 450.0
+margin_top = 7.0
 margin_right = 535.0
-margin_bottom = 30.0
+margin_bottom = 27.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
+size_flags_stretch_ratio = 1.5
 custom_fonts/normal_font = ExtResource( 14 )
 text = "CHOICE"
 fit_content_height = true
@@ -209,6 +212,7 @@ margin_bottom = 270.0
 visible = false
 
 [node name="PauseMenu" type="Control" parent="ReferenceRect"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 5 )
