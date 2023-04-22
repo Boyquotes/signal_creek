@@ -6,7 +6,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>Plush the Magic Dragon... a fragment of my childhood.</i>
+    NOUR: <i>Poof the Friendly Dragon... that's a hell of a throwback.</i>
     
     -> END
     
@@ -23,7 +23,7 @@
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "<i>Puff The Magic Dragon, oh he lived by the sea!~</i>"
+    NOUR: "<i>Poof The Friendly Draaagon, lived by the trees~!</i>"
     
     NOUR: "You know the lullaby?"
     
@@ -33,11 +33,11 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: "Sami and I grew up on the show. Baba sang the song to us every night."
+    NOUR: "Sami and I grew up on the book. Baba sang the song to us every night."
     
     &PORTRAIT_nick_nickbigsmile
     
-    NICK: "Heh... Wonder why Sami never told <i>me</i> about it..."
+    NICK: "Huh... Wonder why Sami never told <i>me</i> about it..."
     
     &PORTRAIT_nick_nicknervous
     
@@ -45,11 +45,11 @@
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "It's a story about this kid, Jackie, whose imaginary dragon friend comes to life."
+    NOUR: "It's a story about this kid, Jessie Print, whose imaginary dragon friend comes to life."
     
-    NOUR: "He had to keep her a secret, while she helped him fix peoples' problems..."
+    NOUR: "She had to keep Poof a secret, while she helped him fix peoples' problems..."
     
-    NOUR: "In my favorite episode, they helped a kid who lost his older sister."
+    NOUR: "In my favorite part, they helped a kid who lost his older sister."
     
     &PORTRAIT_nour_nourpondering
     
@@ -73,7 +73,7 @@
         
     * "It's a little embarrassing, how old I was when I stopped watching."
     
-        NOUR: "...I think part of me was hanging on to that innocence."
+        NOUR: "I think part of me was hanging on to that innocence."
         
         &PORTRAIT_nour_noursad
         
