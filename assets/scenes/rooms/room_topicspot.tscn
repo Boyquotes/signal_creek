@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_topicspot_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/doortal.gd" type="Script" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_trinkets.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/prefabs/objects/topicspot/obj_wallofvg.tscn" type="PackedScene" id=27]
 [ext_resource path="res://assets/textures/lights/glow_64.png" type="Texture" id=28]
+[ext_resource path="res://assets/prefabs/objects/topicspot/obj_fishgun.tscn" type="PackedScene" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 4 )
@@ -249,10 +250,10 @@ __meta__ = {
 }
 
 [node name="Table2" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
-position = Vector2( 170, 85 )
+position = Vector2( 172, 73 )
 
 [node name="PinButtons" parent="PlaneManager/Overworld" instance=ExtResource( 7 )]
-position = Vector2( 170, 87 )
+position = Vector2( 173, 75 )
 
 [node name="Trinkets2" parent="PlaneManager/Overworld" instance=ExtResource( 26 )]
 position = Vector2( 69, 109 )
@@ -331,5 +332,8 @@ position = Vector2( 78, 252 )
 
 [node name="Clothes Rack3" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
 position = Vector2( 118, 252 )
+
+[node name="Fishgun" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( 174, 101 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
