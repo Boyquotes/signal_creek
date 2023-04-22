@@ -251,7 +251,7 @@ func shrink_background_panel() -> void:
 		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
 		is_shrinking_background_panel = false
 		background_panel_node.set_visible(false)
-		#RESET DIALOGUE BOX
+		
 		clear_and_reset_ui()
 		Globals.ColorManager.set_party_portraits_to_neutral()
 		
@@ -490,3 +490,10 @@ func pause_dialogue(pauseDuration: float):
 func save_story():
 	_ink_player.SaveStateOnDisk(_save_file_path)
 	print("game saved")
+
+
+func hide_background_panel() -> void:
+	background_panel_node.set_visible(false)
+	
+func show_background_panel() -> void:
+	background_panel_node.set_visible(true)
