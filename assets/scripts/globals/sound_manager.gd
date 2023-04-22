@@ -58,6 +58,7 @@ export var sound_effects : Dictionary = {
 	"poopman": preload("res://assets/sounds/sfx/poopman.wav"),
 	"princependragonlaugh": preload("res://assets/sounds/sfx/princependragonlaugh.wav"),
 	"shlorp": preload("res://assets/sounds/sfx/shlorp.wav"),
+	"shlorpbackwards": preload("res://assets/sounds/sfx/shlorpbackwards.wav"),
 	"shlorpspeed": preload("res://assets/sounds/sfx/shlorpspeed.wav"),
 	"sodacandrop": preload("res://assets/sounds/sfx/sodacandrop.wav"),
 	"spookychime": preload("res://assets/sounds/sfx/spookychime.wav"),

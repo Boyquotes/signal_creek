@@ -334,6 +334,6 @@ position = Vector2( 78, 252 )
 position = Vector2( 118, 252 )
 
 [node name="Fishgun" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
-position = Vector2( 174, 101 )
+position = Vector2( 176, 96 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
