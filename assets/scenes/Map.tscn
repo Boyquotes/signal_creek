@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/ui/icons/storefront_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=6]
 [ext_resource path="res://assets/ui/icons/local_cafe_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=7]
 [ext_resource path="res://assets/ui/icons/TopicSpot.png" type="Texture" id=8]
-[ext_resource path="res://assets/ui/icons/Group 1.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/map.png" type="Texture" id=9]
 [ext_resource path="res://assets/ui/icons/dining_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=10]
 [ext_resource path="res://assets/ui/icons/map_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=11]
 [ext_resource path="res://assets/ui/icons/chair_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=12]
@@ -19,7 +19,7 @@
 [ext_resource path="res://assets/ui/icons/location_on_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=17]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.996078, 0.94902, 0.768627, 1 )
+bg_color = Color( 1, 1, 1, 1 )
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -68,9 +68,9 @@ stretch_mode = 5
 
 [node name="Number" type="RichTextLabel" parent="Panel/HBoxContainer/TextureRect"]
 margin_left = 152.0
-margin_top = 308.0
+margin_top = 285.0
 margin_right = 188.0
-margin_bottom = 332.0
+margin_bottom = 309.0
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center]99[/center]"
@@ -88,9 +88,9 @@ text = "100"
 
 [node name="Number3" type="RichTextLabel" parent="Panel/HBoxContainer/TextureRect"]
 margin_left = 83.0
-margin_top = 120.0
+margin_top = 131.0
 margin_right = 119.0
-margin_bottom = 144.0
+margin_bottom = 155.0
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center]101[/center]"
@@ -253,10 +253,10 @@ expand = true
 stretch_mode = 5
 
 [node name="TextureRect14" type="TextureRect" parent="Panel/HBoxContainer/TextureRect"]
-margin_left = 144.0
-margin_top = 254.0
-margin_right = 197.0
-margin_bottom = 307.0
+margin_left = 75.0
+margin_top = 78.0
+margin_right = 128.0
+margin_bottom = 131.0
 texture = ExtResource( 14 )
 expand = true
 stretch_mode = 5
@@ -365,8 +365,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = ExtResource( 2 )
-text = "99 ................................ B & N
-100 .......... Victoria’s Secret
+text = "99 ............ Victoria’s Secret
+100 ............................. B & N
 101 ... The Crevice Clothing
 102 ................................. ???
 103 ..................... We R Toys

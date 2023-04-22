@@ -24,7 +24,7 @@
 
     Nick's nose scrunches up.
     
-    &PORTRAIT_nick_nickannoyed
+    &PORTRAIT_nick_nickangry
     
     NICK: "Bleh! Most of these drinks suck."
     
@@ -36,7 +36,11 @@
     
     MS. SUWAN: "I don't recognize any of these brands. I find that disturbing."
     
+    &PORTRAIT_nick_nicknervous
+    
     NICK: "These are all gross except for the boba!"
+    
+    &PORTRAIT_nour_nourpondering
     
     NOUR: "Wouldn't you rather get fresh boba from an actual shop?"
     
@@ -46,11 +50,19 @@
     
     NICK: "The canned stuff is cheaper so..."
     
+    &PORTRAIT_nour_nourrealization
+    
     NOUR: "Oh... yeah, that's fair." 
+    
+    &PORTRAIT_nour_nourneutral
     
         + ["Do you want me to get you one?"]
         
+            &PORTRAIT_nick_nickneutral
+        
             NICK: "No thanks. I'm ok."
+            
+            &PORTRAIT_nour_nourneutral
             
             NOUR: "Are you sure?"
             
@@ -63,17 +75,20 @@
         -> END
 
 === bobatea_beforeaplequest_repeat ===
+
+    &PORTRAIT_nour_nourneutral
+    
     NOUR: <i>We've already looked at all the drinks.</i>
         
         -> END
 
 === bobatea_find_dukedelicious ===
-
-    &PORTRAIT_nick_nickworried
     
-    NOUR: <i>We've already looked at all the drinks.</i>
+    &PORTRAIT_nour_nourrealization
 
-    NOUR: <i>...Wait a minute. What's up with that boba can in the back?</i>
+    NOUR: <i>... Wait a minute. What's up with that boba can in the back?</i>
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "I think there's something... <i>wriggling</i> inside that can?"
     
@@ -81,70 +96,131 @@
 
     NOUR: "It looks kinda round... like an apple?!"
     
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: "We should buy the boba to free it. Do you want the boba, Nick?"
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: "I'm sure it'll taste real, um, apple-y. That's not too bad, right?"
+    
+    &PORTRAIT_nick_nickneutral
 
-    NICK: Nick shrugs. After a moment, Ms. Suwan clears her throat.
+    NICK: "..."
+    
+    Nick shrugs. 
+    
+    After a moment, Ms. Suwan clears her throat.
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
         
     MS. SUWAN: "It's been quite an eventful day so far. Perhaps a drink is warranted."
     
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
     MS. SUWAN: "It'd be a waste to get rid of the boba for the sake of an apple."
     
-    NICK: Nick shakes his head 'no'.
+    &PORTRAIT_nick_nicknervous
+    
+    NICK: "..."
+    
+    Nick shakes his head 'no'.
+    
+    &PORTRAIT_nour_nourneutral
     
         * ["We could all pitch in."]
         
         * ["Should we try to break it open?"]
+            
+            &PORTRAIT_nour_nourpondering
+            
             NOUR: "It could be time for a little B&E on this machine. What do you say?"
+            
+            &PORTRAIT_nour_noursmile
             
             NOUR: "It would be free."
             
+            &PORTRAIT_ms. suwan_mssuwanannoyed
+            
             MS. SUWAN: "Let's be reasonable, please. We could simply all pitch in and pay."
             
-            Nick smiles a little but quickly smothers it with a scowl.
+            &PORTRAIT_nick_nicksmallsmile
+            
+            NICK: "..."
+            
+            &PORTRAIT_nour_noursmile
+            
+            NOUR: <i>Made him smile. Nice!</i>
         
     - &PORTRAIT_nour_nourneutral 
     
     NOUR: "Would you be more comfortable if we all split the price of the drink?"
     
-    NICK: "...50 cents each?"
+    &PORTRAIT_nick_nicknervous
+    
+    NICK: "... 50 cents each?"
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
         
     MS. SUWAN: "Exactly."
     
-    NICK: Nick sighs and mumbles.
+    &PORTRAIT_nick_nickneutral
     
-    NICK: "...You have some too. Make it fair."
+    NICK: "... You have some too. Make it fair."
+    
+    &PORTRAIT_nour_noursmile
     
     NOUR: "We will."
     
     // SFX COINS INTO VENDING MACHINE
     
-    NICK: Nick fishes out two quarters from his pocket and inserts it into the vending machine.
+    &SOUND_insertcoin
+    
+    Nick fishes out two quarters from his pocket and inserts it into the vending machine.
     
     // SFX CAN DISPENSED FROM MACHINE
     
+    &SOUND_sodacandrop
+    
     More quarters enter the vending machine. Soon, a can of boba rolls out.
+    
+    &PORTRAIT_nour_nourneutral
     
     NOUR: "Here it is."
     
         * "I'll crack it open."
         
         * "Ms. Suwan, could you open this?"
-        
+            
+            &PORTRAIT_nour_noursmile
+            
             NOUR: "I trust you the most."
+            
+            &PORTRAIT_ms. suwan_mssuwansmile
             
             MS. SUWAN: "Very well."
         
         * "Do you wanna open this, Nick?"
         
+            &PORTRAIT_nour_noursmile
+        
             NOUR: "You know more about all of this than the two of us."
+            
+            &PORTRAIT_ms. suwan_mssuwansmile
             
             MS. SUWAN: "Agreed."
             
-            NICK: Nick shrugs again and takes the can.
+            &PORTRAIT_nick_nickneutral
+            
+            NICK: "..."
+            
+            Nick shrugs again and takes the can.
     
-    - The can is opened, and an apple squeezes out!
+    - The can is opened...
+    
+    //&SOUND_
+    
+    ...and an apple squeezes out!
     
     &SHLORP_APPLE_DukeDelicious_in
     
@@ -154,9 +230,13 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "...!"
+    NICK: "... !"
+    
+    &PORTRAIT_???_dukedeliciouspreach
     
     ???: "SWEET, SWEET FREEDOM!"
+    
+    &PORTRAIT_???_dukedelicioussmile
     
     ???: "THIS CYLINDRICAL METAL PRISON SHALL NO LONGER CONTAIN ME!"
     
@@ -166,21 +246,41 @@
     
     ???: "Of <i>course</i> the Emperor has sent you fine heroes to free me! Thank you! HAR HAR!"
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: "What's your name?"
+    
+    &PORTRAIT_duke delicious_dukedeliciouspreach
     
     DUKE DELICIOUS: "It is I, <i>DUKE DELICIOUS</i>!"
     
+    &PORTRAIT_duke delicious_dukedelicioussmile
+    
     DUKE DELICIOUS: "But my friends call me Red."
+    
+    &PORTRAIT_duke delicious_dukedelicioussad
     
     DUKE DELICIOUS: "Alas, I have failed to find my prince."
     
+    &PORTRAIT_duke delicious_dukedelicioussmile
+    
     DUKE DELICIOUS: "I hope that you may continue in my stead and bear the fruits of success, HAR HAR!"
+    
+    &PORTRAIT_duke delicious_dukedeliciouspreach
     
     DUKE DELICIOUS: "As a small reward, let me tell you something special."
     
+    &PORTRAIT_duke delicious_dukedelicioussmile
+    
     DUKE DELICIOUS: "Something that may help you on your multi-plane journey, Dream Walkers!"
     
-    DUKE DELICIOUS: "[insert epic lore drop here]"
+    &PORTRAIT_duke delicious_dukedeliciouspreach
+    
+    DUKE DELICIOUS: "<i>Remember we are ALL children of the Mother Tree...</i>"
+    
+    &PORTRAIT_duke delicious_dukedelicioussmile
+    
+    DUKE DELICIOUS: "<i>So show MERCY to the BERRY BEAST!</i>
     
     &PORTRAIT_nour_nourpondering
     
@@ -188,7 +288,15 @@
     
     //questions here from the party to the Duke?
     
-    DUKE DELICIOUS: "I have imparted my wisdom. It is time for me to rejoin my liege, but humans!"
+    &PORTRAIT_duke delicious_dukedeliciousneutral
+    
+    DUKE DELICIOUS: "Now that I have imparted my wisdom."
+    
+    &PORTRAIT_duke delicious_dukedelicioussmile
+    
+    DUKE DELICIOUS: "It is time for me to rejoin my liege, but humans!"
+    
+    &PORTRAIT_duke delicious_dukedeliciouspreach
     
     DUKE DELICIOUS: "Charge forth and SEARCH FOR THE PRINCE!"
     
@@ -196,22 +304,42 @@
     
     &PAUSE_0.5
     
+    &PORTRAIT_nour_noursmile
+    
     NOUR: "Well, you heard what the Duke said. Shall we?"
     
-    MS. SUWAN: Ms. Suwan nods.
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
-    NICK: Nick drinks the canned boba. 
+    MS. SUWAN: "Very well.
+    
+    &PORTRAIT_nick_nickneutral
+    
+    NICK: "..."
+    
+    Nick drinks the canned boba. 
+    
+    &PORTRAIT_nour_nourrealization
     
     NOUR: "How's that tasting, Nick?"
     
-    &PORTRAIT_nick_nickbigsmile
+    &PORTRAIT_nick_nickneutral
     
-    NICK: "...Bad."
+    NICK: "... Bad."
     
     Nick gulps more of it down.
     
-    &PORTRAIT_nour_nourannoyed
+    &PORTRAIT_nour_noursmile
     
-    NOUR: "...Sure it is. Make sure to save some for the rest of us."
+    NOUR: "... Sure it is. Make sure to save some for the rest of us."
+    
+    &PORTRAIT_nick_nicksmallsmile
+    
+    NICK: "..."
+    
+    NOUR: <i>Looks like he's feeling a little better.</i>
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>Now time to find some more apples...</i>
     
     -> END

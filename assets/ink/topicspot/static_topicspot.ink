@@ -24,11 +24,11 @@
     
     It's a toy gun from a weird video game called "Fishgun".
     
-    The slogan on the tag says:
+    The slogan on the tag says/:
     
     "IT'S A FISH... AND A GUN!"
     
-    ... Maybe it's best not question the artistry.
+    ...Maybe it's best not question the artistry.
     
     -> END
     
