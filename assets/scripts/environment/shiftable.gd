@@ -83,11 +83,3 @@ func set_sheet(sheetId: Texture):
 # Set self's global position
 func set_pos(posId: Vector2):
 	self.set_global_position(posId)
-
-
-func _on_InteractArea_can_interact():
-	pass # Replace with function body.
-
-
-func _on_InteractArea_cannot_interact():
-	pass # Replace with function body.

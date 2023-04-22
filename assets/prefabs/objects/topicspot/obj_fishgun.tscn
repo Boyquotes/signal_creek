@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/objects/sheet_topic_dream.png" type="Texture" id=2]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 19.5, 7.5 )
+extents = Vector2( 13.5, 6 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 13.5, 5.5 )
 
 [node name="Fishgun" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -34,5 +38,17 @@ region_enabled = true
 region_rect = Rect2( 502, 7, 41, 26 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.5, -3.5 )
+position = Vector2( -2.5, -2 )
 shape = SubResource( 23 )
+
+[node name="InteractArea" type="Area2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2( -2.5, 4.5 )
+shape = SubResource( 24 )
+
+[connection signal="body_entered" from="InteractArea" to="InteractArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="InteractArea" method="_on_InteractArea_body_exited"]
+[connection signal="can_interact" from="InteractArea" to="." method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="InteractArea" to="." method="_on_ActiveArea_cannot_interact"]
