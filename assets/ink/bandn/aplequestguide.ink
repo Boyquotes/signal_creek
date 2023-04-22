@@ -522,7 +522,11 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: <i> Maybe I could convince him to play the game with me. Ms. Suwan, too...</i>
+    NOUR: <i> Maybe I could convince him to play the game with me... and Ms. Suwan, too.</i>
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Wasn't the game set up somewhere in the TopicSpot? I could go look for it...</i>
     
         -> END
         

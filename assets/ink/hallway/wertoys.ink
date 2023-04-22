@@ -557,7 +557,7 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: <i>All that's left is to go and play the game now...</i>
+    NOUR: <i>All that's left is to go back to TopicSpot and play the game now...</i>
     
     -> END
 
