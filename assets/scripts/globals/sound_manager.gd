@@ -66,6 +66,7 @@ export var sound_effects : Dictionary = {
 	"typewriter2": preload("res://assets/sounds/sfx/typewriter2.wav"),
 	"typewriter3": preload("res://assets/sounds/sfx/typewriter3.wav"),
 	"SFXW001_indoor_roomtone_entrance hall": preload("res://assets/sounds/ambient/SFXW001_indoor_roomtone_entrance hall.wav"),
+	"wetkiss": preload("res://assets/sounds/sfx/wetkiss.wav")
 }
 
 export var character_voices : Dictionary = {
