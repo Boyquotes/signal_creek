@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=2]
+[ext_resource path="res://assets/scripts/character/npc_earlearligold.gd" type="Script" id=3]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_tim.png" type="Texture" id=4]
+[ext_resource path="res://assets/materials/material_outline_sussy_shlorp_disappear.tres" type="Material" id=5]
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 9, 3 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 9, 8.5 )
+
+[sub_resource type="Animation" id=25]
+resource_name = "NotVisible"
+
+[sub_resource type="Animation" id=26]
+resource_name = "Shlorp"
+
+[sub_resource type="Animation" id=27]
+resource_name = "Visible"
+
+[node name="Tim" type="RigidBody2D" groups=["shiftable"]]
+mode = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+light_mask = 4
+material = ExtResource( 5 )
+position = Vector2( 0, -16 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 20, 32 )
+
+[node name="Hint" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.313726 )
+show_behind_parent = true
+light_mask = 4
+position = Vector2( 0, -16 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 20, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -3 )
+shape = SubResource( 23 )
+
+[node name="ActiveArea" type="Area2D" parent="."]
+position = Vector2( 0, 4 )
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+_shlorping_target_path = NodePath("../AnimationPlayer")
+_physical_collider_path = NodePath("../CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
+position = Vector2( 0, -1.5 )
+shape = SubResource( 22 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/NotVisible = SubResource( 25 )
+anims/Shlorp = SubResource( 26 )
+anims/Visible = SubResource( 27 )
+
+[connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
+[connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]

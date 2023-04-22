@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_hallway_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -53,6 +53,7 @@
 [ext_resource path="res://assets/textures/lights/topwindow.png" type="Texture" id=51]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_cafesign.tscn" type="PackedScene" id=52]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_timbertims.tscn" type="PackedScene" id=53]
+[ext_resource path="res://assets/prefabs/objects/hallway/obj_tim.tscn" type="PackedScene" id=54]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 31, 7 )
@@ -938,14 +939,17 @@ position = Vector2( 569, -290 )
 [node name="EmptySquareTable" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
 position = Vector2( 353, 784 )
 
-[node name="EmptySquareTable3" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
-position = Vector2( 481, 784 )
-
-[node name="Cafesign" parent="." instance=ExtResource( 52 )]
+[node name="Cafesign" parent="PlaneManager/Overworld" instance=ExtResource( 52 )]
 position = Vector2( 129, 773 )
 
-[node name="Timbertims" parent="." instance=ExtResource( 53 )]
-position = Vector2( 583, -368 )
+[node name="Timbertims" parent="PlaneManager/Overworld" instance=ExtResource( 53 )]
+position = Vector2( 592, -368 )
+
+[node name="Tim" parent="PlaneManager/Overworld" instance=ExtResource( 54 )]
+position = Vector2( 547, -356 )
+
+[node name="EmptySquareTable3" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
+position = Vector2( 481, 784 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal_TopicSpot" to="PlaneManager/Doortal_TopicSpot" method="_on_Doortal_body_entered"]
 [connection signal="body_entered" from="PlaneManager/TutorialTrigger" to="PlaneManager/TutorialTrigger" method="_on_TutorialTrigger_body_entered"]
