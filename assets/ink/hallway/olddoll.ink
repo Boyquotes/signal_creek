@@ -15,7 +15,7 @@
     
     NOUR: "Hmm, what's this? Some kind of old doll?"
     
-    &PORTRAIT_ms. suwan_suwannervous
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "..."
     
@@ -25,13 +25,13 @@
     
     NOUR: "Those <i>creepy</i> eyes... They keep following me around."
     
-    &PORTRAIT_ms. suwan_suwannerous
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "...I wanted a doll like this as a child."
         
     NICK: "Why didn't you have one?"
     
-    &PORTRAIT_ms. suwan_suwansad
+    &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "My mother. She did not allow it."
     
@@ -40,6 +40,8 @@
     &PORTRAIT_nick_nickangry
    
     NICK: "Come on, I wanna go to TopicSpot!"
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "..."
     

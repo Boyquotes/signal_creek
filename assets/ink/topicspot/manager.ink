@@ -7,7 +7,11 @@
     
     MANAGER: "Let me know if you need help finding anything!"
     
+    &PORTRAIT_manager_manageruwu
+    
     MANAGER: "Or not... I'm kinda too lazy to get up. O3o"
+    
+    &PORTRAIT_manager_managerneutral
     
     NOUR: "Actually..."
     
@@ -24,11 +28,13 @@
         
         MANAGER: "Someone should be fixing that soon. You could take the escalator instead~!"
         
+        &PORTRAIT_manager_managerneutral
+        
         &PORTRAIT_nour_nourannoyed
         
         NOUR: "I don't think that's working either."
         
-        &PORTRAIT_manager_manageruwu
+        &PORTRAIT_nour_nourneutral
         
         MANAGER: "Well, then you can hang out here with me while you wait!"
         
@@ -38,19 +44,21 @@
     
         &PORTRAIT_nour_nourannoyed
         
-        NOUR: "Things are all topsy-turvy. People are appearing and disappearing, the elevator's acting all weird..."
+        NOUR: "Things are all topsy-turvy."
         
-        &PORTRAIT_nour_nourannoyed
+        NOUR: "People are appearing and disappearing, the elevator's acting all weird..."
         
         NOUR: "And the trees don't look right."
         
-        &PORTRAIT_nour_nourannoyed
-        
         NOUR: "<i>You</i> don't look right."
+        
+        &PORTRAIT_nour_nourneutral
         
         &PORTRAIT_manager_managerunu
         
         MANAGER: "Hey! ;-; That isn't very nice."
+        
+        &PORTRAIT_manager_managerneutral
         
         MANAGER: "Everything looks fine to me. Maybe you should get your eyes checked."
         
@@ -60,7 +68,11 @@
     
         &PORTRAIT_nour_nourannoyed
         
-        NOUR: "Uh, y'know what, never mind. Seems like you can't help us get out of here. Thanks anyways."
+        NOUR: "Y'know what, never mind. Seems like you can't help us get out of here."
+        
+        &PORTRAIT_nour_nourneutral
+        
+        NOUR: "Thanks anyways."
     
         -> END
 
@@ -71,7 +83,11 @@
     
     MANAGER: "Welcome to TopicSpot! UWU"
     
-    MANAGER: "You're in luck, we have an epic sale going on right now! Everything labelled as *-1??/.. is 90% off!"
+    &PORTRAIT_manager_managerneutral
+    
+    MANAGER: "You're in luck, we have an epic sale going on right now!"
+    
+    MANAGER: "Everything labelled as *-1??/.. is 90% off!"
     
     &PORTRAIT_nick_nickshocked
     
@@ -85,9 +101,13 @@
     
     MANAGER: "No, I did not! UWU"
     
+    &PORTRAIT_manager_managerneutral
+    
     &PORTRAIT_nick_nickangry
     
     NICK: "Yeah you did, you just did it again! How the heck?"
+    
+    &PORTRAIT_nick_nickneutral
     
     MS. SUWAN: "I don't think this conversation is a productive use of our time."
     

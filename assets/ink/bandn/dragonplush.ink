@@ -2,8 +2,6 @@
 
     It's a large bright green plush dragon, big enough to hug.
     
-    &PORTRAIT_nour_nourrealization
-    
     {- !dragonplush1: -> dragonplush1 }
     
     &PORTRAIT_nour_noursad
@@ -61,6 +59,8 @@
     
     NICK: "..."
     
+    &PORTRAIT_nour_nourneutral
+    
     * "I never stopped asking Baba to sing that song to me...["] at least, not until high school."
     
         NOUR: "I used to be unafraid to ask baba for things."
@@ -68,6 +68,8 @@
         &PORTRAIT_nour_noursad
         
         NOUR: "Because I knew he wouldn't judge me."
+        
+        &PORTRAIT_nick_nicksad
         
     * "It's a little embarrassing, how old I was when I stopped watching."
     
@@ -77,7 +79,7 @@
         
         NOUR: "Back when I didn't feel like I had to hide anything."
         
-    &PORTRAIT_nick_nicksad
+        &PORTRAIT_nick_nicksad
     
     - NICK: "...I get it."
     

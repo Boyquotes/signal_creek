@@ -623,7 +623,7 @@ position = Vector2( 392, 689 )
 position = Vector2( 472, -368 )
 
 [node name="BandNSign" parent="PlaneManager/Overworld" instance=ExtResource( 12 )]
-position = Vector2( 511, 484 )
+position = Vector2( 319, 30 )
 z_index = 1
 
 [node name="SofaBack" parent="PlaneManager/Overworld" instance=ExtResource( 17 )]

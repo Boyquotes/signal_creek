@@ -6,14 +6,16 @@
     Nick seems completely enamoured by them.
 
     {   
-        - phonecases_convo: phonecases_revisit
+        - phonecases_convo: 
+        -> phonecases_revisit
         
-        - !phonecases_convo: phonecases_convo
+        - !phonecases_convo: 
+        -> phonecases_convo
     }
     
         -> END
     
-=== phonecases_convo ===
+== phonecases_convo ==
 
     NOUR: "See something you like?"
     
@@ -35,6 +37,8 @@
     
     NOUR: "How old <i>is</i> your phone?"
     
+    &PORTRAIT_nick_nickneutral
+    
     NICK: "Um..."
     
     NICK: "Five years old."
@@ -43,7 +47,15 @@
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "Technology sometimes regresses into former models. The cycle of trends always circles back."
+    MS. SUWAN: "Technology sometimes regresses into former models."
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    MS. SUWAN: "The cycle of trends always circles back."
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    &PORTRAIT_nour_nourneutral
     
     NOUR: "Yeah... Why don't you try to put a case on?"
     
@@ -71,6 +83,8 @@
     
     No response.
     
+    &PORTRAIT_nour_nourneutral
+    
     NOUR: "Nick, are you gonna put it back?" 
     
     Nick grips the phonecase tighter. Protectively.
@@ -79,9 +93,13 @@
     
     NOUR: "Nick, we got things to do. Taking stuff from this store is not one of them."
     
+    &PORTRAIT_nour_nourneutral
+    
     &PORTRAIT_nick_nicksad
     
     NICK: "... Fine."
+    
+    &PORTRAIT_nick_nickneutral
     
     Nick puts the case back and steps away from the case display.
     
