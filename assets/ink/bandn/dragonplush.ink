@@ -2,8 +2,6 @@
 
     It's a large bright green plush dragon, big enough to hug.
     
-    &PORTRAIT_nour_nourrealization
-    
     {- !dragonplush1: -> dragonplush1 }
     
     &PORTRAIT_nour_noursad
@@ -15,7 +13,11 @@
 
 == dragonplush1 ==
     
+    &PORTRAIT_nour_nourrealization
+    
     NOUR: "Puff the Magic Dragon!?"
+    
+    &PORTRAIT_nick_nickshocked
     
     NICK: "Who? What?"
     
@@ -24,6 +26,8 @@
     NOUR: "<i>Puff The Magic Dragon, oh he lived by the sea!~</i>"
     
     NOUR: "You know the lullaby?"
+    
+    &PORTRAIT_nick_nickpondering
     
     NICK: "Nope. Never heard of it."
     
@@ -35,7 +39,7 @@
     
     NICK: "Heh... Wonder why Sami never told <i>me</i> about it..."
     
-    &PORTRAIT_nick_nickworried
+    &PORTRAIT_nick_nicknervous
     
     NICK: "What's it about?"
     
@@ -47,13 +51,15 @@
     
     NOUR: "In my favorite episode, they helped a kid who lost his older sister."
     
-    &PORTRAIT_nour_nourneutral
+    &PORTRAIT_nour_nourpondering
     
     NOUR: "...It was actually pretty dark for a children's book, now that I think about it."
     
     &PORTRAIT_nick_nickworried
     
     NICK: "..."
+    
+    &PORTRAIT_nour_nourneutral
     
     * "I never stopped asking Baba to sing that song to me...["] at least, not until high school."
     
@@ -63,6 +69,8 @@
         
         NOUR: "Because I knew he wouldn't judge me."
         
+        &PORTRAIT_nick_nicksad
+        
     * "It's a little embarrassing, how old I was when I stopped watching."
     
         NOUR: "...I think part of me was hanging on to that innocence."
@@ -70,8 +78,12 @@
         &PORTRAIT_nour_noursad
         
         NOUR: "Back when I didn't feel like I had to hide anything."
+        
+        &PORTRAIT_nick_nicksad
     
     - NICK: "...I get it."
+    
+    &PORTRAIT_nick_nickpondering
     
     NICK: "Man, If only <i>we</i> had a dragon that'd help us get out of here."
     
