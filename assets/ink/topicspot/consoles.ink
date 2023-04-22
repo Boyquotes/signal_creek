@@ -207,7 +207,7 @@
     
     EMPEROR EVERCRISP: "I am <b>EMINENT EMPEROR EVERCRISP APLE</b>, leader of the Aples!"
     
-        &PORTRAIT_nour_nournervous
+    &PORTRAIT_nour_nournervous
     
     NOUR: "The game character is... speaking... to us?"
     
