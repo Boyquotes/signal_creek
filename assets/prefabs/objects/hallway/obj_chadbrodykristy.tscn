@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/scripts/character/npc_brody.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/character/npc_chad.gd" type="Script" id=2]
 [ext_resource path="res://assets/scripts/character/npc_kristy.gd" type="Script" id=3]
 [ext_resource path="res://assets/alpha/sprites_alpha/characters/placeholders/sheet_chadbrodykristy.png" type="Texture" id=4]
 [ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=5]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_chadbrodykristy.png" type="Texture" id=6]
 
 [sub_resource type="ShaderMaterial" id=28]
 resource_local_to_scene = true
@@ -213,16 +214,17 @@ __meta__ = {
 light_mask = 4
 material = SubResource( 28 )
 position = Vector2( 20, -1 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
+normal_map = ExtResource( 6 )
 offset = Vector2( 0, -14 )
 region_enabled = true
-region_rect = Rect2( 43, 13, 17, 29 )
+region_rect = Rect2( 48, 14, 17, 29 )
 
 [node name="BrodySprite" type="Sprite" parent="."]
 light_mask = 4
 material = SubResource( 29 )
 position = Vector2( 0, -7 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 offset = Vector2( 0, -15 )
 region_enabled = true
 region_rect = Rect2( 25, 5, 18, 31 )
@@ -231,10 +233,10 @@ region_rect = Rect2( 25, 5, 18, 31 )
 light_mask = 4
 material = SubResource( 30 )
 position = Vector2( -16, 0 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 offset = Vector2( -1, -16 )
 region_enabled = true
-region_rect = Rect2( 4, 11, 21, 32 )
+region_rect = Rect2( 1, 11, 21, 32 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
