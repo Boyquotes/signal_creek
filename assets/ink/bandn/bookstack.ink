@@ -23,18 +23,19 @@
     
     NICK: "Yeah, like..."
     
-    NICK: "When you pull on a book and the whole shelf like swings out to reveal a hidden exit behind it!"
+    NICK: "When you pull on a book and the whole shelf, like, swings out and there's a hidden exit behind it!"
     
     MS. SUWAN: "You watch too many movies."
     
-    MS. SUWAN: "Also, this is a commercial bookstore—not some mysterious billionaire's private library."
+    MS. SUWAN: "This is a commercial bookstore—not some mysterious billionaire's private library."
+    
+    MS. SUWAN: "I doubt there would be <i>any</i> clues, nor hidden exits, behind a bookstore wall."
     
     Nick eagerly tugs on every book.
     
-    NICK: "Trust me guys. I'll find it!"
+    NICK: "Trust me, guys. I'll find something!"
     
-    NOUR: "All right, Nick, you go ahead and do that..."
-    
+    NOUR: "...All right, Nick, you do that."
     -> END
     
     == bookstackvisited ==

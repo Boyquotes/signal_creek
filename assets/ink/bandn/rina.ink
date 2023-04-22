@@ -63,15 +63,17 @@
     
     NOUR: "We're in a place that shouldn't exist!?"
     
-    NICK: "Maybe we're in some kind of liminal space of the universe!"
+    NICK: "Maybe we're in some kind of liminal space!"
     
     MS. SUWAN: "... Pardon?"
     
-    NICK: "Y’know, liminal spaces? Weird alternate dimensions where everything feels off."
+    NICK: "Y’know, liminal spaces? Weird alternate dimensions where everything feels off?"
     
-    NICK: "A place where space and time aren’t acting as they should."
+    NICK: "A place where space and time aren’t acting as they should?!"
     
     MS. SUWAN: "..." 
+    
+    MS. SUWAN: "We're not in a science fiction novel, boy."
     
     MS. SUWAN: "I have to call one of my higher-ups about this."
     
@@ -88,6 +90,8 @@
     &PORTRAIT_nick_nickshadow
     
     NICK: "Aw, man. Same! I can't play any of my phone games..."
+    
+    NOUR: "Is that really what you-"
     
     &MOV_RINA_START
     
@@ -107,11 +111,17 @@
     
     NOUR: "..."
     
-    MS. SUWAN: "You're not supposed to be here, young lady."
+    MS. SUWAN: "<i>You're</i> not supposed to be here either, young lady."
     
-    NICK: "Hey, did you miss the part where she <i>magically</i> appeared in front of us!?"
+    &PORTRAIT_nick_nickworried
     
-    MS. SUWAN: "Magic? Stop messing around, little boy."
+    NICK: "Hey, did you miss the part where she <i>mysteriously</i> appeared in front of us!?"
+    
+    &PORTRAIT_ms. suwan_mssuwanannoyed
+    
+    MS. SUWAN: "Enough with your fooling around."
+    
+    &PORTRAIT_nour_nourrealization
     
     NOUR: <i>...Rina?</i>
     
@@ -142,7 +152,9 @@
     &PAUSE_1.0
 
     &SHLORP_POOP_Rina_out
-
+    
+    &PORTRAIT_nour_nourrealization
+    
     NOUR: "..."
     
     NICK: "Uh, where'd she go??"
@@ -165,7 +177,7 @@
             
             MS. SUWAN: "This place would have been closed off more securely if there were any danger."
             
-            MS. SUWAN: "It would have been reported to me, as well."
+            MS. SUWAN: "Any problems would have also been reported to me."
             
             NICK: "I don't remember us hitting our heads anywhere, either!"
             
@@ -173,7 +185,7 @@
             
             NOUR: "Well people don't really <i>remember</i> passing out."
             
-            NICK: "...Alright, fair." 
+            NICK: "...Okay, fair." 
             
         * "Maybe this is all just a dream..."
             
@@ -187,7 +199,7 @@
             
             NICK: "DRUGS?! What kind of drug would make up something like THIS?"
             
-            NICK: "... Do you have any more?"
+            NICK: ".. Do you have any more?"
             
             MS. SUWAN: "Enough of your nonsense, please."
     
@@ -197,7 +209,7 @@
             
             NICK: "That's so cool! It's like we warped through some kind of elevator-shaped portal!"
             
-            MS. SUWAN: "I'm not buying any of this. There is no such thing as a magical elevator or laminated spaces."
+            MS. SUWAN: "I'm not buying any of this. There is no such thing as a supernatural elevator or laminated spaces."
             
             NICK: "<i>Liminal<i> spaces."
             
@@ -211,7 +223,7 @@
     
     NOUR: "The elevator is closed, though."
     
-    NOUR: "And it doesn't look like the doors will budge either."
+    NOUR: "And it doesn't look like the doors will budge, either."
     
     &EMOTE_SUWAN_UpIdle
     
@@ -230,6 +242,8 @@
     NOUR: "No use in waiting for an elevator that won't work."
     
     NOUR: "We should try to find a way out of here."
+    
+    MS. SUWAN: "I have a map that I was using during my inspection. We can reference it if needed."
     
     &EMOTE_NICK_DownIdle
     
