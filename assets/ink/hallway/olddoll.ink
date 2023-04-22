@@ -23,7 +23,7 @@
     
     NOUR: "Hmm, what's this? Some kind of old doll?"
     
-    &PORTRAIT_ms. suwan_suwannervous
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "..."
     
@@ -33,7 +33,7 @@
     
     NOUR: "Those <i>creepy</i> eyes... They keep following me around."
     
-    &PORTRAIT_ms. suwan_suwanneutral
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "... I wanted a doll like this as a child."
     

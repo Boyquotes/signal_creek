@@ -25,10 +25,10 @@ func _ready():
 func _on_Doortal_body_entered(body) -> void:
 	if Globals.GameMode == Globals.GameModes.WALK and body == Globals.PartyObject.get_leader():
 		
-		if body.direction_vector == entrance_direction:
-			Globals.GameOverlay.start_fade_out()
-			Globals.GameRoot.loadingscreen_animation.play("Off")
-			entrance_timer.start()
+#		if body.direction_vector == entrance_direction:
+		Globals.GameOverlay.start_fade_out()
+		Globals.GameRoot.loadingscreen_animation.play("Off")
+		entrance_timer.start()
 
 
 func _on_Doortal_body_exited(_body):

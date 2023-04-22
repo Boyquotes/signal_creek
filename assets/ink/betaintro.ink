@@ -151,8 +151,6 @@
     
     NOUR: "I'll take him and leave the second I'm finished, you <i>know</i> I will, I-"
     
-    &SOUND_clack
-    
     &FOLLOW_NICK_NickButtonPressingPos
     
     MS. SUWAN: "Save your excuses."
@@ -225,11 +223,15 @@
     
     &PORTRAIT_nick_nicknervous
     
+    &SOUND_shlorpbackwards
+    
     NICK: "Why isn't it STOPPING? WHAT'S GOING ON—"
     
     &PORTRAIT_nour_nournervous
     
     NOUR: "I don't know but... BRACE YOURSELVES!"
+    
+    &HIDEPANEL
     
     &BLACK
     
