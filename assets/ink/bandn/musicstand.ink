@@ -126,6 +126,7 @@
             NOUR: <i>She looks upset. Something about this feels really personal...</i>
     
 -   NOUR: "You must've been a university student when <I>Paradise</i> came out with this album, right?"
+
     &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "Right. During school, me and my friends used to..."
@@ -302,6 +303,12 @@
     
     //CODE HERE - PLAY "SOUNDS LIKE OLD ANGST" 
     
+    &AUDIO_FADEOUT
+    
+    &PAUSE_0.2 
+    
+    &MUSIC_guitarriff
+    
     &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "This song..."
@@ -441,6 +448,12 @@
         
             //CODE HERE - STOP PLAYING "SOUNDS LIKE OLD ANGST" 
             
+            &AUDIO_FADEOUT
+    
+            &PAUSE_0.2 
+    
+            &MUSIC_bn
+            
             &PORTRAIT_ms. suwan_mssuwansad
 
             MS. SUWAN: "Finally."
@@ -503,13 +516,35 @@
                     
                     //CODE HERE - MAKE MUSIC VOLUME LOUDER
                     
-                    &PORTRAIT_ms. suwan_mssuwanfurious
+                    &PORTRAIT_ms. suwan_mssuwanangry
                     
-                    MS. SUWAN: "This is <i>extremely</i> immature of you. I'm very disappointed." // (ANGRY)
+                    MS. SUWAN: "Don't you dare." // (ANGRY)
                     
-                    &PORTRAIT_nour_nourangry
+                    *** [Turn it up louder]
                     
-                    NOUR: "I can't hear you over this <i>great music</i> that's supposed to <i>bring people together</i>." // (ANGRY)
+                        &VOLUME_0.0
+                    
+                        &PORTRAIT_ms. suwan_mssuwanfurious
+                        
+                        MS. SUWAN: "This is <i>extremely</i> immature of you. I'm very disappointed."
+                    
+                        &PORTRAIT_nour_nourangry
+                        
+                        NOUR: "I can't hear you over this <i>great music</i> that's supposed to <i>bring people together</i>." // (ANGRY)
+                        
+                        &PORTRAIT_ms. suwan_mssuwanshadow
+                        
+                        MS. SUWAN: "..."
+                        
+                        &AUDIO_FADEOUT
+    
+                        &PAUSE_0.2 
+                        
+                        Ms. Suwan shuts the record off.
+                        
+                        &VOLUME_-10.0
+                        
+                        &MUSIC_bn
     
     -  &PORTRAIT_nour_nourannoyed
     

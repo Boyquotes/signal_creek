@@ -12,7 +12,7 @@
 [ext_resource path="res://assets/scripts/ui/screen_overlay.gd" type="Script" id=10]
 [ext_resource path="res://assets/materials/gradients/gradient_dream.tres" type="Texture" id=12]
 [ext_resource path="res://assets/scripts/globals/input_driver.gd" type="Script" id=13]
-[ext_resource path="res://assets/sounds/music/Signal_Creek_BN_v1.mp3" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/music/bn.mp3" type="AudioStream" id=14]
 [ext_resource path="res://assets/sounds/music/LM_SignCreek_Grunge_v1.mp3" type="AudioStream" id=15]
 [ext_resource path="res://assets/sounds/music/Signal_Creek_Cafe_v1.mp3" type="AudioStream" id=16]
 
@@ -109,6 +109,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -41.0 ]
 }
+testing_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )
@@ -185,6 +186,9 @@ music_bandn = ExtResource( 14 )
 music_hallway = ExtResource( 16 )
 music_topicspot = ExtResource( 15 )
 music_elevator = ExtResource( 8 )
+music_tracks = {
+"bn": ExtResource( 14 )
+}
 
 [node name="FootStepsNour" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 7 )
