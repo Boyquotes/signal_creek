@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://assets/scenes/rooms/room_abstract.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scripts/globals/game_root.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/sounds/ambient/SFXW001_indoor_roomtone_entrance hall.wav" type="AudioStream" id=8]
 [ext_resource path="res://assets/materials/camera_overlay.tres" type="Material" id=9]
 [ext_resource path="res://assets/scripts/ui/screen_overlay.gd" type="Script" id=10]
+[ext_resource path="res://assets/sounds/music/guitarriff.wav" type="AudioStream" id=11]
 [ext_resource path="res://assets/materials/gradients/gradient_dream.tres" type="Texture" id=12]
 [ext_resource path="res://assets/scripts/globals/input_driver.gd" type="Script" id=13]
 [ext_resource path="res://assets/sounds/music/bn.mp3" type="AudioStream" id=14]
@@ -184,7 +185,8 @@ music_hallway = ExtResource( 16 )
 music_topicspot = ExtResource( 15 )
 music_elevator = ExtResource( 8 )
 music_tracks = {
-"bn": ExtResource( 14 )
+"bn": ExtResource( 14 ),
+"guitarriff": ExtResource( 11 )
 }
 
 [node name="FootStepsNour" type="AudioStreamPlayer" parent="SoundManager"]

@@ -32,16 +32,16 @@
     
     &PORTRAIT_nour_nourrealization
     
+    NOUR: "Hey, Ms. Suwan. You mentioned going to rock shows in the past, right?"
+    
     &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "... Yes, why?"
-    NOUR: "Hey, Ms. Suwan. You mentioned going to rock shows in the past, right?"
-    
-    MS. SUWAN: "...Yes, why?"
     
     // NOUR WALKS FORWARD AND TAKES RECORD FROM THE MUSIC STAND, THEN TURNS AROUND TOWARDS MS SUWAN, HOLDING IT UP.
     
     NOUR: "Have you heard of <i>this</i> album, then?"
+    
     &PORTRAIT_nour_nourneutral
     
     Nour raises the record of <i>Actually, I Do Mind</i> up to show Ms. Suwan. 
@@ -49,6 +49,7 @@
     &PORTRAIT_nour_noursmile
     
     NOUR: "I used to listen to <i>Paradise</i> all the time when I was younger."
+    
     &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "... Yes. I remember that one. Good album."
@@ -309,6 +310,8 @@
     
     &MUSIC_guitarriff
     
+    &AUDIO_FADEIN
+    
     &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "This song..."
@@ -451,8 +454,12 @@
             &AUDIO_FADEOUT
     
             &PAUSE_0.2 
+            
+            &VOLUME_-10.0
     
             &MUSIC_bn
+            
+            &AUDIO_FADEIN
             
             &PORTRAIT_ms. suwan_mssuwansad
 
@@ -511,6 +518,18 @@
                     &PORTRAIT_nour_nourangry
                 
                     NOUR: "Except you're the one acting immature right now!" // (ANGRY)
+                    
+                    &AUDIO_FADEOUT
+    
+                    &PAUSE_0.2
+                    
+                    Ms. Suwan shuts the record off.
+                    
+                    &VOLUME_-10.0
+                        
+                    &AUDIO_FADEIN
+                        
+                    &MUSIC_bn
                 
                 ** "You want it louder?"
                     
@@ -543,6 +562,8 @@
                         Ms. Suwan shuts the record off.
                         
                         &VOLUME_-10.0
+                        
+                        &AUDIO_FADEIN
                         
                         &MUSIC_bn
     
