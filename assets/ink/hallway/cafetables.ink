@@ -14,10 +14,10 @@
     - cafetables_getsuwantotalk:
         -> cafetables2_5_repeat
 
-    - chadbrodykristy2 && cafetables1:
+    - chadbrodykristy2 && beautystand_find_pinklady && cafetables1:
         -> cafetables2_5
         
-    - chadbrodykristy2:
+    - chadbrodykristy2 && beautystand_find_pinklady:
         -> cafetables2
         
     - else: 
