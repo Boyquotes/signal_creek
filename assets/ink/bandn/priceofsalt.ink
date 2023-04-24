@@ -20,7 +20,7 @@
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: "I was so scared someone would buy the one I was reading."
+    NOUR: "I was so scared someone would buy the one I hid."
 
     &PORTRAIT_nick_nickpondering 
     
@@ -30,8 +30,7 @@
     
     NICK: "Is that what you'd do when you'd leave me and Sami in the food court?!"
     
-    &PORTRAIT_nour_nourpondering
-    
+    &PORTRAIT_nour_nourrealization
     NOUR: "Uhhh..."
     
     &PORTRAIT_nour_nournervous
@@ -52,7 +51,7 @@
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "I'm still gonna tell him. We always wondered where you went, and he deserves the truth too!" 
+    NICK: "I'm still gonna tell him. We always wondered where you went, and he deserves the truth, too!" 
     
     &PORTRAIT_nick_nickpondering 
     
@@ -60,7 +59,7 @@
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: "It's, uh... It's a queer book. So I didn't want anyone to know I was reading it."
+    NOUR: "It's, uh... It's a queer book. So I didn't want anyone to see me reading it."
     
     &PORTRAIT_nour_nourannoyed
 
@@ -72,10 +71,12 @@
     
     &PORTRAIT_nick_nickbigsmile
     
-    NICK: "If I were you, I would've gone to TopicSpot and played games... yet you used your powers for NERD stuff!"
+    NICK: "If I were you, I would've gone to TopicSpot and played games..." 
+    
+    NICK: "Yet you used your powers for GAY NERD stuff!"
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "Of couse you would think that."
+    NOUR: "Psh, whatever."
     
     -> END

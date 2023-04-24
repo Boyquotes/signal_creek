@@ -12,15 +12,23 @@
     
     It's a shiny toy race car.
     
+    &PORTRAIT_nick_nicksmallsmile
+    
     NICK: "Yo! I used to play with these things all the time. My go to was the '20 Dodge Charger Hellcat." // EXCITED
     
-    MS. SUWAN: "I played with them too back in Thailand."// The 1970 Mattel Hot Wheels Side kick Thailand SC Police Diecast Car was the one I would play with the most.
+    MS. SUWAN: "I played with them, too, back in Thailand."// The 1970 Mattel Hot Wheels Side kick Thailand SC Police Diecast Car was the one I would play with the most.
     
-    NICK: "You had Hot Wheels too?!" // SHOCKED
+    &PORTRAIT_nick_nickshocked
+    
+    NICK: "You had Hot Wheels, too?!" // SHOCKED
     
     MS. SUWAN: "They were everywhere in my neighborhood street markets."
     
-    MS. SUWAN: "My mother would buy them for me all the time. I never asked for them... but she still bought them for me." // FROWNING
+    MS. SUWAN: "My mother would buy them for me all the time." 
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "...Though I never asked for them." // FROWNING
     
     MS. SUWAN: "Those were the only toys I had for most of my childhood."
     
@@ -28,9 +36,13 @@
     
     NICK: "Did you ever play with things you actually liked? Like planes? Monster trucks? Or—"
     
-    MS. SUWAN: "I had a stuffed doll. It was my older cousin's before she gave it to me."
+    MS. SUWAN: "I had a stuffed doll." 
+    
+    MS. SUWAN: "...It was my older cousin's before she gave it to me."
     
     MS. SUWAN: "I had a hard time sleeping without it and took it with me everywhere."
+    
+    &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "It was probably my equivalent of your...'20 Dodge Charger Hellcat, was it?" // SMILING
     
@@ -38,8 +50,8 @@
     
     MS. SUWAN: "It's not exactly hard to remember something as ridiculous like that, especially if you just mentioned it moments ago."
     
-        * [Ask what the stuffed doll was]
-            NOUR: "What was the stuffed doll? A girl? Or some animal?"
+        * ["What was the stuffed doll?"]
+            NOUR: "A girl? Or some animal?"
             
             MS. SUWAN: "It was a rabbit."
             
@@ -51,27 +63,33 @@
             
             NICK: "Dragons? I love dragons! Do you think they have any dragons here—" // EXCITED
             
-        * [Ask more about Thailand]
-            NOUR: "What was Thailand like?" 
+        * ["What was Thailand like?"]
+            NOUR: "The weather must've been different from here."
             
-            MS. SUWAN: "Humid and hot in the summers. Winters were better because it doesn't get as cold as it does here."
+            &PORTRAIT_nour_nourpondering
             
-            MS. SUWAN: "Lots of nature. Lots of people. Winding paths, crossing from one place to the next. Easier to talk to aunties."
+            NOUR: "...I mean, everything must've been."
+            
+            MS. SUWAN: "Humid and hot in the summers. Winters I enjoyed, it never got as cold as it does here."
+            
+            MS. SUWAN: "Lots of nature. Lots of people. Winding paths, crossing from one place to the next."
             
             MS. SUWAN: "And of course, toy markets. Those were there, too."
             
             NOUR: "Do you miss Thailand?"
             
+            &PORTRAIT_ms. suwan_mssuwanpondering
+            
             MS. SUWAN: "Sometimes I do. Sometimes I don't. Depends on what day you're asking."
             
             NICK: "I wanna go to a toy market in Thailand! Maybe Ms. Suwan, you could take me and—" // EXCITED
-        * [Leave the hotwheels]
+        * ["Let's get going."]
     
     - NOUR: "We should probably move on."
             
     NICK: "Aw, already?" // SAD
             
-    NOUR: "Yeah. Unless this toy car can get us out of here, we should get going."
+    NOUR: "Unless this car can get us out of here, there's no use sticking around."
         -> END
 
 == hotwheels_visited ==

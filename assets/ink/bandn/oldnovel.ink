@@ -30,7 +30,7 @@
 
     &PORTRAIT_mssuwan_mssuwanpondering
     
-    MS. SUWAN: "Interesting. You know this book?"
+    MS. SUWAN: "Interesting. You know it?"
     
     &PORTRAIT_nour_nourneutral
     
@@ -50,13 +50,13 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Have you heard of it?"
+    NOUR: "Looks like you're familiar with it."
     
     &PORTRAIT_mssuwan_mssuwannervous 
     
-    MS. SUWAN: "Uncertain."
+    MS. SUWAN: "Hm. Maybe."
     
-    NOUR: "You've had your eye on it for quite a while."
+    NOUR: "You've had your eye on it for a while."
 
     MS. SUWAN: "Well, the name sounds familiar, but I know nothing of it."
 
@@ -70,23 +70,25 @@
 
     MS. SUWAN: "Which this book promotes."
     
-    NOUR: "You know, Egyptian and Chinese cultures have that in common."
+    NOUR: "...You know, Egyptian and Chinese cultures have that in common."
     
-    NOUR: "There's a natural aversion to Western ideas, and a... <i>Family First</i> kind of attitude."
+    NOUR: "There's a natural aversion to Western ideas, and a... <i>Family First</i> attitude."
     
     &PORTRAIT_nour_noursad
     
-    NOUR: "Sometimes, it's valid. Mostly, it's not."
+    NOUR: "Generally, it's valid. Sometimes it's not."
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "So... may I ask why you never read the book?"
+    NOUR: "So..."
+    
+    NOUR: "May I ask why you never read the book?"
     
     &PORTRAIT_mssuwan_mssuwansad
     
     MS. SUWAN: "I was not ready to embrace myself as an individual."
     
-    MS. SUWAN: "...I cannot say things have changed."
+    MS. SUWAN: "...I can't say things have changed."
     
     &PORTRAIT_nour_nournervous
     
@@ -115,7 +117,7 @@
     
     &PORTRAIT_mssuwan_mssuwansmile
     
-    MS. SUWAN: "I can afford to read things other than contracts and case law."
+    MS. SUWAN: "I think I can afford to read things other than contracts and case law."
     
     &PORTRAIT_nour_noursmile
     

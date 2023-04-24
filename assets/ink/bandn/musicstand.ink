@@ -32,24 +32,23 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "Ms. Suwan! You mentioned going to rock shows in the past, right?"
-    
     &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "... Yes, why?"
+    NOUR: "Hey, Ms. Suwan. You mentioned going to rock shows in the past, right?"
+    
+    MS. SUWAN: "...Yes, why?"
     
     // NOUR WALKS FORWARD AND TAKES RECORD FROM THE MUSIC STAND, THEN TURNS AROUND TOWARDS MS SUWAN, HOLDING IT UP.
     
+    NOUR: "Have you heard of <i>this</i> album, then?"
     &PORTRAIT_nour_nourneutral
-    
-    NOUR: "Have you heard of this album, then?"
     
     Nour raises the record of <i>Actually, I Do Mind</i> up to show Ms. Suwan. 
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "I used to listen to Paradise all the time when I was younger."
-    
+    NOUR: "I used to listen to <i>Paradise</i> all the time when I was younger."
     &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "... Yes. I remember that one. Good album."
@@ -86,7 +85,7 @@
             
             NOUR: "You don't really seem like the type - no offense." 
             
-            &PORTRAIT_ms. suwan_mssuwanneutral
+            &PORTRAIT_ms. suwan_mssuwansad
             
             MS. SUWAN: "I was very different back then."
             
@@ -94,7 +93,7 @@
             
             NOUR: "Do you listen to them now?"
             
-            &PORTRAIT_ms. suwan_mssuwanangry
+            &PORTRAIT_ms. suwan_mssuwanannoyed
             
             MS. SUWAN: "No. It was a distraction, so I stopped."
             
@@ -105,6 +104,8 @@
         * "It's nothing. I wasn't going to say anything—"
             
             &PORTRAIT_ms. suwan_mssuwanneutral
+        
+            &PORTRAIT_ms. suwan_mssuwanannoyed
         
             MS. SUWAN: "You were going to say that I don't seem like the type, right?"
             
@@ -124,8 +125,7 @@
             
             NOUR: <i>She looks upset. Something about this feels really personal...</i>
     
--   NOUR: "You were a student while Paradise came out with this, right?"
-
+-   NOUR: "You must've been a university student when <I>Paradise</i> came out with this album, right?"
     &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "Right. During school, me and my friends used to..."
@@ -141,17 +141,17 @@
     &PORTRAIT_nour_nourneutral
     
         * "Are you okay?"
+        
+            &PORTRAIT_ms. suwan_mssuwansad
             
             &PORTRAIT_ms. suwan_mssuwansad
             
-            MS. SUWAN: "I'm fine. Paradise just reminds me of... hard times. That's all."
-            
-            &PORTRAIT_nick_nickpondering
+            &PORTRAIT_nick_nicksmallsmile
             
             NICK: "Kind of ironic, given the name." // (HAPPY)
             
-            &PORTRAIT_ms. suwan_mssuwanannoyed
             
+            &PORTRAIT_ms. suwan_mssuwanannoyed
             MS. SUWAN: "..." // (ANGRY)
             
             &PORTRAIT_nick_nicknervous
@@ -222,7 +222,7 @@
     
     MS. SUWAN: "We used to play Paradise while we studied together."
     
-    &PORTRAIT_ms. suwan_mssuwansmile
+    &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "I think I owe Paradise my first real friendships." // (SAD)
     
@@ -242,11 +242,9 @@
     
     NICK: "How 'bout we rock out right now then? For old time's sake?" // (EXCITED)
     
-    &PORTRAIT_ms. suwan_mssuwannervous
+    &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    MS. SUWAN: "I don't think that would be a good use of our time right now."
-    
-    &PORTRAIT_nour_noursmile
+    MS. SUWAN: "I don't think that would be a good use of our time."
     
         * "Do you mind if I play this album? I'd like to listen to it."
             
@@ -374,7 +372,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanfurious
 
-    MS. SUWAN: "Once, they got upset at me for not going to a concert with them."
+    MS. SUWAN: "Once, my friends got upset at me for not going to a concert with them, right around finals."
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
@@ -414,9 +412,10 @@
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
-    MS. SUWAN: "Can you turn that off? I am getting a migraine." // (ANGRY)
     
     &PORTRAIT_nour_nournervous
+    
+    MS. SUWAN: "Can you turn that off? It's giving me a splitting headache." // (ANGRY)
     
     NOUR: <i>She's avoiding all of her problems again.</i>
     
@@ -475,6 +474,8 @@
             MS. SUWAN: "<i>We're leaving.</i>"
         
         * "..."
+        
+            &PORTRAIT_ms. suwan_mssuwanangry
             
             &PORTRAIT_ms. suwan_mssuwanannoyed
             
@@ -504,7 +505,7 @@
                     
                     &PORTRAIT_ms. suwan_mssuwanfurious
                     
-                    MS. SUWAN: "This is extremely immature of you!" // (ANGRY)
+                    MS. SUWAN: "This is <i>extremely</i> immature of you. I'm very disappointed." // (ANGRY)
                     
                     &PORTRAIT_nour_nourangry
                     
@@ -610,7 +611,7 @@
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: "What do you say?"
+    NOUR: "What d'you say?"
     
     &PORTRAIT_ms. suwan_mssuwansad
     
@@ -633,7 +634,7 @@
 //figure out how to implement intervals for when other items are not collected
 == musicstand1_repeat ==
     
-    NOUR: <i>It'd be nice to get Ms. Suwan to re-accept her old hobby.</i>
+    NOUR: <i>It'd be nice to get Ms. Suwan to get back into her old hobby.</i>
     
     NOUR: <i>But I don't think she's quite ready yet.</i>
     
@@ -661,8 +662,8 @@
     
     NOUR: "Sometimes it hurts to listen to, which is why I hadn't played it in so long." // (SAD)
     
-    &PORTRAIT_ms. suwan_mssuwanangry
     
+    &PORTRAIT_ms. suwan_mssuwanangry
     MS. SUWAN: "..."
     
     &PORTRAIT_ms. suwan_mssuwansad
@@ -679,7 +680,7 @@
             
             &PORTRAIT_nour_noursad
         
-            NOUR: "Accepting the pain of a memory also lets you remember the good things that remain."
+            NOUR: "Doing that will let you remember all the goods things that came out of it, too."
             
             &PORTRAIT_nour_noursmile
             
@@ -809,24 +810,39 @@
     -> END
 
 == musicstand4 ==
+
+    &PORTRAIT_nour_noursad
+
     NOUR: "I wish I could've gone to a Paradise concert. It must've been so cool to hear them live." // (SAD)
     
-    MS. SUWAN: "It was. Nothing like the digital recordings—the energy isn't the same."
+    MS. SUWAN: "It was. Nothing like the digital recordings. 
     
-    MS. SUWAN: "I should've gone to more concerts." // (SAD)
+    MS. SUWAN: "The energy isn't the same."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "I should've gone to more concerts when I had the chance." // (SAD)
         * "It's not too late."
         
-            NOUR: If you discover newer rock artists, you could go to their concerts."
+            NOUR: "If you discover newer rock artists you like, you could go to their concerts."
             
-            NOUR: "And older bands do reunion concerts too. Whatever the future holds, I know there's a rock concert waiting for you to be in it."
+            NOUR: "And older bands do reunion concerts, too." 
+            
+            &PORTRAIT_nour_noursmile
+            
+            NOUR: "Whatever the future holds, I know there's a rock concert waiting for you."
             
         * "At least we still have these records."
+        
+            &PORTRAIT_nour_noursmile
         
             NOUR: Nothing like having vinyl to really get into the music."
             
             NOUR: "I bet you could even find live recordings, too."
 
     - MS. SUWAN: "I'll keep that in mind, then."
+    
+    &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "Thank you, Nour."
     
