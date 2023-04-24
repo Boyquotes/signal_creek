@@ -16,7 +16,7 @@
     
     NICK: "Yo! I used to play with these things all the time. My go to was the '20 Dodge Charger Hellcat." // EXCITED
     
-    &PORTRAIT_mssuwan_mssuwannervous
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "I played with them too back in Thailand."// The 1970 Mattel Hot Wheels Side kick Thailand SC Police Diecast Car was the one I would play with the most.
     
@@ -28,7 +28,7 @@
     
     MS. SUWAN: "They were everywhere in my neighborhood street markets."
     
-    &PORTRAIT_mssuwan_mssuwansad
+    &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "My mother would buy them for me all the time." 
     
@@ -44,7 +44,7 @@
     
     NICK: "Did you ever play with things you actually liked? Like planes? Monster trucks? Or—"
     
-    MS. SUWAN: "I had a stuffed doll." 
+    &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "...It was my older cousin's before she gave it to me."
     

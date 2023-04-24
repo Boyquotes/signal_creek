@@ -12,7 +12,7 @@
     
     NOUR: "Ah, yes. The store that caused me endless embarrassment as a child."
     
-    &PORTRAIT_mssuwan_mssuwanpondering
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "Oh? How come?"
     
@@ -28,11 +28,11 @@
     
     NOUR: "...Beautiful women. I will explain no further."
     
-    &PORTRAIT_mssuwan_mssuwanrealization
+    &PORTRAIT_ms. suwan_mssuwanrealization
     
     MS. SUWAN: "Aha. I see."
     
-    &PORTRAIT_mssuwan_mssuwanpondering
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "Femininity is so strange when it's commodified and sold to us in this... particular form."
     
@@ -46,13 +46,15 @@
     
     NOUR: "... Not me, though. I was pushed into being feminine a little <i>too</i> much to enjoy it."
     
-    &PORTRAIT_mssuwan_mssuwannervous
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "All very well and fair."
     
     MS. SUWAN: "I leaned into femininity very strongly when I was younger..."
     
     MS. SUWAN: "To put it plainly, it was the safest way for me to exist as a woman."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "At least, that's how I felt at the time."
     
@@ -62,7 +64,7 @@
     
     NICK: "Kinda makes me uncomfortable even now."
     
-    &PORTRAIT_mssuwan_mssuwansmile
+    &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "I think that's the normal experience for everyone regardless of you are."
     

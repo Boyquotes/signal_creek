@@ -22,7 +22,7 @@
     
     NOUR: "Funny, all of the ones here are the exact same one I used. It was discontinued ages ago." // (FROWNING)
     
-    &PORTRAIT_mssuwan_mssuwansad
+    &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "I'm severely concerned about the health impacts of putting this on someone's skin." // (FROWNING)
     
@@ -58,7 +58,7 @@
     
     NOUR: "Oh, sure! I'm not very good at it, but black eyeshadow can be a little messy. You can rub it on with your finger if we can't find a brush." // (SMILING)
     
-    &PORTRAIT_mssuwan_mssuwannervous
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "Maybe not right now. We have more important things to worry about."
     

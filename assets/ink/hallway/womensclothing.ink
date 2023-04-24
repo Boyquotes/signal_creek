@@ -19,11 +19,11 @@
     
     NICK: "Oh, what the FUCK? The mannequins just looked over at me, I think..!?" // (SHOCKED)
     
-    &PORTRAIT_mssuwan_mssuwanannoyed
+    &PORTRAIT_ms. suwan_mssuwanannoyed
     
     MS. SUWAN: "Stop being ridiculous."
     
-    &PORTRAIT_mssuwan_mssuwansad
+    &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "... and don't curse." // FROWNING
     
@@ -43,7 +43,7 @@
     
     NICK: "... Anyways, there's like, <i>two</i> clothes in there. Kinda disappointing for a clothing store."
     
-    &PORTRAIT_mssuwan_mssuwansmile
+    &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "At one point, there were more clothes." // SMILE
     
@@ -51,7 +51,7 @@
     
     NOUR: "...Anything you liked?"
     
-    &PORTRAIT_mssuwan_mssuwanpondering
+    &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "Nothing I particularly <i>liked</i>, but I did purchase clothing here for my first job as a legal assistant."
     
