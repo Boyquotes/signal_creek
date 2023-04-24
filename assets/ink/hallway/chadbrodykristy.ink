@@ -356,11 +356,11 @@
     
     BRODY: "Let me guess, work? It's always work with you."
     
-    &PORTRAIT_ms. suwan_mssuwanannoyed
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "Must I apologize for prioritizing my studies?"
     
-    &PORTRAIT_ms. suwan_mssuwanangry
+    &PORTRAIT_ms. suwan_mssuwanfurious
     
     MS. SUWAN: "For choosing NOT to get <i>wasted</i> at Paradise shows?"
     
@@ -396,7 +396,7 @@
     
     CHAD: "Kannika, you did better than all of us. Never below a 90 on exams."
     
-    &PORTRAIT_ms. suwan_mssuwanangry
+    &PORTRAIT_ms. suwan_mssuwanfurious
     
     KANNIKA: "And I had to work <i>twice as hard</i> as you to get those scores."
     
@@ -416,7 +416,7 @@
     
     &FOLLOW_SUWAN_SuwanCBKStart
     
-    &PORTRAIT_ms. suwan_mssuwanannoyed
+    &PORTRAIT_ms. suwan_mssuwanshadow
     
     &EMOTE_NOUR_RightIdle
     
@@ -430,7 +430,7 @@
     
     * "They still haven't helped us find a way out."
     
-    - &PORTRAIT_ms. suwan_mssuwanangry
+    - &PORTRAIT_ms. suwan_mssuwanfurious
     
     MS. SUWAN: "I <i>said</i> I want to leave."
     
@@ -448,7 +448,7 @@
     
     NICK: "That's the one I hung out at."
     
-    &PORTRAIT_ms. suwan_mssuwanannoyed
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "That's great. We are leaving."
     
