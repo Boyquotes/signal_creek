@@ -251,7 +251,7 @@ func shrink_background_panel() -> void:
 		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
 		is_shrinking_background_panel = false
 		background_panel_node.set_visible(false)
-		#RESET DIALOGUE BOX
+		
 		clear_and_reset_ui()
 		Globals.ColorManager.set_party_portraits_to_neutral()
 		
@@ -284,7 +284,10 @@ func typewriter_effect(escape: bool) -> void:
 	_down_arrow_animate.play("Idle")
 	
 	#INSERT ERROR HANDLER HERE
-	
+	if !is_instance_valid(current_text_box):
+		print("we have avoided a crisis.")
+		return
+		
 	var currentVisibility = current_text_box.get_percent_visible()
 	var visibleCharacters = current_text_box.get_visible_characters()
 	
@@ -487,3 +490,10 @@ func pause_dialogue(pauseDuration: float):
 func save_story():
 	_ink_player.SaveStateOnDisk(_save_file_path)
 	print("game saved")
+
+
+func hide_background_panel() -> void:
+	background_panel_node.set_visible(false)
+	
+func show_background_panel() -> void:
+	background_panel_node.set_visible(true)

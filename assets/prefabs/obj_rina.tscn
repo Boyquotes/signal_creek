@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/character/rinas_brain.gd" type="Script" id=2]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_bandn_old.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_rina.png" type="Texture" id=6]
 
 [sub_resource type="ShaderMaterial" id=26]
 resource_local_to_scene = true
@@ -22,7 +23,7 @@ shader_param/sussy = true
 shader_param/r_displacement = Vector2( 0, 1 )
 shader_param/g_displacement = Vector2( 0, -1 )
 shader_param/b_displacement = Vector2( 0, 0 )
-shader_param/intensity = 0.5
+shader_param/intensity = 0.0
 shader_param/time_intensity = 1.0
 shader_param/sus_duration = 0.01
 shader_param/sus_speed = 5.0
@@ -91,9 +92,9 @@ __meta__ = {
 light_mask = 4
 material = SubResource( 26 )
 position = Vector2( 0, -17 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 region_enabled = true
-region_rect = Rect2( 50, 23, 24, 34 )
+region_rect = Rect2( 0, 0, 18, 32 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
@@ -104,7 +105,7 @@ position = Vector2( 0, -17 )
 texture = ExtResource( 5 )
 offset = Vector2( 0, -17 )
 region_enabled = true
-region_rect = Rect2( 50, 23, 24, 34 )
+region_rect = Rect2( 0, 0, 18, 32 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -3.5 )

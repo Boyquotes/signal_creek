@@ -1,0 +1,161 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
+[ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=4]
+[ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_tim.png" type="Texture" id=6]
+[ext_resource path="res://assets/scripts/character/npc_tim.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 40, 32 )
+
+[sub_resource type="ShaderMaterial" id=28]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.089
+shader_param/color_shlorp = Color( 0, 1.02, 1.2, 1 )
+shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.0
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 9, 3 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 9, 8.5 )
+
+[sub_resource type="Animation" id=25]
+resource_name = "NotVisible"
+
+[sub_resource type="Animation" id=26]
+resource_name = "Shlorp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "Visible"
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 40, 16.0938 )
+
+[node name="Timbertims" type="RigidBody2D" groups=["shiftable"]]
+mode = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+light_mask = 4
+material = ExtResource( 3 )
+position = Vector2( 0, -32 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 271, 639, 82, 66 )
+
+[node name="Hint" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.313726 )
+show_behind_parent = true
+light_mask = 4
+position = Vector2( 0, -32 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 271, 639, 82, 66 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -32 )
+shape = SubResource( 23 )
+
+[node name="Tim" type="RigidBody2D" parent="." groups=["shiftable"]]
+position = Vector2( -26, 8 )
+mode = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="Tim"]
+light_mask = 4
+material = SubResource( 28 )
+position = Vector2( 0, -16 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 20, 32 )
+
+[node name="Hint" type="Sprite" parent="Tim"]
+visible = false
+modulate = Color( 1, 1, 1, 0.313726 )
+show_behind_parent = true
+light_mask = 4
+position = Vector2( 0, -16 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 20, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tim"]
+position = Vector2( 0, -3 )
+shape = SubResource( 29 )
+
+[node name="ActiveArea" type="Area2D" parent="Tim"]
+position = Vector2( 0, 4 )
+script = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": ""
+}
+_disable_interactivity = true
+_shlorping_target_path = NodePath("../AnimationPlayer")
+_shlorp_animation_name = "Shlorp"
+_physical_collider_path = NodePath("../CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tim/ActiveArea"]
+position = Vector2( 0, -1.5 )
+shape = SubResource( 22 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tim"]
+anims/NotVisible = SubResource( 25 )
+anims/Shlorp = SubResource( 26 )
+anims/Visible = SubResource( 27 )
+
+[node name="ActiveArea" type="Area2D" parent="."]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
+position = Vector2( 0, -0.09375 )
+shape = SubResource( 30 )
+
+[connection signal="body_entered" from="Tim/ActiveArea" to="Tim/ActiveArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="Tim/ActiveArea" to="Tim/ActiveArea" method="_on_InteractArea_body_exited"]
+[connection signal="can_interact" from="Tim/ActiveArea" to="Tim" method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="Tim/ActiveArea" to="Tim" method="_on_ActiveArea_cannot_interact"]
+[connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
+[connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]

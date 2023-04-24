@@ -7,7 +7,11 @@
     
     MANAGER: "Let me know if you need help finding anything!"
     
+    &PORTRAIT_manager_manageruwu
+    
     MANAGER: "Or not... I'm kinda too lazy to get up. O3o"
+    
+    &PORTRAIT_manager_managerneutral
     
     NOUR: "Actually..."
     
@@ -20,9 +24,17 @@
     
         NOUR: "I think the elevator is stuck. Is there another way off of this floor?"
         
+        &PORTRAIT_manager_manageruwu
+        
         MANAGER: "Someone should be fixing that soon. You could take the escalator instead~!"
         
+        &PORTRAIT_manager_managerneutral
+        
+        &PORTRAIT_nour_nourannoyed
+        
         NOUR: "I don't think that's working either."
+        
+        &PORTRAIT_nour_nourneutral
         
         MANAGER: "Well, then you can hang out here with me while you wait!"
         
@@ -30,37 +42,72 @@
     
     * ["Why does everything look so strange?"]
     
-        NOUR: "Things are all topsy-turvy. People are appearing and disappearing, the elevator's acting all weird..."
+        &PORTRAIT_nour_nourannoyed
+        
+        NOUR: "Things are all topsy-turvy."
+        
+        NOUR: "People are appearing and disappearing, the elevator's acting all weird..."
         
         NOUR: "And the trees don't look right."
         
         NOUR: "<i>You</i> don't look right."
         
+        &PORTRAIT_nour_nourneutral
+        
+        &PORTRAIT_manager_managerunu
+        
         MANAGER: "Hey! ;-; That isn't very nice."
+        
+        &PORTRAIT_manager_managerneutral
         
         MANAGER: "Everything looks fine to me. Maybe you should get your eyes checked."
         
         -> manager_wayout
          
     + -> 
-        NOUR: "Uh, y'know what, never mind. Seems like you can't help us get out of here. Thanks anyways."
+    
+        &PORTRAIT_nour_nourannoyed
+        
+        NOUR: "Y'know what, never mind. Seems like you can't help us get out of here."
+        
+        &PORTRAIT_nour_nourneutral
+        
+        NOUR: "Thanks anyways."
     
         -> END
 
 
 == manager_firstconvo ==
     
+    &PORTRAIT_manager_manageruwu
+    
     MANAGER: "Welcome to TopicSpot! UWU"
     
-    MANAGER: "You're in luck, we have an epic sale going on right now! Everything labelled as *-1??/.. is 90% off!"
+    &PORTRAIT_manager_managerneutral
+    
+    MANAGER: "You're in luck, we have an epic sale going on right now!"
+    
+    MANAGER: "Everything labelled as *-1??/.. is 90% off!"
+    
+    &PORTRAIT_nick_nickshocked
     
     NICK: "Uhhh... Labelled as <i>what</i>, now?"
     
+    &PORTRAIT_nick_nickangry
+    
     NICK: "Also, did, uh... Did you just say <i>oowoo</i> out loud?"
+    
+    &PORTRAIT_manager_manageruwu
     
     MANAGER: "No, I did not! UWU"
     
+    &PORTRAIT_manager_managerneutral
+    
+    &PORTRAIT_nick_nickangry
+    
     NICK: "Yeah you did, you just did it again! How the heck?"
+    
+    &PORTRAIT_nick_nickneutral
     
     MS. SUWAN: "I don't think this conversation is a productive use of our time."
     
@@ -68,19 +115,29 @@
     
         NOUR: "You said... asterisk, hyphen, one, question mark, question mark, slash."
         
+        &PORTRAIT_nour_nournervous
+         
         NOUR: "But with the actual symbols, not their names. How are we even understanding this right now?"
         
         MANAGER: "That's just how I learned to talk! I'm special like that owo"
+        
+        &PORTRAIT_nour_nourannoyed
         
         NOUR: "Sure... alright. Forget I asked."
     
     * ["I think we should go."]
     
+        &PORTRAIT_nour_nourannoyed
+        
         NOUR: "Forget it, Nick. Let's just pretend he's normal, we've gotta move on."
+        
+        &PORTRAIT_nick_nickangry
         
         NICK: "Sheesh, fine."
     
     - MANAGER: "Well, let me know if you need help finding anything. XD"
+    
+    &PORTRAIT_nick_nickshocked
     
     NICK: "Whoa, you just did it again... seriously, how are you doing that?"
     

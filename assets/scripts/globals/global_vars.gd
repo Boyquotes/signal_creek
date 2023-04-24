@@ -3,7 +3,7 @@ extends Node
 #Global variables & enums - Autoload along with RoomEngine and DialogueEngine
 
 enum Characters { NICK, NOUR, SUWAN }
-enum GameModes { WALK, TALK, SHIFT }
+enum GameModes { WALK, TALK, SHIFT, PAUSE }
 enum Worlds { REAL, DREAM }
 enum WalkDir { LEFT, RIGHT, UP, DOWN }
 enum AnimationMode { WALK, IDLE }
@@ -49,6 +49,7 @@ var PrincessPinkLady = null
 var PrincePendragon = null
 var EmperorEvercrisp = null
 var EarlEarligold = null
+var Tim = null
 
 var SpeechBubble = null
 

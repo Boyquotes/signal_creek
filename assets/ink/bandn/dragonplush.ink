@@ -2,58 +2,64 @@
 
     It's a large bright green plush dragon, big enough to hug.
     
-    &PORTRAIT_nour_nourrealization
-    
     {- !dragonplush1: -> dragonplush1 }
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>Plush the Magic Dragon... a fragment of my childhood.</i>
+    NOUR: <i>Poof the Friendly Dragon... that's a hell of a throwback.</i>
     
     -> END
     
 
 == dragonplush1 ==
     
+    &PORTRAIT_nour_nourrealization
+    
     NOUR: "Puff the Magic Dragon!?"
+    
+    &PORTRAIT_nick_nickshocked
     
     NICK: "Who? What?"
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "<i>Puff The Magic Dragon, oh he lived by the sea!~</i>"
+    NOUR: "<i>Poof The Friendly Draaagon, lived by the trees~!</i>"
     
     NOUR: "You know the lullaby?"
+    
+    &PORTRAIT_nick_nickpondering
     
     NICK: "Nope. Never heard of it."
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: "Sami and I grew up on the show. Baba sang the song to us every night."
+    NOUR: "Sami and I grew up on the book. Baba sang the song to us every night."
     
     &PORTRAIT_nick_nickbigsmile
     
-    NICK: "Heh... Wonder why Sami never told <i>me</i> about it..."
+    NICK: "Huh... Wonder why Sami never told <i>me</i> about it..."
     
-    &PORTRAIT_nick_nickworried
+    &PORTRAIT_nick_nicknervous
     
     NICK: "What's it about?"
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "It's a story about this kid, Jackie, whose imaginary dragon friend comes to life."
+    NOUR: "It's a story about this kid, Jessie Print, whose imaginary dragon friend comes to life."
     
-    NOUR: "He had to keep her a secret, while she helped him fix peoples' problems..."
+    NOUR: "She had to keep Poof a secret, while she helped him fix peoples' problems..."
     
-    NOUR: "In my favorite episode, they helped a kid who lost his older sister."
+    NOUR: "In my favorite part, they helped a kid who lost his older sister."
     
-    &PORTRAIT_nour_nourneutral
+    &PORTRAIT_nour_nourpondering
     
     NOUR: "...It was actually pretty dark for a children's book, now that I think about it."
     
     &PORTRAIT_nick_nickworried
     
     NICK: "..."
+    
+    &PORTRAIT_nour_nourneutral
     
     * "I never stopped asking Baba to sing that song to me...["] at least, not until high school."
     
@@ -63,15 +69,21 @@
         
         NOUR: "Because I knew he wouldn't judge me."
         
+        &PORTRAIT_nick_nicksad
+        
     * "It's a little embarrassing, how old I was when I stopped watching."
     
-        NOUR: "...I think part of me was hanging on to that innocence."
+        NOUR: "I think part of me was hanging on to that innocence."
         
         &PORTRAIT_nour_noursad
         
         NOUR: "Back when I didn't feel like I had to hide anything."
+        
+        &PORTRAIT_nick_nicksad
     
     - NICK: "...I get it."
+    
+    &PORTRAIT_nick_nickpondering
     
     NICK: "Man, If only <i>we</i> had a dragon that'd help us get out of here."
     

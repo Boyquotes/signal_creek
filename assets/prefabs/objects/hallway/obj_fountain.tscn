@@ -95,7 +95,7 @@ material = ExtResource( 3 )
 position = Vector2( 0, -32 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 48, 240, 64, 64 )
+region_rect = Rect2( 47, 239, 66, 66 )
 
 [node name="Wadder" type="Sprite" parent="."]
 light_mask = 4
@@ -113,7 +113,7 @@ light_mask = 4
 position = Vector2( 0, -32 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 48, 240, 64, 64 )
+region_rect = Rect2( 47, 239, 66, 66 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -20 )

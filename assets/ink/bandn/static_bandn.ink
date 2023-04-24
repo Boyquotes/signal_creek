@@ -22,7 +22,7 @@
     
     ...The majority of them are comics and passionate romance books. Such taste!
     
-    Looking closely, it seems to have the faint imprint of words on it's dark screen, but even squinting, Nour can't quite tell what's on it.
+    Looking closely, it looks like there's a faint imprint of words on its dark screen, but I can't quite tell what it says.
     
     -> END
     
@@ -36,15 +36,21 @@
     
 == poster1 ==
 
-    //if this is the FISH poster?
+    It's a poster of two cats with their tails around each other, and the word "friend" on it.
     
-    It's a poster with a fish and the word "swim" on it. 
-    
-    ... Did someone need to be reminded that fish do, in fact, swim?
+    History would say... that they're good friends.
     
     -> END
     
 == poster2 ==
+
+    It's a poster with a bald eagle and the word "pride" on it. 
+    
+    Eagles don't evoke much nationalism in anyone...
+    
+    -> END
+    
+== poster3 ==
 
     It's a poster with a cat wearing thick-rimmed glasses. 
     
@@ -52,31 +58,23 @@
     
     -> END
     
-== poster3 ==
-
-    It's a poster with a bald eagle and the word "pride" on it. 
-    
-    The eagle doesn't evoke much nationalism in anyone...
-    
-    -> END
-    
 == poster4 ==
 
-    //if this is the COOL poster
-
-    It's a poster with the word "cool" on it and...
+    It's a poster with a fish and the word "swim" on it. 
     
-    A dog? A monkey? Some cookies? Regardless, it is very cool.
+    The designer apparently wanted to remind people that fish do, in fact, swim.
     
     -> END
     
 == shelfwithtrinkets ==
     
-    There's a bunch of trinkets here. They all seem to be familiar shapes, and yet nobody can quite place what they're meant to be.
+    There's a bunch of trinkets here. They all seem to be familiar shapes, but I... can't quite place what they're meant to be.
     
     It looks like some sort of weird... dog? 
     
-    Maybe you should give up trying to figure it out...
+    Or maybe some kind of... goblin?
+    
+    ...This is giving me a headache.
     
     -> END
     
