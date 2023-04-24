@@ -689,6 +689,8 @@
 //Nour takes this to mean that she should let things slide, and she ends up being too passive as a result.
 
 == rina_hallway ==
+
+    &PORTRAIT_nour_noursad
     
     NOUR: "Whatever. You know what, I'm not mad anymore."
     
@@ -833,7 +835,7 @@
     
         NOUR: "When I say it out loud, it feels silly. I'm still mad at you, but I don't think I want to be."
         
-        NICK: "You know, I do the stuff I do... I guess because I'm frustrated at the world."
+        NICK: "You know, I do the stuff I do because... I guess because I'm frustrated at the world."
         
         NICK: "But I'm actually mad at myself, 'cause I can't be how people want me to be."
     
@@ -946,7 +948,7 @@
         
         NOUR: "..."
         
-        NOUR: <i>A polaroid camera that my dad got from this mall.</i>
+        NOUR: <i>With the polaroid camera that my dad got from this mall.</i>
         
         -> END
     
