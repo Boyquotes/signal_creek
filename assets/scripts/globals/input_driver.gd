@@ -18,9 +18,18 @@ func _ready():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("open_menu"):
+		if Globals.GameMode == Globals.GameModes.WALK:
+			Globals.GameMode = Globals.GameModes.PAUSE
+			
+		elif Globals.GameMode == Globals.GameModes.PAUSE:
+			Globals.GameMode = Globals.GameModes.WALK
+			
+		else:
+			return
+			
 		Globals.PauseMenu.toggle_visible()
 		
-	if Globals.GameState == Globals.GameStates.START:
+	if Globals.GameState == Globals.GameStates.START and Globals.GameMode != Globals.GameModes.PAUSE:
 		if Input.is_action_just_pressed("interact"):
 			Globals.StartScreen.start_game()
 		
@@ -78,7 +87,7 @@ func _process(_delta):
 			_camera_normal_position = Globals.PartyObject.get_leader().get_global_position()
 			Globals.GameRoot.set_camera_following_vector(_camera_normal_position)
 				
-			if Input.is_action_just_pressed("interact") and Globals.Nour in _closest_object.get_overlapping_bodies():
+			if Input.is_action_just_pressed("interact") and _closest_object and Globals.Nour in _closest_object.get_overlapping_bodies():
 				if Globals.GameMode == Globals.GameModes.WALK:
 					for character in Globals.PartyObject.characterObjects:
 						character.animate_idle()

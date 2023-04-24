@@ -207,7 +207,7 @@ func parse_commands(currentLine):
 	elif "&PORTRAIT" in currentLine:
 		var characterName = currentLine.split("_")[1].strip_escapes().to_lower()
 		var portraitToUse = currentLine.split("_")[2].strip_escapes().to_lower()
-		Globals.ColorManager.set_character_portrait(characterName, portraitToUse)
+		Globals.ColorManager.set_character_portrait(characterName, portraitToUse)    		
 		
 	# AUDIO_FADEIN or AUDIO_FADEOUT
 	elif "&AUDIO" in currentLine:
@@ -219,3 +219,9 @@ func parse_commands(currentLine):
 			
 		elif "FADEOUT" in currentLine:
 			Globals.SoundManager.decreasing_music_volume = true
+
+	elif "&HIDEPANEL" in currentLine:
+		Globals.DialogueBox.hide_background_panel()
+		
+	elif "&SHOWPANEL" in currentLine:
+		Globals.DialogueBox.show_background_panel()

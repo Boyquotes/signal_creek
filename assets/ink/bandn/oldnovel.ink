@@ -24,39 +24,53 @@
     
     NOUR: <i>Her mind seems to be elsewhere.</i>
     
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: "That's uh... Jane Eyre. A classic."
+
+    &PORTRAIT_mssuwan_mssuwanpondering
     
     MS. SUWAN: "Interesting. You know this book?"
     
+    &PORTRAIT_nour_nourneutral
+    
     * "Read it for AP Lit, junior year of high school."
+    
+    &PORTRAIT_nour_nourneutral
     
     * "Sure, I've heard of it."
     
+    &PORTRAIT_nour_noursmile
+    
     * "It's one of my favorites."
+    
+    &PORTRAIT_mssuwan_mssuwanneutral   
     
     - MS. SUWAN: "...Hm."
     
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: "Have you heard of it?"
+    
+    &PORTRAIT_mssuwan_mssuwannervous 
     
     MS. SUWAN: "Uncertain."
     
     NOUR: "You've had your eye on it for quite a while."
-    
+
     MS. SUWAN: "Well, the name sounds familiar, but I know nothing of it."
-    
+
     MS. SUWAN: "I remember talks about certain <i>banned</i> novels, back in China. I was young."
     
     NOUR: "What kind of talk?"
     
-    MS. SUWAN: "Opposition to Western ideology and its extreme individualism."
+    &PORTRAIT_mssuwan_mssuwanneutral  
     
+    MS. SUWAN: "Opposition to Western ideology and its extreme individualism."
+
     MS. SUWAN: "Which this book promotes."
     
-    &PORTRAIT_nour_nourpondering
-    
     NOUR: "You know, Egyptian and Chinese cultures have that in common."
-    
-    &PORTRAIT_nour_nourneutral
     
     NOUR: "There's a natural aversion to Western ideas, and a... <i>Family First</i> kind of attitude."
     
@@ -64,17 +78,23 @@
     
     NOUR: "Sometimes, it's valid. Mostly, it's not."
     
-    &PORTRAIT_nour_nourneutral
+    &PORTRAIT_nour_nourpondering
     
     NOUR: "So... may I ask why you never read the book?"
+    
+    &PORTRAIT_mssuwan_mssuwansad
     
     MS. SUWAN: "I was not ready to embrace myself as an individual."
     
     MS. SUWAN: "...I cannot say things have changed."
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: "I don't completely understand what's going on..."
     
     NOUR: "But I know it can be hard to shake those feelings."
+    
+    &PORTRAIT_mssuwan_mssuwansmile
     
     MS. SUWAN: "I appreciate that, Nour."
     
@@ -85,10 +105,15 @@
     
 //if you have finished Ms Suwan's storyline, she would come back and take the old novel to read
 == oldnovel_end ==
+    &PORTRAIT_mssuwan_mssuwannervous
     
     MS. SUWAN: "I think... it is finally time for me to read this novel."
     
+    &PORTRAIT_nour_nournervous
+    
     NOUR: "Really?"
+    
+    &PORTRAIT_mssuwan_mssuwansmile
     
     MS. SUWAN: "I can afford to read things other than contracts and case law."
     

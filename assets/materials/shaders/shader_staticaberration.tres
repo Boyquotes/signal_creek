@@ -18,7 +18,7 @@ uniform float darkness = 1.0;
 
 uniform float strength: hint_range(0.0, 0.1, 0.001) = 0.08;
 uniform vec2 center = vec2(0.5, 0.5);
-uniform float radius: hint_range(0.0, 1.0, 0.001) = 0.25;
+uniform float radius: hint_range(0.0, 1.0, 0.001) = 0;
 
 uniform float aberration: hint_range(0.0, 1.0, 0.001) = 0.425;
 uniform float width: hint_range(0.0, 0.1, 0.0001) = 0.04;
@@ -57,5 +57,5 @@ void fragment() {
 	//COLOR = vec4(r, g, b, 1.0) * darkness + (noise(UV) * 0.1);
 	
 	
-	COLOR = vec4(red.r, ori.g, blue.b, 1.0) * darkness + (noise(UV) * 0.1);
+	COLOR = vec4(red.r, ori.g, blue.b, 1.0) * darkness + (noise(UV) * 0.05);
 }"

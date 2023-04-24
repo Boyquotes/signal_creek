@@ -19,64 +19,106 @@
     -> END
 
 == spraycans_start ==
+
+        &PORTRAIT_nick_nicksmallsmile
     
-    NICK: "...Ooh! Hey, guys! Think you could buy me one of these?"
+    NICK: "... Ooh! Hey, guys! Think you could buy me one of these?"
     
     NICK: "I'll pay you back later." 
     
-    NOUR: "...I didn't know you like to spray paint."
+        &PORTRAIT_nour_nourpondering
     
-    NICK: "Well, I don't know how..."
+    NOUR: "... I didn't know you liked graffitti art."
+    
+        &PORTRAIT_nick_nicknervous
+    
+    NICK: "Well, I don't really know how..."
     
     &PORTRAIT_nour_nourannoyed
 
-    NOUR: "...Then what are you going to do with these?"
+    NOUR: "... Then what are you going to do with these?"
+    
+        &PORTRAIT_nick_nicknervous
     
     NICK: "It's like... <i>none</i> of your business. Just lay off."
     
+        &PORTRAIT_ms. suwan_mssuwanannoyed
+    
     MS. SUWAN: "You want to inhale it, then?"
+    
+        &PORTRAIT_nour_nourannoyed
     
     NOUR: "Oh, he wouldn't. No way."
     
+        &PORTRAIT_ms. suwan_mssuwanangry
+    
     MS. SUWAN: "There are <i>many</i> reasons why entrusting a child with these is a terrible idea."
+    
+        &PORTRAIT_nick_nickangry
     
     NICK: "Who <i>cares</i> about that? I just want to have a little fun, geez!"
     
+        &PORTRAIT_nour_nourshocked
+    
     NOUR: "NICK!"
     
+        &PORTRAIT_nick_nicksad
+    
     NICK: "<i>Please</i>...? I'll pay you back afterwards, promise!"
+    
+        &PORTRAIT_nour_nourannoyed
     
     NOUR: "I'm going to have to agree with Ms. Suwan here."
     
     NOUR: "There's a reason why you have to be over 18 to purchase these."
+    
+        &PORTRAIT_ms. suwan_mssuwanannoyed
 
     MS. SUWAN: "Nick, getting high is not a good path to take."
     
+        &PORTRAIT_nick_nickangry
+    
     NICK: "Sheesh, you sound like those <i>Say No To Drugs</i> assemblies we have in school."
+    
+        &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "Good. That means I am saying what you need to hear."
     
+        &PORTRAIT_ms. suwan_mssuwanangry
+    
     MS. SUWAN: "Substance abuse is addictive, and will only harm your future."
     
+        &PORTRAIT_nick_nicksad
+    
     NICK: "But I have friends who do stuff like this all of the time, and they're fine!"
+    
+        &PORTRAIT_nick_nickshadow
 
     NICK: "It's not like I have a bright future, anyways. Might as well have some fun."
     
+        &PORTRAIT_nour_noursad
+    
     NOUR: "Nick, there's plenty of other things you can do for fun."
+    
+        &PORTRAIT_nour_nourpondering
     
     NOUR: "Things that <i>aren't</i> dangerous."
     
-    NICK: "Oh yeah? Name one thing."
+        &PORTRAIT_nick_nickangry
+    
+    NICK: "Oh yeah? Like <i>what?</i>"
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "You're on. Give me a bit, we can definitely find something fun to do in this mall."
+    NOUR: "Alright, give me a bit, and we can definitely find something fun to do in this mall."
     
     &PORTRAIT_nour_nourpondering
     
     NOUR: <i>Maybe I can introduce him to photography?</i>
     
     NOUR: <i>That, or reading. I enjoy both, so maybe he will too...</i>
+    
+    &PORTRAIT_nick_nicksad
     
     NICK: "I hope that whatever you're planning to show me is <i>SO</i> fun!"
     
@@ -89,9 +131,15 @@
 
 == spraycans_start_repeat ==
 
+    &PORTRAIT_nick_nicksad
+
     NICK: "Bringing me back here isn't really helping your point about 'better hobbies' or whatever."
     
+        &PORTRAIT_nour_nourannoyed
+    
     NOUR: "Okay, smart guy. I'll find something to prove my point."
+    
+        &PORTRAIT_nour_nourpondering
     
     NOUR: <i>Earlier, Nick said something about how he doesn't feel like he has a bright future.</i>
     
@@ -99,29 +147,53 @@
     
     NOUR: <i>I should help him find a hobby. Something that would give him purpose.</i>
     
+        &PORTRAIT_nour_noursmile
+    
     NOUR: <i>We could go somewhere with books, and read up about new things.</i>
     
     -> END
 
 == spraycans_afternickroute ==
 
-    NOUR: "You know, when you're an adult, you can make decisions for yourself to purchase whatever you want."
+        &PORTRAIT_nour_nourneutral
+
+    NOUR: "When you're an adult, you can purchase whatever you want."
+    
+        &PORTRAIT_nour_noursmile
     
     NOUR: "We just hope they're decisions that benefit you, not harm you."
+    
+        &PORTRAIT_ms. suwan_mssuwansmile
 
     MS. SUWAN: "Precisely."
+    
+        &PORTRAIT_nick_nicksmallsmile
 
     NICK: "Don't worry. These didn't really interest me in the first place."
     
-    NICK: "I just thought 'cause my friends did it to be cool, I had to do it too."
+        &PORTRAIT_nick_nicksad
     
-    NICK: "I'd much rather play Aple Quest...so no more lectures, alright? I learned my lesson!"
+    NICK: "I just thought 'cause my friends did it... I should, too. Or... something."
     
-    NOUR: "Ok, ok. Good to know, Nick."
+        &PORTRAIT_nick_nicksmallsmile
     
-    NICK: "And since you both taught me this <i>gracious</i> lesson...it's only right that I convert you both into Aple Quest fans too!"
+    NICK: "But I'd much rather play Aple Quest..."
     
-    MS. SUWAN: "...Perhaps we did <i>too</i> good of a job."
+    NICK: "So no more lectures, alright? I learned my lesson!"
+    
+    NOUR: "Okay, okay. Good to know, Nick."
+    
+    NICK: "And since you both taught me this <i>gracious</i> lesson..."
+    
+        &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "It's only right that I convert you both into <i>Aple Quest</i> fans too!"
+    
+        &PORTRAIT_ms. suwan_mssuwanrealization
+    
+    MS. SUWAN: "... Perhaps we did <i>too</i> good of a job."
+    
+        &PORTRAIT_nour_nourshocked
     
     NOUR: "What monster have we created..."
     

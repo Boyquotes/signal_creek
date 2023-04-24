@@ -90,6 +90,7 @@ func expand_background_panel() -> void:
 	if panelPosition.y >= -panel_opening_speed:
 		background_panel_node.set_position(Vector2(panelPosition.x, 0))
 		is_expanding_background_panel = false
+		$Panel/PauseMenu/VBoxContainer/MusicVolume/MusicVolumeSlider.grab_focus()
 	
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
@@ -123,3 +124,8 @@ func toggle_visible() -> void:
 
 func get_music_pause_mode() -> bool:
 	return $Panel/PauseMenu/VBoxContainer/MuteAudio.is_pressed()
+
+
+func _on_Close_Menu_pressed():
+	toggle_visible()
+	Globals.GameMode = Globals.GameModes.WALK

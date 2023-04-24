@@ -4,7 +4,7 @@
     
     {
         - fountain_findfather:
-            -> fountain_end
+            -> explored_everything
             
         - consoles_start_aplequest: 
             -> fountain_findfather
@@ -18,17 +18,31 @@
 
 == fountain_before_aplequest ==
 
+    &PORTRAIT_nour_nourpondering
+
     NOUR: "Got a penny to make a wish?"
+    
+    &PORTRAIT_nick_nickpondering
     
     NICK: "Nope. Who even carries around pennies anymore?"
     
+    &PORTRAIT_nour_nourneutral
+    
     NOUR: "Good point."
     
-    MS. SUWAN: "Putting your faith in silly things like wishes is just a waste of valuable time."
+    &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    MS. SUWAN: "You need to do good work, and know the right people."
+    MS. SUWAN: "Putting your faith in silly things like wishes is a waste of time."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "You need to do good work and know the right people."
+    
+    &PORTRAIT_nick_nicksad
     
     NICK: "So, like, everything is impossible? God..."
+    
+    &PORTRAIT_nour_noursad
     
     NOUR: "That's a little depressing... But also true."
     
@@ -36,105 +50,199 @@
 
 == fountain_before_aplequest_repeat ==
 
-    NOUR: <i>I've checked this already.</i> 
+    &PORTRAIT_nour_nourneutral
 
-    NOUR: <i>There's something curious in the water... But I should stay focused on finding a way out.</i>
+    NOUR: <i>I've checked this already.</i> 
+    
+    &PORTRAIT_nour_nourpondering
+
+    NOUR: <i>There's something curious in the water...</i>
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>But I should stay focused on finding a way out.</i>
     
     -> END
 
 == fountain_findfather ==
 
+    &PORTRAIT_nour_nourpondering
+
     NOUR: "Hey... Is there something bobbing up and down in the water?"
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "Just trash and debris."
     
+    &PORTRAIT_nour_nourrealization
+    
     NOUR: "No, there's something red inside."
     
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
     MS. SUWAN: "Do you think it could be an..."
+    
+    &PORTRAIT_nour_nournervous
     
     NOUR: "There's only one way to find out."
         
         * [Fish it out of the fountain]
 
-    - NOUR: "...Hey!"
+    - &PORTRAIT_nour_nourpondering
+    
+    NOUR: "..."
+    
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: "... Hey!"
     
     &SHLORP_POOP_FatherFuji_in
     
     &PORTRAIT_???_fatherfujineutral
     
-    &PORTRAIT_nick_nickworried
+    &PORTRAIT_nick_nicknervous
+    
+    NICK: "... !"
     
     ???: "Greetings."
     
     ???: "I see the ones that have rescued me hail from the Mother's Garden."
     
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: "The ones from the where now?"
+    
+    &PORTRAIT_???_fatherfujipreach
     
     ???: "Be not confused, gentle human. The Mother Tree forgives everyone."
     
+    &PORTRAIT_???_fatherfujismile
+    
     ???: "For we are all Children of the Fruit."
     
-    FATHER FUJI: "I am the insignificant <i>FATHER FUJI</i>, head priest of the Aple Council."
+    &PORTRAIT_father fuji_fatherfujipreach
+    
+    FATHER FUJI: "I am the insignificant <i>FATHER FUJI</i>..."
+    
+    &PORTRAIT_father fuji_fatherfujineutral
+    
+    FATHER FUJI: "... Head priest of the Aple Council."
+    
+    &PORTRAIT_father fuji_fatherfujipreach
     
     FATHER FUJI: "I take it that the earthly Emperor Evercrisp tasked you with finding me?"
     
-    NOUR: "Yes, you're right. We're looking for all the missing members— including your Prince."
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: "Yes. We're looking for all the missing members— including your Prince."
+    
+    &PORTRAIT_father fuji_fatherfujineutral
     
     FATHER FUJI: "Ah... Yes. The Prince. How noble his core is, from stem to seed."
     
+    &PORTRAIT_father fuji_fatherfujisad
+    
     FATHER FUJI: "But unfortunately, he has strayed and fallen far from the tree." 
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "Care to explain more about this Prince of yours?"
     
+    &PORTRAIT_father fuji_fatherfujipreach
+    
     FATHER FUJI: "Since the invasion, our Prince has lost much self-esteem."
+    
+    &PORTRAIT_father fuji_fatherfujineutral
     
     FATHER FUJI: "Sent by his father, the Emperor, to Earth was he."
     
+    &PORTRAIT_father fuji_fatherfujineutral
+    
     FATHER FUJI: "No fault by him or his fights, but for his safety."
+    
+    &PORTRAIT_father fuji_fatherfujisad
     
     FATHER FUJI: "Yet the young Prince saw it as failing his Daddy."
     
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: "Daddy?"
+    
+    &PORTRAIT_father fuji_fatherfujipreach
     
     FATHER FUJI: "Rhyming on command is harder than it looks."
     
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
     MS. SUWAN: "Continue, please."
+    
+    &PORTRAIT_father fuji_fatherfujineutral
     
     FATHER FUJI: "Forced from space to Earth on a hyper-speed ride,"
     
+    &PORTRAIT_father fuji_fatherfujipreach
+    
     FATHER FUJI: "The prince hid in shame, with wounded pride."
+    
+    &PORTRAIT_father fuji_fatherfujineutral
     
     FATHER FUJI: "Called by his people, for help, they cried,"
     
+    &PORTRAIT_father fuji_fatherfujisad
+    
     FATHER FUJI: "But the Prince fell silent as his confidence died."
-    
-    NOUR: "I see. That's a pretty sad story..."
-    
-    NOUR: "What do you think, Nick?"
-    
-    NICK: Whatever.
-    
-    &PORTRAIT_nick_nickshadow
-    
-    NOUR: <i>How do I get him to care?...</i>
     
     &PORTRAIT_nour_noursad
     
-    FATHER FUJI: "Now that you've heard this tale of woe, I will impart aple wisdom before you go."
+    NOUR: "I see. That's a pretty sad story..."
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: "What do you think, Nick?"
+    
+    &PORTRAIT_nick_nickshadow
+    
+    NICK: "... Whatever."
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: <i>How do I get him to care?...</i>
+    
+    &PORTRAIT_father fuji_fatherfujineutral
+    
+    FATHER FUJI: "Now that you've heard this tale of woe..."
+    
+    &PORTRAIT_father fuji_fatherfujipreach
+    
+    FATHER FUJI: "I will impart aple wisdom before you go."
     
     &PORTRAIT_nour_nourneutral
     
     NOUR: "What's that?"
     
+    &PORTRAIT_father fuji_fatherfujineutral
+    
     FATHER FUJI: "A piece of information a Dream Walker ought to know."
     
-    NICK: What kind of information? 
+    &PORTRAIT_nick_nickshocked
     
-    &PORTRAIT_nick_nickworried
+    NICK: "... Information? 
     
-    NICK: Actually you know what, I don't care so don't tell me.
+    &PORTRAIT_nick_nicknervous
     
-    &PORTRAIT_nick_nickshadow
+    NICK: "..."
+    
+    Nick shuts his mouth.
+    
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: <i>He responded to Father Fuji!</i>
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>I should encourage him to talk more... but how?</i>
+    
+    &PORTRAIT_nour_nourneutral
     
         * "Sounds pretty important."
         
@@ -142,49 +250,123 @@
         
             NOUR: "Too bad I don't know much about this game for it to make sense!"
             
+            &PORTRAIT_nick_nicknervous
+            
+            NICK: "... !"
+            
+            &PORTRAIT_nour_nourpondering
+            
+            NOUR: "But maybe ONE of us will understand it..."
+            
+            &PORTRAIT_nour_noursmile
+            
+            NOUR: "So I guess we'll hear you out."
+            
         * "Actually, we're pretty busy."
         
             &PORTRAIT_nour_noursad
             
             NOUR: "I think we'll pass on this very important piece of information."
             
+            &PORTRAIT_nick_nickshocked
+            
             NICK: "...!"
+            
+            &PORTRAIT_nick_nicknervous
             
             NICK: "Bu-!" 
             
-            &PORTRAIT_nick_nickshocked
-            
-            NOUR: "I thought you didn't care to play this game with us Nick."
-            
             &PORTRAIT_nour_nourpondering
             
-            NICK: "You're right I don't care."
+            NOUR: "I thought you didn't care to play this game with us, Nick."
             
-            &PORTRAIT_nick_nickshadow
+            &PORTRAIT_nick_nicksad
             
-            MS. SUWAN: "Maybe we should hear this out to the end."
+            NICK: "... I <i>don't</i> care."
+            
+            &PORTRAIT_ms. suwan_mssuwanrealization
+            
+            MS. SUWAN: "..."
+            
+            &PORTRAIT_ms. suwan_mssuwansad
+            
+            MS. SUWAN: "You don't care... Hmm."
+            
+            &PORTRAIT_ms. suwan_mssuwanpondering
+            
+            MS. SUWAN: "Let's just hear this out to the end."
+            
+            &PORTRAIT_nick_nickshocked
+            
+            NICK: "... !"
     
-    - Nick looks the other way, but walks closer to Father Fuji.
+    - Nick lets out a faint sigh of relief.
     
-    FATHER FUJI: "While thy prince was both kept and fair"
+    &PORTRAIT_nour_noursmile
     
-    FATHER FUJI: "His companions oft did mock and stare"
+    NOUR: <i>Looks like he's letting down his guard a little more.</i>
+    
+    &PORTRAIT_father fuji_fatherfujineutral
+    
+    FATHER FUJI: "While thy prince was both kept and fair,"
+    
+    &PORTRAIT_father fuji_fatherfujisad
+    
+    FATHER FUJI: "His companions oft did mock and stare."
+    
+    &PORTRAIT_father fuji_fatherfujipreach
     
     FATHER FUJI: "Forsooth they jested at his unwist gait,"
+    
+    &PORTRAIT_father fuji_fatherfujineutral
 
-    FATHER FUJI: "hoping this majesty's unripnes would abate."
+    FATHER FUJI: "Hoping this majesty's unripnes would abate."
+    
+    &PORTRAIT_father fuji_fatherfujipreach
     
     FATHER FUJI: "Though prince did strive to laugh it off,"
     
+    &PORTRAIT_father fuji_fatherfujineutral
+    
     FATHER FUJI: "And pretend that he was just as tough,"
 
+    &PORTRAIT_father fuji_fatherfujisad
+
     FATHER FUJI: "But deep inside he felt so small and weak,"
+    
+    &PORTRAIT_father fuji_fatherfujipreach
 
     FATHER FUJI: "Longing for a friend who wouldn't critique."
-
+    
+    &PORTRAIT_nick_nickpondering
+    
+    NICK: "..."
+    
+    &PORTRAIT_father fuji_fatherfujismile
+    
+    FATHER FUJI: "But found he, a true friend, and thus had sworn,"
+    
+    &PORTRAIT_father fuji_fatherfujipreach
+    
+    FATHER FUJI: "<i>To never Y-ATTACK the Prince of Corn!</i>"
+    
     &PORTRAIT_nick_nickshocked
     
+    NICK: "... !"
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>I don't get how that's important...</i>
+    
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: <i>But I think Nick did!</i>
+    
+    &PORTRAIT_father fuji_fatherfujineutral
+    
     FATHER FUJI: "Now my children..."
+    
+    &PORTRAIT_father fuji_fatherfujipreach
     
     FATHER FUJI: "May the Mother Tree guide thee..."
     
@@ -192,23 +374,36 @@
     
     &SHLORP_APPLE_FatherFuji_out
     
+    &PORTRAIT_nour_nourpondering
+    
     NOUR: "Well, that made zero sense to me."
     
-    &PORTRAIT_nour_nourpondering
+    &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "Agreed. Perhaps it was more apple nonsense."
     
-    &PORTRAIT_suwan_suwanannoyed
+    &PORTRAIT_nour_nourrealization
     
-    NOUR: "Guess we'll never figure all this <i>mysterious information</i> out. We're no experts."
+    NOUR: "I guess! Unless someone could explain it to us..."
+    
+    &PORTRAIT_nick_nickpondering
     
     NICK: "..." 
-    &PORTRAIT_nick_nickangry
     
-    NOUR: "Oh well! Let's move on."
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: "Until then... let's move on."
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>Nick seems to be more invested. This is good.</i>
+    
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: <i>I should find more apples to make him open up even more!</i>
         -> END
 
-=== fountain_end ===
-    NOUR: <i>I think we've explored everything we could here.</i>
+// === fountain_end ===
+//     NOUR: <i>I think we've explored everything we could here.</i>
         
-        -> END
+//         -> END

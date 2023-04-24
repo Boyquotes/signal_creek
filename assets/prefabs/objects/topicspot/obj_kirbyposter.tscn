@@ -9,7 +9,7 @@
 extents = Vector2( 15, 4 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 13.5, 18.0938 )
+extents = Vector2( 13.5, 9.0469 )
 
 [node name="KirbyPoster" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -47,7 +47,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, 9 )
+position = Vector2( 0, -0.0468998 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

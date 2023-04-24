@@ -14,8 +14,6 @@
     
     NICK: “HURRY UP, NOUR! There's no way she'll find us if we hide in here!"
     
-    &SOUND_poopman
-    
     &PAUSE_0.5
     
     &EMOTE_NICK_DownIdle
@@ -30,6 +28,10 @@
     &PORTRAIT_nour_nourannoyed
     
     NOUR: “In the BROKEN ELEVATOR?!”
+    
+    &PORTRAIT_nour_nourangry
+    
+    NOUR: "Explain to me why this was a good idea."
     
     &SOUND_InquisitiveSound
 
@@ -96,15 +98,15 @@
     
     &PORTRAIT_nour_nourannoyed
     
-    NOUR: "Stop talking!"
+    NOUR: "Nick, stop talking!"
     
     &EMOTE_NOUR_DownIdle
     
     MS. SUWAN: "Both of you are trespassing. That could-"
     
-    MS. SUWAN: "Wait."
+    MS. SUWAN: "...Wait."
     
-    MS. SUWAN: "Nour?!"
+    MS. SUWAN: <i>"Nour?!"</i>
     
     &PORTRAIT_nour_nournervous
     
@@ -125,6 +127,7 @@
     MS. SUWAN: "I AM the law."
     
     &EMOTE_NICK_LookAround
+    &PORTRAIT_nick_nicktears
     
     &PORTRAIT_nick_nicknervous
     
@@ -160,9 +163,13 @@
     
     &EMOTE_SUWAN_DownIdle
     
+    &SOUND_clack
+    
     Nick begins frantically pressing elevator buttons.
     
     //&SOUND_ElevatorButtons
+    
+    &SOUND_clack
     
     NICK: "C'mon, c'mon, c'mon!"
     
@@ -172,9 +179,15 @@
     
     MS. SUWAN: "She's right. This elevator is broken. It's not going anywhere—"
     
+    &SOUND_clickydoor
+    
     &ELEVATOR_CLOSE
     
     //&SOUND_ElevatorDoorClose
+    
+    &PAUSE_0.3
+    
+    &SOUND_elevatorup
     
     &SHAKE
     
@@ -210,15 +223,21 @@
     
     &PORTRAIT_nick_nicknervous
     
+    &SOUND_shlorpbackwards
+    
     NICK: "Why isn't it STOPPING? WHAT'S GOING ON—"
     
     &PORTRAIT_nour_nournervous
     
     NOUR: "I don't know but... BRACE YOURSELVES!"
     
+    &HIDEPANEL
+    
     &BLACK
     
-    &PAUSE_0.5
+    &SOUND_elevatorcrash
+    
+    &PAUSE_10.0
     
     &FOLLOW_NOUR_stop
     
@@ -231,6 +250,8 @@
     &EMOTE_NICK_DownIdle
     
     &EMOTE_NOUR_DownIdle
+    
+    &SOUND_clickydoor
     
     &ELEVATOR_OPEN
     
