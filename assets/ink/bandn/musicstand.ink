@@ -38,13 +38,13 @@
     
     MS. SUWAN: "... Yes, why?"
     
+    &PORTRAIT_nour_nourpondering
+    
     // NOUR WALKS FORWARD AND TAKES RECORD FROM THE MUSIC STAND, THEN TURNS AROUND TOWARDS MS SUWAN, HOLDING IT UP.
     
     NOUR: "Have you heard of <i>this</i> album, then?"
     
-    &PORTRAIT_nour_nourneutral
-    
-    Nour raises the record of <i>Actually, I Do Mind</i> up to show Ms. Suwan. 
+    Nour raises the record of 'Actually, I Do Mind' up to show Ms. Suwan. 
     
     &PORTRAIT_nour_noursmile
     
@@ -126,7 +126,7 @@
             
             NOUR: <i>She looks upset. Something about this feels really personal...</i>
     
--   NOUR: "You must've been a university student when <I>Paradise</i> came out with this album, right?"
+-   NOUR: "You must've been a student when <i>Paradise</i> released this album, right?"
 
     &PORTRAIT_ms. suwan_mssuwanpondering
     
@@ -254,7 +254,7 @@
         
             &PORTRAIT_nour_nourpondering
         
-            NOUR: I don't think he's ever even <i>heard</i> of Paradise, let alone any of their songs."
+            NOUR: "I don't think he's ever even <i>heard</i> of Paradise, let alone any of their songs."
             
             &PORTRAIT_nick_nicknervous
             
@@ -262,7 +262,11 @@
             
             &PORTRAIT_nick_nicksmallsmile
             
-            NICK: "Guilty. I just know that they do rock... stuff?"
+            NICK: "Guilty."
+            
+            &PORTRAIT_nick_nickpondering
+            
+            NICK: "I just know that they do rock... stuff?"
             
             &PORTRAIT_nour_noursmile
             
