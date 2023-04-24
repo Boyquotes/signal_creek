@@ -162,7 +162,7 @@
     
     &PORTRAIT_???_brodyneutral
     
-    ???: "Looks like Chad, Kristy, and Brody got demoted to strangers...</i>
+    ???: "Looks like Chad, Kristy, and Brody got demoted to strangers..."
     
     &PORTRAIT_???_brodyannoyed
     
@@ -264,7 +264,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    MS. SUWAN: "<i>No.</i>"
+    MS. SUWAN: "<i>No.</i> B&N, NOW."
     
     &PORTRAIT_nick_nicksad
     
@@ -285,7 +285,7 @@
     &FOLLOW_NOUR_stop
     
     &PORTRAIT_nour_nourpondering
-    &PORTRAIT_ms. suwan_suwanneutral
+    &PORTRAIT_ms. suwan_mssuwanneutral
     &PORTRAIT_nick_nicknetural
 
     -> chadbrodykristy1_repeat
@@ -541,7 +541,7 @@
     
     KANNIKA: "I am sorry for being a terrible friend."
     
-    &PORTRAIT_suwan_suwanneutral
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     KANNIKA: "You were wonderful friends. I was too focused on my career to see that."
     
