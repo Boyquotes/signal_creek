@@ -837,10 +837,6 @@
     &FOLLOW_NOUR_stop
 
     
-    &PORTRAIT_nour_nourrealization
-    
-    NOUR: "..."
-    
     &PAUSE_1.5
     
     &MOV_RINA_HALLWAY
@@ -848,6 +844,10 @@
     &EMOTE_SUWAN_UpIdle
     
     &PAUSE_0.15
+    
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: "..."
     
     &PORTRAIT_nour_nournervous
     
