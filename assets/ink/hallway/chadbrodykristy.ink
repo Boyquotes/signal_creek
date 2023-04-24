@@ -322,7 +322,7 @@
     
     &EMOTE_SUWAN_UpIdle
     
-    &PORTRAIT_ms. suwan_mssuwanannoyed
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "... I suppose."
 
@@ -370,7 +370,19 @@
     
     &PORTRAIT_kristy_kristysad
     
-    KRISTY: "We just wanted to have fun! You were invited to <i>all of them</i>."
+    KRISTY: "We wanted to have fun together."
+    
+    &PORTRAIT_kristy_kristyangry
+    
+    KRISTY: "That's why we invited you to <i>every</i> concert!"
+    
+    &PORTRAIT_chad_chadangry
+    
+    CHAD: "... No matter how many times you bailed on us."
+    
+    &PORTRAIT_chad_chadhurt
+    
+    CHAD: "Yet that makes <i>us</i> the bad friends."
     
     &PORTRAIT_kristy_kristyangry
     
@@ -454,7 +466,7 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: <i... Nick might be onto something.</i>
+    NOUR: <i>... Nick might be onto something.</i>
     
     &PORTRAIT_nour_nourannoyed
     
@@ -547,7 +559,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanrealization
     
-    KANNIKA: "In retrospect, it was obvious how much you all cared for me."
+    KANNIKA: "In retrospect, it was obvious how much you all cared."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -629,7 +641,7 @@
     
     KRISTY: "That's all that matters to us."
     
-    &PORTRAIT_ms. suwan_mssuwannervous
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     KANNIKA: "Kristy, I am so sorry about everything-"
     
@@ -639,33 +651,49 @@
     
     &PAUSE_0.5
     
-    &PORTRAIT_nour_nournervous
+    &PORTRAIT_nour_nourrealization
     
     NOUR: "Where did she—"
     
-    &PORTRAIT_ms. suwan_mssuwanrealization
+    &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "Kristy?"
+    MS. SUWAN: "Kristy!?"
     
     &PORTRAIT_brody_brodyneutral
     
     BRODY: "Kristy was always ready to forgive you, Suwan."
     
-    &PORTRAIT_brody_brodyangry
+    &PORTRAIT_brody_brodyannoyed
     
     BRODY: "But I'm not fully convinced that you've changed..."
     
+    &PORTRAIT_brody_brodyangry
+    
+    BRODY: "You're exactly the person you always wanted to be."
+    
     &PORTRAIT_brody_brodyannoyed
     
-    BRODY: "Look, you're exactly the person you always wanted to be. Good for you."
-    
-    &PORTRAIT_brody_brodysad
-    
-    BRODY: "... I just hope you don't make the same mistakes you did with us."
+    BRODY: "Are you willing to give up the lifestyle that gave you what you wanted?"
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    KANNIKA: "Brody... what I said back then—"
+    KANNIKA: "I can try."
+    
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
+    KANNIKA: "I <i>am</i> trying..."
+    
+    &PORTRAIT_brody_brodyangry
+    
+    BRODY: "Then you better give it your all. <i>Seriously.</i>"
+    
+    &PORTRAIT_brody_brodysad
+    
+    BRODY: "... Don't make the same mistake twice."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    KANNIKA: "I won't... and about what happened back then—"
     
     &PAUSE_0.5
     
@@ -723,7 +751,7 @@
     
     KANNIKA: "..."
     
-    &PORTRAIT_nour_noursad
+    &PORTRAIT_nour_nournervous
     
     &EMOTE_SUWAN_DownIdle
     
@@ -754,11 +782,19 @@
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "But now that I have faced my past... I can lay it to rest."
+    MS. SUWAN: "But now that I have faced my past..."
+    
+    &PORTRAIT_ms. suwan_mssuwansmile
+    
+    MS. SUWAN: "I can finally lay it to rest."
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "But don't you think you could be happier if it had gone better?"
+    NOUR: "But don't you think you could be happier?" 
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "If it had gone better?"
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
@@ -792,10 +828,6 @@
     
     NOUR: <i>Even though she can't change her past.</i>
     
-    &PORTRAIT_nour_nourannoyed
-    
-    NOUR: <i>...</i>
-    
     &PORTRAIT_nour_noursad
     
     NOUR: <i>Could I ever feel like her about the past one day?</i>
@@ -805,7 +837,7 @@
     &FOLLOW_NOUR_stop
 
     
-    &PORTRAIT_nour_nourneutral
+    &PORTRAIT_nour_nourrealization
     
     NOUR: "..."
     
@@ -816,6 +848,10 @@
     &EMOTE_SUWAN_UpIdle
     
     &PAUSE_0.15
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "Oh no..."
     
     &PORTRAIT_ms. suwan_mssuwanrealization
     
@@ -830,6 +866,14 @@
     &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "I believe you are prepared to do the same with her."
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: <i>... Can I?</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>I guess there's only one way to find out...</i>
     
     &FOLLOW_NOUR_stop
     &FOLLOW_SUWAN_NICK

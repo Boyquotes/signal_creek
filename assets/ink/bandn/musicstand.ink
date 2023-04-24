@@ -537,7 +537,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanfurious
     
-    MS. SUWAN: "To look back and know you cannot change a thing, because it is decades behind you."
+    MS. SUWAN: "To look back <i>decades</i>, knowing you cannot change a thing..."
     
     &PORTRAIT_ms. suwan_mssuwanshadow
     
@@ -575,7 +575,7 @@
     
     MS. SUWAN: "..." // (SAD)
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "I..."
     
@@ -585,7 +585,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: "Even if you know there's nothing you can do to change it."
+    NOUR: "Even if you know you can't change it."
     
     &PORTRAIT_nour_nourneutral
     

@@ -537,7 +537,11 @@
         
         &PORTRAIT_nour_nourpondering
         
-        NOUR: <i>She might not be ready to face her ex-friends, but maybe I could open her up to the idea.</i>
+        NOUR: <i>She might not be ready to face her ex-friends...</i>
+        
+        &PORTRAIT_nour_nourrealization
+        
+        NOUR: <i>But maybe I could open her up to the idea.</i>
         
         &PORTRAIT_nour_nourneutral
         
