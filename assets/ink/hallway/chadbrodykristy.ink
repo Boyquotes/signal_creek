@@ -408,7 +408,7 @@
     
     CHAD: "Kannika, you did better than all of us. Never below a 90 on exams."
     
-    &PORTRAIT_ms. suwan_mssuwanfurious
+    &PORTRAIT_kannika_mssuwanfurious
     
     KANNIKA: "And I had to work <i>twice as hard</i> as you to get those scores."
     
@@ -533,71 +533,71 @@
     MS. SUWAN: "..."
     
     //&PORTRAIT_ms. suwan_mssuwanshadow
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_kannika_mssuwansad
     
     KANNIKA: "I-I didn't mean to push you all away."
     
-    &PORTRAIT_ms. suwan_mssuwanangry
+    &PORTRAIT_kannika_mssuwanangry
     
     KANNIKA: "I needed to get ahead, and..."
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_kannika_mssuwansad
     
     KANNIKA: "..."
     
-    &PORTRAIT_ms. suwan_mssuwanneutral
+    &PORTRAIT_kannika_mssuwanneutral
     
     KANNIKA: "... I am done with excuses."
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_kannika_mssuwansad
     
     KANNIKA: "I am sorry for being a terrible friend."
     
-    &PORTRAIT_ms. suwan_mssuwanneutral
+    &PORTRAIT_kannika_mssuwanneutral
     
     KANNIKA: "You were wonderful friends. I was too focused on my career to see that."
     
-    &PORTRAIT_ms. suwan_mssuwanrealization
+    &PORTRAIT_kannika_mssuwanrealization
     
     KANNIKA: "In retrospect, it was obvious how much you all cared."
     
-    &PORTRAIT_ms. suwan_mssuwansmile
+    &PORTRAIT_kannika_mssuwansmile
     
     KANNIKA: "Remember that one time I could not sleep because I was stressing over finals?"
     
-    &PORTRAIT_ms. suwan_mssuwanpondering
+    &PORTRAIT_kannika_mssuwanpondering
     
     KANNIKA: "You all invited me to a show."
     
-    &PORTRAIT_ms. suwan_mssuwannervous
+    &PORTRAIT_kannika_mssuwannervous
     
     KANNIKA: "Reluctantly, I agreed to go."
     
-    &PORTRAIT_ms. suwan_mssuwanrealization
+    &PORTRAIT_kannika_mssuwanrealization
     
     KANNIKA: "... And for a few hours, I was... at peace."
     
-    &PORTRAIT_ms. suwan_mssuwanneutral
+    &PORTRAIT_kannika_mssuwanneutral
     
     KANNIKA: "We were packed like sardines in a small room."
     
-    &PORTRAIT_ms. suwan_mssuwanangry
+    &PORTRAIT_kannika_mssuwanangry
     
     KANNIKA: "There was that stench of cigarettes and alcohol."
     
-    &PORTRAIT_ms. suwan_mssuwansmile
+    &PORTRAIT_kannika_mssuwansmile
     
     KANNIKA: "But it didn't matter because we were together."
     
-    &PORTRAIT_ms. suwan_mssuwanneutral
+    &PORTRAIT_kannika_mssuwanneutral
     
     KANNIKA: "We were shouting the words to our favorite songs alongside fifty strangers."
     
-    &PORTRAIT_ms. suwan_mssuwanrealization
+    &PORTRAIT_kannika_mssuwanrealization
     
     KANNIKA: "That kind of bliss... was a life I chose to turn away from."
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_kannika_mssuwansad
     
     KANNIKA: "I hope you can... take this album as a long overdue <i>thank you</i>."
     
@@ -621,11 +621,11 @@
     
     CHAD: "We wanted to make sure you got a chance to relax after cramming for <i>weeks</i>."
     
-    &PORTRAIT_ms. suwan_mssuwanrealization
+    &PORTRAIT_kannika_mssuwanrealization
     
     KANNIKA: "I... failed to realize that."
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_kannika_mssuwansad
     
     KANNIKA: "And what I said to you after..."
     
@@ -641,7 +641,7 @@
     
     KRISTY: "That's all that matters to us."
     
-    &PORTRAIT_ms. suwan_mssuwanangry
+    &PORTRAIT_kannika_mssuwanangry
     
     KANNIKA: "Kristy, I am so sorry about everything-"
     
@@ -675,11 +675,11 @@
     
     BRODY: "Are you willing to give up the lifestyle that gave you what you wanted?"
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_kannika_mssuwansad
     
     KANNIKA: "I can try."
     
-    &PORTRAIT_ms. suwan_mssuwanangry
+    &PORTRAIT_kannika_mssuwanangry
     
     KANNIKA: "I <i>am</i> trying..."
     
@@ -691,7 +691,7 @@
     
     BRODY: "... Don't make the same mistake twice."
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_kannika_mssuwansad
     
     KANNIKA: "I won't... and about what happened back then—"
     
@@ -701,15 +701,15 @@
     
     &PAUSE_0.5
     
-    &PORTRAIT_ms. suwan_mssuwannervous
+    &PORTRAIT_kannika_mssuwannervous
     
-    MS. SUWAN: "Brody! Don't leave—"
+    KANNIKA: "Brody! Don't leave—"
     
     &PORTRAIT_chad_chadhurt
     
     CHAD: "You were always locked up in your room, studying. We were worried."
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_kannika_mssuwansad
     
     KANNIKA: "I know. It was wrong of me to blame you for <i>my</i> anxiety."
     
@@ -721,7 +721,7 @@
     
     CHAD: "Looks like you're changing."
     
-    &PORTRAIT_ms. suwan_mssuwannervous
+    &PORTRAIT_kannika_mssuwannervous
     
     KANNIKA: "Take the album, Chad. <i>Please</i>. It would mean the world."
     
@@ -737,7 +737,7 @@
     
     CHAD: "That's all we ever really wanted for you, Kannika."
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_kannika_mssuwansad
     
     KANNIKA: "... Okay."
     
@@ -747,7 +747,7 @@
     
     &PAUSE_0.5
     
-    &PORTRAIT_ms. suwan_mssuwannervous
+    &PORTRAIT_kannika_mssuwannervous
     
     KANNIKA: "..."
     
