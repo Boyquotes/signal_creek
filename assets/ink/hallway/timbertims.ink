@@ -52,9 +52,11 @@
     
     NOUR: "Yep. Makes even less sense than I remember. Catchy little tune, though."
     
-    SCREENSHAKE. TIM SPRITE SHLORPS IN. 
+    // SCREENSHAKE. TIM SPRITE SHLORPS IN. 
     
-    CAN WE GET ALL OF THE PLAYER CHARACTERS JUMPING IN SURPRISE OR TURNING AROUND TO FACE HIM?
+    &SHLORP_POOP_Tim_in
+    
+    // CAN WE GET ALL OF THE PLAYER CHARACTERS JUMPING IN SURPRISE OR TURNING AROUND TO FACE HIM?
     
     TIM: "CUSTOMERS?! CUSTOMERS AT TIMBERTIMS?!"
     
@@ -139,7 +141,7 @@
     
     TIM: "Under the Timfluence..."
     
-    TIM SHLORPS OUT
+    &SHLORP_POOP_Tim_out
     
         -> END
 
@@ -231,7 +233,7 @@
     
     NOUR: <i>Might as well leave him alone.</i>
 
-    TIM SHLORPS OUT
+    &SHLORP_POOP_Tim_out
 
     -> END
 
@@ -258,7 +260,7 @@
     
     MS. SUWAN: "Especially considering how unpleasant those shoes are..."
     
-    TIM SHLORPS IN
+    &SHLORP_POOP_Tim_in
     
     TIM: "UNPLEASANT? :("
 
@@ -270,6 +272,6 @@
     
     MS. SUWAN: "I certainly did not."
     
-    TIM SHLORPS OUT
+    &SHLORP_POOP_Tim_out
 
     -> END

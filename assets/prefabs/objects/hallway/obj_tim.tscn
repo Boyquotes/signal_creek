@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/character/npc_tim.gd" type="Script" id=2]
@@ -26,7 +26,7 @@ shader_param/time_intensity = 1.0
 shader_param/sus_duration = 0.01
 shader_param/sus_speed = 5.0
 
-[sub_resource type="RectangleShape2D" id=23]
+[sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 9, 3 )
 
 [sub_resource type="RectangleShape2D" id=22]
@@ -34,12 +34,63 @@ extents = Vector2( 9, 8.5 )
 
 [sub_resource type="Animation" id=25]
 resource_name = "NotVisible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=29]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [sub_resource type="Animation" id=26]
 resource_name = "Shlorp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
 
 [sub_resource type="Animation" id=27]
 resource_name = "Visible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [node name="Tim" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -68,7 +119,7 @@ region_rect = Rect2( 0, 0, 20, 32 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -3 )
-shape = SubResource( 23 )
+shape = SubResource( 32 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
 position = Vector2( 0, 4 )
@@ -76,9 +127,13 @@ script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
+_disable_interactivity = true
 _shlorping_target_path = NodePath("../AnimationPlayer")
 _shlorp_animation_name = "Shlorp"
 _physical_collider_path = NodePath("../CollisionShape2D")
+_knot_name = "timbertims"
+_final_knot_name = "timbertimsvisited"
+start_visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 position = Vector2( 0, -1.5 )
@@ -86,6 +141,7 @@ shape = SubResource( 22 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/NotVisible = SubResource( 25 )
+anims/RESET = SubResource( 29 )
 anims/Shlorp = SubResource( 26 )
 anims/Visible = SubResource( 27 )
 
