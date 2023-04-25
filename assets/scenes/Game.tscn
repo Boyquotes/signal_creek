@@ -107,6 +107,9 @@ tracks/0/keys = {
 [node name="Game" type="Node2D"]
 process_priority = 1
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -41.0 ]
+}
 testing_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
