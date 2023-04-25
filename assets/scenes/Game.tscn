@@ -19,6 +19,7 @@
 
 [sub_resource type="Environment" id=3]
 background_mode = 4
+background_canvas_max_layer = 10
 tonemap_mode = 2
 glow_enabled = true
 glow_levels/1 = true
@@ -110,7 +111,6 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -41.0 ]
 }
-testing_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )
