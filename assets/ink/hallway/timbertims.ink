@@ -34,7 +34,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
-    MS. SUWAN: "I recieved a pair as a gift once, although they aren't my style in the slightest."
+    MS. SUWAN: "I recieved a pair as a gift once, though they aren't my style in the slightest."
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
@@ -58,6 +58,8 @@
     
     // CAN WE GET ALL OF THE PLAYER CHARACTERS JUMPING IN SURPRISE OR TURNING AROUND TO FACE HIM?
     
+    &PORTRAIT_tim_timsmile
+    
     TIM: "CUSTOMERS?! CUSTOMERS AT TIMBERTIMS?!"
     
     &PORTRAIT_nick_nickshocked
@@ -73,6 +75,8 @@
     MS. SUWAN: "Can we help you?"
     
     TIM: "The question you should be asking is... can <i>I</i> help <i>you</i>?"
+    
+    &PORTRAIT_tim_timannoyed
     
     TIM: "Because I see none of you are wearing Tims on your little feetsies..."
     
@@ -90,18 +94,19 @@
     
     NOUR: <i>Either way, I guess it might be worth it to speak to him.</i>
 
-        + [Be polite] -> timbertimspol
-        + [Be suspicious] -> timbertimssus
+        + "Excuse me, but do you know anything about how to get out of this mall?" -> timbertimspol
+        
+        + "Um, excuse me, but what are you even doing here?" -> timbertimssus
     
         -> END
 
 == timbertimspol ==
 
-    &PORTRAIT_nour_nourneutral
+    &PORTRAIT_tim_timneutral
 
-    NOUR: "Excuse me, but do you know anything about how to get out of this mall?"
-    
     TIM: "Why, yes! I do."
+    
+    &PORTRAIT_tim_timsmile
     
     TIM: "Wear some Timbertims, and you may go as you please~"
     
@@ -111,11 +116,17 @@
     
     NOUR: "I just need to know how to leave."
     
+    &PORTRAIT_tim_timneutral
+    
     TIM: "Leaving is a good idea. I'm planning to leave soon, myself."
     
     TIM: "Move to some new town, settle down..."
     
+    &PORTRAIT_tim_timsmile
+    
     TIM: "Meet the love of my life, raise a family of timlings..."
+    
+    &PORTRAIT_tim_timnervous
     
     TIM: "My life is both successful yet lonely..."
     
@@ -123,11 +134,15 @@
     
     NOUR: "Um - okay, I'm happy for you, but that doesn't help us at all."
     
+    &PORTRAIT_tim_timneutral
+    
     TIM: "Maybe open a <i>Timbertims</i> there too and sell them en masse..." 
     
     TIM: "Or maybe I should leave my small business days behind..."
     
     TIM: "I've always wanted to be a politician."
+    
+    &PORTRAIT_tim_timsmile
     
     TIM: "Or a god!"
     
@@ -148,10 +163,10 @@
 == timbertimssus ==
 
     &PORTRAIT_nour_nourneutral
-
-    NOUR: "Um, excuse me, but what are you even doing here?"
     
     NOUR: "Hasn't your store been closed down for weeks?"
+    
+    &PORTRAIT_tim_timannoyed
     
     TIM: "As long as somebody in Signal Creek is wearing a pair of <i>Timbertims</i>..."
     
@@ -183,17 +198,25 @@
     
     NICK: "She hasn't had the time yet to take us shopping."
     
+    &PORTRAIT_tim_timneutral
+    
     TIM: "Nick's brother's little feetsies are the last sources of power..."
     
     &PORTRAIT_nour_nournervous
     
     NOUR: "Can you please stop saying 'little feetsies'?"
     
+    &PORTRAIT_tim_timannoyed
+    
     TIM: "But if my savior exchanged his Tims for some inferior shoes..."
+    
+    &PORTRAIT_tim_timnervous
     
     TIM: "I fear my time in Signal Creek is limited..."
     
     MS. SUWAN: "On that topic, have you ever found a way to leave this mall?"
+    
+    &PORTRAIT_tim_timneutral
     
     TIM: "A pair of <i>Timbertims</i> may show you the path to salvation!"
     
