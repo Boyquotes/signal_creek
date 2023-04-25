@@ -34,6 +34,8 @@
             
                 MS. SUWAN: "Generally, construction should follow accessibility guidelines."
                 
+                &PORTRAIT_mssuwan_mssuwanpondering
+                
                 MS. SUWAN: "There should be a gender-neutral bathroom for handicapped individuals."
                 
                     &PORTRAIT_mssuwan_mssuwansad
@@ -69,6 +71,8 @@
             &PORTRAIT_mssuwan_mssuwanneutral
         
         MS. SUWAN: "I will say this: I agree with you."
+        
+        &PORTRAIT_mssuwan_mssuwanpondering
         
         MS. SUWAN: "The gender binary is certainly an outdated method of dividing restrooms."
         
@@ -116,6 +120,15 @@
     It's two store mannequins: a man and a woman.
     
     -> END
+    
+=== burgertables ===
+    
+    It's a table with fast-food on it. Burgers and trash litter the table.
+    
+    Probably shouldn't eat it—who knows how old it could be?
+    
+    -> END
+    
     
 // == wertoys == 
 
