@@ -38,7 +38,7 @@
 
     &PORTRAIT_nour_nourneutral
 
-    NOUR: "... This makes me think about high school."
+    NOUR: "...This makes me think about high school."
     
     &PORTRAIT_nour_noursad
     
@@ -78,7 +78,7 @@
         
     &PORTRAIT_ms. suwan_mssuwanangry
         
-    MS. SUWAN: "If you have fun now, you will struggle later."
+    MS. SUWAN: "If you have fun now, you <i>will</i> struggle later."
         
     &PORTRAIT_nick_nickangry
         
@@ -86,7 +86,7 @@
         
     &PORTRAIT_ms. suwan_mssuwanannoyed
         
-    MS. SUWAN: "Well, we are not given a choice."
+    MS. SUWAN: "Well, we aren't often given a choice."
         
     &PORTRAIT_nour_nournervous
 
@@ -135,7 +135,7 @@
                 
     &PORTRAIT_ms. suwan_mssuwanangry
             
-    MS. SUWAN: "I think Nick should focus on finding a hobby that could benefit his future."
+    MS. SUWAN: "I think Nick should focus on finding a hobby that would benefit his future."
                 
     &PORTRAIT_nour_nourpondering
                 
@@ -169,7 +169,7 @@
             
     &PORTRAIT_nick_nicknervous
             
-    NICK: "It's not that easy. I don't even know how to code."
+    NICK: "It's not that easy. I don't know how to code."
             
     &PORTRAIT_nour_nourpondering
             
@@ -185,7 +185,7 @@
             
     &PORTRAIT_nick_nickshadow
             
-    NICK: "... And I'd be no good at memorizing stuff like that. I'm not that smart."
+    NICK: "...And I'd be no good at memorizing stuff like that. I'm not that smart."
     
         -> nour_suggests_hobbies_cont
         
@@ -225,7 +225,7 @@
             
     &PORTRAIT_nick_nickshadow
             
-    NICK: "... And either way, I wouldn't understand it, no matter how hard I tried."
+    NICK: "...And either way, I wouldn't understand it, no matter how hard I tried."
     
         -> nour_suggests_hobbies_cont
     
@@ -249,7 +249,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
-    MS. SUWAN: "You will not get far in life if you cannot change your mindset."
+    MS. SUWAN: "You won't not get far in life if you cannot change your mindset."
     
     &PORTRAIT_nour_nourneutral
     
@@ -275,7 +275,9 @@
             
             &PORTRAIT_nick_nickshadow
             
-            NICK: "I just... I don't know, it's a waste of time."
+            NICK: "I just... I don't know." 
+            
+            NICK: "It feels like a waste of time."
             
             &PORTRAIT_ms. suwan_mssuwanangry
             
@@ -314,6 +316,8 @@
     NICK: "I just don't see why I need to waste all of my time."
     
     &PORTRAIT_nick_nickshadow
+    
+    NICK: "And I'm not being a <i>delinquent teenager</i>."
      
     NICK: "I wanna have fun before I gotta start worrying about adult problems."
     
@@ -365,7 +369,7 @@
             
     - &PORTRAIT_nick_nicksad
     
-    NICK: "Never mind. Neither of you guys would get it."
+    NICK: "Forget it. Neither of you guys would get it."
     
     &PORTRAIT_nick_nickangry
     
@@ -373,7 +377,7 @@
     
     &PORTRAIT_nick_nicksad
     
-    NICK: "... Or both."
+    NICK: "...Or both."
     
     &PORTRAIT_nick_nickshadow
     
@@ -381,7 +385,9 @@
     
     &PORTRAIT_nour_noursad
 
-    NOUR: <i>He looks upset. It doesn't look like he's open to learning anything new.</i>
+    NOUR: <i>He sounds so upset. I've never seen him like this before.</i>
+    
+    NOUR: <i>It doesn't look like he's open to learning anything new right now.</i>
     
     &PORTRAIT_nour_nourpondering
     
@@ -393,7 +399,7 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: <i>I could find something in this store that already makes him happy.</i>
+    NOUR: <i>Maybe I could find something in this store that already makes him happy...</i>
         
     -> END
     
@@ -409,7 +415,9 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: <i>Maybe something less... studious. Like that videogame from earlier he wanted to see.<i>
+    NOUR: <i>Maybe something less... studious.</i>
+    
+    NOUR: <i>Like that videogame from earlier he wanted to see.</i>
     
     &PORTRAIT_nour_nourpondering
     
@@ -436,7 +444,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
-    MS. SUWAN: "Arguing, yes. Law, on the other hand, no. I had to start from the bottom."
+    MS. SUWAN: "<i>Arguing</i>, yes. Law, on the other hand, no. I had to start from the bottom."
     
     &PORTRAIT_ms. suwan_pondering
     
@@ -444,15 +452,15 @@
     
     &PORTRAIT_nick_nicksad
     
-    NICK: "Isn't there, like, a lot of reading and writing though? Wasn't it hard?"
+    NICK: "Isn't there, like, a lot of reading and writing though? Wasn't that hard?"
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "Yes. Every failure told me to give up, but then I remembered how far I had come."
+    MS. SUWAN: "Yes. Every failure told me to give up, but then I would remember how far I had come."
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
-    MS. SUWAN: "It's easy to lose track of how far you've come when you focus on the future."
+    MS. SUWAN: "It's easy to lose track of that when you focus on the future."
     
     &PORTRAIT_nick_nickshocked
     
@@ -468,15 +476,17 @@
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "Especially because he gave up before trying."
+    MS. SUWAN: "Especially if it's because he gave up before he even tried."
     
     &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "Because he didn't <i>believe</i> in himself."
     
+    NICK: "..."
+    
     &PORTRAIT_nick_nicksmallsmile
     
-    NICK: "... Thanks, Ms. Suwan."
+    NICK: "...Thanks, Ms. Suwan."
     
     &PORTRAIT_nick_nickpondering
     

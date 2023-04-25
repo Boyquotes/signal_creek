@@ -33,7 +33,7 @@
     
     &FOLLOW_SUWAN_SuwanOutElevatorPos
     
-    &PORTRAIT_nour_nourannoyed
+    &PORTRAIT_nour_nourshadow
     
     NOUR: "Ugh... I feel sick."
     
@@ -41,9 +41,11 @@
     
     &ELEVATOR_SHUT
     
+    &PORTRAIT_nick_nicknervous
+    
     NICK: "Woah, this is crazy! Are you seeing what I'm seeing?"
     
-    &PORTRAIT_nour_nourpondering
+    &PORTRAIT_nour_nourrealization
     
     NOUR: "This... this is one of the floors of the mall, isn't it? The top floor?"
     
@@ -87,7 +89,7 @@
     
     &EMOTE_NICK_RightIdle
     
-    &PORTRAIT_nick_nickshadow
+    &PORTRAIT_nick_nicksad
     
     NICK: "Aw, man. Same! I can't play any of my phone games..."
     
@@ -107,10 +109,6 @@
     
     &EMOTE_NOUR_UpIdle
     
-    &PORTRAIT_nour_nournervous
-    
-    NOUR: "..."
-    
     MS. SUWAN: "<i>You're</i> not supposed to be here either, young lady."
     
     &PORTRAIT_nick_nickworried
@@ -123,7 +121,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: <i>...Rina?</i>
+    NOUR: <i>...Rina?!</i>
     
     &PORTRAIT_nick_nickworried
     
@@ -135,7 +133,9 @@
         
         * ["Does it matter?"]
     
-    - NOUR: "..."
+    - &PORTRAIT_nour_nourshadow
+    
+    NOUR: "..."
     
     RINA: "..."
     
@@ -153,7 +153,7 @@
 
     &SHLORP_POOP_Rina_out
     
-    &PORTRAIT_nour_nourrealization
+    &PORTRAIT_nour_nourshadow
     
     NOUR: "..."
     
@@ -295,7 +295,7 @@
             }
     
         //this choice always works, and Rina tells Nour to help the people they're with now (Nick and Suwan)
-        + [Remind Rina what friends are for.]
+        + ["Friends are supposed to be there for each other!"]
             
             //IF THE LAST KNOTS IN BOTH ROUTES ARE VISITED:
             {
@@ -303,7 +303,9 @@
                     -> rina_help
             }
             
-            NOUR: "Friends are supposed to be there for each other, <i>especially</i> during hard times."
+            &PORTRAIT_nour_nourangry
+            
+            NOUR: "Friends are supposed to be there for each other, Rina, <i>especially</i> during hard times."
             
             NOUR: "But you weren't there for me at all on <i>that</i> day."
             
@@ -313,6 +315,8 @@
             
             RINA: "You're still thinking about what happened? ...Interesting."
             
+            NOUR: "Interesting?! Of <i>course</i> I'm still thinking about it."
+            
             RINA: "You aren't ready for this—not yet. <i>They</i> need you right now."
             
             RINA: "Come back when you've helped the others first."
@@ -320,7 +324,7 @@
             RINA: "Maybe then you'll know how to help yourself."
         
 
-        + [Confront Rina for what she did.]
+        + ["I can't do this right now."]
         
             //IF THE LAST KNOT IN NICK'S ROUTE IS VISITED:
             {
@@ -331,13 +335,19 @@
                     -> rina_topicspot
             }
             
+            &Portrait_nour_nourshadow
+            
             NOUR: "I..."
             
             NOUR: "I can't. I'm not ready yet."
             
+            &PORTRAIT_nour_noursad
+            
             NOUR: "I don't know how to confront what you did to me."
             
-            NICK: "I get that—why even try things if you know it'll never work out?"
+            &PORTRAIT_nick_nicksad
+            
+            NICK: "I get that, but... why even try things if you know it'll never work out?"
             
             NICK: "Giving up on stuff you know you could never succeed in just saves you the disappointment."
             
@@ -346,7 +356,7 @@
             NOUR: <i>I wonder if I can encourage him to be more confident in himself?</i>
         
 
-        + [Let go of what Rina did.]
+        + ["I have to let go of what she did."]
         
             //IF THE LAST KNOT IN SUWAN'S ROUTE IS VISITED:
             {
@@ -357,7 +367,7 @@
                     -> rina_hallway
             }
             
-            NOUR: "I..."
+            NOUR: "But I..."
             
             NOUR: "I can't. What happened made me so, so angry. I'm <i>still</i> angry."
             
@@ -376,7 +386,7 @@
             NOUR: <i>But maybe... I can help her look into her past more?<i>
             
             
-        + [We're done talking for now.]
+        + ["We're done talking for now."]
            
            {
             - rina_bandn && rina_topicspot && rina_hallway:
@@ -417,9 +427,11 @@
     
     NICK: "See? Magical."
     
-    NOUR: "Well, I guess we can get out of here now?"
+    NOUR: "Well..."
     
-    MS. SUWAN: "<i>Please.</i> Let us go."
+    NOUR: "I guess we can get out of here now?"
+    
+    MS. SUWAN: "<i>Please.</i> Let's go."
     
     -> END
 
@@ -434,23 +446,27 @@
 
     NOUR: <i>I can't believe we were ever friends.</i>
     
-        * "Rina... I haven't seen you since graduation."
+        * "I haven't seen you since graduation."
         
-            RINA: "I wish I could've kept it that way."
+            NOUR: "I wish I could've kept it that way."
             
             RINA: "We don't speak for years, and this is how you greet me?"
             
-            RINA: "Well, then. I see how it is."
+            RINA: "Well, fine. I see how it is."
             
             RINA: "Hello to you, too, Yousra."
             
         * "I guess this is what I get for coming back to <i>our</i> mall."
         
-            RINA: "I was really hoping I wouldn't run into you."
+            NOUR: "I was really hoping I wouldn't run into you."
     
-            RINA: "Hey, Yousra! Nice to see you after all these years." 
+            RINA: "We don't speak for years, and this is how you greet me?"
             
-            RINA: "You know, I'm allowed to exist at this mall. It's not like you own it."
+            RINA: "Well, fine. I see how it is."
+            
+            RINA: "Hello to you, too, Yousra."
+            
+            RINA: "You know, I'm allowed to exist here just as much as you. It's not like you own it."
             
     -   * "Yousra?"
     
@@ -458,17 +474,25 @@
         
             RINA: "Oh, okay."
             
-            RINA: "... At least you're talking to me again."
+            RINA: "...At least you're talking to me again."
             
             RINA: "That's a good start."
             
-            RINA: "So... are we gonna talk about what happened back then? That lunch with our friends..."
+            &PORTRAIT_nour_nourannoyed
             
-            RINA: "We started talking about, well, you know ...gay marriage being legalized..."
+            NOUR: "...I can't see what it's a good start <i>to</i>."
+            
+            RINA: "But... are we gonna talk about what happened back then at all? That lunch with our friends..."
+            
+            &PORTRAIT_nour_nourannoyed
+            
+            NOUR: "I would prefer not to, but I have a feeling you're going to keep going anyway."
+            
+            RINA: "We started talking about, well, you know... gay marriage being legalized..."
             
             RINA: "What am I forgetting?"
             
-                ** "You were quiet[."], while the others kept going on about how being gay is gross and weird."
+                ** "You were quiet[."], while the others kept going on about how being gay is gross and haram."
                 
                     RINA: "That doesn't mean I agreed with them."
                     
@@ -484,15 +508,21 @@
         
             NOUR: "But that's not the point."
             
-            NOUR: "Like I said back then, I'm mad that you didn't even <i>try</i> to disagree with the rest of our friends."
+            NOUR: "Like I said back then, I'm mad that you didn't even <i>try</i> to disagree with what they were saying."
+            
+            NOUR: "You made it seem like you were on their side. Not mine."
         
         * "I know you didn't."
         
             NOUR: "Like I said back then, I appreciate you keeping it private."
             
-            NOUR: "I <i>don't</i> appreciate that you didn't even try to disagree with the rest of our friends.
+            NOUR: "I <i>don't</i> appreciate that you didn't even try to disagree with what they were saying."
+            
+            NOUR: "You made it seem like you were on their side. Not mine."
         
-    -  * "They said everything in the book..."
+    -  * "They were quotting everything like parrots..."
+    
+            &PORTRAT_nour_nourangry
     
             NOUR: "Like how they all thought people should keep their bad urges to themselves."
     
@@ -500,9 +530,9 @@
                 
             RINA: "What did you want <i>me</i> to do about it?"
             
-            RINA: "Make everyone suddenly unlearn what our middle-eastern parents taught us about queerness?"
+            RINA: "Make everyone suddenly unlearn what our Middle-Eastern, Muslim parents taught us about queerness?"
                         
-                ** "I wanted you to be an ally..." 
+                ** "I wanted you to be my ally..." 
                 
                     NOUR: "I wanted you to say that you support queer people."
                     
@@ -515,6 +545,8 @@
                     NOUR: "You're worried about <i>yourself</i>?"
                     
                     NOUR: "In front of the person that's <i>actually</i> gay?"
+                    
+                    NOUR: "Are you saying <i>I'm</i> haram?"
                     
                     
                 ** "I wanted you to disagree with them."
@@ -587,7 +619,7 @@
 
     NOUR: "Why would I want to keep being friends with a coward who couldn't stand up for me?"
     
-    RINA: "You can call me a coward. It's fine. But don't you get where I'm coming from?"
+    RINA: "You can call me a coward, I don't care. But don't you get where I'm coming from?"
     
         * "You're not the victim here."
         
@@ -657,6 +689,8 @@
 //Nour takes this to mean that she should let things slide, and she ends up being too passive as a result.
 
 == rina_hallway ==
+
+    &PORTRAIT_nour_noursad
     
     NOUR: "Whatever. You know what, I'm not mad anymore."
     
@@ -801,7 +835,7 @@
     
         NOUR: "When I say it out loud, it feels silly. I'm still mad at you, but I don't think I want to be."
         
-        NICK: "You know, I do the stuff I do... I guess because I'm frustrated at the world."
+        NICK: "You know, I do the stuff I do because... I guess because I'm frustrated at the world."
         
         NICK: "But I'm actually mad at myself, 'cause I can't be how people want me to be."
     
@@ -914,7 +948,7 @@
         
         NOUR: "..."
         
-        NOUR: <i>A polaroid camera that my dad got from this mall.</i>
+        NOUR: <i>With the polaroid camera that my dad got from this mall.</i>
         
         -> END
     

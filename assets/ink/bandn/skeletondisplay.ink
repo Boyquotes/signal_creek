@@ -15,17 +15,19 @@
 
     Nick picks up one of the skeleton's boney hands and waves it towards Nour and Ms.Suwan.
     
+    &PORTRAIT_nick_nickbigsmile
+    
     NICK: "Bone appetit!"
     
     Nour snorts despite attempting to suppress her laugh.
     
-        &PORTRAIT_nour_nourpondering
+        &PORTRAIT_nour_noursmile
     
     NOUR: "That barely even makes sense! Are you serving food, or something?"
     
         &PORTRAIT_nick_nicksmallsmile
     
-    NICK: "Hey, you never know... Bone marrow's supposed to be like a delicacy in some countries."
+    NICK: "Hey, you never know... Bone marrow's supposed to be a delicacy in some countries."
     
     NICK: "Like... in France, probably."
     
@@ -54,7 +56,9 @@
     NICK: "BONE-jour!!!"
     
         &PORTRAIT_nour_nourannoyed
+        
+    NOUR: "..."
     
-    NOUR: "...let's move on."
+    NOUR: "Let's move on."
     
     -> END
