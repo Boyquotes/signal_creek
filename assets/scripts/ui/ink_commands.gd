@@ -193,6 +193,8 @@ func parse_commands(currentLine):
 				characterNode = Globals.EmperorEvercrisp
 			"EarlEarligold":
 				characterNode = Globals.EarlEarligold
+			"Tim":
+				characterNode = Globals.Tim
 		
 		if "out" in inOrOut:
 			characterNode.shlorp_out()

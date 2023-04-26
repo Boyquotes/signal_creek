@@ -452,6 +452,10 @@ toggle_map={
 
 project/assembly_name="Signal Creek"
 
+[network]
+
+limits/debugger_stdout/max_chars_per_second=9000
+
 [physics]
 
 3d/active_soft_world=false

@@ -1,6 +1,6 @@
 == pens ==
 
-    It's a display of fun pens with little animals on the tops.
+    It's a display of fun pens with little squishy animals on the tops.
     
     {-!pens_convo: -> pens_convo}
     

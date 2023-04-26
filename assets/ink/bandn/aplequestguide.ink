@@ -48,7 +48,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     &PORTRAIT_nick_nicksad
     
-    NICK: "... Sure, whatever."
+    NICK: "...Sure, whatever."
     
     &PORTRAIT_nour_nourneutral
     
