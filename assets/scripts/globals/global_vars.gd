@@ -49,6 +49,7 @@ var PrincessPinkLady = null
 var PrincePendragon = null
 var EmperorEvercrisp = null
 var EarlEarligold = null
+var Tim = null
 
 var SpeechBubble = null
 

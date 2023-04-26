@@ -572,6 +572,22 @@
     
     MS. SUWAN: "... unconventional tactics."
     
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "It seems that this interaction has made me re-think a lot about myself."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "About how I... view others. Treat others."
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "I..."
+    
+    &PORTRAIT_ms. suwan_mssuwanshadow
+    
+    MS. SUWAN: "... I will stop here."
+    
     &PORTRAIT_nick_nickshocked
 
     NICK: "..."
@@ -584,6 +600,10 @@
     
     NOUR: "I-I mean, yeah! Ms. Suwan's totally right."
     
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "Sometimes we have to keep a critical, open-mind about others... and ourselves."
+    
     &PORTRAIT_nick_nicksmallsmile
     
     NICK: "..."
@@ -592,9 +612,13 @@
     
     NOUR: <i>I can't believe Ms. Suwan admitted she was wrong.</i>
     
-    &PORTRAIT_nour_nourpondering
+    &PORTRAIT_nour_nournervous
     
     NOUR: <i>Maybe this means she's ready to reflect further on herself...</i>
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Maybe she could be more open to talking about those three...</i>
     
     &PORTRAIT_nour_nourneutral
     

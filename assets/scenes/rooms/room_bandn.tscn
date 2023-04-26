@@ -539,11 +539,7 @@ __meta__ = {
 
 [node name="BookshelfSide3" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 material = SubResource( 16 )
-position = Vector2( -8, 64 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
+position = Vector2( -8, 56 )
 
 [node name="BookshelfSide4" parent="PlaneManager/Overworld" instance=ExtResource( 23 )]
 material = SubResource( 16 )

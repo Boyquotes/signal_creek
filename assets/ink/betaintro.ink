@@ -68,6 +68,8 @@
         * "Shhh! Shut up, Nick!"
     
             NICK: "NO, <i>YOU</i> SHUT UP!"
+            
+            &PORTRAIT_nour_nourangry
     
             NOUR: "If you keep making so much noise, she's going to <i>find us</i>, you idiot—"
             
@@ -108,7 +110,7 @@
     
     MS. SUWAN: <i>"Nour?!"</i>
     
-    &PORTRAIT_nour_nournervous
+    &PORTRAIT_nour_nourshocked
     
     NOUR: "Uhh... Hi, Ms. Suwan."
     
@@ -197,7 +199,7 @@
     
     &EMOTE_SUWAN_DownIdle
     
-    &PORTRAIT_nour_nournervous
+    &PORTRAIT_nour_nourangry
     
     NOUR: "What the—WHAT ARE YOU DOING?!"
     

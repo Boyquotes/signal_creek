@@ -30,8 +30,10 @@ func create_entry_dialogue(newText: String, entryAsset: PackedScene, entryParagr
 	
 	Globals.ColorManager.set_current_color(dialogueLine[0])
 	
-	var isSussyPortrait = newEntry.set_nametag(dialogueLine[0], Globals.ColorManager.get_current_color())
-	newEntry.set_portrait(Globals.ColorManager.get_current_portrait(), isSussyPortrait)
+	if Globals.ColorManager.get_current_color():
+		var isSussyPortrait = newEntry.set_nametag(dialogueLine[0], Globals.ColorManager.get_current_color())
+		newEntry.set_portrait(Globals.ColorManager.get_current_portrait(), isSussyPortrait)
+	
 	newEntry.remove_placeholders()
 	
 	var newParagraph = entryParagraph.instance()
