@@ -75,7 +75,7 @@
     
     MS. SUWAN: "..." 
     
-    MS. SUWAN: "We're not in a science fiction novel, boy."
+    MS. SUWAN: "We're not in a science fiction novel, young man."
     
     MS. SUWAN: "I have to call one of my higher-ups about this."
     
