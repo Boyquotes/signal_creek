@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/scripts/character/character_navigator.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/characters/animations/nick_walking_past.tscn" type="PackedScene" id=2]
@@ -20,6 +20,22 @@ tracks/0/keys = {
 "values": [ 24, 25 ]
 }
 
+[sub_resource type="Animation" id=23]
+resource_name = "HandsUp"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 28, 29 ]
+}
+
 [sub_resource type="Animation" id=22]
 resource_name = "LookAround"
 length = 1.2
@@ -34,6 +50,57 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 13, 14, 12, 19, 20, 21, 0 ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "MiddleFinger"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 30, 31 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "UsingPhone"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 26, 27 ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "Vibrating"
+length = 0.15
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -17 ), Vector2( -1, -17 ), Vector2( 1, -17 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=6]
@@ -51,14 +118,19 @@ position = Vector2( 0, -17 )
 texture = ExtResource( 3 )
 hframes = 6
 vframes = 6
-frame = 24
+frame = 31
+region_rect = Rect2( 45, 138, 19, 32 )
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PQpzb3VyY2V8PQpsYXllcnw9Cm9wX2V4cHw9RmFsc2UKb19mb2xkZXJ8PQpvX25hbWV8PQpvbmx5X3Zpc2libGV8PUZhbHNlCm9fZXhfcHw9Cg=="
 }
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 2 )]
 anims/ButtonPress = SubResource( 21 )
+anims/HandsUp = SubResource( 23 )
 anims/LookAround = SubResource( 22 )
+anims/MiddleFinger = SubResource( 25 )
+anims/UsingPhone = SubResource( 24 )
+anims/Vibrating = SubResource( 26 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -3 )
