@@ -60,3 +60,11 @@
 == trinketside ==
 
     -> trinkets
+    
+=== cashier ===
+
+    It's a kiosk.
+    
+    Seems out of order like most things in this mall.
+    
+    -> END

@@ -73,7 +73,7 @@ INCLUDE bandn/computerdesk.ink
 
     NOUR: "... What was that noise?"
     
-    &PORTRAIT_ms. suwan_msswuanpondering
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "It sounded like... an elevator chime."
     

@@ -44,6 +44,8 @@
             
                 MS. SUWAN: "Generally, construction should follow accessibility guidelines."
                 
+                &PORTRAIT_mssuwan_mssuwanpondering
+                
                 MS. SUWAN: "There should be a gender-neutral bathroom for handicapped individuals."
                 
                     &PORTRAIT_mssuwan_mssuwansad
@@ -81,6 +83,8 @@
             &PORTRAIT_mssuwan_mssuwanneutral
         
         MS. SUWAN: "I will say this: I agree with you."
+        
+        &PORTRAIT_mssuwan_mssuwanpondering
         
         MS. SUWAN: "The gender binary is certainly an outdated method of dividing restrooms."
         
@@ -134,13 +138,16 @@
 == frogstatue ==
 
     It's a statue of a frog. Looks very peaceful.
-
     -> END 
     
 == burgertable ==
+    It's a table with fast food on it. Burgers and trash litter the table.
 
-    It's a table, covered with food. Although the burgers and fries look fresh, there is strangely no odor.
+    Although the food looks fresh, there is strangely no odor...
     
+    We probably shouldn't eat it.
+    
+    -> END
 // == wertoys == 
 
 //     It's the old toy store, We r Toys.
