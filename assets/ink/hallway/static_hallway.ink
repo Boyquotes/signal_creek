@@ -141,10 +141,12 @@
     -> END 
     
 == burgertable ==
-    It's a table with fast-food on it. Burgers and trash litter the table.
+    It's a table with fast food on it. Burgers and trash litter the table.
 
-    It's a table, covered with food. Although the burgers and fries look fresh, there is strangely no odor.
-    Probably shouldn't eat it—who knows how old it could be?
+    Although the food looks fresh, there is strangely no odor...
+    
+    We probably shouldn't eat it.
+    
     -> END
 // == wertoys == 
 
