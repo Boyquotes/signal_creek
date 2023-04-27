@@ -66,7 +66,7 @@
             
             NOUR: "Are you sure?"
             
-            NICK: "Yeah. If I accept something from someone, I'd wanna repay them."
+            NICK: "Yeah. If I accept something from someone, I'd have to repay them."
         
         + ["If no one's gonna get anything, let's go."]
     
@@ -86,7 +86,7 @@
     
     &PORTRAIT_nour_nourrealization
 
-    NOUR: <i>... Wait a minute. What's up with that boba can in the back?</i>
+    NOUR: <i>...Wait a minute. What's up with that boba can in the back?</i>
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -158,7 +158,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "... 50 cents each?"
+    NICK: "...50 cents each?"
     
     &PORTRAIT_ms. suwan_mssuwanneutral
         
@@ -166,7 +166,7 @@
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "... You have some too. Make it fair."
+    NICK: "...You have some, too. Make it fair."
     
     &PORTRAIT_nour_noursmile
     
@@ -230,7 +230,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_???_dukedeliciouspreach
     
@@ -272,7 +272,7 @@
     
     &PORTRAIT_duke delicious_dukedelicioussmile
     
-    DUKE DELICIOUS: "Something that may help you on your multi-plane journey, Dream Walkers!"
+    DUKE DELICIOUS: "Something that may help you on your multi-plane journey, Plane Walkers!"
     
     &PORTRAIT_duke delicious_dukedeliciouspreach
     
@@ -324,13 +324,13 @@
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "... Bad."
+    NICK: "...Bad."
     
     Nick gulps more of it down.
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "... Sure it is. Make sure to save some for the rest of us."
+    NOUR: "...Sure it is. Make sure to save some for the rest of us."
     
     &PORTRAIT_nick_nicksmallsmile
     

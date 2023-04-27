@@ -62,6 +62,10 @@
     
     NOUR: "..."
     
+    &PORTRAIT_nick_nickpondering
+    
+    NICK: "..."
+    
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
     MS. SUWAN: "Are we here because there's literally an apple on the booth—"
@@ -82,9 +86,13 @@
     
     NOUR: "The apple could be... shy?"
     
-    &PORTRAIT_ms. suwan_mssuwan
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "..."
+    
+    MS. SUWAN: "I did not think I'd need to say this, but it's an image on a wall."
+    
+    &PORTRAIT_nour_nourpondering
     
     NOUR: "Um. What do you think, Nick?"
     
@@ -98,13 +106,13 @@
     
     NOUR: "We could try..."
     
-        * "Talking to the apple."
+        * "talking to the apple."
             -> talktoapple
         
-        * "Staring back at the apple."
+        * "staring back at the apple."
             -> stareatapple
         
-        * "Giving the apple a makeover."
+        * "giving the apple a makeover."
             -> giveapplemakeover
 
 == talktoapple ==
@@ -119,7 +127,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... !"
+    NOUR: "...!"
     
     &PORTRAIT_nour_noursmile
     
@@ -179,7 +187,7 @@
     
     &PORTRAIT_nour_noursmile
                 
-    NOUR: "True! Good work, Nick!"
+    NOUR: "Oh, nice idea! Good work, Nick!"
     
     &PORTRAIT_ms. suwan_mssuwanangry
                 
@@ -203,7 +211,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... !"
+    NOUR: "...!"
     
     &PORTRAIT_nour_noursmile
     
@@ -223,7 +231,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
             
-    MS. SUWAN: "What? That's a poster for crying out loud."
+    MS. SUWAN: "...It's a <i>poster,</i> for crying out loud."
     
     &PORTRAIT_nour_nournervous
             
@@ -235,7 +243,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanangry
             
-    MS. SUWAN: "I will not do that."
+    MS. SUWAN: "I will <i>not</i> do that."
     
     &PORTRAIT_nour_nourneutral
             
@@ -251,6 +259,7 @@
     
     He moves closer to the apple on the booth.
     
+    // STAGING:
     // NICK MOVES TOWARDS THE BOOTH, FACING IT
     // NOUR FOLLOWS AND THEN STANDS NEXT TO HIM, FACING THE BOOTH
     
@@ -278,7 +287,7 @@
                     
                     &PORTRAIT_ms. suwan_mssuwanangry
                         
-                    MS. SUWAN: "Don't hurt yourselves, please."
+                    MS. SUWAN: "Don't overexert yourselves, please."
                         
                         *** [STARE LIKE YOUR LIFE DEPENDS ON IT]
                         
@@ -290,6 +299,7 @@
                             
                             NICK: "..."
                             
+                            // STAGING
                             // MS. SUWAN APPROACHES TO STAND IN FRONT OF THE BOOTH.
                             
                             &PORTRAIT_ms. suwan_mssuwanneutral
@@ -310,7 +320,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... !"
+    NOUR: "...!"
     
     &PORTRAIT_nour_noursmile
     
@@ -354,7 +364,9 @@
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
             
-    MS. SUWAN: "Knock yourselves out, then."
+    MS. SUWAN: "Well, then." 
+    
+    MS. SUWAN: "Knock yourselves out."
     
     &PORTRAIT_nour_nourneutral
             
@@ -420,7 +432,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_???_pinkladysmile
     
@@ -456,11 +468,11 @@
     
     ???: "If you look down on different kinds of problem-solving..."
     
-    ???: "... serious <i>or</i> not..." 
+    ???: "...serious <i>or</i> not..." 
     
     &PORTRAIT_???_pinkladybashful
     
-    ???: "... you lock more doors than you open!"
+    ???: "...you lock more doors than you open!"
     
     &PORTRAIT_nour_nourpondering
     
@@ -520,7 +532,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_princess pink lady_pinkladybashful
     
@@ -536,11 +548,11 @@
     
     &PORTRAIT_princess pink lady_pinkladysmile
     
-    PRINCESS PINK LADY: "You could ask that young Dream Walker in the yellow for help!"
+    PRINCESS PINK LADY: "You could ask that young Plane Walker in the yellow for help!"
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... ?"
+    NICK: "...?"
     
     &PORTRAIT_princess pink lady_pinkladyneutral
     
@@ -570,7 +582,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... unconventional tactics."
+    MS. SUWAN: "...unconventional tactics."
     
     &PORTRAIT_nick_nickshocked
 
@@ -578,7 +590,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... !"
+    NOUR: "...!"
     
     &PORTRAIT_nour_noursmile
     

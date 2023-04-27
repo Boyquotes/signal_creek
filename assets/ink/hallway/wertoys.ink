@@ -37,7 +37,7 @@
     
     &PORTRAIT_nour_nourannoyed
     
-    NOUR: "... About what kind of toys are normal for girls."
+    NOUR: "...About what kind of toys are normal for girls."
     
     &PORTRAIT_nick_nickangry
     
@@ -69,7 +69,9 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "What the... Hello?"
+    NOUR: "What the..." 
+    
+    NOUR: "Hello?"
     
     &SHLORP_APPLE_PrincePendragon_in
     
@@ -81,7 +83,7 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "... Uh-"
+    NOUR: "...Uh-"
     
     &PORTRAIT_prince pendragon_princependragontears
     
@@ -93,7 +95,7 @@
     
     &PORTRAIT_prince pendragon_princependragontears
     
-    PRINCE PENDRAGON: "... onto this floor."
+    PRINCE PENDRAGON: "...onto this floor."
     
     &PORTRAIT_nour_nourrealization
     
@@ -101,7 +103,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_prince pendragon_princependragonbashful
     
@@ -249,7 +251,7 @@
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "... doesn't mean you're any less worthy."
+    NOUR: "...doesn't mean you're any less worthy."
     
     &PORTRAIT_prince pendragon_princependragontears
     
@@ -273,7 +275,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... !"
+    NOUR: "...!"
     
     &PORTRAIT_nick_nickshocked
     
@@ -341,7 +343,7 @@
     
     &PORTRAIT_prince pendragon_princependragonsad
     
-    PRINCE PENDRAGON: "... Perhaps focusing on my mistakes clouded my mind."
+    PRINCE PENDRAGON: "...Perhaps focusing on my mistakes clouded my mind."
     
     &PORTRAIT_prince pendragon_princependragonsmile
     
@@ -435,7 +437,7 @@
     
     &PORTRAIT_prince pendragon_princependragonbashful
     
-    PRINCE PENDRAGON: "... but it will be different this time."
+    PRINCE PENDRAGON: "...but it will be different this time."
     
     &PORTRAIT_prince pendragon_princependragonneutral
     
@@ -473,7 +475,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_prince pendragon_princependragonbashful
     
@@ -481,7 +483,7 @@
     
     &PORTRAIT_prince pendragon_princependragonsmile
     
-    PRINCE PENDRAGON: "Farewell, Dream Walker friends! HOO HOO!!!"
+    PRINCE PENDRAGON: "Farewell, Plane Walker friends! HOO HOO!!!"
     
     &SHLORP_APPLE_PrincePendragon_out
     
@@ -507,7 +509,7 @@
     
         &PORTRAIT_nick_nicksmallsmile
     
-        NICK: "... Weirdly enough, it taught me a lot about life."
+        NICK: "...Weirdly enough, it taught me a lot about life."
     
     - &PORTRAIT_ms. suwan_mssuwansmile
     
