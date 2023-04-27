@@ -301,11 +301,11 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... While others got things handed to them on a silver plate."
+    MS. SUWAN: "...While others got things handed to them on a silver plate."
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
-    MS. SUWAN: "It is a privilege to get the opportunity to learn."
+    MS. SUWAN: "It is a <i>privilege</i> to get the opportunity to learn."
     
     &PORTRAIT_ms. suwan_mssuwansad
     
@@ -464,7 +464,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "How far I've come... I never thought of it that way."
+    NICK: "How far I've come, huh... I never thought of it that way."
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
@@ -494,11 +494,15 @@
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
-    MS. SUWAN: "No. But I could learn."
+    MS. SUWAN: "Of course I know <i>what<i> it is. But I don't consume it."
+    
+    MS. SUWAN: "I would be happy to learn more about it."
     
     &PORTRAIT_nick_nickbigsmile
     
-    NICK: "Haha! That's true..."
+    NICK: "I'd <i>love</i> to tell you about it!" 
+    
+    NICK: "I have so many favorite series..."
 
     -> bookshelf_end
 

@@ -22,33 +22,33 @@
 
         &PORTRAIT_nick_nicksmallsmile
     
-    NICK: "... Ooh! Hey, guys! Think you could buy me one of these?"
+    NICK: "Ooh! Hey, guys! Think you could buy me one of these?"
     
     NICK: "I'll pay you back later." 
     
         &PORTRAIT_nour_nourpondering
     
-    NOUR: "... I didn't know you liked graffitti art."
+    NOUR: "...I didn't know you liked graffitti art."
     
         &PORTRAIT_nick_nicknervous
     
-    NICK: "Well, I don't really know how..."
+    NICK: "Well, I don't really know how to do it..."
     
     &PORTRAIT_nour_nourannoyed
 
-    NOUR: "... Then what are you going to do with these?"
+    NOUR: "Then... what are you going to do with these?"
     
         &PORTRAIT_nick_nicknervous
     
-    NICK: "It's like... <i>none</i> of your business. Just lay off."
+    NICK: "It's... it's <i>none</i> of your business. Just lay off."
     
         &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    MS. SUWAN: "You want to inhale it, then?"
+    MS. SUWAN: "You want to huff it, don't you."
     
         &PORTRAIT_nour_nourannoyed
     
-    NOUR: "Oh, he wouldn't. No way."
+    NOUR: "Oh, no way. He wouldn't."
     
         &PORTRAIT_ms. suwan_mssuwanangry
     
@@ -82,7 +82,7 @@
     
         &PORTRAIT_ms. suwan_mssuwanneutral
     
-    MS. SUWAN: "Good. That means I am saying what you need to hear."
+    MS. SUWAN: "Good. That means I'm saying what you need to hear."
     
         &PORTRAIT_ms. suwan_mssuwanangry
     
@@ -102,7 +102,7 @@
     
         &PORTRAIT_nour_nourpondering
     
-    NOUR: "Things that <i>aren't</i> dangerous."
+    NOUR: "Things that <i>aren't</i> dangerous that you'll actually enjoy."
     
         &PORTRAIT_nick_nickangry
     
@@ -120,7 +120,7 @@
     
     &PORTRAIT_nick_nicksad
     
-    NICK: "I hope that whatever you're planning to show me is <i>SO</i> fun!"
+    NICK: "I hope that whatever you're planning to show me is <i>SO</i> much fun!"
     
     NOUR: <i>I should lead Nick somewhere that would inspire new interests.</i>
     
@@ -145,11 +145,11 @@
     
     NOUR: <i>It sounds like he doesn't have much confidence in his prospects.</i>
     
-    NOUR: <i>I should help him find a hobby. Something that would give him purpose.</i>
+    NOUR: <i>I should help him find a hobby. Something that would give him a purpose.</i>
     
         &PORTRAIT_nour_noursmile
     
-    NOUR: <i>We could go somewhere with books, and read up about new things.</i>
+    NOUR: <i>Maybe we could go somewhere with books and read up about new things.</i>
     
     -> END
 
@@ -169,11 +169,13 @@
     
         &PORTRAIT_nick_nicksmallsmile
 
-    NICK: "Don't worry. These didn't really interest me in the first place."
+    NICK: "Don't worry. These didn't <i>really</i> interest me in the first place."
     
         &PORTRAIT_nick_nicksad
     
-    NICK: "I just thought 'cause my friends did it... I should, too. Or... something."
+    NICK: "I just thought 'cause my friends did it... I should, too." 
+    
+    NICK: "Or... something."
     
         &PORTRAIT_nick_nicksmallsmile
     
@@ -191,7 +193,7 @@
     
         &PORTRAIT_ms. suwan_mssuwanrealization
     
-    MS. SUWAN: "... Perhaps we did <i>too</i> good of a job."
+    MS. SUWAN: "...Perhaps we did <i>too</i> good of a job."
     
         &PORTRAIT_nour_nourshocked
     

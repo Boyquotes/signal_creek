@@ -44,7 +44,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: "That's a little depressing... But also true."
+    NOUR: "That's a little depressing... But also true, to some extent."
     
     -> END
 
@@ -86,7 +86,7 @@
     
     NOUR: "There's only one way to find out."
         
-        * [Fish it out of the fountain]
+        * ["Let's fish it out of the water."]
 
     - &PORTRAIT_nour_nourpondering
     
@@ -94,7 +94,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... Hey!"
+    NOUR: "...Hey!"
     
     &SHLORP_POOP_FatherFuji_in
     
@@ -102,7 +102,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "... !"
+    NICK: "...!"
     
     ???: "Greetings."
     
@@ -126,7 +126,7 @@
     
     &PORTRAIT_father fuji_fatherfujineutral
     
-    FATHER FUJI: "... Head priest of the Aple Council."
+    FATHER FUJI: "...Head priest of the Aple Council."
     
     &PORTRAIT_father fuji_fatherfujipreach
     
@@ -166,15 +166,15 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Daddy?"
+    NOUR: "...Daddy?"
     
     &PORTRAIT_father fuji_fatherfujipreach
     
     FATHER FUJI: "Rhyming on command is harder than it looks."
     
-    &PORTRAIT_ms. suwan_mssuwannervous
+    &PORTRAIT_nour_nournervous
     
-    MS. SUWAN: "Continue, please."
+    NOUR: "Of course. Continue, please."
     
     &PORTRAIT_father fuji_fatherfujineutral
     
@@ -202,7 +202,7 @@
     
     &PORTRAIT_nick_nickshadow
     
-    NICK: "... Whatever."
+    NICK: "...Whatever."
     
     &PORTRAIT_nour_noursad
     
@@ -222,11 +222,11 @@
     
     &PORTRAIT_father fuji_fatherfujineutral
     
-    FATHER FUJI: "A piece of information a Dream Walker ought to know."
+    FATHER FUJI: "A piece of information a Plane Walker ought to know."
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... Information? 
+    NICK: "...Information? 
     
     &PORTRAIT_nick_nicknervous
     
@@ -252,7 +252,7 @@
             
             &PORTRAIT_nick_nicknervous
             
-            NICK: "... !"
+            NICK: "...!"
             
             &PORTRAIT_nour_nourpondering
             
@@ -282,7 +282,7 @@
             
             &PORTRAIT_nick_nicksad
             
-            NICK: "... I <i>don't</i> care."
+            NICK: "...I <i>don't</i> care."
             
             &PORTRAIT_ms. suwan_mssuwanrealization
             
@@ -298,7 +298,7 @@
             
             &PORTRAIT_nick_nickshocked
             
-            NICK: "... !"
+            NICK: "...!"
     
     - Nick lets out a faint sigh of relief.
     
@@ -332,7 +332,7 @@
 
     &PORTRAIT_father fuji_fatherfujisad
 
-    FATHER FUJI: "But deep inside he felt so small and weak,"
+    FATHER FUJI: "Deep inside he felt so small and weak,"
     
     &PORTRAIT_father fuji_fatherfujipreach
 
@@ -352,7 +352,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_nour_nourpondering
     
@@ -384,7 +384,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "I guess! Unless someone could explain it to us..."
+    NOUR: "I guess! Unless <i>someone</i> could explain it to us..."
     
     &PORTRAIT_nick_nickpondering
     
