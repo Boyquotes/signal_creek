@@ -1,9 +1,21 @@
 == timbertims ==
+
+    
+            &FOLLOW_NICK_NickTimPos
+            &FOLLOW_NOUR_NourTimPos
+            &FOLLOW_SUWAN_SuwanTimPos
+            
+            &PAUSE_1.0
+            
+            &EMOTE_SUWAN_RightIdle
+            &EMOTE_NICK_UpIdle
+            &EMOTE_NOUR_UpIdle
+    
     
     It's Timbertims, a store that exclusively sold bright white toe shoes with red soles.
     
     Despite its off-putting decor, everyone seems to have owned a pair of Timbertims at one point.
-    
+
     {
         - timbertimsvisited:
             -> explored_everything
@@ -56,7 +68,19 @@
     
     &SHLORP_POOP_Tim_in
     
+    &PAUSE_1
+    
     // CAN WE GET ALL OF THE PLAYER CHARACTERS JUMPING IN SURPRISE OR TURNING AROUND TO FACE HIM?
+    
+    &EMOTE_NOUR_Jump
+    &EMOTE_NICK_Jump
+    &EMOTE_SUWAN_Jump
+    
+    &PAUSE_0.5 
+    
+    &EMOTE_SUWAN_RightIdle
+    &EMOTE_NICK_UpIdle
+    &EMOTE_NOUR_UpIdle
     
     &PORTRAIT_tim_timsmile
     
@@ -94,15 +118,18 @@
     
     NOUR: <i>Either way, I guess it might be worth it to speak to him.</i>
 
-        + "Excuse me, but do you know anything about how to get out of this mall?" -> timbertimspol
+
+        + ["Excuse me, but do you know anything about how to get out of this mall?"] -> timbertimspol
         
-        + "Um, excuse me, but what are you even doing here?" -> timbertimssus
+        + ["Um, excuse me, but what are you even doing here?"] -> timbertimssus
     
         -> END
 
 == timbertimspol ==
 
-    &PORTRAIT_tim_timneutral
+    NOUR: "Excuse me, but do you know anything about how to get out of this mall?"
+    
+    &PORTRAIT_tim_timsmile
 
     TIM: "Why, yes! I do."
     
@@ -158,11 +185,11 @@
     
     &SHLORP_POOP_Tim_out
     
+    &FOLLOW_NOUR_stop
+    
         -> END
 
 == timbertimssus ==
-
-    &PORTRAIT_nour_nourneutral
     
     NOUR: "Hasn't your store been closed down for weeks?"
     
@@ -242,6 +269,8 @@
     
     TIM: "Or maybe I should leave my small business days behind..."
     
+    &PORTRAIT_tim_timsmile
+    
     TIM: "I've always wanted to be a politician."
     
     TIM: "Or a god!"
@@ -257,6 +286,8 @@
     NOUR: <i>Might as well leave him alone.</i>
 
     &SHLORP_POOP_Tim_out
+    
+    &FOLLOW_NOUR_stop
 
     -> END
 
@@ -285,7 +316,7 @@
     
     &SHLORP_POOP_Tim_in
     
-    TIM: "UNPLEASANT? :("
+    TIM: "UNPLEASANT?"
 
     &PORTRAIT_nick_nicknervous
     
@@ -296,5 +327,7 @@
     MS. SUWAN: "I certainly did not."
     
     &SHLORP_POOP_Tim_out
+    
+    &FOLLOW_NOUR_stop
 
     -> END
