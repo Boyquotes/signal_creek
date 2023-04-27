@@ -137,9 +137,18 @@
 
     -> END 
     
-== burgertable ==
+== burgertables ==
 
     It's a table, covered with food. Although the burgers and fries look fresh, there is strangely no odor.
+    
+    -> END
+    
+== cafesign ==
+
+It's a neatly handwritten sign for the Louis George Cafe. But all of the drink's prices have been rubbed off...
+
+
+    -> END
     
 // == wertoys == 
 
