@@ -438,7 +438,7 @@
     
     //SFX GROSS WET KISSY
     
-    //&SOUND_bigwetsmooch
+    &SOUND_wetkiss
     
     Grand Duchess Granny Smith blows Nick a fat kiss! 
     

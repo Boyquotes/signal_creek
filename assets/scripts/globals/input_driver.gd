@@ -73,11 +73,11 @@ func _process(_delta):
 						
 					
 		elif Globals.GameMode == Globals.GameModes.WALK:
-			if Input.is_action_just_pressed("toggle_map"):
-				Globals.FloorMap.toggle_map()
 		
 			if !Globals.DevTools.typing_knot_name:
 				check_input_character_movement()
+				if Input.is_action_just_pressed("toggle_map"):
+					Globals.FloorMap.toggle_map()
 			
 			# IN CASE OF LEADER SWITCHING
 			if _leader_switching_enabled:

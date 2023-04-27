@@ -46,7 +46,7 @@
     
     NICK: "Where do we get a <i>'floppy dip'</i>?"
     
-    &PORTRAIT_mssuwan_mssuwanannoyed
+    &PORTRAIT_ms. suwan_mssuwanannoyed
     
     MS. SUWAN: "A floppy <i>disk</i>. I do not believe there are any here, which is strange."
     

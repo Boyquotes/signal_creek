@@ -25,7 +25,7 @@ material = ExtResource( 3 )
 position = Vector2( 0, -34 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 419, 124, 15, 69 )
+region_rect = Rect2( 419, 111, 15, 82 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
@@ -36,7 +36,7 @@ position = Vector2( 0, -34 )
 texture = ExtResource( 5 )
 offset = Vector2( 0, -35.1015 )
 region_enabled = true
-region_rect = Rect2( 419, 124, 15, 69 )
+region_rect = Rect2( 419, 111, 15, 82 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, -24 )
