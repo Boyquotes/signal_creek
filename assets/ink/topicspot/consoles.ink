@@ -1,3 +1,12 @@
+//audio: 
+// &AUDIO_FADEIN
+// &PAUSE_1.0
+// &MUSIC_trackNAME
+// 
+// &AUDIO_FADEOUT
+// &PAUSE_1.0
+// &MUSIC_trackNAME
+
 == consoles ==
 
 {
@@ -71,7 +80,7 @@
     
     - &PORTRAIT_nour_nournervous
     
-    NOUR: "... Hey, are you alright?"
+    NOUR: "...Hey, are you alright?"
     
     &PORTRAIT_nick_nickshadow
     
@@ -99,7 +108,7 @@
     
         &PORTRAIT_nour_noursmile
     
-    NOUR: "You know a lot about this game, right Nick?"
+    NOUR: "You know a lot about this game, right, Nick?"
     
         &PORTRAIT_nick_nicknervous
     
@@ -107,7 +116,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    MS. SUWAN: "You said many words with little meaning."
+    MS. SUWAN: "You gave multiple answers with contrasting meanings."
     
     &PORTRAIT_nick_nickangry
     
@@ -133,11 +142,11 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: <i>We'll come back when he's ready.</i>
+    NOUR: <i>We should come back when he's ready.</i>
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "Can we look at the spray paint or something?"
+    NICK: "Can we go look at the spray paint or something?"
 
     -> END
 
@@ -237,11 +246,11 @@
     
     &PORTRAIT_emperor evercrisp_emperorevercrispsad
     
-    EMPEROR EVERCRISP: "... But we've lost all communication with him."
+    EMPEROR EVERCRISP: "...But we've lost all communication with him."
     
     &PORTRAIT_emperor evercrisp_emperorevercrisppreach
     
-    EMPEROR EVERCRISP: "Please, Dream Walkers! Bring me the Prince and all the Apple Council members!"
+    EMPEROR EVERCRISP: "Please, Plane Walkers! Bring me the Prince and all the Apple Council members!"
     
     &PORTRAIT_emperor evercrisp_emperorevercrispsmile
     
@@ -249,7 +258,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "Dream Walkers?"
+    MS. SUWAN: "Plane Walkers?"
     
         &PORTRAIT_nour_nourpondering
     
@@ -261,7 +270,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_emperor evercrisp_emperorevercrispsmile
     
@@ -269,13 +278,15 @@
     
     &PORTRAIT_nour_nourneutral
     
-        * "Yeah."
+        * "Kind of."
         
                 &PORTRAIT_nour_noursmile
                 
             NOUR: "We have a big fan of yours over here, actually."
             
-            NOUR: "I think he'd love to get a Secret Ending, right?"
+            NOUR: "I think he'd love to get a Secret Ending. 
+            
+            NOUR: "Right, Nick?"
             
                 &PORTRAIT_nick_nicknervous
             
@@ -293,11 +304,11 @@
         
             &PORTRAIT_emperor evercrisp_emperorevercrispsmile
             
-            EMPEROR EVERCRISP: "HO HO! EXCELLENT—"
+            EMPEROR EVERCRISP: "HO HO! EXCELLE—"
             
             &PORTRAIT_emperor evercrisp_emperorevercrispneutral
             
-            EMPEROR EVERCRISP: "... Oh."
+            EMPEROR EVERCRISP: "...Oh."
             
             &PORTRAIT_emperor evercrisp_emperorevercrispsad
             
@@ -305,7 +316,7 @@
             
                 &PORTRAIT_nour_nourpondering
             
-            NOUR: "Mmm... nope. I don't really know anything about <i>Aple Quest</i>."
+            NOUR: "Mmm... Nope. I don't really know anything about <i>Aple Quest</i>."
             
             &PORTRAIT_nick_nickshocked
             
@@ -325,7 +336,7 @@
             
             &PORTRAIT_nour_nournervous
             
-            NOUR: "... Um. I don't know."
+            NOUR: "...Um. I don't know."
             
             &PORTRAIT_emperor evercrisp_emperorevercrispsad
             
@@ -349,7 +360,7 @@
             
                 &PORTRAIT_nour_nourrealization
             
-            NOUR: "... You know what? Why not."
+            NOUR: "...You know what? Why not."
             
             &PORTRAIT_nour_noursmile
             
@@ -361,7 +372,7 @@
             
                 &PORTRAIT_nour_nourneutral
             
-            NOUR: "Oh, and I think we'll pass on the cereal. The ending's enough."
+            NOUR: "Oh, though I think we'll pass on the cereal. The ending's enough."
             
             &PORTRAIT_emperor evercrisp_emperorevercrisppreach
             
@@ -369,7 +380,7 @@
             
             &PORTRAIT_emperor evercrisp_emperorevercrispsmile
             
-            EMPEROR EVERCRISP: "Because I don't know where I put that stuff, ho ho!"
+            EMPEROR EVERCRISP: "Especially because I don't know where I put that stuff, ho ho!"
             
     - &PORTRAIT_nour_nourpondering
     
@@ -377,7 +388,7 @@
     
     &PORTRAIT_emperor evercrisp_emperorevercrisppreach
     
-    EMPEROR EVERCRISP: "If you want that sweet, sweet secret ending!"
+    EMPEROR EVERCRISP: "If you want that sweet, sweet Secret Ending!"
     
     &PORTRAIT_emperor evercrisp_emperorevercrispsad
     
@@ -389,7 +400,7 @@
     
     &PORTRAIT_emperor evercrisp_emperorevercrispneutral
     
-    EMPEROR EVERCRISP: "Their last coordinates were all within the hallways of the mall."
+    EMPEROR EVERCRISP: "Their last coordinates were all within the hallways of the Signal Creek Mall."
     
     &PORTRAIT_emperor evercrisp_emperorevercrisppreach
     
@@ -405,7 +416,7 @@
     
         &PORTRAIT_nour_nourneutral
     
-    NOUR: "That sounds simple enough."
+    NOUR: "Sounds simple enough."
     
     &PORTRAIT_emperor evercrisp_emperorevercrispsmile
     
@@ -415,7 +426,9 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Got it. Four apples, one Prince, all in the hallway."
+    NOUR: "Well, looks like we've got a new task ahead of us." 
+    
+    NOUR: "Four apples, one Prince, all in the hallway."
     
         &PORTRAIT_nour_noursmile
     
@@ -425,17 +438,11 @@
     
     NICK: "..."
     
-    Nick shrugs, but he's already itching to leave.
+    Nick shrugs, but he's shifting his feet, seemingly itching to leave.
     
         &PORTRAIT_nour_nourneutral
     
     NOUR: <i>Still silent, but at least he's communicating again.</i>
-        
-    //check - every apple found, emperor tells how many are left
-    
-    //EMPEROR EVERCRISP: "If you require a count of how many of my Aple council brethren you have located, come back to consult me!"
-    
-    //EMPEROR EVERCRISP: "I shall tell you your APLE PROGRESS!"
     
         &PORTRAIT_nour_noursmile
     
@@ -453,7 +460,7 @@
     
         &PORTRAIT_nour_noursmile
     
-    NOUR: "Never thought I'd hear something like that from you."
+    NOUR: "Heh. Never thought I'd hear a sentence like that coming from you."
     
         -> END
 
@@ -468,11 +475,11 @@
 
     &PORTRAIT_nick_nickneutral
     
-    NICK: "... Dunno."
+    NICK: "...Dunno."
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Hmm. Not a lot of enthusiasm right there."
+    NOUR: "Hmm. Not a lot of enthusiasm there."
     
     &PORTRAIT_nick_nicksad
     
@@ -496,15 +503,13 @@
     
     &PORTRAIT_nour_nourpondering
     
-        * "Have something to say?"
-        
-        * "Having fun watching?" 
+        * "What's on your mind?"
         
         * "Want to join me?"
             
             &PORTRAIT_nick_nicknervous
     
-            NICK: "... It's alright. It's a single player game, after all."
+            NICK: "...It's okay. It's a single player game, after all."
             
             &PORTRAIT_nour_nourpondering
             
@@ -524,7 +529,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "Can I... can I watch?"
+    NICK: "Can I... Can I watch?"
     
         &PORTRAIT_nour_noursmile
     
@@ -566,7 +571,7 @@
     
         &PORTRAIT_nour_nournervous
     
-    NOUR: "I didn't know... I guess I'll switch over to another weapon."
+    NOUR: "Huh, I didn't know that... I guess I'll switch to another weapon."
     
     &PORTRAIT_nour_noursmile
     
@@ -578,7 +583,7 @@
     
         &PORTRAIT_nour_nourrealization
         
-    NOUR: "Oh... but I like the bow. It looks nice."
+    NOUR: "Oh... but I like the bow better. It looks nicer."
 
     &PORTRAIT_nick_nicknervous
             
@@ -594,11 +599,11 @@
     
     &PORTRAIT_nick_nicksad
     
-    NICK: "... Or else, this run might really suck."
+    NICK: "...Or else, this run might really suck."
     
         &PORTRAIT_nour_noursmile
             
-    NOUR: "... I think I'll do that, then."
+    NOUR: "...I think I'll do that, then."
     
     Nick focuses on the game, his leg bouncing up and down.
     
@@ -630,7 +635,7 @@
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: "... <i>NICK</i>, you SCARED me."
+    NOUR: "...<i>NICK</i>, you SCARED me."
     
     &PORTRAIT_nick_nicknervous
     
@@ -670,11 +675,11 @@
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    MS. SUWAN: "<i>Yes!</i>"
+    MS. SUWAN: "<i>Yes?!</i>"
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... I'm not <i>that</i> heartless."
+    MS. SUWAN: "...I'm not <i>that</i> heartless."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -756,7 +761,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... Hey! You know what I've been thinking?
+    NOUR: "...Hey! You know what I've been thinking?
     
     &PORTRAIT_nour_noursmile
     
@@ -768,7 +773,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "I watch gaming videos and watch <i>others</i> play it, but..."
+    NICK: "I watch gaming videos and <i>others</i> play it, but..."
     
     &PORTRAIT_nick_nicksad
     
@@ -788,7 +793,7 @@
     
     &PORTRAIT_nick_nickshadow
     
-    NICK: "... What a joke."
+    NICK: "...What a joke."
     
     &PORTRAIT_nour_noursad
     
@@ -858,11 +863,11 @@
     
     &PORTRAIT_nick_nicktears
     
-    NICK: "I don't have the time to focus on school.
+    NICK: "I don't have the time to focus on school."
     
     &PORTRAIT_nick_nickshadow
     
-    NICK: "Even when I <i>do</i> it's so <i>hard</i>."
+    NICK: "And even when I <i>do,</i> it's so <i>hard</i>."
     
     &PORTRAIT_nick_nicktears
     
@@ -878,7 +883,7 @@
             
             &PORTRAIT_nour_nourneutral
             
-            NOUR: "Memorizing everything about anything takes a good amount of smarts."
+            NOUR: "Memorizing everything about <i>anything</i> takes a good amount of smarts."
             
             &PORTRAIT_nick_nickshocked
             
@@ -932,7 +937,7 @@
     
     &PORTRAIT_nick_nicktears
     
-    NICK: "... because I know <i>I'm</i> the reason why my life's a mess."
+    NICK: "...because I know <i>I'm</i> the reason why my life's a mess."
     
     &PORTRAIT_nour_nourneutral
     
@@ -940,11 +945,11 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Rebeling and getting yourself into trouble?"
+    NOUR: "Rebelling and getting yourself into trouble?"
     
     &PORTRAIT_nour_nourannoyed
     
@@ -952,7 +957,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: "You'll be chasing a temporary feeling for a long time with those ways..."
+    NOUR: "You'll be chasing a temporary feeling for a long time that way..."
     
     &PORTRAIT_nour_nourneutral
     
@@ -972,11 +977,11 @@
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "And I know you will!"
+    NOUR: "and I know you will!"
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "Then, you can dedicate the rest of your life to games..."
+    NOUR: "-then, you can dedicate the rest of your life to games..."
     
     &PORTRAIT_nour_noursmile
     
@@ -1006,15 +1011,15 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... but it does not make the others less valuable."
+    MS. SUWAN: "...but it does not make the others less valuable."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "I... am guilty of doing this."
+    MS. SUWAN: "I... am guilty of falling into that way of thinking myself."
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "I looked down on your passions—what made you the happiest."
+    MS. SUWAN: "I looked down on your passions — what make you the happiest."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -1026,7 +1031,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... Far more than any ounce of knowledge I have, degree be damned."
+    MS. SUWAN: "...Far more than any ounce of knowledge I have, degree be damned."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -1042,7 +1047,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... I'm so sorry, Nick. You are smart and very capable."
+    MS. SUWAN: "...I'm so sorry, Nick. You <i>are</i> smart, and very capable."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -1068,7 +1073,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "... Here. Can you put it back for me?"
+    NICK: "...Here. Can you put it back for me?"
     
     &PORTRAIT_nick_nicksmallsmile
     
@@ -1082,7 +1087,7 @@
     
     &PORTRAIT_nick_nickbigsmile
     
-    NICK: "Okay, now back to the game."
+    NICK: "Okay, now back to the game!"
     
     &PORTRAIT_nick_nickpondering
     
@@ -1122,7 +1127,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>... I guess I should talk to her.</i>
+    NOUR: <i>...I guess I should talk to her.</i>
     
     &LIGHT_Nick2
 

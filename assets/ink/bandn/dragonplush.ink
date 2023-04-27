@@ -15,7 +15,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "Puff the Magic Dragon!?"
+    NOUR: "Poof the Friendly Dragon!?"
     
     &PORTRAIT_nick_nickshocked
     

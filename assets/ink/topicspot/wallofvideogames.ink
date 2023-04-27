@@ -17,13 +17,15 @@
     
         &PORTRAIT_nick_nickbigsmile
         
-    NICK: "Yeah! I've heard so much about God of Warcraft - my friend let me play it a little on his yBox."
+    NICK: "Yeah! I've heard so much about God of Warcraft."
+    
+    NICK: "My friend let me play it a little on his yBox."
     
     NICK: "The graphics and story are so top-notch. Definitely deserved all those awards!"
     
         &PORTRAIT_nour_noursmile
         
-    NOUR: "Even I've heard of how good it is."
+    NOUR: "<i>I've</i> even heard of how good it is."
     
     NICK: "It makes grown men cry!"
     
@@ -37,7 +39,9 @@
         
             NICK: "Woah, they're still making <i>Call of Destiny</i> games?!"
             
-            MS. SUWAN: "I still recall when the first one was released... that stirred quite a controversy."
+            MS. SUWAN: "I still recall when the first one was released..."
+            
+            MS. SUWAN: "That stirred quite a controversy."
             
                 &PORTRAIT_nick_nickshocked
             

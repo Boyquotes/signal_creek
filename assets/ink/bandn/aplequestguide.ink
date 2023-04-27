@@ -28,7 +28,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Isn't this the game we saw before at TopicSpot?"
+    NOUR: "Isn't this the game we saw at TopicSpot?"
     
     &PORTRAIT_nick_nickneutral
     
@@ -92,7 +92,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
             
             &PORTRAIT_ms. suwan_mssuwanpondering
             
-            MS. SUWAN: "... Interesting."
+            MS. SUWAN: "...Interesting."
     
         * "The publishing page says..."
             

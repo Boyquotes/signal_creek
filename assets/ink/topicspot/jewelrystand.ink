@@ -9,10 +9,10 @@
     {
         - spraycans:
             NOUR: <i>There's an empty spot on the rack. A black leather bracelet is missing...</i>
+            
             &PORTRAIT_mssuwan_mssuwanpondering
             
             MS. SUWAN: "..."
-
             
             &PORTRAIT_nour_nourpondering  
             
@@ -24,7 +24,9 @@
 
 == jewelrystandconvo ==
     
-    The first bracelet has black beads and a silver pentagram charm. The second is black leather with silver studs.
+    The first bracelet has black beads and a silver pentagram charm.
+    
+    The second is black leather with silver studs.
     
     &PORTRAIT_nour_noursmile
     
@@ -45,7 +47,9 @@
 
     &PORTRAIT_mssuwan_mssuwanrealization
     
-    MS. SUWAN: "Well, you aren't wrong. Being young often entails exploring your identity in different ways."
+    MS. SUWAN: "Well, you aren't wrong."
+    
+    MS. SUWAN: "Being young often entails exploring your identity in different ways."
     
     &PORTRAIT_nick_nickshocked
     
@@ -53,7 +57,9 @@
 
     &PORTRAIT_nick_nickpondering
     
-    NICK: "Were you always so stuck-up? Or, did ya get all the crazy out of your system at parties?"
+    NICK: "Were you always so stuck-up?"
+    
+    NICK: "Or, did ya get all the crazy out of your system at parties?"
  
     &PORTRAIT_mssuwan_mssuwanannoyed
     

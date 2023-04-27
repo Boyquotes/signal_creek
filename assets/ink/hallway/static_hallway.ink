@@ -10,6 +10,16 @@
     
         // MS SUWAN, NOUR AND NICK STOP AND FACE THE BATHROOMS
         
+            &FOLLOW_NICK_NickBathroomPos
+            &FOLLOW_NOUR_NourBathroomPos
+            &FOLLOW_SUWAN_SuwanBathroomPos
+            
+            &PAUSE_0.175 
+            
+            &EMOTE_SUWAN_UpIdle
+            &EMOTE_NICK_RightIdle
+            &EMOTE_NOUR_UpIdle
+        
             &PORTRAIT_nour_nourannoyed
         
         NOUR: "I never liked how the bathroom choice in this mall is binary..."
@@ -41,10 +51,12 @@
                     &PORTRAIT_mssuwan_mssuwansad
                 
                 MS. SUWAN: "... but I also have my personal reasoning."
-                
-            - Ms. Suwan takes a step back.
             
-            // MS SUWAN MOVES BACK
+            &EMOTE_SUWAN_StepBack
+            &PAUSE_0.5
+            &EMOTE_SUWAN_UpIdle
+            
+                        - Ms. Suwan takes a step back.
             
             * "Personal reasoning?"
             
@@ -84,6 +96,8 @@
         
         NOUR: "I understand."
         
+        &FOLLOW_NOUR_stop
+        
         -> END
         
         
@@ -121,15 +135,17 @@
     
     -> END
     
-=== burgertables ===
+== frogstatue ==
+
+    It's a statue of a frog. Looks very peaceful.
+    -> END 
     
+== burgertable ==
     It's a table with fast-food on it. Burgers and trash litter the table.
-    
+
+    It's a table, covered with food. Although the burgers and fries look fresh, there is strangely no odor.
     Probably shouldn't eat it—who knows how old it could be?
-    
     -> END
-    
-    
 // == wertoys == 
 
 //     It's the old toy store, We r Toys.
