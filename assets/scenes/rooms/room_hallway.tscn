@@ -124,6 +124,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="PoopPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 504, 315 )
+
 [node name="NickOutElevatorPos" type="Node2D" parent="PlaneManager"]
 position = Vector2( 452, 292 )
 

@@ -58,7 +58,7 @@
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: "Wait, so you'd be willing to talk to your Mom about the shirt your friends like over the one <i>you</i> like?"
+    NOUR: "You'd talk to your Mom about the shirt your <i>friends</i> like over the one <i>you</i> like?"
     
     &PORTRAIT_nick_nickpondering
     
@@ -74,15 +74,21 @@
     
     &PORTRAIT_nick_nicknervous
 
-    NICK: "But my friends make a big deal about what's cool and not cool. I don't want to be uncool."
+    NICK: "But my friends make a big deal about what's cool and not cool."
+    
+    NICK: "I don't want to be uncool."
     
     &PORTRAIT_ms. suwan_mssuwanrealization
     
-    MS. SUWAN: "If you let yourself enjoy things without caring about what other people think, you'll feel much more content."
+    MS. SUWAN: "Let yourself enjoy things without caring about what other people think."
+    
+    MS. SUWAN: "You'll feel much more content."
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
-    MS. SUWAN: "And while I don't know too much about your friendships, consider reevaluating the kinds of people you keep around you."
+    MS. SUWAN: "And while I don't know too much about your friendships..."
+    
+    MS. SUWAN: "Consider reevaluating the kinds of people you keep around you."
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
@@ -90,11 +96,13 @@
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "Or are you hanging onto those memories as an excuse for when they make you uncomfortable?"
+    MS. SUWAN: "Or are you hanging onto those memories to make excuses for them?"
     
     &PORTRAIT_nour_noursad
     
-    NOUR: "Yeah. If you feel like you have to hide things about yourself from your friends... That's not friendship."
+    NOUR: "If you feel like you have to hide things about yourself from your friends..."
+    
+    NOUR: "That's not friendship."
     
     &PORTRAIT_nick_nickpondering
     
