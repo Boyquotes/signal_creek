@@ -45,8 +45,6 @@
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    &PORTRAIT_ms. suwan_mssuwanpondering
-    
     MS. SUWAN: "What's this Blood... <i>Blood Titan Online</i> about?"
     
     &PORTRAIT_nick_nickbigsmile
@@ -69,8 +67,6 @@
     
     NICK: "But first they have to find who the Blood Titan is... and it's, like, a total plot twist!"
     
-    // NICK: "What makes this series really cool is that anyone could be the Blood Titan."
-    
     &PORTRAIT_nick_nickbigsmile
     
     NICK: "You have to really think and analyze all the hints about each character!"
@@ -83,19 +79,21 @@
     
     NICK: "Sort of, yeah... Except with more battles, dragons, swords, and magic!"
     
-    &PORTRAIT_ms. suwan_mssuwanneutral
+    &PORTRAIT_ms. suwan_mssuwanrealization
     
     MS. SUWAN: "Ah. Fantasy then?"
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: "I like mystery, so despite not being a comics fan, I knew about it, too"
+    NOUR: "I've heard the mystery is actually pretty compelling."
+    
+    NOUR: "As a mystery fan, it made me want to check it out for a while."
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "It's an... interesting premise."
+    MS. SUWAN: "Hmm. It's an interesting premise."
     
-    &PORTRAIT_ms. suwan_mssuwanneutral
+    &PORTRAIT_ms. suwan_mssuwanrealization
     
     MS. SUWAN: "Clearly it's been dominating the market, seeing how many copies are on display."
     
@@ -109,7 +107,7 @@
     
     NICK: "This would be the closest thing to a Book Club I'd <i>actually</i> consider going to!" 
     
-    &PORTRAIT_ms. suwan_mssuwanneutral
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "We'll see. We should focus on getting out of here first."
     

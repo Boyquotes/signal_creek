@@ -14,15 +14,13 @@
     
     &PORTRAIT_nick_nickbigsmile
     
-    NICK: "Yo! I used to play with these things all the time. My go to was the '20 Dodge Charger Hellcat." // EXCITED
+    NICK: "Hey, I used to play with these things all the time! My go to was the '20 Dodge Charger Hellcat!" // EXCITED
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "I played with them too back in Thailand."// The 1970 Mattel Hot Wheels Side kick Thailand SC Police Diecast Car was the one I would play with the most.
     
     &PORTRAIT_nick_nickshocked
-    
-    NICK: "You had Hot Wheels too?!" // SHOCKED
     
     NICK: "You had Hot Wheels, too?!" // SHOCKED
     
@@ -32,7 +30,7 @@
     
     MS. SUWAN: "My mother would buy them for me all the time." 
     
-    &PORTRAIT_ms. suwan_mssuwansad
+    &PORTRAIT_ms. suwan_mssuwanannoyed
     
     MS. SUWAN: "...Though I never asked for them." // FROWNING
     
@@ -46,6 +44,8 @@
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
+    MS. SUWAN: "Yes. I had a small stuffed doll once."
+    
     MS. SUWAN: "...It was my older cousin's before she gave it to me."
     
     MS. SUWAN: "I had a hard time sleeping without it and took it with me everywhere."
@@ -58,9 +58,14 @@
     
     NICK: "You remembered?!" // HAPPY
     
-    MS. SUWAN: "It's not exactly hard to remember something as ridiculous like that, especially if you just mentioned it moments ago."
+    MS. SUWAN: "It's not exactly hard to remember something as ridiculous like that."
+    
+    MS. SUWAN: "Especially if you just mentioned it moments ago."
     
         * ["What was the stuffed doll?"]
+        
+            NOUR: "What was the stuffed doll?" 
+            
             NOUR: "A girl? Or some animal?"
             
             MS. SUWAN: "It was a rabbit."
@@ -95,15 +100,19 @@
             NICK: "I wanna go to a toy market in Thailand! Maybe Ms. Suwan, you could take me and—" // EXCITED
         * ["Let's get going."]
     
-    &PORTRAIT_nour_noursmile
     
-    - NOUR: "We should probably move on."
+    
+    - &PORTRAIT_nour_noursad
+    
+    NOUR: "Not to rain on your parade, but... we should probably move on."
             
     &PORTRAIT_nick_nicksad
     
     NICK: "Aw, already?" // SAD
+    
+    &PORTRAIT_nour_nourneutral
             
-    NOUR: "Unless this car can get us out of here, there's no use sticking around."
+    NOUR: "Gotta focus on getting out of here before we can do anything else, right?"
         -> END
 
 == hotwheels_visited ==
