@@ -1,12 +1,30 @@
 // STATIC BANDN: The most simple, straightforward objects.
 
-== displaystand ==
+== booksfront ==
 
     It's a display stand for books. Most of them are on sale.
     
     The temptation to take one is very, very strong.
     
     //It would be more engaging if the "new releases" weren't outdated by over a decade.
+    
+    -> END
+== bestsellers == 
+    Best-selling books are laid out on the table.
+    
+    Usually they would be the current best sellers but it seems like they've been laying here untouched for years...
+    
+    ->END
+    
+== cashier ==
+
+    An empty cashier's stand.
+    
+    -> END
+== cashier2 == 
+    An empty cashier's stand with a single fax machine. 
+    
+    Who uses fax machines?
     
     -> END
     
@@ -77,6 +95,17 @@
     Or maybe some kind of... goblin?
     
     ... This is giving me a headache.
+    
+    -> END
+== shelfwithtrinkets2 ==
+    
+    There's a bunch of trinkets here. They all seem to be familiar shapes, but I... can't quite place what they're meant to be.
+    
+    It looks like a weird clock? 
+    
+    And maybe some dinosaurs?
+    
+    ...Very weird.
     
     -> END
     
