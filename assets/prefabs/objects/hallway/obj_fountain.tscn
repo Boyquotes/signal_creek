@@ -187,7 +187,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="FatherFuji"]
 light_mask = 4
 material = SubResource( 26 )
-position = Vector2( 0.972646, -8.93982 )
+position = Vector2( 0.81835, -8.60037 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 340, 591, 11, 12 )
@@ -233,7 +233,7 @@ anims/FloatingInWater = SubResource( 31 )
 
 [node name="LilLitter" type="Sprite" parent="."]
 light_mask = 4
-position = Vector2( 12.8796, -25.9398 )
+position = Vector2( 12.2007, -25.6004 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 79, 192, 18, 15 )
@@ -241,7 +241,7 @@ region_rect = Rect2( 79, 192, 18, 15 )
 [node name="BigLitter" type="Sprite" parent="."]
 light_mask = 4
 material = SubResource( 33 )
-position = Vector2( -9.06018, -42.9398 )
+position = Vector2( -9.39963, -42.6004 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 109, 192, 25, 21 )
