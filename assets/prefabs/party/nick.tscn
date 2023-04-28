@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/scripts/character/character_navigator.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/characters/animations/nick_walking_past.tscn" type="PackedScene" id=2]
@@ -34,6 +34,22 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 28, 29 ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "Jump"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.0432125, -17 ), Vector2( 0.043, -21 ), Vector2( 0.043, -17 ), Vector2( 0.043, -20 ), Vector2( 0.043, -17 ) ]
 }
 
 [sub_resource type="Animation" id=22]
@@ -114,11 +130,11 @@ walking_spritesheet = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 2
-position = Vector2( 0, -17 )
+position = Vector2( 0.043, -17 )
 texture = ExtResource( 3 )
 hframes = 6
 vframes = 6
-frame = 12
+frame = 25
 region_rect = Rect2( 45, 138, 19, 32 )
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PQpzb3VyY2V8PQpsYXllcnw9Cm9wX2V4cHw9RmFsc2UKb19mb2xkZXJ8PQpvX25hbWV8PQpvbmx5X3Zpc2libGV8PUZhbHNlCm9fZXhfcHw9Cg=="
@@ -127,6 +143,7 @@ __meta__ = {
 [node name="AnimationPlayer" parent="." instance=ExtResource( 2 )]
 anims/ButtonPress = SubResource( 21 )
 anims/HandsUp = SubResource( 23 )
+anims/Jump = SubResource( 27 )
 anims/LookAround = SubResource( 22 )
 anims/MiddleFinger = SubResource( 25 )
 anims/UsingPhone = SubResource( 24 )
