@@ -19,7 +19,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "Oh, what the FUCK? The mannequins just looked over at me, I think..!?" // (SHOCKED)
+    NICK: "Oh, what the FUCK? The mannequins just looked over at me, I think..!?"
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     

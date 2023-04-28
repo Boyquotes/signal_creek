@@ -61,10 +61,10 @@
 
     -> trinkets
     
-=== cashier ===
+// === cashier ===
 
-    It's a kiosk.
+//     It's a kiosk.
     
-    Seems out of order like most things in this mall.
+//     Seems out of order like most things in this mall.
     
-    -> END
+//     -> END
