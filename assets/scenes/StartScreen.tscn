@@ -174,10 +174,7 @@ __meta__ = {
 [node name="TextureRect" type="TextureRect" parent="."]
 light_mask = 15
 material = SubResource( 9 )
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -480.0
-margin_right = 480.0
+margin_right = 960.0
 margin_bottom = 1279.0
 texture = ExtResource( 2 )
 stretch_mode = 5
@@ -200,7 +197,7 @@ custom_constants/shadow_as_outline = 3
 custom_fonts/bold_font = ExtResource( 3 )
 bbcode_enabled = true
 bbcode_text = "[b][center]Signal Creek[/center][b]"
-text = "Signal Creek"
+text = "[b][center]Signal Creek[/center][b]"
 fit_content_height = true
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]

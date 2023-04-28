@@ -86,11 +86,13 @@
         
         &PORTRAIT_mssuwan_mssuwanpondering
         
-        MS. SUWAN: "The gender binary is certainly an outdated method of dividing restrooms."
+        MS. SUWAN: "The gender binary is an outdated method of dividing restrooms."
         
-            &PORTRAIT_mssuwan_mssuwannervous
+        &PORTRAIT_mssuwan_mssuwannervous
         
-        MS. SUWAN: "If there were always gender neutral restrooms, it would have saved me a lot of trouble in the past."
+        MS. SUWAN: "If there were always gender neutral restrooms..."
+        
+        MS. SUWAN: "It would have saved me a lot of trouble in the past."
         
             &PORTRAIT_nour_nourneutral
         

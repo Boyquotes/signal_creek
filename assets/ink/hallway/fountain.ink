@@ -108,7 +108,7 @@
     
     NOUR: "...Hey!"
     
-    &SHLORP_POOP_FatherFuji_in
+    // &SHLORP_POOP_FatherFuji_in
     
     &EMOTE_NOUR_Jump
     &EMOTE_NICK_Jump

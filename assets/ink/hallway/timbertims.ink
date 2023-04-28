@@ -185,6 +185,8 @@
     
     &FOLLOW_NOUR_stop
     
+    NOUR: "Interesting."
+    
         -> END
 
 == timbertimssus ==
@@ -286,6 +288,8 @@
     &SHLORP_POOP_Tim_out
     
     &FOLLOW_NOUR_stop
+    
+    NOUR: "Interesting."
 
     -> END
 
@@ -327,5 +331,7 @@
     &SHLORP_POOP_Tim_out
     
     &FOLLOW_NOUR_stop
+    
+    NOUR: "There he goes, again."
 
     -> END

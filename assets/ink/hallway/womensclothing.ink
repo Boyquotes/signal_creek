@@ -45,7 +45,7 @@
     
     NICK: "... Anyways, there's like, <i>two</i> clothes in there."
     
-    MICK: "Kinda disappointing for a clothing store."
+    NICK: "Kinda disappointing for a clothing store."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
