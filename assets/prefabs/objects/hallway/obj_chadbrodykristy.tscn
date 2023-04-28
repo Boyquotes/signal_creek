@@ -215,7 +215,6 @@ light_mask = 4
 material = SubResource( 28 )
 position = Vector2( 20, -1 )
 texture = ExtResource( 6 )
-normal_map = ExtResource( 6 )
 offset = Vector2( 0, -14 )
 region_enabled = true
 region_rect = Rect2( 48, 14, 17, 29 )

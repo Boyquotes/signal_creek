@@ -1,10 +1,24 @@
 // STATIC BANDN: The most simple, straightforward objects.
 
-== displaystand ==
+// == booksfront ==
 
-    It's a display stand for books.
+//     It's a display stand for books. Most of them are on sale.
     
-    It would be more engaging if the "new releases" weren't outdated by over a decade.
+//     The temptation to take one is very, very strong.
+    
+//     //It would be more engaging if the "new releases" weren't outdated by over a decade.
+    
+//     -> END
+    
+== cashier ==
+
+    An empty cashier's stand.
+    
+    -> END
+== cashier2 == 
+    An empty cashier's stand with a single fax machine. 
+    
+    Who uses fax machines?
     
     -> END
     
@@ -20,7 +34,7 @@
 
     It's a Jungle Kindle filled with e-novels.
     
-    ...The majority of them are comics and passionate romance books. Such taste!
+    ... The majority of them are comics and passionate romance books. Such taste!
     
     Looking closely, it looks like there's a faint imprint of words on its dark screen, but I can't quite tell what it says.
     
@@ -68,15 +82,35 @@
     
 == shelfwithtrinkets ==
     
-    There's a bunch of trinkets here. They all seem to be familiar shapes, but I... can't quite place what they're meant to be.
+    It's a bunch of trinkets. They all seem to be familiar shapes, but I... can't quite place what they're meant to be.
     
     It looks like some sort of weird... dog? 
     
     Or maybe some kind of... goblin?
     
-    ...This is giving me a headache.
+    ... This is giving me a headache.
     
     -> END
+// == shelfwithtrinkets2 ==
+    
+//     There's a bunch of trinkets here. They all seem to be familiar shapes, but I... can't quite place what they're meant to be.
+    
+//     It looks like a weird clock? 
+    
+//     And maybe some dinosaurs?
+    
+//     ...Very weird.
+    
+//     -> END
+    
+=== shelfwithtrinkets2 ===
+
+    It's a bunch of trinkets. Shiny, fun-shaped baubles line the shelf.
+    
+    If I only I could tell exactly what they were supposed to be...
+    
+    -> END
+    
     
 == volitioncomputer ==
 
@@ -84,6 +118,22 @@
 
     Something feels strangely... sentient about this computer. 
     
-    Perhaps you will join one day. :)
+    // Perhaps you will join one day. :)
+    
+    -> END
+
+=== bestsellers ===
+
+    From crime thriller fiction to award-winning nonfiction, all the bestsellers are here.
+
+    ... That is, bestsellers from well over a decade ago.
+    
+    -> END
+
+=== booksfront ===
+
+    It's the front of the books.
+    
+    ... I'll try not to judge them.
     
     -> END

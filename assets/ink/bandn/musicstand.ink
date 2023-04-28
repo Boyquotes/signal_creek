@@ -30,11 +30,29 @@
     
     One record in particular catches Nour's attention. 
     
+    &FOLLOW_NOUR_NourLookAtRecord
+    
+    &FOLLOW_SUWAN_MsSuwanGoToNour
+    
+    &FOLLOW_NICK_NickLookAround
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
     &PORTRAIT_nour_nourrealization
+    
+    &EMOTE_NOUR_RightIdle
     
     NOUR: "Hey, Ms. Suwan. You mentioned going to rock shows in the past, right?"
     
     &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    &EMOTE_SUWAN_LeftIdle
     
     MS. SUWAN: "... Yes, why?"
     
@@ -46,6 +64,12 @@
     
     Nour raises the record of 'Actually, I Do Mind' up to show Ms. Suwan. 
     
+    &EMOTE_NOUR_HandRecord
+    
+    &PAUSE_0.1
+    
+    &EMOTE_NOUR_RightIdle
+    
     &PORTRAIT_nour_noursmile
     
     NOUR: "I used to listen to <i>Paradise</i> all the time when I was younger."
@@ -56,9 +80,19 @@
     
     &PORTRAIT_nick_nickshocked
     
+    &EMOTE_NOUR_RightIdle
+    
+    &FOLLOW_NICK_NickLook
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
     NICK: "You listen to <i>rock</i>?" // (SHOCKED)
     
     &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    &EMOTE_SUWAN_DownIdle
     
     MS. SUWAN: "Yes."
     
@@ -71,6 +105,8 @@
     NOUR: "Oh... that's, wow!"
     
     &PORTRAIT_ms. suwan_mssuwanangry
+    
+    &EMOTE_SUWAN_LeftIdle
     
     MS. SUWAN: "Why are you looking at me like that?" // (FROWNING)
     
@@ -152,8 +188,10 @@
             
             NICK: "Kind of ironic, given the name." // (HAPPY)
             
+            &EMOTE_SUWAN_DownIdle
             
             &PORTRAIT_ms. suwan_mssuwanannoyed
+            
             MS. SUWAN: "..." // (ANGRY)
             
             &PORTRAIT_nick_nicknervous
@@ -196,6 +234,8 @@
     
     NOUR: "Did you listen to this with your friends?"
     
+    &EMOTE_SUWAN_LeftIdle
+    
     &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "... Yes. Music was one of the few things that made me happy then."
@@ -235,6 +275,8 @@
     &PORTRAIT_nick_nickbigsmile
     
     NICK: "That's so cool..." // (EXCITED)
+    
+    &EMOTE_SUWAN_DownIdle
     
     &PORTRAIT_ms. suwan_mssuwansad
     
@@ -290,11 +332,15 @@
 
     - &PORTRAIT_ms. suwan_mssuwannervous
     
+    &EMOTE_SUWAN_UpIdle
+    
     MS. SUWAN: "..."
     
     Ms. Suwan sighs and steps back.
     
-    // MS SUWAN STEPS BACK SLIGHTLY FROM THE MUSIC STAND
+    &FOLLOW_SUWAN_SuwanStepBack// MS SUWAN STEPS BACK SLIGHTLY FROM THE MUSIC STAND
+    
+    &PAUSE_0.4
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
@@ -304,9 +350,22 @@
     
     NOUR: "Time to put on a classic... <i>Sounds like Old Angst</i>!" 
     
-    The record enters the player. Rock music fills the store...
+    &FOLLOW_NOUR_NourPutInAlbum
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_Gaming
+    
+    &FOLLOW_NOUR_NourLookAtRecord
+    
+    &PAUSE_1.0
+    
+    The record enters the record player. Rock music fills the store...
+    
+    &EMOTE_NOUR_LookAround
     
     //CODE HERE - PLAY "SOUNDS LIKE OLD ANGST" 
+    &EMOTE_NICK_LookAround
     
     &AUDIO_FADEOUT
     
@@ -315,6 +374,8 @@
     &MUSIC_guitarriff
     
     &AUDIO_FADEIN
+    
+    &EMOTE_SUWAN_LeftIdle
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -338,17 +399,27 @@
     
     &PORTRAIT_nour_noursmile
     
+    &FOLLOW_NOUR_NourGoToSuwan
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_RightIdle
+    
     NOUR: "So, your friends... Do you still talk to them?"
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "Not anymore."
     
+    &EMOTE_NICK_UpIdle
+    
     &PORTRAIT_nick_nickpondering
     
     NICK: "What happened?"
     
     &PORTRAIT_nour_nourannoyed
+    
+    &EMOTE_NOUR_DownIdle
     
     NOUR: "Nick!" // (SHOCKED)
     
@@ -362,6 +433,8 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
+    &EMOTE_SUWAN_DownIdle
+    
     MS. SUWAN: "... You really want to know?"
     
     &PORTRAIT_ms. suwan_mssuwanfurious
@@ -373,6 +446,8 @@
     NICK: "Oh... uh..."
     
     &PORTRAIT_nour_nournervous
+    
+    &EMOTE_NOUR_RightIdle
     
     NOUR: "Um, go ahead..."
     
@@ -426,12 +501,19 @@
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
-    
     &PORTRAIT_nour_nournervous
+    
+    &FOLLOW_SUWAN_MsSuwanMoveBack
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_RightIdle
     
     MS. SUWAN: "Can you turn that off? It's giving me a splitting headache." // (ANGRY)
     
     NOUR: <i>She's avoiding all of her problems again.</i>
+    
+    &EMOTE_NOUR_UpIdle
     
     &PORTRAIT_nour_nourannoyed
     
@@ -505,8 +587,6 @@
             
             MS. SUWAN: "... Nour. Did you hear what I just said?" // (ANGRY)
             
-            //post beta, we can have this option perhaps
-            
             &PORTRAIT_nour_nourannoyed
             
                 ** "Yeah, and I'm choosing to ignore you!" // (ANGRY)
@@ -573,7 +653,15 @@
     
     -  &PORTRAIT_nour_nourannoyed
     
+    &FOLLOW_NOUR_NourMoveBack
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_RightIdle
+    
     NOUR: "You can't keep avoiding your friends, only to get all sad and vague about it!" // (ANGRY)
+    
+    &EMOTE_NICK_RightIdle
     
     &PORTRAIT_ms. suwan_mssuwanrealization
     
@@ -653,7 +741,9 @@
     
     &PORTRAIT_ms. suwan_mssuwanshadow
     
-    //NOUR: "Hurt <i>us</i> more." // (SAD)
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "Hurt <i>us</i> more." 
     
     MS. SUWAN: "..." // (SAD)
     
@@ -679,6 +769,8 @@
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
+    &EMOTE_SUWAN_LeftIdle
+    
     MS. SUWAN: "... Fine. I'll talk to them."
     
     &PORTRAIT_nour_noursmile
@@ -688,6 +780,8 @@
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>We should go find Chad, Brody, and Kristy again.</i>
+    
+    &FOLLOW_NOUR_stop
 
     -> END
 

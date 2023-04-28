@@ -37,7 +37,7 @@
     
     &PORTRAIT_nour_nourannoyed
     
-    NOUR: "... About what kind of toys are normal for girls."
+    NOUR: "...About what kind of toys are normal for girls."
     
     &PORTRAIT_nick_nickangry
     
@@ -59,9 +59,25 @@
 
 == wertoys_find_prince == 
 
-    &PORTRAIT_nour_nourpondering
+    NOUR: "..."
+
+    PORTRAIT_nour_nourpondering
+    
+    &FOLLOW_NICK_NickToyPos
+    &FOLLOW_SUWAN_SuwanToyPos
+    &FOLLOW_NOUR_NourToyPos
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    &EMOTE_NOUR_UpIdle
+    
+    There's a small groaning sound coming from below the gate.
     
     NOUR: "..."
+    
+    MS. SUWAN: "What... is that <i>noise</i>?"
     
     &PORTRAIT_???_princependragonsad
     
@@ -69,11 +85,23 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "What the... Hello?"
+    NOUR: "What the..." 
+    
+    NOUR: "Hello?"
     
     &SHLORP_APPLE_PrincePendragon_in
     
     ???: "Down here."
+    
+    &EMOTE_NOUR_Jump
+    &EMOTE_NICK_Jump
+    &EMOTE_SUWAN_Jump
+    
+    &PAUSE_0.5
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    &EMOTE_NOUR_UpIdle
     
     &PORTRAIT_prince pendragon_princependragonneutral
     
@@ -81,7 +109,7 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "... Uh-"
+    NOUR: "...Uh-"
     
     &PORTRAIT_prince pendragon_princependragontears
     
@@ -93,7 +121,7 @@
     
     &PORTRAIT_prince pendragon_princependragontears
     
-    PRINCE PENDRAGON: "... onto this floor."
+    PRINCE PENDRAGON: "...onto this floor."
     
     &PORTRAIT_nour_nourrealization
     
@@ -101,9 +129,11 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_prince pendragon_princependragonbashful
+    
+    &SOUND_princependragonlaugh
     
     PRINCE PENDRAGON: "You've heard of little ol' me?"
     
@@ -249,7 +279,7 @@
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "... doesn't mean you're any less worthy."
+    NOUR: "...doesn't mean you're any less worthy."
     
     &PORTRAIT_prince pendragon_princependragontears
     
@@ -273,7 +303,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... !"
+    NOUR: "...!"
     
     &PORTRAIT_nick_nickshocked
     
@@ -341,7 +371,7 @@
     
     &PORTRAIT_prince pendragon_princependragonsad
     
-    PRINCE PENDRAGON: "... Perhaps focusing on my mistakes clouded my mind."
+    PRINCE PENDRAGON: "...Perhaps focusing on my mistakes clouded my mind."
     
     &PORTRAIT_prince pendragon_princependragonsmile
     
@@ -427,6 +457,8 @@
     
     NICK: "That's right! Now get your apple bottom to space and FIGHT ON!"
     
+    &SOUND_princependragonlaugh
+    
     PRINCE PENDRAGON: "HOO HOO! I can feel the juices FLOWING... !"
     
     &PORTRAIT_prince pendragon_princependragonneutral
@@ -435,7 +467,7 @@
     
     &PORTRAIT_prince pendragon_princependragonbashful
     
-    PRINCE PENDRAGON: "... but it will be different this time."
+    PRINCE PENDRAGON: "...but it will be different this time."
     
     &PORTRAIT_prince pendragon_princependragonneutral
     
@@ -457,6 +489,8 @@
     
     NICK: "A SECRET ENDING!?"
     
+    &SOUND_princependragonlaugh
+    
     PRINCE PENDRAGON: "HOO HOO! There's only one way to find out!"
     
     &PORTRAIT_prince pendragon_princependragonbashful
@@ -473,7 +507,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_prince pendragon_princependragonbashful
     
@@ -481,7 +515,7 @@
     
     &PORTRAIT_prince pendragon_princependragonsmile
     
-    PRINCE PENDRAGON: "Farewell, Dream Walker friends! HOO HOO!!!"
+    PRINCE PENDRAGON: "Farewell, Plane Walker friends! HOO HOO!!!"
     
     &SHLORP_APPLE_PrincePendragon_out
     
@@ -507,7 +541,7 @@
     
         &PORTRAIT_nick_nicksmallsmile
     
-        NICK: "... Weirdly enough, it taught me a lot about life."
+        NICK: "...Weirdly enough, it taught me a lot about life."
     
     - &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -558,6 +592,8 @@
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>All that's left is to go back to TopicSpot and play the game now...</i>
+    
+    &FOLLOW_NOUR_stop
     
     -> END
 
