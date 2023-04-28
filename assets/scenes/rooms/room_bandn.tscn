@@ -884,5 +884,35 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="MsSuwanMoveBack" type="Node2D" parent="PlaneManager"]
+position = Vector2( 122, 34 )
+
+[node name="MsSuwanLookAtRecord" type="Node2D" parent="PlaneManager"]
+position = Vector2( 46, 7 )
+
+[node name="NourLookAtRecord" type="Node2D" parent="PlaneManager"]
+position = Vector2( 83, 12 )
+
+[node name="NourGoToSuwan" type="Node2D" parent="PlaneManager"]
+position = Vector2( 84, 22 )
+
+[node name="NourPutInAlbum" type="Node2D" parent="PlaneManager"]
+position = Vector2( 83, 9 )
+
+[node name="MsSuwanGoToNour" type="Node2D" parent="PlaneManager"]
+position = Vector2( 106, 12 )
+
+[node name="SuwanStepBack" type="Node2D" parent="PlaneManager"]
+position = Vector2( 106, 22 )
+
+[node name="NickLookAround" type="Node2D" parent="PlaneManager"]
+position = Vector2( 44, 7 )
+
+[node name="NourMoveBack" type="Node2D" parent="PlaneManager"]
+position = Vector2( 78, 33 )
+
+[node name="NickLook" type="Node2D" parent="PlaneManager"]
+position = Vector2( 95, 39 )
+
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
 [connection signal="body_exited" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_exited"]
