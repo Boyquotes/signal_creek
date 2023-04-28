@@ -140,14 +140,19 @@
     It's a statue of a frog. Looks very peaceful.
     -> END 
     
-== burgertable ==
-    It's a table with fast food on it. Burgers and trash litter the table.
+== burgertables ==
 
     Although the food looks fresh, there is strangely no odor...
     
-    We probably shouldn't eat it.
-    
     -> END
+    
+== cafesign ==
+
+It's a neatly handwritten sign for the Louis George Cafe. But all of the drink's prices have been rubbed off...
+
+
+    -> END
+    
 // == wertoys == 
 
 //     It's the old toy store, We r Toys.
