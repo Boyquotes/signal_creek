@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/scripts/ui/start_screen.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/poster.png" type="Texture" id=2]
-[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold_32.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold_80.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=4]
 
 [sub_resource type="StyleBoxFlat" id=4]

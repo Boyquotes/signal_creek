@@ -462,11 +462,9 @@
     
     NOUR: "Sure thing."
     
-    &PORTRAIT_grand duchess granny_grannykiss
+    &SOUND_grandduchessgrannylaugh
     
     GRAND DUCHESS GRANNY: "KEKEKE! GOODBYE, PRECIOUS ONES! <i>VISIT GRANNY SOMETIME, YES?</i>"
-    
-    &SOUND_grandduchessgrannylaugh
     
     &SHLORP_APPLE_GrandDuchessGranny_out
     

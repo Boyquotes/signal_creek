@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_hallway_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -55,6 +55,7 @@
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_timbertims.tscn" type="PackedScene" id=53]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_tim.tscn" type="PackedScene" id=54]
 [ext_resource path="res://assets/prefabs/objects/hallway/obj_frogstatue.tscn" type="PackedScene" id=55]
+[ext_resource path="res://assets/scripts/environment/location_trigger.gd" type="Script" id=56]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 31, 7 )
@@ -69,6 +70,12 @@ shader_param/color = Color( 1, 1, 1, 1 )
 shader_param/width = 1.0
 shader_param/pattern = 0
 shader_param/inside = false
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 152, 202 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 43, 40.5 )
 
 [node name="Room" type="Node2D"]
 script = ExtResource( 2 )
@@ -1451,8 +1458,29 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="VoidTrigger" type="Area2D" parent="PlaneManager/Overworld"]
+position = Vector2( 153, 400 )
+script = ExtResource( 56 )
+_knot_name = "thevoid"
+_automatic = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Overworld/VoidTrigger"]
+shape = SubResource( 25 )
+
+[node name="VoidTrigger2" type="Area2D" parent="PlaneManager/Overworld"]
+position = Vector2( 793, 62 )
+script = ExtResource( 56 )
+_knot_name = "thevoid"
+_automatic = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Overworld/VoidTrigger2"]
+position = Vector2( 84, -211 )
+shape = SubResource( 24 )
+
 [connection signal="body_entered" from="PlaneManager/Doortal_TopicSpot" to="PlaneManager/Doortal_TopicSpot" method="_on_Doortal_body_entered"]
 [connection signal="body_entered" from="PlaneManager/TutorialTrigger" to="PlaneManager/TutorialTrigger" method="_on_TutorialTrigger_body_entered"]
 [connection signal="body_entered" from="PlaneManager/Doortal_Bandn" to="PlaneManager/Doortal_Bandn" method="_on_Doortal_body_entered"]
+[connection signal="body_entered" from="PlaneManager/Overworld/VoidTrigger" to="PlaneManager/Overworld/VoidTrigger" method="_on_LocationTrigger_body_entered"]
+[connection signal="body_entered" from="PlaneManager/Overworld/VoidTrigger2" to="PlaneManager/Overworld/VoidTrigger2" method="_on_LocationTrigger_body_entered"]
 
 [editable path="PlaneManager/LocationTrigger"]
