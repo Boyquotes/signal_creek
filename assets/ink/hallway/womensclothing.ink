@@ -1,6 +1,8 @@
 == womensclothing ==
 
-    It's a closed, run down feminine clothing store. There's torn fliers on the glass, and signage exclaiming 'EVERYTHING MUST GO!!!!'
+    It's a closed, run down feminine clothing store.
+    
+    There's torn fliers on the glass, and signage exclaiming 'EVERYTHING MUST GO!!!!'
 
     {- !womensclothing_convo: -> womensclothing_convo}
     
@@ -41,7 +43,9 @@
     
     &PORTRAIT_nick_nicksad
     
-    NICK: "... Anyways, there's like, <i>two</i> clothes in there. Kinda disappointing for a clothing store."
+    NICK: "... Anyways, there's like, <i>two</i> clothes in there."
+    
+    MICK: "Kinda disappointing for a clothing store."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -53,7 +57,9 @@
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
-    MS. SUWAN: "Nothing I particularly <i>liked</i>, but I did purchase clothing here for my first job as a legal assistant."
+    MS. SUWAN: "Nothing I particularly <i>liked</i>, but..."
+    
+    MS. SUWAN: "I did purchase clothing here for my first job as a legal assistant."
     
     &PORTRAIT_nour_nourneutral
     

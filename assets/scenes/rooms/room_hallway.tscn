@@ -125,6 +125,27 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="NickBeautyStart" type="Node2D" parent="PlaneManager"]
+position = Vector2( 665, -257 )
+
+[node name="NourBeautyStart" type="Node2D" parent="PlaneManager"]
+position = Vector2( 688, -254 )
+
+[node name="BeautyApproach" type="Node2D" parent="PlaneManager"]
+position = Vector2( 700, -268 )
+
+[node name="SuwanBeautyStart" type="Node2D" parent="PlaneManager"]
+position = Vector2( 641, -257 )
+
+[node name="NourAppleStare" type="Node2D" parent="PlaneManager"]
+position = Vector2( 708, -276 )
+
+[node name="NickAppleStare" type="Node2D" parent="PlaneManager"]
+position = Vector2( 691, -276 )
+
+[node name="SuwanAppleStare" type="Node2D" parent="PlaneManager"]
+position = Vector2( 679, -263 )
+
 [node name="NickTimPos" type="Node2D" parent="PlaneManager"]
 position = Vector2( 560, -330 )
 
@@ -181,6 +202,39 @@ position = Vector2( 1009, -323 )
 
 [node name="SuwanTreeStartPos" type="Node2D" parent="PlaneManager"]
 position = Vector2( 1031, -286 )
+
+[node name="NickBobaStart" type="Node2D" parent="PlaneManager"]
+position = Vector2( 198, 831 )
+
+[node name="NourBobaStart" type="Node2D" parent="PlaneManager"]
+position = Vector2( 224, 826 )
+
+[node name="SuwanBobaStart" type="Node2D" parent="PlaneManager"]
+position = Vector2( 180, 827 )
+
+[node name="BobaQuarter" type="Node2D" parent="PlaneManager"]
+position = Vector2( 217, 805 )
+
+[node name="RetrieveBoba" type="Node2D" parent="PlaneManager"]
+position = Vector2( 203, 805 )
+
+[node name="NickFountainPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 953, -279 )
+
+[node name="SuwanFountainPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 996, -278 )
+
+[node name="NourFountainPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 974, -279 )
+
+[node name="NickToyPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 449, -342 )
+
+[node name="SuwanToyPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 495, -342 )
+
+[node name="NourToyPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 473, -330 )
 
 [node name="Doortal_TopicSpot" type="Area2D" parent="PlaneManager"]
 position = Vector2( 953, -369 )

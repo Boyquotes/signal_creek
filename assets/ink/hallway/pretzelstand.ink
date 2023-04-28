@@ -41,7 +41,7 @@
     
     NOUR: "The pretzels are pretty good. It was just frustrating that I didn't get a choice."
     
-    * ["Do you guys have cinnamon sugar bites?"]
+    * "Do you guys have cinnamon sugar bites?"
     
         CASHIER: "..."
         
@@ -55,7 +55,7 @@
         
         &PORTRAIT_nour_nourannoyed
     
-    * ["Do you happen to know a way out of here?"]
+    * "Do you happen to know a way out of here?"
     
         CASHIER: "..."
         
@@ -71,7 +71,7 @@
         
         &PORTRAIT_nour_nourannoyed
     
-    * ["Do you know why everything is so... <i>off</i> here?"]
+    * "Do you know why everything is so... <i>off</i> here?"
     
         CASHIER: "..."
         

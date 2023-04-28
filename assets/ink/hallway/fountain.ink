@@ -2,6 +2,18 @@
 
     It's a fountain with some pennies and other stuff inside. 
     
+    &FOLLOW_NICK_NickFountainPos
+    &FOLLOW_SUWAN_SuwanFountainPos
+    &FOLLOW_NOUR_NourFountainPos
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_DownIdle
+    &EMOTE_SUWAN_DownIdle
+    &EMOTE_NOUR_DownIdle
+    
+    &FOLLOW_NOUR_stop
+    
     {
         - fountain_findfather:
             -> explored_everything
@@ -98,11 +110,23 @@
     
     &SHLORP_POOP_FatherFuji_in
     
+    &EMOTE_NOUR_Jump
+    &EMOTE_NICK_Jump
+    &EMOTE_SUWAN_Jump
+    
+    &PAUSE_0.5
+    
+    &EMOTE_NICK_DownIdle
+    &EMOTE_SUWAN_DownIdle
+    &EMOTE_NOUR_DownIdle
+    
     &PORTRAIT_???_fatherfujineutral
     
     &PORTRAIT_nick_nicknervous
     
     NICK: "...!"
+    
+    &SOUND_fatherfujilaugh
     
     ???: "Greetings."
     
@@ -401,9 +425,7 @@
     &PORTRAIT_nour_noursmile
     
     NOUR: <i>I should find more apples to make him open up even more!</i>
-        -> END
-
-// === fountain_end ===
-//     NOUR: <i>I think we've explored everything we could here.</i>
-        
-//         -> END
+    
+    &FOLLOW_NOUR_stop
+    
+    -> END
