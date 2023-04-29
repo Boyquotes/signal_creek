@@ -13,17 +13,15 @@
     
 == skeletondisplay1 ==
 
-    Nick picks up one of the skeleton's boney hands and waves it towards Nour and Ms.Suwan.
+    Nick picks up one of the skeleton's boney hands and waves it towards Nour and Ms. Suwan.
     
     &PORTRAIT_nick_nickbigsmile
     
     NICK: "Bone appetit!"
     
-    Nour snorts despite attempting to suppress her laugh.
-    
         &PORTRAIT_nour_noursmile
     
-    NOUR: "That barely even makes sense! Are you serving food, or something?"
+    NOUR: "Pff. That barely even makes sense. Are you serving food or something?"
     
         &PORTRAIT_nick_nicksmallsmile
     
@@ -41,7 +39,9 @@
     
     MS. SUWAN: "It is quite good..."
     
-    MS. SUWANL "Though I'd rather not have this conversation looking at a human skeleton."
+    MS. SUWAN: "Though I'd rather not have this conversation looking at a human skeleton."
+    
+        &PORTRAIT_nick_nicksmallsmile
     
     NICK: "Right, haha! My bad!"
 

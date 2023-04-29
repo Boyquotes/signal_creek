@@ -18,7 +18,9 @@
 == cashier2 == 
     An empty cashier's stand with a single fax machine. 
     
-    Who uses fax machines?
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Who uses fax machines nowadays?</i>
     
     -> END
     
@@ -26,7 +28,15 @@
 
     It's a bunch of fancy hats. 
     
-    They all seem too big or misshapen to be worn on a human head.
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i> What's with these sizes...?<i>
+    
+    NOUR: <i>There's no way any of these will fit a normal-sized head.</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>I... don't want to find out who they're for, actually.</i>
     
     -> END
     
@@ -34,9 +44,17 @@
 
     It's a Jungle Kindle filled with e-novels.
     
-    ... The majority of them are comics and passionate romance books. Such taste!
+    &PORTRAIT_nour_nourpondering
     
-    Looking closely, it looks like there's a faint imprint of words on its dark screen, but I can't quite tell what it says.
+    NOUR: <i> ...Looks like most are comics and passionate romance books. Such taste.</i>
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>Looking closely, I can barely make out some words on the screens...</i>
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: <i>Impossible to tell what they say, though.</i>
     
     -> END
     
@@ -44,7 +62,9 @@
 
     It's a bunch of composition notebooks.
     
-    There's nothing quite like the sight of beautiful blank pages for fresh, new ideas. 
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: <i>There's nothing like the sight of beautiful blank pages for fresh ideas.<i>
     
     -> END
     
@@ -52,7 +72,9 @@
 
     It's a poster of two cats with their tails around each other, and the word "friend" on it.
     
-    History would say... that they're good friends.
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>Historians would say... that they're good friends.</i>
     
     -> END
     
@@ -60,7 +82,9 @@
 
     It's a poster with a bald eagle and the word "pride" on it. 
     
-    Eagles don't evoke much nationalism in anyone...
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Eagles don't evoke much nationalism in anyone...</i>
     
     -> END
     
@@ -68,7 +92,9 @@
 
     It's a poster with a cat wearing thick-rimmed glasses. 
     
-    Like the poster says, this is indeed the pinnacle of "chill". 
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Poster's right. This is most definitely the pinnacle of "chill".</i> 
     
     -> END
     
@@ -76,19 +102,29 @@
 
     It's a poster with a fish and the word "swim" on it. 
     
-    The designer apparently wanted to remind people that fish do, in fact, swim.
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Guess the designer apparently wanted to remind people that fish do, in fact, swim.</i>
     
     -> END
     
 == shelfwithtrinkets ==
     
-    It's a bunch of trinkets. They all seem to be familiar shapes, but I... can't quite place what they're meant to be.
+    It's a bunch of trinkets.
     
-    It looks like some sort of weird... dog? 
+    &PORTRAIT_nour_nourpondering
     
-    Or maybe some kind of... goblin?
+    NOUR: <i>They all seem to be familiar shapes, but I... can't tell what they're meant to be.</i>
     
-    ... This is giving me a headache.
+    NOUR: <i>It looks like some sort of weird... dog?</i>
+    
+    NOUR: <i>Or maybe some kind of... goblin?</i>
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: <i>... This is giving me a headache.</i>
+    
+    NOUR: <i>Since when did B&N sell this stuff, anyway?</i>
     
     -> END
 // == shelfwithtrinkets2 ==
@@ -107,7 +143,11 @@
 
     It's a bunch of trinkets. Shiny, fun-shaped baubles line the shelf.
     
-    If I only I could tell exactly what they were supposed to be...
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: <i>Can't tell what any of these are supposed to be...</i>
+    
+    NOUR: <i>Kind of wish B&N would focus more on selling books again.</i>
     
     -> END
     
@@ -115,8 +155,12 @@
 == volitioncomputer ==
 
     The flesh and wire are one within the Motherboard. 
+    
+    &PORTRAIT_nour_nournervous
 
-    Something feels strangely... sentient about this computer. 
+    NOUR: <i>Something feels strangely... sentient about this computer...?</i>
+    
+    NOUR: <i>I'm just gonna... stay away from this for now.</i>
     
     // Perhaps you will join one day. :)
     
@@ -125,15 +169,19 @@
 === bestsellers ===
 
     From crime thriller fiction to award-winning nonfiction, all the bestsellers are here.
+    
+    &PORTRAIT_nour_nourpondering
 
-    ... That is, bestsellers from well over a decade ago.
+    NOUR: <i>... That is, bestsellers from well over a decade ago.</i>
     
     -> END
 
 === booksfront ===
 
-    It's the front of the books.
+    There are more books here, which look to be mostly young adult fiction.
     
-    ... I'll try not to judge them.
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>... I'll try not to judge them by their covers.</i>
     
     -> END
