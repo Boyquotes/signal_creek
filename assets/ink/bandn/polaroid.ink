@@ -33,17 +33,21 @@
     
     NICK: "Like... <i>your</i> camera your camera or the same <i>kind</i> of camera, your camera?"
     
-    NOUR: "I'm not sure, but probably not <i>my</i> camera. 
+    NOUR: "I'm not sure, but probably not <i>my</i> camera."
     
     NOUR: "That would be impossible... Right?"
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "Right. Entirely impossible."
+    NICK: "Right. Completely impossible."
     
-    NICK: "Just like us being in a place that shouldn't exist."
+    NICK: "Just like us being trapped here right now is impossible."
+    
+    &PORTRAIT_nour_nourannoyed
     
     NOUR: "..." // (ANGRY)
+    
+    &PORTRAIT_nick_nickbigsmile
     
     NICK: "Aaaanyways..." 
     
@@ -86,7 +90,7 @@
     
             MS. SUWAN: "Do you know her? Did you come here with her?"
             
-            &PORTRAIT_ms. suwan_mssuwanannoyed
+            &PORTRAIT_ms. suwan_mssuwangry
             
             MS. SUWAN: "Are you setting something up, young lady?" // (ANGRY)
             
@@ -105,6 +109,8 @@
             NOUR: "..."
         
             NOUR: "I didn't come here with her, I promise." 
+            
+            &PORTRAIT_ms. suwan_mssuwanangry
         
             MS. SUWAN: "I want to believe you, but it is getting rather more difficult to..." // (SQUINTING)
     
@@ -126,15 +132,19 @@
     
     MS. SUWAN: "..."
     
-    &PORTRAIT_ms. suwan_mssuwanpondering
+    &PORTRAIT_ms. suwan_mssuwanrealization
     
     MS. SUWAN: "...But it <i>is</i> strange to find photographs of yourself in a place like this regardless."
     
     MS. SUWAN: "Who is it that you're with? In the polaroids?"
     
+    &PORTRAIT_ms. suwan_mssuwanannoyed
+    
     MS. SUWAN: "I can't quite make out their face."
     
-    NOUR: "Or it's magic hiding them! Can I see?" // (HAPPY)
+    &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "Or it's magic hiding them! Can I see?" // (HAPPY)
     
     // NICK REACHES FOR THE PHOTO, BUT MS SUWAN RAISES IT SO HE CANT REACH
     
@@ -150,7 +160,7 @@
         
             NOUR: "W-well then, think whatever you want! I don't want to talk about it." // (ANGRY)
             
-            &PORTRAIT_ms. suwan_mssuwanannoyed
+            &PORTRAIT_ms. suwan_mssuwanangry
     
             MS. SUWAN: "...Hmph. Fine. We'll move on because we must, <i>for now</i>." 
             
@@ -235,12 +245,18 @@
             &PORTRAIT_nick_nickannoyed
         
             NICK: "Neither am I!" // (ANGRY)
+            
+            &PORTRAIT_nour_nourangry
         
             NOUR: "Yes you <i>are</i>. You're not even out of highschool." // (ANGRY)
+            
+            &PORTRAIT_ms. suwan_mssuwanfurious
         
             MS. SUWAN: "<i>Children.</i>" 
             
             MS. SUWAN: "<i>Quiet</i>."
+            
+            &PORTRAIT_mssuwan_mssuwanangry
             
             MS. SUWAN: "Nick, stop asking Nour questions about something she clearly does not want to talk about it."
             
