@@ -514,4 +514,13 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="NickCheckOut" type="Node2D" parent="PlaneManager"]
+position = Vector2( 344, 138 )
+
+[node name="NourCheckOut" type="Node2D" parent="PlaneManager"]
+position = Vector2( 322, 129 )
+
+[node name="SuwanCheckOut" type="Node2D" parent="PlaneManager"]
+position = Vector2( 323, 141 )
+
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
