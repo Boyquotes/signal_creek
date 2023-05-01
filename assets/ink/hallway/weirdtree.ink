@@ -244,6 +244,8 @@
     
     &PORTRAIT_???_grannysmile
     
+    &SOUND_grandduchessgrannylaugh
+    
     ???: "KEKEKE!"
     
     &PORTRAIT_ms. suwan_mssuwanrealization
@@ -354,6 +356,8 @@
     
     &PORTRAIT_grand duchess granny_grannysmile
     
+    &SOUND_grandduchessgrannylaugh
+    
     GRAND DUCHESS GRANNY: "KEKEKE! <i>Very</i> good."
     
     &PORTRAIT_grand duchess granny_grannyneutral
@@ -381,6 +385,8 @@
     GRAND DUCHESS GRANNY: "... will unravel your haunted past."
     
     &PORTRAIT_grand duchess granny_grannysmile
+    
+    &SOUND_grandduchessgrannylaugh
     
     GRAND DUCHESS GRANNY: "KEKEKE! Now... what was I doing in here?"
     
@@ -456,7 +462,7 @@
     
     NOUR: "Sure thing."
     
-    &PORTRAIT_grand duchess granny_grannykiss
+    &SOUND_grandduchessgrannylaugh
     
     GRAND DUCHESS GRANNY: "KEKEKE! GOODBYE, PRECIOUS ONES! <i>VISIT GRANNY SOMETIME, YES?</i>"
     

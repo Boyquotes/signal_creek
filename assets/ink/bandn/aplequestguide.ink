@@ -22,13 +22,21 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
 
 == aplequestguide_after_bookshelf_fightstarts ==
 
+    &FOLLOW_SUWAN_SuwanAGPos
+    &FOLLOW_NICK_NickAGPos
+    &FOLLOW_Nour_NourAGPos
+    &PAUSE_1
+    &EMOTE_NOUR_UpIdle
+    &EMOTE_SUWAN_RightIdle
+    &EMOTE_NICK_UpIdle
+
     &PORTRAIT_nour_noursmile
 
     NOUR: "Hey, look what I found!"
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Isn't this the game we saw before at TopicSpot?"
+    NOUR: "Isn't this the game we saw at TopicSpot?"
     
     &PORTRAIT_nick_nickneutral
     
@@ -92,7 +100,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
             
             &PORTRAIT_ms. suwan_mssuwanpondering
             
-            MS. SUWAN: "... Interesting."
+            MS. SUWAN: "...Interesting."
     
         * "The publishing page says..."
             
@@ -495,6 +503,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     NOUR: <i>Something he's good at, knows a lot about, and makes him feel smart.</i>
     
     &LIGHT_Nick1
+    &FOLLOW_NOUR_stop
     
     -> light_on
     

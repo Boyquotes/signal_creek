@@ -1,7 +1,5 @@
     == partyposter ==
 
-    Nick dashes up to the wall.
-    
     {
         - partyposter2:
             -> partypostervisited
@@ -10,7 +8,7 @@
 
     }
     
-    == partypostervisited ==
+== partypostervisited ==
     
     &PORTRAIT_nick_nickpondering
     
@@ -29,7 +27,7 @@
     -> END
     
     
-    == partyposter1 ==
+== partyposter1 ==
     
     &PORTRAIT_nick_nickshocked
     
@@ -99,9 +97,13 @@
     + [ Leave the poster alone. ] -> partyposterend 
     
 
-    == partyposter2 ==
+== partyposter2 ==
     
-    Underneath the basic date, time, and location of the party, there are more words written in fun bubbly font. Oddly, they seem to ripple and change before Nour's eyes...
+    Underneath the basic date, time, and location of the party, there's more words.
+    
+    They're written in fun bubbly font.
+    
+    Oddly, they seem to ripple and change...
     
     &PORTRAIT_nour_nournervous
     
@@ -139,7 +141,7 @@
 
     -> END
     
-    == partyposterend ==
+== partyposterend ==
     
     &PORTRAIT_nour_nourneutral
     

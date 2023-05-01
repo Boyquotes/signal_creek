@@ -11,7 +11,7 @@
 extents = Vector2( 31.5, 24 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 31.5, 21.5938 )
+extents = Vector2( 26, 17.0938 )
 
 [sub_resource type="ShaderMaterial" id=32]
 resource_local_to_scene = true
@@ -118,7 +118,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0.5, -13.4063 )
+position = Vector2( 0, -8.90625 )
 shape = SubResource( 22 )
 
 [node name="PrincessPinkLady" type="Node2D" parent="."]

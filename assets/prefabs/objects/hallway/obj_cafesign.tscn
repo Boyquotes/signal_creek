@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=2]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=3]
+[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 12, 11 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 10, 13 )
 
 [node name="Cafesign" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -28,9 +32,20 @@ modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
 position = Vector2( 0, -8 )
-texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 140, 186, 24, 39 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 23 )
+
+[node name="Interactive" type="Area2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactive"]
+position = Vector2( 0, 12 )
+shape = SubResource( 24 )
+
+[connection signal="body_entered" from="Interactive" to="Interactive" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="Interactive" to="Interactive" method="_on_InteractArea_body_exited"]
+[connection signal="can_interact" from="Interactive" to="." method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="Interactive" to="." method="_on_ActiveArea_cannot_interact"]

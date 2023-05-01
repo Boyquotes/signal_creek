@@ -4,9 +4,8 @@
     
     { 
      - computerdesk_first: -> computerdesk_repeat
+     - else: -> computerdesk_first
     }
-    
-    There's no way this thing can contact anyone on the outside.
     
     -> END
     
@@ -48,17 +47,19 @@
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    MS. SUWAN: "A floppy <i>disk</i>. I do not believe there are any here, which is strange."
+    MS. SUWAN: "A floppy <i>disk</i>. I do not believe there are any here, which is very strange."
     
-    &PORTRAIT_nick_nickangry
+    &PORTRAIT_nick_nickshocked
     
-    NICK: "<i>That's</i> the strangest thing here? You're weird."
+    NICK: "<i>That's</i> very strange to you?"
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: "...This seems like a dead end. It won't help us get out of here."
+    NOUR: "...Well, this seems like a dead end if it won't help us get out of here."
     
     ->END
 ==computerdesk_repeat==
-    NOUR: <i> Stupid computer doesn't work, I should find another way to get out of here </i>
+
+    &PORTRAIT_nour_nourannoyed
+    NOUR: <i> Stupid computer doesn't work. I should find another way to get out of here. </i>
     -> END

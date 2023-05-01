@@ -15,7 +15,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "Puff the Magic Dragon!?"
+    NOUR: "Poof the Friendly Dragon!?"
     
     &PORTRAIT_nick_nickshocked
     
@@ -35,11 +35,11 @@
     
     NOUR: "Sami and I grew up on the book. Baba sang the song to us every night."
     
-    &PORTRAIT_nick_nickbigsmile
+    &PORTRAIT_nick_nickpondering
     
     NICK: "Huh... Wonder why Sami never told <i>me</i> about it..."
     
-    &PORTRAIT_nick_nicknervous
+    &PORTRAIT_nick_nicksmallsmile
     
     NICK: "What's it about?"
     

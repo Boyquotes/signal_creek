@@ -24,6 +24,20 @@
 
     Nick's nose scrunches up.
     
+    &FOLLOW_NICK_NickBobaStart
+    
+    &FOLLOW_SUWAN_SuwanBobaStart
+    
+    &FOLLOW_NOUR_NourBobaStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
     &PORTRAIT_nick_nickangry
     
     NICK: "Bleh! Most of these drinks suck."
@@ -66,7 +80,7 @@
             
             NOUR: "Are you sure?"
             
-            NICK: "Yeah. If I accept something from someone, I'd wanna repay them."
+            NICK: "Yeah. If I accept something from someone, I'd have to repay them."
         
         + ["If no one's gonna get anything, let's go."]
     
@@ -86,7 +100,21 @@
     
     &PORTRAIT_nour_nourrealization
 
-    NOUR: <i>... Wait a minute. What's up with that boba can in the back?</i>
+    NOUR: <i>...Wait a minute. What's up with that boba can in the back?</i>
+    
+    &FOLLOW_NICK_NickBobaStart
+    
+    &FOLLOW_SUWAN_SuwanBobaStart
+    
+    &FOLLOW_NOUR_NourBobaStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -158,7 +186,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "... 50 cents each?"
+    NICK: "...50 cents each?"
     
     &PORTRAIT_ms. suwan_mssuwanneutral
         
@@ -166,13 +194,17 @@
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "... You have some too. Make it fair."
+    NICK: "...You have some, too. Make it fair."
     
     &PORTRAIT_nour_noursmile
     
     NOUR: "We will."
     
+    &FOLLOW_NICK_BobaQuarter
+    
     // SFX COINS INTO VENDING MACHINE
+    
+    &PAUSE_0.5
     
     &SOUND_insertcoin
     
@@ -199,6 +231,12 @@
             &PORTRAIT_ms. suwan_mssuwansmile
             
             MS. SUWAN: "Very well."
+            
+            &FOLLOW_SUWAN_RetrieveBoba
+            
+            &PAUSE_0.5
+            
+            &EMOTE_SUWAN_UpIdle
         
         * "Do you wanna open this, Nick?"
         
@@ -215,10 +253,28 @@
             NICK: "..."
             
             Nick shrugs again and takes the can.
+            
+            &FOLLOW_NICK_RetrieveBoba
+            
+            &PAUSE_0.5
+            
+            &EMOTE_NICK_UpIdle
     
     - The can is opened...
     
     //&SOUND_
+    
+    &FOLLOW_NICK_NickBobaStart
+    
+    &FOLLOW_SUWAN_SuwanBobaStart
+    
+    &FOLLOW_NOUR_NourBobaStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    &EMOTE_NOUR_UpIdle
     
     ...and an apple squeezes out!
     
@@ -226,11 +282,23 @@
     
     &PORTRAIT_???_dukedeliciousneutral
     
+    &SOUND_dukedeliciouslaugh
+    
     ???: "FREEDOM..."
+    
+    &EMOTE_NOUR_Jump
+    &EMOTE_NICK_Jump
+    &EMOTE_SUWAN_Jump
+    
+    &PAUSE_0.5 
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    &EMOTE_NOUR_UpIdle
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_???_dukedeliciouspreach
     
@@ -243,6 +311,8 @@
     &PORTRAIT_nour_nourrealization
         
     NOUR: "Um, hello. We're here on behalf of Emperor Evercrisp to rescue you."
+    
+    &SOUND_dukedeliciouslaugh
     
     ???: "Of <i>course</i> the Emperor has sent you fine heroes to free me! Thank you! HAR HAR!"
     
@@ -272,13 +342,15 @@
     
     &PORTRAIT_duke delicious_dukedelicioussmile
     
-    DUKE DELICIOUS: "Something that may help you on your multi-plane journey, Dream Walkers!"
+    DUKE DELICIOUS: "Something that may help you on your multi-plane journey, Plane Walkers!"
     
     &PORTRAIT_duke delicious_dukedeliciouspreach
     
     DUKE DELICIOUS: "<i>Remember we are ALL children of the Mother Tree...</i>"
     
     &PORTRAIT_duke delicious_dukedelicioussmile
+    
+    &SOUND_dukedeliciouslaugh
     
     DUKE DELICIOUS: "<i>So show MERCY to the BERRY BEAST!</i>
     
@@ -324,13 +396,13 @@
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "... Bad."
+    NICK: "...Bad."
     
     Nick gulps more of it down.
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "... Sure it is. Make sure to save some for the rest of us."
+    NOUR: "...Sure it is. Make sure to save some for the rest of us."
     
     &PORTRAIT_nick_nicksmallsmile
     
@@ -341,5 +413,7 @@
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>Now time to find some more apples...</i>
+    
+    &FOLLOW_NOUR_stop
     
     -> END

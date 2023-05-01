@@ -44,6 +44,8 @@
             
                 MS. SUWAN: "Generally, construction should follow accessibility guidelines."
                 
+                &PORTRAIT_mssuwan_mssuwanpondering
+                
                 MS. SUWAN: "There should be a gender-neutral bathroom for handicapped individuals."
                 
                     &PORTRAIT_mssuwan_mssuwansad
@@ -82,11 +84,15 @@
         
         MS. SUWAN: "I will say this: I agree with you."
         
-        MS. SUWAN: "The gender binary is certainly an outdated method of dividing restrooms."
+        &PORTRAIT_mssuwan_mssuwanpondering
         
-            &PORTRAIT_mssuwan_mssuwannervous
+        MS. SUWAN: "The gender binary is an outdated method of dividing restrooms."
         
-        MS. SUWAN: "If there were always gender neutral restrooms, it would have saved me a lot of trouble in the past."
+        &PORTRAIT_mssuwan_mssuwannervous
+        
+        MS. SUWAN: "If there were always gender neutral restrooms..."
+        
+        MS. SUWAN: "It would have saved me a lot of trouble in the past."
         
             &PORTRAIT_nour_nourneutral
         
@@ -134,12 +140,11 @@
 == frogstatue ==
 
     It's a statue of a frog. Looks very peaceful.
-
     -> END 
     
 == burgertables ==
 
-    It's a table, covered with food. Although the burgers and fries look fresh, there is strangely no odor.
+    Although the food looks fresh, there is strangely no odor...
     
     -> END
     

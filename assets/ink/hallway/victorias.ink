@@ -2,12 +2,13 @@
 
     It's an intimate apparel store for women.
 
-    {!victorias_convo: -> victorias_convo}
+    {-!victorias_convo: -> victorias_convo}
     
     -> END
 
 
 == victorias_convo ==
+    
     &PORTRAIT_nour_nourannoyed
     
     NOUR: "Ah, yes. The store that caused me endless embarrassment as a child."
@@ -38,9 +39,11 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "I agree. I used to think it's all part of this weird, lace-covered box society is trying to push women into."
+    NOUR: "I agree. I used to think it's all part of a lace-covered box society pushes women into."
     
-    NOUR: "But I realized it can make a lot of people feel really powerful, which shouldn't be forgotten, y'know?"
+    NOUR: "But I realized it can make a lot of people feel really powerful."
+    
+    NOUR: "That shouldn't be forgotten, y'know?"
     
     &PORTRAIT_nour_nourshadow
     
@@ -62,7 +65,7 @@
     
     NICK: "I don't know much about being feminine, but it always felt weird to walk by."
     
-    NICK: "Kinda makes me uncomfortable even now."
+    NICK: "Kinda makes me uncomfortable, even now."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     

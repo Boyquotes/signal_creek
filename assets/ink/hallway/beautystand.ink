@@ -24,6 +24,20 @@
     
     NOUR: "Anybody care for a makeover?"
     
+    &FOLLOW_NICK_NickBeautyStart
+    
+    &FOLLOW_SUWAN_SuwanBeautyStart
+    
+    &FOLLOW_NOUR_NourBeautyStart
+    
+    &PAUSE_0.7
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
     &PORTRAIT_nick_nicknervous
     
     NICK: "Sounds like money I could use somewhere else."
@@ -43,7 +57,10 @@
     &PORTRAIT_nour_nournervous
 
     NOUR: "That's a good point."
-        -> END
+    
+    &FOLLOW_NOUR_stop
+    
+    -> END
 
 == beautystand_before_aplequest_repeat ==
 
@@ -54,13 +71,32 @@
     &PORTRAIT_nour_noursmile
 
     NOUR: <i>But seeing that apple lady (?) somehow makes me feel better.</i>
-     -> END
+    
+    -> END
 
 == beautystand_find_pinklady ==
 
     &PORTRAIT_nour_nourpondering
     
     NOUR: "..."
+    
+    &FOLLOW_NICK_NickBeautyStart
+    
+    &FOLLOW_SUWAN_SuwanBeautyStart
+    
+    &FOLLOW_NOUR_NourBeautyStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &PORTRAIT_nick_nickpondering
+    
+    NICK: "..."
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
@@ -82,9 +118,13 @@
     
     NOUR: "The apple could be... shy?"
     
-    &PORTRAIT_ms. suwan_mssuwan
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "..."
+    
+    MS. SUWAN: "I did not think I'd need to say this, but it's an image on a wall."
+    
+    &PORTRAIT_nour_nourpondering
     
     NOUR: "Um. What do you think, Nick?"
     
@@ -119,7 +159,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... !"
+    NOUR: "...!"
     
     &PORTRAIT_nour_noursmile
     
@@ -135,6 +175,12 @@
     
     // NOUR APPROACHES THE BOOTH
     
+    &FOLLOW_NOUR_BeautyApproach
+    
+    &PAUSE_0.5
+    
+    &EMOTE_NOUR_UpIdle
+    
     &PORTRAIT_nour_nournervous
     
     NOUR: "Hi, um..."
@@ -149,11 +195,23 @@
     
     NOUR: "Now you go, Ms. Suwan."
     
+    &FOLLOW_NOUR_NourBeautyStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_UpIdle
+    
     &PORTRAIT_ms. suwan_mssuwannervous
                 
     MS. SUWAN: "..."
     
     // MS. SUWAN APPROACHES THE BOOTH
+    
+    &FOLLOW_SUWAN_BeautyApproach
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
     
     &PORTRAIT_ms. suwan_mssuwanneutral
                 
@@ -163,6 +221,12 @@
                 
     NOUR: "That's it?!"
     
+    &FOLLOW_SUWAN_SuwanBeautyStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
+    
     &PORTRAIT_nour_nourpondering
                 
     NOUR: "C'mon, Nick. Anybody could beat Ms. Suwan. Now's your chance!"
@@ -171,7 +235,11 @@
     
     MS. SUWAN: "Excuse me—"
     
-    // NICK APPROACHES THE BOOTH
+    &FOLLOW_NICK_BeautyApproach
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
     
     &PORTRAIT_nick_nickneutral
                 
@@ -179,7 +247,7 @@
     
     &PORTRAIT_nour_noursmile
                 
-    NOUR: "True! Good work, Nick!"
+    NOUR: "Oh, nice idea! Good work, Nick!"
     
     &PORTRAIT_ms. suwan_mssuwanangry
                 
@@ -203,7 +271,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... !"
+    NOUR: "...!"
     
     &PORTRAIT_nour_noursmile
     
@@ -223,7 +291,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
             
-    MS. SUWAN: "What? That's a poster for crying out loud."
+    MS. SUWAN: "...It's a <i>poster,</i> for crying out loud."
     
     &PORTRAIT_nour_nournervous
             
@@ -235,7 +303,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanangry
             
-    MS. SUWAN: "I will not do that."
+    MS. SUWAN: "I will <i>not</i> do that."
     
     &PORTRAIT_nour_nourneutral
             
@@ -251,8 +319,13 @@
     
     He moves closer to the apple on the booth.
     
+    // STAGING:
     // NICK MOVES TOWARDS THE BOOTH, FACING IT
     // NOUR FOLLOWS AND THEN STANDS NEXT TO HIM, FACING THE BOOTH
+    
+    &FOLLOW_NICK_NickAppleStare
+    
+    &FOLLOW_NOUR_NourAppleStare
     
     &PORTRAIT_nour_nourneutral
             
@@ -278,7 +351,7 @@
                     
                     &PORTRAIT_ms. suwan_mssuwanangry
                         
-                    MS. SUWAN: "Don't hurt yourselves, please."
+                    MS. SUWAN: "Don't overexert yourselves, please."
                         
                         *** [STARE LIKE YOUR LIFE DEPENDS ON IT]
                         
@@ -290,7 +363,10 @@
                             
                             NICK: "..."
                             
+                            // STAGING
                             // MS. SUWAN APPROACHES TO STAND IN FRONT OF THE BOOTH.
+                            
+                            &FOLLOW_SUWAN_SuwanAppleStare
                             
                             &PORTRAIT_ms. suwan_mssuwanneutral
                             
@@ -310,7 +386,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... !"
+    NOUR: "...!"
     
     &PORTRAIT_nour_noursmile
     
@@ -354,7 +430,9 @@
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
             
-    MS. SUWAN: "Knock yourselves out, then."
+    MS. SUWAN: "Well, then." 
+    
+    MS. SUWAN: "Knock yourselves out."
     
     &PORTRAIT_nour_nourneutral
             
@@ -392,6 +470,8 @@
     
     // NICK GRABBING ANIMATION, THEN TURNS TO USE IT ON THE POSTER
     
+    &FOLLOW_NICK_NickAppleStare
+    
     &PORTRAIT_nour_noursmile
                 
     NOUR: "Nice! I'll help you out too..."
@@ -408,6 +488,8 @@
 
     - &PORTRAIT_???_pinkladysmile
     
+    &SOUND_pinkladylaugh
+    
     ???: "Hee hee!"
 
     &PORTRAIT_nour_nourrealization
@@ -420,17 +502,39 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_???_pinkladysmile
+    
+    &SOUND_pinkladylaugh
     
     ???: "You three are so silly, hee hee!"
     
     &SHLORP_POOP_PrincessPinkLady_in
     
+    &EMOTE_NICK_LeftIdle
+    
+    &PAUSE_0.5 
+    
+    &EMOTE_NOUR_Jump
+    &EMOTE_NICK_Jump
+    &EMOTE_SUWAN_Jump
+    
+    &PAUSE_0.5
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_NOUR_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    
     ???: "I wasn't planning on showing myself, but I couldn't help myself!"
     
     &PORTRAIT_???_pinkladyneutral
+    
+    &FOLLOW_NICK_NickBeautyStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
     
     ???: "You remind me of my beloved prince..."
     
@@ -456,11 +560,11 @@
     
     ???: "If you look down on different kinds of problem-solving..."
     
-    ???: "... serious <i>or</i> not..." 
+    ???: "...serious <i>or</i> not..." 
     
     &PORTRAIT_???_pinkladybashful
     
-    ???: "... you lock more doors than you open!"
+    ???: "...you lock more doors than you open!"
     
     &PORTRAIT_nour_nourpondering
     
@@ -471,6 +575,8 @@
     NOUR: "Including the prince."
     
     &PORTRAIT_???_pinkladysmile
+    
+    &SOUND_pinkladylaugh
     
     ???: "Well! Found me—<i>PRINCESS PINK LADY</i>—you have, hee hee!"
     
@@ -502,6 +608,8 @@
     
     &PORTRAIT_princess pink lady_pinkladysmile
     
+    &SOUND_pinkladylaugh
+    
     PRINCESS PINK LADY: "Tell him that he is smarter and better than he thinks he is, hee hee!"
     
     &PORTRAIT_nour_noursmile
@@ -520,7 +628,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_princess pink lady_pinkladybashful
     
@@ -536,11 +644,11 @@
     
     &PORTRAIT_princess pink lady_pinkladysmile
     
-    PRINCESS PINK LADY: "You could ask that young Dream Walker in the yellow for help!"
+    PRINCESS PINK LADY: "You could ask that young Plane Walker in the yellow for help!"
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "... ?"
+    NICK: "...?"
     
     &PORTRAIT_princess pink lady_pinkladyneutral
     
@@ -551,6 +659,8 @@
     PRINCESS PINK LADY: "He <i>definitely</i> understood what I just said."
     
     &PORTRAIT_princess pink lady_pinkladybashful
+    
+    &SOUND_pinkladylaugh
     
     PRINCESS PINK LADY: "I have a keen eye, hee hee!"
     
@@ -570,7 +680,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... unconventional tactics."
+    MS. SUWAN: "...unconventional tactics."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -594,7 +704,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... !"
+    NOUR: "...!"
     
     &PORTRAIT_nour_noursmile
     
@@ -641,11 +751,8 @@
     &PORTRAIT_nour_nourpondering
     
     NOUR: <i>We should go find the rest of the apples...</i>
+    
+    &FOLLOW_NOUR_stop
 
         -> END
     
-// === beautystand_end ===
-
-//     NOUR: <i>I think we've explored everything we could here. The princess is nowhere to be found.</i>
-        
-//         -> END
