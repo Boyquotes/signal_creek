@@ -66,7 +66,7 @@
     
     &PORTRAIT_nour_nourannoyed
     
-    NOUR: "... Ms. Suwan? Are you listening?"
+    NOUR: "...Ms. Suwan? Are you listening?"
     
     &PORTRAIT_nick_nickangry
     
@@ -74,7 +74,7 @@
 
     NICK: "Hey, Ms. Suwan!"
     
-    MS. SUWAN: "... !"
+    MS. SUWAN: "...!"
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
@@ -82,37 +82,41 @@
     
     &PORTRAIT_nour_nourneutral
     
+    NOUR: "Sorry, but you didn't seem to hear me."
+    
     NOUR: "Can you ask these people what's going on?"
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
-    MS. SUWAN: "We must focus on the elevator."
+    MS. SUWAN: "We should focus on the elevator."
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "I will contact a technician to come down here."
+    MS. SUWAN: "I will try to contact a technician to come down here."
     
     &PORTRAIT_nour_nourpondering
         
-        * "I don't think anyone outside is going to believe us[."], but these people will."
+        * "I don't think anyone outside is going to believe us[."], but these people might."
         
-        * "It wouldn't hurt to ask these people[..."], they're right here."
+        * "It wouldn't hurt to ask these people[..."] They're right here, after all."
     
     - &PORTRAIT_nour_nournervous
     
-    NOUR: <i>If... they're even real?</i>
+    NOUR: <i>If... they're even real.</i>
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "What kind of repair guy could fix a magical elevator?"
+    NICK: "Besides, what kind of repair guy could fix a magical elevator?"
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "This... maybe I am thinking of the wrong floor..."
+    MS. SUWAN: "This... maybe I'm thinking of the wrong floor..."
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: <i>Why do I get the feeling she might know them?</i>
+    NOUR: <i>Why does she seem so confused all of a sudden..?</i>
+    
+    NOUR: <i>And why do I get the feeling she might know those three?</i>
     
     &PORTRAIT_nour_nourannoyed
 
@@ -162,7 +166,7 @@
     
     &PORTRAIT_???_brodyneutral
     
-    ???: "Looks like Chad, Kristy, and Brody got demoted to strangers..."
+    ???: "Looks like Chad, Kristy, and I got demoted to strangers..."
     
     &PORTRAIT_???_brodyannoyed
     
@@ -211,7 +215,7 @@
     
     &PORTRAIT_brody_brodyannoyed
     
-    BRODY: "... She'll spin us some new excuse for what she did."
+    BRODY: "...She'll spin us some new excuse for what she did."
     
     &PORTRAIT_nour_nourpondering
     
@@ -224,7 +228,7 @@
     
     &PORTRAIT_brody_brodyneutral
     
-    BRODY: "Don't worry Suwan, we'll be right here."
+    BRODY: "Don't worry, Kannika, we'll be right here."
     
     &PORTRAIT_brody_brodyangry
     
@@ -256,7 +260,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
-    MS. SUWAN: "I have nothing to say. Let us go."
+    MS. SUWAN: "I have nothing to say to them. Let us go."
     
     &PORTRAIT_nick_nickpondering
     
@@ -280,7 +284,7 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: <i>... I should find out. It could help us leave this place.</i>
+    NOUR: <i>...I should find out. Somehow, I have a feeling it's connected to us being here.</i>
     
     &FOLLOW_NOUR_stop
     
@@ -298,7 +302,7 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: <i>Maybe the B&N has something that could open her up more about her past.</i>
+    NOUR: <i>Maybe the B&N has something that could help her open up about her open her up more about her past.</i>
     
     -> END
 
@@ -324,7 +328,7 @@
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "... I suppose."
+    MS. SUWAN: "...I suppose."
 
     &FOLLOW_SUWAN_SuwanCBKTalk
     
@@ -334,11 +338,11 @@
     
     &PORTRAIT_brody_brodyannoyed
     
-    BRODY: "You <i>finally</i> decide to speak to us!"
+    BRODY: "Well well, you <i>finally</i> decide to speak to us!"
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
-    MS. SUWAN: "... How are you here?"
+    MS. SUWAN: "...How are you here?"
     
     &PORTRAIT_kristy_kristyangry
     
@@ -378,7 +382,7 @@
     
     &PORTRAIT_chad_chadangry
     
-    CHAD: "... No matter how many times you bailed on us."
+    CHAD: "...No matter how many times you bailed on us."
     
     &PORTRAIT_chad_chadhurt
     
@@ -390,7 +394,7 @@
     
     &PORTRAIT_kristy_kristyannoyed
     
-    KRISTY: "You said you'd go. And then, you stopped showing up."
+    KRISTY: "You said you'd come. And then, you stopped showing up."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -414,7 +418,7 @@
     
     &PORTRAIT_kristy_kristysad
     
-    KRISTY: "... You know what, fine."
+    KRISTY: "...You know what, fine."
     
     &PORTRAIT_kristy_kristyangry
     
@@ -438,7 +442,7 @@
     
     &PORTRAIT_nour_noursad
     
-    * "Don't you want to apologize?"
+    * "Don't you want to apologize...?"
     
     * "They still haven't helped us find a way out."
     
@@ -450,7 +454,7 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NICK: "... Hold on. you guys studied at a <i>Cafe</i>?"
+    NICK: "...Hold on. You guys studied at a <i>Cafe</i>?"
     
     &PORTRAIT_nick_nickshocked
     
@@ -458,7 +462,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "That's the one I hung out at."
+    NICK: "That's the one <i>I</i> hung out at."
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
@@ -466,7 +470,7 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: <i>... Nick might be onto something.</i>
+    NOUR: <i>...Nick might be onto something.</i>
     
     &PORTRAIT_nour_nourannoyed
     
@@ -547,15 +551,15 @@
     
     &PORTRAIT_kannika_mssuwanneutral
     
-    KANNIKA: "... I am done with excuses."
+    KANNIKA: "...I am done with excuses."
     
     &PORTRAIT_kannika_mssuwansad
     
-    KANNIKA: "I am sorry for being a terrible friend."
+    KANNIKA: "I'm sorry for being a terrible friend."
     
     &PORTRAIT_kannika_mssuwanneutral
     
-    KANNIKA: "You were wonderful friends. I was too focused on my career to see that."
+    KANNIKA: "You were wonderful friends to me. I was too focused on my career to see that."
     
     &PORTRAIT_kannika_mssuwanrealization
     
@@ -575,7 +579,7 @@
     
     &PORTRAIT_kannika_mssuwanrealization
     
-    KANNIKA: "... And for a few hours, I was... at peace."
+    KANNIKA: "...And for a few hours, I was... I was happy."
     
     &PORTRAIT_kannika_mssuwanneutral
     
@@ -591,7 +595,7 @@
     
     &PORTRAIT_kannika_mssuwanneutral
     
-    KANNIKA: "We were shouting the words to our favorite songs alongside fifty strangers."
+    KANNIKA: "We were shouting the words to our favorite songs alongside who knows how many strangers."
     
     &PORTRAIT_kannika_mssuwanrealization
     
@@ -603,7 +607,7 @@
     
     Ms. Suwan shows them the album in her hands. Chad, Brody, and Kristy stare...
     
-    ... And then smile sadly at her.
+    ...And then smile sadly at her.
     
     &PORTRAIT_chad_chadsad
     
@@ -677,11 +681,11 @@
     
     &PORTRAIT_kannika_mssuwansad
     
-    KANNIKA: "I can try."
+    KANNIKA: "I... can try."
     
     &PORTRAIT_kannika_mssuwanangry
     
-    KANNIKA: "I <i>am</i> trying..."
+    KANNIKA: "I <i>am</i> trying."
     
     &PORTRAIT_brody_brodyangry
     
@@ -689,7 +693,7 @@
     
     &PORTRAIT_brody_brodysad
     
-    BRODY: "... Don't make the same mistake twice."
+    BRODY: "Don't make the same mistake twice."
     
     &PORTRAIT_kannika_mssuwansad
     
@@ -727,7 +731,7 @@
     
     &PORTRAIT_chad_chadsad
     
-    CHAD: "I think you need it more than we do, Kan."
+    CHAD: "I think you need it more than we do, Niki."
     
     &PORTRAIT_chad_chadhurt
     
@@ -735,11 +739,11 @@
     
     &PORTRAIT_chad_chadneutral
     
-    CHAD: "That's all we ever really wanted for you, Kannika."
+    CHAD: "That's all we ever really wanted for you."
     
     &PORTRAIT_kannika_mssuwansad
     
-    KANNIKA: "... Okay."
+    KANNIKA: "...Okay."
     
     &PAUSE_0.5
     
@@ -770,7 +774,7 @@
     //&PORTRAIT_ms. suwan_mssuwanshadow
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... I did not expect anything to change miraculously."
+    MS. SUWAN: "...I did not expect any miraculous changes."
     
     &PORTRAIT_nour_nournervous
     
@@ -782,7 +786,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "But now that I have faced my past..."
+    MS. SUWAN: "But now that I've faced up to them..."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -822,7 +826,7 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: <i>... She seems to be more at peace.</i>
+    NOUR: <i>...She seems to be more at peace.</i>
     
     &PORTRAIT_nour_nournervous
     
@@ -830,7 +834,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>Could I ever feel like her about the past one day?</i>
+    NOUR: <i>Could I ever feel that way about</i> my <i>past?</i>
     
     &LIGHT_Suwan2
     
@@ -869,7 +873,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>... Can I?</i>
+    NOUR: <i>...Can I?</i>
     
     &PORTRAIT_nour_nournervous
     
