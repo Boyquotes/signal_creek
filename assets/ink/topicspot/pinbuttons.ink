@@ -1,15 +1,17 @@
 == pinbuttons ==
     //flag pins and lgbt stuff, so Ms. Suwan and Nour can have a moment
     
-    It's a display of buttons and pins of all kinds. Most are adorned with pop culture references, band insignia, and different pride flags. 
+    It's a display of buttons and pins of all kinds.
+    
+    Most are adorned with pop culture references, band insignia, and different pride flags. 
 
-    {-!pinbuttons_convo: -> pinbuttons_convo}
+    { -!pinbuttons_convo: -> pinbuttons_convo }
     
     -> END
 
 === pinbuttons_convo ===
     
-    Nour picks up a lesbian flag pin and flips it with her thumb.
+    NOUR: "Looks like a lesbian flag pin."
     
     &PORTRAIT_ms. suwan_mssuwanrealization
     
@@ -31,7 +33,9 @@
     
     &PORTRAIT_nour_nourneutral
     
-        * "You seem to have something on your mind.["] I'm guessing you relate to that in a similar way that I do?"
+        * "You seem to have something on your mind."
+        
+            NOUR: "I'm guessing you relate to that in a similar way that I do?"
         
             &PORTRAIT_ms. suwan_mssuwanneutral
         

@@ -1,13 +1,17 @@
 == makeup ==
 
-    It's a display of gaudy makeup palettes. Their names are indecipherable, but the text on the packaging looks like metal band logos and gothic font.
+    It's a display of gaudy makeup palettes.
+    
+    The text on the packaging looks like metal band logos and gothic font.
+    
+    It's all indecipherable.
 
     {
         -!makeup_convo: 
             -> makeup_convo
     }
     
-    They remind Nour of being a teenager.
+    They're a reminder of being a teenager.
     
     -> END
 
@@ -16,15 +20,19 @@
 
     &PORTRAIT_nour_noursmile
     
-    NOUR: "These eyeshadow palettes were both a blessing and a curse. My first brand of punk makeup."
+    NOUR: "These eyeshadow palettes were both a blessing and a curse."
+    
+    NOUR: "My first brand of punk makeup."
     
     &PORTRAIT_nour_noursad
     
-    NOUR: "Funny, all of the ones here are the exact same one I used. It was discontinued ages ago." // (FROWNING)
+    NOUR: "Funny, there's one here that's the exact same that I used."
+    
+    NOUR: "It was discontinued ages ago." // (FROWNING)
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "I'm severely concerned about the health impacts of putting this on someone's skin." // (FROWNING)
+    MS. SUWAN: "I'm concerned about the health impacts of putting this on someone's skin." // (FROWNING)
     
     &PORTRAIT_nour_nourneutral
     
@@ -32,9 +40,11 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: "I used to carry it around everywhere in my backpack so my parents wouldn't find it."
-    .
-    NOUR: "I'd put it on in the school bathroom and would take it off before I went home. Kept it hidden in my car, too."
+    NOUR: "I carried it in my backpack so my parents wouldn't find it."
+    
+    NOUR: "I'd put it on in the school bathroom and would take it off before I went home."
+    
+    NOUR: "Kept it hidden in my car, too."
     
     &PORTRAIT_nick_nicksmallsmile
     
@@ -46,7 +56,9 @@
     
     &PORTRAIT_nour_nourannoyed
     
-    NOUR: "She shouldn't have. Makeup's cool for everyone, punk and goth makeup especially."
+    NOUR: "She shouldn't have."
+    
+    NOUR: "Makeup's cool for everyone, punk and goth makeup especially."
     
     NOUR: "It's been worn by all kinds of people since like, the seventies."
     
@@ -56,12 +68,16 @@
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "Oh, sure! I'm not very good at it, but black eyeshadow can be a little messy. You can rub it on with your finger if we can't find a brush." // (SMILING)
+    NOUR: "Oh, sure! I'm not very good at it, but black eyeshadow can be a little messy."
+    
+    NOUR: "You can rub it on with your finger if we can't find a brush."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "Maybe not right now. We have more important things to worry about."
     
-    MS. SUWAN: "Besides, who knows how old these are, if they were discontinued ages ago. Let's go."
+    MS. SUWAN: "Besides, who knows how old these are, if they were discontinued ages ago."
+    
+    MS. SUWAN: "Let's go."
     
     -> END

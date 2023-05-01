@@ -20,7 +20,23 @@
 
 == spraycans_start ==
 
-        &PORTRAIT_nick_nicksmallsmile
+    &FOLLOW_NICK_NickCheckOut
+    
+    &FOLLOW_NOUR_NourCheckOut
+    
+    &FOLLOW_SUWAN_SuwanCheckOut
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_RightIdle
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_SUWAN_RightIdle
+    
+    &EMOTE_NICK_Jump
+    
+    &PORTRAIT_nick_nicksmallsmile
     
     NICK: "Ooh! Hey, guys! Think you could buy me one of these?"
     
@@ -31,6 +47,8 @@
     NOUR: "...I didn't know you liked graffitti art."
     
         &PORTRAIT_nick_nicknervous
+        
+    &EMOTE_NICK_LeftIdle
     
     NICK: "Well, I don't really know how to do it..."
     
@@ -39,6 +57,8 @@
     NOUR: "Then... what are you going to do with these?"
     
         &PORTRAIT_nick_nicknervous
+        
+    &EMOTE_NICK_RightIdle
     
     NICK: "It's... it's <i>none</i> of your business. Just lay off."
     
@@ -47,10 +67,14 @@
     MS. SUWAN: "You want to huff it, don't you."
     
         &PORTRAIT_nour_nourannoyed
+        
+    &EMOTE_NOUR_DownIdle
     
     NOUR: "Oh, no way. He wouldn't."
     
         &PORTRAIT_ms. suwan_mssuwanangry
+        
+    &EMOTE_SUWAN_UpIdle
     
     MS. SUWAN: "There are <i>many</i> reasons why entrusting a child with these is a terrible idea."
     
@@ -59,10 +83,18 @@
     NICK: "Who <i>cares</i> about that? I just want to have a little fun, geez!"
     
         &PORTRAIT_nour_nourshocked
+        
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_SUWAN_RightIdle
     
     NOUR: "NICK!"
     
         &PORTRAIT_nick_nicksad
+        
+    &EMOTE_NICK_LeftIdle
+    
+    &EMOTE_NICK_Jump
     
     NICK: "<i>Please</i>...? I'll pay you back afterwards, promise!"
     
@@ -77,6 +109,8 @@
     MS. SUWAN: "Nick, getting high is not a good path to take."
     
         &PORTRAIT_nick_nickangry
+        
+    &EMOTE_NICK_LeftIdle
     
     NICK: "Sheesh, you sound like those <i>Say No To Drugs</i> assemblies we have in school."
     
@@ -124,12 +158,32 @@
     
     NOUR: <i>I should lead Nick somewhere that would inspire new interests.</i>
     
+    &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
+    
     &LIGHT_Nick0
     
     -> light_on
 // -> END
 
 == spraycans_start_repeat ==
+
+    &FOLLOW_NOUR_NourCheckOut
+    
+    &FOLLOW_SUWAN_SuwanCheckOut
+    
+    &FOLLOW_NICK_NickCheckOut
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_SUWAN_RightIdle
+    
+    &EMOTE_NICK_RightIdle
 
     &PORTRAIT_nick_nicksad
 
@@ -151,9 +205,29 @@
     
     NOUR: <i>Maybe we could go somewhere with books and read up about new things.</i>
     
+    &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
+    
     -> END
 
 == spraycans_afternickroute ==
+
+    &FOLLOW_NOUR_NourCheckOut
+    
+    &FOLLOW_SUWAN_SuwanCheckOut
+    
+    &FOLLOW_NICK_NickCheckOut
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_SUWAN_RightIdle
+    
+    &EMOTE_NICK_RightIdle
 
         &PORTRAIT_nour_nourneutral
 
@@ -168,6 +242,8 @@
     MS. SUWAN: "Precisely."
     
         &PORTRAIT_nick_nicksmallsmile
+        
+    &EMOTE_NICK_LeftIdle
 
     NICK: "Don't worry. These didn't <i>really</i> interest me in the first place."
     
@@ -200,6 +276,12 @@
     NOUR: "What monster have we created..."
     
     NICK: "Haha, I can't wait!"
+    
+    &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
     
         -> END
 

@@ -441,6 +441,8 @@ func find_current_speaker_position():
 			currentSpeakerNode = Globals.EarlEarligold
 		"kannika":
 			currentSpeakerNode = Globals.Suwan
+		"tim":
+			currentSpeakerNode = Globals.Tim
 		"???":
 			Globals.SpeechBubble.set_visible(false)
 		

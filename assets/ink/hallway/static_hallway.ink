@@ -10,6 +10,16 @@
     
         // MS SUWAN, NOUR AND NICK STOP AND FACE THE BATHROOMS
         
+            &FOLLOW_NICK_NickBathroomPos
+            &FOLLOW_NOUR_NourBathroomPos
+            &FOLLOW_SUWAN_SuwanBathroomPos
+            
+            &PAUSE_0.175 
+            
+            &EMOTE_SUWAN_UpIdle
+            &EMOTE_NICK_RightIdle
+            &EMOTE_NOUR_UpIdle
+        
             &PORTRAIT_nour_nourannoyed
         
         NOUR: "I never liked how the bathroom choice in this mall is binary..."
@@ -34,15 +44,19 @@
             
                 MS. SUWAN: "Generally, construction should follow accessibility guidelines."
                 
+                &PORTRAIT_mssuwan_mssuwanpondering
+                
                 MS. SUWAN: "There should be a gender-neutral bathroom for handicapped individuals."
                 
                     &PORTRAIT_mssuwan_mssuwansad
                 
                 MS. SUWAN: "... but I also have my personal reasoning."
-                
-            - Ms. Suwan takes a step back.
             
-            // MS SUWAN MOVES BACK
+            &EMOTE_SUWAN_StepBack
+            &PAUSE_0.5
+            &EMOTE_SUWAN_UpIdle
+            
+                        - Ms. Suwan takes a step back.
             
             * "Personal reasoning?"
             
@@ -70,15 +84,21 @@
         
         MS. SUWAN: "I will say this: I agree with you."
         
-        MS. SUWAN: "The gender binary is certainly an outdated method of dividing restrooms."
+        &PORTRAIT_mssuwan_mssuwanpondering
         
-            &PORTRAIT_mssuwan_mssuwannervous
+        MS. SUWAN: "The gender binary is an outdated method of dividing restrooms."
         
-        MS. SUWAN: "If there were always gender neutral restrooms, it would have saved me a lot of trouble in the past."
+        &PORTRAIT_mssuwan_mssuwannervous
+        
+        MS. SUWAN: "If there were always gender neutral restrooms..."
+        
+        MS. SUWAN: "It would have saved me a lot of trouble in the past."
         
             &PORTRAIT_nour_nourneutral
         
         NOUR: "I understand."
+        
+        &FOLLOW_NOUR_stop
         
         -> END
         
@@ -115,6 +135,24 @@
 
     It's two store mannequins: a man and a woman.
     
+    -> END
+    
+== frogstatue ==
+
+    It's a statue of a frog. Looks very peaceful.
+    -> END 
+    
+== burgertables ==
+
+    Although the food looks fresh, there is strangely no odor...
+    
+    -> END
+    
+== cafesign ==
+
+It's a neatly handwritten sign for the Louis George Cafe. But all of the drink's prices have been rubbed off...
+
+
     -> END
     
 // == wertoys == 

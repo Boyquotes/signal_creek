@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
@@ -7,12 +7,13 @@
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 [ext_resource path="res://assets/materials/water.tres" type="Material" id=6]
 [ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=7]
+[ext_resource path="res://assets/materials/shaders/shader_outline.gdshader" type="Shader" id=8]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 32, 28 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 40, 34.5 )
+extents = Vector2( 20, 32 )
 
 [sub_resource type="ShaderMaterial" id=26]
 shader = ExtResource( 7 )
@@ -82,6 +83,54 @@ tracks/0/keys = {
 "values": [ 0.0 ]
 }
 
+[sub_resource type="Animation" id=31]
+resource_name = "FloatingInWater"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 11, -25 ), Vector2( 13, -26 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../BigLitter:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10, -42 ), Vector2( -9, -43 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../FatherFuji/Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.545455, -8 ), Vector2( 1, -9 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=33]
+resource_local_to_scene = true
+shader = ExtResource( 8 )
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
 [node name="Fountain" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
 script = ExtResource( 2 )
@@ -126,11 +175,11 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -18.5 )
+position = Vector2( 0, -40 )
 shape = SubResource( 22 )
 
 [node name="FatherFuji" type="Node2D" parent="."]
-position = Vector2( 8, -24 )
+position = Vector2( 0, -23 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -138,7 +187,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="FatherFuji"]
 light_mask = 4
 material = SubResource( 26 )
-position = Vector2( 0.545455, -8 )
+position = Vector2( 0.81835, -8.60037 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 340, 591, 11, 12 )
@@ -164,6 +213,7 @@ _shlorping_target_path = NodePath("../AnimationPlayer")
 _shlorp_animation_name = "Shlorp"
 _final_knot_name = "fountain2"
 start_visible = false
+is_visible = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FatherFuji/ActiveArea"]
 position = Vector2( 0, -16 )
@@ -174,6 +224,27 @@ disabled = true
 anims/NotVisible = SubResource( 29 )
 anims/Shlorp = SubResource( 28 )
 anims/Visible = SubResource( 30 )
+
+[node name="BobbingObjects" type="AnimationPlayer" parent="."]
+root_node = NodePath("../LilLitter")
+autoplay = "FloatingInWater"
+reset_on_save = false
+anims/FloatingInWater = SubResource( 31 )
+
+[node name="LilLitter" type="Sprite" parent="."]
+light_mask = 4
+position = Vector2( 12.2007, -25.6004 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 79, 192, 18, 15 )
+
+[node name="BigLitter" type="Sprite" parent="."]
+light_mask = 4
+material = SubResource( 33 )
+position = Vector2( -9.39963, -42.6004 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 109, 192, 25, 21 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]

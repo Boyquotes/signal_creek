@@ -20,7 +20,7 @@
 
 == manager_wayout ==
     
-    * ["Do you know a way to get out of here?"]
+    * "Do you know a way to get out of here?"
     
         NOUR: "I think the elevator is stuck. Is there another way off of this floor?"
         
@@ -40,7 +40,7 @@
         
         -> manager_wayout
     
-    * ["Why does everything look so strange?"]
+    * "Why does everything look so strange?"
     
         &PORTRAIT_nour_nourannoyed
         
@@ -111,7 +111,7 @@
     
     MS. SUWAN: "I don't think this conversation is a productive use of our time."
     
-    * ["Why are you saying those... symbols?"]
+    * "Why are you saying those... symbols?"
     
         NOUR: "You said... asterisk, hyphen, one, question mark, question mark, slash."
         
@@ -125,7 +125,7 @@
         
         NOUR: "Sure... alright. Forget I asked."
     
-    * ["I think we should go."]
+    * "I think we should go."
     
         &PORTRAIT_nour_nourannoyed
         

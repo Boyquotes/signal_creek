@@ -67,7 +67,9 @@
     
     He picks the frog phone case up and smiles, admiring the cute design.
     
-    He quickly takes out his phone, takes off the current case and tries to slip his phone into the new one.
+    Nick quickly takes out his phone.
+    
+    He removes the current case, and tries to slip his phone into the new one.
     
     &PORTRAIT_nick_nickshocked
     
@@ -107,7 +109,7 @@
 
 == phonecases_revisit ==
     
-    Nick fixates on the frog phone case.
+    Nick is fixated on the frog phone case.
     
     &PORTRAIT_nick_nickpondering
     

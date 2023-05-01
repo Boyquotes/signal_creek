@@ -4,7 +4,7 @@
     
     {-!pens_convo: -> pens_convo}
     
-    Nick stares at the frog one intently.
+    Nick stares at the frog pen intently.
     
     -> END
 
@@ -16,9 +16,9 @@
     
     &PORTRAIT_nick_nicksmallsmile
     
-    NICK: "The frog one is the BEST, man..."
+    NICK: "The frog one is the BEST, man... Isn't it cute?"
     
-    The frog perched on top of the pen seems to give Nick a little wink.
+    The frog perched on top of the pen seems to... give Nick a little wink?!
     
     &PORTRAIT_nick_nickshocked
     
@@ -26,14 +26,20 @@
     
     &PORTRAIT_nick_nickbigsmile
     
-    NICK: "I bet if I did my homework with this little dude, I'd never get anything wrong."
+    NICK: "I bet if I did my homework with this little dude, I'd never get anything wrong!"
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "Whatever motivates you to study harder, right?"
+    NOUR: "Well, if it motivates you to study harder..."
+    
+    NOUR: "It can't hurt to get your hands on one."
     
     &PORTRAIT_nick_nickpondering
     
-    NICK: "Huh, I never really thought about it that way..."
+    NICK: "Huh, I guess you're right..."
+    
+    &PORTRAIT_nick_nicksmallsmile
+    
+    NICK: "I'll think about that once we get out of here."
     
     -> END
