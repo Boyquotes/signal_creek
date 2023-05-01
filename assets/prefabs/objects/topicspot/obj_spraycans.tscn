@@ -9,7 +9,7 @@
 extents = Vector2( 32, 10.75 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 37.5, 14.7969 )
+extents = Vector2( 7, 8.5 )
 
 [node name="SprayCans" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -48,7 +48,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( -5.5, -8.7969 )
+position = Vector2( -39, -10.5 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

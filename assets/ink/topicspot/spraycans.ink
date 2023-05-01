@@ -19,20 +19,20 @@
     -> END
 
 == spraycans_start ==
+
+    &FOLLOW_NICK_NickCheckOut
     
     &FOLLOW_NOUR_NourCheckOut
     
     &FOLLOW_SUWAN_SuwanCheckOut
     
-    &FOLLOW_NICK_NickCheckOut
-    
     &PAUSE_1.0
+    
+    &EMOTE_NICK_RightIdle
     
     &EMOTE_NOUR_RightIdle
     
     &EMOTE_SUWAN_RightIdle
-    
-    &EMOTE_NICK_RightIdle
     
     &EMOTE_NICK_Jump
     
@@ -160,6 +160,10 @@
     
     &FOLLOW_NOUR_stop
     
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
+    
     &LIGHT_Nick0
     
     -> light_on
@@ -202,6 +206,10 @@
     NOUR: <i>We could go somewhere with books, and read up about new things.</i>
     
     &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
     
     -> END
 
@@ -268,6 +276,10 @@
     NICK: "Haha, I can't wait!"
     
     &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
     
         -> END
 
