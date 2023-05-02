@@ -214,8 +214,7 @@ func parse_commands(currentLine):
 		var _command = currentLine.split("_")[1].strip_escapes().to_lower()
 		
 		if "FADEIN" in currentLine:
-			Globals.SoundManager.increasing_music_volume = true
-			Globals.SoundManager.music_player.set_stream_paused(false)
+			Globals.SoundManager.smooth_increase_music_volume()
 			
 		elif "FADEOUT" in currentLine:
-			Globals.SoundManager.decreasing_music_volume = true
+			Globals.SoundManager.smooth_decrease_music_volume()

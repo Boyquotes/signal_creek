@@ -355,25 +355,24 @@
     &PAUSE_1.0
     
     &EMOTE_NOUR_Gaming
+        
+    &PAUSE_1.0
     
     &FOLLOW_NOUR_NourLookAtRecord
     
     &PAUSE_1.0
     
+    &AUDIO_FADEOUT
+    
     The record enters the record player. Rock music fills the store...
     
     &EMOTE_NOUR_LookAround
     
-    //CODE HERE - PLAY "SOUNDS LIKE OLD ANGST" 
+    &PAUSE_1.0
+
+    &MUSIC_MusicStandMusic
+    
     &EMOTE_NICK_LookAround
-    
-    &AUDIO_FADEOUT
-    
-    &PAUSE_0.2 
-    
-    &MUSIC_guitarriff
-    
-    &AUDIO_FADEIN
     
     &EMOTE_SUWAN_LeftIdle
     
@@ -535,15 +534,9 @@
     
         * "Fine, I'll turn it off."
             
-            &AUDIO_FADEOUT
-    
-            &PAUSE_0.2 
+            &MUSIC_STOP
             
-            &VOLUME_-10.0
-    
-            &MUSIC_bn
-            
-            &AUDIO_FADEIN
+            &PAUSE_1.0
             
             &PORTRAIT_ms. suwan_mssuwansad
 
@@ -601,21 +594,14 @@
                 
                     NOUR: "Except <i>you're</i> the one acting immature right now!" // (ANGRY)
                     
-                    &AUDIO_FADEOUT
-    
-                    &PAUSE_0.2
+                    &MUSIC_STOP
                     
                     Ms. Suwan shuts the record off.
-                    
-                    &VOLUME_-10.0
-                        
-                    &AUDIO_FADEIN
-                        
-                    &MUSIC_bn
+
                 
                 ** "You want it louder?"
                     
-                    //CODE HERE - MAKE MUSIC VOLUME LOUDER
+                    &VOLUME_0.0
                     
                     &PORTRAIT_ms. suwan_mssuwanangry
                     
@@ -623,7 +609,7 @@
                     
                     *** [Turn it up louder]
                     
-                        &VOLUME_0.0
+                        &VOLUME_10.0
                     
                         &PORTRAIT_ms. suwan_mssuwanfurious
                         
@@ -637,17 +623,9 @@
                         
                         MS. SUWAN: "..."
                         
-                        &AUDIO_FADEOUT
-    
-                        &PAUSE_0.2 
+                        &MUSIC_STOP
                         
                         Ms. Suwan shuts the record off.
-                        
-                        &VOLUME_-10.0
-                        
-                        &AUDIO_FADEIN
-                        
-                        &MUSIC_bn
     
     -  &PORTRAIT_nour_nourannoyed
     
@@ -776,6 +754,8 @@
     MS. SUWAN: "...Fine. I'll talk to them."
     
     &PORTRAIT_nour_noursmile
+    
+    &MUSIC_BandNMusic
     
     NOUR: <i>I finally managed to convince her to confront them.</i>
     
