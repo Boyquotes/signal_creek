@@ -22,6 +22,14 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
 
 == aplequestguide_after_bookshelf_fightstarts ==
 
+    &FOLLOW_SUWAN_SuwanAGPos
+    &FOLLOW_NICK_NickAGPos
+    &FOLLOW_Nour_NourAGPos
+    &PAUSE_1
+    &EMOTE_NOUR_UpIdle
+    &EMOTE_SUWAN_RightIdle
+    &EMOTE_NICK_UpIdle
+
     &PORTRAIT_nour_noursmile
 
     NOUR: "Hey, look what I found!"
@@ -495,6 +503,7 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     NOUR: <i>Something he's good at, knows a lot about, and makes him feel smart.</i>
     
     &LIGHT_Nick1
+    &FOLLOW_NOUR_stop
     
     -> light_on
     
