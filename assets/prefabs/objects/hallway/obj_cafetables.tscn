@@ -9,7 +9,7 @@
 extents = Vector2( 16, 12 )
 
 [sub_resource type="RectangleShape2D" id=24]
-extents = Vector2( 18, 16 )
+extents = Vector2( 18, 11.5 )
 
 [node name="CafeTable" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -44,7 +44,7 @@ shape = SubResource( 23 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 20, -16 )
+position = Vector2( 20, -15.5 )
 shape = SubResource( 24 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
