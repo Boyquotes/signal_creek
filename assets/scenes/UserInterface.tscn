@@ -209,12 +209,12 @@ margin_bottom = 270.0
 [node name="Start Screen" parent="ReferenceRect" instance=ExtResource( 9 )]
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 0.0
 margin_top = 0.0
-margin_right = 960.0
-margin_bottom = 810.0
+margin_right = 0.0
+margin_bottom = 0.0
 
 [node name="Map" parent="ReferenceRect" instance=ExtResource( 11 )]
 visible = false

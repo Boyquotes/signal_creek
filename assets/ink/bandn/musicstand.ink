@@ -30,21 +30,43 @@
     
     One record in particular catches Nour's attention. 
     
+    &FOLLOW_NOUR_NourLookAtRecord
+    
+    &FOLLOW_SUWAN_MsSuwanGoToNour
+    
+    &FOLLOW_NICK_NickLookAround
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
     &PORTRAIT_nour_nourrealization
+    
+    &EMOTE_NOUR_RightIdle
     
     NOUR: "Hey, Ms. Suwan. You mentioned going to rock shows in the past, right?"
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "... Yes, why?"
+    &EMOTE_SUWAN_LeftIdle
+    
+    MS. SUWAN: "...Yes, why?"
     
     &PORTRAIT_nour_nourpondering
-    
-    // NOUR WALKS FORWARD AND TAKES RECORD FROM THE MUSIC STAND, THEN TURNS AROUND TOWARDS MS SUWAN, HOLDING IT UP.
     
     NOUR: "Have you heard of <i>this</i> album, then?"
     
     Nour raises the record of 'Actually, I Do Mind' up to show Ms. Suwan. 
+    
+    &EMOTE_NOUR_HandRecord
+    
+    &PAUSE_0.1
+    
+    &EMOTE_NOUR_RightIdle
     
     &PORTRAIT_nour_noursmile
     
@@ -52,13 +74,23 @@
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
-    MS. SUWAN: "... Yes. I remember that one. Good album."
+    MS. SUWAN: "...Yes. I remember that one. Good album."
     
     &PORTRAIT_nick_nickshocked
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &FOLLOW_NICK_NickLook
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
     
     NICK: "You listen to <i>rock</i>?" // (SHOCKED)
     
     &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    &EMOTE_SUWAN_DownIdle
     
     MS. SUWAN: "Yes."
     
@@ -71,6 +103,8 @@
     NOUR: "Oh... that's, wow!"
     
     &PORTRAIT_ms. suwan_mssuwanangry
+    
+    &EMOTE_SUWAN_LeftIdle
     
     MS. SUWAN: "Why are you looking at me like that?" // (FROWNING)
     
@@ -146,19 +180,23 @@
         
             &PORTRAIT_ms. suwan_mssuwansad
             
+            MS. SUWAN: "I'm fine. Paradise just reminds me of hard times. That's all."
+            
             &PORTRAIT_ms. suwan_mssuwansad
             
             &PORTRAIT_nick_nicksmallsmile
             
             NICK: "Kind of ironic, given the name." // (HAPPY)
             
+            &EMOTE_SUWAN_DownIdle
             
             &PORTRAIT_ms. suwan_mssuwanannoyed
+            
             MS. SUWAN: "..." // (ANGRY)
             
             &PORTRAIT_nick_nicknervous
             
-            NICK: "... Sorry." // (POUTING)
+            NICK: "...Sorry." // (POUTING)
 
         * "You went to Seton Hall University, right?"
         
@@ -180,7 +218,7 @@
             
             &PORTRAIT_ms. suwan_mssuwansad
             
-            MS. SUWAN: "... It was challenging, to say the least."
+            MS. SUWAN: "...It was challenging, to say the least."
             
             &PORTRAIT_ms. suwan_mssuwanneutral
             
@@ -196,9 +234,11 @@
     
     NOUR: "Did you listen to this with your friends?"
     
+    &EMOTE_SUWAN_LeftIdle
+    
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... Yes. Music was one of the few things that made me happy then."
+    MS. SUWAN: "...Yes. Music was one of the few things that made me happy then."
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
@@ -211,7 +251,7 @@
     &PORTRAIT_ms. suwan_mssuwanshadow
     
     MS. SUWAN: "My English was still not perfect."
-    
+     
     &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "But I went to school regardless."
@@ -235,6 +275,8 @@
     &PORTRAIT_nick_nickbigsmile
     
     NICK: "That's so cool..." // (EXCITED)
+    
+    &EMOTE_SUWAN_DownIdle
     
     &PORTRAIT_ms. suwan_mssuwansad
     
@@ -290,11 +332,15 @@
 
     - &PORTRAIT_ms. suwan_mssuwannervous
     
+    &EMOTE_SUWAN_UpIdle
+    
     MS. SUWAN: "..."
     
     Ms. Suwan sighs and steps back.
     
-    // MS SUWAN STEPS BACK SLIGHTLY FROM THE MUSIC STAND
+    &FOLLOW_SUWAN_SuwanStepBack// MS SUWAN STEPS BACK SLIGHTLY FROM THE MUSIC STAND
+    
+    &PAUSE_0.4
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
@@ -304,9 +350,22 @@
     
     NOUR: "Time to put on a classic... <i>Sounds like Old Angst</i>!" 
     
-    The record enters the player. Rock music fills the store...
+    &FOLLOW_NOUR_NourPutInAlbum
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_Gaming
+    
+    &FOLLOW_NOUR_NourLookAtRecord
+    
+    &PAUSE_1.0
+    
+    The record enters the record player. Rock music fills the store...
+    
+    &EMOTE_NOUR_LookAround
     
     //CODE HERE - PLAY "SOUNDS LIKE OLD ANGST" 
+    &EMOTE_NICK_LookAround
     
     &AUDIO_FADEOUT
     
@@ -315,6 +374,8 @@
     &MUSIC_guitarriff
     
     &AUDIO_FADEIN
+    
+    &EMOTE_SUWAN_LeftIdle
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -326,7 +387,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: <i>She seems more comfortable now...</i>
+    NOUR: <i>She seems... relaxed, listening to the music.</i>
     
     &PORTRAIT_nour_nourpondering
     
@@ -334,9 +395,15 @@
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: <i>But with caution...</i>
+    NOUR: <i>But... carefully.</i>
     
     &PORTRAIT_nour_noursmile
+    
+    &FOLLOW_NOUR_NourGoToSuwan
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_RightIdle
     
     NOUR: "So, your friends... Do you still talk to them?"
     
@@ -344,11 +411,15 @@
     
     MS. SUWAN: "Not anymore."
     
+    &EMOTE_NICK_UpIdle
+    
     &PORTRAIT_nick_nickpondering
     
     NICK: "What happened?"
     
     &PORTRAIT_nour_nourannoyed
+    
+    &EMOTE_NOUR_DownIdle
     
     NOUR: "Nick!" // (SHOCKED)
     
@@ -362,7 +433,9 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... You really want to know?"
+    &EMOTE_SUWAN_DownIdle
+    
+    MS. SUWAN: "...You really want to know?"
     
     &PORTRAIT_ms. suwan_mssuwanfurious
     
@@ -373,6 +446,8 @@
     NICK: "Oh... uh..."
     
     &PORTRAIT_nour_nournervous
+    
+    &EMOTE_NOUR_RightIdle
     
     NOUR: "Um, go ahead..."
     
@@ -398,11 +473,11 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... I stopped hanging out with them, they started going to concerts without me..."
+    MS. SUWAN: "I stopped hanging out with them, they started going to concerts without me..."
     
     &PORTRAIT_ms. suwan_mssuwanshadow
     
-    MS. SUWAN: "... And the rest is history." // (SAD)
+    MS. SUWAN: "And the rest is history." // (SAD)
     
     &PORTRAIT_nick_nicksad
     
@@ -426,12 +501,19 @@
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
-    
     &PORTRAIT_nour_nournervous
+    
+    &FOLLOW_SUWAN_MsSuwanMoveBack
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_RightIdle
     
     MS. SUWAN: "Can you turn that off? It's giving me a splitting headache." // (ANGRY)
     
     NOUR: <i>She's avoiding all of her problems again.</i>
+    
+    &EMOTE_NOUR_UpIdle
     
     &PORTRAIT_nour_nourannoyed
     
@@ -452,8 +534,6 @@
     &PORTRAIT_nour_nourannoyed
     
         * "Fine, I'll turn it off."
-        
-            //CODE HERE - STOP PLAYING "SOUNDS LIKE OLD ANGST" 
             
             &AUDIO_FADEOUT
     
@@ -503,9 +583,7 @@
             
             &PORTRAIT_ms. suwan_mssuwanannoyed
             
-            MS. SUWAN: "... Nour. Did you hear what I just said?" // (ANGRY)
-            
-            //post beta, we can have this option perhaps
+            MS. SUWAN: "...Nour. Did you hear what I just said?" // (ANGRY)
             
             &PORTRAIT_nour_nourannoyed
             
@@ -521,7 +599,7 @@
                     
                     &PORTRAIT_nour_nourangry
                 
-                    NOUR: "Except you're the one acting immature right now!" // (ANGRY)
+                    NOUR: "Except <i>you're</i> the one acting immature right now!" // (ANGRY)
                     
                     &AUDIO_FADEOUT
     
@@ -573,7 +651,15 @@
     
     -  &PORTRAIT_nour_nourannoyed
     
+    &FOLLOW_NOUR_NourMoveBack
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_RightIdle
+    
     NOUR: "You can't keep avoiding your friends, only to get all sad and vague about it!" // (ANGRY)
+    
+    &EMOTE_NICK_RightIdle
     
     &PORTRAIT_ms. suwan_mssuwanrealization
     
@@ -613,7 +699,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanshadow
     
-    MS. SUWAN: "... Is to forget and move on."
+    MS. SUWAN: "...is to forget it and move on."
     
     &PORTRAIT_nour_nourannoyed
     
@@ -649,11 +735,17 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: "I promise you, carrying this with you and bottling it up will only hurt you more."
+    NOUR: "I promise you, carrying this with you and bottling up your feelings?" 
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "It's only gonna hurt you more."
     
     &PORTRAIT_ms. suwan_mssuwanshadow
     
-    //NOUR: "Hurt <i>us</i> more." // (SAD)
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "Hurt <i>us</i> more." 
     
     MS. SUWAN: "..." // (SAD)
     
@@ -679,7 +771,9 @@
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "... Fine. I'll talk to them."
+    &EMOTE_SUWAN_LeftIdle
+    
+    MS. SUWAN: "...Fine. I'll talk to them."
     
     &PORTRAIT_nour_noursmile
     
@@ -688,19 +782,23 @@
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>We should go find Chad, Brody, and Kristy again.</i>
+    
+    &FOLLOW_NOUR_stop
 
     -> END
 
 //figure out how to implement intervals for when other items are not collected
 == musicstand1_repeat ==
     
-    NOUR: <i>It'd be nice to get Ms. Suwan to get back into her old hobby.</i>
+    NOUR: <i>It'd be nice for Ms. Suwan to get back into her old hobby.</i>
     
     NOUR: <i>But I don't think she's quite ready yet.</i>
     
     NOUR: <i>I can come back to this later.</i>
     
-    NOUR: <i>For now, we should go to Chad, Brody, and Kristy, before she changes her mind about talking to them.</i>
+    NOUR: <i>For now, we should go to Chad, Brody, and Kristy...</i>
+    
+    NOUR: <i>before she changes her mind about talking to them.</i>
     
     -> END
 
@@ -722,8 +820,8 @@
     
     NOUR: "Sometimes it hurts to listen to, which is why I hadn't played it in so long." // (SAD)
     
-    
     &PORTRAIT_ms. suwan_mssuwanangry
+    
     MS. SUWAN: "..."
     
     &PORTRAIT_ms. suwan_mssuwansad
@@ -750,7 +848,7 @@
         
             &PORTRAIT_nour_noursad
         
-            NOUR: "It'd be a shame to not let yourself enjoy Paradise  because of what happened."
+            NOUR: "It'd be a shame to not let yourself enjoy Paradise because of what happened."
             
             &PORTRAIT_nour_noursmile
             
@@ -816,7 +914,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... Alright."
+    MS. SUWAN: "...Alright."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -825,13 +923,13 @@
     // NOUR STEPS FORWARD TOWARDS THE MUSIC STAND AND TAKES ONE OF THE ALBUMS, THEN TURNS BACK AROUND AND GOES TOWARDS MS SUWAN, STOPPING IN FRONT OF HER AND GIVING HER THE ALBUM.
     
         * [<i>Actually, I Do Mind</i>]
-            Nour gives Ms. Suwan <i>Actually, I Do Mind</i>. 
+            Nour hands Ms. Suwan <i>Actually, I Do Mind</i>. 
             
         * [<i>Stain</i>]
-            Nour gives Ms. Suwan <i>Stain</i>. 
+            Nour hands Ms. Suwan <i>Stain</i>. 
             
         * [<i>Out Birth</i>]
-            Nour gives Ms. Suwan <i>Out Birth</i>. 
+            Nour hands Ms. Suwan <i>Out Birth</i>. 
             
 // MS SUWAN REACHES OUT AND TAKES THE ALBUM.
     
@@ -841,7 +939,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
-    MS. SUWAN: "I want to take this album and go apologize to them all."
+    MS. SUWAN: "I'll take this album... and go apologize to them all."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -849,7 +947,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "But I have to try..." // (SAD)
+    MS. SUWAN: "But I have to try." // (SAD)
     
     &PORTRAIT_nour_noursmile
     
@@ -884,7 +982,7 @@
     MS. SUWAN: "I should've gone to more concerts when I had the chance." // (SAD)
         * "It's not too late."
         
-            NOUR: "If you discover newer rock artists you like, you could go to their concerts."
+            NOUR: "If you discover newer rock bands you like, you could go to their concerts."
             
             NOUR: "And older bands do reunion concerts, too." 
             
@@ -896,11 +994,11 @@
         
             &PORTRAIT_nour_noursmile
         
-            NOUR: Nothing like having vinyl to really get into the music."
+            NOUR: Nothing like having some vinyls to really get into the music."
             
             NOUR: "I bet you could even find live recordings, too."
 
-    - MS. SUWAN: "I'll keep that in mind, then."
+    - MS. SUWAN: "I'll keep that in mind."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     

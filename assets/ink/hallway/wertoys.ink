@@ -59,9 +59,25 @@
 
 == wertoys_find_prince == 
 
-    &PORTRAIT_nour_nourpondering
+    NOUR: "..."
+
+    PORTRAIT_nour_nourpondering
+    
+    &FOLLOW_NICK_NickToyPos
+    &FOLLOW_SUWAN_SuwanToyPos
+    &FOLLOW_NOUR_NourToyPos
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    &EMOTE_NOUR_UpIdle
+    
+    There's a small groaning sound coming from below the gate.
     
     NOUR: "..."
+    
+    MS. SUWAN: "What... is that <i>noise</i>?"
     
     &PORTRAIT_???_princependragonsad
     
@@ -76,6 +92,16 @@
     &SHLORP_APPLE_PrincePendragon_in
     
     ???: "Down here."
+    
+    &EMOTE_NOUR_Jump
+    &EMOTE_NICK_Jump
+    &EMOTE_SUWAN_Jump
+    
+    &PAUSE_0.5
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    &EMOTE_NOUR_UpIdle
     
     &PORTRAIT_prince pendragon_princependragonneutral
     
@@ -106,6 +132,8 @@
     NICK: "...!"
     
     &PORTRAIT_prince pendragon_princependragonbashful
+    
+    &SOUND_princependragonlaugh
     
     PRINCE PENDRAGON: "You've heard of little ol' me?"
     
@@ -429,6 +457,8 @@
     
     NICK: "That's right! Now get your apple bottom to space and FIGHT ON!"
     
+    &SOUND_princependragonlaugh
+    
     PRINCE PENDRAGON: "HOO HOO! I can feel the juices FLOWING... !"
     
     &PORTRAIT_prince pendragon_princependragonneutral
@@ -458,6 +488,8 @@
     &PORTRAIT_nick_nickbigsmile
     
     NICK: "A SECRET ENDING!?"
+    
+    &SOUND_princependragonlaugh
     
     PRINCE PENDRAGON: "HOO HOO! There's only one way to find out!"
     
@@ -560,6 +592,8 @@
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>All that's left is to go back to TopicSpot and play the game now...</i>
+    
+    &FOLLOW_NOUR_stop
     
     -> END
 

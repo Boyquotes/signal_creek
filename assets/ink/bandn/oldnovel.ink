@@ -22,13 +22,13 @@
 
     Ms. Suwan flips open the first page, and begins to read.
     
-    NOUR: <i>Her mind seems to be elsewhere.</i>
+    NOUR: <i>She seems to be thinking about something else...</i>
     
-    &PORTRAIT_nour_nourpondering
+    &PORTRAIT_nour_noursmile
     
     NOUR: "That's uh... Jane Eyre. A classic."
 
-    &PORTRAIT_mssuwan_mssuwanpondering
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
     MS. SUWAN: "Interesting. You know it?"
     
@@ -44,7 +44,7 @@
     
     * "It's one of my favorites."
     
-    &PORTRAIT_mssuwan_mssuwanneutral   
+    &PORTRAIT_ms. suwan_mssuwanneutral   
     
     - MS. SUWAN: "...Hm."
     
@@ -52,7 +52,7 @@
     
     NOUR: "Looks like you're familiar with it."
     
-    &PORTRAIT_mssuwan_mssuwannervous 
+    &PORTRAIT_ms. suwan_mssuwannervous 
     
     MS. SUWAN: "Hm. Maybe."
     
@@ -64,7 +64,7 @@
     
     NOUR: "What kind of talk?"
     
-    &PORTRAIT_mssuwan_mssuwanneutral  
+    &PORTRAIT_ms. suwan_mssuwanneutral  
     
     MS. SUWAN: "Opposition to Western ideology and its extreme individualism."
 
@@ -78,13 +78,13 @@
     
     NOUR: "Generally, it's valid. Sometimes it's not."
     
-    &PORTRAIT_nour_nourpondering
+    &PORTRAIT_nour_nourneutral
     
     NOUR: "So..."
     
     NOUR: "May I ask why you never read the book?"
     
-    &PORTRAIT_mssuwan_mssuwansad
+    &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "I was not ready to embrace myself as an individual."
     
@@ -96,7 +96,7 @@
     
     NOUR: "But I know it can be hard to shake those feelings."
     
-    &PORTRAIT_mssuwan_mssuwansmile
+    &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "I appreciate that, Nour."
     
@@ -107,7 +107,7 @@
     
 //if you have finished Ms Suwan's storyline, she would come back and take the old novel to read
 == oldnovel_end ==
-    &PORTRAIT_mssuwan_mssuwannervous
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "I think... it is finally time for me to read this novel."
     
@@ -115,7 +115,7 @@
     
     NOUR: "Really?"
     
-    &PORTRAIT_mssuwan_mssuwansmile
+    &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "I think I can afford to read things other than contracts and case law."
     

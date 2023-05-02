@@ -86,11 +86,13 @@
         
         &PORTRAIT_mssuwan_mssuwanpondering
         
-        MS. SUWAN: "The gender binary is certainly an outdated method of dividing restrooms."
+        MS. SUWAN: "The gender binary is an outdated method of dividing restrooms."
         
-            &PORTRAIT_mssuwan_mssuwannervous
+        &PORTRAIT_mssuwan_mssuwannervous
         
-        MS. SUWAN: "If there were always gender neutral restrooms, it would have saved me a lot of trouble in the past."
+        MS. SUWAN: "If there were always gender neutral restrooms..."
+        
+        MS. SUWAN: "It would have saved me a lot of trouble in the past."
         
             &PORTRAIT_nour_nourneutral
         
@@ -140,14 +142,19 @@
     It's a statue of a frog. Looks very peaceful.
     -> END 
     
-== burgertable ==
-    It's a table with fast food on it. Burgers and trash litter the table.
+== burgertables ==
 
     Although the food looks fresh, there is strangely no odor...
     
-    We probably shouldn't eat it.
-    
     -> END
+    
+== cafesign ==
+
+It's a neatly handwritten sign for the Louis George Cafe. But all of the drink's prices have been rubbed off...
+
+
+    -> END
+    
 // == wertoys == 
 
 //     It's the old toy store, We r Toys.

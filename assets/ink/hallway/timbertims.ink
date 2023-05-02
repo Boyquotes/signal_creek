@@ -1,18 +1,16 @@
 == timbertims ==
 
-    
-            &FOLLOW_NICK_NickTimPos
-            &FOLLOW_NOUR_NourTimPos
-            &FOLLOW_SUWAN_SuwanTimPos
-            
-            &PAUSE_1.0
-            
-            &EMOTE_SUWAN_RightIdle
-            &EMOTE_NICK_UpIdle
-            &EMOTE_NOUR_UpIdle
-    
-    
     It's Timbertims, a store that exclusively sold bright white toe shoes with red soles.
+    
+    &FOLLOW_NICK_NickTimPos
+    &FOLLOW_NOUR_NourTimPos
+    &FOLLOW_SUWAN_SuwanTimPos
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_RightIdle
+    &EMOTE_NICK_UpIdle
+    &EMOTE_NOUR_UpIdle
     
     Despite its off-putting decor, everyone seems to have owned a pair of Timbertims at one point.
 
@@ -68,7 +66,7 @@
     
     &SHLORP_POOP_Tim_in
     
-    &PAUSE_1
+    &PAUSE_1.0
     
     // CAN WE GET ALL OF THE PLAYER CHARACTERS JUMPING IN SURPRISE OR TURNING AROUND TO FACE HIM?
     
@@ -187,6 +185,8 @@
     
     &FOLLOW_NOUR_stop
     
+    NOUR: "Interesting."
+    
         -> END
 
 == timbertimssus ==
@@ -288,6 +288,8 @@
     &SHLORP_POOP_Tim_out
     
     &FOLLOW_NOUR_stop
+    
+    NOUR: "Interesting."
 
     -> END
 
@@ -329,5 +331,7 @@
     &SHLORP_POOP_Tim_out
     
     &FOLLOW_NOUR_stop
+    
+    NOUR: "There he goes, again."
 
     -> END

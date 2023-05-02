@@ -24,6 +24,20 @@
 
     Nick's nose scrunches up.
     
+    &FOLLOW_NICK_NickBobaStart
+    
+    &FOLLOW_SUWAN_SuwanBobaStart
+    
+    &FOLLOW_NOUR_NourBobaStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
     &PORTRAIT_nick_nickangry
     
     NICK: "Bleh! Most of these drinks suck."
@@ -87,6 +101,20 @@
     &PORTRAIT_nour_nourrealization
 
     NOUR: <i>...Wait a minute. What's up with that boba can in the back?</i>
+    
+    &FOLLOW_NICK_NickBobaStart
+    
+    &FOLLOW_SUWAN_SuwanBobaStart
+    
+    &FOLLOW_NOUR_NourBobaStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -172,7 +200,11 @@
     
     NOUR: "We will."
     
+    &FOLLOW_NICK_BobaQuarter
+    
     // SFX COINS INTO VENDING MACHINE
+    
+    &PAUSE_0.5
     
     &SOUND_insertcoin
     
@@ -199,6 +231,12 @@
             &PORTRAIT_ms. suwan_mssuwansmile
             
             MS. SUWAN: "Very well."
+            
+            &FOLLOW_SUWAN_RetrieveBoba
+            
+            &PAUSE_0.5
+            
+            &EMOTE_SUWAN_UpIdle
         
         * "Do you wanna open this, Nick?"
         
@@ -215,10 +253,28 @@
             NICK: "..."
             
             Nick shrugs again and takes the can.
+            
+            &FOLLOW_NICK_RetrieveBoba
+            
+            &PAUSE_0.5
+            
+            &EMOTE_NICK_UpIdle
     
     - The can is opened...
     
     //&SOUND_
+    
+    &FOLLOW_NICK_NickBobaStart
+    
+    &FOLLOW_SUWAN_SuwanBobaStart
+    
+    &FOLLOW_NOUR_NourBobaStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    &EMOTE_NOUR_UpIdle
     
     ...and an apple squeezes out!
     
@@ -226,7 +282,19 @@
     
     &PORTRAIT_???_dukedeliciousneutral
     
+    &SOUND_dukedeliciouslaugh
+    
     ???: "FREEDOM..."
+    
+    &EMOTE_NOUR_Jump
+    &EMOTE_NICK_Jump
+    &EMOTE_SUWAN_Jump
+    
+    &PAUSE_0.5 
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    &EMOTE_NOUR_UpIdle
     
     &PORTRAIT_nick_nickshocked
     
@@ -243,6 +311,8 @@
     &PORTRAIT_nour_nourrealization
         
     NOUR: "Um, hello. We're here on behalf of Emperor Evercrisp to rescue you."
+    
+    &SOUND_dukedeliciouslaugh
     
     ???: "Of <i>course</i> the Emperor has sent you fine heroes to free me! Thank you! HAR HAR!"
     
@@ -279,6 +349,8 @@
     DUKE DELICIOUS: "<i>Remember we are ALL children of the Mother Tree...</i>"
     
     &PORTRAIT_duke delicious_dukedelicioussmile
+    
+    &SOUND_dukedeliciouslaugh
     
     DUKE DELICIOUS: "<i>So show MERCY to the BERRY BEAST!</i>
     
@@ -341,5 +413,7 @@
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>Now time to find some more apples...</i>
+    
+    &FOLLOW_NOUR_stop
     
     -> END

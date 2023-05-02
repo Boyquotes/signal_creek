@@ -24,6 +24,20 @@
     
     NOUR: "Anybody care for a makeover?"
     
+    &FOLLOW_NICK_NickBeautyStart
+    
+    &FOLLOW_SUWAN_SuwanBeautyStart
+    
+    &FOLLOW_NOUR_NourBeautyStart
+    
+    &PAUSE_0.7
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
     &PORTRAIT_nick_nicknervous
     
     NICK: "Sounds like money I could use somewhere else."
@@ -43,7 +57,10 @@
     &PORTRAIT_nour_nournervous
 
     NOUR: "That's a good point."
-        -> END
+    
+    &FOLLOW_NOUR_stop
+    
+    -> END
 
 == beautystand_before_aplequest_repeat ==
 
@@ -54,13 +71,28 @@
     &PORTRAIT_nour_noursmile
 
     NOUR: <i>But seeing that apple lady (?) somehow makes me feel better.</i>
-     -> END
+    
+    -> END
 
 == beautystand_find_pinklady ==
 
     &PORTRAIT_nour_nourpondering
     
     NOUR: "..."
+    
+    &FOLLOW_NICK_NickBeautyStart
+    
+    &FOLLOW_SUWAN_SuwanBeautyStart
+    
+    &FOLLOW_NOUR_NourBeautyStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
     
     &PORTRAIT_nick_nickpondering
     
@@ -106,13 +138,13 @@
     
     NOUR: "We could try..."
     
-        * "talking to the apple."
+        * "Talking to the apple."
             -> talktoapple
         
-        * "staring back at the apple."
+        * "Staring back at the apple."
             -> stareatapple
         
-        * "giving the apple a makeover."
+        * "Giving the apple a makeover."
             -> giveapplemakeover
 
 == talktoapple ==
@@ -143,6 +175,12 @@
     
     // NOUR APPROACHES THE BOOTH
     
+    &FOLLOW_NOUR_BeautyApproach
+    
+    &PAUSE_0.5
+    
+    &EMOTE_NOUR_UpIdle
+    
     &PORTRAIT_nour_nournervous
     
     NOUR: "Hi, um..."
@@ -157,11 +195,23 @@
     
     NOUR: "Now you go, Ms. Suwan."
     
+    &FOLLOW_NOUR_NourBeautyStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_UpIdle
+    
     &PORTRAIT_ms. suwan_mssuwannervous
                 
     MS. SUWAN: "..."
     
     // MS. SUWAN APPROACHES THE BOOTH
+    
+    &FOLLOW_SUWAN_BeautyApproach
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
     
     &PORTRAIT_ms. suwan_mssuwanneutral
                 
@@ -171,6 +221,12 @@
                 
     NOUR: "That's it?!"
     
+    &FOLLOW_SUWAN_SuwanBeautyStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
+    
     &PORTRAIT_nour_nourpondering
                 
     NOUR: "C'mon, Nick. Anybody could beat Ms. Suwan. Now's your chance!"
@@ -179,7 +235,11 @@
     
     MS. SUWAN: "Excuse me—"
     
-    // NICK APPROACHES THE BOOTH
+    &FOLLOW_NICK_BeautyApproach
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
     
     &PORTRAIT_nick_nickneutral
                 
@@ -263,6 +323,10 @@
     // NICK MOVES TOWARDS THE BOOTH, FACING IT
     // NOUR FOLLOWS AND THEN STANDS NEXT TO HIM, FACING THE BOOTH
     
+    &FOLLOW_NICK_NickAppleStare
+    
+    &FOLLOW_NOUR_NourAppleStare
+    
     &PORTRAIT_nour_nourneutral
             
     NOUR: "..."
@@ -301,6 +365,8 @@
                             
                             // STAGING
                             // MS. SUWAN APPROACHES TO STAND IN FRONT OF THE BOOTH.
+                            
+                            &FOLLOW_SUWAN_SuwanAppleStare
                             
                             &PORTRAIT_ms. suwan_mssuwanneutral
                             
@@ -404,6 +470,8 @@
     
     // NICK GRABBING ANIMATION, THEN TURNS TO USE IT ON THE POSTER
     
+    &FOLLOW_NICK_NickAppleStare
+    
     &PORTRAIT_nour_noursmile
                 
     NOUR: "Nice! I'll help you out too..."
@@ -419,6 +487,8 @@
 === pinkladyreveal ===
 
     - &PORTRAIT_???_pinkladysmile
+    
+    &SOUND_pinkladylaugh
     
     ???: "Hee hee!"
 
@@ -436,13 +506,35 @@
     
     &PORTRAIT_???_pinkladysmile
     
+    &SOUND_pinkladylaugh
+    
     ???: "You three are so silly, hee hee!"
     
     &SHLORP_POOP_PrincessPinkLady_in
     
+    &EMOTE_NICK_LeftIdle
+    
+    &PAUSE_0.5 
+    
+    &EMOTE_NOUR_Jump
+    &EMOTE_NICK_Jump
+    &EMOTE_SUWAN_Jump
+    
+    &PAUSE_0.5
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_NOUR_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    
     ???: "I wasn't planning on showing myself, but I couldn't help myself!"
     
     &PORTRAIT_???_pinkladyneutral
+    
+    &FOLLOW_NICK_NickBeautyStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
     
     ???: "You remind me of my beloved prince..."
     
@@ -484,6 +576,8 @@
     
     &PORTRAIT_???_pinkladysmile
     
+    &SOUND_pinkladylaugh
+    
     ???: "Well! Found me—<i>PRINCESS PINK LADY</i>—you have, hee hee!"
     
     &PORTRAIT_princess pink lady_pinkladyneutral
@@ -513,6 +607,8 @@
     NOUR: "Of course. What would you like us to say?"
     
     &PORTRAIT_princess pink lady_pinkladysmile
+    
+    &SOUND_pinkladylaugh
     
     PRINCESS PINK LADY: "Tell him that he is smarter and better than he thinks he is, hee hee!"
     
@@ -563,6 +659,8 @@
     PRINCESS PINK LADY: "He <i>definitely</i> understood what I just said."
     
     &PORTRAIT_princess pink lady_pinkladybashful
+    
+    &SOUND_pinkladylaugh
     
     PRINCESS PINK LADY: "I have a keen eye, hee hee!"
     
@@ -653,11 +751,8 @@
     &PORTRAIT_nour_nourpondering
     
     NOUR: <i>We should go find the rest of the apples...</i>
+    
+    &FOLLOW_NOUR_stop
 
         -> END
     
-// === beautystand_end ===
-
-//     NOUR: <i>I think we've explored everything we could here. The princess is nowhere to be found.</i>
-        
-//         -> END
