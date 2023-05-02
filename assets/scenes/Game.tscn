@@ -19,7 +19,7 @@
 
 [sub_resource type="Environment" id=3]
 background_mode = 4
-background_canvas_max_layer = 10
+background_canvas_max_layer = 1000
 tonemap_mode = 2
 glow_enabled = true
 glow_levels/1 = true
@@ -139,6 +139,7 @@ gui_disable_input = true
 [node name="Room" parent="ViewportContainer/Viewport" instance=ExtResource( 1 )]
 
 [node name="ScreenOverlay" type="Panel" parent="."]
+visible = false
 material = ExtResource( 9 )
 margin_right = 960.0
 margin_bottom = 540.0
