@@ -6,12 +6,12 @@
 [ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 40.5, 8 )
+extents = Vector2( 40.5, 12 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 40.5, 8.125 )
 
-[node name="BookShelf" type="RigidBody2D" groups=["shiftable"]]
+[node name="BookshelfNormal" type="RigidBody2D" groups=["shiftable"]]
 material = ExtResource( 3 )
 mode = 1
 script = ExtResource( 2 )
@@ -25,7 +25,7 @@ material = ExtResource( 3 )
 position = Vector2( 0, -27 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 431, 225, 83, 64 )
+region_rect = Rect2( 182, 231, 81, 54 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
@@ -36,17 +36,19 @@ position = Vector2( 0, -27 )
 texture = ExtResource( 5 )
 offset = Vector2( 0, -30.2909 )
 region_enabled = true
-region_rect = Rect2( 431, 225, 83, 64 )
+region_rect = Rect2( 182, 231, 81, 54 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -8 )
+position = Vector2( -0.5, -12 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
+visible = false
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
+_disable_interactivity = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 position = Vector2( -0.5, 0 )

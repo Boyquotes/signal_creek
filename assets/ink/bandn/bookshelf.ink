@@ -24,15 +24,6 @@
     }
     
     -> END
-
-== bookshelfback == 
-
-    -> bookshelf
-    
-== bookshelfside ==
-
-    ->bookshelf
-
     
 == nour_suggests_hobbies ==
 
