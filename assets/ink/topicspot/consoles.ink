@@ -546,7 +546,7 @@
             EMPEROR EVERCRISP: "Because I don't know where I put that stuff, ho ho!"
             
             &MUSIC_ApleQuestMusic
-
+            
     - &PORTRAIT_nour_nourpondering
     
     NOUR: "So all we have to do is find four apple... People... And then the Prince?"
@@ -1289,8 +1289,6 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... I'm so sorry, Nick. You are smart and very capable."
-
     MS. SUWAN: "...I'm so sorry, Nick. You are smart and very capable."
     
     &PORTRAIT_ms. suwan_mssuwansmile
@@ -1394,12 +1392,6 @@
     &PORTRAIT_nour_noursad
     
     NOUR: <i>... I guess I should talk to her.</i>
-    
-    &FOLLOW_NOUR_stop
-    
-    &FOLLOW_NICK_NOUR
-    
-    &FOLLOW_SUWAN_NICK
     
     &PAUSE_1.0
     

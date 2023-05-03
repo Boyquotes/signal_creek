@@ -528,6 +528,10 @@
     
     &FOLLOW_NOUR_NourCBKStart
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
     &PORTRAIT_nour_nournervous
     
     NOUR: "We're back. Go ahead, Ms. Suwan."
@@ -620,6 +624,10 @@
     Ms. Suwan shows them the album in her hands. Chad, Brody, and Kristy stare...
     
     ...And then smile sadly at her.
+    
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestEmoMusic
     
     &PORTRAIT_chad_chadsad
     
@@ -836,6 +844,10 @@
     
     NOUR: "..."
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>...She seems to be more at peace.</i>
@@ -890,6 +902,8 @@
     &PORTRAIT_nour_nournervous
     
     NOUR: <i>I guess there's only one way to find out...</i>
+    
+    &MUSIC_HallwayMusic
     
     &FOLLOW_NOUR_stop
     &FOLLOW_SUWAN_NICK
