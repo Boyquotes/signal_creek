@@ -329,7 +329,15 @@
     
     NOUR: "What the—!"
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
     The console screen glitches, and the game starts by itself...
+    
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestMusic
     
     &PORTRAIT_???_emperorevercrisppreach
 
@@ -457,6 +465,8 @@
             
             EMPEROR EVERCRISP: "HO HO! EXCELLENT—"
             
+            &MUSIC_STOP
+            
             &PORTRAIT_emperor evercrisp_emperorevercrispneutral
             
             EMPEROR EVERCRISP: "... Oh."
@@ -534,6 +544,8 @@
             &PORTRAIT_emperor evercrisp_emperorevercrispsmile
             
             EMPEROR EVERCRISP: "Because I don't know where I put that stuff, ho ho!"
+            
+            &MUSIC_ApleQuestMusic
             
     - &PORTRAIT_nour_nourpondering
     
@@ -627,6 +639,14 @@
     
     NOUR: "Never thought I'd hear something like that from you."
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
+    &PAUSE_1.0
+    
+    &MUSIC_TopicSpotMusic
+    
     &FOLLOW_NOUR_stop
     
     &FOLLOW_NICK_NOUR
@@ -679,9 +699,17 @@
     
     NOUR: "Anway, here goes nothing..."
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
     A tiny character pops up in the middle of the screen.
     
     Rows of weapons and a million character stats overwhelm the space. 
+    
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestMusic
     
     &PORTRAIT_nick_nickshocked
     
@@ -883,7 +911,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... I'm not <i>that</i> heartless."
+    MS. SUWAN: "...I'm not <i>that</i> heartless."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -967,11 +995,15 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "... Hey! You know what I've been thinking?
+    NOUR: "...Hey! You know what I've been thinking?
     
     &PORTRAIT_nour_noursmile
     
     NOUR: "You can totally make gaming your fun hobby."
+    
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
     
     &PORTRAIT_nick_nicknervous
     
@@ -999,7 +1031,7 @@
     
     &PORTRAIT_nick_nickshadow
     
-    NICK: "... What a joke."
+    NICK: "...What a joke."
     
     &PORTRAIT_nour_noursad
     
@@ -1046,6 +1078,10 @@
     &PORTRAIT_nick_nicktears
     
     NICK: "It's really <i>hard</i>. I'm too dumb to do anything right." 
+    
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestEmoMusic
     
     &PORTRAIT_nour_noursad
     
@@ -1143,7 +1179,7 @@
     
     &PORTRAIT_nick_nicktears
     
-    NICK: "... because I know <i>I'm</i> the reason why my life's a mess."
+    NICK: "...because I know <i>I'm</i> the reason why my life's a mess."
     
     &PORTRAIT_nour_nourneutral
     
@@ -1217,7 +1253,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... but it does not make the others less valuable."
+    MS. SUWAN: "...but it does not make the others less valuable."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -1237,7 +1273,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... Far more than any ounce of knowledge I have, degree be damned."
+    MS. SUWAN: "...Far more than any ounce of knowledge I have, degree be damned."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -1253,7 +1289,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... I'm so sorry, Nick. You are smart and very capable."
+    MS. SUWAN: "...I'm so sorry, Nick. You are smart and very capable."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -1279,7 +1315,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "... Here. Can you put it back for me?"
+    NICK: "...Here. Can you put it back for me?"
     
     &PORTRAIT_nick_nicksmallsmile
     
@@ -1355,7 +1391,11 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>... I guess I should talk to her.</i>
+    NOUR: <i>...I guess I should talk to her.</i>
+    
+    &PAUSE_1.0
+    
+    &MUSIC_TopicSpotMusic
     
     &FOLLOW_NOUR_stop
     

@@ -78,6 +78,10 @@
 
 == fountain_findfather ==
 
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+
     &PORTRAIT_nour_nourpondering
 
     NOUR: "Hey... Is there something bobbing up and down in the water?"
@@ -135,6 +139,10 @@
     &PORTRAIT_nour_nourpondering
     
     NOUR: "The ones from the where now?"
+    
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestWaterMusic
     
     &PORTRAIT_???_fatherfujipreach
     
@@ -418,6 +426,8 @@
     
     NOUR: "Until then... let's move on."
     
+    &MUSIC_STOP
+    
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>Nick seems to be more invested. This is good.</i>
@@ -425,6 +435,10 @@
     &PORTRAIT_nour_noursmile
     
     NOUR: <i>I should find more apples to make him open up even more!</i>
+    
+    &PAUSE_1.0
+
+    &MUSIC_HallwayMusic
     
     &FOLLOW_NOUR_stop
     
