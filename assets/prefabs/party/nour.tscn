@@ -116,6 +116,7 @@ position = Vector2( 0.0432125, -17 )
 texture = ExtResource( 3 )
 hframes = 6
 vframes = 6
+frame = 3
 region_rect = Rect2( 0, 0, 18, 32 )
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PQpzb3VyY2V8PQpsYXllcnw9Cm9wX2V4cHw9RmFsc2UKb19mb2xkZXJ8PQpvX25hbWV8PQpvbmx5X3Zpc2libGV8PUZhbHNlCm9fZXhfcHw9Cg=="

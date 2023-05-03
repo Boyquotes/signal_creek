@@ -849,6 +849,18 @@ position = Vector2( 78, 33 )
 [node name="NickLook" type="Node2D" parent="PlaneManager"]
 position = Vector2( 95, 39 )
 
+[node name="NourMoveAway" type="Node2D" parent="PlaneManager"]
+position = Vector2( 336, -286 )
+
+[node name="NourPolaroid" type="Node2D" parent="PlaneManager"]
+position = Vector2( 336, -306 )
+
+[node name="NickPolaroid" type="Node2D" parent="PlaneManager"]
+position = Vector2( 354, -311 )
+
+[node name="SuwanPolaroid" type="Node2D" parent="PlaneManager"]
+position = Vector2( 315, -308 )
+
 [node name="NickAGPos" type="Node2D" parent="PlaneManager"]
 position = Vector2( 168, -273 )
 
