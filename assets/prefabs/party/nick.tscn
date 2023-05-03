@@ -135,9 +135,13 @@ texture = ExtResource( 3 )
 hframes = 6
 vframes = 6
 <<<<<<< HEAD
+<<<<<<< HEAD
 frame = 12
 =======
 frame = 29
+>>>>>>> Ashley
+=======
+frame = 12
 >>>>>>> Ashley
 region_rect = Rect2( 45, 138, 19, 32 )
 __meta__ = {
