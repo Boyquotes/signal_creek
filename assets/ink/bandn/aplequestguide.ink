@@ -556,6 +556,8 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     NOUR: <i>Wasn't the game set up somewhere in the TopicSpot? I could go look for it...</i>
     
+    &FOLLOW_NOUR_stop
+    
         -> END
         
 == aplequestguide_after_start_aplequest ==
