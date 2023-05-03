@@ -126,7 +126,7 @@ region_enabled = true
 region_rect = Rect2( 21, 13, 50, 52 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -16 )
+position = Vector2( 0, -23 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -136,7 +136,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -1 )
+position = Vector2( 0, -4 )
 shape = SubResource( 22 )
 
 [node name="EmperorEvercrisp" type="Node2D" parent="."]
