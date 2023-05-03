@@ -969,7 +969,11 @@
 
     NOUR: "I wish I could've gone to a Paradise concert. It must've been so cool to hear them live." // (SAD)
     
+    &PORTRAIT_ms. suwan_mssuwansad
+    
     MS. SUWAN: "It was. Nothing like the digital recordings. 
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "The energy isn't the same."
     
