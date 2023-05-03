@@ -474,11 +474,11 @@
     
     &PORTRAIT_nour_nourannoyed
     
-    NOUR: <i>If she doesn't want to talk to those three...</i>
+    NOUR: <i>But it doesn't sound like she's ready to talk about them yet.</i>
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: <i>Maybe we could talk about them instead.</i>
+    NOUR: <i>Maybe I should focus on helping Nick until she's ready.</i>
     
     &FOLLOW_NOUR_stop
     &FOLLOW_SUWAN_NICK
@@ -502,9 +502,21 @@
     
     NOUR: <i>Clearly, Ms. Suwan was supposed to study there with these three.</i>
     
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>But until we even get to that step, she needs to learn to be less stubborn.</i>
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>I could help her realize this while helping Nick.</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>Once she recognizes that she should be more open-minded...</i>
+    
     &PORTRAIT_nour_nourneutral
     
-    NOUR: <i>Maybe she'll open up to us about it if we go.</i>
+    NOUR: <i>Maybe then she'll open up to us about everything.</i>
     
     -> END
 

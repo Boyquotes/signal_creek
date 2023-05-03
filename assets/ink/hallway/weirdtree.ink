@@ -20,6 +20,10 @@
     
 === weirdtree_before_aplequest ===
 
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+
     &PORTRAIT_nour_nourpondering
 
     NOUR: "This tree looks strange..."
@@ -202,7 +206,7 @@
     
     &PORTRAIT_nick_nickneutral
 
-    NICK: "... I'll do it."
+    NICK: "...I'll do it."
     
     &PORTRAIT_nour_noursmile
     
@@ -210,7 +214,7 @@
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "... Sure."
+    NICK: "...Sure."
     
     &PORTRAIT_nour_nourrealization
     
@@ -252,13 +256,17 @@
     
     MS. SUWAN: "Is that one of those—" 
     
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestMusic
+    
     &PORTRAIT_???_grannyneutral
     
     ???: "Thank the Mother Tree! Someone has awoken me from my slumber..."
     
     &PORTRAIT_nick_nickbigsmile
     
-    NICK: "... !"
+    NICK: "...!"
     
     &PORTRAIT_???_grannysmile
     
@@ -270,7 +278,7 @@
     
     &PORTRAIT_grand duchess granny_grannykiss
     
-    GRAND DUCHESS GRANNY: "... That you are indeed a SWEETIEPIE!"
+    GRAND DUCHESS GRANNY: "...That you are indeed a SWEETIEPIE!"
     
     &PORTRAIT_nick_nickangry
     
@@ -490,7 +498,13 @@
     
     Nick stays silent, but he nods his head again.
     
+    &MUSIC_STOP
+    
     NOUR: <i>He's responding more! We should continue the search...</i>
+    
+    &PAUSE_1.0
+    
+    &MUSIC_HallwayMusic
     
     &FOLLOW_NOUR_stop
     
