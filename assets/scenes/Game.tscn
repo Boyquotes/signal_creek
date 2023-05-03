@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/scenes/rooms/room_abstract.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scripts/globals/game_root.gd" type="Script" id=2]
@@ -10,16 +10,19 @@
 [ext_resource path="res://assets/sounds/ambient/SFXW001_indoor_roomtone_entrance hall.wav" type="AudioStream" id=8]
 [ext_resource path="res://assets/materials/camera_overlay.tres" type="Material" id=9]
 [ext_resource path="res://assets/scripts/ui/screen_overlay.gd" type="Script" id=10]
-[ext_resource path="res://assets/sounds/music/guitarriff.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/music/looping tracks/aplequest.wav" type="AudioStream" id=11]
 [ext_resource path="res://assets/materials/gradients/gradient_dream.tres" type="Texture" id=12]
 [ext_resource path="res://assets/scripts/globals/input_driver.gd" type="Script" id=13]
-[ext_resource path="res://assets/sounds/music/bn.mp3" type="AudioStream" id=14]
-[ext_resource path="res://assets/sounds/music/LM_SignCreek_Grunge_v1.mp3" type="AudioStream" id=15]
-[ext_resource path="res://assets/sounds/music/Signal_Creek_Cafe_v1.mp3" type="AudioStream" id=16]
+[ext_resource path="res://assets/sounds/music/looping tracks/aplequestwater.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/music/looping tracks/musicstand.wav" type="AudioStream" id=15]
+[ext_resource path="res://assets/sounds/music/looping tracks/aplequestemo.wav" type="AudioStream" id=16]
+[ext_resource path="res://assets/sounds/music/looping tracks/bandn.wav" type="AudioStream" id=17]
+[ext_resource path="res://assets/sounds/music/looping tracks/hallway.wav" type="AudioStream" id=18]
+[ext_resource path="res://assets/sounds/music/looping tracks/topicspot.wav" type="AudioStream" id=19]
 
 [sub_resource type="Environment" id=3]
 background_mode = 4
-background_canvas_max_layer = 10
+background_canvas_max_layer = 1000
 tonemap_mode = 2
 glow_enabled = true
 glow_levels/1 = true
@@ -105,6 +108,65 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
+[sub_resource type="Animation" id=9]
+resource_name = "DecreaseMusicVolume"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Music:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -80.0 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "IncreaseMusicVolume"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Music:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -80.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "MusicOn"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Music:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -10.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Music:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
 [node name="Game" type="Node2D"]
 process_priority = 1
 script = ExtResource( 2 )
@@ -139,6 +201,7 @@ gui_disable_input = true
 [node name="Room" parent="ViewportContainer/Viewport" instance=ExtResource( 1 )]
 
 [node name="ScreenOverlay" type="Panel" parent="."]
+visible = false
 material = ExtResource( 9 )
 margin_right = 960.0
 margin_bottom = 540.0
@@ -185,14 +248,15 @@ anims/Off = SubResource( 6 )
 
 [node name="SoundManager" type="Node" parent="."]
 script = ExtResource( 4 )
-music_bandn = ExtResource( 14 )
-music_hallway = ExtResource( 16 )
-music_topicspot = ExtResource( 15 )
+music_bandn = ExtResource( 17 )
+music_hallway = ExtResource( 18 )
+music_topicspot = ExtResource( 19 )
 music_elevator = ExtResource( 8 )
-music_tracks = {
-"bn": ExtResource( 14 ),
-"guitarriff": ExtResource( 11 )
-}
+music_starter = ExtResource( 11 )
+music_musicstand = ExtResource( 15 )
+music_aplequest = ExtResource( 11 )
+music_aplequestemo = ExtResource( 16 )
+music_aplequestwater = ExtResource( 14 )
 
 [node name="FootStepsNour" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource( 7 )
@@ -223,5 +287,10 @@ stream_paused = true
 volume_db = -10.0
 
 [node name="UISounds" type="AudioStreamPlayer" parent="SoundManager"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SoundManager"]
+anims/DecreaseMusicVolume = SubResource( 9 )
+anims/IncreaseMusicVolume = SubResource( 12 )
+anims/MusicOn = SubResource( 13 )
 
 [connection signal="doorway_entered" from="." to="." method="_on_Game_doorway_entered"]

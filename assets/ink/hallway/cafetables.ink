@@ -1,6 +1,22 @@
 == cafetables ==
 //note to self: do some gathers - choices that lead to the same conversation 
 
+    It's a table with coffee cups left on it. There's still steam coming out of the holes in the lid.
+    
+    &FOLLOW_NICK_NickCafeStart
+    
+    &FOLLOW_SUWAN_SuwanCafeStart
+    
+    &FOLLOW_NOUR_NourCafeStart
+    
+    &PAUSE_0.7
+    
+    &EMOTE_NICK_DownIdle
+    
+    &EMOTE_NOUR_LeftIdle
+    
+    &EMOTE_SUWAN_UpIdle
+
 {
     - cafetables3:
         -> explored_everything

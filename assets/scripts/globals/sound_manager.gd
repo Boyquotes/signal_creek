@@ -3,25 +3,21 @@ extends Node
 
 # Manages all audio streams and audio functions
 
-export var music_bandn : AudioStreamMP3
-export var music_hallway : AudioStreamMP3
-export var music_topicspot : AudioStreamMP3
+export var music_bandn : AudioStream
+export var music_hallway : AudioStream
+export var music_topicspot : AudioStream
 export var music_elevator : AudioStream
-export var music_starter : AudioStreamMP3
+export var music_starter : AudioStream
+export var music_musicstand : AudioStream
+export var music_aplequest : AudioStream
+export var music_aplequestemo : AudioStream
+export var music_aplequestwater : AudioStream
 export var smooth_change_volume_rate := 0.5
 
 var decreasing_music_volume
 var increasing_music_volume
 
 # VOLUME RANGE: -40dB to 2.4dB
-
-export var music_tracks : Dictionary = {
-	"BandNMusic": music_bandn,
-	"HallwayMusic": music_hallway,
-	"TopicspotMusic": music_topicspot,
-	"ElevatorMusic": music_elevator
-}
-
 
 # I hate this but it is what it is.
 export var sound_effects : Dictionary = {
@@ -90,6 +86,16 @@ onready var nour_footstep_player = $FootStepsNour
 onready var nick_footstep_player = $FootStepsNick
 onready var suwan_footstep_player = $FootStepsSuwan
 
+onready var music_tracks : Dictionary = {
+	"BandNMusic": music_bandn,
+	"HallwayMusic": music_hallway,
+	"TopicSpotMusic": music_topicspot,
+	"ElevatorMusic": music_elevator,
+	"MusicStandMusic": music_musicstand,
+	"ApleQuestMusic": music_aplequest,
+	"ApleQuestEmoMusic": music_aplequestemo,
+	"ApleQuestWaterMusic": music_aplequestwater
+}
 
 func _ready():
 #	set_mute_audio(true)
@@ -102,11 +108,12 @@ func _ready():
 
 
 func _process(_delta):
-	if decreasing_music_volume:
-		smooth_decrease_stream_volume(music_player)
-		
-	elif increasing_music_volume:
-		smooth_increase_stream_volume(music_player)
+#	if decreasing_music_volume:
+#		smooth_decrease_stream_volume(music_player)
+#
+#	elif increasing_music_volume:
+#		smooth_increase_stream_volume(music_player)
+	pass
 
 
 func play_sound(audioName: String) -> void:
@@ -128,8 +135,11 @@ func play_ambience(audioName: String) -> void:
 
 
 func play_music(audioName: String) -> void:
-	music_player.stream = music_tracks.get(audioName)
-	music_player.play()
+	if music_tracks.get(audioName):
+		music_player.stream = music_tracks.get(audioName)
+#		music_player.play()
+#		set_stream_volume(music_player, -10.0)
+		$AnimationPlayer.play("MusicOn")
 
 func set_footsteps_pause_mode(stream: AudioStreamPlayer, pauseMode: bool) -> void:
 #	footstep_player.play()
@@ -160,26 +170,21 @@ func set_typewriter_sound(soundName: String) -> void:
 	sound_effects["TypewriterSound"] = character_voices.get(soundName)
 
 
-func smooth_decrease_stream_volume(stream) -> void:
-	var currentVolume = stream.get_volume_db()
-	
-	if stream.get_volume_db() > -40.0:
-		stream.set_volume_db(currentVolume - smooth_change_volume_rate)
-		return
-	
-	decreasing_music_volume = false
-	stream.set_stream_paused(true)
+func smooth_decrease_music_volume() -> void:
+	$AnimationPlayer.play("DecreaseMusicVolume")
 
 
-func smooth_increase_stream_volume(stream) -> void:
-	var currentVolume = stream.get_volume_db()
+func smooth_increase_music_volume() -> void:
 	
-	if stream.get_volume_db() < 0.0:
-		stream.set_volume_db(currentVolume + smooth_change_volume_rate)
-		return
-	
-	increasing_music_volume = false
-	stream.set_volume_db(0.0)
+	$AnimationPlayer.play("IncreaseMusicVolume")
+#	var currentVolume = stream.get_volume_db()
+#
+#	if stream.get_volume_db() < 0.0:
+#		stream.set_volume_db(currentVolume + smooth_change_volume_rate)
+#		return
+#
+#	increasing_music_volume = false
+#	stream.set_volume_db(0.0)
 
 
 # For developer; make a new dictionary to put at the top.

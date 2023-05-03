@@ -210,6 +210,15 @@ position = Vector2( 1009, -323 )
 [node name="SuwanTreeStartPos" type="Node2D" parent="PlaneManager"]
 position = Vector2( 1031, -286 )
 
+[node name="NickCafeStart" type="Node2D" parent="PlaneManager"]
+position = Vector2( 44, 768 )
+
+[node name="NourCafeStart" type="Node2D" parent="PlaneManager"]
+position = Vector2( 57, 791 )
+
+[node name="SuwanCafeStart" type="Node2D" parent="PlaneManager"]
+position = Vector2( 44, 815 )
+
 [node name="NickBobaStart" type="Node2D" parent="PlaneManager"]
 position = Vector2( 198, 831 )
 
@@ -289,7 +298,7 @@ __meta__ = {
 }
 
 [node name="Doortal_Bandn" type="Area2D" parent="PlaneManager"]
-position = Vector2( 180, 57 )
+position = Vector2( 184, 56 )
 script = ExtResource( 19 )
 __meta__ = {
 "_edit_lock_": true,
@@ -1029,7 +1038,7 @@ __meta__ = {
 }
 
 [node name="Litter2" parent="PlaneManager/Overworld" instance=ExtResource( 27 )]
-position = Vector2( 81, 777 )
+position = Vector2( -27, 822 )
 scale = Vector2( -1, 1 )
 __meta__ = {
 "_edit_lock_": true,
@@ -1183,7 +1192,7 @@ __meta__ = {
 }
 
 [node name="CafeChairsBack7" parent="PlaneManager/Overworld" instance=ExtResource( 33 )]
-position = Vector2( 34, 807 )
+position = Vector2( 31, 815 )
 __meta__ = {
 "_edit_lock_": true,
 "_editor_description_": ""
@@ -1297,8 +1306,6 @@ __meta__ = {
 
 [node name="CafeTable2" parent="PlaneManager/Overworld" instance=ExtResource( 35 )]
 position = Vector2( 34, 801 )
-rotation = 3.14159
-scale = Vector2( 1, -1 )
 __meta__ = {
 "_edit_lock_": true,
 "_editor_description_": ""
@@ -1306,15 +1313,6 @@ __meta__ = {
 
 [node name="CafeChairsFront8" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
 position = Vector2( -39, 773 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="CafeTable3" parent="PlaneManager/Overworld" instance=ExtResource( 35 )]
-position = Vector2( -39, 800 )
-rotation = 3.14159
-scale = Vector2( 1, -1 )
 __meta__ = {
 "_edit_lock_": true,
 "_editor_description_": ""
@@ -1418,6 +1416,13 @@ __meta__ = {
 
 [node name="EmptySquareTable" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
 position = Vector2( 353, 784 )
+__meta__ = {
+"_edit_lock_": true,
+"_editor_description_": ""
+}
+
+[node name="EmptySquareTable4" parent="PlaneManager/Overworld" instance=ExtResource( 30 )]
+position = Vector2( -39, 800 )
 __meta__ = {
 "_edit_lock_": true,
 "_editor_description_": ""
