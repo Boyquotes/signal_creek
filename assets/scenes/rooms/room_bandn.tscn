@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_bandn_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -28,9 +28,7 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_displayshelf.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_tablesmall.tscn" type="PackedScene" id=27]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_comicstand.tscn" type="PackedScene" id=28]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfbooks2.tscn" type="PackedScene" id=29]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_tablewide.tscn" type="PackedScene" id=30]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfbooks.tscn" type="PackedScene" id=31]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_wallshelf.tscn" type="PackedScene" id=32]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_displaystand.tscn" type="PackedScene" id=33]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_chairfront.tscn" type="PackedScene" id=34]
@@ -43,6 +41,7 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_cashier2.tscn" type="PackedScene" id=41]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_aplequestguide.tscn" type="PackedScene" id=42]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_volitioncomputer.tscn" type="PackedScene" id=43]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_bookshelfnormal.tscn" type="PackedScene" id=44]
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 32, 4 )
@@ -176,6 +175,38 @@ shader_param/pattern = 0
 shader_param/inside = false
 
 [sub_resource type="ShaderMaterial" id=29]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=32]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=33]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=30]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+
+[sub_resource type="ShaderMaterial" id=31]
 resource_local_to_scene = true
 shader = ExtResource( 14 )
 shader_param/color = Color( 1, 1, 1, 0 )
@@ -358,51 +389,7 @@ __meta__ = {
 
 [node name="BookShelf" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
 material = SubResource( 13 )
-position = Vector2( 169, -400 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="BookShelf2" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 13 )
-position = Vector2( 312, -400 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="BookShelf3" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 13 )
-position = Vector2( 477, -281 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="BookShelf4" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 13 )
-position = Vector2( 477, -202 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="BookShelf5" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 13 )
-position = Vector2( 57, -48 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="BookShelf6" parent="PlaneManager/Overworld" instance=ExtResource( 8 )]
-material = SubResource( 13 )
-position = Vector2( 240, -3 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
+position = Vector2( 477, -291 )
 
 [node name="BookshelfBack" parent="PlaneManager/Overworld" instance=ExtResource( 24 )]
 material = SubResource( 14 )
@@ -569,83 +556,6 @@ __meta__ = {
 [node name="ComputerDesk3" parent="PlaneManager/Overworld" instance=ExtResource( 35 )]
 material = SubResource( 17 )
 position = Vector2( 70, -160 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks2" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
-position = Vector2( 304, -398 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks3" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
-position = Vector2( 168, -398 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
-position = Vector2( 154, -398 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks4" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
-position = Vector2( 476, -279 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks5" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
-position = Vector2( 462, -279 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks6" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
-position = Vector2( 476, -200 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks7" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
-position = Vector2( 462, -200 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks8" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
-position = Vector2( 239, -1 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks9" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
-position = Vector2( 225, -1 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks10" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
-position = Vector2( 56, -46 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
-[node name="Bookshelfbooks11" parent="PlaneManager/Overworld" instance=ExtResource( 31 )]
-position = Vector2( 42, -46 )
 __meta__ = {
 "_edit_lock_": true,
 "_editor_description_": ""
@@ -888,6 +798,30 @@ __meta__ = {
 [node name="volitioncomputer" parent="PlaneManager/Overworld" instance=ExtResource( 43 )]
 material = SubResource( 29 )
 position = Vector2( 10, -161 )
+
+[node name="BookshelfNormal4" parent="PlaneManager/Overworld" instance=ExtResource( 44 )]
+material = SubResource( 32 )
+position = Vector2( 67, -46 )
+__meta__ = {
+"_edit_lock_": true,
+"_editor_description_": ""
+}
+
+[node name="BookshelfNormal3" parent="PlaneManager/Overworld" instance=ExtResource( 44 )]
+material = SubResource( 33 )
+position = Vector2( 477, -204 )
+__meta__ = {
+"_edit_lock_": true,
+"_editor_description_": ""
+}
+
+[node name="BookshelfNormal" parent="PlaneManager/Overworld" instance=ExtResource( 44 )]
+material = SubResource( 30 )
+position = Vector2( 315, -400 )
+
+[node name="BookshelfNormal2" parent="PlaneManager/Overworld" instance=ExtResource( 44 )]
+material = SubResource( 31 )
+position = Vector2( 169, -399 )
 
 [node name="MsSuwanMoveBack" type="Node2D" parent="PlaneManager"]
 position = Vector2( 122, 34 )

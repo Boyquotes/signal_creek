@@ -1,6 +1,22 @@
 == cafetables ==
 //note to self: do some gathers - choices that lead to the same conversation 
 
+    It's a table with coffee cups left on it. There's still steam coming out of the holes in the lid.
+    
+    &FOLLOW_NICK_NickCafeStart
+    
+    &FOLLOW_SUWAN_SuwanCafeStart
+    
+    &FOLLOW_NOUR_NourCafeStart
+    
+    &PAUSE_0.7
+    
+    &EMOTE_NICK_DownIdle
+    
+    &EMOTE_NOUR_LeftIdle
+    
+    &EMOTE_SUWAN_UpIdle
+
 {
     - cafetables3:
         -> explored_everything
@@ -44,11 +60,11 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "Yet everything is still here. Though they're in much better condition."
+    MS. SUWAN: "Yet everything is still here. Though in much better condition."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "... Like how I remember they used to be."
+    MS. SUWAN: "...Like how I remember they used to be."
     
     &PORTRAIT_nour_nourpondering
     
@@ -56,7 +72,7 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: "You don't strike me as the type of person to sit and chill at a mall for a while."
+    NOUR: "You don't strike me as the type of person to sit and chill in a mall."
     
     &PORTRAIT_ms. suwan_mssuwansad
     
@@ -64,7 +80,7 @@
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: "I remember this being a good spot in the cafe, too." 
+    NOUR: "Yeah, I remember this being a good spot in the cafe." 
     
     &PORTRAIT_nour_noursad
     
@@ -76,15 +92,17 @@
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
+    MS. SUWAN: "..."
+    
     MS. SUWAN: "We should move on."
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "No use in dwelling over... never mind."
+    MS. SUWAN: "No use in dwelling over... Never mind."
     
     &PORTRAIT_nour_noursad
     
-    NOUR: "I... ok."
+    NOUR: "I... Okay."
     
     &PORTRAIT_nick_nicknervous
     
@@ -213,7 +231,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: "They seemed like, well... they cared about you."
+    NOUR: "They seemed like they, well... cared about you."
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
@@ -221,7 +239,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "Ms. Suwan... are you really ok?"
+    NICK: "Ms. Suwan... Are you really ok?"
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
@@ -253,7 +271,7 @@
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: <i>I definitely know how that feels... a friendship gone wrong.</i>
+    NOUR: <i>I definitely know how that feels... A friendship gone wrong.</i>
     
     &PORTRAIT_nour_nourneutral
     
@@ -289,7 +307,7 @@
         
         &PORTRAIT_nour_nourannoyed
         
-        NOUR: "You clearly did <i>something</i>—you're just not telling us the whole story."
+        NOUR: "You clearly did <i>something</i> — you're just not telling us the whole story."
         
         &PORTRAIT_nour_noursad
         
@@ -305,7 +323,7 @@
         
         &PORTRAIT_nour_nourangry
         
-        NOUR: "Talking about what happened could actually help us get out of here!"
+        NOUR: "Having a conversation about what happened could actually help us get out of here!"
         
         &PORTRAIT_ms. suwan_mssuwanannoyed
         
@@ -333,7 +351,7 @@
         
         &PORTRAIT_ms. suwan_mssuwanshadow
         
-        MS. SUWAN: "You would hardly understand what I went through anyway."
+        MS. SUWAN: "You would hardly understand what I went through, anyway."
         
         &PORTRAIT_nour_nourannoyed
         
@@ -381,7 +399,7 @@
         
         &PORTRAIT_nour_noursmile
         
-        NOUR: "We would ration pastries and live off of our favorite lattes."
+        NOUR: "And we'd ration pastries and live off of our favorite lattes."
         
         &PORTRAIT_nour_nourneutral
         
@@ -389,7 +407,7 @@
         
         &PORTRAIT_nour_noursad
         
-        NOUR: "... Used to, anyway."
+        NOUR: "...We used to imagine that, anyway."
         
         &PORTRAIT_nick_nicknervous
         
@@ -429,7 +447,7 @@
         
         &PORTRAIT_ms. suwan_mssuwansad        
         
-        MS. SUWAN: "... They were like that for me, too. Made school easier."
+        MS. SUWAN: "...They were like that for me, too. Made school easier."
         
         &PORTRAIT_nour_noursmile
         
@@ -517,7 +535,7 @@
         
         &PORTRAIT_ms. suwan_mssuwanshadow
         
-        MS. SUWAN: "... God."
+        MS. SUWAN: "...God."
         
         &PORTRAIT_nick_nicksad
         
@@ -549,7 +567,7 @@
         
         &PORTRAIT_nour_noursmile
         
-        NOUR: <i>... Because I think she's ready to hear it again.</i>
+        NOUR: <i>...Because I think she's ready to hear it again.</i>
             -> END
     
     * "So... Do you like going to cafes?"
@@ -572,7 +590,7 @@
         
         &PORTRAIT_ms. suwan_mssuwanannoyed
         
-        MS. SUWAN: "... Yes."
+        MS. SUWAN: "...Yes."
         
         &PORTRAIT_nour_nourrealization
         
@@ -676,7 +694,9 @@
     
     &PORTRAIT_nick_nickbigsmile
     
-    NICK: "You were so COOL back then!"
+    NICK: "You were a PUNK back then!"
+    
+    NICK: "That's so COOL!"
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
@@ -684,7 +704,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
-    MS. SUWAN: "... But of course, establishments should listen to the people's demands."
+    MS. SUWAN: "...But of course, establishments <i>should</i> listen to the people's demands."
     
     &PORTRAIT_nour_noursmile
     
@@ -720,7 +740,7 @@
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: "Oh. Yeah. I'm... I'm ok."
+    NOUR: "Oh. Yeah. I'm... I'm okay."
     
     &PORTRAIT_nour_noursad
     
@@ -732,6 +752,6 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>... Somehow, I always end up thinking about her.</i>
+    NOUR: <i>...Somehow, I always end up thinking about her.</i>
     
     -> explored_everything

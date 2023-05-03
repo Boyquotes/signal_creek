@@ -6,10 +6,10 @@
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 25, 12 )
+extents = Vector2( 24, 11.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 35, 29.5 )
+extents = Vector2( 27, 18.5 )
 
 [node name="BurgerTable" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -37,7 +37,7 @@ region_enabled = true
 region_rect = Rect2( 127, 15, 50, 34 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -12 )
+position = Vector2( 0, -12.5 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -47,7 +47,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -16.5 )
+position = Vector2( 2, -10.5 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
