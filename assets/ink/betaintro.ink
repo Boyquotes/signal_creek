@@ -25,11 +25,11 @@
     
     &EMOTE_NOUR_RightIdle
     
-    &PORTRAIT_nour_nourannoyed
+    &PORTRAIT_nour_nourangry
     
     NOUR: “In the BROKEN ELEVATOR?!”
     
-    &PORTRAIT_nour_nourangry
+    &PORTRAIT_nour_nourannoyed
     
     NOUR: "Explain to me why this was a good idea."
     
@@ -45,6 +45,8 @@
     &PORTRAIT_nick_nicknervous
     
     NICK: "Uh..."
+    
+    &PORTRAIT_nour_nourangry
     
         * "We have to get out of here!"
     
@@ -94,6 +96,8 @@
     
     NICK: "Aw, shoot! The scary old lady caught up!"
     
+    &PORTRAIT_ms. suwan_mssuwanannoyed
+    
     MS. SUWAN: "What did you just call me?"
     
     &EMOTE_NOUR_RightIdle
@@ -104,9 +108,15 @@
     
     &EMOTE_NOUR_DownIdle
     
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
     MS. SUWAN: "Both of you are trespassing. That could-"
     
-    MS. SUWAN: "...Wait."
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "... Wait."
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: <i>"Nour?!"</i>
     
@@ -114,17 +124,27 @@
     
     NOUR: "Uhh... Hi, Ms. Suwan."
     
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
     MS. SUWAN: "How <i>dare</i> you disobey me?!"
+    
+    &PORTRAIT_ms. suwan_mssuwanannoyed
     
     MS. SUWAN: "I told you that you were <i>not</i> to step foot in this building!"
     
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
     MS. SUWAN: "You know very well that it is unsafe."
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "Not to mention, your trespassing could lead to <i>serious</i> trouble with the law."
     
     &PORTRAIT_nick_nickshocked
     
     NICK: “Well, what are YOU doing here in that case?”
+    
+    &PORTRAIT_ms. suwan_mssuwanangry
 
     MS. SUWAN: "I AM the law."
     
@@ -135,9 +155,15 @@
     
     NICK: "OH GOD— I'm so sorry! Please don't tell my Mom!"
     
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
     MS. SUWAN: "I am leading the legal team responsible for inspecting this demolition site."
     
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
     MS. SUWAN: "As <i>Nour</i> knows very well."
+    
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "Nour, how could you bring a <i>CHILD</i> here?!"
     
@@ -151,15 +177,23 @@
 
     NOUR: "I <i>told</i> you— if I came, it would just be to take some photos for my project!"
     
+    &PORTRAIT_nour_noursad
+    
     NOUR: "I'll take him and leave the second I'm finished, you <i>know</i> I will, I-"
     
     &FOLLOW_NICK_NickButtonPressingPos
     
+    &PORTRAIT_ms. suwan_mssuwanannoyed
+    
     MS. SUWAN: "Save your excuses."
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "Regardless of our professional relationship, Nour..."
     
-    MS. SUWAN: "...I will have to report <i>both</i> of you to law enforcement."
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
+    MS. SUWAN: "... I will have to report <i>both</i> of you to law enforcement."
     
     &EMOTE_NICK_ButtonPress
     
@@ -173,11 +207,19 @@
     
     &SOUND_clack
     
+    &PORTRAIT_nick_nickshocked
+    
     NICK: "C'mon, c'mon, c'mon!"
+    
+    &PORTRAIT_nick_nicknervous
+    
+    NICK: "You're an elevator! Get us anywhere BUT here!"
     
     &PORTRAIT_nour_nourannoyed
     
     NOUR: "Seriously, Nick?! Pushing those isn't going to work!"
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "She's right. This elevator is broken. It's not going anywhere—"
     
@@ -199,13 +241,13 @@
     
     &EMOTE_SUWAN_DownIdle
     
-    &PORTRAIT_nour_nourangry
+    &PORTRAIT_nour_nournervous
     
     NOUR: "What the—WHAT ARE YOU DOING?!"
     
     &PORTRAIT_nick_nickangry
     
-    NICK: "Nothing except SAVING OUR BUTTS!!!"
+    NICK: "SAVING OUR BUTTS!!!"
     
     &FOLLOW_NICK_NickRetreat
     
@@ -219,13 +261,17 @@
     
     &EMOTE_NICK_LookAround
     
-    MS. SUWAN: "Quiet, you foolish children! This elevator shouldn't be working at all—"
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
+    MS. SUWAN: "Quiet down! This elevator shouldn't be working at all—"
     
     &EMOTE_SUWAN_DownIdle
     
     &PORTRAIT_nick_nicknervous
     
     &SOUND_shlorpbackwards
+    
+    &PORTRAIT_nick_nickshocked
     
     NICK: "Why isn't it STOPPING? WHAT'S GOING ON—"
     

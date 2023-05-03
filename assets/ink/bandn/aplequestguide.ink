@@ -1,7 +1,7 @@
 
 == aplequestguide ==
 
-A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space Prince Returns"</i>. 
+A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space Prince Returns"</i>.
 
 {
     - nourplaysaplequest:
@@ -24,11 +24,11 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
 
     &FOLLOW_SUWAN_SuwanAGPos
     &FOLLOW_NICK_NickAGPos
-    &FOLLOW_Nour_NourAGPos
-    &PAUSE_1
-    &EMOTE_NOUR_UpIdle
+    &FOLLOW_NOUR_NourAGPos
+    &PAUSE_1.0
+    &EMOTE_NOUR_LeftIdle
     &EMOTE_SUWAN_RightIdle
-    &EMOTE_NICK_UpIdle
+    &EMOTE_NICK_DownIdle
 
     &PORTRAIT_nour_noursmile
 
@@ -70,9 +70,14 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
             
             MS. SUWAN: "An <i>ex-astronaut</i> wrote for a childish game like this?"
             
+            &EMOTE_NICK_Vibrating
+            
             &PORTRAIT_nick_nickangry
             
             NICK: "This game isn't childish!"
+            
+            &PAUSE_0.4
+            &EMOTE_NICK_DownIdle
             
             &PORTRAIT_nick_nickneutral
             
@@ -250,9 +255,13 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     
     NICK: "... Huh?!"
     
+    &EMOTE_NICK_Jump
+    
     &PORTRAIT_nick_nickangry
     
     NICK: "What the— this advice is BOGUS!"
+    
+    &EMOTE_NICK_DownIdle
     
     &PORTRAIT_nour_nourrealization
     
@@ -386,6 +395,8 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
         
     - Nick throws up his middle finger.
     
+    &EMOTE_NICK_MiddleFinger
+    
     NICK: "SCREW"
     
     NICK: "YOU!"
@@ -417,6 +428,10 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     - &PORTRAIT_nick_nicknervous 
     
     NICK: "..."
+    
+    &EMOTE_NICK_LookAround
+    &PAUSE_1
+    &EMOTE_NICK_DownIdle
     
     Nick quickly retracts his hand, hiding it behind his back.
     
@@ -465,6 +480,10 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     &PORTRAIT_nour_noursad
     
     NOUR: "Nick?"
+    
+    &EMOTE_NICK_LookAround
+    &PAUSE_1
+    &EMOTE_NICK_UpIdle
     
     He looks away and keeps his mouth shut. 
     
@@ -536,6 +555,8 @@ A tutorial guide to an old fantasy videogame called <i>"Aple Quest/: The Space P
     &PORTRAIT_nour_nourpondering
     
     NOUR: <i>Wasn't the game set up somewhere in the TopicSpot? I could go look for it...</i>
+    
+    &FOLLOW_NOUR_stop
     
         -> END
         

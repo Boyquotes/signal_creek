@@ -24,6 +24,10 @@
             
     }
     
+    &FOLLOW_NOUR_stop
+    &FOLLOW_NICK_NOUR
+    &FOLLOW_SUWAN_NICK
+    
 == timbertims1 ==
 
     &PORTRAIT_nick_nickpondering
@@ -121,7 +125,11 @@
         
         + ["Um, excuse me, but what are you even doing here?"] -> timbertimssus
     
-        -> END
+    &FOLLOW_NOUR_stop
+    &FOLLOW_NICK_NOUR
+    &FOLLOW_SUWAN_NICK
+    
+    -> END
 
 == timbertimspol ==
 
@@ -186,6 +194,10 @@
     &FOLLOW_NOUR_stop
     
     NOUR: "Interesting."
+    
+    &FOLLOW_NOUR_stop
+    &FOLLOW_NICK_NOUR
+    &FOLLOW_SUWAN_NICK
     
         -> END
 
@@ -288,6 +300,8 @@
     &SHLORP_POOP_Tim_out
     
     &FOLLOW_NOUR_stop
+    &FOLLOW_NICK_NOUR
+    &FOLLOW_SUWAN_NICK
     
     NOUR: "Interesting."
 
@@ -331,6 +345,8 @@
     &SHLORP_POOP_Tim_out
     
     &FOLLOW_NOUR_stop
+    &FOLLOW_NICK_NOUR
+    &FOLLOW_SUWAN_NICK
     
     NOUR: "There he goes, again."
 

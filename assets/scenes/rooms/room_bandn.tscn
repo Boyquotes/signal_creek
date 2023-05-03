@@ -789,11 +789,7 @@ __meta__ = {
 }
 
 [node name="ApleQuestGuide" parent="PlaneManager/Overworld" instance=ExtResource( 42 )]
-position = Vector2( 175, -253 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
+position = Vector2( 169, -253 )
 
 [node name="volitioncomputer" parent="PlaneManager/Overworld" instance=ExtResource( 43 )]
 material = SubResource( 29 )
@@ -852,6 +848,24 @@ position = Vector2( 78, 33 )
 
 [node name="NickLook" type="Node2D" parent="PlaneManager"]
 position = Vector2( 95, 39 )
+
+[node name="NickAGPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 168, -273 )
+
+[node name="SuwanAGPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 148, -261 )
+
+[node name="NourAGPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 190, -261 )
+
+[node name="NickBookshelfPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 477, -275 )
+
+[node name="NourBookshelfPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 502, -281 )
+
+[node name="SuwanBookshelfPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 451, -280 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
 [connection signal="body_exited" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_exited"]
