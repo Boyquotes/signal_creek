@@ -108,7 +108,7 @@
     
     &EMOTE_NOUR_DownIdle
     
-    &PORTRAIT_ms. suwan_mssuwangry
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "Both of you are trespassing. That could-"
     
@@ -132,7 +132,7 @@
     
     MS. SUWAN: "I told you that you were <i>not</i> to step foot in this building!"
     
-    &PORTRAIT_ms. suwan_mssuwangry
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "You know very well that it is unsafe."
     
@@ -163,7 +163,7 @@
     
     MS. SUWAN: "As <i>Nour</i> knows very well."
     
-    &PORTRAIT_ms. suwan_mssuwangry
+    &PORTRAIT_ms. suwan_mssuwanangry
     
     MS. SUWAN: "Nour, how could you bring a <i>CHILD</i> here?!"
     
