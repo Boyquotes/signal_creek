@@ -7,6 +7,13 @@
     }
     //convo after the first time PCs see Rina
     
+    &FOLLOW_NOUR_NourMoveAway
+    &FOLLOW_SUWAN_SuwanPolaroid
+    &PAUSE_1.0
+    &EMOTE_NOUR_RightIdle
+    &EMOTE_SUWAN_UpIdle
+    
+    
     NOUR: "Look, I said I don't want to look at this right now." // (ANGRY)
     
     MS. SUWAN: "Fine, we'll come back later then."
@@ -14,10 +21,23 @@
     -> END
     
 == polaroid_first_visit ==
-    
     The camera is surrounded by a bunch of film photographs of two girls. 
     
     One of them sits on the floor outside of the case. 
+    
+    &FOLLOW_NOUR_NourPolaroid
+    
+    &FOLLOW_NICK_NickPolaroid
+    
+    &FOLLOW_SUWAN_SuwanPolaroid
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_LeftIdle
+    
+    &EMOTE_SUWAN_RightIdle
     
     &PORTRAIT_nour_nourshocked
     
@@ -55,19 +75,49 @@
     
     NICK: "Retro stuff is super trendy now, y'know. Did you use it a lot?"
     
+    &FOLLOW_NOUR_NourMoveAway
+    
+    &PAUSE_0.1
+    
+    &EMOTE_NOUR_UpIdle
+    
     &PORTRAIT_nour_nournervous
     
     NOUR: "Yeah, kind of. It's... it's whatever." // (NERVOUS)
     
-    Nour tries to kick the photo away, but Ms. Suwan stops it with her foot.
+    Nour tries to put the polaroid back on the table, but Ms. Suwan grabs it before it reaches the table.
     
-    // ANIMATION FOR NOUR KICKING PHOTO, MS SUWAN STEPS FORWARD AND THEN LEANS DOWN
+    &FOLLOW_SUWAN_NourPolaroid
     
-    She picks it up and examines it, then looks at Nour with an eyebrow raised.
+    &PAUSE_0.1
+    
+    &EMOTE_SUWAN_UpIdle
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "This is you, isn't it? Why are there photos of you in the mall here? "
+    MS. SUWAN: "Wait Nour, there are pictures of you in this polaroid."
+    
+    NOUR: "What are you talking about?"
+    
+    MS. SUWAN: "Take a look for yourself."
+    
+    &FOLLOW_SUWAN_SuwanPolaroid
+    
+    &FOLLOW_NOUR_NourPolaroid
+    
+    &PAUSE_0.1
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &PAUSE_0.175
+    
+    &EMOTE_NOUR_Jump
+    
+    &PAUSE_2.0
+    
+    &EMOTE_NOUR_LeftIdle
+    
+    &EMOTE_SUWAN_RightIdle
     
         * "I don't know..." // (NERVOUS)
             MS. SUWAN: "Are you sure? Did you put them here?"
@@ -128,11 +178,23 @@
     
     MS. SUWAN: "Maybe all of this is someone's secret hide-out." // (SQUINTING)
     
+    &FOLLOW_NOUR_NourMoveAway
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_DownIdle
+    
     NOUR: "Yeah, sure. Look, let's just move on, okay?" // (NERVOUS)
     
     MS. SUWAN: "..."
     
     &PORTRAIT_ms. suwan_mssuwanrealization
+    
+    &FOLLOW_SUWAN_NourPolaroid
+    
+    &PAUSE_0.1
+    
+    &EMOTE_SUWAN_UpIdle
     
     MS. SUWAN: "...But it <i>is</i> strange to find photographs of yourself in a place like this regardless."
     
@@ -145,8 +207,6 @@
     &PORTRAIT_nick_nickbigsmile
     
     NICK: "Or it's magic hiding them! Can I see?" // (HAPPY)
-    
-    // NICK REACHES FOR THE PHOTO, BUT MS SUWAN RAISES IT SO HE CANT REACH
     
     MS. SUWAN: "No. Nour?" 
     
@@ -167,8 +227,6 @@
             MS. SUWAN: "We'll come back to this later, though, don't think I'll forget about it."
         
             Ms. Suwan places the photograph on top of the glass case.
-            
-            // MS SUWAN WALKS FORWARD TOWARDS THE POLAROID CAMERA AND PUTS THE PHOTO DOWN
         
             MS. SUWAN: "You <i>will</i> have to face up to whatever happened sooner or later."
             
@@ -180,13 +238,15 @@
             
             NOUR: "Whatever. Let's go." // (ANGRY)
         
-            // NICK MOVES CLOSELY TOWARDS MS SUWAN
+            &EMOTE_NICK_LeftIdle
             
             Nick leans in and whispers to Ms. Suwan. 
             
             &PORTRAIT_nick_nickworried
         
             NICK: "I think she did something she's not happy about." 
+            
+            &EMOTE_SUWAN_RightIdle
         
             MS. SUWAN: "We've all done things that might have been in poor judgement."
             
@@ -195,14 +255,24 @@
             MS. SUWAN: "But let's keep looking around for now."
             
             &PORTRAIT_nour_nourannoyed
+            
+            &EMOTE_NOUR_UpIdle
         
             NOUR: "I can <i>hear</i> you, y'know." // (ANGRY)
+            
+            &EMOTE_NICK_DownIdle
+            
+            &EMOTE_SUWAN_DownIdle
             
             &PORTRAIT_nick_nicknervous
         
             NICK: "No you can't! I'm whispering!" 
             
             NICK: "It's rude to listen on to someone whispering!" // (ANGRY)
+            
+            &EMOTE_NICK_UpIdle
+            
+            &EMOTE_SUWAN_UpIdle
             
         * "... She's an old friend..."
         
@@ -256,6 +326,8 @@
             
             MS. SUWAN: "<i>Quiet</i>."
             
+            &EMOTE_SUWAN_RightIdle
+            
             &PORTRAIT_mssuwan_mssuwanangry
             
             MS. SUWAN: "Nick, stop asking Nour questions about something she clearly does not want to talk about it."
@@ -269,6 +341,8 @@
             &PORTRAIT_nour_nourshadow
         
             NOUR: "..." // (ANGRY)
+            
+            &EMOTE_SUWAN_DownIdle
         
             MS. SUWAN: "And Nour? We'll come back to this later."
             
@@ -280,7 +354,13 @@
             
             &PORTRAIT_nour_nourannoyed
             
+            &EMOTE_NOUR_DownIdle
+            
             NOUR: "Whatever. Let's just go." // (ANGRY)
+            
+            &EMOTE_NICK_UpIdle
+            
+            &EMOTE_SUWAN_UpIdle
             
         - &MOV_RINA_BANDN
             
@@ -293,5 +373,7 @@
         &PORTRAIT_nour_nourannoyed
         
         NOUR: <i>I better tell her to get out of our way.</i> // (ANGRY)
+        
+         &FOLLOW_NOUR_stop
         
         -> rina_bandn

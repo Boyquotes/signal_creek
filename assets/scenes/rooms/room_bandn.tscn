@@ -853,5 +853,17 @@ position = Vector2( 78, 33 )
 [node name="NickLook" type="Node2D" parent="PlaneManager"]
 position = Vector2( 95, 39 )
 
+[node name="NourMoveAway" type="Node2D" parent="PlaneManager"]
+position = Vector2( 336, -286 )
+
+[node name="NourPolaroid" type="Node2D" parent="PlaneManager"]
+position = Vector2( 336, -306 )
+
+[node name="NickPolaroid" type="Node2D" parent="PlaneManager"]
+position = Vector2( 354, -311 )
+
+[node name="SuwanPolaroid" type="Node2D" parent="PlaneManager"]
+position = Vector2( 315, -308 )
+
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
 [connection signal="body_exited" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_exited"]
