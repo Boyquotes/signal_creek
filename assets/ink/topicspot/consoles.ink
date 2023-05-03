@@ -1,12 +1,3 @@
-//audio: 
-// &AUDIO_FADEIN
-// &PAUSE_1.0
-// &MUSIC_trackNAME
-// 
-// &AUDIO_FADEOUT
-// &PAUSE_1.0
-// &MUSIC_trackNAME
-
 == consoles ==
 
 {
@@ -38,6 +29,22 @@
 === consoles_before_start ===
     A start screen for a retro game called Aple Quest plays.
     
+    &FOLLOW_NICK_NickConsole
+    
+    &FOLLOW_NOUR_NourLookAtNick
+    
+    &FOLLOW_SUWAN_SuwanLookAtNick
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NICK_Jump
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
     &PORTRAIT_nick_nicksmallsmile
     
     NICK: "<i>Aple Quest</i>? Here? In brand-new condition?"
@@ -58,6 +65,12 @@
             
             &PORTRAIT_nick_nicknervous
             
+            &EMOTE_NICK_DownIdle
+            
+            &FOLLOW_NICK_NickStepAway
+            
+            &PAUSE_1.0
+            
             NICK: "Um... no. This stuff's for little kids, so..."
             
             &PORTRAIT_nick_nicksad
@@ -72,17 +85,33 @@
             
             &PORTRAIT_nick_nicknervous
             
+            &EMOTE_NICK_DownIdle
+            
+            &FOLLOW_NICK_NickStepAway
+            
+            &PAUSE_1.0
+            
             NICK: "Um... yeah. This stuff's for little kids, so..."
             
             &PORTRAIT_nick_nicksad
             
             NICK: "We should just move on."
+            
+    &EMOTE_NOUR_DownIdle
+    
+    &EMOTE_SUWAN_DownIdle
     
     - &PORTRAIT_nour_nournervous
     
-    NOUR: "...Hey, are you alright?"
+    NOUR: "... Hey, are you alright?"
     
     &PORTRAIT_nick_nickshadow
+    
+    &FOLLOW_NICK_NickGoesAway
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
     
     NICK: "I'm fine. Let's just go already."
     
@@ -95,20 +124,42 @@
     NOUR: <i>I guess something about it is bothering him.</i>
     
     NOUR: <i>Maybe he'll want to talk about it later...</i>
+    
+    &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
 
     -> END
 
 == consoles_before_aplequest ==
 
-    The soft 8-bit boops of <i>Aple Quest</i> play, but Nick only stares at the screen. 
+    The soft 8-bit boops of <i>Aple Quest</i> play, but Nick only stares at the screen.
+    
+    &FOLLOW_NICK_NickGoesAway
+    
+    &FOLLOW_NOUR_NourConsole
+    
+    &FOLLOW_SUWAN_SuwanConsole
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_UpIdle
     
         &PORTRAIT_nour_nournervous
     
     NOUR: <i>Why isn't he saying anything? Maybe I have to start first...</i>
     
         &PORTRAIT_nour_noursmile
+        
+    &EMOTE_NOUR_DownIdle
     
-    NOUR: "You know a lot about this game, right, Nick?"
+    NOUR: "You know a lot about this game, right Nick?"
     
         &PORTRAIT_nick_nicknervous
     
@@ -116,7 +167,9 @@
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    MS. SUWAN: "You gave multiple answers with contrasting meanings."
+    &EMOTE_SUWAN_DownIdle
+    
+    MS. SUWAN: "You said many words with little meaning."
     
     &PORTRAIT_nick_nickangry
     
@@ -127,14 +180,36 @@
     MS. SUWAN: "No need to be defensive. It was not a personal attack."
     
         &PORTRAIT_nick_nicksad
+        
+    &EMOTE_NICK_DownIdle
     
     NICK: "Whatever..."
     
     Nick huffs and turns away from the game.
     
+    &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
+    
     -> consoles_visited
 
 == consoles_visited ==
+
+    &FOLLOW_NOUR_NourConsole
+    
+    &FOLLOW_SUWAN_SuwanConsole
+    
+    &FOLLOW_NICK_NickGoesAway
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_UpIdle
     
     &PORTRAIT_nour_noursad
     
@@ -142,15 +217,37 @@
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: <i>We should come back when he's ready.</i>
+    NOUR: <i>We'll come back when he's ready.</i>
+    
+    &EMOTE_NICK_DownIdle
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "Can we go look at the spray paint or something?"
+    NICK: "Can we look at the spray paint or something?"
+    
+    &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
 
     -> END
 
 == consoles_start_aplequest_repeat ==
+
+    &FOLLOW_NOUR_NourConsole
+    
+    &FOLLOW_SUWAN_SuwanConsole
+    
+    &FOLLOW_NICK_NickGoesAway
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_UpIdle
 
     &PORTRAIT_nour_nourneutral
 
@@ -164,9 +261,29 @@
     
     NOUR: <i>They should be hidden somewhere in the hallway.</i>
     
+    &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
+    
     -> END
 
 == consoles_start_aplequest ==
+
+    &FOLLOW_NOUR_NourConsole
+    
+    &FOLLOW_SUWAN_SuwanConsole
+    
+    &FOLLOW_NICK_NickGoesAway
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_UpIdle
 
         &PORTRAIT_nour_noursmile
         
@@ -177,10 +294,14 @@
     NICK: "..."
     
         &PORTRAIT_nour_nournervous
+        
+    &EMOTE_NICK_DownIdle
     
     NOUR: "Do you want to try playing it?"
     
     Nick turns his head away, silent.
+    
+    &EMOTE_SUWAN_RightIdle
     
     MS. SUWAN: "Give it up, Nour. He's throwing a tantrum—"
     
@@ -191,6 +312,20 @@
     ???: "NEVER GIVE UP!!!"
     
         &PORTRAIT_nour_nournervous
+        
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_UpIdle
+    
+    &PAUSE_0.1
+    
+    &EMOTE_SUWAN_Jump
+    
+    &EMOTE_NOUR_Jump
+    
+    &EMOTE_NICK_Jump
     
     NOUR: "What the—!"
     
@@ -202,9 +337,13 @@
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
+    &EMOTE_SUWAN_RightIdle
+    
     MS. SUWAN: "Nour, what did you press?"
     
         &PORTRAIT_nour_nourannoyed
+        
+    &EMOTE_NOUR_LeftIdle
     
     NOUR: "I didn't press anything!"
     
@@ -212,13 +351,19 @@
     
     ???: "Do not panic, for I am a friend—"
     
+    &EMOTE_NICK_UpIdle
+    
     &PORTRAIT_???_emperorevercrisppreach
     
     EMPEROR EVERCRISP: "I am <b>EMINENT EMPEROR EVERCRISP APLE</b>, leader of the Aples!"
     
     &PORTRAIT_nour_nournervous
     
+    &EMOTE_NOUR_LeftIdle
+    
     NOUR: "The game character is... speaking... to us?"
+    
+    &EMOTE_SUWAN_RightIdle
     
     &PORTRAIT_ms. suwan_mssuwanrealization
     
@@ -227,6 +372,10 @@
     &PORTRAIT_emperor evercrisp_emperorevercrispsmile
     
     EMPEROR EVERCRISP: "Ho ho! Who is to say what is real and what is not?"
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
     
     &PORTRAIT_emperor evercrisp_emperorevercrispneutral
     
@@ -246,11 +395,11 @@
     
     &PORTRAIT_emperor evercrisp_emperorevercrispsad
     
-    EMPEROR EVERCRISP: "...But we've lost all communication with him."
+    EMPEROR EVERCRISP: "... But we've lost all communication with him."
     
     &PORTRAIT_emperor evercrisp_emperorevercrisppreach
     
-    EMPEROR EVERCRISP: "Please, Plane Walkers! Bring me the Prince and all the Apple Council members!"
+    EMPEROR EVERCRISP: "Please, Dream Walkers! Bring me the Prince and all the Apple Council members!"
     
     &PORTRAIT_emperor evercrisp_emperorevercrispsmile
     
@@ -258,7 +407,7 @@
     
     &PORTRAIT_ms. suwan_mssuwanpondering
     
-    MS. SUWAN: "Plane Walkers?"
+    MS. SUWAN: "Dream Walkers?"
     
         &PORTRAIT_nour_nourpondering
     
@@ -270,7 +419,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "...!"
+    NICK: "... !"
     
     &PORTRAIT_emperor evercrisp_emperorevercrispsmile
     
@@ -278,15 +427,15 @@
     
     &PORTRAIT_nour_nourneutral
     
-        * "Kind of."
+        * "Yeah."
         
                 &PORTRAIT_nour_noursmile
                 
             NOUR: "We have a big fan of yours over here, actually."
             
-            NOUR: "I think he'd love to get a Secret Ending. 
+            &EMOTE_NOUR_DownIdle
             
-            NOUR: "Right, Nick?"
+            NOUR: "I think he'd love to get a Secret Ending, right?"
             
                 &PORTRAIT_nick_nicknervous
             
@@ -299,24 +448,28 @@
             &PORTRAIT_emperor evercrisp_emperorevercrispsmile
             
             EMPEROR EVERCRISP: "HO HO! EXCELLENT, MARVELOUS, SPECTACULAR!!!"
+            
+            &EMOTE_NOUR_UpIdle
         
         * "Not really..."
         
             &PORTRAIT_emperor evercrisp_emperorevercrispsmile
             
-            EMPEROR EVERCRISP: "HO HO! EXCELLE—"
+            EMPEROR EVERCRISP: "HO HO! EXCELLENT—"
             
             &PORTRAIT_emperor evercrisp_emperorevercrispneutral
             
-            EMPEROR EVERCRISP: "...Oh."
+            EMPEROR EVERCRISP: "... Oh."
             
             &PORTRAIT_emperor evercrisp_emperorevercrispsad
             
             EMPEROR EVERCRISP: "Does a Secret Ending not motivate you enough?"
             
                 &PORTRAIT_nour_nourpondering
+                
+            &EMOTE_NOUR_UpIdle
             
-            NOUR: "Mmm... Nope. I don't really know anything about <i>Aple Quest</i>."
+            NOUR: "Mmm... nope. I don't really know anything about <i>Aple Quest</i>."
             
             &PORTRAIT_nick_nickshocked
             
@@ -336,7 +489,7 @@
             
             &PORTRAIT_nour_nournervous
             
-            NOUR: "...Um. I don't know."
+            NOUR: "... Um. I don't know."
             
             &PORTRAIT_emperor evercrisp_emperorevercrispsad
             
@@ -360,7 +513,7 @@
             
                 &PORTRAIT_nour_nourrealization
             
-            NOUR: "...You know what? Why not."
+            NOUR: "... You know what? Why not."
             
             &PORTRAIT_nour_noursmile
             
@@ -372,7 +525,7 @@
             
                 &PORTRAIT_nour_nourneutral
             
-            NOUR: "Oh, though I think we'll pass on the cereal. The ending's enough."
+            NOUR: "Oh, and I think we'll pass on the cereal. The ending's enough."
             
             &PORTRAIT_emperor evercrisp_emperorevercrisppreach
             
@@ -380,7 +533,7 @@
             
             &PORTRAIT_emperor evercrisp_emperorevercrispsmile
             
-            EMPEROR EVERCRISP: "Especially because I don't know where I put that stuff, ho ho!"
+            EMPEROR EVERCRISP: "Because I don't know where I put that stuff, ho ho!"
             
     - &PORTRAIT_nour_nourpondering
     
@@ -388,7 +541,7 @@
     
     &PORTRAIT_emperor evercrisp_emperorevercrisppreach
     
-    EMPEROR EVERCRISP: "If you want that sweet, sweet Secret Ending!"
+    EMPEROR EVERCRISP: "If you want that sweet, sweet secret ending!"
     
     &PORTRAIT_emperor evercrisp_emperorevercrispsad
     
@@ -400,7 +553,7 @@
     
     &PORTRAIT_emperor evercrisp_emperorevercrispneutral
     
-    EMPEROR EVERCRISP: "Their last coordinates were all within the hallways of the Signal Creek Mall."
+    EMPEROR EVERCRISP: "Their last coordinates were all within the hallways of the mall."
     
     &PORTRAIT_emperor evercrisp_emperorevercrisppreach
     
@@ -416,7 +569,7 @@
     
         &PORTRAIT_nour_nourneutral
     
-    NOUR: "Sounds simple enough."
+    NOUR: "That sounds simple enough."
     
     &PORTRAIT_emperor evercrisp_emperorevercrispsmile
     
@@ -426,9 +579,9 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Well, looks like we've got a new task ahead of us." 
+    NOUR: "Got it. Four apples, one Prince, all in the hallway."
     
-    NOUR: "Four apples, one Prince, all in the hallway."
+    &EMOTE_NOUR_DownIdle
     
         &PORTRAIT_nour_noursmile
     
@@ -436,17 +589,27 @@
     
     &PORTRAIT_nick_nickneutral
     
+    &EMOTE_NICK_DownIdle
+    
     NICK: "..."
     
-    Nick shrugs, but he's shifting his feet, seemingly itching to leave.
+    Nick shrugs, but he's already itching to leave.
     
         &PORTRAIT_nour_nourneutral
     
     NOUR: <i>Still silent, but at least he's communicating again.</i>
+        
+    //check - every apple found, emperor tells how many are left
+    
+    //EMPEROR EVERCRISP: "If you require a count of how many of my Aple council brethren you have located, come back to consult me!"
+    
+    //EMPEROR EVERCRISP: "I shall tell you your APLE PROGRESS!"
     
         &PORTRAIT_nour_noursmile
     
     NOUR: "Sounds good. Guess we should head out to the hallway and start looking."
+    
+    &EMOTE_SUWAN_DownIdle
     
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
@@ -458,32 +621,59 @@
     
     MS. SUWAN: "Very well. Let's go find these... apples."
     
+    &EMOTE_NOUR_LeftIdle
+    
         &PORTRAIT_nour_noursmile
     
-    NOUR: "Heh. Never thought I'd hear a sentence like that coming from you."
+    NOUR: "Never thought I'd hear something like that from you."
+    
+    &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
     
         -> END
 
 == nourplaysaplequest ==
 
+    &FOLLOW_NOUR_NourConsole
+    
+    &FOLLOW_SUWAN_SuwanConsole
+    
+    &FOLLOW_NICK_NickGoesAway
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_UpIdle
+
     &PORTRAIT_nour_noursmile
+    
+    &EMOTE_NOUR_DownIdle
 
     NOUR: "Are you ready for the Secret Ending?"
-    
-    //Nick is kinda interested, but he hates that he got vulnerable in front of nour and suwan while talking to the prince, so hes tsundere.
-    //Back to resisting showing interest... bc he has a complex over that yk so like
 
     &PORTRAIT_nick_nickneutral
     
-    NICK: "...Dunno."
+    NICK: "... Dunno."
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Hmm. Not a lot of enthusiasm there."
+    NOUR: "Hmm. Not a lot of enthusiasm right there."
     
     &PORTRAIT_nick_nicksad
     
     NICK: "..."
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &PAUSE_0.1
+    
+    &EMOTE_NOUR_Gaming
     
     &PORTRAIT_nour_nournervous
     
@@ -501,15 +691,19 @@
     
     NICK: "..."
     
+    &EMOTE_NOUR_DownIdle
+    
     &PORTRAIT_nour_nourpondering
     
-        * "What's on your mind?"
+        * "Have something to say?"
+        
+        * "Having fun watching?" 
         
         * "Want to join me?"
             
             &PORTRAIT_nick_nicknervous
     
-            NICK: "...It's okay. It's a single player game, after all."
+            NICK: "... It's alright. It's a single player game, after all."
             
             &PORTRAIT_nour_nourpondering
             
@@ -527,9 +721,11 @@
     
     NICK: "Well, uh..."
     
+    &FOLLOW_NICK_NickStepAway
+    
     &PORTRAIT_nick_nicknervous
     
-    NICK: "Can I... Can I watch?"
+    NICK: "Can I... can I watch?"
     
         &PORTRAIT_nour_noursmile
     
@@ -546,6 +742,12 @@
     NOUR: "Sure."
     
     &PORTRAIT_nour_nourneutral
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &PAUSE_0.1
+    
+    &EMOTE_NOUR_Gaming
     
     NOUR: "Okay, making your character... Shouldn't be too hard."
     
@@ -571,7 +773,7 @@
     
         &PORTRAIT_nour_nournervous
     
-    NOUR: "Huh, I didn't know that... I guess I'll switch to another weapon."
+    NOUR: "I didn't know... I guess I'll switch over to another weapon."
     
     &PORTRAIT_nour_noursmile
     
@@ -583,7 +785,7 @@
     
         &PORTRAIT_nour_nourrealization
         
-    NOUR: "Oh... but I like the bow better. It looks nicer."
+    NOUR: "Oh... but I like the bow. It looks nice."
 
     &PORTRAIT_nick_nicknervous
             
@@ -599,11 +801,11 @@
     
     &PORTRAIT_nick_nicksad
     
-    NICK: "...Or else, this run might really suck."
+    NICK: "... Or else, this run might really suck."
     
         &PORTRAIT_nour_noursmile
             
-    NOUR: "...I think I'll do that, then."
+    NOUR: "... I think I'll do that, then."
     
     Nick focuses on the game, his leg bouncing up and down.
     
@@ -635,7 +837,7 @@
     
     &PORTRAIT_nour_nournervous
     
-    NOUR: "...<i>NICK</i>, you SCARED me."
+    NOUR: "... <i>NICK</i>, you SCARED me."
     
     &PORTRAIT_nick_nicknervous
     
@@ -673,17 +875,21 @@
     
     NICK: "You know how to <i>laugh</i>?"
     
+    &EMOTE_SUWAN_DownIdle
+    
     &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    MS. SUWAN: "<i>Yes?!</i>"
+    MS. SUWAN: "<i>Yes!</i>"
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "...I'm not <i>that</i> heartless."
+    MS. SUWAN: "... I'm not <i>that</i> heartless."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
     MS. SUWAN: "And I am particularly weak to <i>good</i> word play."
+    
+    &EMOTE_NOUR_DownIdle
     
     &PORTRAIT_nour_nourrealization
     
@@ -761,7 +967,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "...Hey! You know what I've been thinking?
+    NOUR: "... Hey! You know what I've been thinking?
     
     &PORTRAIT_nour_noursmile
     
@@ -773,7 +979,7 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "I watch gaming videos and <i>others</i> play it, but..."
+    NICK: "I watch gaming videos and watch <i>others</i> play it, but..."
     
     &PORTRAIT_nick_nicksad
     
@@ -793,7 +999,7 @@
     
     &PORTRAIT_nick_nickshadow
     
-    NICK: "...What a joke."
+    NICK: "... What a joke."
     
     &PORTRAIT_nour_noursad
     
@@ -863,11 +1069,11 @@
     
     &PORTRAIT_nick_nicktears
     
-    NICK: "I don't have the time to focus on school."
+    NICK: "I don't have the time to focus on school.
     
     &PORTRAIT_nick_nickshadow
     
-    NICK: "And even when I <i>do,</i> it's so <i>hard</i>."
+    NICK: "Even when I <i>do</i> it's so <i>hard</i>."
     
     &PORTRAIT_nick_nicktears
     
@@ -883,7 +1089,7 @@
             
             &PORTRAIT_nour_nourneutral
             
-            NOUR: "Memorizing everything about <i>anything</i> takes a good amount of smarts."
+            NOUR: "Memorizing everything about anything takes a good amount of smarts."
             
             &PORTRAIT_nick_nickshocked
             
@@ -937,7 +1143,7 @@
     
     &PORTRAIT_nick_nicktears
     
-    NICK: "...because I know <i>I'm</i> the reason why my life's a mess."
+    NICK: "... because I know <i>I'm</i> the reason why my life's a mess."
     
     &PORTRAIT_nour_nourneutral
     
@@ -945,11 +1151,11 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "...!"
+    NICK: "... !"
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "Rebelling and getting yourself into trouble?"
+    NOUR: "Rebeling and getting yourself into trouble?"
     
     &PORTRAIT_nour_nourannoyed
     
@@ -957,7 +1163,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: "You'll be chasing a temporary feeling for a long time that way..."
+    NOUR: "You'll be chasing a temporary feeling for a long time with those ways..."
     
     &PORTRAIT_nour_nourneutral
     
@@ -977,11 +1183,11 @@
     
     &PORTRAIT_nour_noursmile
     
-    NOUR: "and I know you will!"
+    NOUR: "And I know you will!"
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "-then, you can dedicate the rest of your life to games..."
+    NOUR: "Then, you can dedicate the rest of your life to games..."
     
     &PORTRAIT_nour_noursmile
     
@@ -1011,15 +1217,15 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "...but it does not make the others less valuable."
+    MS. SUWAN: "... but it does not make the others less valuable."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "I... am guilty of falling into that way of thinking myself."
+    MS. SUWAN: "I... am guilty of doing this."
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "I looked down on your passions — what make you the happiest."
+    MS. SUWAN: "I looked down on your passions—what made you the happiest."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -1031,7 +1237,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "...Far more than any ounce of knowledge I have, degree be damned."
+    MS. SUWAN: "... Far more than any ounce of knowledge I have, degree be damned."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -1047,7 +1253,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "...I'm so sorry, Nick. You <i>are</i> smart, and very capable."
+    MS. SUWAN: "... I'm so sorry, Nick. You are smart and very capable."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -1073,7 +1279,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "...Here. Can you put it back for me?"
+    NICK: "... Here. Can you put it back for me?"
     
     &PORTRAIT_nick_nicksmallsmile
     
@@ -1087,7 +1293,21 @@
     
     &PORTRAIT_nick_nickbigsmile
     
-    NICK: "Okay, now back to the game!"
+    &FOLLOW_NICK_NickConsole
+    
+    &FOLLOW_SUWAN_SuwanLookAtNick
+    
+    &FOLLOW_NOUR_NourLookAtNick
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NICK_UpIdle
+    
+    NICK: "Okay, now back to the game."
     
     &PORTRAIT_nick_nickpondering
     
@@ -1103,6 +1323,12 @@
         
     &PAUSE_0.5
     
+    &EMOTE_NICK_RightIdle
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_SUWAN_RightIdle
+    
     NICK: "AGH, she's here! What does she want now?"
     
     &PORTRAIT_nour_nournervous
@@ -1117,6 +1343,8 @@
     
     NICK: "It's my turn to give <i>you</i> some advice!"
     
+    &EMOTE_NOUR_LeftIdle
+    
     &PORTRAIT_nick_nicknervous
     
     NICK: "I think you should confront her about how she treated you."
@@ -1127,13 +1355,33 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>...I guess I should talk to her.</i>
+    NOUR: <i>... I guess I should talk to her.</i>
+    
+    &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
     
     &LIGHT_Nick2
 
     -> light_on
 
 === consoles_afternickroute ===
+
+    &FOLLOW_NICK_NickConsole
+    
+    &FOLLOW_SUWAN_SuwanConsole
+    
+    &FOLLOW_NOUR_NourConsole
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
 
     The bow-user character from the last game played stands idle on the screen.
     
@@ -1164,5 +1412,11 @@
     &PORTRAIT_nick_nickbigsmile
     
     NICK: "Maybe! I guess the only way to find out would be to play..."
+    
+    &FOLLOW_NOUR_stop
+    
+    &FOLLOW_NICK_NOUR
+    
+    &FOLLOW_SUWAN_NICK
     
         -> END
