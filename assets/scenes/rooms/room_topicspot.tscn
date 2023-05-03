@@ -523,4 +523,25 @@ position = Vector2( 322, 129 )
 [node name="SuwanCheckOut" type="Node2D" parent="PlaneManager"]
 position = Vector2( 323, 141 )
 
+[node name="NickConsole" type="Node2D" parent="PlaneManager"]
+position = Vector2( 234, -40 )
+
+[node name="SuwanConsole" type="Node2D" parent="PlaneManager"]
+position = Vector2( 218, -40 )
+
+[node name="NourConsole" type="Node2D" parent="PlaneManager"]
+position = Vector2( 248, -40 )
+
+[node name="NickStepAway" type="Node2D" parent="PlaneManager"]
+position = Vector2( 234, -25 )
+
+[node name="NickGoesAway" type="Node2D" parent="PlaneManager"]
+position = Vector2( 234, -10 )
+
+[node name="NourLookAtNick" type="Node2D" parent="PlaneManager"]
+position = Vector2( 251, -33 )
+
+[node name="SuwanLookAtNick" type="Node2D" parent="PlaneManager"]
+position = Vector2( 215, -34 )
+
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]
