@@ -464,11 +464,8 @@
             &PORTRAIT_emperor evercrisp_emperorevercrispsmile
             
             EMPEROR EVERCRISP: "HO HO! EXCELLENT—"
-<<<<<<< HEAD
-=======
             
             &MUSIC_STOP
->>>>>>> Ashley
             
             &PORTRAIT_emperor evercrisp_emperorevercrispneutral
             
@@ -547,12 +544,9 @@
             &PORTRAIT_emperor evercrisp_emperorevercrispsmile
             
             EMPEROR EVERCRISP: "Because I don't know where I put that stuff, ho ho!"
-<<<<<<< HEAD
-=======
             
             &MUSIC_ApleQuestMusic
->>>>>>> Ashley
-            
+
     - &PORTRAIT_nour_nourpondering
     
     NOUR: "So all we have to do is find four apple... People... And then the Prince?"
@@ -645,8 +639,6 @@
     
     NOUR: "Never thought I'd hear something like that from you."
     
-<<<<<<< HEAD
-=======
     &PAUSE_1.0
     
     &AUDIO_FADEOUT
@@ -655,7 +647,6 @@
     
     &MUSIC_TopicSpotMusic
     
->>>>>>> Ashley
     &FOLLOW_NOUR_stop
     
     &FOLLOW_NICK_NOUR
@@ -1298,11 +1289,9 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-<<<<<<< HEAD
     MS. SUWAN: "... I'm so sorry, Nick. You are smart and very capable."
-=======
+
     MS. SUWAN: "...I'm so sorry, Nick. You are smart and very capable."
->>>>>>> Ashley
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
