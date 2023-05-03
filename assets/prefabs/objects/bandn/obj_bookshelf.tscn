@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 40.5, 8 )
+extents = Vector2( 40.5, 10 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 40.5, 8.125 )
@@ -39,7 +39,7 @@ region_enabled = true
 region_rect = Rect2( 431, 225, 83, 64 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -8 )
+position = Vector2( -0.5, -6 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
@@ -49,7 +49,6 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( -0.5, 0 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
