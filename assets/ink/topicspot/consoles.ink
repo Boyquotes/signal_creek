@@ -911,7 +911,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "...I'm not <i>that</i> heartless."
+    MS. SUWAN: "... I'm not <i>that</i> heartless."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -995,7 +995,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: "...Hey! You know what I've been thinking?
+    NOUR: "... Hey! You know what I've been thinking?
     
     &PORTRAIT_nour_noursmile
     
@@ -1031,7 +1031,7 @@
     
     &PORTRAIT_nick_nickshadow
     
-    NICK: "...What a joke."
+    NICK: "... What a joke."
     
     &PORTRAIT_nour_noursad
     
@@ -1179,7 +1179,7 @@
     
     &PORTRAIT_nick_nicktears
     
-    NICK: "...because I know <i>I'm</i> the reason why my life's a mess."
+    NICK: "... because I know <i>I'm</i> the reason why my life's a mess."
     
     &PORTRAIT_nour_nourneutral
     
@@ -1253,7 +1253,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "...but it does not make the others less valuable."
+    MS. SUWAN: "... but it does not make the others less valuable."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -1273,7 +1273,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "...Far more than any ounce of knowledge I have, degree be damned."
+    MS. SUWAN: "... Far more than any ounce of knowledge I have, degree be damned."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -1315,7 +1315,7 @@
     
     &PORTRAIT_nick_nicknervous
     
-    NICK: "...Here. Can you put it back for me?"
+    NICK: "... Here. Can you put it back for me?"
     
     &PORTRAIT_nick_nicksmallsmile
     
@@ -1391,7 +1391,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>...I guess I should talk to her.</i>
+    NOUR: <i>... I guess I should talk to her.</i>
     
     &PAUSE_1.0
     
