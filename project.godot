@@ -104,7 +104,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://assets/scripts/character/npc_kristy.gd"
 }, {
-"base": "Area2D",
+"base": "Interactive",
 "class": "LocationTrigger",
 "language": "GDScript",
 "path": "res://assets/scripts/environment/location_trigger.gd"
