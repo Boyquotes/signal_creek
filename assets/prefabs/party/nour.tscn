@@ -1,8 +1,73 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/scripts/character/character_navigator.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/nour_walking_past.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/sprites/characters/sheet_nour_past.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/animations/nour_walking_past.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_nour_past.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=24]
+resource_name = "Gaming"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 31, 30 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "HandRecord"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 24, 25, 26, 27 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "HandsUp"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 28, 29 ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "Jump"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.0432125, -17 ), Vector2( 0.043, -21 ), Vector2( 0.043, -17 ), Vector2( 0.043, -20 ), Vector2( 0.043, -17 ) ]
+}
 
 [sub_resource type="Animation" id=21]
 resource_name = "LookAround"
@@ -20,38 +85,51 @@ tracks/0/keys = {
 "values": [ 0, 13, 14, 12, 19, 20, 21, 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 4, 2.5 )
+[sub_resource type="Animation" id=25]
+resource_name = "Vibrating"
+length = 0.15
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -17 ), Vector2( -1, -17 ), Vector2( 1, -17 ) ]
+}
 
-[sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 10, 8 )
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 5, 3.5 )
 
 [node name="NOUR" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
-inkname = "NOUR"
+walking_spritesheet = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 2
-position = Vector2( 0, -17 )
+position = Vector2( 0.0432125, -17 )
 texture = ExtResource( 3 )
 hframes = 6
-vframes = 4
+vframes = 6
+frame = 3
 region_rect = Rect2( 0, 0, 18, 32 )
 __meta__ = {
 "_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpwbGF5ZXJ8PQpzb3VyY2V8PQpsYXllcnw9Cm9wX2V4cHw9RmFsc2UKb19mb2xkZXJ8PQpvX25hbWV8PQpvbmx5X3Zpc2libGV8PUZhbHNlCm9fZXhfcHw9Cg=="
 }
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 2 )]
+anims/Gaming = SubResource( 24 )
+anims/HandRecord = SubResource( 22 )
+anims/HandsUp = SubResource( 23 )
+anims/Jump = SubResource( 26 )
 anims/LookAround = SubResource( 21 )
+anims/Vibrating = SubResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -1.5 )
+position = Vector2( 0, -3 )
 shape = SubResource( 6 )
-
-[node name="PlayerVisible" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerVisible"]
-shape = SubResource( 20 )
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-enabled = true

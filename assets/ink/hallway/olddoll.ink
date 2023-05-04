@@ -1,88 +1,74 @@
+
 == olddoll ==
 
-    {
-        - currentWorld == "dream" && olddoll_real:
-            -> olddoll_realvisited
-            
-        - currentWorld == "dream":
-            -> olddoll_dream
-            
-        - currentWorld == "real" && olddoll_dream:
-            -> olddoll_dreamvisited
-        
-        - else:
-            -> olddoll_real
-    }
-//---------------- DREAM WORLD ----------------
+    { - !olddoll_first: -> olddoll_first }
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: "This old doll, again."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
 
-== olddoll_dream ==
-
-    The cracks in the doll started to disappear and the dull porcelain began to glitter. Ms Suwan reaches out to pick it up.
-        
-    Ms Suwan's fingertips lightly touch the glossy figurine. As she tries to grip her plam around the doll...
+    MS. SUWAN: "..."
     
-    &LIGHT_Nick0
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
-    -> light_on
-    
-    //&it quickly fades away.
+    MS. SUWAN: "Let's keep moving."
     
     -> END
-
-
-== olddoll_realvisited ==
-
-    The doll lays on the floor once again...
     
-    -> END
+== olddoll_first ==
 
-//SUBSEQUENT DREAM KNOTS HERE
-
-
-//---------------- REAL WORLD ----------------
-
-== olddoll_real ==
-
-    A porcelain doll sits on a dusty shelf. Ms Suwan slowly walks around it but its glass eyes follow her. She wants to pick it up, hold it, and observe it further.
+    &PORTRAIT_nour_nourpondering
     
-    NOUR: "I hate these kinds of dolls. It's eyes keep following me even when I move around its so creepy."
+    NOUR: "Hmm, what's this? Some kind of old doll?"
     
-    :MS SUWAN:
+    &PORTRAIT_ms. suwan_mssuwannervous
     
-        * [Stare longingly] I always wanted a doll like this when I was a kid. They were very popular where I grew up and almost all of my friends had them. //who is talking here?
+    MS. SUWAN: "..."
+    
+    //STRETCH GOAL: MS. SUWAN WALKS AROUND THE DOLL
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "Those <i>creepy</i> eyes... They keep following me around."
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "... I wanted a doll like this as a child."
+    
+    &PORTRAIT_nick_nickpondering
         
     NICK: "Why didn't you have one?"
     
-    :MS SUWAN:
+    &PORTRAIT_ms. suwan_mssuwanangry
     
-        ** [Laugh softly] My mother did not allow me to have one.
-        
-     She continues to stare longingly at the doll. She was it to be hers but she can't bring herself to allow that pleasure.
-     
-     :MS SUWAN:
-     
-        ***Pick up the doll -> pickedUpDoll //plane switching
-        
-        ***Walk away ->WalkAway
-        
-    =pickedUpDoll
+    MS. SUWAN: "My mother. She did not allow it."
     
-        &Ms. Suwan picks up the doll.
-        
-        -> END
-
-
-==WalkAway==
+    &PORTRAIT_ms. suwan_suwansad
     
-    She breaks the eye contact between herself and the doll and brings herself to walk away
+    MS. SUWAN: "..."
     
-    ->END
-
-
-== olddoll_dreamvisited ==
-
-    The creepy old doll's eyes are following you once more. //who?
+    // &PORTRAIT_nick_nickangry
+   
+    // NICK: "Come on, I wanna go to TopicSpot!"
+    
+    // &PORTRAIT_nick_nickneutral
+    
+    // MS. SUWAN: "..."
+    
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
+    MS. SUWAN: "Let's not linger on this."
+    
+    &PORTRAIT_nick_nicksad
+    
+    NICK: "Oh, uh... Okay."
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: <i>Doesn't sound like this was a happy memory.</i>
     
     -> END
 
-//SUBSEQUENT REAL KNOTS HERE
+

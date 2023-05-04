@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=1]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.089
+shader_param/color_shlorp = Color( 0, 1.02, 1.2, 1 )
+shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.0
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0

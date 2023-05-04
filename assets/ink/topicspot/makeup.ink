@@ -1,93 +1,83 @@
 == makeup ==
 
+    It's a display of gaudy makeup palettes.
+    
+    The text on the packaging looks like metal band logos and gothic font.
+    
+    It's all indecipherable.
+
     {
-        - currentWorld == "dream" && makeup_real:
-            -> makeup_realvisited
-            
-        - currentWorld == "dream":
-            -> makeup_dream
-            
-        - currentWorld == "real" && makeup_dream:
-            -> makeup_dreamvisited
-        
-        - else:
-            -> makeup_real
+        -!makeup_convo: 
+            -> makeup_convo
     }
-//---------------- DREAM WORLD ----------------
-
-== makeup_dream ==
-
-    //On her first trip to the mall alone after getting her driver's license, Nour bought a palette of black eyeshadow from the TopicStop.
     
-    NOUR: These eyeshadow palettes were such a blessing and a curse. My first brand of punk makeup.
-    
-    NOUR: Funny, all of the ones here are the exact same one I used. It was discontinued years ago.
-    
-    MS SUWAN: I doubt this is truly safe for someone's skin.
-    
-    NOUR: I mean, I used one of these palettes of eyeshadow for four years and my skin seems to have turned out fine.
-    
-    NOUR: I used to carry it around everywhere so my parents wouldn't find it. I'd put it on in the school bathroom and would take it off before I went home. Kept it hidden in my car, too. 
-    
-    NICK: I always thought makeup was really cool... I said that to my mom once and she got really mad. 
-    
-    NOUR: Boo, she shouldn't have! Makeup's cool for everyone, punk and goth makeup especially. 
-    
-    NOUR: It's been worn by all kinds of people since like, the seventies.
-    
-    NICK: Huh... Could I... try some?
-    
-    NOUR: Oh, sure! I'm not very good at it, but black eyeshadow can be a little messy. You can rub it on with your finger if we can't find a brush.
+    They're a reminder of being a teenager.
     
     -> END
 
 
-== makeup_realvisited ==
+== makeup_convo ==
+
+    &PORTRAIT_nour_noursmile
     
-    NOUR: Less generic brands here. Funny, all of these are the exact same one I use to use. It was discontinued years ago.
+    NOUR: "These eyeshadow palettes were both a blessing and a curse."
     
-    MS SUWAN: I doubt this is truly safe for someone's skin.
+    NOUR: "My first brand of punk makeup."
     
-    NOUR: I mean, I used one of these palettes of eyeshadow for four years and my skin seems to have turned out fine.
+    &PORTRAIT_nour_noursad
     
-    NOUR: I used to carry it around everywhere so my parents wouldn't find it. I'd put it on in the school bathroom and would take it off before I went home. Kept it hidden in my car, too. 
+    NOUR: "Funny, there's one here that's the exact same that I used."
     
-    NICK: I always thought makeup was really cool... I said that to my mom once and she got really mad. 
+    NOUR: "It was discontinued ages ago." // (FROWNING)
     
-    NOUR: Boo, she shouldn't have! Makeup's cool for everyone, punk and goth makeup especially. 
+    &PORTRAIT_ms. suwan_mssuwansad
     
-    NOUR: It's been worn by all kinds of people since like, the seventies.
+    MS. SUWAN: "I'm concerned about the health impacts of putting this on someone's skin." // (FROWNING)
     
-    NICK: Huh... Could I... try some?
+    &PORTRAIT_nour_nourneutral
     
-    NOUR: Oh, sure! I'm not very good at it, but black eyeshadow can be a little messy. You can rub it on with your finger if we can't find a brush.
+    NOUR: "I mean... I used one of these palettes for four years and my skin's turned out fine."
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "I carried it in my backpack so my parents wouldn't find it."
+    
+    NOUR: "I'd put it on in the school bathroom and would take it off before I went home."
+    
+    NOUR: "Kept it hidden in my car, too."
+    
+    &PORTRAIT_nick_nicksmallsmile
+    
+    NICK: "I always thought makeup was cool...: // (SMILING)
+    
+    &PORTRAIT_nick_nicksad
+    
+    NICK: "Though, I said that to my mom once and she got really mad..." // (FROWNING)
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: "She shouldn't have."
+    
+    NOUR: "Makeup's cool for everyone, punk and goth makeup especially."
+    
+    NOUR: "It's been worn by all kinds of people since like, the seventies."
+    
+    &PORTRAIT_nick_nickpondering
+    
+    NICK: "Huh... Could I... try some?"
+    
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: "Oh, sure! I'm not very good at it, but black eyeshadow can be a little messy."
+    
+    NOUR: "You can rub it on with your finger if we can't find a brush."
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "Maybe not right now. We have more important things to worry about."
+    
+    MS. SUWAN: "Besides, who knows how old these are, if they were discontinued ages ago."
+    
+    MS. SUWAN: "Let's go."
     
     -> END
-
-//SUBSEQUENT DREAM KNOTS HERE
-
-
-//---------------- REAL WORLD ----------------
-
-== makeup_real ==
-    
-    //On her first trip to the mall alone after getting her driver's license, Nour bought a palette of black eyeshadow from the TopicStop.
-    
-    NOUR: Just a generic brand of black makeup.
-    
-    NOUR: With how long it's probably been here, I couldn't be paid enough to put that on my skin.
-    
-    -> END
-
-
-== makeup_dreamvisited ==
-
-    NOUR: Looks like a newer version of the palettes we saw.
-    
-    NOUR: The packaging is different, but the colors look the same.
-    
-    NOUR: ...And of course it's tripled in price.
-    
-    -> END
-
-//SUBSEQUENT REAL KNOTS HERE

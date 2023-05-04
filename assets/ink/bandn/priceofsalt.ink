@@ -1,87 +1,82 @@
 == priceofsalt ==
 
-    {
-        - currentWorld == "dream" && priceofsalt_real:
-            -> priceofsalt_realvisited
-            
-        - currentWorld == "dream":
-            -> priceofsalt_dream
-            
-        - currentWorld == "real" && priceofsalt_dream:
-            -> priceofsalt_dreamvisited
-        
-        - else:
-            -> priceofsalt_real
-    }
-//---------------- DREAM WORLD ----------------
-
-== priceofsalt_dream ==
-
-    //there's an overflowing shelf of books, all with the same title and author: The Price of Salt by Patricia Highsmith.
-    //Nour used to read bits and pieces of the book whenever she'd come to the mall with her family; they never let her buy it, so she'd read as many chapters as she could whenever they'd leave her be in the store.
+    It's a stack of books. They're all copies of the same novel, titled <i>The Price of Salt</i>.
     
-    Nour finds a massive stack of books. They're all copies of the same novel, titled The Price of Salt.
-    
-    NOUR: Whoa, never seen so many copies of these! There's always only one or two left in the store at any given time.
-    
-    NOUR: I used to hide one with a bookmark on one of the shelves so I'd always know where it was and where I left off when I'd come back to read it. I was so scared someone would buy it.
-    
-    NOUR: Good times.
-    
-    NICK: Why didn't you just like, y'know, buy a copy?
-    
-    NOUR: It's, uh. It's a queer book. My parents would've killed me if they saw me with it, so I'd come here while they were busy shopping in the mall to read it.
-    
-    NICK: Huh. Very sneaky!
+    {-!priceofsalt_convo: -> priceofsalt_convo}
     
     -> END
 
+=== priceofsalt_convo ===
 
-== priceofsalt_realvisited ==
+    &PORTRAIT_nour_nourneutral
     
-    NOUR: Oh, *now* I know what book that was in the other place! It's the Price of Salt. I've never seen so many copies of these.
+    NOUR: "I remember this book. Never had the guts to purchase one or be seen with it."
     
-    NOUR: Guess the folks here really like the book.
+    NOUR: "I used to hide one with a bookmark on one of the shelves."
     
-    NICK: Urgh, looks boring to me.
+    &PORTRAIT_nour_noursmile
     
-    NOUR: Well, I really liked it. I used to hide one with a bookmark on one of the shelves so I'd always know where it was and where I left off when I'd come back to read it. I was so scared someone would buy it.
+    NOUR: "That way, I'd always know where I left off when I'd come back to read it."
     
-    NOUR: Good times.
+    &PORTRAIT_nour_nournervous
     
-    NICK: Why didn't you just like, y'know, buy a copy?
+    NOUR: "I was so scared someone would buy the one I hid."
+
+    &PORTRAIT_nick_nickpondering 
     
-    NOUR: It's, uh. It's a queer book. My parents would've killed me if they saw me with it, so I'd come here while they were busy shopping in the mall to read it.
+    NICK: "Wait..."
     
-    NICK: Huh. Sneaky!
+    &PORTRAIT_nick_nickshocked
+    
+    NICK: "Is that what you'd do when you'd leave me and Sami in the food court?!"
+    
+    &PORTRAIT_nour_nourrealization
+    NOUR: "Uhhh..."
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "... Maybe."
+    
+    &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "HAHA! I'm gonna tell Sami."
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: "I mean, go ahead? What's he gonna do about it anyways? The mall's closed!"
+
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "Well. Usually."
+    
+    &PORTRAIT_nick_nickneutral
+    
+    NICK: "I'm still gonna tell him. We always wondered where you went, and he deserves the truth, too!" 
+    
+    &PORTRAIT_nick_nickpondering 
+    
+    NICK: "Why did you have to sneak away to read it?
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "It's, uh... It's a queer book. So I didn't want anyone to see me reading it."
+    
+    &PORTRAIT_nour_nourannoyed
+
+    NOUR: "I don't care anymore, though. Obviously, or I wouldn't be telling you all this."
+    
+    &PORTRAIT_nick_nickneutral
+    
+    NICK: "Huh... You're pretty good at sneaking off, aren't ya?" 
+    
+    &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "If I were you, I would've gone to TopicSpot and played games..." 
+    
+    NICK: "Yet you used your powers for GAY NERD stuff!"
+    
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: "Psh, whatever."
     
     -> END
-
-
-//SUBSEQUENT DREAM KNOTS HERE
-
-
-//---------------- REAL WORLD ----------------
-
-== priceofsalt_real ==
-
-    //the real price of salt file
-    //there's a single copy of The Price of Salt by Patricia Highsmith hidden amongst a bunch of other books, none belonging to any one genre.
-    
-    NOUR: I can hardly read the title on this, it's so beaten up. Who treats a book like that?!
-    
-    NOUR: Looks kinda familiar, but it's too hard to make out.
-    
-    -> END
-
-
-== priceofsalt_dreamvisited ==
-
-    NOUR: Oh, there's a copy of The Price of Salt here, too. It's so beaten up, it's hard to tell what book it is.
-    
-    NOUR: I almost want to take it for old time's sake.
-     
-    -> END
-
-
-//SUBSEQUENT REAL KNOTS HERE

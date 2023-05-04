@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/emperorevercrisplaugh.wav-45802032b21e608714f2984a1b14b73a.sample"
+
+[deps]
+
+source_file="res://assets/sounds/sfx/emperorevercrisplaugh.wav"
+dest_files=[ "res://.import/emperorevercrisplaugh.wav-45802032b21e608714f2984a1b14b73a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

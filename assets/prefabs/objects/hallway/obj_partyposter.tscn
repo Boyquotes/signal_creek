@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/textures/lights/spotlight_128.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 
@@ -10,7 +10,7 @@
 extents = Vector2( 16, 16 )
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 24, 23 )
+extents = Vector2( 15.5, 18.5 )
 
 [node name="PartyPoster" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -28,6 +28,7 @@ region_enabled = true
 region_rect = Rect2( 223, 191, 34, 114 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
@@ -54,7 +55,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -9 )
+position = Vector2( 0.5, -4.5 )
 shape = SubResource( 23 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

@@ -1,108 +1,128 @@
+// Ms Suwan and Nour focused conversation regarding old novel 
+// gives insight to Ms Suwans background in China
+// NOTE- updated this convo; nour knows a lot ab politics, she doesn't need ms. suwan to tell her about CCP censorship.
+
 == oldnovel ==
 
+    It's the old novel, <i>Jane Eyre</i>.
+
     {
-        - currentWorld == "dream" && oldnovel_real:
-            -> oldnovel_realvisited
+        - !oldnovel_first:
+            -> oldnovel_first
             
-        - currentWorld == "dream":
-            -> oldnovel_dream
-            
-        - currentWorld == "real" && oldnovel_dream:
-            -> oldnovel_dreamvisited
-        
-        - else:
-            -> oldnovel_real
+        - chadbrodykristy3 && !oldnovel_end:
+            -> oldnovel_end
     }
-//---------------- DREAM WORLD ----------------
-
-== oldnovel_dream ==
-
-    Ms Suwan opens the novel, turning to a random page. The scent of the old book prickles her nose. She tries to read the first sentence of the paragraph but her mind wanders.
     
-    NOUR: Is that Jane Eyre? I read that book my junior year of high school for AP Lit. Pretty interesting.
-    
-    :MS SUWAN:
-        +[I've never read it] When I first moved to the US I saw a copy of Jane Eyre being sold in a local bookstore and I was taken back because the book was banned in China when I lived there.
-    
-    NOUR: Wait why was the book banned?
-
-    :MS SUWAN:
-        ++[It was a different time] Well during the late 80s, the novel was censored in China due to it being seen by the government as "socially corrupting" to the youth of China during the Cultural Revolution.
-        
-    NOUR: [writing notes in her journal] oh I did not know that. Thank you for telling me about this. I learned a bit about the Cultural Revolution in school but I never knew about the specifics.
-        
-    May I ask why you never read the book?
-        
-    :MS SUWAN:
-        +++[Honestly] It wouldn't be right.
-    
-    Ms Suwan puts the novel back to the shelf, trying to brush off the discontentness shes feeling.
-
-    -> END
-
-
-== oldnovel_realvisited ==
-
-    Just the same copies of Jane Eyre on the bookshelf
+    A controversial novel, for its opposition to filial piety.
     
     -> END
-
-//SUBSEQUENT DREAM KNOTS HERE
-
-
-//---------------- REAL WORLD ----------------
-
-== oldnovel_real ==
-
-    Ms Suwan notices a copy of Jane Eyre sitting vacantly on the bookshelf.
     
-    :MS SUWAN:
+== oldnovel_first ==
+
+    Ms. Suwan flips open the first page, and begins to read.
     
-        * Pick it up
-            -> pickUpJaneEyre
-        * Walk away
-            -> walkAway
-
-
-==pickUpJaneEyre==
-
-    Ms. Suwan picks up the novel. Her fingertips graze the thick dust coating the cover. The cover is faded and the edges are bent.
+    NOUR: <i>She seems to be thinking about something else...</i>
     
-    :MS SUWAN:
-        
-        * Open it
-            -> openJane //shift plane
-            
-        * Put it back
-            -> putItBack
+    &PORTRAIT_nour_noursmile
     
-    =openJane
+    NOUR: "That's uh... Jane Eyre. A classic."
+
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
-        &Ms. Suwan opens the book.
-        -> DONE
-
-
-== putItBack ==
-
-    She places the novel back on the shelf, unable to allow herself to remember.
+    MS. SUWAN: "Interesting. You know it?"
     
-    :MS SUWAN:
+    &PORTRAIT_nour_nourneutral
     
-        * Walk away
-            -> walkAway
+    * "Read it for AP Lit, junior year of high school."
+    
+    &PORTRAIT_nour_nourneutral
+    
+    * "Sure, I've heard of it."
+    
+    &PORTRAIT_nour_noursmile
+    
+    * "It's one of my favorites."
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral   
+    
+    - MS. SUWAN: "...Hm."
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "Looks like you're familiar with it."
+    
+    &PORTRAIT_ms. suwan_mssuwannervous 
+    
+    MS. SUWAN: "Hm. Maybe."
+    
+    NOUR: "You've had your eye on it for a while."
 
+    MS. SUWAN: "Well, the name sounds familiar, but I know nothing of it."
 
-== walkAway==
+    MS. SUWAN: "I remember talks about certain <i>banned</i> novels, back in China. I was young."
+    
+    NOUR: "What kind of talk?"
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral  
+    
+    MS. SUWAN: "Opposition to Western ideology and its extreme individualism."
 
-    Ms. Suwan slowly walks away from the bookshelf, her mind still stuck on the novel.
+    MS. SUWAN: "Which this book promotes."
+    
+    NOUR: "...You know, Egyptian and Chinese cultures have that in common."
+    
+    NOUR: "There's a natural aversion to Western ideas, and a... <i>Family First</i> attitude."
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "Generally, it's valid. Sometimes it's not."
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: "So..."
+    
+    NOUR: "May I ask why you never read the book?"
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "I was not ready to embrace myself as an individual."
+    
+    MS. SUWAN: "...I can't say things have changed."
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "I don't completely understand what's going on..."
+    
+    NOUR: "But I know it can be hard to shake those feelings."
+    
+    &PORTRAIT_ms. suwan_mssuwansmile
+    
+    MS. SUWAN: "I appreciate that, Nour."
+    
+    Ms. Suwan closes the cover, in an attempt to brush off her discontent.
     
     -> END
 
-
-== oldnovel_dreamvisited ==
-
-    The Jane Eyre book, sitting alone on the bookshelf.
-
-    -> END
-
-//SUBSEQUENT REAL KNOTS HERE
+    
+//if you have finished Ms Suwan's storyline, she would come back and take the old novel to read
+== oldnovel_end ==
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "I think... it is finally time for me to read this novel."
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "Really?"
+    
+    &PORTRAIT_ms. suwan_mssuwansmile
+    
+    MS. SUWAN: "I think I can afford to read things other than contracts and case law."
+    
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: "..."
+    
+    Ms. Suwan places a copy of <i>Jane Eyre</i> into her briefcase.
+    
+    -> END 

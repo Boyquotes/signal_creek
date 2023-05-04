@@ -1,58 +1,84 @@
+== vapestand ==
 
-==vapestand==
+    It's a vape stand, with various flavors on sale.
 
-It's a vape stand, with several different flavors on sale. Nick stops in front of them, interested.
+    { - !vapestand_first: -> vapestand_first }
 
-{
-    - !nickaskstobuyvape:
-        -> nickaskstobuyvape
+    -> explored_everything
 
-    - noursuggestion:
-        -> nicknotinterested
+=== vapestand_first ===
 
-}
+    &PORTRAIT_nick_nickpondering
 
--> END
-
-== nickaskstobuyvape ==
-
-NICK: "Hey, Nour, Ms.Suwan! You think you could buy me one of these? I'll pay you back later." 
-
-NOUR: "The vapes?"
-
-MS. SUWAN: "Absolutely <i>not</i>, young man. Do you know what these do to your body?"
-
-NICK: "Aren't they supposed to be like... <i>healthier</i> than cigarettes? What's the big deal?"
-
-NOUR: "Healthi<i>er</i> doesn't mean health<i>y</i>. What do you want with vapes anyways? Aren't you underage?"
-
-NICK: "<i>Duh</i> I'm underage. It's why I'm asking you to get them for me. Come on, <i>please</i>...? I'll pay you back afterwards, promise!"
-
-MS. SUWAN: "Nick, vaping doesn't make you look cool. It makes you look like a deadbeat addict."
-
-NICK: "Sheesh, you sound like those Say No To Drugs assemblies we have in school every other month."
-
-MS. SUWAN: "Good. It means I'm saying the right things that you should listen to."
-
-NICK: "Look, it's not a big deal! So many of my friends vape. And they do it in the <i>bathroom</i>."
-
-NOUR: "...In the bathroom, huh... Well, Nick, there's plenty of other perfectly cool things to do out in the world that won't get you addicted to drugs."
-
-NICK: "Oh yeah? Name one thing." 
-
-NOUR: "You're on. Give me a bit, we can definitely find something in this mall that's cooler than vaping."
-
-NOUR: <i>Maybe I can introduce him to photography? That or reading, I enjoy both, so maybe he will too...</i>
-
-NICK: "I hope that whatever you're planning to show me is EXTRA cool!"
-
-NOUR: <i>I should lead Nick somewhere I can find a safe but fun hobby. Now where could that be in a big mall like this?</i>
-&LIGHT_Nick0
--> light_on
-// -> END
-
-== nicknotinterested ==
-
-- Nick's gaze seems to linger on the vapes, but when he looks over towards you and catches your eye, he nods and then looks away from it, bouncing on the balls of his feet.
-
--> END
+    NICK: "<i>Must be 18+ to purchase...</i>"
+    
+    &PORTRAIT_nick_nickangry
+    
+    NICK: "This <i>sucks</i>! It might be the ONLY time I wish I were an adult."
+    
+    &PORTRAIT_nick_nickshocked
+    
+    NICK: "Hey, Nour... You're above 18. Could you—"
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    * "I don't think I trust you with these."
+    
+        &PORTRAIT_nick_nickangry
+    
+        NICK: "Dude, I'm chill. I swear."
+        
+        &PORTRAIT_nour_nourannoyed
+        
+        NOUR: "No way."
+        
+        &PORTRAIT_nick_nickangry
+    
+        NICK: "... Dang it."
+    
+        &PORTRAIT_nick_nicksad
+        
+        NICK: "Ms. Suwan? <i>Please</i>, I'll pay you back—"
+        
+        &PORTRAIT_ms. suwan_mssuwanannoyed
+        
+        MS. SUWAN: "Absolutely not."
+        
+        &PORTRAIT_nick_nickangry
+        
+        NICK: "It was worth a shot."
+    
+    * "Do you even know what's in them?"
+    
+        &PORTRAIT_nick_nickpondering
+    
+        NICK: "Uh... Cool flavors?"
+        
+        &PORTRAIT_nick_nicksmallsmile
+    
+        NICK: "Like, look at the bubblegum... Do you think it actually tastes good?"
+        
+        &PORTRAIT_nour_nourannoyed
+        
+        NOUR: "You aren't going to taste anything, Nick."
+        
+        &PORTRAIT_nick_nickshocked
+        
+        NICK: "... Wait, really?"
+        
+        &PORTRAIT_nick_nicknervous
+        
+        NICK: "I mean, uh, yeah!"
+        
+        NICK: "Duh, it doesn't actually taste like anything."
+        
+        &PORTRAIT_nour_nourneutral
+        
+        NOUR: "Less appealing to you now, huh?"
+        
+        &PORTRAIT_nick_nickangry
+    
+    - NICK: "... Fine, whatever. I don't need this crap."
+    
+    -> END
+    

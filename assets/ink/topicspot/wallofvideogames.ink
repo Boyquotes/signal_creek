@@ -1,83 +1,207 @@
-=== wallofvideogames ===
-//Wall of video games located in TopicStop
-//Nick-centric
-//Something that he will speak about when he doesn't want to talk after
-//event 2
+=== wallofvg ===
 {
-    - bookshelf && consoles:
-        -> wallofvg2
+    - wallofvg_afterNickRouteComplete
+        -> explored_everything
+
+    - nourplaysaplequest:
+        -> wallofvg_afterNickRouteComplete
         
-    - bookshelf:
-        -> wallofvg1
+    - consoles_start_aplequest:
+        -> wallofvg_nickMad
         
     - else:
-    
-        -> wallofvg
+        -> wallofvg_beforeNickRoute
 }
 
-=== wallofvg ===
+=== wallofvg_beforeNickRoute ===
 //Before shit goes down
 
-NOUR: "So these are all the newest releases, huh..."
+        &PORTRAIT_nour_noursmile
 
-NICK: "Yeah! Ohh, I've heard so much about God of Warcraft - my friend let me play it for a bit on his XBOX. The graphics and story are so top-tier. Like, I totally understand why it won Game of the Year."
+    NOUR: "So how many of these have you played?"
+    
+        &PORTRAIT_nick_nickneutral
+    
+    NICK: "...Not many, actually."
+    
+    &PORTRAIT_nick_nicksad
+    
+    NICK: "This is all big triple-A stuff. They were always too..."
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "<i>Too...?</i>"
+    
+    &PORTRAIT_nick_nicknervous
+    
+    NICK: "Well... I mean..."
+    
+    &PORTRAIT_nick_nicksad
+    
+    NICK: "It doesn't matter if had won extra fancy awards or Game of the Year."
+    
+    &PORTRAIT_nick_nickshocked
+    
+    NICK: "My mom would <i>kill</i> me if I spent sixty <i>whole</i> dollars on ONE game."
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "Right, right..."
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: "Looking at these things are the most we can do, and that's not gonna get us out of here."
+            
+    &PORTRAIT_ms. suwan_mssuwanpondering
+            
+    MS. SUWAN: "These are display-only, after all."
+            
+    &PORTRAIT_nick_nicksad
+        
+    NICK: "Oh... yeah. I guess there's no point in looking at games we can't even play..."
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "..."
+    
+    ->END
 
-NOUR: "Even I've heard of how good it is."
-
-NICK: "It makes grown men cry!"
-
-* [ Look at another game. ] -> wallofvg_1
-* [ Leave. ] -> END
-
--> END
-
-=== wallofvg_1 ===
-
-NICK: "Whoa, they're still making Call of Duty games?!"
-
-SUWAN: "I still recall when the first one was released... that stirred quite a controversy."
-
-NICK: "Wow... You're so old..."
-
-SUWAN: "I prefer the term 'wise'."
-
-NOUR: "Why do we need eleven of those, anyway?"
-
-NICK: "Well, it's just cool! You get to shoot big guns and run around and drive tanks and stuff! And they keep making the guns and tanks feel better and better to shoot!"
-
-NOUR: "...And you're sure it's not military propoganda?"
-
--> END
-
-=== wallofvg1 ==
+=== wallofvg_nickMad ==
 //He is refusing to talk after visitng bookshelf.
 
-NICK: "..."
+    &PORTRAIT_nick_nicksad
+    
+    NICK: "..."
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "<i>Residential Villain</i> huh? That's a famous one, right."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "Yes. Even I have dabbled a little in playing. Once or twice."
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    MS. SUWAN: "They were always my friends' games, however."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "It seems like the price of these games only seem to get more expensive."
+    
+    &PORTRAIT_nick_nickshadow
+    
+    NICK: "..."
+    
+        &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Right, looking at the prices on these things... sixty bucks a game? </i>
+    
+        &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>This might be one reason why Nick doesn't let himself enjoy games...</i>
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: <i>It's hard to, knowing the cost.</i>
+    
+    -> END
 
-NOUR: "Come on... Not a word? Not even about the Residential Villain series? I heard this series is pretty huge. Look, even Ms. Suwan's heard of these."
-
-SUWAN: "I <i>suppose</i> I've even played one. Once or twice."
-
-NICK: "..."
-
-He looks disinterested, frowning a little more than before.
-
-<i> Right, looking at the prices on these things... sixty bucks a game? </i>
-<i> I'm surprised anyone could get into these. Guess I better keep looking. </i>
-
--> END
-
-=== wallofvg2 ===
+=== wallofvg_afterNickRouteComplete ===
 //After he visited Console and started talking again.
 
-NOUR: "So how many of these have you played? Or are you just a die-hard Fantasy Game fan?"
+    &PORTRAIT_nour_nourrealization
 
-NICK: "Haha... not many, actually. This is all the big new triple-A stuff. It's kind of all a little too..."
+    NOUR: "These <i>should</i> be the new releases..."
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "But these are all outdated by over a decade."
+    
+        &PORTRAIT_nick_nickshocked
+        
+    NICK: "Yeah! They've got the old God of Warcraft."
+    
+    &PORTRAIT_nick_nickpondering
+    
+    NICK: "My friend let me play it a little on his SP2."
+    
+    &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "The graphics and story are so top-notch. Definitely deserved all those awards!"
+    
+        &PORTRAIT_nour_noursmile
+        
+    NOUR: "<i>I've</i> even heard of how good it is."
+    
+    &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "It makes grown men cry!"
+    
+        * "What game is this over here?"
+            
+                &PORTRAIT_nick_nickbigsmile
+        
+            NICK: "<i>Call of Destiny</i>! A classic."
+            
+            &PORTRAIT_ms. suwan_mssuwanpondering
+            
+            MS. SUWAN: "I still recall when this one was released..."
+            
+            &PORTRAIT_ms. suwan_mssuwanneutral
+            
+            MS. SUWAN: "That stirred quite a controversy."
+            
+                &PORTRAIT_nick_nickshocked
+            
+            NICK: "Wow... You're so old..."
+            
+                &PORTRAIT_nour_nourannoyed
+            
+            NOUR: "<i>Nick!</i>"
+            
+                &PORTRAIT_nick_nickshocked
+            
+            NICK: "ACK! Sorry..."
+            
+                &PORTRAIT_mssuwan_mssuwanannoyed
+            
+            MS. SUWAN: "I prefer the term 'experienced'."
+            
+                &PORTRAIT_nour_nourpondering
+            
+            NOUR: "Why do we need like eleven of those, anyway?"
+            
+                &PORTRAIT_nick_nicksmallsmile
+            
+            NICK: "Well, it's just cool! You get to shoot big guns and drive tanks and stuff!"
+            
+            &PORTRAIT_nick_nickbigsmile
+            
+            NICK: "And they keep making the guns and tanks feel better and better to shoot!"
+            
+                &PORTRAIT_nour_nourannoyed
+            
+            NOUR: "...And you're sure it's not military propoganda?"
+            
+            &PORTRAIT_nick_nicknervous
+            
+            NICK: "Wait, what?"
+            
+            &PORTRAIT_nour_nournervous
+            
+            NOUR: "Uh, nevermind. We can talk about this later..."
+            
+            &PORTRAIT_nour_noursmile
+            
+        * "Probably shouldn't spend much more time here."
+        
+            &PORTRAIT_nour_noursmile
+    
+    - NOUR: "Ready to go?"
+        
+    &PORTRAIT_nick_nicksmallsmile
+    
+    NICK: "Yeah."
 
-NOUR: "<i>Too...?</i>"
-
-NICK: "Well... I mean... it doesn't matter if it's Game of the Year. My mom would <i>kill</i> me before she gave me sixty whole dollars to spend on ONE game."
-
-NOUR: "Right, right..."
-
-    -> END
+        -> END

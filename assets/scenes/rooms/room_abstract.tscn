@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/scripts/globals/camera_manager.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/tilesets/tileset_abstract_dream.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/sprites/tilesets/tileset_template_dream.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/scripts/environment/plane_manager.gd" type="Script" id=3]
 [ext_resource path="res://assets/textures/lights/elevatorlight.png" type="Texture" id=4]
 [ext_resource path="res://assets/textures/lights/glow_128.png" type="Texture" id=5]
@@ -23,7 +23,7 @@ current = true
 editor_draw_screen = false
 script = ExtResource( 1 )
 camera_following = NodePath("../PlaneManager/Overworld/PARTY/NICK")
-lerpSpeed = 16
+lerpSpeed = 12
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D"]
 margin_left = -352.0

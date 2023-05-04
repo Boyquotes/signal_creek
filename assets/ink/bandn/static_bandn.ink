@@ -1,54 +1,60 @@
-== comicstand ==
+// STATIC BANDN: The most simple, straightforward objects.
 
-    It's a display of comic books.
+// == booksfront ==
+
+//     It's a display stand for books. Most of them are on sale.
     
-    NICK: Whoa! It's the first twenty volumes of Blood Titan Online! Oh, man,  that's awesome...! Whoa, look at this cool art!
+//     The temptation to take one is very, very strong.
     
-    NOUR: Blood Titan Online? Wasn't that super famous a couple years ago?
+//     //It would be more engaging if the "new releases" weren't outdated by over a decade.
     
-    NICK: Yeah! I've been looking for this series ever since I watched the anime! The first season left off on such a cliffhanger. And it's been years and they still haven't made season two yet... I've been meaning to get into the manga, but I've never had the chance.
+//     -> END
     
-    NOUR: Really? Ha. I bet Ms. Suwan could read that whole stack in less than a day. I bet one of those lawyer textbooks has more words in it than that entire series.
-    
-    MS SUWAN: Ha ha. I suppose I certainly could, if I put my mind to it. What's this Blood... Blood Titan Online about?
-    
-    NICK: Oh, it's about how - like - there's a video game people get trapped in. And when they die in the game, they die in real life. They fight these monsters all the time, and in order to escape the game they have to defeat the Blood Titan. But first they have to find who the Blood Titan is...
-    
-    NICK: What makes this series really cool is that anyone could be the Blood Titan. You have to really think and analyze all the hints about each character! 
-    
-    NOUR: Huh... so it's a mystery thriller?
-    
-    NICK: Sort of, yeah! Except add in battles, dragons, swords, and magic!
-    
-    NOUR: Y'know, I do like some mystery, myself. Not a huge comics fan, though. 
-    
-    MS SUWAN: It's an... interesting premise. Perhaps I'll look into it. I suppose some light reading between work obligations helps to clear my head sometimes.
-    
-    NICK: Really?! Guys, you should totally give it a chance! We could read it together! It's super awesome, I promise!
+== cashier ==
+
+    An empty cashier's stand.
     
     -> END
+== cashier2 == 
+    An empty cashier's stand with a single fax machine. 
     
-== computerdesk ==
-
-    It's a desk with a computer on it.
+    &PORTRAIT_nour_nourpondering
     
-    -> END
-    
-== displaystand ==
-
-    It's a display stand for books.
+    NOUR: <i>Who uses fax machines nowadays?</i>
     
     -> END
     
 == hats ==
 
-    It's a bunch of hats.
+    It's a bunch of fancy hats. 
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i> What's with these sizes...?<i>
+    
+    NOUR: <i>There's no way any of these will fit a normal-sized head.</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>I... don't want to find out who they're for, actually.</i>
     
     -> END
     
 == kindle ==
 
-    It's a Jungle Kindle.
+    It's a Jungle Kindle filled with e-novels.
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i> ...Looks like most are comics and passionate romance books. Such taste.</i>
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>Looking closely, I can barely make out some words on the screens...</i>
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: <i>Impossible to tell what they say, though.</i>
     
     -> END
     
@@ -56,41 +62,126 @@
 
     It's a bunch of composition notebooks.
     
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: <i>There's nothing like the sight of beautiful blank pages for fresh ideas.<i>
+    
     -> END
     
 == poster1 ==
 
-    It's a poster. Everyone knows this is the first one.
+    It's a poster of two cats with their tails around each other, and the word "friend" on it.
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>Historians would say... that they're good friends.</i>
     
     -> END
     
 == poster2 ==
 
-    It's a poster. Everyone knows this is the second one.
+    It's a poster with a bald eagle and the word "pride" on it. 
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Eagles don't evoke much nationalism in anyone...</i>
     
     -> END
     
 == poster3 ==
 
-    It's a poster. Everyone knows this is the third one.
+    It's a poster with a cat wearing thick-rimmed glasses. 
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Poster's right. This is most definitely the pinnacle of "chill".</i> 
     
     -> END
     
 == poster4 ==
 
-    It's a poster. Everyone knows this is the fourth one.
+    It's a poster with a fish and the word "swim" on it. 
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Guess the designer apparently wanted to remind people that fish do, in fact, swim.</i>
     
     -> END
     
 == shelfwithtrinkets ==
+    
+    It's a bunch of trinkets.
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>They all seem to be familiar shapes, but I... can't tell what they're meant to be.</i>
+    
+    NOUR: <i>It looks like some sort of weird... dog?</i>
+    
+    NOUR: <i>Or maybe some kind of... goblin?</i>
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: <i>... This is giving me a headache.</i>
+    
+    NOUR: <i>Since when did B&N sell this stuff, anyway?</i>
+    
+    -> END
+// == shelfwithtrinkets2 ==
+    
+//     There's a bunch of trinkets here. They all seem to be familiar shapes, but I... can't quite place what they're meant to be.
+    
+//     It looks like a weird clock? 
+    
+//     And maybe some dinosaurs?
+    
+//     ...Very weird.
+    
+//     -> END
+    
+=== shelfwithtrinkets2 ===
 
-    It's a shelf with trinkets on it.
+    It's a bunch of trinkets. Shiny, fun-shaped baubles line the shelf.
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: <i>Can't tell what any of these are supposed to be...</i>
+    
+    NOUR: <i>Kind of wish B&N would focus more on selling books again.</i>
     
     -> END
     
-== skeletondisplay ==
+    
+== volitioncomputer ==
 
-    Holy shirt it's a skeleton.
+    The flesh and wire are one within the Motherboard. 
+    
+    &PORTRAIT_nour_nournervous
+
+    NOUR: <i>Something feels strangely... sentient about this computer...?</i>
+    
+    NOUR: <i>I'm just gonna... stay away from this for now.</i>
+    
+    // Perhaps you will join one day. :)
     
     -> END
+
+=== bestsellers ===
+
+    From crime thriller fiction to award-winning nonfiction, all the bestsellers are here.
     
+    &PORTRAIT_nour_nourpondering
+
+    NOUR: <i>... That is, bestsellers from well over a decade ago.</i>
+    
+    -> END
+
+=== booksfront ===
+
+    There are more books here, which look to be mostly young adult fiction.
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>... I'll try not to judge them by their covers.</i>
+    
+    -> END

@@ -1,33 +1,244 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
-[ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/scripts/character/npc_brody.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/character/npc_chad.gd" type="Script" id=2]
+[ext_resource path="res://assets/scripts/character/npc_kristy.gd" type="Script" id=3]
 [ext_resource path="res://assets/alpha/sprites_alpha/characters/placeholders/sheet_chadbrodykristy.png" type="Texture" id=4]
+[ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=5]
+[ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_chadbrodykristy.png" type="Texture" id=6]
+
+[sub_resource type="ShaderMaterial" id=28]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 35.0
+shader_param/beam_size = 0.125
+shader_param/color_shlorp = Color( 0, 1.02, 1.2, 1 )
+shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.5
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
+
+[sub_resource type="ShaderMaterial" id=29]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 35.0
+shader_param/beam_size = 0.125
+shader_param/color_shlorp = Color( 0, 1.01961, 1.2, 1 )
+shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.5
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
+
+[sub_resource type="ShaderMaterial" id=30]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 35.0
+shader_param/beam_size = 0.125
+shader_param/color_shlorp = Color( 0, 1.02, 1.2, 1 )
+shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.5
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 22.5, 7.5 )
+extents = Vector2( 21.5, 6 )
+
+[sub_resource type="RectangleShape2D" id=27]
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 33.5, 15.5 )
+extents = Vector2( 25, 11.25 )
 
-[node name="ChadBrodyKristy" type="RigidBody2D" groups=["shiftable"]]
-material = ExtResource( 3 )
+[sub_resource type="Animation" id=35]
+resource_name = "NotVisible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ChadSprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BrodySprite:material:shader_param/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KristySprite:material:shader_param/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "ShlorpOutBrody"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BrodySprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "ShlorpOutChad"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ChadSprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "ShlorpOutKristy"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("KristySprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=36]
+resource_name = "Visible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ChadSprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BrodySprite:material:shader_param/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KristySprite:material:shader_param/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[node name="ChadBrodyKristy" type="RigidBody2D"]
 mode = 1
-script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="ChadSprite" type="Sprite" parent="."]
 light_mask = 4
-material = ExtResource( 3 )
-position = Vector2( 0, -19 )
-texture = ExtResource( 4 )
+material = SubResource( 28 )
+position = Vector2( 20, -1 )
+texture = ExtResource( 6 )
+offset = Vector2( 0, -14 )
 region_enabled = true
-region_rect = Rect2( 3, 4, 58, 39 )
+region_rect = Rect2( 48, 14, 17, 29 )
+
+[node name="BrodySprite" type="Sprite" parent="."]
+light_mask = 4
+material = SubResource( 29 )
+position = Vector2( 0, -7 )
+texture = ExtResource( 6 )
+offset = Vector2( 0, -15 )
+region_enabled = true
+region_rect = Rect2( 25, 5, 18, 31 )
+
+[node name="KristySprite" type="Sprite" parent="."]
+light_mask = 4
+material = SubResource( 30 )
+position = Vector2( -16, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( -1, -16 )
+region_enabled = true
+region_rect = Rect2( 1, 11, 21, 32 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
@@ -37,20 +248,66 @@ region_enabled = true
 region_rect = Rect2( 3, 4, 58, 39 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.5, -7.5 )
+position = Vector2( 0.5, -6 )
 shape = SubResource( 23 )
 
-[node name="ActiveArea" type="Area2D" parent="."]
+[node name="Chad" type="Area2D" parent="."]
+position = Vector2( 20, 0 )
+monitoring = false
 script = ExtResource( 2 )
+_shlorping_target_path = NodePath("../AnimationPlayer")
+_shlorp_animation_name = "ShlorpOutChad"
+_physical_collider_path = NodePath("../CollisionShape2D")
+_knot_name = "chadbrodykristy"
+_final_knot_name = "chadbrodykristy3"
+_override_set_monitoring = true
+is_visible = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chad"]
+shape = SubResource( 27 )
+disabled = true
+
+[node name="ActiveArea" type="Area2D" parent="."]
+script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
+_shlorping_target_path = NodePath("../AnimationPlayer")
+_shlorp_animation_name = "ShlorpOutBrody"
+_physical_collider_path = NodePath("../CollisionShape2D")
+_knot_name = "chadbrodykristy"
+_final_knot_name = "chadbrodykristy3"
+is_visible = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -7 )
+position = Vector2( 0, -0.25 )
 shape = SubResource( 22 )
+
+[node name="Kristy" type="Area2D" parent="."]
+position = Vector2( -15, 0 )
+monitoring = false
+script = ExtResource( 3 )
+_disable_interactivity = true
+_shlorping_target_path = NodePath("../AnimationPlayer")
+_shlorp_animation_name = "ShlorpOutKristy"
+_physical_collider_path = NodePath("../CollisionShape2D")
+_knot_name = "chadbrodykristy"
+_final_knot_name = "chadbrodykristy3"
+_override_set_monitoring = true
+is_visible = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kristy"]
+shape = SubResource( 27 )
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/NotVisible = SubResource( 35 )
+anims/ShlorpOutBrody = SubResource( 32 )
+anims/ShlorpOutChad = SubResource( 33 )
+anims/ShlorpOutKristy = SubResource( 34 )
+anims/Visible = SubResource( 36 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
-[connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
-[connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]
+[connection signal="can_interact" from="ActiveArea" to="ActiveArea" method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="ActiveArea" to="ActiveArea" method="_on_ActiveArea_cannot_interact"]

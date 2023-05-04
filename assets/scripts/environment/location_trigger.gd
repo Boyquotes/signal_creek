@@ -1,29 +1,46 @@
-extends Area2D
+class_name LocationTrigger
+extends Interactive
+
+# Attached to invisible area that triggers dialogue upon first entry
 
 export var _knot_name : String = "abstract"
+export var _automatic : bool = true
 
-onready var _talked_to = false
-onready var _default_position = self.get_global_position()
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
-	self.set_pause_mode(false)
+	if Globals.DialogueBox._ink_player.VisitCountAtPathString(_knot_name) > 0 and _automatic:
+		self.set_deferred("monitoring", false)
+		return
+	
+	self.set_deferred("monitoring", true)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if Globals.GameMode == Globals.GameModes.WALK && _talked_to:
-		self.set_global_position(Vector2(-1000, -1000))
+# Check if body entering self is the player
+func _on_LocationTrigger_body_entered(body) -> void:
+	if body == Globals.Nour and Globals.GameMode == Globals.GameModes.WALK:
+		Globals.InputDriver.set_closest_object(self)
+		
+		if _automatic:
+			start_interaction()
 
 
-func _on_LocationTrigger_body_entered(body):
-	if body == Globals.PartyObject.get_leader() && Globals.GameMode == Globals.GameModes.WALK:
-		for character in Globals.PartyObject.characterObjects:
-			character.animate_idle()
+# When a body exits self, check if player can interact
+func _on_LocationTrigger_body_exited(body) -> void:
+	pass
+
+
+func _get_object_name() -> String:
+	return _knot_name
+
+
+func start_interaction() -> void:
+	for character in Globals.PartyObject.characterObjects:
+		character.animate_idle()
 			
-		Globals.GameMode = Globals.GameModes.TALK
-		_talked_to = true
-		
-		Globals.DialogueBox.open_at_knot(_knot_name)
-		Globals.DialogueBox.background_panel_node.set_visible(true)
-		
+	Globals.GameMode = Globals.GameModes.TALK
+	Globals.DialogueBox.open_at_knot(_knot_name)
+	Globals.DialogueBox.background_panel_node.set_visible(true)
+	
+	if _automatic:
+		self.set_deferred("monitoring", false)

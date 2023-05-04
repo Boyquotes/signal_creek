@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LM_SignCreek_Grunge_v1.mp3-816b1409f43dfd4e292491725b6fe5c6.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/music/LM_SignCreek_Grunge_v1.mp3"
+dest_files=[ "res://.import/LM_SignCreek_Grunge_v1.mp3-816b1409f43dfd4e292491725b6fe5c6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

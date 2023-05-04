@@ -1,104 +1,98 @@
 == pretzelstand ==
 
-    {
-        - currentWorld == "dream" && pretzelstand_real:
-            -> pretzelstand_realvisited
-            
-        - currentWorld == "dream":
-            -> pretzelstand_dream
-            
-        - currentWorld == "real" && pretzelstand_dream:
-            -> pretzelstand_dreamvisited
-        
-        - else:
-            -> pretzelstand_real
-    }
-//---------------- DREAM WORLD ----------------
-
-== pretzelstand_dream ==
-
-    NOUR: Man, this looks like a great place to try some cinnamon sugar bites! I was never allowed to get junk food as a kid...
+    {- !pretzelstand_convo: -> pretzelstand_convo}
     
-    :NOUR:
+    It's a Pretzo's pretzel stand. 
     
-    + [Talk to the guy]NOUR: Uh... Hello? Do you guys have cinnamon sugar bites?
-        
-        -> noresponse
+    The cashier is strangely still. He doesn't seem real, and he <i>certainly</i> doesn't know a way out of here.
     
-= noresponse
-
-    No response.
-    
-    :NOUR:
-    + [Huh? Why the hell isn't he responding?]NOUR: Hello? Hey, are you deaf or something?
-
-        -> stillnoresponse
-
-= stillnoresponse
-
-    Still, no response.
-
     -> END
 
 
-== pretzelstand_realvisited ==
+== pretzelstand_convo ==
 
-    NOUR: Looks like now's my chance to try some junk food!
+    &PORTRAIT_nour_noursmile
     
-    :NOUR:
-        + [Talk to the guy]NOUR: Uh... Hello? Do you guys have cinnamon sugar bites?
-            
-            -> noresponse
+    NOUR: "Ah, <i>Pretzo's</i>. The smell of this cart really brings me back."
     
-    = noresponse
+    &PORTRAIT_nour_noursad
     
-        No response.
+    NOUR: "I always wanted the cinnamon sugar bites as a kid."
+    
+    NOUR: "... I was only allowed a regular pretzel, though."
+    
+    &PORTRAIT_nick_nicksmallsmile
+    
+    NICK: "You shoulda tried those doughnut holes filled with sugary goo..."
+    
+    &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "I got them one time and ate them all in, like, two minutes!"
+    
+    &PORTRAIT_ms. suwan_mssuwansmile
+    
+    MS. SUWAN: "I may have treated myself to a pretzel, once or twice."
+    
+    &PORTRAIT_nick_nickangry
+    
+    NICK: "When you could've chosen <i>anything</i> on the menu?"
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "The pretzels are pretty good. It was just frustrating that I didn't get a choice."
+    
+    * "Do you guys have cinnamon sugar bites?"
+    
+        CASHIER: "..."
         
-        :NOUR:
+        &PORTRAIT_nour_nourneutral
         
-        + [Huh? Why the hell isn't he responding?]NOUR: Hello? Hey, are you deaf or something?
-            
-            -> stillnoresponse
+        NOUR: "Uh, the cinnamon sugar bites?"
+    
+        CASHIER: "..."
         
-    = stillnoresponse
+        NOUR: "You know, the small round pretzels?"
+        
+        &PORTRAIT_nour_nourannoyed
     
-        Still, no response.
+    * "Do you happen to know a way out of here?"
     
-        -> END
-
-
-//SUBSEQUENT DREAM KNOTS HERE
-
-
-//---------------- REAL WORLD ----------------
-
-== pretzelstand_real ==
-
-    //CHECK IF THIS KNOT WAS VISITED, WHEN WE'RE IN: rina.ink
-    //Nour and Nick will bond over not being able to buy something, recalling this conversation.
+        CASHIER: "..."
+        
+        &PORTRAIT_nour_nourneutral
+        
+        NOUR: "Do you know a way to escape this mall?"
     
-    NOUR: This is the place I'd stop to get snacks with my mom, back when I was a kid.
+        CASHIER: "..."
+        
+        &PORTRAIT_nour_nournervous
+        
+        NOUR: "We're looking for a way out, but the elevator is broken."
+        
+        &PORTRAIT_nour_nourannoyed
     
-    NOUR: I wasn't really allowed to have junk food, so it was exciting to get a pretzel
+    * "Do you know why everything is so... <i>off</i> here?"
     
-    NOUR: I wish I could've gotten cinnamon sugar bites.
+        CASHIER: "..."
+        
+        &PORTRAIT_nour_nourneutral
+        
+        NOUR: "Do you know what's going on in this place?"
+        
+        CASHIER: "..."
+        
+        &PORTRAIT_nour_nournervous
     
-    NICK: Those doughnut holes filled with sugary goo were so good... I got them one time, and ate them all in like, two minutes!
+        NOUR: "There's a weird void below this floor, odd vegetation, people behaving... strangely..."
+        
+        &PORTRAIT_nour_nourannoyed
     
-    MS SUWAN: I may have treated myself to a pretzel, once or twice.
+    - NOUR: "Uh... Hello?"
+        
+    CASHIER: "..."
     
-    NICK: That's so boring! You didn't even need your parent's permission to get something fun and sugary, and you still chose pretzels?
-    
-    NOUR: I guess pretzels are fine, but god, it was so frustrating that I didn't really get a choice.
-
+    NOUR: <i>I guess that's a no. Whatever.</i>
+        
     -> END
-
-== pretzelstand_dreamvisited ==
-
-    *   -> pretzelstand_real
-
-    -> END
-
-//SUBSEQUENT REAL KNOTS HERE
 
 

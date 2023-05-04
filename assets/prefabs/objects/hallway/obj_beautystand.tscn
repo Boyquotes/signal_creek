@@ -1,15 +1,86 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=2]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/scripts/character/npc_princesspinklady.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
+[ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=6]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 31.5, 24 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 42, 21.5938 )
+extents = Vector2( 26, 17.0938 )
+
+[sub_resource type="ShaderMaterial" id=32]
+resource_local_to_scene = true
+shader = ExtResource( 6 )
+shader_param/progress = 1.0
+shader_param/noise_desnity = 180.0
+shader_param/beam_size = 0.09
+shader_param/color_shlorp = Color( 0, 1.02, 1.2, 1 )
+shader_param/time = 1.57
+shader_param/color = Color( 1, 1, 1, 0 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/sussy = true
+shader_param/r_displacement = Vector2( 0, 1 )
+shader_param/g_displacement = Vector2( 0, -1 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.5
+shader_param/time_intensity = 1.0
+shader_param/sus_duration = 0.01
+shader_param/sus_speed = 5.0
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 21, 17 )
+
+[sub_resource type="Animation" id=33]
+resource_name = "NotVisible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "Shlorp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "Visible"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [node name="BeautyStand" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -27,6 +98,7 @@ region_enabled = true
 region_rect = Rect2( 223, 407, 66, 90 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
@@ -46,10 +118,59 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0, -13.4063 )
+position = Vector2( 0, -8.90625 )
 shape = SubResource( 22 )
+
+[node name="PrincessPinkLady" type="Node2D" parent="."]
+position = Vector2( -21, -18 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="PrincessPinkLady"]
+light_mask = 4
+material = SubResource( 32 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 354, 591, 11, 12 )
+
+[node name="Hint" type="Sprite" parent="PrincessPinkLady"]
+visible = false
+modulate = Color( 1, 1, 1, 0.313726 )
+show_behind_parent = true
+light_mask = 4
+position = Vector2( 0.545455, -8 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 367, 575, 13, 14 )
+
+[node name="ActiveArea" type="Area2D" parent="PrincessPinkLady"]
+monitoring = false
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+_disable_interactivity = true
+_shlorping_target_path = NodePath("../AnimationPlayer")
+_shlorp_animation_name = "Shlorp"
+_final_knot_name = "beautystand2"
+start_visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrincessPinkLady/ActiveArea"]
+position = Vector2( 0, -7 )
+shape = SubResource( 29 )
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PrincessPinkLady"]
+anims/NotVisible = SubResource( 33 )
+anims/Shlorp = SubResource( 31 )
+anims/Visible = SubResource( 34 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
 [connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
 [connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
 [connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]
+[connection signal="body_entered" from="PrincessPinkLady/ActiveArea" to="PrincessPinkLady/ActiveArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="PrincessPinkLady/ActiveArea" to="PrincessPinkLady/ActiveArea" method="_on_InteractArea_body_exited"]
+[connection signal="can_interact" from="PrincessPinkLady/ActiveArea" to="PrincessPinkLady" method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="PrincessPinkLady/ActiveArea" to="PrincessPinkLady" method="_on_ActiveArea_cannot_interact"]

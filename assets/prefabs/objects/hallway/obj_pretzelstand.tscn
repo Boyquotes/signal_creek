@@ -2,14 +2,14 @@
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
-[ext_resource path="res://assets/shaders/material_outline.tres" type="Material" id=3]
+[ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 48, 24.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 60.5, 35 )
+extents = Vector2( 29.5, 34 )
 
 [node name="PretzelStand" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
@@ -27,6 +27,7 @@ region_enabled = true
 region_rect = Rect2( 191, 15, 98, 98 )
 
 [node name="Hint" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
@@ -46,7 +47,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( -0.5, -9 )
+position = Vector2( 18.5, -10 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

@@ -1,0 +1,90 @@
+[gd_resource type="Theme" load_steps=13 format=2]
+
+[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/ui/images/sliderhandle_hover.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/images/sliderhandle.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.28128, 0.2144, 0.32, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.784314, 0.721569, 0.803922, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.37797, 0.2881, 0.43, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.28128, 0.2144, 0.32, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.295687, 0.2244, 0.34, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxLine" id=1]
+color = Color( 0.478431, 0.478431, 0.478431, 1 )
+grow_begin = -6.0
+grow_end = -6.0
+thickness = 2
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.658824, 0.501961, 0.74902, 1 )
+border_color = Color( 0.619608, 0.470588, 0.705882, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=9]
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.262745, 0.2, 0.301961, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.0745098, 0.0784314, 0.121569, 0.901961 )
+border_width_left = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.784314, 0.721569, 0.803922, 1 )
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[resource]
+default_font = ExtResource( 1 )
+Button/constants/hseparation = 0
+Button/styles/focus = SubResource( 11 )
+Button/styles/hover = SubResource( 5 )
+Button/styles/normal = SubResource( 6 )
+Button/styles/pressed = SubResource( 7 )
+HSeparator/styles/separator = SubResource( 1 )
+HSlider/icons/grabber = ExtResource( 3 )
+HSlider/icons/grabber_highlight = ExtResource( 2 )
+HSlider/styles/grabber_area = SubResource( 8 )
+HSlider/styles/grabber_area_highlight = SubResource( 8 )
+HSlider/styles/slider = SubResource( 9 )
+Panel/styles/panel = SubResource( 10 )
+PanelContainer/styles/panel = SubResource( 4 )
+VBoxContainer/constants/separation = 16

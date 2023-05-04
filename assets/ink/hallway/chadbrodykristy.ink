@@ -1,373 +1,912 @@
 
-//---------------- DREAM WORLD ----------------
-// Nour observes Ms Suwan's reluctance, observes her change in demenear when she notices Ms Suwan. She should also not be able to see chad brody kristy until middle-ish of game
-//  -> chadbrodykristy_first 
-  
-//   //When Ms Suwan is not ready to talk to them, at start
-//   -> chadbrodykristy_notready
-//       {
-//         - chadbrodykristy_notready && musicstand4 && priceofsalt && pinbuttons:
-//             -> chadbrodykristy_suwanreturns
-//       }
-  
-  
-  
-// ----- Part of First interaction when they just get to the mall-----
 == chadbrodykristy ==
 
 {
     - musicstand1 && musicstand2: 
         -> chadbrodykristy3
+        
+    - chadbrodykristy2:
+        -> chadbrodkristy2_repeat
+        
     - musicstand1:
         -> chadbrodykristy2
-    - chadbrodykristy1: 
-        -> chadbrodykristy_notready
+        
+    - chadbrodykristy1:
+        -> chadbrodykristy1_repeat
+        
     - else:
         -> chadbrodykristy1
 }
 
 == chadbrodykristy1==
-    NICK: "Are those people real? How did they even get in here?"
     
-    NOUR: <i>We could go up to them and ask? Maybe they know how to get out of here?</i>
+    &FOLLOW_NICK_NickCBKStart
     
-        * "Nick, can you go ask them what's going on?"
-            NICK: "Why do I have to do it?"
+    &FOLLOW_SUWAN_SuwanCBKStart
     
-            NOUR: "Because you're a kid, so they might be more willing to help us."
+    NOUR: "Hello... Would you guys know anything about-"
+    
+    &PAUSE_1.0
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NICK_UpIdle
+    
+    &PORTRAIT_nick_nicknervous
+
+    NICK: "Hey, are these people real? How'd they even get in here?"
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    &FOLLOW_NOUR_NourCBKStart
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Maybe they know a way out of here.</i>
+    
+    &PORTRAIT_nour_nourneutral
+    
+        * "Nick, are you down to ask them for help?"
             
-            NICK: "Or—now, hear me out—maybe they would be more willing to listen to the older person in the group?"
+            &PORTRAIT_nick_nickpondering
             
-                **"Fine, I guess you're right. Ms. Suwan what do you think?"
+            NICK: "They'll probably listen more to someone who's older."
+            
+            &PORTRAIT_nour_nourpondering
+            
+                ** "Fair enough. Ms. Suwan, what do you think?"
     
-        * "Ms. Suwan, can you please ask them how we can get out of here?"
-    //MS. SUWAN not MS.SUWAN for character tag 
+        * "Ms. Suwan, can you ask them for help?"
+
     - MS. SUWAN: "..."
     
-    NOUR: "Hello...? Are you listening?"
-    //changing to present tense
-    <i>Ms Suwan's face turns pale. Her eyes fixate on the group of kids standing three feet away.</i>
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: "...Ms. Suwan? Are you listening?"
+    
+    &PORTRAIT_nick_nickangry
+    
+    &EMOTE_NICK_LeftIdle
 
-    NICK: "MS. SUWAN!!!"
+    NICK: "Hey, Ms. Suwan!"
     
     MS. SUWAN: "...!"
     
-    MS. SUWAN: "No need to shout! What's going on?"
+    &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    NOUR: "Could you talk to those people over there and ask if they know what's going on?"
+    MS. SUWAN: "No need to shout. What's going on?"
     
-    MS. SUWAN: "All we need to do is get the elevator fixed and we should be good to go."
+    &PORTRAIT_nour_nourneutral
     
-    MS. SUWAN: "I'm going to try to get a hold of the repair guy and see if he can come down here."
+    NOUR: "Sorry, but you didn't seem to hear me."
+    
+    NOUR: "Can you ask these people what's going on?"
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    MS. SUWAN: "We should focus on the elevator."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "I will try to contact a technician to come down here."
+    
+    &PORTRAIT_nour_nourpondering
         
-        *** "Um, I don't think anyone is going to come."
+        * "I don't think anyone outside is going to believe us[."], but these people might."
         
-        *** "It would be easier to just ask them."
+        * "It wouldn't hurt to ask these people[..."] They're right here, after all."
     
-    - NOUR: "If anyone knows anything about this place, it's gotta be people who were here before us, right?"
+    - &PORTRAIT_nour_nournervous
     
-    NOUR: <i>If...if they even are real people?</i>
+    NOUR: <i>If... they're even real.</i>
     
-    NOUR: "Didn't you see the lights go crazy and the elevator fly up super fast? Wherever we are, we aren't where we're suppose to be."
+    &PORTRAIT_nick_nicknervous
     
-    NICK: "I don't think a repair guy could fix the elevator, even if he managed to get here somehow..."
+    NICK: "Besides, what kind of repair guy could fix a magical elevator?"
     
-    MS. SUWAN: "Maybe I mistakened this area of the mall for the wrong one. This...this could be a different floor."
+    &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "Whatever is happening here is illegal and wrong. I'm going to report everyone here immediately, and...and..."
+    MS. SUWAN: "This... maybe I'm thinking of the wrong floor..."
     
-    <i>She stares at the three people, dazed. She looks...afraid. Guilty?</i>
+    &PORTRAIT_nour_nourpondering
     
-    NOUR: <i>Why do I get the feeling she might know them?</i>
+    NOUR: <i>Why does she seem so confused all of a sudden..?</i>
+    
+    NOUR: <i>And why do I get the feeling she might know those three?</i>
+    
+    &PORTRAIT_nour_nourannoyed
 
-    NOUR: "Fine. If you both won't talk to them, I will."
+    NOUR: "Fine. I'll ask them again."
     
-    NOUR: "Um, hello. Do you guys know what's going on?"
+    &FOLLOW_NOUR_SuwanCBKTalk
     
-    No Response...
+    &PORTRAIT_nour_nourneutral
     
-    NOUR: "Look, we're sorry to bother you but we really need help right now."
+    &PAUSE_0.7
     
-    No Response...
+    &EMOTE_NOUR_UpIdle
     
-    NOUR: <i>They're just staring blankly at Ms. Suwan. Something really weird is going on...</i>
+    NOUR: "Look, we're sorry to bother you, but we really need help right now."
+    
+    ...
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: <i>They're just staring blankly at Ms. Suwan.</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>Something really weird is going on...</i>
+    
+    &PORTRAIT_nour_nourneutral
     
     NOUR: "If you could just help us out for one second—"
     
-    MS. SUWAN: "Give it up. We don't need help from strangers. We can help ourselves just fine."
+    &PORTRAIT_ms. suwan_mssuwanannoyed
     
-    ???: "Strangers?" 
+    MS. SUWAN: "No use. We do <i>not</i> need help from strangers."
+    
+    &PORTRAIT_???_chadneutral
+    
+    ???: "Strangers?"
+    
+    &FOLLOW_NOUR_NourCBKStart
+    
+    &PAUSE_0.175
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "!"
     
-    ???: "Looks like Chad, Kristy, and Brody all got demoted to strangers. What a surprise."
+    &PORTRAIT_???_brodyneutral
+    
+    ???: "Looks like Chad, Kristy, and I got demoted to strangers..."
+    
+    &PORTRAIT_???_brodyannoyed
+    
+    BRODY: "Not like I'm surprised. Typical Suwan..."
+    
+    &PORTRAIT_nour_nourrealization
     
     NOUR: "What the—"
     
+    &PORTRAIT_chad_chadannoyed
+    
     CHAD: "So that's what you thought of us this whole time, Kannika?"
     
-    NICK: "Who is Kannika?"
+    NICK: "Who's Kannika?"
     
-    KRISTY: "Niki, how could you say that to us? We were so close...were all the study sessions and rock concerts nothing to you?"
+    &PORTRAIT_kristy_kristysad
+    
+    KRISTY: "Niki, how could you say that to us? We were so close..."
+    
+    &PORTRAIT_kristy_kristyangry
+    
+    KRISTY: "Were all the study sessions and concerts nothing to you?"
 
-    NICK: "Ok, now who is Niki? Also, ROCK CONCERTS?"
+    &PORTRAIT_nick_nicknervous
     
-    NOUR: "Uh, Ms. Suwan? Are you ok...?"
+    NICK: "Did she say... <i>concerts</i>?"
     
-    <i>Ms. Suwan stands frozen. For once, it seems like she has nothing clever to say.</i>
+    &PORTRAIT_nour_nourneutral
+    
+    &EMOTE_NOUR_RightIdle
+    
+    NOUR: "Ms. Suwan? Are you... okay?"
+    
+    //&PORTRAIT_ms. suwan_mssuwanshadow
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "..."
+    
+    &PORTRAIT_chad_chadneutral
     
     CHAD: "Speechless? Never thought I'd get to see that."
     
-    BRODY: "I'm sure that once she finds her words, she'll spin us some new excuse for what she did to us."
+    &PORTRAIT_brody_brodyneutral
     
-    MS. SUWAN: "..."
+    BRODY: "But once she finds her words..."
+    
+    &PORTRAIT_brody_brodyannoyed
+    
+    BRODY: "...She'll spin us some new excuse for what she did."
+    
+    &PORTRAIT_nour_nourpondering
     
     NOUR: "Ms. Suwan, do you—"
     
+    //&PORTRAIT_ms. suwan_mssuwanshadow
+    &PORTRAIT_ms. suwan_mssuwansad
+    
     MS. SUWAN: "We're leaving."
     
-    BRODY: "Don't worry Suwan—we'll be right here in case you want to ignore us again."
+    &PORTRAIT_brody_brodyneutral
     
-    MS. SUWAN: "<i>I said we're done here.</i>"
+    BRODY: "Don't worry, Kannika, we'll be right here."
     
-    NOUR: "I...alright. We can leave."
+    &PORTRAIT_brody_brodyangry
     
-    NICK: "But I thought that they could help us out?"
+    BRODY: "In case you want to ignore us. <i>Again</i>."
     
-    MS. SUWAN: "Word of advice, kid? The only person you can trust is yourself. I'm figuring this out alone."
+    &PORTRAIT_nick_nicksad
     
-    //MS. SUWAN: "I think there was a B&N on this floor. Maybe a computer there is working so we can contact someone to get us out of here."
+    NICK: "They don't wanna help us out?"
     
-    MS. SUWAN: "There's a bookstore on this floor—the B&N? There must be something there that could help us escape this place. Let's look for something there."
+    &PORTRAIT_ms. suwan_mssuwanpondering
     
-    NOUR: <i>I want to talk about those three people to Ms. Suwan, but I don't think she's going to say a single thing about them.</i>
+    MS. SUWAN: "Word of advice? The only person you can trust is yourself."
     
-    NOUR: <i>I guess we could take a look at the B&N and see if there's anything that could help us leave here...</i>
+    &PORTRAIT_ms. suwan_mssuwanangry
     
-    NOUR: <i>Wherever we decide to go, I think it's best if I don't mention these three until Ms. Suwan is ready to open up to me.</i>
+    MS. SUWAN: "I will handle this <i>alone</i>."
     
-    ->END
+    &PORTRAIT_ms. suwan_suwanneutral
+    
+    MS. SUWAN: "There is a bookstore on this floor— the B&N."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "They must have a way to contact the outside."
+    
+    &PORTRAIT_nour_nourannoyed
 
-== chadbrodykristy_notready==
-    NOUR: "Is everything alright, Ms. Suwan?"
+    NOUR: "Are you sure you can't ask them anything?"
     
-    MS. SUWAN: "..."
+    &PORTRAIT_ms. suwan_mssuwanangry
     
-    NOUR: <i>I wish she wouldn't be so stubborn and just say something—anything—to them.</i>
+    MS. SUWAN: "I have nothing to say to them. Let us go."
     
-    NOUR: "You sure you don't want to just talk to them?"
+    &PORTRAIT_nick_nickpondering
     
-    MS. SUWAN: "I have nothing to say. Let's just go."
+    NICK: "Are we gonna talk about the concerts that you <i>supposedly</i> went to..."
     
-        **** "Come on, they could tell us how to leave!"
-            NOUR: "They might know something about this place that we don't—"
+    &PORTRAIT_ms. suwan_mssuwanannoyed
     
-            MS. SUWAN: "Nour, I said no. Now, let's go."
+    MS. SUWAN: "<i>No.</i> B&N, NOW."
     
-            NOUR: "...Fine." 
+    &PORTRAIT_nick_nicksad
     
-        **** "Ok, let's go visit some place else." 
-        
-    - NOUR: <i>Looks like she's still not ready to open up to me. I have to try a different way to know what happened between them so they could help us.</i>
-            
-    NOUR: <i>...But I do remember those three talking about rock concerts. If I find something related to that, maybe I could get more information about what happened.</i>
-            -> END
-
-== chadbrodykristy2 ==
-    NOUR: "Are you ready to talk to them, Ms. Suwan?"
+    NICK: "..."
     
-    MS. SUWAN: "I'm still not entirely sure..."
-    
-    NOUR: "There's no backing out of this now. You have to face them once and for all. You'll feel better, I promise."
-    
-    MS. SUWAN: "...I suppose it'd be a worth a shot."
-    //present tense already here, good!!
-    <i>Ms. Suwan approaches Chad, Brody, and Kristy.</i>
-    
-    BRODY: "The one and only Suwan! You finally decided to speak to us, and it's not just for our study notes. Must be a miracle!"
-    
-    MS. SUWAN: "Is it really you guys? How are you here?"
-    
-    KRISTY: "Why did you abandon us, Niki? We missed you so much."
-    
-    MS. SUWAN: "I didn't abandon you, I had-"
-    
-    BRODY: "Let me guess, work? It's always work with you."
-    
-    MS. SUWAN: "I'm sorry I actually studied so I wouldn't flunk school instead of wasting my nights drinking and going to Paradise concerts."
-    
-    BRODY: "Yeesh, sorry for wanting to just hang out like normal friends."
-    
-    MS. SUWAN: "I had a so much riding on my career. For me to sabotage it like that when it hadn't even started? No. Failing was not an option."
-    
-    CHAD: "Fail? Kannika, you always did better than any of us. We never saw get below a 90 on an exam, ever."
-    
-    KRISTY: "You always blamed us for your failures when in reality? You just had ridiculous standards you were always trying to beat."
-    //I LIKE TURNING INTO KANNIKA 
-    
-    NOUR: <i>Ms. Suwan's face morphs into a bitter expression. A reflection of her younger, rasher self...</i>
-    
-    KANNIKA: "Maybe that's because I didn't have it easy like the rest of you!"
-    
-    CHAD: "Easy? Is this a competition now to see who suffered the most?"
-    
-    KANNIKA: "NONE of you would ever understand what it was like for me! How hard I worked to get where I am with nothing but myself to rely on."
-    
-    KANNIKA: "You would've done the <i>exact same thing</i> if you were in my position."
-    
-    KRISTY: "But Niki..."
-    
-    CHAD: "You know us better than anyone else."
-    
-    BRODY: "<b>Would we have done the same things you did to us?</b>"
-    
-    <i>Silence hangs heavily in the room. Everyone stares at her. She doesn't answer them back.</i>
-    
-    KRISTY: "Ignore us like you did back then for the conerts, our <b>cafe</b> study sessions, and the rest of our years at Seton Hall."
-    
-    CHAD: "Don't talk to us until you're actually ready to apologize."
-    
-    BRODY: "Like she'll ever be. We should've never invited her to our <b>cafe</b> sessions from the very beginning."
-    
-    <i>Chad, Kristy, and Brody stop staring at Ms. Suwan and keep to themselves.</i>
-    
-    MS. SUWAN: "..."
-    
-    MS. SUWAN: "I tried. And look where that got me."
-    
-    MS. SUWAN: "...I want to leave. Now."
-    
-    NOUR: <i>I thought that maybe confronting them would work things out, but it doesn't seem like Ms. Suwan realizes what she did was wrong.</i>
-    
-    NOUR: <i>I have to make her realize that her friendship could have been saved if she had done things differently.</i>
-    
-    NOUR: <i>The three of them mentioned something about the cafe. I also used to go to the cafe here a lot too with...nevermind. That's not important right now.</i>
-    
-    NOUR: <i>I could try going there to see if it could spark a memory of Ms. Suwan's that could get her to realize her mistake.</i>
-
-&LIGHT_Suwan0
--> light_on
-// -> END
-
-=== chadbrodykristy3 ===
-    
-    NOUR: "We're back. Go ahead, Ms. Suwan."
-
-    <i>Ms. Suwan takes a nervous breath and steels herself.</i>
-    
-    KANNIKA: "I-I didn't mean to push you guys away. I just had to get ahead, and..."
-    
-    KANNIKA: "No. I'm done with excuses. I'm sorry for being a terrible friend."
-    
-    KANNIKA: "You guys just wanted to cheer me up and be my actual friends. I couldn't see it at the time because I was so focused on myself."
-    
-    KANNIKA: "I was so obsessed and anxious over our final exam. I couldn't sleep, and it tore me up inside thinking I was going to fail it."
-    
-    KANNIKA: "I kept telling myself it was a waste of time to be at a concert the night before finals. But then after you all convinced me to go, and we got there..."
-    
-    KANNIKA: "For those 4 hours, the stress of succeeding to the great lengths I enslaved myself to...it was all so small compared to the music."
-    
-    KANNIKA: "I felt so at peace with you all, cheering in that audience. It made me think of what life could be like."
-    
-    KANNIKA: "It was a life I chose to turn away from."
-    
-    KANNIKA: "I never thanked you guys for that experience, but I wanted to now by giving you this album."
-    
-    <i>Ms. Suwan shows them the album. Chad, Brody, and Kristy stare...and then smile sadly at her.</i>
-    
-    BRODY: "You were already the best, Suwan. We just wanted to be there for you so you didn't burn yourself out."
-    
-    CHAD: "We looked up to you, but we also were afraid for you."
-    
-    KRISTY: "Why do you think we went to those concerts right before our exams?"
-    
-    CHAD: "We wanted to make sure you got a chance to loosen up after cramming for weeks straight."
-    
-    KANNIKA: "I...I didn't even realize that. And the things I said to you after..."
-    
-    KRISTY: "It hurt a lot. But it's ok, Niki. You're doing well, and that's all that mattered to me."
-    
-    KANNIKA: "Kristy, I'm so sorry about everything. Please-"
-    //CODE TO MAKE KRISTY NPC DISAPPEAR
-    <i>Kristy suddenly disappears.</i>
-    
-    NOUR: "Where did she—"
-    
-    BRODY: "Kristy was always ready to forgive you, but you know me, Suwan. The skeptic. I'm not fully convinced you've changed because old habits die hard."
-    
-    BRODY: "And just look at you. You are exactly the person you wanted to be...on top. Good for you."
-    
-    KANNIKA: "Brody...what I said back then—"
-    
-    BRODY: "I don't know if I can accept this apology of yours, but I hope that you know it'll never be too late to change."
-    
-    KANNIKA: "Brody, wait—"
-    //CODE TO MAKE BRODY NPC DISAPPEAR
-    <i>Brody disappears.</i>
-    
-    CHAD: "You locked yourself in your room studying all of the time. We never got to see you. We were worried."
-    
-    KANNIKA: "I know. It was wrong of me to lash out at you and blame you for everything."
-    
-    CHAD: "You know, the Kannika back then wouldn't have been able to admit any of these things. Looks like you're already changing right now."
-    
-    KANNIKA: "Take the album, Chad. Please. I know how much it meant to all of us."
-    
-    CHAD: "I think you might need that more than we do, Kan. Don't forget to listen to the music every now and then, ok?"
-    
-    KANNIKA: "I...I promise."
-    
-    CHAD: "Good. That's all we ever really wanted for you, Kannika."
-    //CODE TO MAKE CHAD DISAPPEAR
-    
-    <i>Chad suddenly disppeared.</i>
-    
-    <i>Ms. Suwan drops the album to the ground. The thud echoes through the hallway. She doesn't move.</i>
-    
-    NOUR: "Are you ok?"
-    
-    No response.
-    
-    NOUR: "I'm sorry it turned out that way."//possible space for gather
-    
-    MS. SUWAN: "It's ok. I didn't expect anything to change miraculously."
-    
-    NOUR: "Maybe if we could find them again, we could change how—"
-    
-    MS. SUWAN: "There's no changing what could've been. But that's ok with me."
-    
-    MS. SUWAN: "I've spent so much time fighting to keep my regrets out, but now I've finally looked it in the eye...and I think I can lay this feeling to rest."
-    
-    NOUR: "But don't you think you could be happier if it had gone better?"
-    
-    MS. SUWAN: "Sometimes it's not about things getting better. To face them is enough for me."
-    
-    MS. SUWAN: "Even if they weren't real and this was all just one big dream, my feelings are real."
-    
-    MS. SUWAN: "There are some things you just can't fix, and that's okay. Worry about the things you can."
+    &PORTRAIT_nour_noursad
     
     NOUR: "..."
     
-    NOUR: <i>I don't really understand how she could be ok with how this turned out...but she seems so much more at peace than before.</i>
+    &PORTRAIT_nour_nourannoyed
     
-    NOUR: <i>...The album is still on the floor.</i>
-        * Pick up the album on the floor
-            NOUR: "Here. I think they all wanted you to have this."
+    NOUR: <i>She really doesn't want to talk to these people... but why?</i>
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>...I should find out. Somehow, I have a feeling it's connected to us being here.</i>
+    
+    &FOLLOW_NOUR_stop
+    
+    &PORTRAIT_nour_nourpondering
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    &PORTRAIT_nick_nicknetural
+
+    -> chadbrodykristy1_repeat
             
-            MS. SUWAN: "Oh..."
-        
-            <i>Ms. Suwan accepts the album and holds it close to her.</i>
-        
-            MS. SUWAN: "Thank you, Nour."
-        
-    - MS. SUWAN: "It's just too bad that they all disappeared before I had a chance to ask how to leave this place."
+=== chadbrodykristy1_repeat ===
+            
+    &PORTRAIT_nour_nourrealization
     
-    NOUR: "It's ok. This was more important. We can definitely find another way out of here."
+    NOUR: <i>Ms. Suwan went to rock shows with these people...</i>
     
-    //INSERT ELEVATOR BEEP BOOP BUTTON LIGHT STUFF HERE
+    &PORTRAIT_nour_nourpondering
     
-    //should there be a moment here that has an SFX for the elevator light...and then have Nour comment on it???
+    NOUR: <i>Maybe the B&N has something that could help her open up about her open her up more about her past.</i>
+    
+    -> END
+
+== chadbrodykristy2 ==
+    
+    &FOLLOW_NICK_NickCBKStart
+    
+    &FOLLOW_SUWAN_SuwanCBKStart
+    
+    &FOLLOW_NOUR_NourCBKStart
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "You can't keep avoiding this. It'll eat you up inside."
+    
+    &PAUSE_0.2
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "...I suppose."
+
+    &FOLLOW_SUWAN_SuwanCBKTalk
+    
+    &PAUSE_0.5
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &PORTRAIT_brody_brodyannoyed
+    
+    BRODY: "Well well, you <i>finally</i> decide to speak to us!"
+    
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
+    MS. SUWAN: "...How are you here?"
+    
+    &PORTRAIT_kristy_kristyangry
+    
+    KRISTY: "Why did you abandon us, Niki?"
+    
+    &PORTRAIT_kristy_kristysad
+    
+    KRISTY: "You know, we really missed you..."
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "I didn't abandon you. I had-"
+    
+    &PORTRAIT_brody_brodyannoyed
+    
+    BRODY: "Let me guess, work? It's always work with you."
+    
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
+    MS. SUWAN: "Must I apologize for prioritizing my studies?"
+    
+    &PORTRAIT_ms. suwan_mssuwanfurious
+    
+    MS. SUWAN: "For choosing NOT to get <i>wasted</i> at Paradise shows?"
+    
+    &PORTRAIT_brody_brodyangry
+    
+    BRODY: "We weren't getting <i>wasted</i> every night!"
+    
+    &PORTRAIT_kristy_kristysad
+    
+    KRISTY: "We wanted to have fun together."
+    
+    &PORTRAIT_kristy_kristyangry
+    
+    KRISTY: "That's why we invited you to <i>every</i> concert!"
+    
+    &PORTRAIT_chad_chadangry
+    
+    CHAD: "...No matter how many times you bailed on us."
+    
+    &PORTRAIT_chad_chadhurt
+    
+    CHAD: "Yet that makes <i>us</i> the bad friends."
+    
+    &PORTRAIT_kristy_kristyangry
+    
+    KRISTY: "<i>And</i> we spent hours studying at the cafe, which we <i>also</i> invited you to..."
+    
+    &PORTRAIT_kristy_kristyannoyed
+    
+    KRISTY: "You said you'd come. And then, you stopped showing up."
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "Even <i>one</i> bit of wasted time could have jeopardized my career."
+    
+    &PORTRAIT_brody_brodyannoyed
+    
+    BRODY: "So you abandoned your friends <i>and</i> the promises you made to us."
+    
+    &PORTRAIT_brody_brodyangry
+    
+    BRODY: "Is that success to you?"
+    
+    &PORTRAIT_chad_chadsad
+    
+    CHAD: "Kannika, you did better than all of us. Never below a 90 on exams."
+    
+    &PORTRAIT_kannika_mssuwanfurious
+    
+    KANNIKA: "And I had to work <i>twice as hard</i> as you to get those scores."
+    
+    &PORTRAIT_kristy_kristysad
+    
+    KRISTY: "...You know what, fine."
+    
+    &PORTRAIT_kristy_kristyangry
+    
+    KRISTY: "Don't talk to us until you're ready to apologize."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "..."
+    
+    &EMOTE_SUWAN_DownIdle
+    
+    &FOLLOW_SUWAN_SuwanCBKStart
+    
+    &PORTRAIT_ms. suwan_mssuwanshadow
+    
+    &EMOTE_NOUR_RightIdle
+    
+    &EMOTE_NICK_LeftIdle
+    
+    MS. SUWAN: "I want to leave. Now."
+    
+    &PORTRAIT_nour_noursad
+    
+    * "Don't you want to apologize...?"
+    
+    * "They still haven't helped us find a way out."
+    
+    - &PORTRAIT_ms. suwan_mssuwanfurious
+    
+    MS. SUWAN: "I <i>said</i> I want to leave."
+    
+    &PORTRAIT_nick_nickpondering
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NICK: "...Hold on. You guys studied at a <i>Cafe</i>?"
+    
+    &PORTRAIT_nick_nickshocked
+    
+    NICK: "Isn't there one right <i>here</i>? At this mall?"
+    
+    &PORTRAIT_nick_nicknervous
+    
+    NICK: "That's the one <i>I</i> hung out at."
+    
+    &PORTRAIT_ms. suwan_mssuwanangry
+    
+    MS. SUWAN: "That's great. We are leaving."
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>...Nick might be onto something.</i>
+    
+    &PORTRAIT_nour_nourannoyed
+    
+    NOUR: <i>But it doesn't sound like she's ready to talk about them yet.</i>
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>Maybe I should focus on helping Nick until she's ready.</i>
+    
+    &FOLLOW_NOUR_stop
+    &FOLLOW_SUWAN_NICK
+    &FOLLOW_NICK_NOUR
+
+    &LIGHT_Suwan0
+    
+    ~firstLightCharacter = "Ms. Suwan"
+    ~firstLightPronoun = "she's"
+    
+    -> light_on
+
+
+=== chadbrodkristy2_repeat ===
+
+    &PORTRAIT_nour_noursad
+
+    NOUR: <i>Seems like I'm not the only one with bittersweet memories from the Cafe.</i>
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>Clearly, Ms. Suwan was supposed to study there with these three.</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>But until we even get to that step, she needs to learn to be less stubborn.</i>
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: <i>I could help her realize this while helping Nick.</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>Once she recognizes that she should be more open-minded...</i>
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>Maybe then she'll open up to us about everything.</i>
+    
+    -> END
+
+=== chadbrodykristy3 ===
+    
+    &FOLLOW_NICK_NickCBKStart
+    
+    &FOLLOW_SUWAN_SuwanCBKStart
+    
+    &FOLLOW_NOUR_NourCBKStart
+    
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "We're back. Go ahead, Ms. Suwan."
+    
+    &PAUSE_0.3
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_NICK_UpIdle
+
+    &FOLLOW_SUWAN_SuwanCBKTalk
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    &PAUSE_0.5
+    
+    MS. SUWAN: "..."
+    
+    //&PORTRAIT_ms. suwan_mssuwanshadow
+    &PORTRAIT_kannika_mssuwansad
+    
+    KANNIKA: "I-I didn't mean to push you all away."
+    
+    &PORTRAIT_kannika_mssuwanangry
+    
+    KANNIKA: "I needed to get ahead, and..."
+    
+    &PORTRAIT_kannika_mssuwansad
+    
+    KANNIKA: "..."
+    
+    &PORTRAIT_kannika_mssuwanneutral
+    
+    KANNIKA: "...I am done with excuses."
+    
+    &PORTRAIT_kannika_mssuwansad
+    
+    KANNIKA: "I'm sorry for being a terrible friend."
+    
+    &PORTRAIT_kannika_mssuwanneutral
+    
+    KANNIKA: "You were wonderful friends to me. I was too focused on my career to see that."
+    
+    &PORTRAIT_kannika_mssuwanrealization
+    
+    KANNIKA: "In retrospect, it was obvious how much you all cared."
+    
+    &PORTRAIT_kannika_mssuwansmile
+    
+    KANNIKA: "Remember that one time I could not sleep because I was stressing over finals?"
+    
+    &PORTRAIT_kannika_mssuwanpondering
+    
+    KANNIKA: "You all invited me to a show."
+    
+    &PORTRAIT_kannika_mssuwannervous
+    
+    KANNIKA: "Reluctantly, I agreed to go."
+    
+    &PORTRAIT_kannika_mssuwanrealization
+    
+    KANNIKA: "...And for a few hours, I was... I was happy."
+    
+    &PORTRAIT_kannika_mssuwanneutral
+    
+    KANNIKA: "We were packed like sardines in a small room."
+    
+    &PORTRAIT_kannika_mssuwanangry
+    
+    KANNIKA: "There was that stench of cigarettes and alcohol."
+    
+    &PORTRAIT_kannika_mssuwansmile
+    
+    KANNIKA: "But it didn't matter because we were together."
+    
+    &PORTRAIT_kannika_mssuwanneutral
+    
+    KANNIKA: "We were shouting the words to our favorite songs alongside who knows how many strangers."
+    
+    &PORTRAIT_kannika_mssuwanrealization
+    
+    KANNIKA: "That kind of bliss... was a life I chose to turn away from."
+    
+    &PORTRAIT_kannika_mssuwansad
+    
+    KANNIKA: "I hope you can... take this album as a long overdue <i>thank you</i>."
+    
+    Ms. Suwan shows them the album in her hands. Chad, Brody, and Kristy stare...
+    
+    ...And then smile sadly at her.
+    
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestEmoMusic
+    
+    &PORTRAIT_chad_chadsad
+    
+    &PORTRAIT_brody_brodysad
+    
+    &PORTRAIT_kristy_kristysad
+    
+    BRODY: "We just wanted to be there for you so you didn't burn yourself out."
+    
+    CHAD: "We were afraid for you."
+    
+    KRISTY: "Why do you think we went to those shows right before our exams?"
+    
+    &PORTRAIT_chad_chadhurt
+    
+    CHAD: "We wanted to make sure you got a chance to relax after cramming for <i>weeks</i>."
+    
+    &PORTRAIT_kannika_mssuwanrealization
+    
+    KANNIKA: "I... failed to realize that."
+    
+    &PORTRAIT_kannika_mssuwansad
+    
+    KANNIKA: "And what I said to you after..."
+    
+    &PORTRAIT_kristy_kristysad
+    
+    KRISTY: "It hurt a lot."
+    
+    &PORTRAIT_kristy_kristyneutral
+    
+    KRISTY: "But it's okay, Niki. You're doing well."
+    
+    &PORTRAIT_kristy_kristysad
+    
+    KRISTY: "That's all that matters to us."
+    
+    &PORTRAIT_kannika_mssuwanangry
+    
+    KANNIKA: "Kristy, I am so sorry about everything-"
+    
+    &PAUSE_0.5
+    
+    &SHLORP_CBK_Kristy_out
+    
+    &PAUSE_0.5
+    
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: "Where did she—"
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "Kristy!?"
+    
+    &PORTRAIT_brody_brodyneutral
+    
+    BRODY: "Kristy was always ready to forgive you, Suwan."
+    
+    &PORTRAIT_brody_brodyannoyed
+    
+    BRODY: "But I'm not fully convinced that you've changed..."
+    
+    &PORTRAIT_brody_brodyangry
+    
+    BRODY: "You're exactly the person you always wanted to be."
+    
+    &PORTRAIT_brody_brodyannoyed
+    
+    BRODY: "Are you willing to give up the lifestyle that gave you what you wanted?"
+    
+    &PORTRAIT_kannika_mssuwansad
+    
+    KANNIKA: "I... can try."
+    
+    &PORTRAIT_kannika_mssuwanangry
+    
+    KANNIKA: "I <i>am</i> trying."
+    
+    &PORTRAIT_brody_brodyangry
+    
+    BRODY: "Then you better give it your all. <i>Seriously.</i>"
+    
+    &PORTRAIT_brody_brodysad
+    
+    BRODY: "Don't make the same mistake twice."
+    
+    &PORTRAIT_kannika_mssuwansad
+    
+    KANNIKA: "I won't... and about what happened back then—"
+    
+    &PAUSE_0.5
+    
+    &SHLORP_CBK_Brody_out
+    
+    &PAUSE_0.5
+    
+    &PORTRAIT_kannika_mssuwannervous
+    
+    KANNIKA: "Brody! Don't leave—"
+    
+    &PORTRAIT_chad_chadhurt
+    
+    CHAD: "You were always locked up in your room, studying. We were worried."
+    
+    &PORTRAIT_kannika_mssuwansad
+    
+    KANNIKA: "I know. It was wrong of me to blame you for <i>my</i> anxiety."
+    
+    &PORTRAIT_chad_chadsad
+    
+    CHAD: "The Kannika we knew wouldn't have been able to admit that."
+    
+    &PORTRAIT_chad_chadneutral
+    
+    CHAD: "Looks like you're changing."
+    
+    &PORTRAIT_kannika_mssuwannervous
+    
+    KANNIKA: "Take the album, Chad. <i>Please</i>. It would mean the world."
+    
+    &PORTRAIT_chad_chadsad
+    
+    CHAD: "I think you need it more than we do, Niki."
+    
+    &PORTRAIT_chad_chadhurt
+    
+    CHAD: "Don't forget to listen to the music and <i>relax</i> every now and then, you hear?"
+    
+    &PORTRAIT_chad_chadneutral
+    
+    CHAD: "That's all we ever really wanted for you."
+    
+    &PORTRAIT_kannika_mssuwansad
+    
+    KANNIKA: "...Okay."
+    
+    &PAUSE_0.5
+    
+    &SHLORP_CBK_Chad_out
+    
+    &PAUSE_0.5
+    
+    &PORTRAIT_kannika_mssuwannervous
+    
+    KANNIKA: "..."
+    
+    &PORTRAIT_nour_nournervous
+    
+    &EMOTE_SUWAN_DownIdle
+    
+    &EMOTE_NICK_LeftIdle
+    
+    &PAUSE_0.5
+    
+    NOUR: "Are you okay?"
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    MS. SUWAN: "..."
+    
+    NOUR: "I'm sorry it turned out that way."//possible space for gather
+    
+    //&PORTRAIT_ms. suwan_mssuwanshadow
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "...I did not expect any miraculous changes."
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "Maybe if we could find them again, we could change how—"
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "I have spent so much time fighting my regrets."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "But now that I've faced up to them..."
+    
+    &PORTRAIT_ms. suwan_mssuwansmile
+    
+    MS. SUWAN: "I can finally lay it to rest."
+    
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: "But don't you think you could be happier?" 
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "If it had gone better?"
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    MS. SUWAN: "We are unable to change the past. We can only choose to accept it."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "With acceptance, maybe... we can grow."
+    
+    &PORTRAIT_ms. suwan_mssuwanpondering
+    
+    MS. SUWAN: "This... <i>hallucination</i> has helped me realize that."
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "There are some things you cannot fix, and that is okay."
+    
+    &PORTRAIT_ms. suwan_mssuwansmile
+    
+    MS. SUWAN: "Look forward, and worry about the things you <i>can</i> change."
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: "..."
+    
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: <i>...She seems to be more at peace.</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>Even though she can't change her past.</i>
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: <i>Could I ever feel that way about</i> my <i>past?</i>
+    
     &LIGHT_Suwan2
+    
+    &FOLLOW_NOUR_stop
+
+    
+    &PAUSE_1.5
+    
     &MOV_RINA_HALLWAY
-        -> light_on    
-    // -> END
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &PAUSE_0.15
+    
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: "..."
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "Oh no..."
+    
+    &PORTRAIT_ms. suwan_mssuwanrealization
+    
+    MS. SUWAN: "Nour, your old friend is here."
+    
+    &EMOTE_SUWAN_DownIdle
+    
+    &PORTRAIT_ms. suwan_mssuwanneutral
+    
+    MS. SUWAN: "If I could face the mistakes I made with Chad, Brody, and Kristy..."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "I believe you are prepared to do the same with her."
+    
+    &PORTRAIT_nour_noursad
+    
+    NOUR: <i>...Can I?</i>
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: <i>I guess there's only one way to find out...</i>
+    
+    &MUSIC_HallwayMusic
+    
+    &FOLLOW_NOUR_stop
+    &FOLLOW_SUWAN_NICK
+    &FOLLOW_NICK_NOUR
+    
+        -> light_on

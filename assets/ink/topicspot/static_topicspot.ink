@@ -1,59 +1,70 @@
 == clothesrack ==
 
-    It's a clothes rack. Everyone knows this is the first one.
+    It's a rack of strange shirts. The text is barely legible. 
+    
+    Some of them have three sleeves...? 
+    
+    Others are shaped so oddly they don't even look wearable.
     
     -> END
     
 == clothesrack2 ==
 
-    It's a clothes rack. Everyone knows this is the second one.
+    It's a rack full of strange skirts, jeans, and leggings.
+    
+    ... What kind of person would need five-legged pants?
     
     -> END
     
-== jewelrystand ==
+// == jewelrystand ==
 
-    It's a jewelry stand. Max has to write stuff here, so if you're reading this, tell him to write it.
+//     It's a jewelry stand. Max has to write stuff here, so if you're reading this, tell him to write it.
+
+== fishgun ==
+    
+    It's a toy gun from a weird video game called "Fishgun".
+    
+    The slogan on the tag says/:
+    
+    "IT'S A FISH... AND A GUN!"
+    
+    ...Maybe it's best not question the artistry.
     
     -> END
     
 == kirbyposter ==
 
-    It's a poster of Kirby, the best pink orb.
+    It's a poster of the loveable, squishable, and omnipotent pink orb, <i>Kirbo</i>.
     
     -> END
     
 == shirtwall ==
 
-    It's a wall of T-Shirts.
+    It's a wall of punk and goth t-shirts, sprinkled with anime references. 
+    
+    Classic TopicSpot.  
     
     -> END
     
-== spraycans ==
-
-    It's a bunch of spray cans. 
-    
-    NICK: "<i>Must be 18+ to purchase...</i>"
-    
-    NICK: "This sucks! This might be the ONLY time I wish I were an adult!"
-    
-    NICK: "Wait a minute, Nour! You're over 18! Could you get some—"
-    
-    NOUR: "I don't think I trust you with these."
-    
-    NICK: "Dang it."
-    
-    NICK: "So long, beautiful spray cans...wait for me because one day, we will meet again!"
-    
-    NICK: "...In exactly TWO years!"
-    
-    -> END
     
 == trinkets ==
 
-    It's a bunch of trinkets.
+    It's a collection of trinkets. 
+    
+    They're familiar shapes, yet it's hard to tell what they're supposed to actually be.
+    
+    Nothing in particular catches the eye.
     
     -> END
     
 == trinketside ==
 
     -> trinkets
+    
+// === cashier ===
+
+//     It's a kiosk.
+    
+//     Seems out of order like most things in this mall.
+    
+//     -> END

@@ -1,0 +1,150 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+//render_mode unshaded;
+
+uniform float progress : hint_range(0.0, 1.0);
+uniform float noise_desnity = 60;
+uniform float beam_size : hint_range(0.01, 0.15);
+uniform vec4 color_shlorp : hint_color = vec4(0.0, 1.02, 1.2, 1.0);
+
+
+uniform float time:hint_range(0.0, 1.57, 0.001) = 1.0; // for shlorping
+uniform vec4 color : hint_color = vec4(1.0);
+uniform float width : hint_range(0, 10) = 1.0;
+uniform int pattern : hint_range(0, 2) = 0; // diamond, circle, square
+uniform bool inside = false;
+uniform bool sussy = false;
+
+uniform vec2 r_displacement = vec2(1.0, 1.0);
+uniform vec2 g_displacement = vec2(0, 0);
+uniform vec2 b_displacement = vec2(0, 0);
+
+uniform float intensity = 0.0;
+uniform float time_intensity = 0.0;
+uniform float sus_duration = 0.01;
+uniform float sus_speed = 5.0;
+
+float rand(float n){return fract(sin(n) * 43758.5453123);}
+
+float random_vec2 (vec2 co){
+    return fract(sin(dot(co.xy ,vec2(12.9898,96.233))) * 43758.5453);
+}
+
+
+vec2 random(vec2 uv){
+    uv = vec2( dot(uv, vec2(127.1,311.7) ),
+               dot(uv, vec2(269.5,183.3) ) );
+    return -1.0 + 2.0 * fract(sin(uv) * 43758.5453123);
+}
+
+// For Disappear
+float noise_vec2(vec2 uv) {
+    vec2 uv_index = floor(uv);
+    vec2 uv_fract = fract(uv);
+
+    vec2 blur = smoothstep(0.0, 1.0, uv_fract);
+
+    return mix( mix( dot( random(uv_index + vec2(0.0,0.0) ), uv_fract - vec2(0.0,0.0) ),
+                     dot( random(uv_index + vec2(1.0,0.0) ), uv_fract - vec2(1.0,0.0) ), blur.x),
+                mix( dot( random(uv_index + vec2(0.0,1.0) ), uv_fract - vec2(0.0,1.0) ),
+                     dot( random(uv_index + vec2(1.0,1.0) ), uv_fract - vec2(1.0,1.0) ), blur.x), blur.y) * 0.5 + 0.5;
+}
+
+float noise(float p){
+	float fl = floor(p);
+  float fc = fract(p);
+	return mix(rand(fl), rand(fl + 1.0), fc);
+}
+
+float random_time (vec2 uv) {
+    return smoothstep(time_intensity - sus_duration, time_intensity, sin(noise(TIME) * sus_speed))* fract(sin(dot(uv.xy,
+        vec2(3.9898,78.233))) * 4.5453123);
+}
+
+void vertex() {
+
+}
+
+bool hasContraryNeighbour(vec2 uv, vec2 texture_pixel_size, sampler2D texture) {
+	for (float i = -ceil(width); i <= ceil(width); i++) {
+		float x = abs(i) > width ? width * sign(i) : i;
+		float offset;
+		
+		if (pattern == 0) {
+			offset = width - abs(x);
+		} else if (pattern == 1) {
+			offset = floor(sqrt(pow(width + 0.5, 2) - x * x));
+		} else if (pattern == 2) {
+			offset = width;
+		}
+		
+		for (float j = -ceil(offset); j <= ceil(offset); j++) {
+			float y = abs(j) > offset ? offset * sign(j) : j;
+			vec2 xy = uv + texture_pixel_size * vec2(x, y);
+			
+			if ((xy != clamp(xy, vec2(0.0), vec2(1.0)) || texture(texture, xy).a == 0.0) == inside) {
+				return true;
+			}
+		}
+	}
+	
+	return false;
+}
+
+void fragment() {
+	
+	vec2 uv = UV;
+	COLOR = texture(TEXTURE, uv);
+	vec4 normcolor = COLOR;
+	vec4 suscolor;
+	vec4 usingcolor;
+
+	// sussy shader
+	if (sussy){
+	
+		vec2 texture_resolution = 1.0 / TEXTURE_PIXEL_SIZE;
+		vec2 within_texture_pixel = floor(UV * texture_resolution);
+		suscolor = texture(TEXTURE, UV);
+		
+		vec2 rdisp = r_displacement * random_time(SCREEN_UV) - 0.5 * intensity;
+		vec2 gdisp = g_displacement * random_time(SCREEN_UV) - 0.5 * intensity;
+		vec2 bdisp = b_displacement * random_time(SCREEN_UV) - 0.5 * intensity;
+		
+		float r = texture(TEXTURE, UV + vec2(TEXTURE_PIXEL_SIZE * rdisp), 0.0).r;
+		float g = texture(TEXTURE, UV + vec2(TEXTURE_PIXEL_SIZE * gdisp), 0.0).g;
+		float b = texture(TEXTURE, UV + vec2(TEXTURE_PIXEL_SIZE * bdisp), 0.0).b;
+
+		float transparency = 1.0;
+		
+		if (suscolor.w < 0.15) {
+			transparency = 0.0;
+		}
+		
+		suscolor = vec4(r, g, b, transparency);
+		usingcolor = suscolor;
+	} else {
+		usingcolor = normcolor;
+	}
+	
+	//OUTLINE
+	if ((COLOR.a > 0.0) == inside && hasContraryNeighbour(uv, TEXTURE_PIXEL_SIZE, TEXTURE)) {
+		usingcolor.rgb = inside ? mix(usingcolor.rgb, color.rgb, color.a) : color.rgb;
+		usingcolor.a += (1.0 - COLOR.a) * color.a;
+	}
+	
+	COLOR = usingcolor;
+	
+	float noise = noise_vec2(UV * noise_desnity) * UV.y;
+	
+	float d1 = step(progress, noise);
+	float d2 = step(progress - beam_size, noise);
+	
+	vec3 beam = vec3(d2 - d1) * normcolor.rgb;
+	
+	usingcolor.rgb += beam;
+	usingcolor.a *= d2;
+	
+	COLOR = usingcolor;
+}"

@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/character/npc_earlearligold.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/objects/sheet_hallway_dream.png" type="Texture" id=5]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float time:hint_range(0.0, 1.57, 0.001) = 1.57;
+
+float rand(vec2 co){
+    return fract(sin(dot(co.xy ,vec2(12.9898,96.233))) * 43758.5453);
+}
+
+void fragment()
+{
+	vec2 texture_resolution = 1.0 / TEXTURE_PIXEL_SIZE;
+	vec2 within_texture_pixel=floor(UV * texture_resolution);
+	vec4 color= texture(TEXTURE,UV);
+	
+	if(sin(time) > rand(within_texture_pixel))
+		COLOR = color;
+	else
+		COLOR = vec4(0.0,0.0,0.0,0.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=24]
+shader = SubResource( 1 )
+shader_param/time = 1.57
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 5.25, 2 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 18, 13.5 )
+
+[sub_resource type="Animation" id=25]
+resource_name = "NotVisible"
+
+[sub_resource type="Animation" id=26]
+resource_name = "Shlorp"
+
+[sub_resource type="Animation" id=27]
+resource_name = "Visible"
+
+[node name="EarlEarligold" type="RigidBody2D" groups=["shiftable"]]
+mode = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+light_mask = 4
+material = SubResource( 24 )
+position = Vector2( 0, -7 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 367, 590, 13, 14 )
+
+[node name="Hint" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.313726 )
+show_behind_parent = true
+light_mask = 4
+position = Vector2( 0, -7 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 367, 590, 13, 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.25, -2 )
+shape = SubResource( 23 )
+
+[node name="ActiveArea" type="Area2D" parent="."]
+position = Vector2( 0, 4 )
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+_shlorping_target_path = NodePath("../AnimationPlayer")
+_physical_collider_path = NodePath("../CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
+position = Vector2( 0, -9.5 )
+shape = SubResource( 22 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/NotVisible = SubResource( 25 )
+anims/Shlorp = SubResource( 26 )
+anims/Visible = SubResource( 27 )
+
+[connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]
+[connection signal="body_exited" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_exited"]
+[connection signal="can_interact" from="ActiveArea" to="." method="_on_ActiveArea_can_interact"]
+[connection signal="cannot_interact" from="ActiveArea" to="." method="_on_ActiveArea_cannot_interact"]

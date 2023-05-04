@@ -1,67 +1,49 @@
 == sailormoonposters ==
 
-    {
-        - currentWorld == "dream" && sailormoonposters_real:
-            -> sailormoonposters_realvisited
-            
-        - currentWorld == "dream":
-            -> sailormoonposters_dream
-            
-        - currentWorld == "real" && sailormoonposters_dream:
-            -> sailormoonposters_dreamvisited
-        
-        - else:
-            -> sailormoonposters_real
-    }
-//---------------- DREAM WORLD ----------------
+    A Marine Star Girls poster hangs on the wall. Can't help but smile at that.
 
-== sailormoonposters_dream ==
-
-    NOUR: No way! Finally, some Sailor Moon merchandise with Uranus and Neptune!
+{
+    - !sailormoonposters_convo:
+        -> sailormoonposters_convo
+}
+    &PORTRAIT_nour_noursmile
     
-    -> sailormoonposters_gender
+    NOUR: "Maybe once we get out of here I should revisit Marine Star Girls." 
     
-    //visiting this one prompts different messages in womens clothing and cool shirt
-    =sailormoonposters_gender
+    &PORTRAIT_nour_noursmile
     
-        NOUR: I love when anime characters subvert gender roles.
-        
-        NOUR: And when Uranus would wear a suit, man, I thought she looked so cool...
-        
-        NOUR: I fantasized about being like her.
-    
-        -> sailormoonposters_nickanime
-
-
-== sailormoonposters_realvisited ==
-    
-    NOUR: Yeah, that's more like it! Uranus and Neptune together.
-    
-    -> sailormoonposters_dream.sailormoonposters_gender
-    
-    
-//Prompts nick to look for sailor moon manga in b&n bookstack
-== sailormoonposters_nickanime ==
-
-    NICK: Woah, they're like manga characters! They look super cool!
+    NOUR: "It's been a while." 
     
     -> END
 
-//SUBSEQUENT DREAM KNOTS HERE
-
-//---------------- REAL WORLD ----------------
-
-== sailormoonposters_real ==
-
-    NOUR: This Sailor Moon poster is great and all, but... I'd love to see more Sailor Uranus merchandise.
+== sailormoonposters_convo ==
     
-    -> END
+    &PORTRAIT_nour_noursmile
 
-
-== sailormoonposters_dreamvisited ==
+    NOUR: "Oh look! It's the Marine Star Girls..." 
     
-    NOUR: Ah, it's just Sailor Moon again.
+    &PORTRAIT_nick_nickshocked
     
-    -> END
+    NICK: "Whoa, you know them? I figured they were... y'know, kinda too girly for you."
+    
+    &PORTRAIT_nour_nourrealization
+    
+    NOUR: "Hey! Don't you know them, too?"
+    
+    &PORTRAIT_nick_nickpondering
+    
+    NICK: "... You know what, fair. They're pretty iconic, I guess."
+    
+    &PORTRAIT_nick_nickshocked
+    NICK: "Even my <i>dude</i> friends kinda know them, even though they don't have any sisters."
+    
+    
+    &PORTRAIT_nour_nourneutral
+    
+    NOUR: "It's cool that there's finally merch of these two."
+    
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: "They were my favorite characters in the series."
 
-//SUBSEQUENT REAL KNOTS HERE
+-> END

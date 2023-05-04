@@ -1,0 +1,220 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/scripts/ui/start_screen.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/poster.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold_80.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=4]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Shader" id=8]
+code = "// chromatic aberration
+//---------------------------------
+
+shader_type canvas_item;
+
+uniform vec2 r_displacement = vec2(1.0, 1.0);
+uniform vec2 g_displacement = vec2(-1.0, -1.0);
+uniform vec2 b_displacement = vec2(-1.0, 1.0);
+
+uniform float intensity = 3.0;
+uniform float time_intensity = 1.0;
+
+float random (vec2 uv) {
+    return sin(TIME) * fract(sin(dot(uv.xy,
+        vec2(12.9898,78.233))) * 43758.5453123);
+}
+
+void fragment()
+{
+	vec2 rdisp = r_displacement * random(UV) * intensity;
+	vec2 gdisp = g_displacement * random(UV) * intensity;
+	vec2 bdisp = b_displacement * random(UV) * intensity;
+	
+	float r = texture(TEXTURE, UV + vec2(SCREEN_PIXEL_SIZE * rdisp), 0.0).r;
+	float g = texture(TEXTURE, UV + vec2(SCREEN_PIXEL_SIZE * gdisp), 0.0).g;
+	float b = texture(TEXTURE, UV + vec2(SCREEN_PIXEL_SIZE * bdisp), 0.0).b;
+	
+	COLOR = vec4(r, g, b, 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = SubResource( 8 )
+shader_param/r_displacement = Vector2( 1, 1 )
+shader_param/g_displacement = Vector2( 0, 0 )
+shader_param/b_displacement = Vector2( 0, 0 )
+shader_param/intensity = 0.0
+shader_param/time_intensity = 1.0
+
+[sub_resource type="StyleBoxFlat" id=7]
+draw_center = false
+border_width_bottom = 2
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer/RichTextLabel:custom_colors/default_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VBoxContainer/StartButton:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "StartGame"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4.5 ),
+"transitions": PoolRealArray( 0.435275, 0.517632 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -720 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VBoxContainer/RichTextLabel:custom_colors/default_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4.7, 5.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("VBoxContainer/StartButton:custom_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureRect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 6, 7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="Start Screen" type="Panel"]
+light_mask = 15
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -480.0
+margin_top = -270.0
+margin_right = 480.0
+margin_bottom = 270.0
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 15
+material = SubResource( 9 )
+margin_right = 960.0
+margin_bottom = 1279.0
+texture = ExtResource( 2 )
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -244.0
+margin_top = 247.0
+margin_right = 244.0
+margin_bottom = 367.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 488.0
+margin_bottom = 91.0
+size_flags_horizontal = 3
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 3
+custom_fonts/bold_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[b][center]Signal Creek[/center][b]"
+text = "[b][center]Signal Creek[/center][b]"
+fit_content_height = true
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+margin_top = 95.0
+margin_right = 488.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 7 )
+text = "[START]"
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 12 )
+anims/StartGame = SubResource( 11 )
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
