@@ -109,4 +109,4 @@ func set_character_portrait(characterName: String, expressionName: String) -> vo
 func set_party_portraits_to_neutral():
 	set_character_portrait("nour", "nourneutral")
 	set_character_portrait("nick", "nickneutral")
-	set_character_portrait("ms. suwan", "suwanneutral")
+	set_character_portrait("ms. suwan", "mssuwanneutral")

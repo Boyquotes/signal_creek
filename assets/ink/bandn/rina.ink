@@ -79,7 +79,7 @@
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "... Pardon?"
+    MS. SUWAN: "...Pardon?"
     
     &PORTRAIT_nick_nickpondering
     
@@ -147,7 +147,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: <i>... Rina?!</i>
+    NOUR: <i>...Rina?!</i>
     
     &PORTRAIT_nick_nickshocked
     
@@ -201,7 +201,7 @@
     
     &PORTRAIT_nick_nickpondering
     
-    NICK: "... Well, looks like she turned off those weird lights."
+    NICK: "...Well, looks like she turned off those weird lights."
     
     &EMOTE_NICK_RightIdle
     
@@ -211,7 +211,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... Whatever it is that we are seeing."
+    MS. SUWAN: "...Whatever it is that we are seeing."
     
     &PORTRAIT_nour_nourneutral
     
@@ -239,13 +239,13 @@
             
             &PORTRAIT_nick_nicknervous
             
-            NICK: "... Okay, fair." 
+            NICK: "...Okay, fair." 
             
         * "Maybe this is all just a dream..."
             
             &PORTRAIT_nick_nickbigsmile
             
-            NICK: "Haha! Maybe none of us are even real. Ooo~!"
+            NICK: "Haha! Maybe none of us are even real. <i>Ooo~!</i>"
             
             &PORTRAIT_nour_nourpondering
             
@@ -257,7 +257,7 @@
             
             &PORTRAIT_nick_nickbigsmile
             
-            NICK: "... Do you have any more?"
+            NICK: "...Do you have any more?"
             
             &PORTRAIT_ms. suwan_mssuwanannoyed
             
@@ -275,7 +275,9 @@
             
             &PORTRAIT_ms. suwan_mssuwanangry
             
-            MS. SUWAN: "I'm not buying any of this. There is no such thing as a supernatural elevator or laminated spaces."
+            MS. SUWAN: "I'm not buying any of this." 
+            
+            MS. SUWAN: "There is no such thing as a supernatural elevator or laminated spaces."
             
             &PORTRAIT_nick_nickangry
             
@@ -311,15 +313,15 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "Hey, the buttons for the elevator are missing!"
+    NICK: "Hey, the buttons are gone!"
     
     &PORTRAIT_nour_noursad
 
-    NOUR: "No use in waiting for an elevator that won't work."
+    NOUR: "No use in waiting for an elevator that won't come."
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: "We should try to find a way out of here."
+    NOUR: "We should try to find another way out of here."
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
@@ -333,7 +335,7 @@
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "Well... while we're at it, and since we're already here..."
+    NICK: "Well... While we're at it, and since we're already here..."
     
     &PORTRAIT_nick_nicksmallsmile
     
@@ -345,13 +347,13 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "It's a start. Who knows, maybe we'll be able to ask someone for help there."
+    NOUR: "Honestly it's a start. Who knows, maybe we'll be able to ask someone for help there."
     
     Nour hesitates. Nick and Ms. Suwan look at her, expectedly.
     
     &PORTRAIT_nick_nickpondering
     
-    NICK: "... Like that girl?"
+    NICK: "...Like that girl?"
     
     &PORTRAIT_nour_noursad
     
@@ -403,7 +405,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>... Was that even really her?</i>
+    NOUR: <i>...Was that even really her?</i>
     
     &FOLLOW_NICK_NOUR
     
@@ -469,7 +471,7 @@
             
             &PORTRAIT_rina_rinadeadeye
             
-            RINA: "... Interesting."
+            RINA: "...Interesting."
             
             &PORTRAIT_nour_nourangry
             
@@ -477,7 +479,9 @@
             
             &PORTRAIT_rina_rinaneutral
             
-            RINA: "You aren't ready for this—not yet. <i>They</i> need you right now."
+            RINA: "You aren't ready for this — not yet." 
+            
+            RINA: "<i>They</i> need you right now."
             
             &PORTRAIT_rina_rinaannoyed
             
@@ -525,7 +529,9 @@
             
             &PORTRAIT_nick_nickshadow
             
-            NICK: That just saves you the disappointment. Saves <i>everyone</i> the disappointment."
+            NICK: "That just saves you the disappointment."
+            
+            NICK: "Saves <i>everyone</i> the disappointment."
             
             &PORTRAIT_nour_noursad
             
@@ -561,7 +567,7 @@
             
             &PORTRAIT_nour_nourannoyed
             
-            NOUR: "What happened made me so, so angry. I'm <i>still</i> angry."
+            NOUR: "What happened made me so, so angry. And I'm <i>still</i> angry."
             
             &PORTRAIT_nour_nourshadow
             
@@ -585,7 +591,9 @@
             
             &PORTRAIT_nour_nournervous
             
-            NOUR: <i>Ms. Suwan seems to be avoiding her past... But that doesn't seem healthy.</i>
+            NOUR: <i>Ms. Suwan seems to be avoiding her past, and is trying to get me to do the same...</i>
+            
+            NOUR: <i>But that doesn't seem healthy.</i>
             
             &PORTRAIT_nour_nourpondering
             
@@ -734,7 +742,7 @@
             
             &PORTRAIT_rina_rinaannoyed
             
-            RINA: "... At least you're talking to me again."
+            RINA: "...At least you're talking to me again."
             
             &PORTRAIT_rina_rinaneutral
             
@@ -742,7 +750,7 @@
             
             &PORTRAIT_nour_nourannoyed
             
-            NOUR: "... I can't see what it's a good start <i>to</i>."
+            NOUR: "...I can't see what it's a good start <i>to</i>."
             
             &PORTRAIT_rina_rinasad
             

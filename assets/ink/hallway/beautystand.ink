@@ -76,6 +76,10 @@
 
 == beautystand_find_pinklady ==
 
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+
     &PORTRAIT_nour_nourpondering
     
     NOUR: "..."
@@ -526,6 +530,10 @@
     &EMOTE_NOUR_UpIdle
     &EMOTE_SUWAN_UpIdle
     
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestMusic
+    
     ???: "I wasn't planning on showing myself, but I couldn't help myself!"
     
     &PORTRAIT_???_pinkladyneutral
@@ -746,11 +754,19 @@
     
     NICK: "..."
     
+    &PAUSE_1.0
+    
+    &MUSIC_STOP
+    
     NOUR: <i>Looks like the Princess really helped him feel better.</i>
     
     &PORTRAIT_nour_nourpondering
     
     NOUR: <i>We should go find the rest of the apples...</i>
+    
+    &PAUSE_1.0
+    
+    &MUSIC_HallwayMusic
     
     &FOLLOW_NOUR_stop
 
