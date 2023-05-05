@@ -786,7 +786,7 @@
             
             &PORTRAIT_nour_nournervous
             
-                ** "You were quiet[."], while others went on about how being gay is gross and haram."
+                ** "You were quiet[."], while others went on about how being gay is gross and <i>haram.</i>"
                 
                     &PORTRAIT_rina_rinaannoyed
                 
@@ -804,7 +804,7 @@
                 
     -   &PORTRAIT_rina_rinaannoyed
     
-    RINA: "I didn't tell your secret to <i>anyone</i>. Isn't that what you wanted?"
+    RINA: "I didn't tell your secret to a <i>single</i> person. Isn't that what you wanted?"
     
     &PORTRAIT_nour_nourneutral
         
@@ -860,7 +860,7 @@
             
             &PORTRAIT_rina_rinaannoyed
             
-            RINA: "What our Middle-Eastern, Muslim parents taught to our friends?"
+            RINA: "What our <I>Middle-Eastern, Muslim</i> friends and families believe?"
             
             &PORTRAIT_rina_rinaangry
             
@@ -868,7 +868,7 @@
             
             &PORTRAIT_nour_noursad
                         
-                ** "I wanted you to be my ally..." 
+                ** "I just wanted you to be my ally..." 
                 
                     &PORTRAIT_nour_nourannoyed
                 
@@ -884,7 +884,7 @@
                     
                     &PORTRAIT_rina_rinaannoyed
                 
-                    RINA: "If I told them I'm an ally..."
+                    RINA: "If I told them any of that..."
                     
                     &PORTRAIT_rina_rinasad
                     
@@ -892,7 +892,7 @@
                     
                     &PORTRAIT_nour_nourshadow
                     
-                    NOUR: "... You're worried about <i>yourself?</i>"
+                    NOUR: "You're worried about <i>yourself?</i>"
                     
                     &PORTRAIT_nour_nourannoyed
                     
@@ -917,7 +917,7 @@
                     
                     &PORTRAIT_nour_nourshadow
                     
-                    NOUR: "... You're worried about protecting <i>yourself?</i>"
+                    NOUR: "...You're worried about protecting <i>yourself?</i>"
                     
                     &PORTRAIT_nour_nourangry
                     
@@ -956,27 +956,23 @@
         
         &PORTRAIT_rina_rinasad
         
-        RINA: "And then people's parents would find out."
+        RINA: "And then their parents would find out."
         
         &PORTRAIT_rina_rinaannoyed
         
-        RINA: "And all our parents know each other, so they'd <i>all</i> know."
+        RINA: "And their parents would tell <i>our</i> parents, and suddenly everyone would know."
         
         &PORTRAIT_rin_rinaangry
         
-        RINA: "Then my parents would get mad, too."
-        
-        &PORTRAIT_rina_rinasad
-        
         RINA: "I can't help that people talk!"
         
-        &PORTRAIT_rina_rinaangry
+        &PORTRAIT_rina_rinasad
         
         RINA: "I was just looking out for the <i>both</i> of us!"
         
         &PORTRAIT_rina_rinasad
         
-        RINA: "I told you, I didn't feel any different about you after you came out..."
+        RINA: "I told you, I didn't feel any different about you after you came out to me..."
         
         &PORTRAIT_rina_rinaneutral
         
@@ -1145,7 +1141,7 @@
         
         &PORTRAIT_nour_nournervous
         
-        NOUR: "That's not true! I..."
+        NOUR: "N-no! I..."
         
         &PORTRAIT_nour_noursad
         
@@ -1197,7 +1193,7 @@
         
         &PORTRAIT_nour_nournervous
         
-        NOUR: <i>I was way too aggressive. I would've only push her away further.</i>
+        NOUR: <i>I was way too aggressive. I would've only pushed her away further.</i>
         
         &PORTRAIT_nour_noursad
         
@@ -1205,7 +1201,7 @@
         
         &PORTRAIT_nour_nourshadow
         
-        NOUR: <i>... Looks like this wasn't the right way to handle what happened.</i>
+        NOUR: <i>...Looks like this wasn't the right way to handle what happened.</i>
         
         { - !neverknowlight:
                 -> neverknowlight
@@ -1264,7 +1260,7 @@
             
             &PORTRAIT_nour_noursad
             
-            ** "Well, yeah.["] Clearly, you're not going to admit that you were wrong.
+            ** "Well, yeah.["] Clearly, you're not going to admit that you were wrong."
             
             -> admitwrong
             
@@ -1284,7 +1280,7 @@
             
             &PORTRAIT_nour_noursad
             
-            ** "I guess I am.["] I should always expect those I love to hurt me."
+            ** "I guess I am.["] Feels like I should just expect those I love to hurt me."
             
             -> hurtme
             
@@ -1312,7 +1308,7 @@
         
         &PORTRAIT_rina_rinasad
         
-        RINA: "... And I can't take back what I did."
+        RINA: "...And I can't take back what I did."
         
         -> toolate
         
@@ -1356,11 +1352,11 @@
         
         &PORTRAIT_rina_rinasad
         
-        RINA: "You couldn't <i>possibly</i> think forgetting everything..."
+        RINA: "You couldn't <i>possibly</i> think forgetting everything would be a realistic solution, right..?"
         
         &PORTRAIT_rina_rinaneutral
         
-        RINA: "Would be a realistic solution? Because, I mean..."
+        RINA: "Because, I mean..."
         
         &PORTRAIT_rina_rinadeadeye
         
@@ -1376,9 +1372,9 @@
         
         &PORTRAIT_nour_nournervous
         
-        NOUR: "Well—!"
+        NOUR: "I-I..!"
         
-        &PORTRAIT_nour_noursad
+        &PORTRAIT_nour_nourshadow
         
         NOUR: "..."
         
@@ -1387,6 +1383,7 @@
         MS. SUWAN: "Nour..."
         
         //NOTE It would be nice to incorporate consoling from Ms. Suwan here
+        //NOTE ON NOTE: ask if we still want that
         
         -> neverknow
         
@@ -1398,7 +1395,7 @@
         
         &PORTRAIT_rina_rinadeadeye
         
-        RINA: "You'll never know what would have happened if you forgave me."
+        RINA: "You'll never know what would have happened if you did."
         
         &PORTRAIT_nour_nournervous
         
@@ -1410,7 +1407,7 @@
         
         &PORTRAIT_nour_nourshadow
         
-        NOUR: <i>... Looks like this wasn't the right way to handle what happened.</i>
+        NOUR: <i>...Looks like this wasn't the right way to handle what happened.</i>
         
         { - !neverknowlight:
                 -> neverknowlight
@@ -1471,7 +1468,7 @@
         
         &PORTRAIT_ms. suwan_mssuwanneutral
         
-        MS. SUWAN: "You need to face the past, Rina... <i>everything.</i>"
+        MS. SUWAN: "You need to face the past... with Rina, with <i>everything.</i>"
         
         &PORTRAIT_ms. suwan_mssuwanpondering
         
@@ -1584,17 +1581,17 @@
             
                 NOUR: "If I left you first, you wouldn't even have a chance to make me feel bad."
             
-            * "I couldn't bring you down with me."
+            * "I couldn't bring you down with me." //CHANGE? Doesn't sound like something believable
             
                 &PORTRAIT_nour_nournervous
             
-                NOUR: "I guess I felt like you were better off not being associated with me."
+                NOUR: "I guess I... also felt like you were better off not being associated with me."
                 
                 &PORTRAIT_nour_nourshadow
                 
                 NOUR: "It seemed like you would have been happier that way."
             
-    -   &PORTRAIT_nour_noursad
+    -   &PORTRAIT_nour_noursad                                                                      // ES YOU LEFT OFF HERE
     
         NOUR: "When I say it out loud, it feels silly."
         
