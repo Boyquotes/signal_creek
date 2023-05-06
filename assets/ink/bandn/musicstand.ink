@@ -460,7 +460,11 @@
     
     &PORTRAIT_ms. suwan_mssuwanfurious
 
-    MS. SUWAN: "Once, my friends got upset at me for not going to a concert with them, right around finals."
+    MS. SUWAN: "Once, my friends bought tickets for a concert right around finals."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "They got very angry at me when I decided not to go with them."
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
