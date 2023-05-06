@@ -74,6 +74,8 @@ _navtimer_interval = 0.7
 position = Vector2( 20, 0 )
 
 [node name="SpeechBubble" type="Node2D" parent="."]
+z_index = 1
+z_as_relative = false
 script = ExtResource( 17 )
 
 [node name="Sprite" type="Sprite" parent="SpeechBubble"]
