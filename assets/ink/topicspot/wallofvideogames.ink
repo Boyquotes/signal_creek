@@ -1,6 +1,6 @@
 === wallofvg ===
 {
-    - wallofvg_afterNickRouteComplete
+    - wallofvg_afterNickRouteComplete:
         -> explored_everything
 
     - nourplaysaplequest:
