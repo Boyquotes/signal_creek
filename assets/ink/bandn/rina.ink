@@ -79,7 +79,7 @@
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
-    MS. SUWAN: "... Pardon?"
+    MS. SUWAN: "...Pardon?"
     
     &PORTRAIT_nick_nickpondering
     
@@ -147,7 +147,7 @@
     
     &PORTRAIT_nour_nourrealization
     
-    NOUR: <i>... Rina?!</i>
+    NOUR: <i>...Rina?!</i>
     
     &PORTRAIT_nick_nickshocked
     
@@ -201,7 +201,7 @@
     
     &PORTRAIT_nick_nickpondering
     
-    NICK: "... Well, looks like she turned off those weird lights."
+    NICK: "...Well, looks like she turned off those weird lights."
     
     &EMOTE_NICK_RightIdle
     
@@ -211,7 +211,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... Whatever it is that we are seeing."
+    MS. SUWAN: "...Whatever it is that we are seeing."
     
     &PORTRAIT_nour_nourneutral
     
@@ -239,13 +239,13 @@
             
             &PORTRAIT_nick_nicknervous
             
-            NICK: "... Okay, fair." 
+            NICK: "...Okay, fair." 
             
         * "Maybe this is all just a dream..."
             
             &PORTRAIT_nick_nickbigsmile
             
-            NICK: "Haha! Maybe none of us are even real. Ooo~!"
+            NICK: "Haha! Maybe none of us are even real. <i>Ooo~!</i>"
             
             &PORTRAIT_nour_nourpondering
             
@@ -257,7 +257,7 @@
             
             &PORTRAIT_nick_nickbigsmile
             
-            NICK: "... Do you have any more?"
+            NICK: "...Do you have any more?"
             
             &PORTRAIT_ms. suwan_mssuwanannoyed
             
@@ -275,7 +275,9 @@
             
             &PORTRAIT_ms. suwan_mssuwanangry
             
-            MS. SUWAN: "I'm not buying any of this. There is no such thing as a supernatural elevator or laminated spaces."
+            MS. SUWAN: "I'm not buying any of this." 
+            
+            MS. SUWAN: "There is no such thing as a supernatural elevator or laminated spaces."
             
             &PORTRAIT_nick_nickangry
             
@@ -311,15 +313,15 @@
     
     &PORTRAIT_nick_nickshocked
     
-    NICK: "Hey, the buttons for the elevator are missing!"
+    NICK: "Hey, the buttons are gone!"
     
     &PORTRAIT_nour_noursad
 
-    NOUR: "No use in waiting for an elevator that won't work."
+    NOUR: "No use in waiting for an elevator that won't come."
     
     &PORTRAIT_nour_nourneutral
     
-    NOUR: "We should try to find a way out of here."
+    NOUR: "We should try to find another way out of here."
     
     &PORTRAIT_ms. suwan_mssuwanneutral
     
@@ -333,7 +335,7 @@
     
     &PORTRAIT_nick_nickneutral
     
-    NICK: "Well... while we're at it, and since we're already here..."
+    NICK: "Well... While we're at it, and since we're already here..."
     
     &PORTRAIT_nick_nicksmallsmile
     
@@ -345,13 +347,13 @@
     
     &PORTRAIT_nour_nourpondering
     
-    NOUR: "It's a start. Who knows, maybe we'll be able to ask someone for help there."
+    NOUR: "Honestly it's a start. Who knows, maybe we'll be able to ask someone for help there."
     
     Nour hesitates. Nick and Ms. Suwan look at her, expectedly.
     
     &PORTRAIT_nick_nickpondering
     
-    NICK: "... Like that girl?"
+    NICK: "...Like that girl?"
     
     &PORTRAIT_nour_noursad
     
@@ -403,7 +405,7 @@
     
     &PORTRAIT_nour_noursad
     
-    NOUR: <i>... Was that even really her?</i>
+    NOUR: <i>...Was that even really her?</i>
     
     &FOLLOW_NICK_NOUR
     
@@ -469,7 +471,7 @@
             
             &PORTRAIT_rina_rinadeadeye
             
-            RINA: "... Interesting."
+            RINA: "...Interesting."
             
             &PORTRAIT_nour_nourangry
             
@@ -477,7 +479,9 @@
             
             &PORTRAIT_rina_rinaneutral
             
-            RINA: "You aren't ready for this—not yet. <i>They</i> need you right now."
+            RINA: "You aren't ready for this — not yet." 
+            
+            RINA: "<i>They</i> need you right now."
             
             &PORTRAIT_rina_rinaannoyed
             
@@ -525,7 +529,9 @@
             
             &PORTRAIT_nick_nickshadow
             
-            NICK: That just saves you the disappointment. Saves <i>everyone</i> the disappointment."
+            NICK: "That just saves you the disappointment."
+            
+            NICK: "Saves <i>everyone</i> the disappointment."
             
             &PORTRAIT_nour_noursad
             
@@ -561,7 +567,7 @@
             
             &PORTRAIT_nour_nourannoyed
             
-            NOUR: "What happened made me so, so angry. I'm <i>still</i> angry."
+            NOUR: "What happened made me so, so angry. And I'm <i>still</i> angry."
             
             &PORTRAIT_nour_nourshadow
             
@@ -585,7 +591,9 @@
             
             &PORTRAIT_nour_nournervous
             
-            NOUR: <i>Ms. Suwan seems to be avoiding her past... But that doesn't seem healthy.</i>
+            NOUR: <i>Ms. Suwan seems to be avoiding her past, and is trying to get me to do the same...</i>
+            
+            NOUR: <i>But that doesn't seem healthy.</i>
             
             &PORTRAIT_nour_nourpondering
             
@@ -734,7 +742,7 @@
             
             &PORTRAIT_rina_rinaannoyed
             
-            RINA: "... At least you're talking to me again."
+            RINA: "...At least you're talking to me again."
             
             &PORTRAIT_rina_rinaneutral
             
@@ -742,7 +750,7 @@
             
             &PORTRAIT_nour_nourannoyed
             
-            NOUR: "... I can't see what it's a good start <i>to</i>."
+            NOUR: "...I can't see what it's a good start <i>to</i>."
             
             &PORTRAIT_rina_rinasad
             
@@ -778,7 +786,7 @@
             
             &PORTRAIT_nour_nournervous
             
-                ** "You were quiet[."], while others went on about how being gay is gross and haram."
+                ** "You were quiet[."], while others went on about how being gay is gross and <i>haram.</i>"
                 
                     &PORTRAIT_rina_rinaannoyed
                 
@@ -796,7 +804,7 @@
                 
     -   &PORTRAIT_rina_rinaannoyed
     
-    RINA: "I didn't tell your secret to <i>anyone</i>. Isn't that what you wanted?"
+    RINA: "I didn't tell your secret to a <i>single</i> person. Isn't that what you wanted?"
     
     &PORTRAIT_nour_nourneutral
         
@@ -852,7 +860,7 @@
             
             &PORTRAIT_rina_rinaannoyed
             
-            RINA: "What our Middle-Eastern, Muslim parents taught to our friends?"
+            RINA: "What our <I>Middle-Eastern, Muslim</i> friends and families believe?"
             
             &PORTRAIT_rina_rinaangry
             
@@ -860,7 +868,7 @@
             
             &PORTRAIT_nour_noursad
                         
-                ** "I wanted you to be my ally..." 
+                ** "I just wanted you to be my ally..." 
                 
                     &PORTRAIT_nour_nourannoyed
                 
@@ -876,7 +884,7 @@
                     
                     &PORTRAIT_rina_rinaannoyed
                 
-                    RINA: "If I told them I'm an ally..."
+                    RINA: "If I told them any of that..."
                     
                     &PORTRAIT_rina_rinasad
                     
@@ -884,7 +892,7 @@
                     
                     &PORTRAIT_nour_nourshadow
                     
-                    NOUR: "... You're worried about <i>yourself?</i>"
+                    NOUR: "You're worried about <i>yourself?</i>"
                     
                     &PORTRAIT_nour_nourannoyed
                     
@@ -909,7 +917,7 @@
                     
                     &PORTRAIT_nour_nourshadow
                     
-                    NOUR: "... You're worried about protecting <i>yourself?</i>"
+                    NOUR: "...You're worried about protecting <i>yourself?</i>"
                     
                     &PORTRAIT_nour_nourangry
                     
@@ -948,27 +956,23 @@
         
         &PORTRAIT_rina_rinasad
         
-        RINA: "And then people's parents would find out."
+        RINA: "And then their parents would find out."
         
         &PORTRAIT_rina_rinaannoyed
         
-        RINA: "And all our parents know each other, so they'd <i>all</i> know."
+        RINA: "And their parents would tell <i>our</i> parents, and suddenly everyone would know."
         
         &PORTRAIT_rin_rinaangry
         
-        RINA: "Then my parents would get mad, too."
-        
-        &PORTRAIT_rina_rinasad
-        
         RINA: "I can't help that people talk!"
         
-        &PORTRAIT_rina_rinaangry
+        &PORTRAIT_rina_rinasad
         
         RINA: "I was just looking out for the <i>both</i> of us!"
         
         &PORTRAIT_rina_rinasad
         
-        RINA: "I told you, I didn't feel any different about you after you came out..."
+        RINA: "I told you, I didn't feel any different about you after you came out to me..."
         
         &PORTRAIT_rina_rinaneutral
         
@@ -1137,7 +1141,7 @@
         
         &PORTRAIT_nour_nournervous
         
-        NOUR: "That's not true! I..."
+        NOUR: "N-no! I..."
         
         &PORTRAIT_nour_noursad
         
@@ -1189,7 +1193,7 @@
         
         &PORTRAIT_nour_nournervous
         
-        NOUR: <i>I was way too aggressive. I would've only push her away further.</i>
+        NOUR: <i>I was way too aggressive. I would've only pushed her away further.</i>
         
         &PORTRAIT_nour_noursad
         
@@ -1197,7 +1201,7 @@
         
         &PORTRAIT_nour_nourshadow
         
-        NOUR: <i>... Looks like this wasn't the right way to handle what happened.</i>
+        NOUR: <i>...Looks like this wasn't the right way to handle what happened.</i>
         
         { - !neverknowlight:
                 -> neverknowlight
@@ -1256,7 +1260,7 @@
             
             &PORTRAIT_nour_noursad
             
-            ** "Well, yeah.["] Clearly, you're not going to admit that you were wrong.
+            ** "Well, yeah.["] Clearly, you're not going to admit that you were wrong."
             
             -> admitwrong
             
@@ -1276,7 +1280,7 @@
             
             &PORTRAIT_nour_noursad
             
-            ** "I guess I am.["] I should always expect those I love to hurt me."
+            ** "I guess I am.["] Feels like I should just expect those I love to hurt me."
             
             -> hurtme
             
@@ -1304,7 +1308,7 @@
         
         &PORTRAIT_rina_rinasad
         
-        RINA: "... And I can't take back what I did."
+        RINA: "...And I can't take back what I did."
         
         -> toolate
         
@@ -1348,11 +1352,11 @@
         
         &PORTRAIT_rina_rinasad
         
-        RINA: "You couldn't <i>possibly</i> think forgetting everything..."
+        RINA: "You couldn't <i>possibly</i> think forgetting everything would be a realistic solution, right..?"
         
         &PORTRAIT_rina_rinaneutral
         
-        RINA: "Would be a realistic solution? Because, I mean..."
+        RINA: "Because, I mean..."
         
         &PORTRAIT_rina_rinadeadeye
         
@@ -1368,9 +1372,9 @@
         
         &PORTRAIT_nour_nournervous
         
-        NOUR: "Well—!"
+        NOUR: "I-I..!"
         
-        &PORTRAIT_nour_noursad
+        &PORTRAIT_nour_nourshadow
         
         NOUR: "..."
         
@@ -1379,6 +1383,7 @@
         MS. SUWAN: "Nour..."
         
         //NOTE It would be nice to incorporate consoling from Ms. Suwan here
+        //NOTE ON NOTE: ask if we still want that
         
         -> neverknow
         
@@ -1390,7 +1395,7 @@
         
         &PORTRAIT_rina_rinadeadeye
         
-        RINA: "You'll never know what would have happened if you forgave me."
+        RINA: "You'll never know what would have happened if you did."
         
         &PORTRAIT_nour_nournervous
         
@@ -1402,7 +1407,7 @@
         
         &PORTRAIT_nour_nourshadow
         
-        NOUR: <i>... Looks like this wasn't the right way to handle what happened.</i>
+        NOUR: <i>...Looks like this wasn't the right way to handle what happened.</i>
         
         { - !neverknowlight:
                 -> neverknowlight
@@ -1463,7 +1468,7 @@
         
         &PORTRAIT_ms. suwan_mssuwanneutral
         
-        MS. SUWAN: "You need to face the past, Rina... <i>everything.</i>"
+        MS. SUWAN: "You need to face the past... with Rina, with <i>everything.</i>"
         
         &PORTRAIT_ms. suwan_mssuwanpondering
         
@@ -1575,18 +1580,20 @@
                 &PORTRAIT_nour_nourshadow
             
                 NOUR: "If I left you first, you wouldn't even have a chance to make me feel bad."
+                
+                NOUR: "I needed to protect myself."
             
-            * "I couldn't bring you down with me."
+            * "I was scared of you judging me."
             
                 &PORTRAIT_nour_nournervous
             
-                NOUR: "I guess I felt like you were better off not being associated with me."
+                NOUR: "I guess I... already knew what it was to be bullied and picked on."
                 
                 &PORTRAIT_nour_nourshadow
                 
-                NOUR: "It seemed like you would have been happier that way."
+                NOUR: "I couldn't stand the thought of you making fun of me, or hating me."
             
-    -   &PORTRAIT_nour_noursad
+    -   &PORTRAIT_nour_noursad  
     
         NOUR: "When I say it out loud, it feels silly."
         
@@ -1638,7 +1645,7 @@
         
         &PORTRAIT_nour_nourshadow
         
-        NOUR: "... And I can't change what Rina did."
+        NOUR: "...And I can't change what Rina did."
         
         &PORTRAIT_nour_nourtears
         
@@ -1658,7 +1665,7 @@
         
         &PORTRAIT_nick_nickbigsmile
         
-        NICK: "Mostly 'cause we're just stuck here together."
+        NICK: "Mostly 'cause we're stuck here together."
         
         &PORTRAIT_ms. suwan_mssuwansmile
         
@@ -1686,7 +1693,7 @@
         
         &PORTRAIT_rina_rinaneutral
         
-        RINA: "Without."
+        RINA: "<i>Without</i> me."
         
         &PORTRAIT_rina_rinasadsmile
         
@@ -1746,7 +1753,7 @@
         
         &PORTRAIT_nick_nickpondering
         
-        NICK: "Now, shall we move on? Because <i>I</i> believe it is..."
+        NICK: "Now, shall we move on? Because <i>I</i> believe it iiiiiis..."
         
         &PORTRAIT_nick_nickbigsmile
         
@@ -1760,7 +1767,7 @@
         
         &PORTRAIT_nick_nickshocked
         
-        NICK: "... Nour! Are your coming or what?"
+        NICK: "...Nour! Are you coming or what?"
         
         &PORTRAIT_ms. suwan_mssuwansmile
         
@@ -1843,15 +1850,15 @@
         
         &PORTRAIT_rina_rinaneutral
         
-        RINA: "Nour, don't you remember all the pictures we took together?"
+        RINA: "Nour... Don't you remember all those pictures we took together?"
         
         &PORTRAIT_nour_nourrealization
         
-        NOUR: "... What?"
-        
-        RINA: "Before you became a pro photographer."
+        NOUR: "...What?"
         
         &PORTRAIT_rina_rinasadsmile
+        
+        RINA: "Before you even decided to go to art school for photography."
         
         RINA: "When we were just two kids with a camera, capturing memories."
         
@@ -1863,7 +1870,7 @@
         
         NOUR: <i>With the polaroid camera that my dad got...</i>
         
-        NOUR: <i>... from this mall.</i>
+        NOUR: <i>...from this mall.</i>
         
         -> END
     
@@ -1871,7 +1878,7 @@
     
         &PORTRAIT_nour_nourpondering
         
-        NOUR: <i>Rina wants me to remember when we took pictures together.</i>
+        NOUR: <i>Rina wants me to remember those pictures together.</i>
         
         &PORTRAIT_nour_nourneutral
         
@@ -1879,6 +1886,6 @@
         
         &PORTRAIT_nour_nourpondering
         
-        NOUR: <i>... I wonder if I can still find it around her?</i>
+        NOUR: <i>...I wonder if she's hinting at it being here somewhere.</i>
     
         -> END

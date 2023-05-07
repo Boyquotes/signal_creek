@@ -460,7 +460,11 @@
     
     &PORTRAIT_ms. suwan_mssuwanfurious
 
-    MS. SUWAN: "Once, my friends got upset at me for not going to a concert with them, right around finals."
+    MS. SUWAN: "Once, my friends bought tickets for a concert right around finals."
+    
+    &PORTRAIT_ms. suwan_mssuwansad
+    
+    MS. SUWAN: "They got very angry at me when I decided not to go with them."
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
@@ -876,7 +880,7 @@
     
     NOUR: "Then, the stakes are relatively low, right?"
     
-    &PORTRAIT_ms. suwan_mssuwannervous
+    &PORTRAIT_ms. suwan_mssuwansad
     
     MS. SUWAN: "I suppose you're right about that."
     
@@ -892,9 +896,25 @@
     
     NOUR: "You're not a stressed out student anymore. You could rock out once in a while."
     
+    &PORTRAIT_ms. suwan_mssuwannervous
+    
+    MS. SUWAN: "... I'd rather not take something without paying for it."
+    
+    &PORTRAIT_nour_nournervous
+    
+    NOUR: "There's no way after everything we've been through..."
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "You <i>still</i> think this place is part of our reality?"
+    
+    &PORTRAIT_nick_nickshocked
+    
+    NICK: "This place doesn't even have a chashier to buy it from!"
+    
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "...Alright."
+    MS. SUWAN: "... Alright."
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -953,7 +973,11 @@
 
     NOUR: "I wish I could've gone to a Paradise concert. It must've been so cool to hear them live." // (SAD)
     
+    &PORTRAIT_ms. suwan_mssuwansad
+    
     MS. SUWAN: "It was. Nothing like the digital recordings. 
+    
+    &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "The energy isn't the same."
     
