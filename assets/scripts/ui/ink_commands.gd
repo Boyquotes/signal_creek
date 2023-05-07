@@ -121,6 +121,7 @@ func parse_commands(currentLine):
 			Globals.RouteLights.door_close_anim()
 			
 		elif "UNSHUT" in action:
+			Globals.RouteLights.door_open_anim()
 			pass
 	
 	# Teleport party to elevator and have them say shit
