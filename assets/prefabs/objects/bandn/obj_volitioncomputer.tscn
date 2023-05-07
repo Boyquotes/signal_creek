@@ -3,7 +3,8 @@
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/environment/interactive.gd" type="Script" id=2]
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
-[ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=5]
+
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 17.5, 12 )
