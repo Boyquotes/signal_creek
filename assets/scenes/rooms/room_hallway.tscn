@@ -1424,6 +1424,15 @@ _automatic = false
 position = Vector2( 84, -211 )
 shape = SubResource( 24 )
 
+[node name="NourHallwayRina" type="Node2D" parent="PlaneManager"]
+position = Vector2( 977, 361 )
+
+[node name="NickRinaHallway" type="Node2D" parent="PlaneManager"]
+position = Vector2( 961, 383 )
+
+[node name="SuwanRinaHallway" type="Node2D" parent="PlaneManager"]
+position = Vector2( 993, 382 )
+
 [connection signal="body_entered" from="PlaneManager/Doortal_TopicSpot" to="PlaneManager/Doortal_TopicSpot" method="_on_Doortal_body_entered"]
 [connection signal="body_entered" from="PlaneManager/TutorialTrigger" to="PlaneManager/TutorialTrigger" method="_on_TutorialTrigger_body_entered"]
 [connection signal="body_entered" from="PlaneManager/Doortal_Bandn" to="PlaneManager/Doortal_Bandn" method="_on_Doortal_body_entered"]

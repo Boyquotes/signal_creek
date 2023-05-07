@@ -9,6 +9,40 @@
 //     //It would be more engaging if the "new releases" weren't outdated by over a decade.
     
 //     -> END
+
+== emberpointposter == 
+
+    A poster from the video game Ember Point 
+    
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: "My little brother used to be obsessed with this game."
+    
+    &PORTRAIT_nick_nickpondering
+    
+    NICK: "But did he know Niko was evil the entire time?"
+    
+    &PORTRAIT_nick_nickbigsmile
+    
+    NICK: "Cause I knew right away, I'm just that good."
+    
+    &PORTRAIT_nour_nourpondering
+    
+    NOUR: "Yeah...sure."
+    
+    &PORTRAIT_nick_nickangry
+    
+    NICK: "IT'S TRUE, I KNEW IT THE SECOND THEY GOT OFF THE SPACESHIP!"
+    
+    &PORTRAIT_nour_noursmile
+    
+    NOUR: "I'm just teasing, I bet you did."
+    
+    &PORTRAIT_nick_nicksmallsmile
+    
+    NICK: "Thank you."
+    
+    ->END 
     
 == cashier ==
 

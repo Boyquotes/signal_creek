@@ -1389,6 +1389,8 @@
     
     NICK: "You can do it!"
     
+    &EMOTE_NOUR_RightIdle
+    
     &PORTRAIT_nour_noursad
     
     NOUR: <i>... I guess I should talk to her.</i>
