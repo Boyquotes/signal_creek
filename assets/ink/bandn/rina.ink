@@ -1580,18 +1580,20 @@
                 &PORTRAIT_nour_nourshadow
             
                 NOUR: "If I left you first, you wouldn't even have a chance to make me feel bad."
+                
+                NOUR: "I needed to protect myself."
             
-            * "I couldn't bring you down with me." //CHANGE? Doesn't sound like something believable
+            * "I was scared of you judging me."
             
                 &PORTRAIT_nour_nournervous
             
-                NOUR: "I guess I... also felt like you were better off not being associated with me."
+                NOUR: "I guess I... already knew what it was to be bullied and picked on."
                 
                 &PORTRAIT_nour_nourshadow
                 
-                NOUR: "It seemed like you would have been happier that way."
+                NOUR: "I couldn't stand the thought of you making fun of me, or hating me."
             
-    -   &PORTRAIT_nour_noursad                                                                      // ES YOU LEFT OFF HERE
+    -   &PORTRAIT_nour_noursad  
     
         NOUR: "When I say it out loud, it feels silly."
         
@@ -1643,7 +1645,7 @@
         
         &PORTRAIT_nour_nourshadow
         
-        NOUR: "... And I can't change what Rina did."
+        NOUR: "...And I can't change what Rina did."
         
         &PORTRAIT_nour_nourtears
         
@@ -1663,7 +1665,7 @@
         
         &PORTRAIT_nick_nickbigsmile
         
-        NICK: "Mostly 'cause we're just stuck here together."
+        NICK: "Mostly 'cause we're stuck here together."
         
         &PORTRAIT_ms. suwan_mssuwansmile
         
@@ -1691,7 +1693,7 @@
         
         &PORTRAIT_rina_rinaneutral
         
-        RINA: "Without."
+        RINA: "<i>Without</i> me."
         
         &PORTRAIT_rina_rinasadsmile
         
@@ -1751,7 +1753,7 @@
         
         &PORTRAIT_nick_nickpondering
         
-        NICK: "Now, shall we move on? Because <i>I</i> believe it is..."
+        NICK: "Now, shall we move on? Because <i>I</i> believe it iiiiiis..."
         
         &PORTRAIT_nick_nickbigsmile
         
@@ -1765,7 +1767,7 @@
         
         &PORTRAIT_nick_nickshocked
         
-        NICK: "... Nour! Are your coming or what?"
+        NICK: "...Nour! Are you coming or what?"
         
         &PORTRAIT_ms. suwan_mssuwansmile
         
@@ -1848,15 +1850,15 @@
         
         &PORTRAIT_rina_rinaneutral
         
-        RINA: "Nour, don't you remember all the pictures we took together?"
+        RINA: "Nour... Don't you remember all those pictures we took together?"
         
         &PORTRAIT_nour_nourrealization
         
-        NOUR: "... What?"
-        
-        RINA: "Before you became a pro photographer."
+        NOUR: "...What?"
         
         &PORTRAIT_rina_rinasadsmile
+        
+        RINA: "Before you even decided to go to art school for photography."
         
         RINA: "When we were just two kids with a camera, capturing memories."
         
@@ -1868,7 +1870,7 @@
         
         NOUR: <i>With the polaroid camera that my dad got...</i>
         
-        NOUR: <i>... from this mall.</i>
+        NOUR: <i>...from this mall.</i>
         
         -> END
     
@@ -1876,7 +1878,7 @@
     
         &PORTRAIT_nour_nourpondering
         
-        NOUR: <i>Rina wants me to remember when we took pictures together.</i>
+        NOUR: <i>Rina wants me to remember those pictures together.</i>
         
         &PORTRAIT_nour_nourneutral
         
@@ -1884,6 +1886,6 @@
         
         &PORTRAIT_nour_nourpondering
         
-        NOUR: <i>... I wonder if I can still find it around her?</i>
+        NOUR: <i>...I wonder if she's hinting at it being here somewhere.</i>
     
         -> END
