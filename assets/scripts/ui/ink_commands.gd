@@ -218,3 +218,9 @@ func parse_commands(currentLine):
 			
 		elif "FADEOUT" in currentLine:
 			Globals.SoundManager.smooth_decrease_music_volume()
+			
+	elif "&FACESAMEWAY" in currentLine:
+		var nourAnimation = Globals.Nour._animation_player.get_current_animation()
+		
+		Globals.Nick.animate_emote(nourAnimation)
+		Globals.Suwan.animate_emote(nourAnimation)
