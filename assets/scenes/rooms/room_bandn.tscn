@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://assets/sprites/tilesets/tileset_bandn_dream.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/scripts/environment/room_vars.gd" type="Script" id=2]
@@ -17,7 +17,7 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_polaroid.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_poster2.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_skeletondisplay.tscn" type="PackedScene" id=17]
-[ext_resource path="res://assets/prefabs/objects/bandn/obj_poster1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_emberpointposter.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_shelfwithtrinkets.tscn" type="PackedScene" id=19]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_musicstand.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_kindle.tscn" type="PackedScene" id=21]
@@ -28,6 +28,7 @@
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_displayshelf.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_tablesmall.tscn" type="PackedScene" id=27]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_comicstand.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/prefabs/objects/bandn/obj_chairside.tscn" type="PackedScene" id=29]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_tablewide.tscn" type="PackedScene" id=30]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_wallshelf.tscn" type="PackedScene" id=32]
 [ext_resource path="res://assets/prefabs/objects/bandn/obj_displaystand.tscn" type="PackedScene" id=33]
@@ -487,13 +488,6 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="SofaBack" parent="PlaneManager/Overworld" instance=ExtResource( 4 )]
-position = Vector2( -17, -281 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
 [node name="ChairFront" parent="PlaneManager/Overworld" instance=ExtResource( 34 )]
 position = Vector2( -17, -339 )
 __meta__ = {
@@ -752,13 +746,6 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Poster1" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
-position = Vector2( 3, -351 )
-__meta__ = {
-"_edit_lock_": true,
-"_editor_description_": ""
-}
-
 [node name="Poster2" parent="PlaneManager/Overworld" instance=ExtResource( 16 )]
 position = Vector2( 407, -351 )
 __meta__ = {
@@ -822,6 +809,15 @@ position = Vector2( 315, -400 )
 [node name="BookshelfNormal2" parent="PlaneManager/Overworld" instance=ExtResource( 44 )]
 material = SubResource( 31 )
 position = Vector2( 169, -399 )
+
+[node name="EmberPointPoster" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
+position = Vector2( 8, -352 )
+
+[node name="ChairSide" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
+position = Vector2( -63, -307 )
+
+[node name="SofaBack" parent="PlaneManager/Overworld" instance=ExtResource( 4 )]
+position = Vector2( -14, -288 )
 
 [node name="MsSuwanMoveBack" type="Node2D" parent="PlaneManager"]
 position = Vector2( 122, 34 )
