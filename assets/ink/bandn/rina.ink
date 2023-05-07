@@ -1022,6 +1022,19 @@
 //Nour takes this to mean that she should be confident, but she's OVER confident as a result.
 
 == rina_topicspot ==
+    &FOLLOW_NICK_NickLookAtNour
+    
+    &FOLLOW_SUWAN_SuwanLookAtNour
+    
+    &FOLLOW_NOUR_NourRina
+    
+    &PAUSE_0.3
+    
+    &EMOTE_NICK_DownIdle
+    
+    &EMOTE_SUWAN_DownIdle
+    
+    &EMOTE_NOUR_RightIdle
 
     &PORTRAIT_nour_nournervous
     
@@ -1139,6 +1152,12 @@
         
         RINA: "Did you have so little faith in me?"
         
+        &FOLLOW_NOUR_NourRina2
+        
+        &PAUSE_0.2
+        
+        &EMOTE_NOUR_UpIdle
+        
         &PORTRAIT_nour_nournervous
         
         NOUR: "N-no! I..."
@@ -1161,7 +1180,7 @@
         
             -> neverknow
     
-    = neverknow
+    = neverknow 
     
         &PORTRAIT_rina_rinaneutral
     
@@ -1179,9 +1198,17 @@
         
         RINA: "I hope <i>this</i> isn't the way you wish our conversation had gone."
         
+        &EMOTE_NOUR_DownIdle
+        
         &PORTRAIT_nour_noursad
         
         NOUR: "..."
+        
+        &FOLLOW_NICK_NickRina
+        
+        &PAUSE_0.2
+        
+        &EMOTE_NICK_RightIdle
         
         &PORTRAIT_nick_nicknervous
         
@@ -1199,9 +1226,13 @@
         
         NOUR: <i>Acting this way would've just burn her and myself.</i>
         
+        &EMOTE_NOUR_LeftIdle
+        
         &PORTRAIT_nour_nourshadow
         
         NOUR: <i>...Looks like this wasn't the right way to handle what happened.</i>
+        
+        &FOLLOW_NOUR_stop
         
         { - !neverknowlight:
                 -> neverknowlight
@@ -1221,6 +1252,22 @@
 //Nour takes this to mean that she should let things slide, and she ends up being too passive as a result.
 
 == rina_hallway ==
+
+    &FOLLOW_NICK_NickRinaHallway
+    
+    &FOLLOW_SUWAN_SuwanRinaHallway
+    
+    &FOLLOW_NOUR_NourHallwayRina
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &FOLLOW_NOUR_stop
 
     &PORTRAIT_nour_nournervous
     
