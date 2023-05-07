@@ -807,7 +807,7 @@ material = SubResource( 31 )
 position = Vector2( 169, -399 )
 
 [node name="EmberPointPoster" parent="PlaneManager/Overworld" instance=ExtResource( 18 )]
-position = Vector2( 8, -352 )
+position = Vector2( 8, -351 )
 
 [node name="ChairSide" parent="PlaneManager/Overworld" instance=ExtResource( 29 )]
 position = Vector2( -63, -307 )
