@@ -173,7 +173,6 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -41.0 ]
 }
-testing_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )
@@ -189,6 +188,8 @@ rect_scale = Vector2( 3, 3 )
 stretch = true
 script = ExtResource( 13 )
 _elevator_focus_position = Vector2( 472, 232 )
+exhibition_build = true
+exhibition_time = 600.0
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
 size = Vector2( 322, 182 )

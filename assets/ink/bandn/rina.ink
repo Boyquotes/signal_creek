@@ -1483,10 +1483,6 @@
     
     The elevator engine is whirring back to life.
     
-    There's... a new energy in Rina's eyes.
-    
-    More familiar. More <i>real</i>.
-    
     &FOLLOW_NICK_NickEndingStartPos
     &FOLLOW_SUWAN_SuwanEndingStartPos
     &FOLLOW_NOUR_NourEndingStartPos
@@ -1499,7 +1495,9 @@
     &EMOTE_NICK_UpIdle
     &EMOTE_SUWAN_UpIdle
     
+    There's... a new energy in Rina's eyes.
     
+    More familiar. More <i>real</i>.
     
     &PORTRAIT_ms. suwan_mssuwannervous
     
@@ -1710,11 +1708,11 @@
         
         &PORTRAIT_nour_noursad
         
-            * "I can't change Rina."
+            * "I can't change you, Rina."
             
                 &PORTRAIT_nour_nournervous
             
-                NOUR: "I'm mad that she didn't say anything..."
+                NOUR: "I'm mad that you didn't say anything..."
                 
                 &PORTRAIT_nour_nourshadow
                 
@@ -1728,7 +1726,7 @@
                 
                 &PORTRAIT_nour_nourshadow
                 
-                NOUR: "Maybe even more than I was mad at Rina."
+                NOUR: "Maybe even more than I was mad at you, Rina."
             
         - &PORTRAIT_nour_noursad
         
@@ -1736,7 +1734,7 @@
         
         &PORTRAIT_nour_nourshadow
         
-        NOUR: "...And I can't change what Rina did."
+        NOUR: "...And I can't change what you did."
         
         &PORTRAIT_nour_nourtears
         
@@ -1901,6 +1899,16 @@
         NOUR: "Yeah. Let's go."
         
         &FOLLOW_NOUR_EndingElevatorPos
+        
+        &SPEED_NOUR_40.0
+        
+        &PAUSE_0.5
+        &FDEOUT
+        &PAUSE_0.5
+        
+        &ENDGAME
+        
+        Bye!
         
         -> END
 

@@ -155,6 +155,23 @@ It's a neatly handwritten sign for the Louis George Cafe. But all of the drink's
 
     -> END
     
+== earlearligold ==
+
+    NOUR: "...What's this apple doing on the floor?"
+    
+    EARL EARLIGOLD: "As an apple, you are... Okay."
+    
+    NOUR: "...??!"
+    
+    EARL EARLIGOLD: "I rate you 6/10."
+    
+    NICK: "Haha! You're not a good apple."
+    
+    EARL EARLIGOLD: "You are a 10/10! A rare apple you are, young prince!"
+    
+    NICK: "...Thanks!"
+    
+    -> END
 // == wertoys == 
 
 //     It's the old toy store, We r Toys.

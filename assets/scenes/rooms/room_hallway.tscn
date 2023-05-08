@@ -1431,31 +1431,31 @@ position = Vector2( 977, 361 )
 position = Vector2( 961, 383 )
 
 [node name="NickEndingStartPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 449, 326 )
+position = Vector2( 448, 328 )
 
 [node name="SuwanEndingStartPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 512, 326 )
+position = Vector2( 511, 328 )
 
 [node name="NourEndingStartPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 481, 315 )
+position = Vector2( 480, 317 )
 
 [node name="NourEndingRinaPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 481, 298 )
+position = Vector2( 480, 300 )
 
 [node name="SuwanHelpPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 512, 299 )
+position = Vector2( 511, 301 )
 
 [node name="SuwanComfortPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 500, 298 )
+position = Vector2( 499, 300 )
 
 [node name="NickHelpPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 448, 297 )
+position = Vector2( 447, 299 )
 
 [node name="NickComfortPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 463, 298 )
+position = Vector2( 462, 300 )
 
 [node name="EndingElevatorPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 479, 270 )
+position = Vector2( 480, 277 )
 
 [node name="SuwanRinaHallway" type="Node2D" parent="PlaneManager"]
 position = Vector2( 993, 382 )

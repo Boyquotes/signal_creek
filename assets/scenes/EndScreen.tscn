@@ -1,27 +1,23 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/scripts/ui/start_screen.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/ui/end_screen.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe_32.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe-Bold_32.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/ui/fonts/louis_george_cafe/LouisGeorgeCafe.tres" type="DynamicFont" id=4]
-
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 1 )
 draw_center = false
 border_width_bottom = 2
 border_color = Color( 0.8, 0.8, 0.8, 0 )
 
 [node name="End Screen" type="Panel"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
 margin_right = 960.0
 margin_bottom = 540.0
+mouse_filter = 2
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -33,41 +29,62 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -138.5
-margin_top = -49.5
-margin_right = 138.5
-margin_bottom = 49.5
+margin_left = -170.0
+margin_top = -78.0
+margin_right = 170.0
+margin_bottom = 78.0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer"]
-margin_right = 277.0
+margin_right = 340.0
 margin_bottom = 74.0
 size_flags_horizontal = 3
 custom_fonts/bold_font = ExtResource( 3 )
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[b][center]Thank you for Playing![/center][b]"
-text = "Thank you for Playing!"
+bbcode_text = "[b][center]Thank you for Playing Signal Creek![/center][b]"
+text = "Thank you for Playing Signal Creek!"
 fit_content_height = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
 margin_top = 78.0
-margin_right = 277.0
+margin_right = 340.0
 margin_bottom = 98.0
 size_flags_horizontal = 3
 custom_fonts/normal_font = ExtResource( 4 )
 bbcode_enabled = true
-bbcode_text = "[center]- The Signal Creek team[/center]"
-text = "- The Signal Creek team"
+bbcode_text = "[center]- snacktime games[/center]"
+text = "- snacktime games"
 fit_content_height = true
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="ReturnButton" type="Button" parent="VBoxContainer"]
 margin_top = 102.0
-margin_right = 277.0
+margin_right = 340.0
 margin_bottom = 127.0
 size_flags_horizontal = 3
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.643137, 0.643137, 0.643137, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 7 )
+text = "[RETURN TO START]"
+flat = true
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+margin_top = 131.0
+margin_right = 340.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.643137, 0.643137, 0.643137, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 4 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 7 )
 custom_styles/focus = SubResource( 7 )
 text = "[EXIT]"
 flat = true
+
+[connection signal="pressed" from="VBoxContainer/ReturnButton" to="." method="_on_ReturnButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

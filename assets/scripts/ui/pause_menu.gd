@@ -77,7 +77,6 @@ func _on_Save_pressed():
 
 func _on_Exit_pressed():
 	get_tree().quit()
-	pass # Replace with function body.
 
 
 func _on_MenuButton_toggled(_toggleMode):

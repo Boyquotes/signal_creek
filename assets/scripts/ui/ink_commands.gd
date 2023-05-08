@@ -117,12 +117,13 @@ func parse_commands(currentLine):
 		elif "CLOSE" in action:
 			Globals.ElevatorDoorLight.close_doors()
 			
+		elif "UNSHUT" in action:
+			Globals.RouteLights.door_open_anim()
+			
 		elif "SHUT" in action:
 			Globals.RouteLights.door_close_anim()
 			
-		elif "UNSHUT" in action:
-			Globals.RouteLights.door_open_anim()
-			pass
+
 	
 	# Teleport party to elevator and have them say shit
 	elif "&FIRSTLIGHT" in currentLine:
@@ -225,3 +226,9 @@ func parse_commands(currentLine):
 		
 		Globals.Nick.animate_emote(nourAnimation)
 		Globals.Suwan.animate_emote(nourAnimation)
+		
+	elif "&ENDGAME" in currentLine:
+		Globals.SoundManager.smooth_decrease_music_volume()
+		Globals.GameOverlay.start_fade_out()
+		Globals.GameState = Globals.GameStates.END
+		Globals.EndScreen.set_visible(true)
