@@ -29,16 +29,26 @@ func _ready():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("open_menu"):
-		if Globals.GameMode == Globals.GameModes.WALK or Globals.GameState == Globals.GameStates.START:
-			Globals.GameMode = Globals.GameModes.PAUSE
+#		if Globals.GameMode == Globals.GameModes.WALK:
+#			Globals.GameMode = Globals.GameModes.PAUSE
+#
+#		elif Globals.GameMode == Globals.GameModes.PAUSE:
+#			Globals.GameMode = Globals.GameModes.WALK
 			
-		elif Globals.GameMode == Globals.GameModes.PAUSE:
-			Globals.GameMode = Globals.GameModes.WALK
-			
-		else:
-			return
-			
-		Globals.PauseMenu.toggle_visible()
+#		elif Globals.GameState == Globals.GameStates.START:
+#			Globals.PauseMenu.toggle_visible()
+#
+#			if Globals.GameMode != Globals.GameModes.PAUSE:
+#				Globals.GameMode = Globals.GameModes.PAUSE
+#
+#			elif Globals.GameMode == Globals.GameModes.PAUSE:
+#				Globals.GameMode = Globals.GameModes.TALK
+#
+#			return
+#		else:
+#			return
+		if Globals.GameMode != Globals.GameModes.TALK or Globals.GameState == Globals.GameStates.START:
+			Globals.PauseMenu.toggle_visible()
 		
 	if Globals.GameState == Globals.GameStates.START and Globals.GameMode != Globals.GameModes.PAUSE:
 		if Input.is_action_just_pressed("interact"):

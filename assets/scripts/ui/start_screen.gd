@@ -7,7 +7,7 @@ onready var animation_player = $AnimationPlayer
 
 func _ready():
 	Globals.StartScreen = self
-	$VBoxContainer/StartButton.grab_focus()
+#	$VBoxContainer/StartButton.grab_focus()
 
 
 func _on_StartButton_pressed() -> void:
