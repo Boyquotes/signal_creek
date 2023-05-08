@@ -1,5 +1,7 @@
 == consoles ==
 
+It's a game console that seems to be rather outdated.
+
 {
     - consoles_afternickroute:
         -> explored_everything

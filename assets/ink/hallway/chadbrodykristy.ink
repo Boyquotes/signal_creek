@@ -1,6 +1,8 @@
 
 == chadbrodykristy ==
 
+Three people stand idly. They look almost <i>too</i> still.
+
 {
     - musicstand1 && musicstand2: 
         -> chadbrodykristy3
