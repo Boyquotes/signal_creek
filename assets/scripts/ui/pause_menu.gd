@@ -9,6 +9,7 @@ var panel_opening_speed := 0.25
 var is_expanding_background_panel := false
 var is_shrinking_background_panel := false
 var background_panel_max_height
+var previous_walk_mode
 
 onready var background_panel_node = $Panel
 
@@ -77,10 +78,16 @@ func _on_Save_pressed():
 
 func _on_Exit_pressed():
 	get_tree().quit()
-	pass # Replace with function body.
 
 
 func _on_MenuButton_toggled(_toggleMode):
+	if _toggleMode:
+		Globals.GameMode = Globals.GameModes.PAUSE
+		previous_walk_mode = Globals.GameMode
+		
+	else: 
+		Globals.GameMode = previous_walk_mode
+	
 	toggle_visible()
 
 

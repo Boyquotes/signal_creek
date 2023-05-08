@@ -188,6 +188,8 @@ rect_scale = Vector2( 3, 3 )
 stretch = true
 script = ExtResource( 13 )
 _elevator_focus_position = Vector2( 472, 232 )
+exhibition_build = true
+exhibition_time = 600.0
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
 size = Vector2( 322, 182 )
@@ -200,7 +202,6 @@ gui_disable_input = true
 [node name="Room" parent="ViewportContainer/Viewport" instance=ExtResource( 1 )]
 
 [node name="ScreenOverlay" type="Panel" parent="."]
-visible = false
 material = ExtResource( 9 )
 margin_right = 960.0
 margin_bottom = 540.0

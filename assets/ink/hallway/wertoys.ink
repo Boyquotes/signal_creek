@@ -59,6 +59,10 @@
 
 == wertoys_find_prince == 
 
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+
     NOUR: "..."
 
     PORTRAIT_nour_nourpondering
@@ -305,6 +309,10 @@
     
     NOUR: "...!"
     
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestEmoMusic
+    
     &PORTRAIT_nick_nickshocked
     
     NICK: "The only reason Emperor Evercrisp sent you to Earth was for your own protection."
@@ -413,6 +421,10 @@
     
     PRINCE PENDRAGON: "How could I have forgotten... the very reason I fight?"
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
     &PORTRAIT_prince pendragon_princependragonneutral
     
     PRINCE PENDRAGON: "I can't afford to wallow in self-pity! The people need me."
@@ -420,6 +432,10 @@
     &PORTRAIT_prince pendragon_princependragonsad
     
     PRINCE PENDRAGON: "My... My <i>family</i> needs me!"
+    
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestMusic
     
     &PORTRAIT_prince pendragon_princependragonneutral
     
@@ -521,6 +537,10 @@
     
     &PAUSE_0.5
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
     &PORTRAIT_nick_nickshocked
     
     NICK: "..."
@@ -592,6 +612,8 @@
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>All that's left is to go back to TopicSpot and play the game now...</i>
+    
+    &MUSIC_HallwayMusic
     
     &FOLLOW_NOUR_stop
     

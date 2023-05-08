@@ -201,10 +201,7 @@ camera_offset_dialogue = 64.0
 scroll_increment = 0.01
 
 [node name="End Screen" parent="ReferenceRect" instance=ExtResource( 10 )]
-margin_left = -480.0
-margin_top = -270.0
-margin_right = 480.0
-margin_bottom = 270.0
+visible = false
 
 [node name="Start Screen" parent="ReferenceRect" instance=ExtResource( 9 )]
 anchor_left = 0.0

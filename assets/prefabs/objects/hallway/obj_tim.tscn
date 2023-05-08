@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/sprites/characters/animation spritesheets/sheet_tim.png" type="Texture" id=4]
 [ext_resource path="res://assets/materials/shaders/shader_outline_sussy_shlorp_disappear.tres" type="Shader" id=5]
 
-[sub_resource type="ShaderMaterial" id=28]
+[sub_resource type="ShaderMaterial" id=33]
 resource_local_to_scene = true
 shader = ExtResource( 5 )
 shader_param/progress = 0.0
@@ -101,7 +101,7 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
-material = SubResource( 28 )
+material = SubResource( 33 )
 position = Vector2( 0, -16 )
 texture = ExtResource( 4 )
 region_enabled = true

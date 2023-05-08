@@ -1,5 +1,7 @@
 == consoles ==
 
+It's a game console that seems to be rather outdated.
+
 {
     - consoles_afternickroute:
         -> explored_everything
@@ -329,7 +331,15 @@
     
     NOUR: "What the—!"
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
     The console screen glitches, and the game starts by itself...
+    
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestMusic
     
     &PORTRAIT_???_emperorevercrisppreach
 
@@ -457,6 +467,8 @@
             
             EMPEROR EVERCRISP: "HO HO! EXCELLENT—"
             
+            &MUSIC_STOP
+            
             &PORTRAIT_emperor evercrisp_emperorevercrispneutral
             
             EMPEROR EVERCRISP: "... Oh."
@@ -534,6 +546,8 @@
             &PORTRAIT_emperor evercrisp_emperorevercrispsmile
             
             EMPEROR EVERCRISP: "Because I don't know where I put that stuff, ho ho!"
+            
+            &MUSIC_ApleQuestMusic
             
     - &PORTRAIT_nour_nourpondering
     
@@ -627,6 +641,14 @@
     
     NOUR: "Never thought I'd hear something like that from you."
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
+    &PAUSE_1.0
+    
+    &MUSIC_TopicSpotMusic
+    
     &FOLLOW_NOUR_stop
     
     &FOLLOW_NICK_NOUR
@@ -679,9 +701,17 @@
     
     NOUR: "Anway, here goes nothing..."
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
     A tiny character pops up in the middle of the screen.
     
     Rows of weapons and a million character stats overwhelm the space. 
+    
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestMusic
     
     &PORTRAIT_nick_nickshocked
     
@@ -973,6 +1003,10 @@
     
     NOUR: "You can totally make gaming your fun hobby."
     
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
+    
     &PORTRAIT_nick_nicknervous
     
     NICK: "I-I can't..."
@@ -1046,6 +1080,10 @@
     &PORTRAIT_nick_nicktears
     
     NICK: "It's really <i>hard</i>. I'm too dumb to do anything right." 
+    
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestEmoMusic
     
     &PORTRAIT_nour_noursad
     
@@ -1253,7 +1291,7 @@
     
     &PORTRAIT_ms. suwan_mssuwansad
     
-    MS. SUWAN: "... I'm so sorry, Nick. You are smart and very capable."
+    MS. SUWAN: "...I'm so sorry, Nick. You are smart and very capable."
     
     &PORTRAIT_ms. suwan_mssuwansmile
     
@@ -1353,9 +1391,15 @@
     
     NICK: "You can do it!"
     
+    &EMOTE_NOUR_RightIdle
+    
     &PORTRAIT_nour_noursad
     
     NOUR: <i>... I guess I should talk to her.</i>
+    
+    &PAUSE_1.0
+    
+    &MUSIC_TopicSpotMusic
     
     &FOLLOW_NOUR_stop
     

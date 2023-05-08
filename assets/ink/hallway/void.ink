@@ -2,6 +2,10 @@
     
     What's supposed to be the mall floor below is a vast, glitchy abyss. 
     
+    &PAUSE_0.2
+    
+    &FACESAMEWAY
+    
     {
         - void_convo:
             -> void_convorepeat

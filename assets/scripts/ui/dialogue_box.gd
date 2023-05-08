@@ -254,6 +254,7 @@ func shrink_background_panel() -> void:
 		
 		clear_and_reset_ui()
 		Globals.ColorManager.set_party_portraits_to_neutral()
+		Globals.PartyObject.force_nour_movement = false
 		
 	else:
 		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))

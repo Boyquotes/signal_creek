@@ -1022,6 +1022,19 @@
 //Nour takes this to mean that she should be confident, but she's OVER confident as a result.
 
 == rina_topicspot ==
+    &FOLLOW_NICK_NickLookAtNour
+    
+    &FOLLOW_SUWAN_SuwanLookAtNour
+    
+    &FOLLOW_NOUR_NourRina
+    
+    &PAUSE_0.3
+    
+    &EMOTE_NICK_DownIdle
+    
+    &EMOTE_SUWAN_DownIdle
+    
+    &EMOTE_NOUR_RightIdle
 
     &PORTRAIT_nour_nournervous
     
@@ -1139,6 +1152,12 @@
         
         RINA: "Did you have so little faith in me?"
         
+        &FOLLOW_NOUR_NourRina2
+        
+        &PAUSE_0.2
+        
+        &EMOTE_NOUR_UpIdle
+        
         &PORTRAIT_nour_nournervous
         
         NOUR: "N-no! I..."
@@ -1161,7 +1180,7 @@
         
             -> neverknow
     
-    = neverknow
+    = neverknow 
     
         &PORTRAIT_rina_rinaneutral
     
@@ -1179,9 +1198,17 @@
         
         RINA: "I hope <i>this</i> isn't the way you wish our conversation had gone."
         
+        &EMOTE_NOUR_DownIdle
+        
         &PORTRAIT_nour_noursad
         
         NOUR: "..."
+        
+        &FOLLOW_NICK_NickRina
+        
+        &PAUSE_0.2
+        
+        &EMOTE_NICK_RightIdle
         
         &PORTRAIT_nick_nicknervous
         
@@ -1199,9 +1226,13 @@
         
         NOUR: <i>Acting this way would've just burn her and myself.</i>
         
+        &EMOTE_NOUR_LeftIdle
+        
         &PORTRAIT_nour_nourshadow
         
         NOUR: <i>...Looks like this wasn't the right way to handle what happened.</i>
+        
+        &FOLLOW_NOUR_stop
         
         { - !neverknowlight:
                 -> neverknowlight
@@ -1221,6 +1252,22 @@
 //Nour takes this to mean that she should let things slide, and she ends up being too passive as a result.
 
 == rina_hallway ==
+
+    &FOLLOW_NICK_NickRinaHallway
+    
+    &FOLLOW_SUWAN_SuwanRinaHallway
+    
+    &FOLLOW_NOUR_NourHallwayRina
+    
+    &PAUSE_1.0
+    
+    &EMOTE_NICK_UpIdle
+    
+    &EMOTE_NOUR_UpIdle
+    
+    &EMOTE_SUWAN_UpIdle
+    
+    &FOLLOW_NOUR_stop
 
     &PORTRAIT_nour_nournervous
     
@@ -1434,6 +1481,24 @@
     
     //Ms suwan can look back at the past now
     
+    The elevator engine is whirring back to life.
+    
+    &FOLLOW_NICK_NickEndingStartPos
+    &FOLLOW_SUWAN_SuwanEndingStartPos
+    &FOLLOW_NOUR_NourEndingStartPos
+    
+    &ELEVATOR_UNSHUT
+    &SOUND_clickydoor
+    
+    &PAUSE_0.5
+    
+    &EMOTE_NICK_UpIdle
+    &EMOTE_SUWAN_UpIdle
+    
+    There's... a new energy in Rina's eyes.
+    
+    More familiar. More <i>real</i>.
+    
     &PORTRAIT_ms. suwan_mssuwannervous
     
     MS. SUWAN: "Nour, think back to when you were friends with Rina."
@@ -1441,6 +1506,10 @@
     &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "Who was she to you?"
+    
+    &FOLLOW_NOUR_NourEndingRinaPos
+    
+    &PAUSE_0.5
     
     &PORTRAIT_nour_noursad
     
@@ -1450,6 +1519,12 @@
         
         RINA: "..."
         
+        &PORTRAIT_nour_nourtears
+        
+        &EMOTE_NOUR_DownIdle
+        
+        NOUR: "..."
+        
         &PORTRAIT_ms. suwan_mssuwannervous
         
         MS. SUWAN: "Nour, you helped me with my old friends."
@@ -1457,6 +1532,12 @@
         &PORTRAIT_ms. suwan_mssuwanneutral
         
         MS. SUWAN: "You helped me tell them what I wish I could have told them sooner."
+        
+        &FOLLOW_SUWAN_SuwanHelpPos
+        
+        &PAUSE_0.25
+        
+        &EMOTE_SUWAN_LeftIdle
         
         &PORTRAIT_ms. suwan_mssuwanpondering
     
@@ -1471,6 +1552,12 @@
         MS. SUWAN: "You need to face the past... with Rina, with <i>everything.</i>"
         
         &PORTRAIT_ms. suwan_mssuwanpondering
+        
+        &FOLLOW_NICK_NickHelpPos
+        
+        &PAUSE_0.25
+        
+        &EMOTE_NICK_RightIdle
         
         NICK: "You've helped us. Now it's our turn to help <i>you</i>."
         
@@ -1497,6 +1584,8 @@
         &PORTRAIT_rina_rinaneutral
         
         RINA: "..."
+        
+        &EMOTE_NOUR_UpIdle
         
         &PORTRAIT_nour_noursad
         
@@ -1619,11 +1708,11 @@
         
         &PORTRAIT_nour_noursad
         
-            * "I can't change Rina."
+            * "I can't change you, Rina."
             
                 &PORTRAIT_nour_nournervous
             
-                NOUR: "I'm mad that she didn't say anything..."
+                NOUR: "I'm mad that you didn't say anything..."
                 
                 &PORTRAIT_nour_nourshadow
                 
@@ -1637,7 +1726,7 @@
                 
                 &PORTRAIT_nour_nourshadow
                 
-                NOUR: "Maybe even more than I was mad at Rina."
+                NOUR: "Maybe even more than I was mad at you, Rina."
             
         - &PORTRAIT_nour_noursad
         
@@ -1645,7 +1734,7 @@
         
         &PORTRAIT_nour_nourshadow
         
-        NOUR: "...And I can't change what Rina did."
+        NOUR: "...And I can't change what you did."
         
         &PORTRAIT_nour_nourtears
         
@@ -1713,9 +1802,11 @@
         
         &PAUSE_0.5
         
-        &MOV_RINA_VOID
+        &SHLORP_POOP_Rina_out
         
-        &PAUSE_0.5
+        &PAUSE_1.0
+        
+        &MOV_RINA_VOID
         
         &LIGHT_Nour2
         
@@ -1735,17 +1826,33 @@
         
         &PORTRAIT_ms. suwan_mssuwannervous
         
+        &FOLLOW_SUWAN_SuwanComfortPos
+        
+        &PAUSE_0.5
+        
+        &EMOTE_NOUR_RightIdle
+        
         MS. SUWAN: "..."
         
         &PORTRAIT_nick_nicknervous
+        
+        &FOLLOW_NICK_NickComfortPos
+        
+        &PAUSE_0.5
+        
+        &EMOTE_NOUR_LeftIdle
         
         NICK: "..."
         
         &PORTRAIT_ms. suwan_mssuwansmile
         
+        &EMOTE_NOUR_RightIdle
+        
         MS. SUWAN: "You did well, Nour."
         
         &PORTRAIT_nick_nicksmallsmile
+        
+        &EMOTE_NOUR_LeftIdle
         
         NICK: "Yeah. We're proud of you."
         
@@ -1753,9 +1860,13 @@
         
         &PORTRAIT_nick_nickpondering
         
+        &EMOTE_NICK_UpIdle
+        
         NICK: "Now, shall we move on? Because <i>I</i> believe it iiiiiis..."
         
         &PORTRAIT_nick_nickbigsmile
+        
+        &EMOTE_NICK_Jump
         
         NICK: "<i>Button smashing time!</i>"
         
@@ -1767,13 +1878,19 @@
         
         &PORTRAIT_nick_nickshocked
         
+        &EMOTE_NICK_RightIdle
+        
         NICK: "...Nour! Are you coming or what?"
         
         &PORTRAIT_ms. suwan_mssuwansmile
         
+        &EMOTE_NICK_UpIdle
+        
         MS. SUWAN: "Ready to leave?"
         
         &PORTRAIT_nour_nournervous
+        
+        &EMOTE_NOUR_UpIdle
         
         NOUR: "..."
         
@@ -1781,7 +1898,17 @@
         
         NOUR: "Yeah. Let's go."
         
-        THEY WALK INTO THE ELEVATOR
+        &FOLLOW_NOUR_EndingElevatorPos
+        
+        &SPEED_NOUR_40.0
+        
+        &PAUSE_0.5
+        &FDEOUT
+        &PAUSE_0.5
+        
+        &ENDGAME
+        
+        Bye!
         
         -> END
 

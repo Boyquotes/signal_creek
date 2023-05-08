@@ -326,9 +326,6 @@ texture = ExtResource( 46 )
 texture_scale = 10.34
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.85
-range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 __meta__ = {
 "_edit_lock_": true
@@ -341,9 +338,6 @@ texture = ExtResource( 51 )
 texture_scale = 2.0
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.5
-range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 14
 __meta__ = {
 "_edit_lock_": true
@@ -356,9 +350,6 @@ texture = ExtResource( 51 )
 texture_scale = 2.0
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.5
-range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 14
 __meta__ = {
 "_edit_lock_": true
@@ -371,9 +362,6 @@ texture = ExtResource( 51 )
 texture_scale = 2.0
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.7
-range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 10
 __meta__ = {
 "_edit_lock_": true
@@ -386,9 +374,6 @@ texture = ExtResource( 51 )
 texture_scale = 2.0
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.7
-range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 10
 __meta__ = {
 "_edit_lock_": true
@@ -402,8 +387,6 @@ texture_scale = 2.0
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.7
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 10
 __meta__ = {
 "_edit_lock_": true
@@ -417,8 +400,6 @@ texture_scale = 2.0
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.7
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 10
 __meta__ = {
 "_edit_lock_": true
@@ -433,8 +414,6 @@ texture_scale = 1.75
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.75
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 4
 __meta__ = {
 "_edit_lock_": true
@@ -449,8 +428,6 @@ texture_scale = 1.75
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.75
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 4
 __meta__ = {
 "_edit_lock_": true
@@ -465,8 +442,6 @@ texture_scale = 1.75
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.75
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 4
 __meta__ = {
 "_edit_lock_": true
@@ -481,8 +456,6 @@ texture_scale = 1.75
 color = Color( 1, 0.945098, 0.666667, 1 )
 energy = 0.75
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 4
 __meta__ = {
 "_edit_lock_": true
@@ -496,8 +469,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -513,8 +484,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -530,8 +499,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -547,8 +514,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -564,8 +529,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -581,8 +544,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -598,8 +559,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -615,8 +574,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -632,8 +589,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -649,8 +604,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -666,8 +619,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -683,8 +634,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -700,8 +649,6 @@ texture_scale = 10.34
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.85
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 7
 shadow_color = Color( 0.27451, 0.0705882, 0.223529, 0 )
 shadow_gradient_length = 1.0
@@ -715,9 +662,6 @@ rotation = 3.14159
 texture = ExtResource( 44 )
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.67
-range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 12
 __meta__ = {
 "_edit_lock_": true
@@ -731,8 +675,6 @@ texture = ExtResource( 44 )
 color = Color( 1, 0.85098, 0.478431, 1 )
 energy = 0.67
 range_height = 2048.0
-range_z_min = 0
-range_z_max = 0
 range_item_cull_mask = 12
 __meta__ = {
 "_edit_lock_": true
@@ -1481,6 +1423,42 @@ _automatic = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneManager/Overworld/VoidTrigger2"]
 position = Vector2( 84, -211 )
 shape = SubResource( 24 )
+
+[node name="NourHallwayRina" type="Node2D" parent="PlaneManager"]
+position = Vector2( 977, 361 )
+
+[node name="NickRinaHallway" type="Node2D" parent="PlaneManager"]
+position = Vector2( 961, 383 )
+
+[node name="NickEndingStartPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 448, 328 )
+
+[node name="SuwanEndingStartPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 511, 328 )
+
+[node name="NourEndingStartPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 480, 317 )
+
+[node name="NourEndingRinaPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 480, 300 )
+
+[node name="SuwanHelpPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 511, 301 )
+
+[node name="SuwanComfortPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 499, 300 )
+
+[node name="NickHelpPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 447, 299 )
+
+[node name="NickComfortPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 462, 300 )
+
+[node name="EndingElevatorPos" type="Node2D" parent="PlaneManager"]
+position = Vector2( 480, 277 )
+
+[node name="SuwanRinaHallway" type="Node2D" parent="PlaneManager"]
+position = Vector2( 993, 382 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal_TopicSpot" to="PlaneManager/Doortal_TopicSpot" method="_on_Doortal_body_entered"]
 [connection signal="body_entered" from="PlaneManager/TutorialTrigger" to="PlaneManager/TutorialTrigger" method="_on_TutorialTrigger_body_entered"]

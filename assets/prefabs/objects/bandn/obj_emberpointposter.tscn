@@ -5,15 +5,13 @@
 [ext_resource path="res://assets/materials/material_outline.tres" type="Material" id=3]
 [ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=5]
 
-
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 11, 2 )
+extents = Vector2( 16, 3.5 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 15, 6 )
+extents = Vector2( 16, 8 )
 
-[node name="DragonPlush" type="RigidBody2D" groups=["shiftable"]]
-material = ExtResource( 3 )
+[node name="EmberPointPoster" type="RigidBody2D" groups=["shiftable"]]
 mode = 1
 script = ExtResource( 1 )
 __meta__ = {
@@ -23,35 +21,35 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 material = ExtResource( 3 )
-position = Vector2( 0, -25 )
-scale = Vector2( 1.04, 1 )
+position = Vector2( 0, -28 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 268, 9, 26, 24 )
+region_rect = Rect2( 395.695, 219.851, 25.0112, 32.8897 )
 
 [node name="Hint" type="Sprite" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
 light_mask = 4
-position = Vector2( 0, -25 )
+position = Vector2( 0, -28 )
 texture = ExtResource( 5 )
-offset = Vector2( 0, -11.8498 )
+offset = Vector2( 0, -14.6019 )
 region_enabled = true
-region_rect = Rect2( 268, 9, 26, 24 )
+region_rect = Rect2( 395.695, 219.851, 25.0112, 32.8897 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1.5 )
 shape = SubResource( 23 )
 
 [node name="ActiveArea" type="Area2D" parent="."]
-position = Vector2( -0.440001, -22 )
+position = Vector2( 0, -26 )
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
-position = Vector2( 0.440001, 22 )
+position = Vector2( 0, 28 )
 shape = SubResource( 22 )
 
 [connection signal="body_entered" from="ActiveArea" to="ActiveArea" method="_on_InteractArea_body_entered"]

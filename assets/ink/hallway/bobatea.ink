@@ -46,7 +46,7 @@
     
     NOUR: "These <i>are</i> more like liquid sugar than caffeine... and the bad kind of liquid sugar, too."
     
-    &PORTRAIT_ms. suwan_suwanneutral
+    &PORTRAIT_ms. suwan_mssuwanneutral
     
     MS. SUWAN: "I don't recognize any of these brands. I find that disturbing."
     
@@ -97,6 +97,10 @@
         -> END
 
 === bobatea_find_dukedelicious ===
+
+    &PAUSE_1.0
+    
+    &AUDIO_FADEOUT
     
     &PORTRAIT_nour_nourrealization
 
@@ -304,6 +308,10 @@
     
     ???: "SWEET, SWEET FREEDOM!"
     
+    &PAUSE_1.0
+
+    &MUSIC_ApleQuestMusic
+    
     &PORTRAIT_???_dukedelicioussmile
     
     ???: "THIS CYLINDRICAL METAL PRISON SHALL NO LONGER CONTAIN ME!"
@@ -408,11 +416,17 @@
     
     NICK: "..."
     
+    &MUSIC_STOP
+    
     NOUR: <i>Looks like he's feeling a little better.</i>
     
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>Now time to find some more apples...</i>
+    
+    &PAUSE_1.0
+    
+    &MUSIC_HallwayMusic
     
     &FOLLOW_NOUR_stop
     

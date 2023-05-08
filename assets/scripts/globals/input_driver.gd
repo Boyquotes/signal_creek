@@ -5,38 +5,66 @@ extends Node
 
 export var _elevator_focus_position : Vector2 = Vector2(344, 168)
 export var _leader_switching_enabled = false
+export var exhibition_build : bool
+export var exhibition_time = 30.0 #in seconds
 
 var _closest_object = null
 var _camera_normal_position = null
 var _elevator_tutorial = false
 
+var exhibition_timer
 
 
 func _ready():
-	pass
+	if exhibition_build:
+		exhibition_timer = Timer.new()
+		add_child(exhibition_timer)
+		exhibition_timer.wait_time = exhibition_time
+#		exhibition_timer.connect("timeout", self, "_exhibition_timer_timeout")
+		exhibition_timer.set_one_shot(true)
+
+#func _exhibition_timer_timeout():
+#	reset_game()
 
 
 func _process(_delta):
 	if Input.is_action_just_pressed("open_menu"):
-		if Globals.GameMode == Globals.GameModes.WALK:
-			Globals.GameMode = Globals.GameModes.PAUSE
+#		if Globals.GameMode == Globals.GameModes.WALK:
+#			Globals.GameMode = Globals.GameModes.PAUSE
+#
+#		elif Globals.GameMode == Globals.GameModes.PAUSE:
+#			Globals.GameMode = Globals.GameModes.WALK
 			
-		elif Globals.GameMode == Globals.GameModes.PAUSE:
-			Globals.GameMode = Globals.GameModes.WALK
-			
-		else:
-			return
-			
-		Globals.PauseMenu.toggle_visible()
+#		elif Globals.GameState == Globals.GameStates.START:
+#			Globals.PauseMenu.toggle_visible()
+#
+#			if Globals.GameMode != Globals.GameModes.PAUSE:
+#				Globals.GameMode = Globals.GameModes.PAUSE
+#
+#			elif Globals.GameMode == Globals.GameModes.PAUSE:
+#				Globals.GameMode = Globals.GameModes.TALK
+#
+#			return
+#		else:
+#			return
+		if Globals.GameMode != Globals.GameModes.TALK or Globals.GameState == Globals.GameStates.START:
+			Globals.PauseMenu.toggle_visible()
 		
 	if Globals.GameState == Globals.GameStates.START and Globals.GameMode != Globals.GameModes.PAUSE:
+		if Input.is_action_just_pressed("interact"):
+			Globals.StartScreen.start_game()
+		
+		if exhibition_build:
+			exhibition_timer.start()
+			
+	elif Globals.GameState == Globals.GameStates.END and Globals.GameMode != Globals.GameModes.PAUSE:
 		if Input.is_action_just_pressed("interact"):
 			Globals.StartScreen.start_game()
 		
 	elif Globals.GameState == Globals.GameStates.GAME:
 		if Input.is_action_just_pressed("reset"):
 			reset_game()
-		
+			
 		Globals.PartyObject.move_followers_by_pathfind()
 		
 		if Globals.GameMode == Globals.GameModes.TALK:
@@ -73,7 +101,10 @@ func _process(_delta):
 						
 					
 		elif Globals.GameMode == Globals.GameModes.WALK:
-		
+			if exhibition_build and exhibition_timer.get_time_left() < 1.0:
+				reset_game()
+				return
+				
 			if !Globals.DevTools.typing_knot_name:
 				check_input_character_movement()
 				if Input.is_action_just_pressed("toggle_map"):

@@ -46,7 +46,6 @@ func _ready():
 	else:
 		call_deferred("_doorway_entered", RoomEngine.Rooms[3], RoomEngine.Rooms[3].get_party_starting_position())
 
-
 func _physics_process(delta):
 	if Globals.PartyCamera and Globals.PartyCamera.is_inside_tree():
 		viewport_container.material.set_shader_param("cam_offset", Globals.PartyCamera.pixel_perfect(delta, _following_vector))

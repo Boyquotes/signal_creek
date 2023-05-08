@@ -4,6 +4,8 @@
 
     Instructional guides, exam prep workbooks, and how-to books for those interested in <i>fun</i> new hobbies!
     
+    &FOLLOW_NOUR_stop
+    
     {
         // - noursuggestion && nicktalksaboutfantasygame:
             // -> END
@@ -26,6 +28,15 @@
     -> END
     
 == nour_suggests_hobbies ==
+
+
+    &FOLLOW_NICK_NickBookshelfPos
+    &FOLLOW_SUWAN_SuwanBookshelfPos
+    &FOLLOW_NOUR_NourBookshelfPos
+    &PAUSE_1
+    &EMOTE_SUWAN_RightIdle
+    &EMOTE_NICK_UpIdle
+    &EMOTE_NOUR_LeftIdle
 
     &PORTRAIT_nour_nourneutral
 
@@ -236,7 +247,11 @@
         
     - &PORTRAIT_nick_nickangry
     
+    &EMOTE_NICK_Jump
+    
     NICK: "I literally <i>don't care</i>. I don't want to study anything."
+    
+    &EMOTE_NICK_UpIdle
     
     &PORTRAIT_ms. suwan_mssuwanangry
     
@@ -374,6 +389,8 @@
     
     NICK: "I could never be like you two. Not now, and not ever."
     
+    &NICK_EMOTE_DownIdle
+    
     &PORTRAIT_nour_noursad
 
     NOUR: <i>He sounds so upset. I've never seen him like this before.</i>
@@ -391,6 +408,8 @@
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>Maybe I could find something in this store that already makes him happy...</i>
+    
+    &FOLLOW_NOUR_stop
         
     -> END
     
@@ -417,6 +436,8 @@
     &PORTRAIT_nour_nourneutral
     
     NOUR: <i>I'm sure if I look around this bookstore, I'm bound to find something related to it.</i>
+    
+    &FOLLOW_NOUR_stop
         -> END
     
 === bookshelf_afterfight ===
@@ -428,6 +449,14 @@
     -> END
     
 === bookshelf_afternickroute ===
+
+    &FOLLOW_NICK_NickBookshelfPos
+    &FOLLOW_SUWAN_SuwanBookshelfPos
+    &FOLLOW_NOUR_NourBookshelfPos
+    &PAUSE_1
+    &EMOTE_SUWAN_RightIdle
+    &EMOTE_NICK_UpIdle
+    &EMOTE_NOUR_LeftIdle
 
     &PORTRAIT_nick_nickneutral
 
@@ -489,6 +518,7 @@
     
     MS. SUWAN: "I would be happy to learn more about it."
     
+    &EMOTE_NICK_Jump
     &PORTRAIT_nick_nickbigsmile
     
     NICK: "I'd <i>love</i> to tell you about it!" 
@@ -502,5 +532,7 @@
     &PORTRAIT_nour_nourneutral
 
     NOUR: <i>I think we've explored everything we could here.</i>
+    
+    &FOLLOW_NOUR_stop
         
         -> END

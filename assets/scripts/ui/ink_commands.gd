@@ -117,11 +117,13 @@ func parse_commands(currentLine):
 		elif "CLOSE" in action:
 			Globals.ElevatorDoorLight.close_doors()
 			
+		elif "UNSHUT" in action:
+			Globals.RouteLights.door_open_anim()
+			
 		elif "SHUT" in action:
 			Globals.RouteLights.door_close_anim()
 			
-		elif "UNSHUT" in action:
-			pass
+
 	
 	# Teleport party to elevator and have them say shit
 	elif "&FIRSTLIGHT" in currentLine:
@@ -193,6 +195,8 @@ func parse_commands(currentLine):
 				characterNode = Globals.EmperorEvercrisp
 			"EarlEarligold":
 				characterNode = Globals.EarlEarligold
+			"Tim":
+				characterNode = Globals.Tim
 		
 		if "out" in inOrOut:
 			characterNode.shlorp_out()
@@ -218,3 +222,15 @@ func parse_commands(currentLine):
 			
 		elif "FADEOUT" in currentLine:
 			Globals.SoundManager.smooth_decrease_music_volume()
+			
+	elif "&FACESAMEWAY" in currentLine:
+		var nourAnimation = Globals.Nour._animation_player.get_current_animation()
+		
+		Globals.Nick.animate_emote(nourAnimation)
+		Globals.Suwan.animate_emote(nourAnimation)
+		
+	elif "&ENDGAME" in currentLine:
+		Globals.SoundManager.smooth_decrease_music_volume()
+		Globals.GameOverlay.start_fade_out()
+		Globals.GameState = Globals.GameStates.END
+		Globals.EndScreen.set_visible(true)

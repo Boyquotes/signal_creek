@@ -24,7 +24,7 @@
         
         NOUR: "I never liked how the bathroom choice in this mall is binary..."
         
-            &PORTRAIT_mssuwan_mssuwanannoyed
+            &PORTRAIT_ms. suwan_mssuwanannoyed
         
         MS. SUWAN: "Outdated construction."
         
@@ -34,23 +34,23 @@
         
             * "Glad you agree. That is your job, after all."
             
-                    &PORTRAIT_mssuwan_mssuwansad
+                    &PORTRAIT_ms. suwan_mssuwansad
             
                 MS. SUWAN: "It <i>is</i> my job, but I also have personal reasons."
             
             * "What makes it outdated?"
             
-                    &PORTRAIT_mssuwan_mssuwanangry
+                    &PORTRAIT_ms. suwan_mssuwanangry
             
                 MS. SUWAN: "Generally, construction should follow accessibility guidelines."
                 
-                &PORTRAIT_mssuwan_mssuwanpondering
+                &PORTRAIT_ms. suwan_mssuwanpondering
                 
                 MS. SUWAN: "There should be a gender-neutral bathroom for handicapped individuals."
                 
-                    &PORTRAIT_mssuwan_mssuwansad
+                    &PORTRAIT_ms. suwan_mssuwansad
                 
-                MS. SUWAN: "... but I also have my personal reasoning."
+                MS. SUWAN: "... But I also have my personal reasoning."
             
             &EMOTE_SUWAN_StepBack
             &PAUSE_0.5
@@ -60,7 +60,7 @@
             
             * "Personal reasoning?"
             
-                    &PORTRAIT_mssuwan_mssuwanneutral
+                    &PORTRAIT_ms. suwan_mssuwanneutral
             
                 MS. SUWAN: "It's in the past now."
                 
@@ -68,7 +68,7 @@
                 
                 NICK: "Sheesh, did this bathroom say something to you when you were in college?"
                 
-                    &PORTRAIT_mssuwan_mssuwanannoyed
+                    &PORTRAIT_ms. suwan_mssuwanannoyed
                 
                 MS. SUWAN: "..."
                 
@@ -80,15 +80,15 @@
         
         - MS. SUWAN: "..."
         
-            &PORTRAIT_mssuwan_mssuwanneutral
+            &PORTRAIT_ms. suwan_mssuwanneutral
         
         MS. SUWAN: "I will say this: I agree with you."
         
-        &PORTRAIT_mssuwan_mssuwanpondering
+        &PORTRAIT_ms. suwan_mssuwanpondering
         
         MS. SUWAN: "The gender binary is an outdated method of dividing restrooms."
         
-        &PORTRAIT_mssuwan_mssuwannervous
+        &PORTRAIT_ms. suwan_mssuwannervous
         
         MS. SUWAN: "If there were always gender neutral restrooms..."
         
@@ -155,6 +155,23 @@ It's a neatly handwritten sign for the Louis George Cafe. But all of the drink's
 
     -> END
     
+== earlearligold ==
+
+    NOUR: "...What's this apple doing on the floor?"
+    
+    EARL EARLIGOLD: "As an apple, you are... Okay."
+    
+    NOUR: "...??!"
+    
+    EARL EARLIGOLD: "I rate you 6/10."
+    
+    NICK: "Haha! You're not a good apple."
+    
+    EARL EARLIGOLD: "You are a 10/10! A rare apple you are, young prince!"
+    
+    NICK: "...Thanks!"
+    
+    -> END
 // == wertoys == 
 
 //     It's the old toy store, We r Toys.

@@ -140,7 +140,7 @@ position = Vector2( 0, -4 )
 shape = SubResource( 22 )
 
 [node name="EmperorEvercrisp" type="Node2D" parent="."]
-position = Vector2( 8, -24 )
+position = Vector2( 0, -22 )
 __meta__ = {
 "_editor_description_": ""
 }

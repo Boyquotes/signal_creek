@@ -1,7 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/scripts/environment/shiftable.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/objects/sheet_B&N_NEWEST.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/objects/sheet_bandn.png" type="Texture" id=2]
+
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 32, 12.5 )

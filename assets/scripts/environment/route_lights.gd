@@ -91,6 +91,11 @@ func door_close_anim() -> void:
 	get_node(anim_player).play("ElevatorClose")
 
 
+# Animate self's sprite to show the doors closing
+func door_open_anim() -> void:
+	get_node(anim_player).play("ElevatorOpen")
+
+
 # Activate self's doortal, when the elevator doors are opened again
 func activate_doortal(mode: bool) -> void:
 	get_node(elevator_doortal).monitoring = mode

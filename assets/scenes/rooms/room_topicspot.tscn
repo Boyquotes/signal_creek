@@ -235,7 +235,7 @@ scale = Vector2( 2, 1.20833 )
 texture = ExtResource( 15 )
 color = Color( 0.933333, 0.858824, 0.709804, 1 )
 energy = 0.77
-range_item_cull_mask = 7
+range_item_cull_mask = 6
 __meta__ = {
 "_edit_lock_": true
 }
@@ -543,5 +543,20 @@ position = Vector2( 251, -33 )
 
 [node name="SuwanLookAtNick" type="Node2D" parent="PlaneManager"]
 position = Vector2( 215, -34 )
+
+[node name="NourRina" type="Node2D" parent="PlaneManager"]
+position = Vector2( 269, -25 )
+
+[node name="NourRina2" type="Node2D" parent="PlaneManager"]
+position = Vector2( 284, -1 )
+
+[node name="NickRina" type="Node2D" parent="PlaneManager"]
+position = Vector2( 269, -1 )
+
+[node name="NickLookAtNour" type="Node2D" parent="PlaneManager"]
+position = Vector2( 286, -40 )
+
+[node name="SuwanLookAtNour" type="Node2D" parent="PlaneManager"]
+position = Vector2( 270, -40 )
 
 [connection signal="body_entered" from="PlaneManager/Doortal" to="PlaneManager/Doortal" method="_on_Doortal_body_entered"]

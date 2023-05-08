@@ -81,6 +81,7 @@ __meta__ = {
 }
 _shlorping_target_path = NodePath("../AnimationPlayer")
 _physical_collider_path = NodePath("../CollisionShape2D")
+_knot_name = "earlearligold"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActiveArea"]
 position = Vector2( 0, -9.5 )
