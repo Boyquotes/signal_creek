@@ -279,7 +279,7 @@
     
     NOUR: "I don't know but... BRACE YOURSELVES!"
     
-    &HIDEPANEL
+    // &HIDEPANEL
     
     &BLACK
     

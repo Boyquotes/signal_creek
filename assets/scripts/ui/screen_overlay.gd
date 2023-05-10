@@ -75,7 +75,7 @@ func screen_shake(rdisp: Vector2, gdisp: Vector2, bdisp: Vector2, _darkness: flo
 
 
 func set_to_black() -> void:
-	self.modulate = Color(0.0, 0.0, 0.0)
+	self.self_modulate = Color(0.0, 0.0, 0.0)
 	
 func set_shlorp_radius(rad: float) -> void:
 	if _overlay_material:
@@ -90,7 +90,7 @@ func play_shlorp_shockwave(centerPos: Vector2) -> void:
 
 func start_fade_in() -> void:
 #	_is_fading_in = true
-#	_is_shaking = false
+	_is_shaking = false
 	$AnimationPlayer.play("FadeIn")
 	screen_shake(Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), 1.0)
 #	self.modulate = Color(0.0, 0.0, 0.0)
