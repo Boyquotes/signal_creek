@@ -106,6 +106,10 @@ func start_fade_out() -> void:
 #	_fade_out_timer.start()
 
 
+func start_slow_fade_out() -> void:
+	$AnimationPlayer.play("SlowFadeOut")
+
+
 func start_shaking(timed: bool) -> void:
 	_is_shaking = true
 	

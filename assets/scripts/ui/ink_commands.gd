@@ -18,6 +18,9 @@ func parse_commands(currentLine):
 	elif "&FDEIN" in currentLine:
 		Globals.GameOverlay.start_fade_in()
 		
+	elif "&SLOWFADE" in currentLine:
+		Globals.GameOverlay.start_slow_fade_out()
+		
 	# Move rina (position and room)
 	elif "&MOV_RINA" in currentLine:
 		if Globals.Rina:
@@ -234,3 +237,4 @@ func parse_commands(currentLine):
 		Globals.GameOverlay.start_fade_out()
 		Globals.GameState = Globals.GameStates.END
 		Globals.EndScreen.set_visible(true)
+		Globals.EndScreen.end_screen_fade_in()

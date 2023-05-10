@@ -1455,7 +1455,7 @@ position = Vector2( 447, 299 )
 position = Vector2( 462, 300 )
 
 [node name="EndingElevatorPos" type="Node2D" parent="PlaneManager"]
-position = Vector2( 480, 277 )
+position = Vector2( 480, 284 )
 
 [node name="SuwanRinaHallway" type="Node2D" parent="PlaneManager"]
 position = Vector2( 993, 382 )
