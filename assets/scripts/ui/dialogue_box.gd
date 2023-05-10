@@ -30,8 +30,8 @@ var current_speaker = "NICK"
 var is_typing = false
 var current_text_box
 var is_auto_scrolling = false
-var is_expanding_background_panel = false
-var is_shrinking_background_panel = false
+#var is_expanding_background_panel = false
+#var is_shrinking_background_panel = false
 var background_panel_max_height
 var max_scroll_length := 0
 
@@ -89,11 +89,11 @@ func _process(_delta):
 	if fastforward and !_ink_player.get_HasChoices() and _ink_player.get_CanContinue():
 		proceed()
 		
-	if is_expanding_background_panel:
-		expand_background_panel()
-	
-	elif is_shrinking_background_panel:
-		shrink_background_panel()
+#	if is_expanding_background_panel:
+#		expand_background_panel()
+#
+#	elif is_shrinking_background_panel:
+#		shrink_background_panel()
 
 
 # Opening the player as-is
@@ -110,7 +110,7 @@ func open_at_knot(pathstring: String) -> void:
 	
 	set_camera_position_to_speaker()
 	
-	is_expanding_background_panel = true
+	expand_background_panel()
 
 
 # Change which choice is currently highlighted
@@ -151,7 +151,7 @@ func proceed() -> String:
 	if !_ink_player.get_CanContinue() && !_ink_player.get_HasChoices():
 		clear_and_reset_ui()
 		is_displaying_choices = false
-		is_shrinking_background_panel = true
+		shrink_background_panel()
 		return
 	
 	elif !_ink_player.get_HasChoices(): #create normal text entry
@@ -245,34 +245,36 @@ func scroll_to_bottom() -> void:
 
 # Smoothly decrease size of background panel after dialogue concludes
 func shrink_background_panel() -> void:
-	var panelPosition = background_panel_node.get_position()
-	
-	if panelPosition.y <= -background_panel_max_height + panel_opening_speed:
-		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
-		is_shrinking_background_panel = false
-		background_panel_node.set_visible(false)
-		
-		clear_and_reset_ui()
-		Globals.ColorManager.set_party_portraits_to_neutral()
-		Globals.PartyObject.force_nour_movement = false
-		
-	else:
-		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
+	$AnimationPlayer.play("Hiding")
+#	var panelPosition = background_panel_node.get_position()
+#
+#	if panelPosition.y <= -background_panel_max_height + panel_opening_speed:
+#		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
+#		is_shrinking_background_panel = false
+#		background_panel_node.set_visible(false)
+#
+#		clear_and_reset_ui()
+#		Globals.ColorManager.set_party_portraits_to_neutral()
+#		Globals.PartyObject.force_nour_movement = false
+#
+#	else:
+#		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
 
 
 # Smoothly increase size of background panel when dialogue starts
 func expand_background_panel() -> void:
-	var panelPosition = background_panel_node.get_position()
-	
-	if panelPosition.y >= -panel_opening_speed:
-		background_panel_node.set_position(Vector2(panelPosition.x, 0))
-		is_expanding_background_panel = false
-		
-		if Globals.GameRoot.testing_enabled:
-			print("expanded dialogue panel")
-	
-	else:
-		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
+	$AnimationPlayer.play("Expanding")
+#	var panelPosition = background_panel_node.get_position()
+#
+#	if panelPosition.y >= -panel_opening_speed:
+#		background_panel_node.set_position(Vector2(panelPosition.x, 0))
+#		is_expanding_background_panel = false
+#
+#		if Globals.GameRoot.testing_enabled:
+#			print("expanded dialogue panel")
+#
+#	else:
+#		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
 
 
 #increment visible characters in most recent richtextlabel
@@ -367,7 +369,7 @@ func print_state() -> void:
 
 # Remove old children from ui panel, exit talking mode
 func clear_and_reset_ui():
-	background_panel_node.set_visible(false)
+#	background_panel_node.set_visible(false)
 	StaticFunctions.delete_children(_vertical_layout_node)
 	
 	if Globals.Nour and Globals.Nick:

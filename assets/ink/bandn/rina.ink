@@ -1900,11 +1900,11 @@
         
         &FOLLOW_NOUR_EndingElevatorPos
         
-        &SPEED_NOUR_40.0
+        // &SPEED_NOUR_40.0
         
-        &PAUSE_0.5
+        // &PAUSE_0.5
         &FDEOUT
-        &PAUSE_0.5
+        // &PAUSE_0.5
         
         &ENDGAME
         

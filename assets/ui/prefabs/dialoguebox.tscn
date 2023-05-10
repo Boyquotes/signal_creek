@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://assets/ink/main.ink" type="Resource" id=1]
 [ext_resource path="res://assets/scripts/ui/dialogue_box.gd" type="Script" id=2]
@@ -92,6 +92,83 @@ tracks/1/keys = {
 gradient = SubResource( 1 )
 fill_from = Vector2( 1, 1 )
 fill_to = Vector2( 1, 0.945098 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Expanded"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 608, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Expanding"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 608, -560 ), Vector2( 608, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Hidden"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 608, -560 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Hiding"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 608, 0 ), Vector2( 608, -560 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 608, 0 ) ]
+}
 
 [node name="DialogueBox" type="Control"]
 anchor_right = 1.0
@@ -253,3 +330,10 @@ characterPortraits = {
 "rina": ExtResource( 12 ),
 "tim": ExtResource( 30 )
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Expanded = SubResource( 5 )
+anims/Expanding = SubResource( 6 )
+anims/Hidden = SubResource( 7 )
+anims/Hiding = SubResource( 9 )
+anims/RESET = SubResource( 8 )

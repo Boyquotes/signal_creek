@@ -48,6 +48,7 @@ func _process(_delta):
 #		else:
 #			return
 		if Globals.GameMode != Globals.GameModes.TALK or Globals.GameState == Globals.GameStates.START:
+			print("togglin")
 			Globals.PauseMenu.toggle_visible()
 		
 	if Globals.GameState == Globals.GameStates.START and Globals.GameMode != Globals.GameModes.PAUSE:
@@ -68,8 +69,6 @@ func _process(_delta):
 		Globals.PartyObject.move_followers_by_pathfind()
 		
 		if Globals.GameMode == Globals.GameModes.TALK:
-			if Globals.DialogueBox.is_expanding_background_panel or Globals.DialogueBox.is_shrinking_background_panel:
-				return
 				
 			if Globals.PartyObject.force_nour_movement:
 				Globals.PartyObject.force_move_leader()
