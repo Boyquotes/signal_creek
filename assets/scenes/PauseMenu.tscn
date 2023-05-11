@@ -1,0 +1,302 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/scripts/ui/pause_menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/themes/theme_pausemenu.tres" type="Theme" id=2]
+[ext_resource path="res://assets/ui/icons/close_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Expand"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 280, -500 ), Vector2( 280, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.627451 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Expanded"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 280, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Hidden"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 280, -500 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Shrink"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 280, 0 ), Vector2( 280, -500 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.627451 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="PauseMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+map_node = NodePath("../Map")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -200.0
+margin_top = -500.0
+margin_right = 200.0
+margin_bottom = -32.0
+rect_min_size = Vector2( 400, 400 )
+
+[node name="PauseMenu" type="PanelContainer" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -167.0
+margin_top = -186.0
+margin_right = 167.0
+margin_bottom = 186.0
+focus_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/PauseMenu"]
+margin_right = 334.0
+margin_bottom = 403.0
+
+[node name="HSeparator" type="HSeparator" parent="Panel/PauseMenu/VBoxContainer"]
+margin_right = 334.0
+margin_bottom = 4.0
+
+[node name="MusicVolume" type="HBoxContainer" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 20.0
+margin_right = 334.0
+margin_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/PauseMenu/VBoxContainer/MusicVolume"]
+margin_right = 165.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+bbcode_enabled = true
+bbcode_text = "[b]Music Volume[/b]"
+text = "Music Volume"
+fit_content_height = true
+
+[node name="MusicVolumeSlider" type="HSlider" parent="Panel/PauseMenu/VBoxContainer/MusicVolume"]
+margin_left = 169.0
+margin_right = 334.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+min_value = -80.0
+max_value = 3.5
+step = 0.5
+value = -10.0
+allow_lesser = true
+ticks_on_borders = true
+
+[node name="SFXVolume" type="HBoxContainer" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 56.0
+margin_right = 334.0
+margin_bottom = 76.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/PauseMenu/VBoxContainer/SFXVolume"]
+margin_right = 165.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+bbcode_enabled = true
+bbcode_text = "[b]SFX Volume[/b]"
+text = "SFX Volume"
+fit_content_height = true
+
+[node name="SFXVolumeSlider" type="HSlider" parent="Panel/PauseMenu/VBoxContainer/SFXVolume"]
+margin_left = 169.0
+margin_right = 334.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+min_value = -80.0
+max_value = 3.5
+
+[node name="UIVolume" type="HBoxContainer" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 92.0
+margin_right = 334.0
+margin_bottom = 112.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/PauseMenu/VBoxContainer/UIVolume"]
+margin_right = 165.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+bbcode_enabled = true
+bbcode_text = "[b]UI Volume[/b]"
+text = "UI Volume"
+fit_content_height = true
+
+[node name="UIVolumeSlider" type="HSlider" parent="Panel/PauseMenu/VBoxContainer/UIVolume"]
+margin_left = 169.0
+margin_right = 334.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+min_value = -80.0
+max_value = 3.5
+
+[node name="MuteAudio" type="CheckBox" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 128.0
+margin_right = 334.0
+margin_bottom = 147.0
+size_flags_vertical = 2
+text = "Mute Audio"
+align = 1
+
+[node name="HSeparator3" type="HSeparator" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 163.0
+margin_right = 334.0
+margin_bottom = 167.0
+
+[node name="WindowSize" type="HBoxContainer" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 183.0
+margin_right = 334.0
+margin_bottom = 203.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/PauseMenu/VBoxContainer/WindowSize"]
+margin_right = 165.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+bbcode_enabled = true
+bbcode_text = "[b]Window Size[/b]"
+text = "Window Size"
+fit_content_height = true
+
+[node name="Resolution" type="OptionButton" parent="Panel/PauseMenu/VBoxContainer/WindowSize"]
+margin_left = 169.0
+margin_right = 334.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "960 x 540"
+flat = true
+align = 1
+items = [ "960 x 540", null, false, 0, null, "1920 x 1080", null, false, 1, null, "2880 x 1620", null, false, 2, null, "Fullscreen", null, false, 3, null ]
+selected = 0
+
+[node name="HSeparator4" type="HSeparator" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 219.0
+margin_right = 334.0
+margin_bottom = 223.0
+
+[node name="Save" type="Button" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 239.0
+margin_right = 334.0
+margin_bottom = 258.0
+size_flags_vertical = 3
+text = "Save Game"
+
+[node name="Exit" type="Button" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 274.0
+margin_right = 334.0
+margin_bottom = 293.0
+size_flags_vertical = 3
+text = "Exit Game"
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 309.0
+margin_right = 334.0
+margin_bottom = 313.0
+
+[node name="Reset" type="Button" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 329.0
+margin_right = 334.0
+margin_bottom = 348.0
+size_flags_vertical = 3
+text = "Reset Game"
+
+[node name="HSeparator5" type="HSeparator" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 364.0
+margin_right = 334.0
+margin_bottom = 368.0
+
+[node name="Close Menu" type="Button" parent="Panel/PauseMenu/VBoxContainer"]
+margin_top = 384.0
+margin_right = 334.0
+margin_bottom = 403.0
+size_flags_vertical = 3
+text = "Close Window"
+icon = ExtResource( 3 )
+align = 0
+expand_icon = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Expand = SubResource( 2 )
+anims/Expanded = SubResource( 5 )
+anims/Hidden = SubResource( 6 )
+anims/Shrink = SubResource( 4 )
+
+[connection signal="value_changed" from="Panel/PauseMenu/VBoxContainer/MusicVolume/MusicVolumeSlider" to="." method="_on_MusicVolumeSlider_value_changed"]
+[connection signal="value_changed" from="Panel/PauseMenu/VBoxContainer/SFXVolume/SFXVolumeSlider" to="." method="_on_SFXVolumeSlider_value_changed"]
+[connection signal="value_changed" from="Panel/PauseMenu/VBoxContainer/UIVolume/UIVolumeSlider" to="." method="_on_UIVolumeSlider_value_changed"]
+[connection signal="toggled" from="Panel/PauseMenu/VBoxContainer/MuteAudio" to="." method="_on_MuteAudio_toggled"]
+[connection signal="item_selected" from="Panel/PauseMenu/VBoxContainer/WindowSize/Resolution" to="." method="_on_Resolution_item_selected"]
+[connection signal="pressed" from="Panel/PauseMenu/VBoxContainer/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="Panel/PauseMenu/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Panel/PauseMenu/VBoxContainer/Reset" to="." method="_on_Reset_pressed"]
+[connection signal="pressed" from="Panel/PauseMenu/VBoxContainer/Close Menu" to="." method="_on_Close_Menu_pressed"]

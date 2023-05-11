@@ -30,8 +30,6 @@ var current_speaker = "NICK"
 var is_typing = false
 var current_text_box
 var is_auto_scrolling = false
-#var is_expanding_background_panel = false
-#var is_shrinking_background_panel = false
 var background_panel_max_height
 var max_scroll_length := 0
 
@@ -88,12 +86,6 @@ func _process(_delta):
 		
 	if fastforward and !_ink_player.get_HasChoices() and _ink_player.get_CanContinue():
 		proceed()
-		
-#	if is_expanding_background_panel:
-#		expand_background_panel()
-#
-#	elif is_shrinking_background_panel:
-#		shrink_background_panel()
 
 
 # Opening the player as-is
@@ -143,7 +135,6 @@ func free_old_choicebox() -> void:
 
 # Proceeding to the next string that ink should return
 func proceed() -> String:
-	
 	if pause:
 		_down_arrow_animate.play("Idle")
 		return
@@ -184,11 +175,6 @@ func proceed() -> String:
 		display_choices("NOUR")
 		set_camera_position_to_speaker()
 		
-#	var last_child = _vertical_layout_node.get_child(_vertical_layout_node.get_child_count() - 1)
-#	_vertical_layout_node.set_focus
-	
-	
-#	_scroll_node.scroll_vertical(159)
 	yield(VisualServer, 'frame_post_draw')
 	_scroll_node.scroll_to_bottom()
 #	_scroll_node.scrolling_to_bottom = true
@@ -246,35 +232,11 @@ func scroll_to_bottom() -> void:
 # Smoothly decrease size of background panel after dialogue concludes
 func shrink_background_panel() -> void:
 	$AnimationPlayer.play("Hiding")
-#	var panelPosition = background_panel_node.get_position()
-#
-#	if panelPosition.y <= -background_panel_max_height + panel_opening_speed:
-#		background_panel_node.set_position(Vector2(panelPosition.x, -background_panel_max_height))
-#		is_shrinking_background_panel = false
-#		background_panel_node.set_visible(false)
-#
-#		clear_and_reset_ui()
-#		Globals.ColorManager.set_party_portraits_to_neutral()
-#		Globals.PartyObject.force_nour_movement = false
-#
-#	else:
-#		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, -background_panel_max_height, panel_opening_speed)))
 
 
 # Smoothly increase size of background panel when dialogue starts
 func expand_background_panel() -> void:
 	$AnimationPlayer.play("Expanding")
-#	var panelPosition = background_panel_node.get_position()
-#
-#	if panelPosition.y >= -panel_opening_speed:
-#		background_panel_node.set_position(Vector2(panelPosition.x, 0))
-#		is_expanding_background_panel = false
-#
-#		if Globals.GameRoot.testing_enabled:
-#			print("expanded dialogue panel")
-#
-#	else:
-#		background_panel_node.set_position(Vector2(panelPosition.x, lerp(panelPosition.y, 0, panel_opening_speed)))
 
 
 #increment visible characters in most recent richtextlabel
@@ -324,9 +286,6 @@ func display_choices(chooserName: String) -> void:
 	_current_choice_entry_choices = newChoiceEntry.get_choices()
 	_current_choice_entry_choices[_current_choice_index].set_highlighted(true)
 	_vertical_layout_node.add_child(newChoiceEntry)
-#	newChoiceEntry.grab_focus()
-#	yield(VisualServer, 'frame_post_draw')
-#	_scroll_node.ensure_control_visible(newChoiceEntry)
 	
 	_current_choice_entry = newChoiceEntry
 	

@@ -20,37 +20,15 @@ func _ready():
 		exhibition_timer = Timer.new()
 		add_child(exhibition_timer)
 		exhibition_timer.wait_time = exhibition_time
-#		exhibition_timer.connect("timeout", self, "_exhibition_timer_timeout")
 		exhibition_timer.set_one_shot(true)
-
-#func _exhibition_timer_timeout():
-#	reset_game()
 
 
 func _process(_delta):
 	if Input.is_action_just_pressed("open_menu"):
-#		if Globals.GameMode == Globals.GameModes.WALK:
-#			Globals.GameMode = Globals.GameModes.PAUSE
-#
-#		elif Globals.GameMode == Globals.GameModes.PAUSE:
-#			Globals.GameMode = Globals.GameModes.WALK
-			
-#		elif Globals.GameState == Globals.GameStates.START:
-#			Globals.PauseMenu.toggle_visible()
-#
-#			if Globals.GameMode != Globals.GameModes.PAUSE:
-#				Globals.GameMode = Globals.GameModes.PAUSE
-#
-#			elif Globals.GameMode == Globals.GameModes.PAUSE:
-#				Globals.GameMode = Globals.GameModes.TALK
-#
-#			return
-#		else:
-#			return
-		if Globals.GameMode != Globals.GameModes.TALK or Globals.GameState == Globals.GameStates.START:
+		if Globals.GameMode != Globals.GameModes.TALK:
 			print("togglin")
 			Globals.PauseMenu.toggle_visible()
-		
+			
 	if Globals.GameState == Globals.GameStates.START and Globals.GameMode != Globals.GameModes.PAUSE:
 		if Input.is_action_just_pressed("interact"):
 			Globals.StartScreen.start_game()
@@ -163,7 +141,6 @@ func reset_game() -> void:
 # Closest Interactive object available for interaction
 func set_closest_object(objectName: Interactive) -> void:
 	_closest_object = objectName
-
 
 
 func _on_StartButton_pressed() -> void:
